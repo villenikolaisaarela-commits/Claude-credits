@@ -2,5 +2,6 @@
 exclude:
   - video
   - some
+  - brand
   - README.md
   - .gitignore
