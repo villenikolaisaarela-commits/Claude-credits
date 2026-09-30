@@ -3,8 +3,10 @@
 Writes video/soundtrack.wav (44.1 kHz, 16-bit stereo). Timings mirror the scene
 windows `S` in intro.html — change both together.
 
-    python3 video/audio.py
+    python3 video/audio.py            # music + sound effects
+    python3 video/audio.py --sfx-only # sound effects only (add music in the app)
 """
+import sys
 import wave
 from pathlib import Path
 
@@ -243,7 +245,10 @@ def reverb(l, r, seconds=3.2, decay=1.7, wet=0.32):
     return l + wet * wl / norm, r + wet * wr / norm
 
 
+SFX_ONLY = '--sfx-only' in sys.argv
 ml, mr = reverb(music.l, music.r, wet=0.45)
+if SFX_ONLY:
+    ml, mr = ml * 0, mr * 0
 sl, sr_ = reverb(sfx.l, sfx.r, seconds=1.6, decay=0.8, wet=0.18)
 L = ml + sl * 0.9
 R = mr + sr_ * 0.9
@@ -260,7 +265,7 @@ L, R = np.tanh(1.4 * L / peak) / np.tanh(1.4), np.tanh(1.4 * R / peak) / np.tanh
 gain = 10 ** (-1 / 20) / max(np.abs(L).max(), np.abs(R).max())
 L, R = L * gain, R * gain
 
-out = Path(__file__).with_name('soundtrack.wav')
+out = Path(__file__).with_name('soundtrack-sfx.wav' if SFX_ONLY else 'soundtrack.wav')
 pcm = (np.stack([L, R], axis=1) * 32767).astype('<i2')
 with wave.open(str(out), 'wb') as w:
     w.setnchannels(2)
