@@ -29,7 +29,7 @@ Tarkista palvelun ehdoista, että ilmaistasoa saa käyttää yrityssivuun (esim.
 
 ## Oma kuva
 
-Tallenna kuva nimellä `assets/img/ville.jpg` (pystykuva, esim. 800 × 1000 px) ja poista `index.html`-tiedoston Info-osiosta kuvan ympäriltä kommenttimerkit (`<!--` ja `-->`). Kuva näytetään mustavalkoisena. Tai pyydä Claudea tekemään tämä.
+Info-osion kuva on `assets/img/ville.jpg` (pystykuva 4:5). Vaihda kuva korvaamalla tiedosto samannimisellä.
 
 ## Muokkaaminen
 
