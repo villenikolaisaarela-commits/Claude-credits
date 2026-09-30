@@ -1,295 +1,395 @@
 <!doctype html>
-<html lang="fi" class="no-js">
+<html lang="fi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
-  <title>Studio Hämärä — valokuvaamo Helsingissä</title>
-  <meta name="description" content="Studio Hämärä on helsinkiläinen valokuvaamo. Muotokuvia, brändikuvausta ja sisätilakuvausta tunnelmallisessa, elokuvamaisessa valossa. Konseptiprojekti.">
-  <meta name="theme-color" content="#0d0c0b">
-  <meta property="og:title" content="Studio Hämärä — valokuvaamo Helsingissä">
-  <meta property="og:description" content="Muotokuvia, brändikuvausta ja sisätiloja valossa, joka jää mieleen.">
+  <title>Studio Hämärä — valokuvaamo, Helsinki</title>
+  <meta name="description" content="Studio Hämärä on helsinkiläinen valokuvaamo. Muotokuvia, brändikuvausta ja sisätiloja pehmeässä, elokuvamaisessa valossa. Konseptiprojekti.">
+  <meta name="theme-color" content="#0b0a08">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:title" content="Studio Hämärä — valokuvaamo, Helsinki">
+  <meta property="og:description" content="Muotokuvia, brändejä ja tiloja – valossa, joka jää mieleen.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fi_FI">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0c0b'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23ece6dc' stroke-width='3'/%3E%3Cpath d='M32 15a17 17 0 0 1 0 34z' fill='%23c9965f'/%3E%3C/svg%3E">
-  <link rel="preload" as="image" href="img/hero-1800.jpg" imagesrcset="img/hero-1200.jpg 1200w, img/hero-1800.jpg 1800w" imagesizes="100vw">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0a08'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23ece6dc' stroke-width='3'/%3E%3Cpath d='M32 15a17 17 0 0 1 0 34z' fill='%23c9965f'/%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="img/hero-1800.jpg" imagesrcset="img/hero-1200.jpg 1200w, img/hero-1800.jpg 1800w" imagesizes="100vw" fetchpriority="high">
+  <script>
+    (function (d) {
+      var c = d.documentElement.classList;
+      c.add("js");
+      try {
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) c.add("motion", "intro");
+      } catch (e) {}
+    })(document);
+  </script>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Siirry sisältöön</a>
 
-  <header class="site-header">
-    <div class="wrap site-header__inner">
-      <a class="brand" href="#top" aria-label="Studio Hämärä, etusivulle">
+  <!-- Ylätunniste -->
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="Studio Hämärä, sivun alkuun">
         <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="10.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M12 1.75a10.25 10.25 0 0 1 0 20.5z" fill="#c9965f"/>
+          <circle cx="12" cy="12" r="10.25" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M12 1.75a10.25 10.25 0 0 1 0 20.5z" fill="currentColor" class="brand__half"/>
         </svg>
-        <span>Hämärä</span>
-        <small>Studio</small>
+        <span class="brand__name">Hämärä</span>
+        <span class="brand__sub">Studio</span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle__label">Valikko</span>
-        <span class="nav-toggle__icon" aria-hidden="true"></span>
-      </button>
+      <p class="header-dusk" data-dusk-short hidden></p>
 
-      <nav class="site-nav" id="site-nav" aria-label="Päävalikko">
+      <nav class="site-nav" aria-label="Päävalikko">
         <ul>
-          <li><a href="#tyot">Työt</a></li>
-          <li><a href="#studio">Studio</a></li>
-          <li><a href="#palvelut">Palvelut</a></li>
-          <li><a class="nav-cta" href="#yhteys">Yhteys</a></li>
+          <li><a href="#tyot"><span class="site-nav__num">01</span>Työt</a></li>
+          <li><a href="#studio"><span class="site-nav__num">02</span>Studio</a></li>
+          <li><a href="#palvelut"><span class="site-nav__num">03</span>Palvelut</a></li>
         </ul>
-        <p class="nav-extra">
-          <a href="mailto:kuvat@studiohamara.example">kuvat@studiohamara.example</a>
-          <span>040 123 4567 · @studiohamara</span>
-        </p>
       </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-toggle__label" data-open="Valikko" data-close="Sulje">Valikko</span>
+        <span class="menu-toggle__icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobiilivalikko -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Mobiilivalikko">
+      <ol>
+        <li style="--i:0"><a href="#tyot"><span class="mobile-menu__num">01</span><span class="mobile-menu__label">Työt</span></a></li>
+        <li style="--i:1"><a href="#studio"><span class="mobile-menu__num">02</span><span class="mobile-menu__label">Studio</span></a></li>
+        <li style="--i:2"><a href="#palvelut"><span class="mobile-menu__num">03</span><span class="mobile-menu__label">Palvelut</span></a></li>
+        <li style="--i:3"><a href="#asiakkaat"><span class="mobile-menu__num">04</span><span class="mobile-menu__label">Asiakkaat</span></a></li>
+      </ol>
+    </nav>
+    <div class="mobile-menu__foot">
+      <p class="meta">Studio Hämärä — Helsinki</p>
+      <p class="mobile-menu__dusk" data-dusk-long></p>
+    </div>
+  </div>
 
   <main id="main">
     <!-- Hero -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__media">
-        <img src="img/hero-1800.jpg"
-             srcset="img/hero-1200.jpg 1200w, img/hero-1800.jpg 1800w"
-             sizes="100vw"
-             width="1800" height="1200"
-             alt="Mustavalkoinen lähikuva naisesta, jonka silmät jäävät hatun lierin varjoon ja vain huulet ja leuka osuvat valoon."
-             fetchpriority="high">
+        <div class="hero__parallax" data-parallax="0.28">
+          <img class="hero__img"
+               src="img/hero-1800.jpg"
+               srcset="img/hero-1200.jpg 1200w, img/hero-1800.jpg 1800w"
+               sizes="100vw"
+               width="1800" height="1200"
+               alt="Mustavalkoinen lähikuva naisesta, jonka silmät jäävät hatun lierin varjoon. Vain huulet ja leuka osuvat valoon."
+               fetchpriority="high" decoding="async">
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
       </div>
 
-      <div class="wrap hero__content">
-        <p class="eyebrow hero__eyebrow">
-          <span>Valokuvaamo</span>
-          <span>Helsinki</span>
-        </p>
-        <h1 class="hero__title" id="hero-title">
-          <span class="t-small">Studio</span>
-          <span class="t-big">Hämärä</span>
-        </h1>
+      <div class="hero__frame" aria-hidden="true">
+        <span class="hero__corner hero__corner--tl"></span>
+        <span class="hero__corner hero__corner--tr"></span>
+        <span class="hero__corner hero__corner--bl"></span>
+        <span class="hero__corner hero__corner--br"></span>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__top">
+          <p class="meta hero__meta" style="--d:0">Valokuvaamo<br><span class="muted">Helsinki, vuodesta 2013</span></p>
+          <p class="meta hero__meta hero__meta--mid" style="--d:1">Muotokuvat<br>Brändit<br>Sisätilat</p>
+          <p class="meta hero__meta hero__meta--right" style="--d:2">60°10′ P<br><span class="muted">24°56′ I</span></p>
+        </div>
+
         <div class="hero__bottom">
-          <p class="hero__lead">Muotokuvia, brändikuvausta ja sisätiloja – valossa, joka jää mieleen.</p>
-          <div class="hero__actions">
-            <a class="btn btn--solid" href="#tyot">Katso työt <span class="btn__arrow" aria-hidden="true">→</span></a>
-            <a class="btn" href="#yhteys">Varaa kuvaus</a>
+          <p class="hero__lead" style="--d:3">Muotokuvia, brändejä ja tiloja – <em>valossa, joka jää mieleen.</em></p>
+          <div class="hero__dusk" data-dusk-card hidden>
+            <p class="meta"><span class="dot" aria-hidden="true"></span><span data-dusk-state>Tänään Helsingissä</span></p>
+            <p class="hero__dusk-line" data-dusk-long></p>
           </div>
         </div>
+
+        <h1 class="hero__title" id="hero-title" aria-label="Studio Hämärä">
+          <span class="hero__title-small" aria-hidden="true">Studio</span>
+          <span class="hero__word" aria-hidden="true"><span class="ch" style="--i:0">H</span><span class="ch" style="--i:1">ä</span><span class="ch" style="--i:2">m</span><span class="ch" style="--i:3">ä</span><span class="ch" style="--i:4">r</span><span class="ch" style="--i:5">ä</span></span>
+        </h1>
       </div>
-      <p class="hero__scroll" aria-hidden="true">Vieritä</p>
     </section>
 
-    <!-- Lausuma -->
-    <section class="section section--tight statement" aria-labelledby="statement-title">
+    <!-- Määritelmä ja lausuma -->
+    <section class="statement" id="hamara" aria-labelledby="statement-title">
       <div class="wrap statement__grid">
-        <div class="statement__meta reveal">
-          <h2 class="eyebrow eyebrow--accent" id="statement-title">Hämärä, subst.</h2>
-          <ul>
-            <li>Muotokuvat</li>
-            <li>Brändikuvaus</li>
-            <li>Sisätilat</li>
-          </ul>
+        <div class="statement__def reveal">
+          <h2 class="meta meta--accent" id="statement-title">Hämärä <span class="muted">(subst.)</span></h2>
+          <p class="statement__phon">[ˈhæmæræ]</p>
+          <p class="statement__defn">Vuorokauden hetki auringonlaskun jälkeen, kun valo on hajanaista, värit hiljenevät ja varjot pehmenevät.</p>
         </div>
-        <p class="statement__text reveal" data-delay="1">Hämärä on hetki, jolloin valo pehmenee ja varjot alkavat puhua. <em>Siihen hetkeen</em> rakennan jokaisen kuvani.</p>
+        <p class="statement__text" data-scrub>Hämärä on hetki, jolloin valo pehmenee ja varjot alkavat puhua. <em>Siihen hetkeen</em> rakennan jokaisen kuvani – ihmisistä, esineistä ja tiloista, jotka ansaitsevat tulla nähdyiksi kunnolla.</p>
       </div>
+      <ul class="statement__marks wrap" aria-label="Studion painopisteet">
+        <li class="reveal"><span class="meta muted">I</span> Muotokuvat</li>
+        <li class="reveal" style="--d:1"><span class="meta muted">II</span> Brändikuvaus</li>
+        <li class="reveal" style="--d:2"><span class="meta muted">III</span> Sisätilat</li>
+      </ul>
     </section>
 
     <!-- Työt -->
-    <section class="section work-section" id="tyot" aria-labelledby="work-title">
+    <section class="work" id="tyot" aria-labelledby="work-title">
       <div class="wrap">
-        <div class="section-head">
-          <div class="reveal">
-            <p class="eyebrow"><span class="index-num">01</span> — Työt</p>
-            <h2 class="display section-head__title" id="work-title">Valitut työt</h2>
+        <header class="section-head">
+          <p class="meta section-head__num reveal"><span class="meta--accent">01</span> / Työt</p>
+          <h2 class="display section-head__title split reveal" id="work-title">Valitut <em>työt</em></h2>
+          <p class="section-head__note reveal" style="--d:2">Otteita viime vuosien kuvauksista. Avaa kuva suuremmaksi – selaa nuolinäppäimillä tai pyyhkäisemällä.</p>
+        </header>
+      </div>
+
+      <div class="filters-bar">
+        <div class="wrap filters-bar__inner">
+          <div class="filters" role="group" aria-label="Suodata töitä">
+            <button class="filter" type="button" data-filter="all" aria-pressed="true">Kaikki <sup>12</sup></button>
+            <button class="filter" type="button" data-filter="muotokuvat" aria-pressed="false">Muotokuvat <sup>4</sup></button>
+            <button class="filter" type="button" data-filter="brandikuvaus" aria-pressed="false">Brändit <sup>4</sup></button>
+            <button class="filter" type="button" data-filter="sisatilat" aria-pressed="false">Sisätilat <sup>4</sup></button>
           </div>
-          <p class="section-head__note reveal" data-delay="1">Otteita viime vuosien kuvauksista. Avaa kuva klikkaamalla – selaa nuolinäppäimillä.</p>
+          <p class="filters-status meta" role="status" aria-live="polite">Näytetään 12 / 12</p>
         </div>
+      </div>
 
-        <div class="filters" role="group" aria-label="Suodata töitä kategorian mukaan">
-          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Kaikki <sup>12</sup></button>
-          <button class="filter-btn" type="button" data-filter="muotokuvat" aria-pressed="false">Muotokuvat <sup>4</sup></button>
-          <button class="filter-btn" type="button" data-filter="brandikuvaus" aria-pressed="false">Brändikuvaus <sup>4</sup></button>
-          <button class="filter-btn" type="button" data-filter="sisatilat" aria-pressed="false">Sisätilat <sup>4</sup></button>
-          <p class="work-status" role="status" aria-live="polite">Näytetään 12 kuvaa</p>
-        </div>
-
-        <ul class="gallery">
-          <!-- GALLERY:START -->
-          <li class="gallery__item" data-category="muotokuvat">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/katse.jpg" data-w="960" data-h="1489">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/katse-640.jpg" srcset="img/tyot/katse-640.jpg 640w, img/tyot/katse.jpg 960w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="993" loading="lazy" decoding="async" alt="Mustavalkoinen lähikuva nuoresta naisesta, joka katsoo suoraan kameraan. Kasvot erottuvat pehmeästi tummasta taustasta.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+      <div class="wrap">
+        <ul class="gallery" aria-label="Valitut työt">
+          <li class="gallery__item" data-category="muotokuvat" data-size="l">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/katse.jpg" data-w="960" data-h="1489" data-light="Pohjoisikkuna, pilvinen iltapäivä">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/katse-640.jpg" srcset="img/tyot/katse-640.jpg 640w, img/tyot/katse.jpg 960w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="993" loading="lazy" decoding="async" alt="Mustavalkoinen lähikuva nuoresta naisesta, joka katsoo suoraan kameraan. Kasvot erottuvat pehmeästi tummasta taustasta.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Katse</span> <span class="work__meta">Muotokuva · 2025</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">01</span><span class="piece__title">Katse</span><span class="piece__meta">Muotokuva · 2025</span></figcaption>
             </figure>
           </li>
-          <li class="gallery__item" data-category="sisatilat">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/vanha-keittio.jpg" data-w="960" data-h="710">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/vanha-keittio-640.jpg" srcset="img/tyot/vanha-keittio-640.jpg 640w, img/tyot/vanha-keittio.jpg 960w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="473" loading="lazy" decoding="async" alt="Vanhan maalaiskeittiön ikkunasta tulviva lämmin valo osuu lautasriviin, pulloihin ja kiviseen tiskialtaaseen.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+          <li class="gallery__item" data-category="sisatilat" data-size="s">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/vanha-keittio.jpg" data-w="960" data-h="710" data-light="Aamuvalo lounaasta, klo 8.10">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/vanha-keittio-640.jpg" srcset="img/tyot/vanha-keittio-640.jpg 640w, img/tyot/vanha-keittio.jpg 960w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="473" loading="lazy" decoding="async" alt="Vanhan maalaiskeittiön ikkunasta tulviva lämmin valo osuu lautasriviin, pulloihin ja kiviseen tiskialtaaseen.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Vanha keittiö</span> <span class="work__meta">Sisätila · 2024</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">02</span><span class="piece__title">Vanha keittiö</span><span class="piece__meta">Sisätila · 2024</span></figcaption>
             </figure>
           </li>
-          <li class="gallery__item" data-category="brandikuvaus">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/lehtikulho.jpg" data-w="1024" data-h="1023">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/lehtikulho-640.jpg" srcset="img/tyot/lehtikulho-640.jpg 640w, img/tyot/lehtikulho.jpg 1024w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="639" loading="lazy" decoding="async" alt="Tumma keraaminen teekulho, jonka lasitteeseen on painunut lehden kuvio, harmaata taustaa vasten.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+          <li class="gallery__item" data-category="brandikuvaus" data-size="s">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/lehtikulho.jpg" data-w="1024" data-h="1023" data-light="Yksi softbox, harmaa paperitausta">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/lehtikulho-640.jpg" srcset="img/tyot/lehtikulho-640.jpg 640w, img/tyot/lehtikulho.jpg 1024w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="639" loading="lazy" decoding="async" alt="Tumma keraaminen teekulho, jonka lasitteeseen on painunut lehden kuvio, harmaata taustaa vasten.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Lehtikulho</span> <span class="work__meta">Brändikuvaus · 2023</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">03</span><span class="piece__title">Lehtikulho</span><span class="piece__meta">Brändi · 2023</span></figcaption>
             </figure>
           </li>
-          <li class="gallery__item" data-category="brandikuvaus">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/tulppaanit.jpg" data-w="960" data-h="720">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/tulppaanit-640.jpg" srcset="img/tyot/tulppaanit-640.jpg 640w, img/tyot/tulppaanit.jpg 960w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="480" loading="lazy" decoding="async" alt="Kaksi punaista tulppaania vihreäksi lasitetussa maljakossa mustaa taustaa vasten.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+          <li class="gallery__item" data-category="brandikuvaus" data-size="l">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/tulppaanit.jpg" data-w="960" data-h="720" data-light="Kapea sivuvalo, musta sametti">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/tulppaanit-640.jpg" srcset="img/tyot/tulppaanit-640.jpg 640w, img/tyot/tulppaanit.jpg 960w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="480" loading="lazy" decoding="async" alt="Kaksi punaista tulppaania vihreäksi lasitetussa maljakossa mustaa taustaa vasten.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Tulppaanit</span> <span class="work__meta">Brändikuvaus · 2024</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">04</span><span class="piece__title">Tulppaanit</span><span class="piece__meta">Brändi · 2024</span></figcaption>
             </figure>
           </li>
-          <li class="gallery__item" data-category="sisatilat">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/ruokasali.jpg" data-w="1800" data-h="1223">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/ruokasali-640.jpg" srcset="img/tyot/ruokasali-640.jpg 640w, img/tyot/ruokasali.jpg 1800w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="435" loading="lazy" decoding="async" alt="Hämärä ruokasali, jonka katosta roikkuvat emaliset riippuvalaisimet hehkuvat lämpimästi. Taustalla kehystettyjä tauluja.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+          <li class="gallery__item" data-category="sisatilat" data-size="l">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/ruokasali.jpg" data-w="1800" data-h="1223" data-light="Vain tilan omat valaisimet">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/ruokasali-640.jpg" srcset="img/tyot/ruokasali-640.jpg 640w, img/tyot/ruokasali-1200.jpg 1200w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="435" loading="lazy" decoding="async" alt="Hämärä ruokasali, jonka katosta roikkuvat emaliset riippuvalaisimet hehkuvat lämpimästi. Taustalla kehystettyjä tauluja.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Ruokasali</span> <span class="work__meta">Sisätila · 2023</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">05</span><span class="piece__title">Ruokasali</span><span class="piece__meta">Sisätila · 2023</span></figcaption>
             </figure>
           </li>
-          <li class="gallery__item" data-category="sisatilat">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/lukunurkka.jpg" data-w="960" data-h="1440">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/lukunurkka-640.jpg" srcset="img/tyot/lukunurkka-640.jpg 640w, img/tyot/lukunurkka.jpg 960w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="960" loading="lazy" decoding="async" alt="Vanha kukkakuvioinen nojatuoli, pöytävalaisin ja pieni pyöreä pöytä tummaa puuseinää vasten ikkunan vieressä.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+          <li class="gallery__item" data-category="sisatilat" data-size="s">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/lukunurkka.jpg" data-w="960" data-h="1440" data-light="Iltapäivä, verhot puoliksi kiinni">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/lukunurkka-640.jpg" srcset="img/tyot/lukunurkka-640.jpg 640w, img/tyot/lukunurkka.jpg 960w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="960" loading="lazy" decoding="async" alt="Vanha kukkakuvioinen nojatuoli, pöytävalaisin ja pieni pyöreä pöytä tummaa puuseinää vasten ikkunan vieressä.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Lukunurkka</span> <span class="work__meta">Sisätila · 2025</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">06</span><span class="piece__title">Lukunurkka</span><span class="piece__meta">Sisätila · 2025</span></figcaption>
             </figure>
           </li>
-          <li class="gallery__item" data-category="brandikuvaus">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/askel.jpg" data-w="960" data-h="1276">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/askel-640.jpg" srcset="img/tyot/askel-640.jpg 640w, img/tyot/askel.jpg 960w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="851" loading="lazy" decoding="async" alt="Kiiltävät mustat nahkakengät kohdevalossa pimeällä puulattialla.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+          <li class="gallery__item" data-category="brandikuvaus" data-size="s">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/askel.jpg" data-w="960" data-h="1276" data-light="Kapea kohdevalo suoraan ylhäältä">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/askel-640.jpg" srcset="img/tyot/askel-640.jpg 640w, img/tyot/askel.jpg 960w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="851" loading="lazy" decoding="async" alt="Kiiltävät mustat nahkakengät kohdevalossa pimeällä puulattialla.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Askel</span> <span class="work__meta">Brändikuvaus · 2024</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">07</span><span class="piece__title">Askel</span><span class="piece__meta">Brändi · 2024</span></figcaption>
             </figure>
           </li>
-          <li class="gallery__item" data-category="muotokuvat">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/profiili.jpg" data-w="960" data-h="641">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/profiili-640.jpg" srcset="img/tyot/profiili-640.jpg 640w, img/tyot/profiili.jpg 960w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="427" loading="lazy" decoding="async" alt="Parrakas mies profiilissa kapeassa sivuvalossa. Hänen varjonsa piirtyy vaalealle seinälle taakse.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+          <li class="gallery__item" data-category="muotokuvat" data-size="l">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/profiili.jpg" data-w="960" data-h="641" data-light="Kova sivuvalo, varjo vaalealla seinällä">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/profiili-640.jpg" srcset="img/tyot/profiili-640.jpg 640w, img/tyot/profiili.jpg 960w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="427" loading="lazy" decoding="async" alt="Parrakas mies profiilissa kapeassa sivuvalossa. Hänen varjonsa piirtyy vaalealle seinälle taakse.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Profiili</span> <span class="work__meta">Muotokuva · 2024</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">08</span><span class="piece__title">Profiili</span><span class="piece__meta">Muotokuva · 2024</span></figcaption>
             </figure>
           </li>
-          <li class="gallery__item" data-category="brandikuvaus">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/ranunkeli.jpg" data-w="960" data-h="640">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/ranunkeli-640.jpg" srcset="img/tyot/ranunkeli-640.jpg 640w, img/tyot/ranunkeli.jpg 960w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="427" loading="lazy" decoding="async" alt="Keltainen ranunkeli ja avautumaton vihreä nuppu kaartuvat mustaa taustaa vasten.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+          <li class="gallery__item" data-category="brandikuvaus" data-size="s">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/ranunkeli.jpg" data-w="960" data-h="640" data-light="Ikkunavalo, musta tausta">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/ranunkeli-640.jpg" srcset="img/tyot/ranunkeli-640.jpg 640w, img/tyot/ranunkeli.jpg 960w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="427" loading="lazy" decoding="async" alt="Keltainen ranunkeli ja avautumaton vihreä nuppu kaartuvat mustaa taustaa vasten.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Ranunkeli</span> <span class="work__meta">Brändikuvaus · 2025</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">09</span><span class="piece__title">Ranunkeli</span><span class="piece__meta">Brändi · 2025</span></figcaption>
             </figure>
           </li>
-          <li class="gallery__item" data-category="muotokuvat">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/salekaihdin.jpg" data-w="960" data-h="1449">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/salekaihdin-640.jpg" srcset="img/tyot/salekaihdin-640.jpg 640w, img/tyot/salekaihdin.jpg 960w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="966" loading="lazy" decoding="async" alt="Tummahiuksinen nainen nojaa betoniseinään, ja sälekaihtimen läpi siivilöityvä valo piirtää raitoja hänen kasvoilleen.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+          <li class="gallery__item" data-category="muotokuvat" data-size="l">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/salekaihdin.jpg" data-w="960" data-h="1449" data-light="Sälekaihtimen läpi, klo 17.40">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/salekaihdin-640.jpg" srcset="img/tyot/salekaihdin-640.jpg 640w, img/tyot/salekaihdin.jpg 960w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="966" loading="lazy" decoding="async" alt="Tummahiuksinen nainen nojaa betoniseinään, ja sälekaihtimen läpi siivilöityvä valo piirtää raitoja hänen kasvoilleen.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Sälekaihdin</span> <span class="work__meta">Muotokuva · 2025</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">10</span><span class="piece__title">Sälekaihdin</span><span class="piece__meta">Muotokuva · 2025</span></figcaption>
             </figure>
           </li>
-          <li class="gallery__item" data-category="sisatilat">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/kesakeittio.jpg" data-w="1024" data-h="683">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/kesakeittio-640.jpg" srcset="img/tyot/kesakeittio-640.jpg 640w, img/tyot/kesakeittio.jpg 1024w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="427" loading="lazy" decoding="async" alt="Hämärä keittiö, jossa vihreäkarminen ikkuna valaisee sinikuvioisen pöytäliinan ja puisen kulhon.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+          <li class="gallery__item" data-category="sisatilat" data-size="l">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/kesakeittio.jpg" data-w="1024" data-h="683" data-light="Heinäkuun ilta, vain ikkunavalo">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/kesakeittio-640.jpg" srcset="img/tyot/kesakeittio-640.jpg 640w, img/tyot/kesakeittio.jpg 1024w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="427" loading="lazy" decoding="async" alt="Hämärä keittiö, jossa vihreäkarminen ikkuna valaisee sinikuvioisen pöytäliinan ja puisen kulhon.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Kesäkeittiö</span> <span class="work__meta">Sisätila · 2025</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">11</span><span class="piece__title">Kesäkeittiö</span><span class="piece__meta">Sisätila · 2025</span></figcaption>
             </figure>
           </li>
-          <li class="gallery__item" data-category="muotokuvat">
-            <figure class="work">
-              <a class="work__link" href="img/tyot/lierihattu.jpg" data-w="960" data-h="1280">
-                <span class="visually-hidden">Avaa suurempana: </span>
-                <img src="img/tyot/lierihattu-640.jpg" srcset="img/tyot/lierihattu-640.jpg 640w, img/tyot/lierihattu.jpg 960w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1080px) 46vw, 30vw" width="640" height="853" loading="lazy" decoding="async" alt="Mustavalkoinen studiomuotokuva naisesta leveälierisessä hatussa mustaa taustaa vasten. Silmät ovat kiinni ja olkapäät paljaina.">
-                <span class="work__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+          <li class="gallery__item" data-category="muotokuvat" data-size="s">
+            <figure class="piece">
+              <a class="piece__link" href="img/tyot/lierihattu.jpg" data-w="960" data-h="1280" data-light="Yksi valo – hatun lieri tekee varjon">
+                <span class="piece__media" data-reveal>
+                  <img src="img/tyot/lierihattu-640.jpg" srcset="img/tyot/lierihattu-640.jpg 640w, img/tyot/lierihattu.jpg 960w" sizes="(max-width: 599px) calc(100vw - 32px), (max-width: 1099px) 46vw, 30vw" width="640" height="853" loading="lazy" decoding="async" alt="Mustavalkoinen studiomuotokuva naisesta leveälierisessä hatussa mustaa taustaa vasten. Silmät ovat kiinni ja olkapäät paljaina.">
+                </span>
+                <span class="visually-hidden">– avaa suurempana</span>
               </a>
-              <figcaption><span class="work__title">Lierihattu</span> <span class="work__meta">Muotokuva · 2023</span></figcaption>
+              <figcaption class="piece__cap"><span class="piece__num">12</span><span class="piece__title">Lierihattu</span><span class="piece__meta">Muotokuva · 2023</span></figcaption>
             </figure>
-          </li>          <!-- GALLERY:END -->
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- Studio / Noora -->
-    <section class="section about" id="studio" aria-labelledby="about-title">
-      <div class="wrap about__grid">
-        <figure class="about__media reveal">
-          <img src="img/noora.jpg" width="960" height="1200" loading="lazy"
-               alt="Valokuvaaja Noora kuvaa ikkunan ääressä, kasvot kameran takana ja hiukset vastavalossa.">
-          <figcaption>Noora työssä, Sörnäinen</figcaption>
+    <!-- Täysleveä kuvahetki -->
+    <section class="interlude" aria-labelledby="interlude-title">
+      <div class="interlude__sticky">
+        <figure class="interlude__media">
+          <div class="interlude__parallax">
+            <img src="img/tyot/ruokasali.jpg"
+                 srcset="img/tyot/ruokasali-1200.jpg 1200w, img/tyot/ruokasali.jpg 1800w"
+                 sizes="100vw" width="1800" height="1223" loading="lazy" decoding="async"
+                 alt="Ruokasali illalla. Kolme emalista riippuvalaisinta hehkuu lämpimästi pimeässä tilassa.">
+          </div>
+          <figcaption class="interlude__cap meta">Ruokasali, Helsinki · 2023 · <span class="muted">vain tilan omat valaisimet</span></figcaption>
         </figure>
-        <div class="about__body">
-          <p class="eyebrow reveal"><span class="index-num">02</span> — Studio</p>
-          <h2 class="display about__title reveal" id="about-title">Hei, olen <em>Noora</em>.</h2>
-          <p class="about__lead reveal">Olen kuvannut ihmisiä, esineitä ja tiloja Helsingissä yli kymmenen vuotta – aina mieluummin varjojen kuin salamavalon kanssa.</p>
-          <p class="reveal">Studio Hämärä sijaitsee vanhassa kirjapainossa Sörnäisissä, mutta kuvaan yhtä mielelläni asiakkaan omissa tiloissa. Jokainen kuvaus alkaa keskustelulla: mitä haluat kuvan kertovan, ja kenelle.</p>
-          <p class="reveal">En usko valmiisiin kaavoihin. Etsin kohteesta sen hiljaisen puolen, jota ei aina huomaa ensisilmäyksellä – ja annan valon tehdä loput.</p>
-          <dl class="facts reveal">
-            <div>
-              <dt>Kuvannut</dt>
-              <dd>vuodesta 2013</dd>
+        <div class="interlude__text">
+          <p class="meta meta--accent interlude__kicker">Sisätilat</p>
+          <h2 class="interlude__title split" data-manual id="interlude-title">Kuvaan tilan sellaisena kuin se <em>tuntuu</em> – en vain sellaisena kuin se näyttää.</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio / Noora -->
+    <section class="about" id="studio" aria-labelledby="about-title">
+      <div class="wrap">
+        <header class="section-head section-head--about">
+          <p class="meta section-head__num reveal"><span class="meta--accent">02</span> / Studio</p>
+          <h2 class="display section-head__title split reveal" id="about-title">Hei, olen <em>Noora.</em></h2>
+        </header>
+
+        <div class="about__grid">
+          <figure class="about__media">
+            <div class="about__frame" data-reveal>
+              <div class="about__parallax" data-parallax="-0.08">
+                <img src="img/noora.jpg" width="960" height="640" loading="lazy" decoding="async"
+                     alt="Valokuvaaja Noora kuvaa ikkunan ääressä vastavalossa. Kamera peittää hänen kasvonsa, hiukset hehkuvat valossa.">
+              </div>
             </div>
-            <div>
-              <dt>Studio</dt>
-              <dd>Sörnäinen</dd>
+            <figcaption class="meta muted">Noora työssä · Sörnäinen, marraskuu</figcaption>
+          </figure>
+
+          <div class="about__body">
+            <p class="about__lead reveal">Olen kuvannut ihmisiä, esineitä ja tiloja Helsingissä yli kymmenen vuotta – aina mieluummin varjojen kuin salamavalon kanssa.</p>
+            <div class="about__cols">
+              <p class="reveal" style="--d:1">Studio Hämärä toimii vanhassa kirjapainossa Sörnäisissä, mutta kuvaan yhtä mielelläni asiakkaan omissa tiloissa. Jokainen kuvaus alkaa keskustelusta: mitä kuvan pitää kertoa, ja kenelle.</p>
+              <p class="reveal" style="--d:2">En usko valmiisiin kaavoihin. Etsin kohteesta sen hiljaisen puolen, jota ei huomaa ensisilmäyksellä – ja annan valon hoitaa loput.</p>
             </div>
-            <div>
-              <dt>Kielet</dt>
-              <dd>suomi, englanti</dd>
-            </div>
-          </dl>
+            <dl class="facts">
+              <div class="reveal"><dt class="meta">Kuvannut</dt><dd>vuodesta <span class="num">2013</span></dd></div>
+              <div class="reveal" style="--d:1"><dt class="meta">Valonlähteitä</dt><dd>yleensä <span class="num">1</span></dd></div>
+              <div class="reveal" style="--d:2"><dt class="meta">Toimitus</dt><dd><span class="num">14</span> päivässä</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="process">
+          <h3 class="meta process__title reveal">Näin kuvaus etenee</h3>
+          <ol class="process__list">
+            <li class="process__step reveal">
+              <span class="process__num">i</span>
+              <h4>Keskustelu</h4>
+              <p>Mitä kuvan pitää kertoa, kenelle ja missä sitä käytetään? Kaikki alkaa siitä.</p>
+            </li>
+            <li class="process__step reveal" style="--d:1">
+              <span class="process__num">ii</span>
+              <h4>Valon etsintä</h4>
+              <p>Käyn paikan läpi etukäteen ja katson, mihin aikaan valo on siellä kauneimmillaan.</p>
+            </li>
+            <li class="process__step reveal" style="--d:2">
+              <span class="process__num">iii</span>
+              <h4>Kuvaus</h4>
+              <p>Rauhallinen tahti, ei kiirettä. Parhaat kuvat syntyvät usein tauoilla.</p>
+            </li>
+            <li class="process__step reveal" style="--d:3">
+              <span class="process__num">iv</span>
+              <h4>Viimeistely</h4>
+              <p>Käsittelen jokaisen kuvan itse ja toimitan ne yksityiseen verkkogalleriaan.</p>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
 
     <!-- Palvelut -->
-    <section class="section" id="palvelut" aria-labelledby="services-title">
+    <section class="services" id="palvelut" aria-labelledby="services-title">
       <div class="wrap">
-        <div class="section-head">
-          <div class="reveal">
-            <p class="eyebrow"><span class="index-num">03</span> — Palvelut</p>
-            <h2 class="display section-head__title" id="services-title">Palvelut</h2>
-          </div>
-          <p class="section-head__note reveal" data-delay="1">Jokainen kuvaus suunnitellaan erikseen. Hinta sisältää suunnittelun, kuvauksen ja viimeistellyt kuvat.</p>
-        </div>
+        <header class="section-head">
+          <p class="meta section-head__num reveal"><span class="meta--accent">03</span> / Palvelut</p>
+          <h2 class="display section-head__title split reveal" id="services-title">Kolme tapaa,<br> <em>yksi valo</em></h2>
+          <p class="section-head__note reveal" style="--d:2">Jokainen kuvaus suunnitellaan erikseen. Hinta sisältää suunnittelun, kuvauksen ja viimeistellyt kuvat.</p>
+        </header>
 
-        <ol class="services">
-          <li class="service reveal">
-            <span class="service__num" aria-hidden="true">01</span>
+        <ol class="service-list">
+          <li class="service reveal" data-preview="img/tyot/profiili-640.jpg">
+            <span class="service__num meta">01</span>
             <h3 class="service__name">Muotokuvaus</h3>
-            <div class="service__desc">
+            <div class="service__body">
               <p>Henkilö- ja yrityskuvat, näyttelijä- ja taiteilijakuvat. Rauhallinen kuvaus studiossa tai valitsemassasi paikassa.</p>
               <ul>
                 <li>1–2 tuntia kuvausaikaa</li>
@@ -297,129 +397,130 @@
                 <li>Yksityinen verkkogalleria</li>
               </ul>
             </div>
-            <p class="service__price"><span>alkaen</span> <strong>290 €</strong></p>
+            <p class="service__price"><span class="meta muted">alkaen</span> <span class="service__amount">290 €</span></p>
+            <img class="service__thumb" src="img/tyot/profiili-640.jpg" width="640" height="427" loading="lazy" decoding="async" alt="">
           </li>
-          <li class="service reveal">
-            <span class="service__num" aria-hidden="true">02</span>
+          <li class="service reveal" data-preview="img/tyot/tulppaanit-640.jpg">
+            <span class="service__num meta">02</span>
             <h3 class="service__name">Brändikuvaus</h3>
-            <div class="service__desc">
-              <p>Tuotekuvat, kampanjat ja brändin oma kuvapankki. Rakennetaan yhdessä kuvasto, joka kestää vuodenajasta toiseen.</p>
+            <div class="service__body">
+              <p>Tuotekuvat, kampanjat ja brändin oma kuvapankki. Rakennamme yhdessä kuvaston, joka kestää vuodenajasta toiseen.</p>
               <ul>
                 <li>Kuvaussuunnitelma ja moodboard</li>
                 <li>Puolen tai koko päivän kuvaus</li>
                 <li>Käyttöoikeudet sovitusti</li>
               </ul>
             </div>
-            <p class="service__price"><span>alkaen</span> <strong>890 €</strong></p>
+            <p class="service__price"><span class="meta muted">alkaen</span> <span class="service__amount">890 €</span></p>
+            <img class="service__thumb" src="img/tyot/tulppaanit-640.jpg" width="640" height="480" loading="lazy" decoding="async" alt="">
           </li>
-          <li class="service reveal">
-            <span class="service__num" aria-hidden="true">03</span>
+          <li class="service reveal" data-preview="img/tyot/kesakeittio-640.jpg">
+            <span class="service__num meta">03</span>
             <h3 class="service__name">Sisätilat</h3>
-            <div class="service__desc">
-              <p>Ravintolat, hotellit, sisustussuunnittelijat ja arkkitehdit. Kuvaan tilan sellaisena kuin se tuntuu – en vain sellaisena kuin se näyttää.</p>
+            <div class="service__body">
+              <p>Ravintolat, hotellit, sisustussuunnittelijat ja arkkitehdit. Kuvaan tilan tunnelman, en pelkkiä neliöitä.</p>
               <ul>
                 <li>Kuvausaika valon mukaan</li>
                 <li>15–25 viimeisteltyä kuvaa</li>
                 <li>Tarvittaessa stailaus</li>
               </ul>
             </div>
-            <p class="service__price"><span>alkaen</span> <strong>650 €</strong></p>
+            <p class="service__price"><span class="meta muted">alkaen</span> <span class="service__amount">650 €</span></p>
+            <img class="service__thumb" src="img/tyot/kesakeittio-640.jpg" width="640" height="427" loading="lazy" decoding="async" alt="">
           </li>
         </ol>
-        <p class="services-note">Yritysasiakkaiden hinnat alv 0 %. Lähetän aina tarkan tarjouksen kuvauksen laajuuden mukaan.</p>
+        <p class="services__note meta muted reveal">Yritysasiakkaiden hinnat alv 0 %. Lopullinen hinta tarkentuu kuvauksen laajuuden mukaan.</p>
       </div>
+      <div class="service-preview" aria-hidden="true"><img alt="" width="640" height="480"></div>
     </section>
 
-    <!-- Palautteet -->
-    <section class="section section--tight" aria-labelledby="quotes-title">
+    <!-- Asiakkaat -->
+    <section class="quotes" id="asiakkaat" aria-labelledby="quotes-title">
       <div class="wrap">
-        <p class="eyebrow reveal"><span class="index-num">04</span> — Asiakkaat</p>
-        <h2 class="visually-hidden" id="quotes-title">Asiakkaiden palautteet</h2>
-        <div class="quotes" style="margin-top: clamp(28px, 4vw, 48px);">
-          <figure class="quote reveal">
-            <span class="quote__mark" aria-hidden="true">”</span>
+        <header class="section-head section-head--compact">
+          <p class="meta section-head__num reveal"><span class="meta--accent">04</span> / Asiakkaat</p>
+          <h2 class="visually-hidden" id="quotes-title">Asiakkaiden sanoin</h2>
+        </header>
+        <div class="quotes__grid">
+          <figure class="quote quote--lead">
             <blockquote>
-              <p>Noora sai paahtimomme näyttämään siltä, miltä se tuntuu aamuseitsemältä: hiljaiselta, lämpimältä ja vähän salaperäiseltä. Kuvat ovat olleet käytössä kaikissa kanavissamme jo kaksi vuotta.</p>
+              <p class="split reveal">”Noora sai paahtimomme näyttämään siltä, miltä se tuntuu aamuseitsemältä: hiljaiselta, lämpimältä ja vähän salaperäiseltä.”</p>
             </blockquote>
-            <figcaption><strong>Elina K.</strong> perustaja, Paahtimo Kaarna</figcaption>
+            <figcaption class="reveal" style="--d:2"><span class="quote__name">Elina K.</span> <span class="meta muted">Perustaja, Paahtimo Kaarna</span></figcaption>
           </figure>
-          <figure class="quote reveal" data-delay="1">
-            <span class="quote__mark" aria-hidden="true">”</span>
+          <figure class="quote">
             <blockquote>
-              <p>En ole koskaan viihtynyt kameran edessä. Nooran kanssa unohdin koko kameran – ja se näkyy kuvista.</p>
+              <p class="reveal">”En ole koskaan viihtynyt kameran edessä. Nooran kanssa unohdin koko kameran – ja se näkyy kuvista.”</p>
             </blockquote>
-            <figcaption><strong>Juho M.</strong> kirjailija</figcaption>
+            <figcaption class="reveal" style="--d:1"><span class="quote__name">Juho M.</span> <span class="meta muted">Kirjailija</span></figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- Yhteys -->
-    <section class="section contact" id="yhteys" aria-labelledby="contact-title">
-      <div class="wrap">
-        <p class="eyebrow reveal"><span class="index-num">05</span> — Yhteys</p>
-        <h2 class="display contact__title reveal" id="contact-title">Kerro, mitä olet <em>tekemässä.</em></h2>
-        <div class="contact__grid">
-          <div class="reveal">
-            <p class="contact__lead">Vastaan yleensä saman päivän aikana. Loppuvuoden kuvauspäiviä on vielä vapaana – kerro aikataulusi, niin katsotaan yhdessä, mikä sopii.</p>
-            <a class="btn btn--solid" href="mailto:kuvat@studiohamara.example">Lähetä viesti <span class="btn__arrow" aria-hidden="true">→</span></a>
-          </div>
-          <dl class="contact__list reveal" data-delay="1">
-            <div>
-              <dt>Sähköposti</dt>
-              <dd><a href="mailto:kuvat@studiohamara.example">kuvat@studiohamara.example</a></dd>
-            </div>
-            <div>
-              <dt>Puhelin</dt>
-              <dd><a href="tel:+358401234567">040 123 4567</a></dd>
-            </div>
-            <div>
-              <dt>Instagram</dt>
-              <dd>@studiohamara</dd>
-            </div>
-            <div>
-              <dt>Studio</dt>
-              <dd>Helsinki</dd>
-            </div>
-          </dl>
+    <!-- Loppukuva -->
+    <section class="finale" aria-labelledby="finale-title">
+      <div class="finale__media">
+        <div class="finale__parallax" data-parallax="0.1">
+          <img src="img/tyot/lierihattu.jpg" width="960" height="1280" loading="lazy" decoding="async"
+               alt="Nainen leveälierisessä hatussa silmät kiinni. Kasvot ja olkapäät erottuvat hiljaa täysin mustasta taustasta.">
         </div>
+      </div>
+      <div class="finale__text">
+        <p class="meta finale__kicker reveal">Kun valo hiipuu</p>
+        <h2 class="finale__title" id="finale-title">
+          <span class="finale__line split reveal">Nähdään</span>
+          <span class="finale__line finale__line--right split reveal"><em>hämärässä.</em></span>
+        </h2>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="site-footer__row">
-        <span class="site-footer__brand">Studio Hämärä</span>
-        <span>© 2026 Studio Hämärä · Helsinki</span>
-        <a class="to-top" href="#top">Takaisin ylös ↑</a>
+      <div class="site-footer__top">
+        <p class="site-footer__brand">Studio Hämärä</p>
+        <p class="meta muted site-footer__line">Valokuvaamo · Helsinki · Vuodesta 2013</p>
+        <a class="to-top meta" href="#top">Takaisin alkuun
+          <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+        </a>
       </div>
-      <p class="concept-note">Konseptiprojekti — kuvitteellinen yritys. Suunnittelu ja toteutus: <a href="../../index.html">Ville Saarela</a>.</p>
-      <p class="credits-note">Sivuston kuvat ovat vapaasti käytettäviä CC0- ja public domain -kuvia. <a href="CREDITS.md">Kuvalähteet</a></p>
+      <div class="site-footer__bottom meta muted">
+        <p>© 2026 Studio Hämärä</p>
+        <p><a href="CREDITS.md">Kuvalähteet</a></p>
+        <p class="concept">Konsepti · <a href="../../index.html">Ville Saarela</a></p>
+      </div>
     </div>
   </footer>
 
   <!-- Lightbox -->
-  <dialog class="lightbox" id="lightbox" aria-label="Kuvankatselu">
-    <div class="lb-top">
-      <span class="lb-count" aria-live="polite"></span>
-      <button class="lb-btn lb-close" type="button" aria-label="Sulje kuvankatselu">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
-      </button>
-    </div>
-    <div class="lb-stage">
-      <img class="lb-img" alt="">
-      <button class="lb-btn lb-nav lb-prev" type="button" aria-label="Edellinen kuva">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
-      </button>
-      <button class="lb-btn lb-nav lb-next" type="button" aria-label="Seuraava kuva">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
-      </button>
-    </div>
-    <div class="lb-bottom">
-      <p class="lb-caption"><span class="work__title"></span> <span class="work__meta"></span></p>
-      <span class="lb-hint">Esc sulkee · ← → selaa</span>
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lb-title">
+    <div class="lb">
+      <div class="lb__top">
+        <p class="lb__count meta"><span class="lb__cur">01</span> <span class="muted">/ <span class="lb__total">12</span></span></p>
+        <div class="lb__progress" aria-hidden="true"><span></span></div>
+        <button class="lb__close" type="button">
+          <span class="meta">Sulje</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
+        </button>
+      </div>
+      <div class="lb__stage">
+        <img class="lb__img" alt="" decoding="async">
+        <button class="lb__nav lb__prev" type="button" aria-label="Edellinen kuva">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 6 8.5 12l6 6" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
+        </button>
+        <button class="lb__nav lb__next" type="button" aria-label="Seuraava kuva">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9.5 6 6 6-6 6" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
+        </button>
+      </div>
+      <div class="lb__bottom" aria-live="polite">
+        <h2 class="lb__title" id="lb-title">Kuvankatselu</h2>
+        <p class="lb__meta meta"><span class="lb__cat"></span><span class="lb__light muted"></span></p>
+        <p class="lb__hint meta muted" aria-hidden="true">Esc sulkee · ← → selaa</p>
+      </div>
     </div>
   </dialog>
+
+  <div class="cursor" aria-hidden="true"><span>Avaa</span></div>
 </body>
 </html>

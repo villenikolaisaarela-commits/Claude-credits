@@ -17,7 +17,7 @@ S-käyrä, nostetut mustat ja lämmin sävytys), ja ne on rajattu/pienennetty ve
 | `img/tyot/vanha-keittio.jpg`, `img/tyot/vanha-keittio-640.jpg` | Kitchen Sink | Jim DiGritz | CC0 1.0 | [StockSnap](https://stocksnap.io/photo/kitchen-sink-VO57T4JVJU) |
 | `img/tyot/lehtikulho.jpg`, `img/tyot/lehtikulho-640.jpg` | Conical shaped tea bowl; dark | tuntematon (rawpixel.com) | CC0 1.0 | [rawpixel](https://www.rawpixel.com/image/7471013/photo-image-leaf-dark-design) |
 | `img/tyot/tulppaanit.jpg`, `img/tyot/tulppaanit-640.jpg` | Flower Stilllife | The World is a Stage | CC0 1.0 | [StockSnap](https://stocksnap.io/photo/flower-stilllife-ZBVSPA9XEK) |
-| `img/tyot/ruokasali.jpg`, `img/tyot/ruokasali-640.jpg` | Warm light in the dining room (Unsplash) | eberhard grossgasteiger | CC0 1.0 | [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=62340783) |
+| `img/tyot/ruokasali.jpg`, `img/tyot/ruokasali-1200.jpg`, `img/tyot/ruokasali-640.jpg` | Warm light in the dining room (Unsplash) | eberhard grossgasteiger | CC0 1.0 | [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=62340783) |
 | `img/tyot/lukunurkka.jpg`, `img/tyot/lukunurkka-640.jpg` | Vintage Chair | EVG Photos | CC0 1.0 | [StockSnap](https://stocksnap.io/photo/vintage-chair-SHE40GOPPL) |
 | `img/tyot/askel.jpg`, `img/tyot/askel-640.jpg` | Leather Shoes | Pawel Kadysz | CC0 1.0 | [StockSnap](https://stocksnap.io/photo/leather-shoes-M5V6ZF6HRN) |
 | `img/tyot/profiili.jpg`, `img/tyot/profiili-640.jpg` | People Man | Vinicius Amano | CC0 1.0 | [StockSnap](https://stocksnap.io/photo/people-man-KH3BU47M71) |
@@ -34,3 +34,10 @@ Lisenssi: <https://creativecommons.org/publicdomain/zero/1.0/>
 - [Inter Tight](https://fonts.google.com/specimen/Inter+Tight) — SIL Open Font License 1.1
 
 Fonttitiedostot (latin-osajoukko, woff2) on ladattu Google Fontsista ja tarjoillaan paikallisesti kansiosta `fonts/`.
+Lisenssiteksti ja tekijänoikeusmerkinnät: `fonts/OFL.txt`.
+
+## Koodi
+
+Sivusto ei käytä ulkoisia kirjastoja. Pehmeä vieritys, masonry-asettelu, suodatus, kuvankatselu ja
+päivän hämärän laskenta (auringonlasku ja siviilihämärän loppu Helsingissä, "Almanac for Computers"
+-algoritmi) on kirjoitettu itse tiedostoon `script.js`. Sivu ei tee ajon aikana ulkoisia pyyntöjä.
