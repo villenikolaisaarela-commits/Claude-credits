@@ -34,4 +34,4 @@ Openverse-tunnisteet:
 
 ## Fontti
 
-- **Archivo** (Omnibus-Type), SIL Open Font License 1.1 – ladataan Google Fontsista.
+- **Archivo** (Omnibus-Type), SIL Open Font License 1.1 – tiedostot kansiossa `fonts/` (lisenssi `fonts/OFL.txt`).

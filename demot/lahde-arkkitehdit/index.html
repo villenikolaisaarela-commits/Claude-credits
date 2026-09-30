@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <title>Lähde Arkkitehdit — Arkkitehtitoimisto, Helsinki</title>
+  <meta name="description" content="Lähde Arkkitehdit on pieni helsinkiläinen arkkitehtitoimisto. Suunnittelemme asuinrakennuksia, huviloita, saunoja ja sisätiloja – hiljaista arkkitehtuuria pohjoiseen valoon.">
+  <meta name="theme-color" content="#eeebe5">
+  <meta property="og:title" content="Lähde Arkkitehdit">
+  <meta property="og:description" content="Hiljaista arkkitehtuuria pohjoiseen valoon. Asuinrakennukset, vapaa-ajan asunnot ja sisätilat.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/hero-talo-harmaa.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1c1a'/%3E%3Cpath d='M10 7v18h13' fill='none' stroke='%23eeebe5' stroke-width='2.4'/%3E%3Ccircle cx='22.5' cy='10.5' r='2.2' fill='%23c49a74'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preload" as="image" href="img/hero-talo-harmaa.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#top" aria-label="Lähde Arkkitehdit, etusivu">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M10 7v18h13" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="22.5" cy="10.5" r="2.2" class="brand__dot"/></svg>
+        <span class="brand__name">Lähde</span>
+        <span class="brand__sub">Arkkitehdit</span>
+      </a>
+
+      <nav class="nav" aria-label="Päävalikko">
+        <ul class="nav__list" id="nav-list">
+          <li><a href="#projektit">Projektit</a></li>
+          <li><a href="#toimisto">Toimisto</a></li>
+          <li><a href="#palvelut">Palvelut</a></li>
+          <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+        </ul>
+      </nav>
+
+      <p class="clock" aria-hidden="true"><span>Helsinki</span> <time data-clock>&nbsp;</time></p>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <span class="menu-toggle__label" data-menu-label>Valikko</span>
+        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" data-menu hidden>
+      <nav aria-label="Mobiilivalikko">
+        <ol class="mobile-menu__list">
+          <li><a href="#projektit"><span>01</span>Projektit</a></li>
+          <li><a href="#toimisto"><span>02</span>Toimisto</a></li>
+          <li><a href="#palvelut"><span>03</span>Palvelut</a></li>
+          <li><a href="#yhteystiedot"><span>04</span>Yhteystiedot</a></li>
+        </ol>
+      </nav>
+      <p class="mobile-menu__foot">studio@lahdearkkitehdit.example<br>040 123 4567</p>
+    </div>
+  </header>
+
+  <main id="sisalto">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__top">
+        <p class="kicker hero__kicker reveal">Arkkitehtitoimisto — Helsinki</p>
+        <h1 class="hero__title reveal" id="hero-title" style="--d: 80ms">Hiljaista arkkitehtuuria <em>pohjoiseen valoon.</em></h1>
+        <div class="hero__aside reveal" style="--d: 200ms">
+          <p>Asuinrakennukset, vapaa-ajan asunnot ja sisätilat vuodesta&nbsp;2014.</p>
+          <a class="link-arrow" href="#projektit">Katso projektit <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <figure class="hero__media" data-hero>
+        <div class="hero__frame">
+          <img src="img/hero-talo-harmaa.jpg" width="1800" height="1012" alt="Harmaa, pystylaudoitettu talo turvekattoineen avaralla ylängöllä. Taustalla häämöttää lumihuippuisia tuntureita." fetchpriority="high" decoding="async" data-parallax>
+        </div>
+        <figcaption class="wrap hero__caption">
+          <span>Talo Harmaa — Enontekiö</span>
+          <span>Asuinrakennus, 2024</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro wrap" aria-label="Toimiston lähtökohta">
+      <p class="kicker reveal">Lähtökohta</p>
+      <div class="intro__body">
+        <p class="intro__lead reveal">Jokainen työmme alkaa paikasta: maastosta, valon suunnasta ja siitä, mitä sinne ei kannata rakentaa. Piirrämme vähän, mutta tarkasti.</p>
+        <dl class="stats">
+          <div class="stats__item reveal" style="--d: 0ms"><dt>Vuotta</dt><dd>12</dd></div>
+          <div class="stats__item reveal" style="--d: 120ms"><dt>Valmistunutta kohdetta</dt><dd>64</dd></div>
+          <div class="stats__item reveal" style="--d: 240ms"><dt>Osakasta</dt><dd>3</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projektit" aria-labelledby="projektit-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker reveal">Projektit</p>
+          <h2 class="section-title reveal" id="projektit-title">Valitut työt <span class="section-title__meta">2021–2025</span></h2>
+        </header>
+
+        <div class="project-grid">
+          <article class="project project--a reveal">
+            <a class="project__link" href="#kallio" aria-label="Huvila Kallio – lue projektista">
+              <figure class="project__media ratio-3-2">
+                <img src="img/huvila-kallio.jpg" width="960" height="642" loading="lazy" decoding="async" alt="Pitkä, tummaksi käsitelty puuhuvila matalalla niityllä raskaiden sadepilvien alla.">
+              </figure>
+            </a>
+            <div class="project__meta">
+              <span class="project__no">01</span>
+              <h3 class="project__name">Huvila Kallio</h3>
+              <dl class="project__facts">
+                <div><dt class="sr-only">Tyyppi</dt><dd>Vapaa-ajan asunto</dd></div>
+                <div><dt class="sr-only">Sijainti</dt><dd>Kemiönsaari</dd></div>
+                <div><dt class="sr-only">Vuosi</dt><dd>2025</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project project--b reveal" style="--d: 120ms">
+            <figure class="project__media ratio-4-5">
+              <img src="img/talo-harmaa.jpg" width="864" height="1080" loading="lazy" decoding="async" alt="Lähikuva harmaan talon julkisivusta: pystylaudoitus, kaksi ruutuikkunaa ja lumen peittämä turvekatto.">
+            </figure>
+            <div class="project__meta">
+              <span class="project__no">02</span>
+              <h3 class="project__name">Talo Harmaa</h3>
+              <dl class="project__facts">
+                <div><dt class="sr-only">Tyyppi</dt><dd>Asuinrakennus</dd></div>
+                <div><dt class="sr-only">Sijainti</dt><dd>Enontekiö</dd></div>
+                <div><dt class="sr-only">Vuosi</dt><dd>2024</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project project--c reveal">
+            <figure class="project__media ratio-4-3">
+              <img src="img/saunarakennus-lampi.jpg" width="960" height="720" loading="lazy" decoding="async" alt="Hirsinen rantasauna paalujen varassa järven yllä, taustalla usvaisia metsärinteitä.">
+            </figure>
+            <div class="project__meta">
+              <span class="project__no">03</span>
+              <h3 class="project__name">Saunarakennus Lampi</h3>
+              <dl class="project__facts">
+                <div><dt class="sr-only">Tyyppi</dt><dd>Sauna</dd></div>
+                <div><dt class="sr-only">Sijainti</dt><dd>Sysmä</dd></div>
+                <div><dt class="sr-only">Vuosi</dt><dd>2024</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project project--d reveal" style="--d: 120ms">
+            <figure class="project__media ratio-3-2">
+              <img src="img/koti-kruununhaka.jpg" width="960" height="640" loading="lazy" decoding="async" alt="Kerrostaloasunto, jossa on paljaat betonipinnat, tumma puupöytä, vuode ja kaksi suurta ikkunaa.">
+            </figure>
+            <div class="project__meta">
+              <span class="project__no">04</span>
+              <h3 class="project__name">Koti Kruununhaka</h3>
+              <dl class="project__facts">
+                <div><dt class="sr-only">Tyyppi</dt><dd>Sisätilat</dd></div>
+                <div><dt class="sr-only">Sijainti</dt><dd>Helsinki</dd></div>
+                <div><dt class="sr-only">Vuosi</dt><dd>2023</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project project--e reveal">
+            <figure class="project__media ratio-3-2">
+              <img src="img/talo-pihlaja.jpg" width="960" height="641" loading="lazy" decoding="async" alt="Tummaksi petsattu harjakattoinen puutalo, jonka päädyssä on kolmionmuotoinen ikkuna ja katolla kattoikkunoita.">
+            </figure>
+            <div class="project__meta">
+              <span class="project__no">05</span>
+              <h3 class="project__name">Talo Pihlaja</h3>
+              <dl class="project__facts">
+                <div><dt class="sr-only">Tyyppi</dt><dd>Asuinrakennus</dd></div>
+                <div><dt class="sr-only">Sijainti</dt><dd>Porvoo</dd></div>
+                <div><dt class="sr-only">Vuosi</dt><dd>2022</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project project--f reveal" style="--d: 120ms">
+            <figure class="project__media ratio-3-2">
+              <img src="img/asunto-eira.jpg" width="1200" height="799" loading="lazy" decoding="async" alt="Seinästä ulokkeena nousevat valubetoniportaat, joilla seisoo viinilasi ja juomalasi.">
+            </figure>
+            <div class="project__meta">
+              <span class="project__no">06</span>
+              <h3 class="project__name">Asunto Eira</h3>
+              <dl class="project__facts">
+                <div><dt class="sr-only">Tyyppi</dt><dd>Sisätilat</dd></div>
+                <div><dt class="sr-only">Sijainti</dt><dd>Helsinki</dd></div>
+                <div><dt class="sr-only">Vuosi</dt><dd>2021</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured project -->
+    <section class="feature" id="kallio" aria-labelledby="kallio-title">
+      <div class="wrap feature__head">
+        <p class="kicker reveal">Valittu projekti — 01</p>
+        <h2 class="feature__title reveal" id="kallio-title" style="--d: 80ms">Huvila Kallio</h2>
+        <p class="feature__sub reveal" style="--d: 160ms">Matala puutalo tuulisella saaristoniityllä.</p>
+        <dl class="facts reveal" style="--d: 240ms">
+          <div><dt>Tyyppi</dt><dd>Vapaa-ajan asunto</dd></div>
+          <div><dt>Sijainti</dt><dd>Kemiönsaari</dd></div>
+          <div><dt>Laajuus</dt><dd>118 m²</dd></div>
+          <div><dt>Valmistunut</dt><dd>2025</dd></div>
+          <div><dt>Materiaalit</dt><dd>CLT-runko, tervattu kuusi</dd></div>
+        </dl>
+      </div>
+
+      <figure class="feature__lead wrap reveal">
+        <div class="media-frame ratio-3-2-wide">
+          <img src="img/huvila-kallio-ikkuna.jpg" width="1600" height="1068" loading="lazy" decoding="async" alt="Syvä ikkunasyvennys hämärässä huoneessa. Ihminen istuu tyynyjen keskellä ja katsoo avointa, kivikkoista peltomaisemaa.">
+        </div>
+        <figcaption>Ikkunasyvennys on talon tärkein huone.</figcaption>
+      </figure>
+
+      <div class="wrap feature__body">
+        <div class="feature__text">
+          <p class="reveal">Huvila Kallio on kolmesta matalasta osasta koottu talo avoimella niityllä. Se painuu maisemaan: ulkoverhous on tervattua kuusta, ja katto on samaa sävyä kuin seinät.</p>
+          <p class="reveal">Sisällä tila avautuu harkiten. Jokainen ikkuna on sijoitettu yhtä näkymää varten, ja väliin jää rauhallisia, lähes suljettuja seiniä. Valo liikkuu huoneesta toiseen vuorokauden mukana.</p>
+          <blockquote class="feature__quote reveal">
+            <p>”Talo ei kilpaile maiseman kanssa. Se rajaa sen.”</p>
+          </blockquote>
+        </div>
+
+        <figure class="feature__detail reveal" style="--d: 120ms">
+          <div class="media-frame ratio-4-5">
+            <img src="img/huvila-kallio-julkisivu.jpg" width="960" height="1200" loading="lazy" decoding="async" alt="Lähikuva tummansinertävästä pystylaudoituksesta, jossa puun syyt ja oksankohdat erottuvat.">
+          </div>
+          <figcaption>Julkisivu, tervattu kuusilaudoitus.</figcaption>
+        </figure>
+
+        <figure class="feature__room reveal">
+          <div class="media-frame ratio-3-2">
+            <img src="img/huvila-kallio-makuuhuone.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="Hämärä vinokattoinen makuuhuone. Valo siivilöityy sälekaihtimen läpi pienestä päätyikkunasta vuoteelle.">
+          </div>
+          <figcaption>Makuuhuone ullakkokerroksessa.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Office -->
+    <section class="office wrap" id="toimisto" aria-labelledby="toimisto-title">
+      <figure class="office__media reveal">
+        <div class="media-frame ratio-4-5">
+          <img src="img/toimisto.jpg" width="1400" height="1050" loading="lazy" decoding="async" alt="Vaalea kiviportaikko kaartuu loivasti ylöspäin sileän, kivilaatoitetun seinän vierellä.">
+        </div>
+      </figure>
+
+      <div class="office__content">
+        <p class="kicker reveal">Toimisto</p>
+        <h2 class="section-title reveal" id="toimisto-title">Pieni toimisto. Tarkka käsiala.</h2>
+        <div class="office__text">
+          <p class="reveal">Lähde Arkkitehdit on vuonna 2014 perustettu helsinkiläinen arkkitehtitoimisto. Otamme vuodessa vastaan vain muutaman kohteen, jotta jokainen saa ansaitsemansa ajan – ensimmäisestä luonnoksesta viimeiseen detaljiin.</p>
+          <p class="reveal">Teemme työtä tiiviisti rakennuttajan, rakennesuunnittelijan ja paikallisten tekijöiden kanssa. Hyvä rakennus syntyy keskustelusta, ei valmiista mallista.</p>
+        </div>
+
+        <ul class="people" aria-label="Osakkaat">
+          <li class="person reveal">
+            <h3 class="person__name">Aino</h3>
+            <p class="person__role">Arkkitehti SAFA, perustaja</p>
+            <p class="person__focus">Asuinrakennukset ja pääsuunnittelu</p>
+          </li>
+          <li class="person reveal" style="--d: 100ms">
+            <h3 class="person__name">Mikko</h3>
+            <p class="person__role">Arkkitehti SAFA, osakas</p>
+            <p class="person__focus">Huvilat, saunat ja puurakentaminen</p>
+          </li>
+          <li class="person reveal" style="--d: 200ms">
+            <h3 class="person__name">Helmi</h3>
+            <p class="person__role">Sisustusarkkitehti SIO, osakas</p>
+            <p class="person__focus">Sisätilat, kiintokalusteet ja valaistus</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="palvelut" aria-labelledby="palvelut-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker reveal">Palvelut</p>
+          <h2 class="section-title reveal" id="palvelut-title">Mitä teemme</h2>
+        </header>
+        <ol class="service-list">
+          <li class="service reveal">
+            <span class="service__no">01</span>
+            <h3 class="service__title">Asuinrakennukset</h3>
+            <p class="service__text">Omakoti- ja paritalot ensimmäisestä luonnoksesta rakennuslupaan ja työmaan loppuun asti.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__no">02</span>
+            <h3 class="service__title">Vapaa-ajan asunnot</h3>
+            <p class="service__text">Huvilat, saunat ja aitat rannoille, metsiin ja saaristoon – paikan ehdoilla.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__no">03</span>
+            <h3 class="service__title">Sisätilat</h3>
+            <p class="service__text">Kokonaisvaltainen sisäarkkitehtuuri: tilajärjestely, materiaalit, kiintokalusteet ja valaistus.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__no">04</span>
+            <h3 class="service__title">Korjaus ja laajennus</h3>
+            <p class="service__text">Vanhan rakennuksen kunnioittava jatkaminen niin, että uusi ja vanha puhuvat samaa kieltä.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__no">05</span>
+            <h3 class="service__title">Pääsuunnittelu</h3>
+            <p class="service__text">Lupaprosessi, suunnittelun koordinointi ja yhteistyö urakoitsijan kanssa yhdestä kädestä.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="yhteystiedot" aria-labelledby="yhteystiedot-title">
+      <div class="wrap">
+        <p class="kicker reveal">Yhteystiedot</p>
+        <h2 class="contact__title reveal" id="yhteystiedot-title">Kerro meille <em>paikasta.</em></h2>
+        <div class="contact__grid">
+          <p class="contact__intro reveal">Otamme vastaan muutaman uuden toimeksiannon vuodessa. Kerro tontista, aikataulusta ja siitä, miten haluat asua. Vastaamme viikon kuluessa.</p>
+          <dl class="contact__details">
+            <div class="reveal">
+              <dt>Sähköposti</dt>
+              <dd><a class="contact__link" href="mailto:studio@lahdearkkitehdit.example">studio@lahdearkkitehdit.example</a></dd>
+            </div>
+            <div class="reveal" style="--d: 100ms">
+              <dt>Puhelin</dt>
+              <dd><a class="contact__link" href="tel:+358401234567">040 123 4567</a></dd>
+            </div>
+            <div class="reveal" style="--d: 200ms">
+              <dt>Toimisto</dt>
+              <dd><address>Esimerkkikatu 5 B<br>00100 Helsinki</address></dd>
+            </div>
+            <div class="reveal" style="--d: 300ms">
+              <dt>Tapaamiset</dt>
+              <dd>Arkisin sopimuksen mukaan</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__row">
+        <p class="site-footer__brand">Lähde <span>Arkkitehdit</span></p>
+        <p class="site-footer__small">© 2026 Lähde Arkkitehdit</p>
+        <a class="site-footer__top" href="#top">Takaisin ylös <span aria-hidden="true">↑</span></a>
+      </div>
+      <p class="concept-note">Konseptiprojekti — kuvitteellinen yritys. Suunnittelu ja toteutus: <a href="../../index.html">Ville Saarela</a>. <a class="concept-note__credits" href="CREDITS.md">Kuvalähteet</a></p>
+    </div>
+  </footer>
+</body>
+</html>
