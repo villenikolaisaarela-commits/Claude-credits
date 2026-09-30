@@ -1,0 +1,11 @@
+Case study — Verkkosivut valokuvaajalle (konseptiprojekti)
+
+Studio Hämärä on kuvitteellinen helsinkiläinen valokuvaaja, jolle suunnittelin ja rakensin portfoliosivut näytteeksi siitä, miten teen töitä.
+
+Valokuvaajan sivujen tärkein tehtävä on näyttää kuvat parhaassa mahdollisessa valossa. Kaikki muu on toissijaista.
+
+Siksi ilme on tumma ja elokuvallinen, galleria on suodatettava ja jokaisen kuvan voi avata koko ruudulle. Sivu laskee joka päivä myös Helsingin hämärän hetken.
+
+Tarvitsetko sivut, jotka näyttävät työsi tasoisilta? Linkki biossa.
+
+#verkkosivut #webdesign #valokuvaaja #yrittäjä #helsinki

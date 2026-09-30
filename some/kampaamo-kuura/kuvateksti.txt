@@ -1,0 +1,11 @@
+Case study — Verkkosivut kampaamolle (konseptiprojekti)
+
+Kampaamo Kuura on kuvitteellinen tamperelainen kampaamo, jolle suunnittelin ja rakensin verkkosivut näytteeksi siitä, miten teen töitä.
+
+Pienen kampaamon tärkein valttikortti on tunnelma: rauha, aika ja huolellisuus. Siksi sivu etenee hitaasti, kuin käynti itse salongissa.
+
+Kaari toistuu muotona kuvissa ja yksityiskohdissa. Käynnin vaiheet kerrotaan kuva kerrallaan, hinnasto on aseteltu kuin menu ja galleria liukuu sivuttain.
+
+Tarvitsetko sivut, jotka tuntuvat samalta kuin yrityksesi? Linkki biossa.
+
+#verkkosivut #webdesign #kampaamo #yrittäjä #tampere

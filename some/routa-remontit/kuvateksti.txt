@@ -1,0 +1,11 @@
+Case study — Verkkosivut remonttiyritykselle (konseptiprojekti)
+
+Routa Remontit on kuvitteellinen pirkanmaalainen remonttiyritys, jolle suunnittelin ja rakensin verkkosivut näytteeksi siitä, miten teen töitä.
+
+Remontin ostaja pelkää ennen kaikkea epäluotettavaa tekijää ja yllätyskuluja. Siksi sivu rakentaa luottamusta samalla tavalla kuin hyvä työmaa: ensin lupaus, sitten materiaalit, työt, prosessi ja takuut.
+
+Isot numerot kertovat kokemuksesta, materiaaliosio näyttää laadun ja ennen–jälkeen-vertailu todistaa sen.
+
+Tarvitsetko sivut, jotka näyttävät työsi tasoisilta? Linkki biossa.
+
+#verkkosivut #webdesign #remontti #yrittäjä #pirkanmaa
