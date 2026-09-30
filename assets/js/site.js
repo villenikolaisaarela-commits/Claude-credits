@@ -1,6 +1,13 @@
 // Reveal-on-scroll, Finnish local time and current year. No dependencies.
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Inertia scrolling (Lenis, MIT). Native scroll events still fire, so the rest works unchanged.
+  if (!reduce && window.Lenis) {
+    var lenis = new window.Lenis({ lerp: 0.09, wheelMultiplier: 0.9, anchors: { offset: -64 } });
+    var raf = function (time) { lenis.raf(time); requestAnimationFrame(raf); };
+    requestAnimationFrame(raf);
+  }
   var items = document.querySelectorAll('[data-reveal]');
 
   if (reduce || !('IntersectionObserver' in window)) {
