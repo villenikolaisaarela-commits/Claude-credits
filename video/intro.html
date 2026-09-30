@@ -191,25 +191,25 @@ const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
 
 // Scene windows (seconds). Every scene: lines rise in, hold, then leave upward.
 const S = {
-  s1: [0.35, 3.3],
-  s2: [3.3, 6.2],
-  s3: [6.2, 10.6],
-  s4: [10.6, 13.4],
-  s5: [13.4, 14.9],
-  s6: [14.9, 19.9],
-  s7: [19.9, 24.0],
-  s8: [24.0, 28.0],
+  s1: [0.0, 2.3],
+  s2: [2.3, 4.5],
+  s3: [4.5, 7.1],
+  s4: [7.1, 8.9],
+  s5: [8.9, 9.9],
+  s6: [9.9, 13.2],
+  s7: [13.2, 15.4],
+  s8: [15.4, 19.0],
 };
-const DURATION = 28.0;
+const DURATION = 19.0;
 window.DURATION = DURATION;
 
 // Lines in a scene: enter staggered, exit staggered.
-function lines(scene, t, { stagger = 0.085, dur = 1.0, exit = true, delay = 0, only } = {}) {
+function lines(scene, t, { stagger = 0.06, dur = 0.75, exit = true, delay = 0, only } = {}) {
   const [a, b] = S[scene];
   const els = only || $$(`#${scene} .line > span`);
   els.forEach((el, i) => {
     const pin = expoOut(prog(t, a + delay + i * stagger, dur));
-    const pout = exit ? quartIn(prog(t, b - 0.55 + i * 0.045, 0.5)) : 0;
+    const pout = exit ? quartIn(prog(t, b - 0.38 + i * 0.035, 0.34)) : 0;
     const y = (1 - pin) * 112 - pout * 112;
     el.style.transform = `translate3d(0, ${y}%, 0)`;
   });
@@ -223,7 +223,7 @@ function show(scene, t) {
 
 function render(t) {
   // frame
-  const fin = expoOut(prog(t, 0, 0.9));
+  const fin = expoOut(prog(t, 0, 0.5));
   $('#top').style.opacity = fin;
   $('#bottom').style.opacity = fin;
   $('#bar').style.transform = `scaleX(${clamp(t / DURATION)})`;
@@ -231,22 +231,22 @@ function render(t) {
   $('#count').textContent = String((idx < 0 ? 7 : idx) + 1).padStart(2, '0') + ' / 08';
 
   // 1 — hook
-  if (show('s1', t)) lines('s1', t, { stagger: 0.11, dur: 1.1 });
+  if (show('s1', t)) lines('s1', t, { stagger: 0.07, dur: 0.8 });
 
   // 2 — search
   if (show('s2', t)) {
     const [a, b] = S.s2;
-    const open = expoOut(prog(t, a, 0.9));
-    const close = quartIn(prog(t, b - 0.55, 0.5));
+    const open = expoOut(prog(t, a, 0.6));
+    const close = quartIn(prog(t, b - 0.38, 0.34));
     $('#search').style.clipPath = `inset(0 ${(1 - open) * 100}% 0 0 round 999px)`;
     $('#search').style.transform = `translate3d(0, ${-close * 60}px, 0)`;
     $('#search').style.opacity = 1 - close;
     const text = 'Yrityksesi Oy';
-    const n = Math.floor(clamp((t - a - 0.55) / 0.85) * text.length);
+    const n = Math.floor(clamp((t - a - 0.4) / 0.6) * text.length);
     $('#typed').textContent = text.slice(0, n);
-    const typing = t > a + 0.55 && t < a + 1.4;
+    const typing = t > a + 0.4 && t < a + 1.0;
     $('#caret').style.opacity = typing || Math.floor((t - a) * 2.2) % 2 === 0 ? 1 : 0;
-    lines('s2', t, { delay: 1.15 });
+    lines('s2', t, { delay: 1.0 });
   }
 
   // 3 — struck list
@@ -254,9 +254,9 @@ function render(t) {
     const [a] = S.s3;
     const items = $$('#s3 h2 .line > span');
     lines('s3', t, { only: [$('#s3label .line > span')] });
-    lines('s3', t, { only: items, stagger: 0.95, dur: 0.9, delay: 0.2 });
+    lines('s3', t, { only: items, stagger: 0.62, dur: 0.6, delay: 0.1 });
     items.forEach((el, i) => {
-      const s = quartInOut(prog(t, a + 0.2 + i * 0.95 + 0.55, 0.45));
+      const s = quartInOut(prog(t, a + 0.1 + i * 0.62 + 0.35, 0.3));
       el.querySelector('b').style.transform = `scaleX(${s})`;
       el.style.color = s > 0.5 ? '#b5b5b5' : '#0a0a0a';
     });
@@ -265,47 +265,47 @@ function render(t) {
   // 4 — consequence
   if (show('s4', t)) {
     lines('s4', t, { only: $$('#s4 h2 .line > span'), stagger: 0.1 });
-    lines('s4', t, { only: $$('#s4 p .line > span'), delay: 0.9 });
+    lines('s4', t, { only: $$('#s4 p .line > span'), delay: 0.6 });
   }
 
   // 5 — turn
-  if (show('s5', t)) lines('s5', t, { dur: 0.9 });
+  if (show('s5', t)) lines('s5', t, { dur: 0.6 });
 
   // 6 — work montage: each cover opens upward over the previous one
   if (show('s6', t)) {
     const [a, b] = S.s6;
     const imgs = $$('#frame img');
     const caps = $$('#cap > div');
-    const step = 1.1;
-    const fopen = expoOut(prog(t, a, 1.0));
-    const fclose = quartIn(prog(t, b - 0.6, 0.55));
+    const step = 0.72;
+    const fopen = expoOut(prog(t, a, 0.7));
+    const fclose = quartIn(prog(t, b - 0.4, 0.36));
     $('#frame').style.clipPath = `inset(${(1 - fopen) * 100}% 0 ${fclose * 100}% 0)`;
     imgs.forEach((img, i) => {
-      const st = a + 0.15 + i * step;
-      const p = expoOut(prog(t, st, 1.0));
+      const st = a + 0.1 + i * step;
+      const p = expoOut(prog(t, st, 0.7));
       const reveal = i === 0 ? 1 : p;
       img.style.clipPath = `inset(${(1 - reveal) * 100}% 0 0 0)`;
-      img.style.transform = `scale(${1.14 - 0.14 * expoOut(prog(t, st - (i === 0 ? 0.15 : 0), 1.6))})`;
+      img.style.transform = `scale(${1.14 - 0.14 * expoOut(prog(t, st - (i === 0 ? 0.1 : 0), 1.1))})`;
       img.style.zIndex = i;
     });
     caps.forEach((c, i) => {
-      const st = a + 0.35 + i * step;
-      const pin = expoOut(prog(t, st, 0.8));
-      const pout = i < caps.length - 1 ? quartIn(prog(t, st + step - 0.25, 0.3)) : quartIn(prog(t, b - 0.6, 0.5));
+      const st = a + 0.25 + i * step;
+      const pin = expoOut(prog(t, st, 0.6));
+      const pout = i < caps.length - 1 ? quartIn(prog(t, st + step - 0.2, 0.2)) : quartIn(prog(t, b - 0.4, 0.34));
       c.style.transform = `translate3d(0, ${(1 - pin) * 110 - pout * 110}%, 0)`;
     });
   }
 
   // 7 — promise
-  if (show('s7', t)) lines('s7', t, { delay: 0.1, stagger: 0.1 });
+  if (show('s7', t)) lines('s7', t, { delay: 0.05, stagger: 0.07 });
 
   // 8 — call to action (no exit: holds to the end)
   if (show('s8', t)) {
     const [a] = S.s8;
     lines('s8', t, { exit: false, only: [$('#s8 .label .line > span')] });
     lines('s8', t, { exit: false, only: $$('#s8 h2 .line > span'), delay: 0.2, stagger: 0.1 });
-    lines('s8', t, { exit: false, only: [$('#s8 p:last-of-type .line > span')], delay: 0.9 });
-    $('#ul').style.transform = `scaleX(${quartInOut(prog(t, a + 1.5, 0.8))})`;
+    lines('s8', t, { exit: false, only: [$('#s8 p:last-of-type .line > span')], delay: 0.6 });
+    $('#ul').style.transform = `scaleX(${quartInOut(prog(t, a + 1.0, 0.55))})`;
     $('#dot').style.opacity = 0.35 + 0.65 * (0.5 + 0.5 * Math.cos((t - a) * Math.PI * 1.1));
   }
 }

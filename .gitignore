@@ -1,4 +1,3 @@
 video/node_modules
 video/stills/
-video/soundtrack.wav
-video/soundtrack-sfx.wav
+video/*.wav
