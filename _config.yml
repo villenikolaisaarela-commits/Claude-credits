@@ -3,5 +3,6 @@ exclude:
   - video
   - some
   - brand
+  - CLAUDE.md
   - README.md
   - .gitignore
