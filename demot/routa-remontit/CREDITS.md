@@ -4,7 +4,7 @@ Kaikki sivuston valokuvat ovat CC0-lisensoituja (Creative Commons Zero 1.0 -luov
 
 Kuvat haettiin [Openverse](https://openverse.org/)-rajapinnan kautta suodattimella `license=cc0,pdm`. Kuvat on skaalattu (pisin sivu enintään 1800 px) ja pakattu JPEG-muotoon (laatu 78). Muuten niitä ei ole muokattu.
 
-Kaikki sivun yritys-, henkilö- ja yhteystiedot sekä asiakaspalautteet ovat kuvitteellisia.
+Kaikki sivun yritystiedot, kohteet, luvut ja asiakaspalautteet ovat kuvitteellisia.
 
 | Tiedosto | Alkuperäinen otsikko | Tekijä | Lisenssi | Lähde |
 |---|---|---|---|---|
@@ -18,6 +18,8 @@ Kaikki sivun yritys-, henkilö- ja yhteystiedot sekä asiakaspalautteet ovat kuv
 | `img/ref-terassi.jpg` | (ei otsikkoa) | ei ilmoitettu (rawpixel) | CC0 1.0 | [rawpixel](https://www.rawpixel.com/image/5942159/free-public-domain-cc0-photo) |
 | `img/ref-olohuone.jpg` | Living room furniture, interior design | ei ilmoitettu (rawpixel) | CC0 1.0 | [rawpixel](https://www.rawpixel.com/image/6043351/photo-image-public-domain-wood-table) |
 | `img/tyomaa-porakone.jpg` | Craftsman Drill | Thijs van der Weide | CC0 1.0 | [StockSnap](https://stocksnap.io/photo/craftsman-drill-L8IBQZYEAL) |
+| `img/materiaali-kasityo.jpg` | woodworker working slab wood workshop | ei ilmoitettu (rawpixel) | CC0 1.0 | [rawpixel](https://www.rawpixel.com/image/3304149/free-photo-image-cc0-creative-commons) |
+| `img/materiaali-puu.jpg` | Wooden plank | ei ilmoitettu (rawpixel) | CC0 1.0 | [rawpixel](https://www.rawpixel.com/image/6015948/wooden-plank-free-public-domain-cc0-photo) |
 
 Openverse-tunnisteet:
 
@@ -31,7 +33,19 @@ Openverse-tunnisteet:
 - `img/ref-terassi.jpg` – Openverse `b43215a4-3caf-4625-ba7e-7b6349f2f019`
 - `img/ref-olohuone.jpg` – Openverse `987f193c-da8a-424d-a979-a49e0a9273ee`
 - `img/tyomaa-porakone.jpg` – Openverse `1dbb3784-6a01-4e79-8bd4-c800d7d68869`
+- `img/materiaali-kasityo.jpg` – Openverse `828c7452-bfdc-4128-8969-9d77398684b1` (rajattu 4:5)
+- `img/materiaali-puu.jpg` – Openverse `1c5870a3-8d57-4e7f-8645-b3d7758486ab` (rajattu 4:5)
+
+### Johdetut kuvat (tehty yllä olevista CC0-kuvista)
+
+- `img/luonnos-keittio.jpg` – piirrosmainen "luonnos"-versio kuvasta `img/ref-keittio.jpg` (reunantunnistus ja lyijykynäsuodin, vihreä muste paperisävyllä, apuruudukko). Käytetään ennen/jälkeen-vertailussa.
+- `img/materiaali-laatta.jpg` – rajaus kuvasta `img/hero-kylpyhuone.jpg`.
+- `img/materiaali-perustus.jpg` – rajaus kuvasta `img/palvelu-terassi.jpg`.
 
 ## Fontti
 
-- **Archivo** (Omnibus-Type), SIL Open Font License 1.1 – tiedostot kansiossa `fonts/` (lisenssi `fonts/OFL.txt`).
+- **Archivo** (Omnibus-Type), SIL Open Font License 1.1 – muuttuva kirjasin (paino 100–900, leveys 62–125 %), tiedostot kansiossa `fonts/` (lisenssi `fonts/OFL.txt`).
+
+## Kirjastot
+
+- **Lenis** 1.3.26 (darkroom.engineering), MIT-lisenssi – pehmeä vieritys. Paikallinen kopio `vendor/lenis.min.js` (npm-paketin `lenis` dist-tiedosto, lähdekarttaviittaus poistettu), lisenssi `vendor/LENIS-LICENSE.txt`. Sivu toimii myös ilman sitä; se ei ole käytössä, kun käyttäjä on pyytänyt vähennettyä liikettä.
