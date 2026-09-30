@@ -1,0 +1,13 @@
+Case study — Verkkosivut arkkitehtitoimistolle (konseptiprojekti)
+
+Lähde Arkkitehdit on kuvitteellinen helsinkiläinen arkkitehtitoimisto, jolle suunnittelin ja rakensin verkkosivut näytteeksi siitä, miten teen töitä.
+
+Arkkitehtitoimiston asiakkaat valitsevat tekijän aiempien kohteiden perusteella. Siksi sivujen tärkein tehtävä on antaa kuville tilaa – ja pysyä itse taustalla.
+
+Etusivu alkaa yhdellä isolla kuvalla ja hiljaisella lauseella. Projektit ovat galleriamaisessa hakemistossa, ja yksi kohde nostetaan esiin laajemmin kuvin ja faktoin.
+
+Typografia on pidättyväistä, värit maanläheisiä ja animaatiot hienovaraisia, jotta huomio pysyy kuvissa. Puhelimella jokainen kuva saa koko ruudun leveyden.
+
+Tarvitsetko sivut, jotka näyttävät työsi tasoisilta? Linkki biossa.
+
+#verkkosivut #webdesign #websuunnittelu #arkkitehtuuri #yrittäjä
