@@ -1,0 +1,6 @@
+# GitHub Pages: julkaise vain sivusto. Videon ja somesisältöjen lähdetiedostot jäävät pois.
+exclude:
+  - video
+  - some
+  - README.md
+  - .gitignore
