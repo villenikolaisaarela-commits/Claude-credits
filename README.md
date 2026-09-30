@@ -27,6 +27,17 @@ assets/img/                 Kuvat
 
 Tarkista palvelun ehdoista, että ilmaistasoa saa käyttää yrityssivuun (esim. Vercelin ilmainen taso on vain ei-kaupalliseen käyttöön).
 
+## Julkaisu GitHub Pagesilla (ilmainen, suoraan GitHubista)
+
+1. Repositorion pitää olla julkinen (ilmaisella tilillä): *Settings → General → Danger Zone → Change visibility → Public*.
+2. *Settings → Pages → Build and deployment → Source: Deploy from a branch*, haara **main**, kansio **/ (root)** → *Save*.
+3. Parin minuutin päästä sivu on osoitteessa `https://villenikolaisaarela-commits.github.io/Claude-credits/`.
+4. Jokainen `main`-haaraan pushattu muutos päivittyy sivulle automaattisesti.
+
+`_config.yml` estää `video/`- ja `some/`-kansioiden julkaisun.
+
+**Oma domain (villesaarela.com):** poista domain ensin Netlifystä. Lisää sitten domainin DNS-asetuksiin A-tietueet `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` ja CNAME-tietue `www` → `villenikolaisaarela-commits.github.io`. Kirjoita lopuksi *Settings → Pages → Custom domain* -kenttään `villesaarela.com` ja valitse *Enforce HTTPS*.
+
 ## Oma kuva
 
 Info-osion kuva on `assets/img/ville.jpg` (pystykuva 4:5). Vaihda kuva korvaamalla tiedosto samannimisellä.
