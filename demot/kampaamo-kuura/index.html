@@ -4,481 +4,476 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
-  <title>Kampaamo Kuura – kiireetön kampaamo Tampereen keskustassa</title>
-  <meta name="description" content="Kampaamo Kuura on rauhallinen kampaamo Tampereen keskustassa. Leikkaukset, värjäykset ja juhlakampaukset huolella ja ilman kiirettä. Katso hinnasto ja varaa aika.">
-  <meta name="theme-color" content="#f5f0e8">
+  <title>Kampaamo Kuura — hiljainen huone hiuksille, Tampere</title>
+  <meta name="description" content="Kampaamo Kuura on kolmen kampaajan kiireetön kampaamo Tampereen keskustassa. Leikkaukset, värit ja kampaukset huolella tehtyinä – hitaasti tehty, kauan kaunis.">
+  <meta name="theme-color" content="#f3eee6">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fi_FI">
-  <meta property="og:title" content="Kampaamo Kuura – kiireetön kampaamo Tampereella">
-  <meta property="og:description" content="Leikkaukset, värjäykset ja juhlakampaukset rauhallisessa kampaamossa Tampereen keskustassa.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232a211c'/%3E%3Cg stroke='%23e8d9c6' stroke-width='3.4' stroke-linecap='round'%3E%3Cpath d='M32 13v38M15.5 22.5l33 19M15.5 41.5l33-19'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='4.2' fill='%23b77a5e'/%3E%3C/svg%3E">
+  <meta property="og:title" content="Kampaamo Kuura — hitaasti tehty, kauan kaunis">
+  <meta property="og:description" content="Kolmen kampaajan kiireetön kampaamo Tampereen keskustassa.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23241d19'/%3E%3Cg stroke='%23eadfce' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M32 14v36M16.4 23l31.2 18M16.4 41l31.2-18'/%3E%3C/g%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    (function (d) {
+      d.documentElement.classList.add('js');
+      try {
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.documentElement.classList.add('motion');
+      } catch (e) {}
+    })(document);
+  </script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
 
+  <!-- Avausanimaatio: vain koriste, ei estä sisältöä -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <svg class="intro__mark" viewBox="0 0 32 32">
+        <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+          <path pathLength="1" d="M16 3v26"/>
+          <path pathLength="1" d="M4.7 9.5l22.6 13"/>
+          <path pathLength="1" d="M4.7 22.5l22.6-13"/>
+        </g>
+      </svg>
+      <span class="intro__word"><span>K</span><span>u</span><span>u</span><span>r</span><span>a</span></span>
+    </div>
+  </div>
+
   <header class="site-header" id="top">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Kampaamo Kuura – sivun alkuun">
+    <div class="header__inner">
+      <a class="brand" href="#alku" aria-label="Kampaamo Kuura – sivun alkuun">
         <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
             <path d="M16 4v24M5.6 10l20.8 12M5.6 22l20.8-12"/>
-            <path d="M16 4l-2.2 2.6M16 4l2.2 2.6M16 28l-2.2-2.6M16 28l2.2-2.6"/>
           </g>
         </svg>
         <span class="brand__name">Kuura</span>
-        <span class="brand__sub">Kampaamo</span>
       </a>
 
       <nav class="nav" aria-label="Päävalikko">
-        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-          <span class="visually-hidden">Valikko</span>
-          <span class="nav__toggle-icon" aria-hidden="true"></span>
-        </button>
         <ul class="nav__list" id="nav-menu">
-          <li><a href="#meista">Meistä</a></li>
-          <li><a href="#palvelut">Palvelut</a></li>
-          <li><a href="#tiimi">Tiimi</a></li>
-          <li><a href="#galleria">Galleria</a></li>
-          <li><a href="#yhteys">Yhteystiedot</a></li>
-          <li class="nav__extra">
-            <a class="btn" href="#yhteys">Varaa aika</a>
-            <p>Esimerkkikatu 12, Tampere<br><a class="nav__phone" href="tel:+358401234567">040 123 4567</a></p>
-          </li>
+          <li><a href="#tarina"><span class="nav__num" aria-hidden="true">01</span><span class="nav__label">Tarina</span></a></li>
+          <li><a href="#kasityo"><span class="nav__num" aria-hidden="true">02</span><span class="nav__label">Käsityö</span></a></li>
+          <li><a href="#palvelut"><span class="nav__num" aria-hidden="true">03</span><span class="nav__label">Palvelut</span></a></li>
+          <li><a href="#tekijat"><span class="nav__num" aria-hidden="true">04</span><span class="nav__label">Tekijät</span></a></li>
+          <li><a href="#galleria"><span class="nav__num" aria-hidden="true">05</span><span class="nav__label">Galleria</span></a></li>
         </ul>
+        <p class="nav__foot" aria-hidden="true">Kampaamo Kuura <span>Tampere</span></p>
       </nav>
 
-      <a class="btn btn--small header__cta" href="#yhteys">Varaa aika</a>
+      <p class="header__meta" aria-hidden="true"><span class="header__meta-inner" data-section-label>Tampere · 61° N</span></p>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="menu-toggle__text">Valikko</span>
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
   <main id="sisalto">
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <p class="eyebrow reveal">Kampaamo Tampereen keskustassa</p>
-          <h1 class="hero__title reveal" id="hero-title">Hiukset, joihin on <em>helppo</em> herätä.</h1>
-          <p class="hero__lead reveal">Kuurassa jokainen käynti alkaa kuuntelemisesta. Suunnittelemme leikkauksen ja värin sinun arkeesi – niin, että hiukset näyttävät hyvältä vielä viikkojen päästä, eivät vain kampaamosta lähtiessä.</p>
-          <div class="hero__actions reveal">
-            <a class="btn" href="#yhteys">Varaa aika</a>
-            <a class="link-arrow" href="#palvelut">Palvelut ja hinnat <span aria-hidden="true">→</span></a>
-          </div>
-          <dl class="hero__facts reveal">
-            <div>
-              <dt>Avoinna</dt>
-              <dd>Ma–pe 9–19, la 9–15</dd>
-            </div>
-            <div>
-              <dt>Osoite</dt>
-              <dd>Esimerkkikatu 12</dd>
-            </div>
-            <div>
-              <dt>Ajanvaraus</dt>
-              <dd><a href="tel:+358401234567">040 123 4567</a></dd>
-            </div>
-          </dl>
+
+    <!-- ALKU -->
+    <section class="hero" id="alku" aria-labelledby="hero-title" data-label="Kuura">
+      <div class="container">
+        <div class="hero__meta">
+          <span class="label">Kampaamo · Tampere</span>
+          <span class="hero__meta-line" aria-hidden="true"></span>
+          <span class="label">Vuodesta 2016</span>
         </div>
 
-        <figure class="hero__media reveal">
-          <div class="hero__frame">
-            <img src="img/hero-hiukset.jpg" width="683" height="884" fetchpriority="high"
-                 alt="Nainen selin kameraan kädet hiuksissa. Pitkissä ruskeissa hiuksissa on pehmeästi vaalenevat latvat.">
+        <div class="hero__grid">
+          <h1 class="hero__title" id="hero-title" data-split>
+            <span class="hero__line">Hitaasti tehty.</span>
+            <span class="hero__line hero__line--indent"><em>Kauan</em> kaunis.</span>
+          </h1>
+
+          <figure class="hero__media">
+            <div class="arch-wrap">
+              <span class="arch-echo" aria-hidden="true"></span>
+              <div class="arch" data-clip>
+                <div class="arch__img" data-parallax="-0.08">
+                  <img src="img/hero-hiukset.jpg" width="683" height="884" fetchpriority="high" decoding="async"
+                       alt="Nainen selin kameraan kädet hiuksissa. Pitkissä ruskeissa hiuksissa on pehmeästi vaalenevat latvat.">
+                </div>
+              </div>
+            </div>
+            <figcaption class="caption"><span>01</span> Pehmeä balayage, joka kasvaa ulos huomaamatta</figcaption>
+            <div class="badge" aria-hidden="true">
+              <svg viewBox="0 0 200 200" class="badge__ring">
+                <defs><path id="badge-circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+                <text><textPath href="#badge-circle">Kampaamo Kuura · Tampere · Vuodesta 2016 · </textPath></text>
+              </svg>
+              <svg class="badge__mark" viewBox="0 0 32 32">
+                <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M16 5v22M6.5 10.5l19 11M6.5 21.5l19-11"/></g>
+              </svg>
+            </div>
+          </figure>
+
+          <div class="hero__aside">
+            <p class="hero__lead" data-fade>Kolmen kampaajan hiljainen huone Tampereen keskustassa. Leikkaamme, värjäämme ja kampaamme kiirehtimättä – niin, että hiukset näyttävät hyvältä vielä viikkojen päästä, eivät vain peilin edessä.</p>
+            <div class="hero__actions" data-fade>
+              <a class="link-line" href="#tarina">Tutustu Kuuraan <span class="link-line__arrow" aria-hidden="true">↓</span></a>
+              <a class="link-line link-line--quiet" href="#palvelut">Palvelut ja hinnasto</a>
+            </div>
           </div>
-          <div class="hero__badge" aria-hidden="true">
-            <svg viewBox="0 0 200 200">
-              <defs><path id="badge-circle" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
-              <text><textPath href="#badge-circle">Kampaamo Kuura · Tampere · Vuodesta 2016 ·</textPath></text>
-            </svg>
-            <svg class="hero__badge-mark" viewBox="0 0 32 32">
-              <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
-                <path d="M16 4v24M5.6 10l20.8 12M5.6 22l20.8-12"/>
-              </g>
-            </svg>
+        </div>
+
+        <div class="hero__foot" aria-hidden="true">
+          <span class="label">Leikkaukset · Värit · Kampaukset</span>
+          <span class="scroll-cue"><span class="scroll-cue__line"></span><span class="label">Vieritä</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 TARINA -->
+    <section class="section story" id="tarina" aria-labelledby="tarina-title" data-label="Tarina">
+      <div class="container">
+        <div class="section-index" data-fade>
+          <span class="section-index__num">01</span>
+          <span class="section-index__rule" aria-hidden="true"></span>
+          <span class="label">Tarina</span>
+        </div>
+
+        <h2 class="visually-hidden" id="tarina-title">Tarina</h2>
+        <p class="manifesto" data-scrub>Kuura syntyy hiljaa yön aikana, kide kerrallaan. Samoin ajattelemme hiuksia: kaunein lopputulos ei synny kiireessä, vaan pienistä, harkituista eleistä, jotka <em>kestävät.</em></p>
+
+        <div class="story__grid">
+          <figure class="story__media">
+            <div class="frame" data-clip>
+              <div class="frame__img" data-parallax="-0.06">
+                <img src="img/tarina-kukat.jpg" width="960" height="640" loading="lazy" decoding="async"
+                     alt="Kukkiva oksa pienessä lasipurkissa puupöydällä, aamuvalo lankeaa ikkunasta.">
+              </div>
+            </div>
+            <figcaption class="caption"><span>02</span> Aamu ennen ensimmäistä asiakasta</figcaption>
+          </figure>
+
+          <div class="story__text">
+            <h3 class="story__lede" data-split>Kampaamokäynnin pitäisi tuntua <em>hengähdystauolta.</em></h3>
+            <div class="prose" data-fade>
+              <p>Kampaamo Kuura syntyi vuonna 2016 yksinkertaisesta ajatuksesta. Aino halusi tehdä työtä, jossa jokaiselle asiakkaalle jää aikaa – aikaa kuunnella, kysyä ja tehdä työ loppuun asti.</p>
+              <p>Emme täytä kalenteria äärimmilleen. Kerromme rehellisesti, mikä juuri sinun hiuksillesi sopii, myös silloin kun vastaus on ”ei vielä”.</p>
+            </div>
+            <dl class="facts" data-fade>
+              <div><dt>Perustettu</dt><dd>2016</dd></div>
+              <div><dt>Kampaajaa</dt><dd>3</dd></div>
+              <div><dt>Työpistettä</dt><dd>4</dd></div>
+              <div><dt>Min / käynti</dt><dd>90</dd></div>
+            </dl>
           </div>
+        </div>
+
+        <figure class="story__wide">
+          <div class="frame frame--wide" data-clip>
+            <div class="frame__img" data-parallax="-0.1">
+              <img src="img/kampaamo-tila.jpg" width="1046" height="951" loading="lazy" decoding="async"
+                   alt="Valoisa kampaamosali, jossa on konjakinruskeita kampaamotuoleja, tummaa puulattiaa ja hyllyillä hiustenhoitotuotteita.">
+            </div>
+          </div>
+          <figcaption class="caption caption--split">
+            <span><span>03</span> Sali aamupäivän valossa</span>
+            <span>Neljä tuolia, yksi pesupaikka, ei kiirettä</span>
+          </figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- MEISTÄ -->
-    <section class="section about" id="meista" aria-labelledby="meista-title">
-      <div class="container about__grid">
-        <figure class="about__media reveal">
-          <img src="img/kampaamo-tila.jpg" width="1046" height="951" loading="lazy"
-               alt="Valoisa kampaamosali, jossa on konjakinruskeita kampaamotuoleja, tummaa puulattiaa ja hyllyillä hiustenhoitotuotteita.">
-          <figcaption>Valoisa sali, neljä työpistettä ja rauhallinen pesupaikka.</figcaption>
-        </figure>
+    <!-- 02 KÄSITYÖ -->
+    <section class="section craft" id="kasityo" aria-labelledby="kasityo-title" data-label="Käsityö">
+      <div class="container">
+        <div class="section-index" data-fade>
+          <span class="section-index__num">02</span>
+          <span class="section-index__rule" aria-hidden="true"></span>
+          <span class="label">Käsityö</span>
+        </div>
 
-        <div class="about__content">
-          <p class="eyebrow reveal">Meistä</p>
-          <h2 class="section-title reveal" id="meista-title">Pieni kampaamo, jossa sinulle on <em>aikaa</em>.</h2>
-          <div class="prose reveal">
-            <p>Kampaamo Kuura on kolmen kampaajan liike Tampereen keskustassa. Emme kiirehdi: jokaiseen käyntiin kuuluu rauhallinen alkukeskustelu, hiustenpesu ja päänahkahieronta sekä vinkit kotihoitoon.</p>
-            <p>Valitsemme tuotteet huolella ja kerromme rehellisesti, mikä juuri sinun hiuksillesi sopii – myös silloin, kun vastaus on ”ei vielä”.</p>
+        <div class="craft__head">
+          <h2 class="title" id="kasityo-title" data-split>Käynti, joka etenee <em>omassa</em> tahdissaan.</h2>
+          <p class="craft__intro" data-fade>Jokainen käynti kulkee saman rauhallisen kaaren. Se on meidän tapamme varmistaa, ettei mikään jää arvailun varaan – ei väri, ei pituus eikä se, miten hiukset laitetaan kotona.</p>
+        </div>
+
+        <div class="craft__grid">
+          <div class="craft__stage" aria-hidden="true">
+            <div class="craft__frame">
+              <img class="is-active" src="img/palvelut-sakset.jpg" width="960" height="894" loading="lazy" decoding="async" alt="">
+              <img src="img/galleria-vaalennus.jpg" width="960" height="640" loading="lazy" decoding="async" alt="">
+              <img src="img/kasityo-leikkaus.jpg" width="960" height="1440" loading="lazy" decoding="async" alt="">
+              <img src="img/galleria-juhlakampaus.jpg" width="1024" height="576" loading="lazy" decoding="async" alt="">
+            </div>
+            <div class="craft__counter label"><span data-step-now>01</span> / 04</div>
           </div>
 
-          <ol class="values">
-            <li class="reveal">
-              <span class="values__num" aria-hidden="true">01</span>
-              <div>
-                <h3>Kiireetön aika</h3>
-                <p>Varaamme jokaiselle käynnille väljästi aikaa, jotta ehdimme kuunnella ja tehdä työn huolella.</p>
-              </div>
+          <ol class="steps">
+            <li class="step" data-step="0">
+              <figure class="step__media">
+                <img src="img/palvelut-sakset.jpg" width="960" height="894" loading="lazy" decoding="async"
+                     alt="Kampaamosakset ja kampa levossa vaalealla pöydällä.">
+              </figure>
+              <span class="step__num">01</span>
+              <h3 class="step__title">Keskustelu</h3>
+              <p>Ennen kuin sakset otetaan esiin, istumme alas. Kysymme, miten hiuksesi käyttäytyvät arjessa, mitä toivot – ja mitä et halua enää koskaan.</p>
+              <p class="step__meta label">Noin 10 minuuttia · aina mukana</p>
             </li>
-            <li class="reveal">
-              <span class="values__num" aria-hidden="true">02</span>
-              <div>
-                <h3>Harkitut tuotteet</h3>
-                <p>Käytämme vegaanisia ammattilaistuotteita ja suosimme pohjoismaisia valmistajia.</p>
-              </div>
+            <li class="step" data-step="1">
+              <figure class="step__media">
+                <img src="img/galleria-vaalennus.jpg" width="960" height="640" loading="lazy" decoding="async"
+                     alt="Lähikuva hiuksista, joissa tumma tyvi liukuu kullanvaaleiksi latvoiksi.">
+              </figure>
+              <span class="step__num">02</span>
+              <h3 class="step__title">Pesu ja hieronta</h3>
+              <p>Lämmin vesi, rauhallinen päänahkahieronta ja tuotteet, jotka valitaan hiustesi eikä hyllyn mukaan. Käytämme vegaanisia ammattilaistuotteita ja suosimme pohjoismaisia valmistajia.</p>
+              <p class="step__meta label">Noin 15 minuuttia</p>
             </li>
-            <li class="reveal">
-              <span class="values__num" aria-hidden="true">03</span>
-              <div>
-                <h3>Rehellinen neuvonta</h3>
-                <p>Kerromme suoraan, mikä on mahdollista, kauanko se kestää ja mitä se maksaa.</p>
-              </div>
+            <li class="step" data-step="2">
+              <figure class="step__media">
+                <img src="img/kasityo-leikkaus.jpg" width="960" height="1440" loading="lazy" decoding="async"
+                     alt="Kampaajan kädet leikkaavat vaaleita hiuksia saksilla ja kammalla.">
+              </figure>
+              <span class="step__num">03</span>
+              <h3 class="step__title">Työ</h3>
+              <p>Leikkaamme ja värjäämme kiirehtimättä. Mieluummin millin liian vähän kuin sentin liikaa – hiuksia voi aina lyhentää, mutta ei pidentää.</p>
+              <p class="step__meta label">Palvelun mukaan</p>
+            </li>
+            <li class="step" data-step="3">
+              <figure class="step__media">
+                <img src="img/galleria-juhlakampaus.jpg" width="1024" height="576" loading="lazy" decoding="async"
+                     alt="Kampaaja viimeistelee vaalean, niskaan kootun kampauksen ja kiinnittää nauhan.">
+              </figure>
+              <span class="step__num">04</span>
+              <h3 class="step__title">Viimeistely</h3>
+              <p>Näytämme, miten saat saman lopputuloksen kotona viidessä minuutissa, ja kirjaamme sävyt ja mitat muistiin seuraavaa kertaa varten.</p>
+              <p class="step__meta label">Kotihoito-ohjeet mukaan</p>
             </li>
           </ol>
         </div>
+
+        <ul class="principles">
+          <li data-fade><span class="label">i</span><h3>Kiireetön aika</h3><p>Jokaiselle käynnille on väljästi aikaa. Seuraava asiakas ei odota ovella.</p></li>
+          <li data-fade><span class="label">ii</span><h3>Harkitut tuotteet</h3><p>Vähemmän, mutta parempaa. Jokainen hyllyn purkki on valittu syystä.</p></li>
+          <li data-fade><span class="label">iii</span><h3>Rehellinen neuvonta</h3><p>Kerromme suoraan, mikä on mahdollista, kauanko se kestää ja mitä se maksaa.</p></li>
+        </ul>
       </div>
     </section>
 
-    <!-- PALVELUT -->
-    <section class="section services" id="palvelut" aria-labelledby="palvelut-title">
-      <div class="container services__grid">
-        <div class="services__intro">
-          <p class="eyebrow reveal">Palvelut</p>
-          <h2 class="section-title reveal" id="palvelut-title">Palvelut ja <em>hinnasto</em></h2>
-          <p class="reveal">Hintoihin sisältyvät aina alkukonsultaatio, hiustenpesu ja viimeistely. Jos hiuksesi ovat erityisen pitkät tai paksut, kerromme mahdollisesta lisähinnasta etukäteen.</p>
-          <figure class="services__media reveal">
-            <img src="img/palvelut-leikkaus.jpg" width="546" height="683" loading="lazy"
-                 alt="Kampaaja leikkaa asiakkaan tummia, olkapäille ulottuvia hiuksia kampa ja sakset käsissään.">
-          </figure>
-          <div class="reveal"><a class="btn" href="#yhteys">Varaa aika</a></div>
-        </div>
-
-        <div class="services__lists">
-          <div class="price-group reveal">
-            <h3 class="price-group__title"><span aria-hidden="true">01</span> Leikkaukset</h3>
-            <ul class="price-list">
-              <li class="price">
-                <div><span class="price__name">Naisten hiustenleikkaus</span><span class="price__meta">60 min · sisältää pesun ja muotoilun</span></div>
-                <span class="price__value">69&nbsp;€</span>
-              </li>
-              <li class="price">
-                <div><span class="price__name">Miesten hiustenleikkaus</span><span class="price__meta">45 min</span></div>
-                <span class="price__value">49&nbsp;€</span>
-              </li>
-              <li class="price">
-                <div><span class="price__name">Lasten hiustenleikkaus</span><span class="price__meta">alle 12-vuotiaat · 30 min</span></div>
-                <span class="price__value">35&nbsp;€</span>
-              </li>
-              <li class="price">
-                <div><span class="price__name">Parranmuotoilu</span><span class="price__meta">30 min</span></div>
-                <span class="price__value">29&nbsp;€</span>
-              </li>
-              <li class="price">
-                <div><span class="price__name">Otsatukan siistiminen</span><span class="price__meta">15 min</span></div>
-                <span class="price__value">15&nbsp;€</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="price-group reveal">
-            <h3 class="price-group__title"><span aria-hidden="true">02</span> Värit</h3>
-            <ul class="price-list">
-              <li class="price">
-                <div><span class="price__name">Värjäys</span><span class="price__meta">tyvestä latvoihin · noin 2 h</span></div>
-                <span class="price__value"><small>alkaen</small> 119&nbsp;€</span>
-              </li>
-              <li class="price">
-                <div><span class="price__name">Tyvivärjäys</span><span class="price__meta">noin 1 h 30 min</span></div>
-                <span class="price__value"><small>alkaen</small> 95&nbsp;€</span>
-              </li>
-              <li class="price">
-                <div><span class="price__name">Raidat tai balayage</span><span class="price__meta">2,5–3 h · sisältää sävytyksen</span></div>
-                <span class="price__value"><small>alkaen</small> 169&nbsp;€</span>
-              </li>
-              <li class="price">
-                <div><span class="price__name">Sävytys ja kiiltohoito</span><span class="price__meta">45 min</span></div>
-                <span class="price__value">59&nbsp;€</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="price-group reveal">
-            <h3 class="price-group__title"><span aria-hidden="true">03</span> Kampaukset ja hoidot</h3>
-            <ul class="price-list">
-              <li class="price">
-                <div><span class="price__name">Juhlakampaus</span><span class="price__meta">noin 60 min</span></div>
-                <span class="price__value"><small>alkaen</small> 79&nbsp;€</span>
-              </li>
-              <li class="price">
-                <div><span class="price__name">Hääkampaus</span><span class="price__meta">sisältää koekampauksen</span></div>
-                <span class="price__value">189&nbsp;€</span>
-              </li>
-              <li class="price">
-                <div><span class="price__name">Föönikampaus</span><span class="price__meta">pesu ja muotoilu · 45 min</span></div>
-                <span class="price__value">45&nbsp;€</span>
-              </li>
-              <li class="price">
-                <div><span class="price__name">Syvähoito</span><span class="price__meta">leikkauksen tai värin yhteydessä</span></div>
-                <span class="price__value">25&nbsp;€</span>
-              </li>
-            </ul>
-          </div>
-
-          <p class="services__note reveal">Etkö ole varma, mitä tarvitset? Varaa maksuton 15 minuutin konsultaatio, niin suunnitellaan yhdessä.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- TIIMI -->
-    <section class="section team" id="tiimi" aria-labelledby="tiimi-title">
+    <!-- 03 PALVELUT -->
+    <section class="section services" id="palvelut" aria-labelledby="palvelut-title" data-label="Palvelut">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow reveal">Tiimi</p>
-            <h2 class="section-title reveal" id="tiimi-title">Kampaajat, jotka <em>kuuntelevat</em>.</h2>
+        <div class="section-index section-index--dark" data-fade>
+          <span class="section-index__num">03</span>
+          <span class="section-index__rule" aria-hidden="true"></span>
+          <span class="label">Palvelut</span>
+        </div>
+
+        <div class="services__grid">
+          <div class="services__intro">
+            <h2 class="title" id="palvelut-title" data-split>Palvelut ja <em>hinnasto</em></h2>
+            <p data-fade>Hinnat ovat selkeät, eikä laskussa ole yllätyksiä. Jos hiuksesi ovat erityisen pitkät tai paksut, kerromme mahdollisesta lisähinnasta aina etukäteen.</p>
+            <div class="included" data-fade>
+              <p class="label">Jokaiseen käyntiin sisältyy</p>
+              <ul>
+                <li>Alkukeskustelu</li>
+                <li>Pesu ja päänahkahieronta</li>
+                <li>Viimeistely ja kotihoito-ohjeet</li>
+              </ul>
+            </div>
           </div>
-          <p class="section-head__text reveal">Meitä on kolme, ja jokaisella on oma vahvuutensa. Kerro ajanvarauksen yhteydessä, mitä toivot, niin ohjaamme sinut oikealle tekijälle.</p>
+
+          <div class="menu">
+            <div class="menu__group">
+              <h3 class="menu__title"><span class="menu__roman" aria-hidden="true">I</span> Leikkaukset</h3>
+              <ul class="menu__list">
+                <li class="item"><span class="item__name">Naisten hiustenleikkaus</span><span class="item__meta">60 min · pesu ja muotoilu</span><span class="item__price">69&nbsp;€</span></li>
+                <li class="item"><span class="item__name">Miesten hiustenleikkaus</span><span class="item__meta">45 min</span><span class="item__price">49&nbsp;€</span></li>
+                <li class="item"><span class="item__name">Lasten hiustenleikkaus</span><span class="item__meta">alle 12-vuotiaat · 30 min</span><span class="item__price">35&nbsp;€</span></li>
+                <li class="item"><span class="item__name">Parranmuotoilu</span><span class="item__meta">30 min</span><span class="item__price">29&nbsp;€</span></li>
+                <li class="item"><span class="item__name">Otsatukan siistiminen</span><span class="item__meta">15 min</span><span class="item__price">15&nbsp;€</span></li>
+              </ul>
+            </div>
+
+            <div class="menu__group">
+              <h3 class="menu__title"><span class="menu__roman" aria-hidden="true">II</span> Värit</h3>
+              <ul class="menu__list">
+                <li class="item"><span class="item__name">Värjäys</span><span class="item__meta">tyvestä latvoihin · noin 2 h</span><span class="item__price"><small>alk.</small> 119&nbsp;€</span></li>
+                <li class="item"><span class="item__name">Tyvivärjäys</span><span class="item__meta">noin 1 h 30 min</span><span class="item__price"><small>alk.</small> 95&nbsp;€</span></li>
+                <li class="item"><span class="item__name">Raidat tai balayage</span><span class="item__meta">2,5–3 h · sisältää sävytyksen</span><span class="item__price"><small>alk.</small> 169&nbsp;€</span></li>
+                <li class="item"><span class="item__name">Sävytys ja kiiltohoito</span><span class="item__meta">45 min</span><span class="item__price">59&nbsp;€</span></li>
+              </ul>
+            </div>
+
+            <div class="menu__group">
+              <h3 class="menu__title"><span class="menu__roman" aria-hidden="true">III</span> Kampaukset ja hoidot</h3>
+              <ul class="menu__list">
+                <li class="item"><span class="item__name">Juhlakampaus</span><span class="item__meta">noin 60 min</span><span class="item__price"><small>alk.</small> 79&nbsp;€</span></li>
+                <li class="item"><span class="item__name">Hääkampaus</span><span class="item__meta">sisältää koekampauksen</span><span class="item__price">189&nbsp;€</span></li>
+                <li class="item"><span class="item__name">Föönikampaus</span><span class="item__meta">pesu ja muotoilu · 45 min</span><span class="item__price">45&nbsp;€</span></li>
+                <li class="item"><span class="item__name">Syvähoito</span><span class="item__meta">leikkauksen tai värin yhteydessä</span><span class="item__price">25&nbsp;€</span></li>
+              </ul>
+            </div>
+
+            <p class="menu__note">Hinnat sisältävät arvonlisäveron. Lopullinen hinta sovitaan aina alkukeskustelussa, ennen kuin työ aloitetaan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 TEKIJÄT -->
+    <section class="section team" id="tekijat" aria-labelledby="tekijat-title" data-label="Tekijät">
+      <div class="container">
+        <div class="section-index" data-fade>
+          <span class="section-index__num">04</span>
+          <span class="section-index__rule" aria-hidden="true"></span>
+          <span class="label">Tekijät</span>
+        </div>
+
+        <div class="team__head">
+          <h2 class="title" id="tekijat-title" data-split>Kolme kampaajaa, <em>yksi</em> tapa tehdä.</h2>
+          <p data-fade>Jokaisella meistä on oma vahvuutensa, mutta työtapa on yhteinen: kuunnellaan ensin, leikataan sitten.</p>
         </div>
 
         <ul class="team__grid">
-          <li class="member reveal">
-            <figure class="member__media">
-              <img src="img/tiimi-aino.jpg" width="512" height="640" loading="lazy"
+          <li class="member">
+            <figure class="member__media" data-clip>
+              <img src="img/tiimi-aino.jpg" width="512" height="640" loading="lazy" decoding="async"
                    alt="Kampaaja Aino, jolla on pitkät tummanruskeat laineikkaat hiukset, hymyilee vaaleaa seinää vasten.">
             </figure>
-            <h3 class="member__name">Aino</h3>
-            <p class="member__role">Kampaaja ja yrittäjä</p>
-            <p class="member__bio">Aino perusti Kuuran vuonna 2016. Hänen erikoisalaansa ovat helppohoitoiset leikkaukset ja pehmeät värit, jotka kasvavat ulos huomaamattomasti.</p>
+            <div class="member__body" data-fade>
+              <p class="member__num label">01 — Perustaja</p>
+              <h3 class="member__name">Aino</h3>
+              <p class="member__role">Kampaaja ja yrittäjä</p>
+              <p class="member__bio">Aino perusti Kuuran vuonna 2016. Hänen käsissään syntyvät helppohoitoiset leikkaukset ja pehmeät värit, jotka kasvavat ulos huomaamattomasti.</p>
+            </div>
           </li>
-          <li class="member reveal">
-            <figure class="member__media">
-              <img src="img/tiimi-emilia.jpg" width="512" height="640" loading="lazy"
+          <li class="member">
+            <figure class="member__media" data-clip>
+              <img src="img/tiimi-emilia.jpg" width="512" height="640" loading="lazy" decoding="async"
                    alt="Kampaaja Emilia, jolla on vaalea polkkatukka, juo kahvia silmät kiinni.">
             </figure>
-            <h3 class="member__name">Emilia</h3>
-            <p class="member__role">Värjäyksiin erikoistunut kampaaja</p>
-            <p class="member__bio">Emilia rakentaa vaaleat sävyt ja balayage-värit rauhassa, hiusten kunnosta tinkimättä. Hän neuvoo mielellään myös värin kotihoidossa.</p>
+            <div class="member__body" data-fade>
+              <p class="member__num label">02 — Värit</p>
+              <h3 class="member__name">Emilia</h3>
+              <p class="member__role">Värjäyksiin erikoistunut kampaaja</p>
+              <p class="member__bio">Emilia rakentaa vaaleat sävyt ja balayage-värit kerros kerrallaan, hiusten kunnosta tinkimättä. Hän neuvoo mielellään myös värin kotihoidossa.</p>
+            </div>
           </li>
-          <li class="member reveal">
-            <figure class="member__media">
-              <img src="img/tiimi-joonas.jpg" width="640" height="800" loading="lazy"
+          <li class="member">
+            <figure class="member__media" data-clip>
+              <img src="img/tiimi-joonas.jpg" width="640" height="800" loading="lazy" decoding="async"
                    alt="Parturi-kampaaja Joonas leikkaa asiakkaan hiuksia keskittyneesti koneella ja kammalla.">
             </figure>
-            <h3 class="member__name">Joonas</h3>
-            <p class="member__role">Parturi-kampaaja</p>
-            <p class="member__bio">Joonas tekee tarkat miesten leikkaukset ja parranmuotoilut. Häneltä saat leikkauksen, jonka laittaminen kotona vie alle viisi minuuttia.</p>
+            <div class="member__body" data-fade>
+              <p class="member__num label">03 — Leikkaukset</p>
+              <h3 class="member__name">Joonas</h3>
+              <p class="member__role">Parturi-kampaaja</p>
+              <p class="member__bio">Joonas tekee tarkat miesten leikkaukset ja parranmuotoilut. Häneltä saat leikkauksen, jonka laittaminen kotona vie alle viisi minuuttia.</p>
+            </div>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- GALLERIA -->
-    <section class="section gallery" id="galleria" aria-labelledby="galleria-title">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow reveal">Galleria</p>
-            <h2 class="section-title reveal" id="galleria-title">Meidän <em>käsialaamme</em></h2>
+    <!-- 05 GALLERIA -->
+    <section class="gallery" id="galleria" aria-labelledby="galleria-title" data-label="Galleria">
+      <div class="gallery__pin">
+        <div class="gallery__track" tabindex="0" role="region" aria-label="Galleria, vieritettävä kuvasarja">
+          <div class="gallery__intro">
+            <div class="section-index">
+              <span class="section-index__num">05</span>
+              <span class="section-index__rule" aria-hidden="true"></span>
+              <span class="label">Galleria</span>
+            </div>
+            <h2 class="title" id="galleria-title">Meidän <em>käsialaamme</em></h2>
+            <p>Luonnollisia sävyjä, pehmeitä muotoja ja leikkauksia, jotka toimivat myös arjessa.</p>
+            <p class="gallery__hint label" aria-hidden="true"><span class="gallery__hint-line"></span>Vieritä</p>
           </div>
-          <p class="section-head__text reveal">Luonnollisia sävyjä, pehmeitä muotoja ja leikkauksia, jotka toimivat myös arjessa – eivät vain kampaamon peilin edessä.</p>
+
+          <figure class="shot shot--a">
+            <div class="shot__img"><img src="img/galleria-aallot.jpg" width="960" height="640" loading="lazy" decoding="async"
+                 alt="Nainen katsoo alaspäin. Vaaleat, pehmeästi laineikkaat hiukset kehystävät kasvoja."></div>
+            <figcaption><span class="shot__num">01</span><span class="shot__title">Pehmeät laineet</span><span class="shot__meta">Sävytetty vaalea, kevyet kerrokset</span></figcaption>
+          </figure>
+          <figure class="shot shot--b">
+            <div class="shot__img"><img src="img/palvelut-leikkaus.jpg" width="546" height="683" loading="lazy" decoding="async"
+                 alt="Kampaaja leikkaa asiakkaan tummia, olkapäille ulottuvia hiuksia kampa ja sakset käsissään."></div>
+            <figcaption><span class="shot__num">02</span><span class="shot__title">Olkapäämitta</span><span class="shot__meta">Leikattu märkänä, viimeistelty kuivana</span></figcaption>
+          </figure>
+          <figure class="shot shot--c">
+            <div class="shot__img"><img src="img/galleria-nuttura.jpg" width="960" height="640" loading="lazy" decoding="async"
+                 alt="Löysä nuttura päälaella vaaleaa seinää vasten."></div>
+            <figcaption><span class="shot__num">03</span><span class="shot__title">Löysä nuttura</span><span class="shot__meta">Arjen kampaus, joka kestää iltaan</span></figcaption>
+          </figure>
+          <figure class="shot shot--d">
+            <div class="shot__img"><img src="img/galleria-miesten-leikkaus.jpg" width="960" height="640" loading="lazy" decoding="async"
+                 alt="Kampaaja leikkaa saksilla miehen ruskeita hiuksia sormien välistä."></div>
+            <figcaption><span class="shot__num">04</span><span class="shot__title">Lyhyt ja liikkuva</span><span class="shot__meta">Saksileikkaus sormien välistä</span></figcaption>
+          </figure>
+          <figure class="shot shot--e">
+            <div class="shot__img"><img src="img/galleria-sakset.jpg" width="960" height="640" loading="lazy" decoding="async"
+                 alt="Kampaamosaksia roikkuu rivissä lämpimänsävyistä puuseinää vasten."></div>
+            <figcaption><span class="shot__num">05</span><span class="shot__title">Työkalut</span><span class="shot__meta">Jokaisella omat sakset, teroitettu kahdesti vuodessa</span></figcaption>
+          </figure>
+        </div>
+        <div class="gallery__progress" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <!-- 06 ASIAKKAILTA -->
+    <section class="section words" id="sanat" aria-labelledby="sanat-title" data-label="Asiakkailta">
+      <div class="container">
+        <div class="section-index" data-fade>
+          <span class="section-index__num">06</span>
+          <span class="section-index__rule" aria-hidden="true"></span>
+          <span class="label" id="sanat-title">Asiakkailta</span>
         </div>
 
-        <ul class="gallery__grid">
-          <li class="gallery__item gallery__item--1 reveal">
-            <img src="img/galleria-aallot.jpg" width="960" height="640" loading="lazy"
-                 alt="Nainen katsoo alaspäin. Vaaleat, pehmeästi laineikkaat hiukset kehystävät kasvoja.">
-          </li>
-          <li class="gallery__item gallery__item--2 reveal">
-            <img src="img/galleria-sakset.jpg" width="960" height="640" loading="lazy"
-                 alt="Kampaamosaksia roikkuu rivissä lämpimänsävyistä puuseinää vasten.">
-          </li>
-          <li class="gallery__item gallery__item--3 reveal">
-            <img src="img/galleria-vaalennus.jpg" width="960" height="640" loading="lazy"
-                 alt="Lähikuva hiuksista, joissa tumma tyvi liukuu kullanvaaleiksi latvoiksi.">
-          </li>
-          <li class="gallery__item gallery__item--4 reveal">
-            <img src="img/galleria-juhlakampaus.jpg" width="1024" height="576" loading="lazy"
-                 alt="Kampaaja viimeistelee vaalean, niskaan kootun juhlakampauksen, jossa on hiuskoriste.">
-          </li>
-          <li class="gallery__item gallery__item--5 reveal">
-            <img src="img/galleria-nuttura.jpg" width="960" height="640" loading="lazy"
-                 alt="Löysä nuttura päälaella vaaleanpunaista taustaa vasten.">
-          </li>
-          <li class="gallery__item gallery__item--6 reveal">
-            <img src="img/galleria-miesten-leikkaus.jpg" width="960" height="640" loading="lazy"
-                 alt="Kampaaja leikkaa saksilla miehen ruskeita hiuksia sormien välistä.">
-          </li>
-        </ul>
+        <div class="quotes" data-quotes>
+          <figure class="quote is-active">
+            <blockquote><p>”Rauhallinen tunnelma ja huolellista työtä. Lähdin kotiin <em>paremmalla mielellä</em> kuin tulin.”</p></blockquote>
+            <figcaption><span class="quote__name">Laura K.</span><span class="label">Asiakkaana vuodesta 2017</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote><p>”Vihdoin väri, joka kasvaa ulos <em>kauniisti.</em> Sain rehellisiä neuvoja myös kotihoitoon.”</p></blockquote>
+            <figcaption><span class="quote__name">Sanna M.</span><span class="label">Asiakkaana vuodesta 2019</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote><p>”Tarkka leikkaus ilman turhaa hälinää. Harvinaisen <em>rauhallinen tunti</em> keskellä kaupunkia.”</p></blockquote>
+            <figcaption><span class="quote__name">Mikko R.</span><span class="label">Asiakkaana vuodesta 2021</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="quotes__controls" hidden>
+          <button class="round-btn" type="button" data-quote-prev aria-label="Edellinen palaute">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+          </button>
+          <p class="quotes__count label" aria-live="polite"><span data-quote-now>01</span> / 03</p>
+          <button class="round-btn" type="button" data-quote-next aria-label="Seuraava palaute">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+          </button>
+        </div>
       </div>
     </section>
 
-    <!-- ASIAKASPALAUTTEET -->
-    <section class="section testimonials" id="palautteet" aria-labelledby="palautteet-title">
-      <div class="container testimonials__grid">
-        <figure class="testimonials__media reveal">
-          <img src="img/palautteet-hiukset.jpg" width="960" height="640" loading="lazy"
+    <!-- LOPUKSI -->
+    <section class="finale" id="loppu" aria-labelledby="loppu-title" data-label="Lopuksi">
+      <div class="finale__pin">
+        <div class="finale__media">
+          <img src="img/palautteet-hiukset.jpg" width="960" height="640" loading="lazy" decoding="async"
                alt="Pitkät, vaaleat ja laineikkaat hiukset olkapäällä pehmeässä valossa.">
-        </figure>
-        <div class="testimonials__content">
-          <p class="eyebrow reveal">Asiakkailta</p>
-          <h2 class="section-title reveal" id="palautteet-title">Hyvä mieli lähtee <em>mukaan</em>.</h2>
-          <div class="quotes">
-            <figure class="quote reveal">
-              <blockquote><p>Rauhallinen tunnelma ja huolellista työtä. Lähdin kotiin paremmalla mielellä kuin tulin.</p></blockquote>
-              <figcaption>Laura K.</figcaption>
-            </figure>
-            <figure class="quote reveal">
-              <blockquote><p>Vihdoin väri, joka kasvaa ulos kauniisti. Sain rehellisiä neuvoja myös kotihoitoon.</p></blockquote>
-              <figcaption>Sanna M.</figcaption>
-            </figure>
-            <figure class="quote reveal">
-              <blockquote><p>Tarkka leikkaus ilman turhaa hälinää, ja ajan sai helposti samalle viikolle.</p></blockquote>
-              <figcaption>Mikko R.</figcaption>
-            </figure>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- YHTEYSTIEDOT -->
-    <section class="section contact" id="yhteys" aria-labelledby="yhteys-title">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow reveal">Yhteystiedot</p>
-            <h2 class="section-title reveal" id="yhteys-title">Varaa aika – <em>tervetuloa</em> Kuuraan.</h2>
-          </div>
-          <p class="section-head__text reveal">Varaa aika soittamalla tai lähettämällä sähköpostia. Vastaamme viesteihin saman arkipäivän aikana.</p>
-        </div>
-
-        <div class="contact__grid">
-          <div class="contact__cards">
-            <div class="card reveal">
-              <h3 class="card__title">Aukioloajat</h3>
-              <dl class="hours">
-                <div><dt>Maanantai–perjantai</dt><dd>9–19</dd></div>
-                <div><dt>Lauantai</dt><dd>9–15</dd></div>
-                <div><dt>Sunnuntai</dt><dd>Suljettu</dd></div>
-              </dl>
-              <p class="card__note">Arkipyhien aukioloajoista kerromme erikseen.</p>
-            </div>
-
-            <div class="card reveal">
-              <h3 class="card__title">Ota yhteyttä</h3>
-              <address class="contact__address">
-                Kampaamo Kuura<br>
-                Esimerkkikatu 12<br>
-                33100 Tampere
-              </address>
-              <ul class="contact__links">
-                <li><span>Puhelin</span><a href="tel:+358401234567">040 123 4567</a></li>
-                <li><span>Sähköposti</span><a href="mailto:hei@kampaamokuura.example">hei@kampaamokuura.example</a></li>
-              </ul>
-              <div class="contact__actions">
-                <a class="btn" href="tel:+358401234567">Soita ja varaa</a>
-                <a class="btn btn--ghost" href="mailto:hei@kampaamokuura.example">Lähetä sähköpostia</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="map reveal" role="img" aria-label="Havainnekuva kartasta: Kampaamo Kuura sijaitsee osoitteessa Esimerkkikatu 12, Tampere.">
-            <svg class="map__art" viewBox="0 0 800 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-              <rect width="800" height="640" class="map__ground"/>
-              <path class="map__park" d="M488 20h136v122H488z"/>
-              <path class="map__park" d="M148 300h134v152H148z"/>
-              <path class="map__water" d="M-20 598 C 140 560, 300 626, 470 596 S 700 548, 840 580 L 840 660 L -20 660 Z"/>
-              <g class="map__road">
-                <path d="M-20 60 H 840"/>
-                <path d="M-20 560 H 840"/>
-                <path d="M130 -20 V 660"/>
-                <path d="M470 -20 V 660"/>
-                <path d="M640 -20 V 660"/>
-                <path d="M640 160 L 840 60"/>
-              </g>
-              <g class="map__road map__road--main">
-                <path d="M-20 160 H 840"/>
-                <path d="M-20 470 H 840"/>
-                <path d="M300 -20 V 660"/>
-              </g>
-              <path class="map__street" d="M-20 282 H 840"/>
-              <g class="map__tram">
-                <path d="M-20 470 H 840"/>
-              </g>
-              <text class="map__name" x="492" y="276">ESIMERKKIKATU</text>
-            </svg>
-            <div class="map__pin" aria-hidden="true">
-              <span class="map__pulse"></span>
-              <svg viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M16 7v18M8.2 11.5l15.6 9M8.2 20.5l15.6-9"/></g></svg>
-            </div>
-            <div class="map__label">
-              <strong>Esimerkkikatu 12</strong>
-              <span>Raitiovaunupysäkki 200 metrin ja pysäköintitalo korttelin päässä.</span>
-            </div>
-          </div>
+        <div class="finale__text">
+          <p class="label">Kampaamo Kuura · Tampere</p>
+          <h2 class="finale__title" id="loppu-title">Lähde kevyempänä <em>kuin tulit.</em></h2>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <a class="brand brand--light" href="#top" aria-label="Kampaamo Kuura – sivun alkuun">
-          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-              <path d="M16 4v24M5.6 10l20.8 12M5.6 22l20.8-12"/>
-              <path d="M16 4l-2.2 2.6M16 4l2.2 2.6M16 28l-2.2-2.6M16 28l2.2-2.6"/>
-            </g>
-          </svg>
-          <span class="brand__name">Kuura</span>
-          <span class="brand__sub">Kampaamo</span>
-        </a>
-        <p>Kiireetön kampaamo Tampereen keskustassa.</p>
-        <a class="btn btn--light" href="#yhteys">Varaa aika</a>
-      </div>
-
-      <nav class="footer__col" aria-label="Alavalikko">
-        <h2 class="footer__title">Sivut</h2>
-        <ul>
-          <li><a href="#meista">Meistä</a></li>
-          <li><a href="#palvelut">Palvelut ja hinnasto</a></li>
-          <li><a href="#tiimi">Tiimi</a></li>
-          <li><a href="#galleria">Galleria</a></li>
-          <li><a href="#yhteys">Yhteystiedot</a></li>
-        </ul>
-      </nav>
-
-      <div class="footer__col">
-        <h2 class="footer__title">Yhteystiedot</h2>
-        <ul>
-          <li>Esimerkkikatu 12, 33100 Tampere</li>
-          <li><a href="tel:+358401234567">040 123 4567</a></li>
-          <li><a href="mailto:hei@kampaamokuura.example">hei@kampaamokuura.example</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h2 class="footer__title">Aukioloajat</h2>
-        <ul>
-          <li>Ma–pe 9–19</li>
-          <li>La 9–15</li>
-          <li>Su suljettu</li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="footer__wordmark" aria-hidden="true">Kuura</p>
-
+    <p class="footer__word" aria-hidden="true">Kuura</p>
     <div class="container footer__bottom">
       <p>© 2026 Kampaamo Kuura</p>
-      <p class="footer__credit">Konseptiprojekti — kuvitteellinen yritys. Suunnittelu ja toteutus: <a href="../../index.html">Ville Saarela</a>.</p>
+      <p class="footer__concept">Konsepti · <a href="../../index.html">Ville Saarela</a></p>
+      <a class="footer__top" href="#alku">Takaisin alkuun <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
 </body>
