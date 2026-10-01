@@ -168,12 +168,21 @@
         <h2 id="hinnat-title">Hinnat</h2>
         <span class="label">Kiinteä hinta, ei piilokuluja</span>
       </div>
+
+      <p class="pricing-intro" data-reveal>Näet hinnan heti. <span class="muted">Valitse paketti, niin teen sinulle maksuttoman luonnoksen ennen kuin sitoudut mihinkään.</span></p>
+
       <ul class="pricing">
         <li class="plan" data-reveal>
-          <div class="plan-head"><span class="label">01</span></div>
-          <h3>Perus</h3>
-          <p class="price">1 490 €</p>
-          <p class="label">alv 0 %</p>
+          <div class="plan-top">
+            <span class="label">01</span>
+            <h3>Perus</h3>
+            <p class="plan-for">Selkeät sivut yritykselle, joka tarvitsee hyvän ensivaikutelman verkossa.</p>
+          </div>
+          <div class="plan-price">
+            <span class="label">&nbsp;</span>
+            <p class="price">1 490 €</p>
+            <span class="label">alv 0 %</span>
+          </div>
           <ul class="plan-list">
             <li>Etusivu ja 2 alasivua</li>
             <li>Toimii puhelimella ja tietokoneella</li>
@@ -181,13 +190,19 @@
             <li>Tekstien ja kuvien viimeistely</li>
             <li>Julkaisu omaan osoitteeseen</li>
           </ul>
-          <a class="btn btn-ghost" href="#yhteys">Pyydä tarjous</a>
+          <a class="btn btn-ghost plan-btn" href="#yhteys">Pyydä tarjous <span aria-hidden="true">→</span></a>
         </li>
         <li class="plan is-featured" data-reveal>
-          <div class="plan-head"><span class="label">02</span><span class="label plan-tag">Suosituin</span></div>
-          <h3>Yritys</h3>
-          <p class="price">2 490 €</p>
-          <p class="label">alv 0 %</p>
+          <div class="plan-top">
+            <span class="label plan-tag">Suosituin</span>
+            <h3>Yritys</h3>
+            <p class="plan-for">Kun sivujen pitää tuoda yhteydenottoja ja kertoa palveluista kunnolla.</p>
+          </div>
+          <div class="plan-price">
+            <span class="label">&nbsp;</span>
+            <p class="price">2 490 €</p>
+            <span class="label">alv 0 %</span>
+          </div>
           <ul class="plan-list">
             <li>Kaikki Perus-paketin sisältö</li>
             <li>5–7 sivua</li>
@@ -195,13 +210,19 @@
             <li>Kävijäseuranta</li>
             <li>Tekstien kirjoitus yhdessä kanssasi</li>
           </ul>
-          <a class="btn" href="#yhteys">Pyydä tarjous</a>
+          <a class="btn plan-btn" href="#yhteys">Pyydä tarjous <span aria-hidden="true">→</span></a>
         </li>
         <li class="plan" data-reveal>
-          <div class="plan-head"><span class="label">03</span></div>
-          <h3>Räätälöity</h3>
-          <p class="price"><span class="price-from">alkaen</span> 3 480 €</p>
-          <p class="label">alv 0 %</p>
+          <div class="plan-top">
+            <span class="label">03</span>
+            <h3>Räätälöity</h3>
+            <p class="plan-for">Laajemmat sivut, ajanvaraus tai erityistarpeet. Suunnitellaan yhdessä.</p>
+          </div>
+          <div class="plan-price">
+            <span class="label">Alkaen</span>
+            <p class="price">3 480 €</p>
+            <span class="label">alv 0 %</span>
+          </div>
           <ul class="plan-list">
             <li>Kaikki Yritys-paketin sisältö</li>
             <li>Sivuja tarpeen mukaan</li>
@@ -209,22 +230,25 @@
             <li>Ajanvaraus tai muut liitännät</li>
             <li>Oma suunnitteluvaihe</li>
           </ul>
-          <a class="btn btn-ghost" href="#yhteys">Pyydä tarjous</a>
+          <a class="btn btn-ghost plan-btn" href="#yhteys">Pyydä tarjous <span aria-hidden="true">→</span></a>
         </li>
       </ul>
-      <ul class="rows plan-extra">
-        <li data-reveal>
-          <span class="label num">+</span>
-          <h3>Ylläpito 39 €/kk</h3>
-          <p>Palvelin, suojattu yhteys, päivitykset, varmuuskopiot ja nopeuden seuranta. Ei määräaikaa.</p>
-        </li>
-      </ul>
-      <ul class="terms" data-reveal>
-        <li class="label">Valmis 2–4 viikossa</li>
-        <li class="label">Maksuton luonnos ennen kuin sitoudut</li>
-        <li class="label">Domain ja sivut jäävät sinulle</li>
-        <li class="label">Hinnat ilman arvonlisäveroa</li>
-      </ul>
+
+      <div class="care" data-reveal>
+        <div class="care-head">
+          <span class="label">Jokaiseen pakettiin</span>
+          <h3>Ylläpito</h3>
+        </div>
+        <p class="care-price">39 €<span>/kk</span></p>
+        <p class="care-text">Palvelin, suojattu yhteys, päivitykset, varmuuskopiot ja nopeuden seuranta. Ei määräaikaa.</p>
+      </div>
+
+      <dl class="terms" data-reveal>
+        <div><dt class="label">Aikataulu</dt><dd>Valmis 2–4 viikossa</dd></div>
+        <div><dt class="label">Riskitön</dt><dd>Maksuton luonnos ennen kuin sitoudut</dd></div>
+        <div><dt class="label">Omistus</dt><dd>Domain ja sivut jäävät sinulle</dd></div>
+        <div><dt class="label">Verot</dt><dd>Hinnat ilman arvonlisäveroa</dd></div>
+      </dl>
     </section>
 
     <section class="section wrap" aria-labelledby="prosessi-title">
