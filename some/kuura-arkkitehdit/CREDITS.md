@@ -1,5 +1,4 @@
 # Kuvat
 
-- `01-kannettava.jpg`: pohjakuva "Desk-laptop-notebook-table" (www.Pixel.la Free Stock Photos), CC0, Wikimedia Commons. Laitteen logot poistettu.
-- `02-puhelin.jpg`: pohjakuva "Phone Hand" (Design by Matt), CC0, StockSnap.
+- `01-kannettava.jpg` ja `02-puhelin.jpg` ovat itse mallinnettuja 3D-renderöintejä (Blender). Pinnat ja valaistus: Poly Haven, CC0 (oak_veneer_01, plastered_wall, rough_linen, brown_photostudio_02).
 - Näytöillä ja videolla Kuura Arkkitehdit -konseptisivusto (villesaarela.com/demot/kuura-arkkitehdit). Sivuston valokuvat: Unsplash, ks. demot/kuura-arkkitehdit/CREDITS.md.
