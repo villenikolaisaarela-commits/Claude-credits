@@ -1,0 +1,10 @@
+Kuura Arkkitehdit – konseptiprojekti.
+
+Arkkitehtitoimiston sivusto, jossa projektit ovat pääosassa. Projekteja voi suodattaa tyypin mukaan, piirustukset löytyvät välilehdiltä ja jokaisella kohteella on oma tarinansa. Sivu toimii yhtä hyvin puhelimella kuin isolla näytöllä.
+
+Kuura on kuvitteellinen yritys. Tein sivuston näyttääkseni, millaiset arkkitehtitoimiston verkkosivut voivat olla.
+
+Verkkosivut, jotka tekevät töitä.
+villesaarela.com
+
+#verkkosivut #webdesign #arkkitehtuuri #arkkitehti #kotisivut #verkkosivusuunnittelu #yrittäjä #helsinki
