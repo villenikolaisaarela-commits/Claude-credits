@@ -166,7 +166,7 @@
       weeksEl.textContent = (len > 5 || island) ? '9–11 viikkoa' : '8–10 viikkoa';
       var ex = nearest(len, island);
       if (ex) {
-        var label = ex.no + ', ' + ex.text + ': ' + fmt(ex.price) + ' €';
+        var label = ex.no + ', ' + ex.text + ': ' + fmt(ex.price) + '\u00a0€';
         exEl.innerHTML = ex.href ? '<a href="' + root + ex.href + '">' + label + '</a>' : label;
       }
       var svgEl = planEl.ownerSVGElement;
@@ -288,7 +288,7 @@
       var island = !!qform.querySelector('input[name="saareke"]:checked');
       if (!c || !lenMap[c.value]) { hint.textContent = ''; return; }
       var r = lenMap[c.value], a = priceBand(r[0], island), b = priceBand(r[1], island);
-      hint.textContent = 'Valitsemasi koon keittiöt ovat meillä yleensä ' + fmt(a[0]) + '–' + fmt(b[1]) + ' € asennettuna.';
+      hint.textContent = 'Valitsemasi koon keittiöt ovat meillä yleensä ' + fmt(a[0]) + '–' + fmt(b[1]) + '\u00a0€ asennettuna.';
     };
     qform.addEventListener('change', function (e) {
       if (e.target.name === 'pituus' || e.target.name === 'saareke') updateHint();
