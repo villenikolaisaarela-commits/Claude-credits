@@ -61,17 +61,6 @@
   else window.addEventListener('load', markLoaded);
   setTimeout(markLoaded, 1500);
 
-  // Press G (or use the footer button) to show the 12-column grid the page is drawn on.
-  var gridBtn = document.querySelector('.grid-toggle');
-  var toggleGrid = function () {
-    var on = document.documentElement.classList.toggle('show-grid');
-    if (gridBtn) { gridBtn.setAttribute('aria-pressed', on); gridBtn.textContent = on ? 'Piilota ruudukko' : 'Näytä ruudukko'; }
-  };
-  if (gridBtn) gridBtn.addEventListener('click', toggleGrid);
-  document.addEventListener('keydown', function (e) {
-    if ((e.key === 'g' || e.key === 'G') && !e.metaKey && !e.ctrlKey && !e.altKey && !/input|textarea|select/i.test(e.target.tagName)) toggleGrid();
-  });
-
   var clock = document.querySelector('[data-clock]');
   if (clock) {
     var fmt = new Intl.DateTimeFormat('fi-FI', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Helsinki' });
