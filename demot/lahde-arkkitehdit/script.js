@@ -1,4 +1,4 @@
-/* Lähde Arkkitehdit — interactions (vanilla JS, Lenis for smooth scroll) */
+/* Lähde Arkkitehdit: vuorovaikutus (vanilla JS, Lenis pehmeään vieritykseen) */
 (function () {
   'use strict';
 
@@ -50,7 +50,7 @@
   /* ------------------------------------------------------------------
      Reveal on scroll
      ------------------------------------------------------------------ */
-  var revealEls = $$('.reveal, .reveal-img');
+  var revealEls = $$('.reveal, [data-reveal]');
   var heroEls = revealEls.filter(function (el) { return el.closest('.hero'); });
   if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (entries) {
@@ -64,7 +64,7 @@
   }
 
   /* ------------------------------------------------------------------
-     Page-load curtain (≈1.2 s, dismissed by any interaction)
+     Page-load curtain (etusivu, kerran istunnossa)
      ------------------------------------------------------------------ */
   var curtain = $('[data-curtain]');
   var isReady = false;
@@ -74,7 +74,10 @@
     root.classList.add('is-ready');
     heroEls.forEach(function (el) { el.classList.add('is-in'); });
   }
-  if (curtain && !reduce) {
+  var seen = false;
+  try { seen = window.sessionStorage.getItem('lahde-curtain') === '1'; } catch (err) { seen = false; }
+  if (curtain && !reduce && !seen) {
+    try { window.sessionStorage.setItem('lahde-curtain', '1'); } catch (err) { /* ei haittaa */ }
     var finished = false;
     var finish = function () {
       if (finished) return;
@@ -106,18 +109,10 @@
      Header state
      ------------------------------------------------------------------ */
   var header = $('[data-header]');
-  var darkSections = $$('[data-theme="dark"]');
   var lastY = window.scrollY;
   var menuOpen = false;
 
   function updateHeader(y, vh) {
-    var probe = 30;
-    var dark = false;
-    for (var i = 0; i < darkSections.length; i++) {
-      var r = darkSections[i].getBoundingClientRect();
-      if (r.top <= probe && r.bottom > probe) { dark = true; break; }
-    }
-    header.classList.toggle('is-dark', dark);
     header.classList.toggle('is-scrolled', y > 40);
     if (!menuOpen) {
       if (y > lastY + 6 && y > vh * 0.9) header.classList.add('is-hidden');
@@ -193,98 +188,99 @@
   }
 
   /* ------------------------------------------------------------------
-     Project index: list / grid view + floating preview
+     Kohteet: lista / ruudukko + leijuva esikatselu
      ------------------------------------------------------------------ */
   var work = $('.work');
   var index = $('[data-index]');
   var toggle = $('[data-view-toggle]');
-  var entries = $$('.entry', index);
-  var mqList = window.matchMedia('(min-width: 1024px) and (hover: hover) and (pointer: fine)');
-  var userView = null;
-  try { userView = window.localStorage.getItem('lahde-view'); } catch (err) { userView = null; }
-
-  function setView(v) {
-    work.classList.toggle('is-list', v === 'list');
-    $$('button', toggle).forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.getAttribute('data-view') === v));
-    });
-    if (v !== 'list') hidePreview();
-  }
-  function applyView() {
-    if (mqList.matches) {
-      toggle.hidden = false;
-      setView(userView === 'grid' ? 'grid' : 'list');
-    } else {
-      toggle.hidden = true;
-      setView('grid');
-    }
-  }
-  toggle.addEventListener('click', function (e) {
-    var b = e.target.closest('button');
-    if (!b) return;
-    userView = b.getAttribute('data-view');
-    try { window.localStorage.setItem('lahde-view', userView); } catch (err) { /* ignore */ }
-    setView(userView);
-  });
-  if (mqList.addEventListener) mqList.addEventListener('change', applyView);
-  applyView();
-
   var preview = $('[data-preview]');
   var pFrame = $('[data-preview-frame]');
   var pTag = $('[data-preview-tag]');
+  var entries = index ? $$('.entry', index) : [];
   var pImgs = null;
   var pVisible = false;
   var pointer = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
   var pos = { x: pointer.x, y: pointer.y };
   var rot = 0;
 
-  function buildPreview() {
-    if (pImgs) return;
-    pImgs = entries.map(function (en) {
-      var src = $('img', en);
-      var im = new Image();
-      im.decoding = 'async';
-      im.alt = '';
-      im.src = src.getAttribute('src');
-      pFrame.appendChild(im);
-      return im;
-    });
-  }
-  function placeText(en) {
-    var el = $('.entry__place', en);
-    var last = el.lastChild;
-    return last ? last.textContent.trim() : '';
-  }
-  function showPreview(i) {
-    if (!work.classList.contains('is-list')) return;
-    buildPreview();
-    if (!pVisible) { pos.x = pointer.x; pos.y = pointer.y; }
-    pVisible = true;
-    preview.classList.add('is-on');
-    pImgs.forEach(function (im, j) { im.classList.toggle('is-active', j === i); });
-    pTag.textContent = $('.entry__no', entries[i]).textContent + ' — ' + placeText(entries[i]);
-  }
   function hidePreview() {
     pVisible = false;
     if (preview) preview.classList.remove('is-on');
   }
-  entries.forEach(function (en, i) {
-    en.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') showPreview(i); });
-    var link = $('a', en);
-    if (link) {
-      link.addEventListener('focus', function () {
-        if (!work.classList.contains('is-list')) return;
-        var r = en.getBoundingClientRect();
-        pointer.x = r.left + r.width * 0.55; pointer.y = r.top + r.height / 2;
-        showPreview(i);
+
+  if (work && index && toggle && preview) {
+    var mqList = window.matchMedia('(min-width: 1024px) and (hover: hover) and (pointer: fine)');
+    var userView = null;
+    try { userView = window.localStorage.getItem('lahde-view'); } catch (err) { userView = null; }
+
+    var setView = function (v) {
+      work.classList.toggle('is-list', v === 'list');
+      $$('button', toggle).forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-view') === v));
       });
-      link.addEventListener('blur', hidePreview);
-    }
-  });
-  index.addEventListener('pointerleave', hidePreview);
-  window.addEventListener('pointermove', function (e) { pointer.x = e.clientX; pointer.y = e.clientY; }, { passive: true });
+      if (v !== 'list') hidePreview();
+    };
+    var applyView = function () {
+      if (mqList.matches) {
+        toggle.hidden = false;
+        setView(userView === 'grid' ? 'grid' : 'list');
+      } else {
+        toggle.hidden = true;
+        setView('grid');
+      }
+    };
+    toggle.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (!b) return;
+      userView = b.getAttribute('data-view');
+      try { window.localStorage.setItem('lahde-view', userView); } catch (err) { /* ei haittaa */ }
+      setView(userView);
+    });
+    if (mqList.addEventListener) mqList.addEventListener('change', applyView);
+    applyView();
+
+    var buildPreview = function () {
+      if (pImgs) return;
+      pImgs = entries.map(function (en) {
+        var src = $('img', en);
+        var im = new Image();
+        im.decoding = 'async';
+        im.alt = '';
+        im.src = src.currentSrc || src.getAttribute('src');
+        pFrame.appendChild(im);
+        return im;
+      });
+    };
+    var showPreview = function (i) {
+      if (!work.classList.contains('is-list')) return;
+      buildPreview();
+      if (!pVisible) { pos.x = pointer.x; pos.y = pointer.y; }
+      pVisible = true;
+      preview.classList.add('is-on');
+      pImgs.forEach(function (im, j) { im.classList.toggle('is-active', j === i); });
+      var place = $('.entry__place', entries[i]);
+      var name = $('.entry__name', entries[i]);
+      pTag.textContent = (name ? name.textContent.trim() : '') + (place ? ', ' + place.textContent.replace(/^Sijainti:\s*/, '').trim() : '');
+    };
+    entries.forEach(function (en, i) {
+      en.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') showPreview(i); });
+      var link = $('a', en);
+      if (link) {
+        link.addEventListener('focus', function () {
+          if (!work.classList.contains('is-list')) return;
+          var r = en.getBoundingClientRect();
+          pointer.x = r.left + r.width * 0.55; pointer.y = r.top + r.height / 2;
+          showPreview(i);
+        });
+        link.addEventListener('blur', hidePreview);
+      }
+    });
+    index.addEventListener('pointerleave', hidePreview);
+    window.addEventListener('pointermove', function (e) { pointer.x = e.clientX; pointer.y = e.clientY; }, { passive: true });
+  }
 
   function updatePreview() {
+    if (!preview) return;
     if (!pVisible && !preview.classList.contains('is-on')) return;
     var w = preview.offsetWidth;
     var h = preview.offsetHeight;
@@ -334,21 +330,23 @@
     closeTimer = setTimeout(function () { if (!menuOpen) menu.hidden = true; }, 700);
     if (returnFocus) menuBtn.focus();
   }
-  menuBtn.addEventListener('click', function () { if (menuOpen) closeMenu(false); else openMenu(); });
-  d.addEventListener('keydown', function (e) {
-    if (!menuOpen) return;
-    if (e.key === 'Escape') { closeMenu(true); return; }
-    if (e.key === 'Tab') {
-      var items = [menuBtn].concat($$('a', menu));
-      var idx = items.indexOf(d.activeElement);
-      if (e.shiftKey && idx <= 0) { e.preventDefault(); items[items.length - 1].focus(); }
-      else if (!e.shiftKey && idx === items.length - 1) { e.preventDefault(); items[0].focus(); }
-    }
-  });
-  window.addEventListener('resize', function () { if (window.innerWidth >= 1024) closeMenu(false); });
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', function () { if (menuOpen) closeMenu(false); else openMenu(); });
+    d.addEventListener('keydown', function (e) {
+      if (!menuOpen) return;
+      if (e.key === 'Escape') { closeMenu(true); return; }
+      if (e.key === 'Tab') {
+        var items = [menuBtn].concat($$('a', menu));
+        var idx = items.indexOf(d.activeElement);
+        if (e.shiftKey && idx <= 0) { e.preventDefault(); items[items.length - 1].focus(); }
+        else if (!e.shiftKey && idx === items.length - 1) { e.preventDefault(); items[0].focus(); }
+      }
+    });
+    window.addEventListener('resize', function () { if (window.innerWidth >= 1024) closeMenu(false); });
+  }
 
   /* ------------------------------------------------------------------
-     In-page anchors (smooth, with focus management)
+     Sivun sisäiset ankkurit (pehmeä vieritys, fokus)
      ------------------------------------------------------------------ */
   d.addEventListener('click', function (e) {
     var a = e.target.closest('a[href^="#"]');
@@ -374,15 +372,17 @@
   });
 
   /* ------------------------------------------------------------------
-     Helsinki clock
+     Yhteydenottolomake: ei lähetä mitään (konsepti)
      ------------------------------------------------------------------ */
-  var clock = $('[data-clock]');
-  if (clock && window.Intl) {
-    var fmt = new Intl.DateTimeFormat('fi-FI', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Helsinki' });
-    var tickClock = function () { clock.textContent = fmt.format(new Date()); };
-    tickClock();
-    setInterval(tickClock, 15000);
-  }
+  $$('[data-concept-form]').forEach(function (form) {
+    var status = $('[data-form-status]', form);
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!status) return;
+      status.hidden = false;
+      status.textContent = 'Tämä on konseptisivusto, joten viestiä ei lähetetty eikä mitään tietoja tallennettu. Oikealle toimistolle kirjoittaisit osoitteeseen toimisto@lahde-arkkitehdit.example.';
+    });
+  });
 
   /* ------------------------------------------------------------------
      Main loop

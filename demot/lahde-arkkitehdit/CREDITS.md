@@ -1,30 +1,39 @@
-# Lähde Arkkitehdit – lähteet ja lisenssit
+# Lähde Arkkitehdit: lähteet ja lisenssit
 
-Lähde Arkkitehdit on **kuvitteellinen yritys**. Sivuston projektit, henkilöt, luvut ja tekstit on keksitty tätä konseptiprojektia varten. Kuvissa näkyvät rakennukset ja tilat eivät liity kuvitteelliseen toimistoon.
+Lähde Arkkitehdit Oy on **kuvitteellinen yritys**. Sivuston kohteet, henkilöt, luvut, tekstit, Y-tunnus (3184517-0), puhelinnumero ja sähköpostiosoite on keksitty tätä konseptiprojektia varten. Osoitetta Pellavakuja 4, 33100 Tampere ei ole olemassa: katua ei löydy Tampereelta OpenStreetMapin Nominatim-haulla (`Pellavakuja, Tampere` palauttaa `[]`), ja postinumero 33100 on todellinen. Puhelinnumerot ovat Traficomin varaamassa 048-etuliitteessä, ja ne näytetään vain tekstinä. Sähköpostiosoitteet ovat varatussa `.example`-päätteessä.
+
+Kuvissa näkyvät rakennukset ja tilat eivät ole kuvitteellisen toimiston töitä. Ne ovat vapaasti käytettäviä valokuvia suomalaisista paikoista, ja ne on valittu havainnollistamaan kohteita. Sivustolla tämä sanotaan kohdesivujen faktalaatikon alla.
 
 Suunnittelu ja toteutus: Ville Saarela.
 
 ## Valokuvat
 
-Kaikki kuvat ovat CC0 1.0 -lisenssillä (public domain -luovutus). Ne on haettu [Openverse](https://openverse.org/)-rajapinnasta suodattimella `license=cc0,pdm`. Yhtenäisen ilmeen vuoksi kaikkia kuvia on käsitelty samalla tavalla: värikylläisyyttä on hillitty, kontrastia pehmennetty ja mustia tasoja nostettu hieman. Lisäksi kuvia on rajattu ja pienennetty (pisin sivu enintään 1800 px, JPEG-laatu 78).
+Kaikki kuvat ovat CC0 1.0 -lisenssillä tai Public Domain Mark -merkittyjä (public domain). Ne on haettu [Openverse](https://openverse.org/)-rajapinnasta suodattimella `license=cc0,pdm`. Suuremmat versiot on ladattu Wikimedia Commonsista tai Flickrin kuvasivulta. Kaikkia kuvia on käsitelty samalla tavalla: korkeita sävyjä on pehmennetty, keskisävyihin on lisätty kevyt S-käyrä, värikylläisyyttä on laskettu noin viidenneksellä, varjoihin on lisätty viileää ja valoihin lämmintä sävyä, taivasta on tummennettu ja reunoihin on lisätty kevyt vinjetti. Lisäksi kuvia on rajattu ja pienennetty (pisin sivu enintään 1800 px, JPEG-laatu 72–78).
+
+Kuvaajien nimet ovat Flickrin ja Wikimedia Commonsin käyttäjänimiä. Kanta-Hämeen kuvapankki on organisaation tili, ja Janim71, Ranta Janne ja TJH1976 ovat yksityisten kuvaajien tilejä.
 
 | Tiedosto | Alkuperäinen nimi | Kuvaaja | Lisenssi | Lähde |
 |---|---|---|---|---|
-| `img/hero-talo-harmaa.jpg` | Snow on the turf roof (Unsplash) | Jonathan Andreo (canislupus) | CC0 1.0 | https://commons.wikimedia.org/w/index.php?curid=61907618 |
-| `img/huvila-kallio.jpg` | Dramatic Sky | Alex Andrews | CC0 1.0 | https://stocksnap.io/photo/dramatic-sky-DYJIQYHO19 |
-| `img/huvila-kallio-ikkuna.jpg` | Man relaxing near window (Unsplash) | Nil Castellví (nilcaste) | CC0 1.0 | https://commons.wikimedia.org/w/index.php?curid=62130969 |
-| `img/huvila-kallio-julkisivu.jpg` | Blue Wooden Wall (Unsplash), rajattu 4:5 | Math (builtbymath) | CC0 1.0 | https://commons.wikimedia.org/w/index.php?curid=61720115 |
-| `img/huvila-kallio-makuuhuone.jpg` | Foxfire Mountain House, Mount Tremper, United States (Unsplash) | Alex Robert (alexrobert) | CC0 1.0 | https://commons.wikimedia.org/w/index.php?curid=61908958 |
-| `img/saunarakennus-lampi.jpg` | Water House | Sergei Gussev | CC0 1.0 | https://stocksnap.io/photo/water-house-XFFQLYGP4F |
-| `img/koti-kruununhaka.jpg` | House Home | Joseph Albanese | CC0 1.0 | https://stocksnap.io/photo/house-home-W9NA327MNL |
-| `img/talo-pihlaja.jpg` | House Roof. Taivaalta on retusoitu pois sähköjohto. | Oliur Rahman | CC0 1.0 | https://stocksnap.io/photo/house-roof-KJMQM11A8G |
-| `img/asunto-eira.jpg` | Glassware on stairs (Unsplash) | Monica Silva (monicasilva) | CC0 1.0 | https://commons.wikimedia.org/w/index.php?curid=62119852 |
-| `img/toimisto.jpg` | Curve in white marble stairs (Unsplash) | Daniel von Appen (daniel_von_appen) | CC0 1.0 | https://commons.wikimedia.org/w/index.php?curid=62339025 |
-| `img/sumu-metsa.jpg` | Misty Forest (Openverse id deba3717-51f7-4c6f-9c89-579d77f69c2c) | Artem Kavalerov | CC0 1.0 | https://commons.wikimedia.org/w/index.php?curid=71443492 |
+| `img/hero-rantasauna.jpg`, `img/salmi-portaat.jpg`, `img/esikatselu-salmi.jpg` | Eerikkilä, Tammela, Finland (03) | Kanta-Hämeen kuvapankki | CC0 1.0 | https://commons.wikimedia.org/w/index.php?curid=93278430 (kuva peilattu vaakasuunnassa) |
+| `img/kallio-hero.jpg`, `img/kallio-julkisivu.jpg`, `img/esikatselu-kallio.jpg` | Eerikkilä, Tammela, Finland | Kanta-Hämeen kuvapankki | CC0 1.0 | https://www.flickr.com/photos/160226114@N02/43538319312 |
+| `img/kallio-tontti.jpg` | Eerikkilä, Tammela, Finland | Kanta-Hämeen kuvapankki | CC0 1.0 | https://www.flickr.com/photos/160226114@N02/43585291951 |
+| `img/kallio-nakyma.jpg` | Leipijärvi, Janakkala | TJH1976 | Public Domain Mark 1.0 | https://www.flickr.com/photos/57764574@N03/27306450274 |
+| `img/salmi-ranta.jpg` | Lahnajärvi (Orivesi) | Janim71 | CC0 1.0 | https://commons.wikimedia.org/w/index.php?curid=150438625 |
+| `img/sulku-keskiyo.jpg` | Midsummer night | Ranta Janne | CC0 1.0 | https://www.flickr.com/photos/167351774@N07/50028531331 |
+| `img/toimisto-jaa.jpg` | Icicle formations at näsijärvi. | Ranta Janne | CC0 1.0 | https://www.flickr.com/photos/167351774@N07/46449165065 |
+| `img/paneeli-ahti.jpg`, `img/esikatselu-ahti.jpg` | Red cabin in the woods. | Ranta Janne | CC0 1.0 | https://www.flickr.com/photos/167351774@N07/39882964613 |
+| `img/esikatselu-hovi.jpg` | Abandoned house | Ranta Janne | CC0 1.0 | https://www.flickr.com/photos/167351774@N07/50110765833 |
+| `img/esikatselu-aitta.jpg` | Early spring, old sauna | TJH1976 | Public Domain Mark 1.0 | https://www.flickr.com/photos/57764574@N03/40920784384 |
+| `img/esikatselu-tuohi.jpg` | Eerikkilä, Tammela, Finland | Kanta-Hämeen kuvapankki | CC0 1.0 | https://www.flickr.com/photos/160226114@N02/38266716054 |
+| `img/paneeli-kerttula.jpg`, `img/esikatselu-kerttula.jpg` | Hauhon wanha raitti, Hämeenlinna | Kanta-Hämeen kuvapankki | CC0 1.0 | https://www.flickr.com/photos/160226114@N02/50382083476 |
+| `img/esikatselu-kuusisto.jpg` | Hauhon wanha raitti, Hämeenlinna | Kanta-Hämeen kuvapankki | CC0 1.0 | https://www.flickr.com/photos/160226114@N02/50381386603 |
+| `img/esikatselu-harju.jpg` | Hauhon wanha raitti, Hämeenlinna | Kanta-Hämeen kuvapankki | CC0 1.0 | https://www.flickr.com/photos/160226114@N02/50381388693 |
+| `img/esikatselu-narhi.jpg` | Hauhon wanha raitti, Hämeenlinna | Kanta-Hämeen kuvapankki | CC0 1.0 | https://www.flickr.com/photos/160226114@N02/50382266867 |
+| `img/esikatselu-rinne.jpg` | Hauhon wanha raitti, Hämeenlinna | Kanta-Hämeen kuvapankki | CC0 1.0 | https://www.flickr.com/photos/160226114@N02/50382267722 |
 
-StockSnap-kuvat on ladattu Openverse-rajapinnan kuvavälityspalvelun kautta (960 px). Wikimedia Commonsin kuvat ovat Unsplashin CC0-aikakaudelta (ennen vuotta 2017) tuotuja kuvia. `sumu-metsa.jpg` on ladattu Openversen kuvavälityspalvelun kautta (1920 × 1280), pienennetty 1800 px:iin ja sävytetty muiden kuvien mukaiseksi.
+Hauhon wanha raitti -sarjan kuvista käytettiin Wikimedia Commonsin täysikokoisia versioita (tiedostonimi `Hauhon wanha raitti, Hämeenlinna (<kuvan tunnus>).jpg`, CC0 1.0), joiden tunnukset ovat yllä olevien Flickr-osoitteiden lopussa.
 
-Huvila Kallion asemapiirros ja materiaalipaletti ovat sivustoa varten piirrettyä SVG/CSS-grafiikkaa.
+Kohteiden Niemenpää, Sorsa ja Kuikka esikatselukuvat (`img/piirros-*.svg`) sekä kaikki kohdesivujen piirustukset (asemapiirrokset, pohjapiirrokset ja leikkaukset) ovat sivustoa varten piirrettyä SVG-grafiikkaa. Materiaalipaletit ovat CSS-värejä.
 
 ## Kirjasimet
 
@@ -43,4 +52,4 @@ Lähde: Google Fonts (https://fonts.google.com/specimen/Instrument+Serif, https:
 |---|---|---|---|
 | `vendor/lenis.min.js` | Lenis 1.3.26 (pehmeä vieritys) | darkroom.engineering | MIT (`vendor/LICENSE-lenis.txt`) |
 
-Lenis on ladattu npm-rekisteristä (`npm pack lenis@1`) ja tallennettu kansioon sellaisenaan; lähdekarttaviittaus on poistettu. Muu JavaScript (`script.js`) on kirjoitettu tätä sivustoa varten ilman kehyksiä.
+Lenis on ladattu npm-rekisteristä (`npm pack lenis@1`) ja tallennettu kansioon sellaisenaan. Muu JavaScript (`script.js`) ja CSS (`style.css`) on kirjoitettu tätä sivustoa varten ilman kehyksiä.
