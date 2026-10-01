@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <title>Kohteet | Studio Utu</title>
+  <meta name="description" content="Studio Utun kohteet: kodit, kesähuvilat ja pienet liiketilat Turusta ja saaristosta. Kaksi kohdetta esitelty tarkemmin, lisäksi lista muista töistä.">
+  <meta name="theme-color" content="#f9f3f0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f9f3f0'/%3E%3Cpath d='M8.5 25V14.5a7.5 7.5 0 0 1 15 0V25' fill='none' stroke='%23633b2f' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='20' r='2.2' fill='%23b19e18'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.UTU_OK)document.documentElement.classList.remove('js')},3000);</script>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
+
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="../index.html" aria-label="Studio Utu, etusivu">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 21V11a7 7 0 0 1 14 0v10" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="15.6" r="1.9" fill="#b19e18"/></svg>
+        <span class="brand__name">Studio <em>Utu</em></span>
+      </a>
+      <span class="brand__tag">Konsepti</span>
+      <nav class="nav" aria-label="Päävalikko">
+        <ul class="nav__list">
+          <li><a href="../kohteet/index.html" aria-current="page">Kohteet</a></li>
+          <li><a href="../palvelut/index.html">Palvelut ja hinnat</a></li>
+          <li><a href="../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
+          <li><a href="../studio/index.html">Studio</a></li>
+          <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--small header-cta" href="../yhteystiedot/index.html#lomake">Varaa konsultaatio</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobiilivalikko" data-menu-toggle>
+        <span data-menu-label>Valikko</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobiilivalikko" data-menu>
+    <nav aria-label="Mobiilivalikko">
+      <ul class="mobile-menu__list">
+        <li><a href="../kohteet/index.html" aria-current="page">Kohteet</a></li>
+        <li><a href="../palvelut/index.html">Palvelut ja hinnat</a></li>
+        <li><a href="../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
+        <li><a href="../studio/index.html">Studio</a></li>
+        <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__foot">
+      <p>Studio Utu Oy, Utukatu 5, 20100 Turku</p>
+      <p>studio@studio-utu.example</p>
+      <p>048 562 1925</p>
+      <p><a class="btn btn--small" href="../yhteystiedot/index.html#lomake" style="margin-top: 12px">Varaa konsultaatio</a></p>
+    </div>
+  </div>
+
+  <main id="sisalto" tabindex="-1">
+    <nav class="wrap" aria-label="Murupolku"><ol class="crumbs"><li><a href="../index.html">Etusivu</a></li><li aria-current="page">Kohteet</li></ol></nav>
+    <section class="page-head wrap" aria-labelledby="otsikko">
+      <div class="grid page-head__grid">
+        <div class="page-head__title">
+          <p class="label reveal">Turku ja Varsinais-Suomi</p>
+          <h1 class="h-display reveal" id="otsikko">Kohteet</h1>
+        </div>
+        <p class="page-head__lead lead reveal" style="--d: 120ms">Kodit, kesähuvilat ja pienet liiketilat vuosilta 2023–2025. Kaksi kohdetta on esitelty omalla sivullaan, muista löytyy tiedot tästä.</p>
+      </div>
+    </section>
+
+    <section class="wrap" aria-label="Kohdeluettelo" style="padding-bottom: var(--section)">
+      <div class="filters reveal" role="group" aria-label="Suodata kohteita" data-filters>
+        <button class="filter" type="button" data-filter="kaikki" data-label="Kaikki" aria-pressed="true">Kaikki <sup>6</sup></button>
+        <button class="filter" type="button" data-filter="koti" data-label="Kodit" aria-pressed="false">Kodit <sup>2</sup></button>
+        <button class="filter" type="button" data-filter="vapaa-aika" data-label="Vapaa-ajan asunnot" aria-pressed="false">Vapaa-ajan asunnot <sup>2</sup></button>
+        <button class="filter" type="button" data-filter="liiketila" data-label="Liiketilat" aria-pressed="false">Liiketilat <sup>2</sup></button>
+      </div>
+      <p class="sr-only" aria-live="polite" data-filter-status></p>
+      <ul class="cards" data-cards>
+        <li class="card" id="koti-port-arthur" data-type="koti"><a href="koti-port-arthur/index.html"><div class="media card__media"><img src="../img/koti-port-arthur-ikkunaseina.jpg" width="960" height="641" alt="Nahkainen perhostuoli ja pellavaverhot suurten ikkunoiden edessä. Ikkunoiden alla on valurautapatteri." loading="lazy" decoding="async"></div>
+          <div class="card__body">
+            <div class="card__top"><h3 class="card__name">Koti Port Arthur</h3><span class="card__year">2025</span></div>
+            <p class="card__meta">Kerrostalokoti, 78 m². Port Arthur, Turku</p>
+            <span class="card__more">Katso kohde</span>
+          </div></a></li>
+        <li class="card" id="huvila-ruissalo" data-type="vapaa-aika"><a href="huvila-ruissalo/index.html"><div class="media card__media"><img src="../img/huvila-ruissalo-nojatuoli.jpg" width="733" height="1100" alt="Vanha verhoiltu nojatuoli ja valkoinen sivupöytä, jolla on lamppu." loading="lazy" decoding="async"></div>
+          <div class="card__body">
+            <div class="card__top"><h3 class="card__name">Huvila Ruissalo</h3><span class="card__year">2024</span></div>
+            <p class="card__meta">Kesähuvila, 140 m². Ruissalo, Turku</p>
+            <span class="card__more">Katso kohde</span>
+          </div></a></li>
+        <li class="card" id="kahvila-aura" data-type="liiketila"><div><div class="media card__media"><img src="../img/kahvila-aura.jpg" width="800" height="1000" alt="Kahvilan ikkunapöytä ja baarijakkarat säleverhojen takana." loading="lazy" decoding="async"></div>
+          <div class="card__body">
+            <div class="card__top"><h3 class="card__name">Kahvila Aura</h3><span class="card__year">2025</span></div>
+            <p class="card__meta">Kahvila, 48 paikkaa. Turku</p>
+            
+          </div></div></li>
+        <li class="card" id="koti-martti" data-type="koti"><div><div class="media card__media"><img src="../img/koti-martti.jpg" width="960" height="640" alt="Vanha puupöytä katettuna keittolautasille ja leivälle, taustalla verho." loading="lazy" decoding="async"></div>
+          <div class="card__body">
+            <div class="card__top"><h3 class="card__name">Koti Martti</h3><span class="card__year">2023</span></div>
+            <p class="card__meta">Puutalon alakerta, 112 m². Martti, Turku</p>
+            
+          </div></div></li>
+        <li class="card" id="mokki-nauvo" data-type="vapaa-aika"><div><div class="media card__media"><img src="../img/mokki-nauvo.jpg" width="509" height="636" alt="Pieni mäntypaneloitu makuuhuone, jossa on vuode ja valkoinen kattolamppu." loading="lazy" decoding="async"></div>
+          <div class="card__body">
+            <div class="card__top"><h3 class="card__name">Mökki Nauvo</h3><span class="card__year">2024</span></div>
+            <p class="card__meta">Saaristomökki, 46 m². Nauvo</p>
+            
+          </div></div></li>
+        <li class="card" id="puoti-vahatori" data-type="liiketila"><div><div class="media card__media"><img src="../img/puoti-vahatori.jpg" width="1200" height="900" alt="Vaaterekki, jossa on maanvärisiä vaatteita lämpimässä valossa." loading="lazy" decoding="async"></div>
+          <div class="card__body">
+            <div class="card__top"><h3 class="card__name">Puoti Vähätori</h3><span class="card__year">2023</span></div>
+            <p class="card__meta">Vaateliike, 38 m². Turku</p>
+            
+          </div></div></li>
+      </ul>
+      <p class="fineprint">Muista töistä on kuvia ja piirustuksia, joita näytämme tapaamisessa tai lähetämme pyynnöstä PDF:nä.</p>
+    </section>
+
+    <section class="section section--panel" aria-labelledby="muut-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head__title">
+            <h2 class="h-section reveal" id="muut-title">Muut työt</h2>
+          </div>
+          <div class="section-head__aside reveal">
+            <p>Pienempiä ja vanhempia töitä. Luettelon lisäksi teemme noin 15 suunnitelmaa vuodessa.</p>
+          </div>
+        </div>
+        <ul class="list-table reveal">
+          <li class="list-head" aria-hidden="true"><span>Vuosi</span><span>Kohde</span><span>Paikka</span><span>Työ</span></li>
+          <li><span>2026</span><span>Kerrostalokodin olohuone</span><span>Kupittaa, Turku</span><span>Huonesuunnitelma</span></li>
+          <li><span>2026</span><span>Rivitalokoti, 96 m²</span><span>Kaarina</span><span>Kokonaissuunnittelu</span></li>
+          <li><span>2025</span><span>Omakotitalo, 128 m²</span><span>Raisio</span><span>Kokonaissuunnittelu</span></li>
+          <li><span>2025</span><span>Saunaosasto ja pesuhuone</span><span>Naantali</span><span>Huonesuunnitelma</span></li>
+          <li><span>2025</span><span>Toimisto, 4 työpistettä</span><span>Turku</span><span>Kalustesuunnitelma</span></li>
+          <li><span>2024</span><span>Kerrostalokoti, 54 m²</span><span>Skanssi, Turku</span><span>Kokonaissuunnittelu</span></li>
+          <li><span>2024</span><span>Kesämökki, 38 m²</span><span>Kustavi</span><span>Konsultaatio</span></li>
+          <li><span>2023</span><span>Puutalon yläkerta, 71 m²</span><span>Pansio, Turku</span><span>Kokonaissuunnittelu</span></li>
+          <li><span>2022</span><span>Rivitalokoti, 88 m²</span><span>Lieto</span><span>Kokonaissuunnittelu</span></li>
+          <li><span>2021</span><span>Paritalokoti, 110 m²</span><span>Kaarina</span><span>Kokonaissuunnittelu</span></li>
+          <li><span>2020</span><span>Kerrostalokoti, 64 m², ensimmäinen kohde</span><span>Port Arthur, Turku</span><span>Kokonaissuunnittelu</span></li>
+          <li><span>2019</span><span>Studion oma toimisto, entinen parturi</span><span>Port Arthur, Turku</span><span>Remontti ja kalustus</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="grid site-footer__top">
+        <div class="site-footer__brand">
+          <a class="brand" href="../index.html" aria-label="Studio Utu, etusivu">
+            <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 21V11a7 7 0 0 1 14 0v10" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="15.6" r="1.9" fill="#b19e18"/></svg>
+            <span class="brand__name">Studio <em>Utu</em></span>
+          </a>
+          <p>Sisustussuunnittelua Turussa. Koteja, kesähuviloita ja pieniä liiketiloja.</p>
+        </div>
+        <div class="site-footer__col">
+          <h2>Toimisto</h2>
+          <span>Studio Utu Oy</span>
+          <span>Utukatu 5</span>
+          <span>20100 Turku</span>
+          <span>Käynnit sopimuksen mukaan</span>
+        </div>
+        <div class="site-footer__col">
+          <h2>Yhteys</h2>
+          <a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a>
+          <span>048 562 1925</span>
+          <span>Vastaamme 2 arkipäivässä</span>
+        </div>
+        <div class="site-footer__col">
+          <h2>Sivusto</h2>
+          <a href="../kohteet/index.html">Kohteet</a>
+          <a href="../palvelut/index.html">Palvelut ja hinnat</a>
+          <a href="../nain-tyo-etenee/index.html">Näin työ etenee</a>
+          <a href="../studio/index.html">Studio</a>
+          <a href="../yhteystiedot/index.html">Yhteystiedot</a>
+          <a href="../tietosuoja/index.html">Tietosuoja</a>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© 2026 Studio Utu Oy</span>
+        <span>Y-tunnus 3184525-0</span>
+        <span>Verkkolaskuosoite 003731845250</span>
+        <a href="../tietosuoja/index.html">Tietosuojaseloste</a>
+      </div>
+      <div class="site-footer__concept">
+        <p>Kuvitteellinen yritys. Sivusto on Ville Saarelan konseptityö. <a href="../CREDITS.md">Kuvien tekijät</a></p>
+        <p class="concept-note">Konsepti · <a href="../../../index.html">Ville Saarela</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
