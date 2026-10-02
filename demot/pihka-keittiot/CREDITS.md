@@ -1,8 +1,8 @@
 # Pihka Keittiöt – lähteet ja lisenssit
 
-Pihka Keittiöt Oy on **kuvitteellinen yritys**, ja sivusto on Ville Saarelan konseptityö. Kaikki yrityksen tiedot on keksitty: henkilöt (Aaro Lehtinen, Veera Hakala, Ilkka Rautio, Mira Korhonen, Niko Mäkelä), keittiöiden numerot, sijainnit, hinnat, piirustukset, koneet ja uutiset. Lomakkeet eivät lähetä eivätkä tallenna tietoja.
+Pihka Keittiöt Oy on **kuvitteellinen yritys**, ja sivusto on Ville Saarelan konseptityö. Kaikki yrityksen tiedot on keksitty: henkilöt (Aaro Lehtinen, Veera Hakala, Ilkka Rautio, Mira Korhonen, Niko Mäkelä), keittiöiden numerot, sijainnit, hinnat, koneet ja uutiset. Lomakkeet eivät lähetä eivätkä tallenna tietoja.
 
-Valokuvissa näkyvät tilat, kalusteet ja ihmiset eivät liity kuvitteelliseen yritykseen. Suurin osa keittiökuvista on belgialaisen rakennusliikkeen AVL Woningbouw ja hollantilaisen laattayrityksen DTILE Flickriin public domain -merkinnällä julkaisemia kuvia.
+Valokuvissa näkyvät tilat, kalusteet ja ihmiset eivät liity kuvitteelliseen yritykseen. Keittiöiden materiaalikuvaukset on kirjoitettu kuvien mukaan.
 
 Turvalliset kuvitteelliset tiedot:
 
@@ -13,48 +13,46 @@ Turvalliset kuvitteelliset tiedot:
 
 ## Valokuvat
 
-Kaikki kuvat ovat CC0 1.0 -lisenssillä tai Public Domain Mark 1.0 -merkinnällä. Ne on haettu Openverse-rajapinnasta ja Flickristä. Yhtenäisen ilmeen vuoksi kaikkia kuvia on käsitelty samalla tavalla Pythonin PIL-kirjastolla: värikylläisyys 84 %, kontrasti 96 %, mustia tasoja nostettu hieman ja sinistä kanavaa vähennetty 1,5 %. Pisin sivu on enintään 1 800 px (JPEG-laatu 78), ja korteille on tehty 800 px:n versiot (`-800.jpg`, laatu 74).
+Kaikki kuvat ovat Unsplashista, ja niitä käytetään Unsplash-lisenssillä (https://unsplash.com/license): vapaa käyttö myös kaupallisesti, maininta ei pakollinen mutta tehty. Unsplash+-kuvia ei ole käytetty. Kuvaajat mainitaan myös kunkin sivun alalaidassa.
 
-| Tiedosto | Alkuperäinen nimi | Kuvaaja | Lisenssi | Lähde |
+Yhtenäisen ilmeen vuoksi kaikki kuvat on käsitelty samalla tavalla Pythonin PIL-kirjastolla: värikylläisyys 86 % (verstaskuvissa 66–82 %), punaista kanavaa lämmitetty hieman, sinistä vähennetty 4,5 %, mustia tasoja nostettu ja vaaleimpia sävyjä laskettu hieman. Kuvat on rajattu suhteisiin 3:2, 4:5 tai 16:9 ja tallennettu 800, 1200, 1400 tai 2000 px:n leveyksinä (pisin sivu enintään 2000 px, JPEG-laatu 76–80).
+
+| Tiedosto | Alkuperäinen kuvaus | Kuvaaja | Lisenssi | Lähde |
 |---|---|---|---|---|
-| `img/k014-ikkuna.jpg`, `-800` | 215044_20 | AVL Woningbouw | Public Domain Mark 1.0 | https://www.flickr.com/photos/avlwoningbouw/37306133055/ |
-| `img/k014-saareke.jpg`, `-800` | 215044_14 | AVL Woningbouw | Public Domain Mark 1.0 | https://www.flickr.com/photos/avlwoningbouw/36491411393/ |
-| `img/k014-pysty.jpg` | 215044_21 | AVL Woningbouw | Public Domain Mark 1.0 | https://www.flickr.com/photos/avlwoningbouw/37305905975/ |
-| `img/k014-kaapisto.jpg` | 215044_03 | AVL Woningbouw | Public Domain Mark 1.0 | https://www.flickr.com/photos/avlwoningbouw/36907173940/ |
-| `img/k014-yksityiskohta.jpg` | 215044_07, alareunasta rajattu | AVL Woningbouw | Public Domain Mark 1.0 | https://www.flickr.com/photos/avlwoningbouw/36907485950/ |
-| `img/k021-saareke.jpg`, `-800` | 213043_22 | AVL Woningbouw | Public Domain Mark 1.0 | https://www.flickr.com/photos/avlwoningbouw/36904284960/ |
-| `img/k021-ikkuna.jpg`, `-800` | 213043_06 | AVL Woningbouw | Public Domain Mark 1.0 | https://www.flickr.com/photos/avlwoningbouw/37111088806/ |
-| `img/k030.jpg`, `-800` | 215022_03 | AVL Woningbouw | Public Domain Mark 1.0 | https://www.flickr.com/photos/avlwoningbouw/36482966824/ |
-| `img/k022.jpg`, `-800` | Kitchen in Blaricum (Sunflower-colored DTILE-tiled countertop) | DTILE | Public Domain Mark 1.0 | https://www.flickr.com/photos/dtile/45004023564/ |
-| `img/k003.jpg`, `-800` | Kitchen Interior | Matt Bango | CC0 1.0 | https://stocksnap.io/photo/kitchen-interior-3ZX53UFU8B |
-| `img/k009.jpg`, `-800` | Free small minimalistic kitchen image | ei ilmoitettu (rawpixel.com) | CC0 1.0 | https://www.rawpixel.com/image/5907115/photo-image-light-public-domain-shadow |
-| `img/k011.jpg`, `-800` | Free modern kitchen image | ei ilmoitettu (rawpixel.com) | CC0 1.0 | https://www.rawpixel.com/image/5905580/photo-image-light-public-domain-shadow |
-| `img/k017.jpg`, `-800` | Free modern kitchen image | ei ilmoitettu (rawpixel.com) | CC0 1.0 | https://www.rawpixel.com/image/5922237/photo-image-public-domain-house-kitchen |
-| `img/k006.jpg`, `-800` | Kitchen inferior design image, rajattu niin, että lasioven teksti jää pois | ei ilmoitettu (rawpixel.com) | CC0 1.0 | https://www.rawpixel.com/image/5912111/photo-image-light-public-domain-art |
-| `img/verstas-hoyla.jpg` | Working Wood | ky0nch3ng | CC0 1.0 | https://www.flickr.com/photos/148714304@N03/36910574176/ |
-| `img/verstas-hoylays.jpg` | Carpenter Working | Burst | CC0 1.0 | https://stocksnap.io/photo/carpenter-working-ZMQNOXQMZO |
-| `img/verstas-penkki.jpg` | Craftsman Wood | Burst | CC0 1.0 | https://stocksnap.io/photo/craftsman-wood-ROLUDWIT8F |
-| `img/verstas-hionta.jpg` | Wood Sawdust | Ian Schneider | CC0 1.0 | https://stocksnap.io/photo/wood-sawdust-VLHYVV3XU5 |
-| `img/verstas-mittaus.jpg` | Calipers Carpenter | James Frid | CC0 1.0 | https://stocksnap.io/photo/calipers-carpenter-GWIDWSKJJJ |
-| `img/verstas-tyokalut.jpg` | Tools Workshop | Barn Images | CC0 1.0 | https://stocksnap.io/photo/tools-workshop-KD30XPQR0A |
-
-Flickr-kuvat on ladattu Flickrin 2048 px:n koosta. StockSnap-kuvat on ladattu Openverse-rajapinnan kautta 960 px:n koossa ja rawpixel-kuvat 1024 px:n koossa.
-
-## Piirrokset
-
-Keittiöiden julkisivut ja pohjat (K-014, K-021, K-024), hintalaskurin pohjakuva, vanerin ja lastulevyn leikkauskuva, puunäytteet (koivu, tammi, saarni), logo ja favicon ovat sivustoa varten piirrettyä SVG-grafiikkaa. Puunsyyt on generoitu ohjelmallisesti, eivätkä ne ole valokuvia.
+| `img/k030-*.jpg` | A modern kitchen with walnut cabinetry, a white island, and four wooden stools | Clay Banks | Unsplash License | https://unsplash.com/photos/modern-kitchen-with-walnut-cabinetry-TDXF1KUyyTk |
+| `img/k021-a-*.jpg` | Modern kitchen with island and bar stools | Caroline Badran | Unsplash License | https://unsplash.com/photos/modern-kitchen-with-island-and-bar-stools-BaKdrhCvn0E |
+| `img/k021-b-*.jpg` | Modern kitchen and dining area with large windows | Caroline Badran | Unsplash License | https://unsplash.com/photos/modern-kitchen-and-dining-area-with-large-windows-8FIqK2J7jSc |
+| `img/k021-c-*.jpg` | A person opens a modern kitchen drawer | Caroline Badran | Unsplash License | https://unsplash.com/photos/a-person-opens-a-modern-kitchen-drawer-1jBY2qf7-MM |
+| `img/k014-hero-*.jpg` | a kitchen with wooden cabinets and white counter tops | Tile Merchant Ireland | Unsplash License | https://unsplash.com/photos/a-kitchen-with-wooden-cabinets-and-white-counter-tops-s1WRHdz8oVI |
+| `img/k014-a-*.jpg` | a kitchen with a sink, oven, and sliding glass doors | Tile Merchant Ireland | Unsplash License | https://unsplash.com/photos/a-kitchen-with-a-sink-oven-and-sliding-glass-doors-OppZg8nWH2M |
+| `img/k011-*.jpg` | A kitchen with a wooden floor and cabinets | Steffen Lemmerzahl | Unsplash License | https://unsplash.com/photos/a-kitchen-with-a-wooden-floor-and-cabinets-LskRLbXaDQ4 |
+| `img/k009-*.jpg` | A kitchen with wooden cabinets and white counter tops | Alex Tyson | Unsplash License | https://unsplash.com/photos/a-kitchen-with-wooden-cabinets-and-white-counter-tops-x4DjDOdy1Rg |
+| `img/k003-*.jpg` | A kitchen with a wooden counter top and white cabinets | Alex Tyson | Unsplash License | https://unsplash.com/photos/a-kitchen-with-a-wooden-counter-top-and-white-cabinets-1iTJJr5-Nek |
+| `img/k022-*.jpg` | A kitchen with a large window overlooking a body of water | Alex Tyson | Unsplash License | https://unsplash.com/photos/a-kitchen-with-a-large-window-overlooking-a-body-of-water-pAUYr5fpbWM |
+| `img/k017-*.jpg` | A large kitchen with a wooden floor and white cabinets | Prydumano Design | Unsplash License | https://unsplash.com/photos/a-large-kitchen-with-a-wooden-floor-and-white-cabinets-So4OCymi_c4 |
+| `img/k006-*.jpg` | A kitchen with a wooden floor and white walls | Prydumano Design | Unsplash License | https://unsplash.com/photos/a-kitchen-with-a-wooden-floor-and-white-walls-Xx02G9SYjlY |
+| `img/ote-*.jpg` | black metal bar on brown wooden table | Valentina Giarre | Unsplash License | https://unsplash.com/photos/black-metal-bar-on-brown-wooden-table-jQ0kZbSnoQw |
+| `img/laatikko-*.jpg` | a drawer with utensils and spoons in it | Orgalux | Unsplash License | https://unsplash.com/photos/a-drawer-with-utensils-and-spoons-in-it-RC9zBU6ajSs |
+| `img/vaneri-*.jpg` | a stack of wooden boards stacked on top of each other | LUCIA LU | Unsplash License | https://unsplash.com/photos/a-stack-of-wooden-boards-stacked-on-top-of-each-other-F6cL5B7Gnz8 |
+| `img/syrja-*.jpg` | a close up of a watch on a wooden surface | LUCIA LU | Unsplash License | https://unsplash.com/photos/a-close-up-of-a-watch-on-a-wooden-surface-Bv16r7YcwVs |
+| `img/verstas-halli-*.jpg` | brown wooden table with chairs | Devin Berko | Unsplash License | https://unsplash.com/photos/brown-wooden-table-with-chairs-ngLt4Y1vI_Q |
+| `img/verstas-merkinta-*.jpg` | A person marking a line on a wooden board with a pencil | Craft Kitties | Unsplash License | https://unsplash.com/photos/person-marking-wooden-board-with-pencil-GfYA6q5ESLI |
+| `img/verstas-tyokalut-*.jpg` | brown wooden rolling pin on brown wooden table | Elizabeth French | Unsplash License | https://unsplash.com/photos/brown-wooden-rolling-pin-on-brown-wooden-table-wmObLzO2g-s |
+| `img/verstas-maalaamo-*.jpg` | a person using a grinder on a wooden table | Simon Kadula | Unsplash License | https://unsplash.com/photos/a-person-using-a-grinder-on-a-wooden-table-2ovBrbfQr0Y |
+| `img/verstas-mittaus-*.jpg` | person measuring brown board | Olga Kononenko | Unsplash License | https://unsplash.com/photos/person-measuring-brown-board-izDJWgQZonY |
+| `img/verstas-lankut-*.jpg` | a pile of wood sitting next to each other | Patrick Robert Doyle | Unsplash License | https://unsplash.com/photos/a-pile-of-wood-sitting-next-to-each-other-yVRn-d6JGzo |
+| `img/verstas-viilu-*.jpg` | person holding white printer paper | Joshua Williams | Unsplash License | https://unsplash.com/photos/person-holding-white-printer-paper-chEduGv51sM |
 
 ## Kirjasimet
 
-Kirjasimet ovat sivuston omalla palvelimella kansiossa `fonts/`, joten kolmannen osapuolen pyyntöjä ei tehdä. Mukana on vain latinalainen merkistö. Lisenssiteksti: `fonts/OFL.txt`.
+Kirjasimet ovat sivuston omalla palvelimella kansiossa `fonts/`, joten kolmannen osapuolen pyyntöjä ei tehdä. Mukana on vain latinalainen merkistö (muuttuva paino 300–800). Lisenssiteksti: `fonts/OFL.txt`.
 
 | Tiedosto | Kirjasin | Tekijä | Lisenssi |
 |---|---|---|---|
-| `fonts/barlow-400-latin.woff2`, `fonts/barlow-500-latin.woff2`, `fonts/barlow-600-latin.woff2` | Barlow 400, 500 ja 600 | The Barlow Project Authors (Jeremy Tribby) | SIL Open Font License 1.1 |
-| `fonts/barlow-semi-condensed-500-latin.woff2` | Barlow Semi Condensed 500 (otsikot). Logon kirjaimet on muunnettu SVG-poluiksi Barlow Semi Condensed 600:sta. | The Barlow Project Authors (Jeremy Tribby) | SIL Open Font License 1.1 |
-| `fonts/ibm-plex-mono-400-latin.woff2`, `fonts/ibm-plex-mono-500-latin.woff2` | IBM Plex Mono 400 ja 500 | IBM Corp. | SIL Open Font License 1.1 |
+| `fonts/host-grotesk-latin.woff2` | Host Grotesk (leipäteksti, otsikot pienissä koissa) | The Host Grotesk Project Authors (Element Type) | SIL Open Font License 1.1 |
+| `fonts/funnel-display-latin.woff2` | Funnel Display (isot otsikot). Pihka-sanamerkki on muunnettu SVG-poluiksi Funnel Display -kirjasimen painosta 520, välistystä on tiivistetty. | The Funnel Project Authors (Dicotype) | SIL Open Font License 1.1 |
 
-Lähde: Google Fonts (https://fonts.google.com/specimen/Barlow, https://fonts.google.com/specimen/Barlow+Semi+Condensed, https://fonts.google.com/specimen/IBM+Plex+Mono).
+Lähde: Google Fonts (https://fonts.google.com/specimen/Host+Grotesk, https://fonts.google.com/specimen/Funnel+Display).
 
 ## Koodi
 

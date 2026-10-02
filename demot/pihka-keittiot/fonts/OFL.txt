@@ -1,10 +1,8 @@
-Barlow ja Barlow Semi Condensed (fonts/barlow-400-latin.woff2, fonts/barlow-500-latin.woff2, fonts/barlow-600-latin.woff2, fonts/barlow-semi-condensed-500-latin.woff2)
-============================================================
-Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
+Copyright 2023 The Host Grotesk Project Authors (https://github.com/Element-Type/HostGrotesk)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
+https://openfontlicense.org
 
 
 -----------------------------------------------------------
@@ -95,13 +93,13 @@ FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
 
-IBM Plex Mono (fonts/ibm-plex-mono-400-latin.woff2, fonts/ibm-plex-mono-500-latin.woff2)
-===================================================================================
-Copyright © 2017 IBM Corp. with Reserved Font Name "Plex"
+----------------------------------------------------------------------
+
+Copyright 2024 The Funnel Project Authors (https://github.com/Dicotype/Funnel)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
-
-This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
+This license is copied below, and is also available with a FAQ at:
+https://openfontlicense.org
 
 
 -----------------------------------------------------------
