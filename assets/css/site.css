@@ -765,3 +765,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   #sisalto > .hero { min-height: 0; padding-top: clamp(96px, 14svh, 140px); }
   #tyot { padding-top: clamp(48px, 7svh, 72px); }
 }
+
+/* ---------- Wordmark (aa-sidos) ---------- */
+.brand { display: inline-flex; align-items: center; }
+.brand img { display: block; height: 18px; width: auto; }
+@media (max-width: 420px) { .brand img { height: 15px; } }
