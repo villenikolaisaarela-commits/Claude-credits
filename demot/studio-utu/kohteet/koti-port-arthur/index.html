@@ -13,6 +13,7 @@
   <link rel="preload" as="image" type="image/webp" imagesrcset="../../img/port-arthur-olohuone-s.webp 900w, ../../img/port-arthur-olohuone-l.webp 1600w" imagesizes="(max-width: 760px) 100vw, 50vw" fetchpriority="high">
   <link rel="stylesheet" href="../../style.css">
   <script src="../../script.js" defer></script>
+<style id="img-fade">@media (prefers-reduced-motion:no-preference){.img-fade img:not(.img-ok):not([src$=".svg"]){opacity:0}.img-fade img.img-ok{animation:img-in .9s cubic-bezier(.2,.7,.1,1)}@keyframes img-in{from{opacity:0}}}</style><script>(function(d){d.documentElement.classList.add("img-fade");function ok(i){i.classList.add("img-ok")}function r(e){var t=e.target;if(t&&t.tagName==="IMG")ok(t)}d.addEventListener("load",r,true);d.addEventListener("error",r,true);d.addEventListener("DOMContentLoaded",function(){[].forEach.call(d.images,function(i){if(i.complete&&i.naturalWidth)ok(i)})});addEventListener("load",function(){setTimeout(function(){[].forEach.call(d.images,ok)},2500)})})(document)</script>
 </head>
 <body>
   <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
@@ -35,7 +36,7 @@
     <section class="hero" aria-label="Koti Port Arthur, kuvat">
       <div class="hero__pair">
         <figure class="hero__img reveal"><picture><source type="image/webp" srcset="../../img/port-arthur-olohuone-s.webp 900w, ../../img/port-arthur-olohuone-l.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw"><img src="../../img/port-arthur-olohuone.jpg" width="1600" height="2000" alt="Olohuone, jossa on kalanruotoparketti, tiikkinen lipasto ja vaalea nojatuoli." fetchpriority="high" decoding="async"></picture></figure>
-        <figure class="hero__img hero__img--b reveal" style="--d:140ms"><picture><source type="image/webp" srcset="../../img/port-arthur-ikkunaseina-s.webp 900w, ../../img/port-arthur-ikkunaseina-l.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw"><img src="../../img/port-arthur-ikkunaseina.jpg" width="1600" height="2000" alt="Korkea ikkuna, valurautapatteri ja harmaat pellavaverhot." loading="lazy" decoding="async"></picture></figure>
+        <figure class="hero__img hero__img--b reveal" style="--d:140ms"><picture><source type="image/webp" srcset="../../img/port-arthur-ikkunaseina-s.webp 900w, ../../img/port-arthur-ikkunaseina-l.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw"><img src="../../img/port-arthur-ikkunaseina.jpg" width="1600" height="2000" alt="Korkea ikkuna, valurautapatteri ja harmaat pellavaverhot." loading="eager" decoding="async"></picture></figure>
       </div>
       <p class="hero__cap"><span>Olohuone</span><span>Ikkunaseinä</span><span>Valokuvat: Julia, Lisa Anna</span></p>
     </section>

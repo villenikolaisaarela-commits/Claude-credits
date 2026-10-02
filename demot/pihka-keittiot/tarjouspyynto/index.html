@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="../style.css">
 <script>document.documentElement.classList.add('js')</script>
 <script src="../script.js" defer></script>
+<style id="img-fade">@media (prefers-reduced-motion:no-preference){.img-fade img:not(.img-ok):not([src$=".svg"]){opacity:0}.img-fade img.img-ok{animation:img-in .9s cubic-bezier(.2,.7,.1,1)}@keyframes img-in{from{opacity:0}}}</style><script>(function(d){d.documentElement.classList.add("img-fade");function ok(i){i.classList.add("img-ok")}function r(e){var t=e.target;if(t&&t.tagName==="IMG")ok(t)}d.addEventListener("load",r,true);d.addEventListener("error",r,true);d.addEventListener("DOMContentLoaded",function(){[].forEach.call(d.images,function(i){if(i.complete&&i.naturalWidth)ok(i)})});addEventListener("load",function(){setTimeout(function(){[].forEach.call(d.images,ok)},2500)})})(document)</script>
 </head>
 <body class="">
 <a class="skip" href="#main">Siirry sisältöön</a>
@@ -72,7 +73,7 @@
     <aside class="qside">
       <dl class="facts"><div><dt>Vastaus</dt><dd>Kahden arkipäivän kuluessa</dd></div><div><dt>Hinta-arvio</dt><dd>Viikon sisällä</dd></div><div><dt>Puhelin</dt><dd>048 562 1913, arkisin 8–16</dd></div><div><dt>Sähköposti</dt><dd>hei@pihka-keittiot.example</dd></div></dl>
       <p class="muted">Alkuun riittää seinän pituus, ikkunan paikka ja ovet. Loput mitataan paikan päällä.</p>
-      <div class="ph r-32" data-reveal><img src="../img/vaneri-1400.jpg" srcset="../img/vaneri-800.jpg 800w, ../img/vaneri-1400.jpg 1400w" sizes="(max-width: 760px) 100vw, 33vw" width="1400" height="933" alt="Pino vanerilevyjä sivusta." loading="lazy" decoding="async"></div>
+      <div class="ph r-32" data-reveal><img src="../img/vaneri-1400.jpg" srcset="../img/vaneri-800.jpg 800w, ../img/vaneri-1400.jpg 1400w" sizes="(max-width: 760px) 100vw, 33vw" width="1400" height="933" alt="Pino vanerilevyjä sivusta." loading="eager" decoding="async"></div>
     </aside>
   </div>
 </section>
