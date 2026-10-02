@@ -770,3 +770,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .brand { display: inline-flex; align-items: center; }
 .brand img { display: block; height: 18px; width: auto; }
 @media (max-width: 420px) { .brand img { height: 15px; } }
+@media (min-width: 761px) {
+  .work > li:nth-child(5) { grid-column: 1 / span 6; }
+  .work > li:nth-child(6) { grid-column: 8 / span 5; }
+}
