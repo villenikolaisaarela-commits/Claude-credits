@@ -517,7 +517,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .site-footer {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
   justify-content: space-between;
   gap: 12px 24px;
   padding: 20px var(--gutter) 28px;
