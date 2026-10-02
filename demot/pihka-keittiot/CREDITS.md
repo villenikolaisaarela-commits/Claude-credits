@@ -50,10 +50,11 @@ Kirjasimet ovat sivuston omalla palvelimella kansiossa `fonts/`, joten kolmannen
 
 | Tiedosto | Kirjasin | Tekijä | Lisenssi |
 |---|---|---|---|
-| `fonts/hanken-grotesk-latin.woff2` | Hanken Grotesk (muuttuva, 300–700) | The Hanken Grotesk Project Authors (Alfredo Marco Pradil) | SIL Open Font License 1.1 |
+| `fonts/barlow-400-latin.woff2`, `fonts/barlow-500-latin.woff2`, `fonts/barlow-600-latin.woff2` | Barlow 400, 500 ja 600 | The Barlow Project Authors (Jeremy Tribby) | SIL Open Font License 1.1 |
+| `fonts/barlow-semi-condensed-500-latin.woff2` | Barlow Semi Condensed 500 (otsikot). Logon kirjaimet on muunnettu SVG-poluiksi Barlow Semi Condensed 600:sta. | The Barlow Project Authors (Jeremy Tribby) | SIL Open Font License 1.1 |
 | `fonts/ibm-plex-mono-400-latin.woff2`, `fonts/ibm-plex-mono-500-latin.woff2` | IBM Plex Mono 400 ja 500 | IBM Corp. | SIL Open Font License 1.1 |
 
-Lähde: Google Fonts (https://fonts.google.com/specimen/Hanken+Grotesk, https://fonts.google.com/specimen/IBM+Plex+Mono).
+Lähde: Google Fonts (https://fonts.google.com/specimen/Barlow, https://fonts.google.com/specimen/Barlow+Semi+Condensed, https://fonts.google.com/specimen/IBM+Plex+Mono).
 
 ## Koodi
 

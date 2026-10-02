@@ -1,8 +1,8 @@
 Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)
 (instrument-serif-latin.woff2, instrument-serif-italic-latin.woff2)
 
-Copyright 2021 The Hanken Grotesk Project Authors (https://github.com/marcologous/hanken-grotesk)
-(hanken-grotesk-latin.woff2)
+Copyright 2022 The Mona Sans Project Authors (https://github.com/github/mona-sans), with Reserved Font Name "Mona"
+(mona-sans-latin.woff2: Google Fontsin jakama latin-osajoukko sellaisenaan, muokkaamaton)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

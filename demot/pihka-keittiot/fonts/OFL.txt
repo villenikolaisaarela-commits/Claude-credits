@@ -1,7 +1,6 @@
-Hanken Grotesk (fonts/hanken-grotesk-latin.woff2)
-================================================
-Copyright 2021 The Hanken Grotesk Project Authors (https://github.com/marcologous/hanken-grotesk)
-
+Barlow ja Barlow Semi Condensed (fonts/barlow-400-latin.woff2, fonts/barlow-500-latin.woff2, fonts/barlow-600-latin.woff2, fonts/barlow-semi-condensed-500-latin.woff2)
+============================================================
+Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

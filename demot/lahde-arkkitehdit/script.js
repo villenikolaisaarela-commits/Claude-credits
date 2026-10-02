@@ -50,6 +50,17 @@
   /* ------------------------------------------------------------------
      Reveal on scroll
      ------------------------------------------------------------------ */
+  /* Lopputekstien rivit nousevat yksi kerrallaan: järjestysnumero --k */
+  $$('[data-reveal]').forEach(function (block) {
+    $$('.rise, .credits > div', block).forEach(function (el, k) {
+      if (el.matches('.credits > div')) {
+        Array.prototype.forEach.call(el.children, function (c) { c.style.setProperty('--k', k); });
+      } else {
+        el.style.setProperty('--k', k);
+      }
+    });
+  });
+
   var revealEls = $$('.reveal, [data-reveal]');
   var heroEls = revealEls.filter(function (el) { return el.closest('.hero'); });
   if ('IntersectionObserver' in window && !reduce) {
@@ -57,43 +68,20 @@
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
     revealEls.forEach(function (el) { if (heroEls.indexOf(el) === -1) io.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add('is-in'); });
   }
 
   /* ------------------------------------------------------------------
-     Page-load curtain (etusivu, kerran istunnossa)
+     Sivu valmis: alkuteksti ja hero-elementit esiin
      ------------------------------------------------------------------ */
-  var curtain = $('[data-curtain]');
-  var isReady = false;
   function ready() {
-    if (isReady) return;
-    isReady = true;
     root.classList.add('is-ready');
     heroEls.forEach(function (el) { el.classList.add('is-in'); });
   }
-  var seen = false;
-  try { seen = window.sessionStorage.getItem('lahde-curtain') === '1'; } catch (err) { seen = false; }
-  if (curtain && !reduce && !seen) {
-    try { window.sessionStorage.setItem('lahde-curtain', '1'); } catch (err) { /* ei haittaa */ }
-    var finished = false;
-    var finish = function () {
-      if (finished) return;
-      finished = true;
-      curtain.classList.add('is-done');
-      ready();
-      setTimeout(function () { if (curtain.parentNode) curtain.parentNode.removeChild(curtain); }, 750);
-    };
-    setTimeout(finish, 600);
-    ['pointerdown', 'keydown', 'wheel', 'touchstart'].forEach(function (ev) {
-      window.addEventListener(ev, finish, { once: true, passive: true });
-    });
-  } else {
-    if (curtain && curtain.parentNode) curtain.parentNode.removeChild(curtain);
-    ready();
-  }
+  requestAnimationFrame(ready);
 
   /* ------------------------------------------------------------------
      Smooth scroll (Lenis)
@@ -112,7 +100,9 @@
   var lastY = window.scrollY;
   var menuOpen = false;
 
+  var isHome = d.body.classList.contains('is-home');
   function updateHeader(y, vh) {
+    if (isHome) root.classList.toggle('film-top', y < vh * 0.55);
     header.classList.toggle('is-scrolled', y > 40);
     if (!menuOpen) {
       if (y > lastY + 6 && y > vh * 0.9) header.classList.add('is-hidden');
@@ -140,6 +130,11 @@
     return { el: el, bar: $('[data-chapter-bar]', el) };
   });
 
+  /* Etusivu: kuva himmenee mustaan, kun se vierii pois (kuin elokuvan häivytys) */
+  var fades = reduce ? [] : $$('[data-fadeout]').map(function (el) {
+    return { el: el, box: el.closest('[data-shot], [data-opening]') || el };
+  });
+
   function updateScroll() {
     var y = window.scrollY;
     var vh = window.innerHeight;
@@ -147,6 +142,14 @@
 
     updateHeader(y, vh);
     if (reduce) return;
+
+    for (var f = 0; f < fades.length; f++) {
+      var fr = fades[f].box.getBoundingClientRect();
+      if (fr.bottom < -60 || fr.top > vh) continue;
+      var off = vh / 2 - (fr.top + fr.height / 2);
+      var o = off > 0 ? 1 - clamp(off / (vh * 0.62), 0, 1) * 0.92 : 1;
+      fades[f].el.style.opacity = o.toFixed(3);
+    }
 
     if (heroImg && y < vh * 1.3) {
       heroImg.style.transform = 'translate3d(0,' + (y * 0.3).toFixed(1) + 'px,0)';

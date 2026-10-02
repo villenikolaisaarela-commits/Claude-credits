@@ -19,7 +19,7 @@ Kuvaajien nimet ovat Flickrin ja Wikimedia Commonsin käyttäjänimiä. Kanta-H�
 | `img/kallio-tontti.jpg` | Eerikkilä, Tammela, Finland | Kanta-Hämeen kuvapankki | CC0 1.0 | https://www.flickr.com/photos/160226114@N02/43585291951 |
 | `img/kallio-nakyma.jpg` | Leipijärvi, Janakkala | TJH1976 | Public Domain Mark 1.0 | https://www.flickr.com/photos/57764574@N03/27306450274 |
 | `img/salmi-ranta.jpg` | Lahnajärvi (Orivesi) | Janim71 | CC0 1.0 | https://commons.wikimedia.org/w/index.php?curid=150438625 |
-| `img/sulku-keskiyo.jpg` | Midsummer night | Ranta Janne | CC0 1.0 | https://www.flickr.com/photos/167351774@N07/50028531331 |
+| `img/sulku-keskiyo.jpg` (etusivun alkuteksti) | Midsummer night | Ranta Janne | CC0 1.0 | https://www.flickr.com/photos/167351774@N07/50028531331 |
 | `img/toimisto-jaa.jpg` | Icicle formations at näsijärvi. | Ranta Janne | CC0 1.0 | https://www.flickr.com/photos/167351774@N07/46449165065 |
 | `img/paneeli-ahti.jpg`, `img/esikatselu-ahti.jpg` | Red cabin in the woods. | Ranta Janne | CC0 1.0 | https://www.flickr.com/photos/167351774@N07/39882964613 |
 | `img/esikatselu-hovi.jpg` | Abandoned house | Ranta Janne | CC0 1.0 | https://www.flickr.com/photos/167351774@N07/50110765833 |
@@ -42,9 +42,13 @@ Kirjasimet ovat sivuston omalla palvelimella kansiossa `fonts/`, joten kolmannen
 | Tiedosto | Kirjasin | Tekijä | Lisenssi |
 |---|---|---|---|
 | `fonts/instrument-serif-latin.woff2`, `fonts/instrument-serif-italic-latin.woff2` | Instrument Serif | Rodrigo Fuenzalida, Jordan Egstad (Instrument) | SIL Open Font License 1.1 |
-| `fonts/hanken-grotesk-latin.woff2` | Hanken Grotesk (muuttuva, 300–500) | Alfredo Marco Pradil (Hanken Design Co.) | SIL Open Font License 1.1 |
+| `fonts/mona-sans-latin.woff2` | Mona Sans (muuttuva: leveys 75–125 %, paino 200–900) | GitHub, suunnittelu Tobias Bjerrome Ahlin ja Degarism Studio | SIL Open Font License 1.1, varattu kirjasinnimi "Mona" |
 
-Lähde: Google Fonts (https://fonts.google.com/specimen/Instrument+Serif, https://fonts.google.com/specimen/Hanken+Grotesk).
+Lähde: Google Fonts (https://fonts.google.com/specimen/Instrument+Serif, https://fonts.google.com/specimen/Mona+Sans). Mona Sansin tiedosto on Google Fontsin jakama latinalainen osajoukko sellaisenaan, sitä ei ole muokattu. Lopputeksteissä käytetään Mona Sansin leveää leikkausta (font-stretch 125 %).
+
+## Liikemerkki
+
+`img/lahde-wordmark.svg` (pysty) ja `img/lahde-wordmark-vaaka.svg` (vaaka) on piirretty tätä sivustoa varten. Sana "Lähde" on muunnettu poluiksi Instrument Serifin kirjainmuodoista käsin säädetyllä välistyksellä, ja "ARKKITEHDIT" Mona Sansin leveästä leikkauksesta (leveys 125 %, paino 480) harvennettuna saman levyiseksi kuin yläpuolinen sana. Niiden välissä on hiusviiva ja piste. Merkit on upotettu sivuille SVG-koodina, joten ne eivät lataa kirjasimia. Selaimen välilehden kuvake on Instrument Serifin L-kirjain ja piste.
 
 ## Ohjelmakirjastot
 
