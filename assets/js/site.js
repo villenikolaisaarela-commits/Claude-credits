@@ -72,4 +72,26 @@
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
+
+  // Work cards: play a short muted preview of the site on hover (desktop pointers only).
+  if (!reduce && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.card').forEach(function (card) {
+      var video = card.querySelector('.card-video');
+      if (!video) return;
+      var ready = false;
+      card.addEventListener('mouseenter', function () {
+        if (!ready) {
+          video.querySelectorAll('source').forEach(function (s) { s.src = s.dataset.src; });
+          video.load(); ready = true;
+        }
+        var play = video.play();
+        if (play && play.then) play.then(function () { card.classList.add('is-playing'); }).catch(function () {});
+        else card.classList.add('is-playing');
+      });
+      card.addEventListener('mouseleave', function () {
+        card.classList.remove('is-playing');
+        setTimeout(function () { if (!card.classList.contains('is-playing')) { video.pause(); video.currentTime = 0; } }, 700);
+      });
+    });
+  }
 })();

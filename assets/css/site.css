@@ -662,3 +662,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .status::before { animation: none; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+/* ---------- Work cards: idea line and hover preview ---------- */
+.card-idea { padding-top: 6px; color: var(--muted); font-size: 15px; line-height: 1.4; letter-spacing: -0.01em; }
+.card-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; pointer-events: none; transition: opacity 0.7s var(--ease); }
+.card.is-playing .card-video { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .work > li .card-idea { opacity: 0; transform: translateY(10px); transition: opacity 0.9s var(--ease) 0.5s, transform 0.9s var(--ease) 0.5s; }
+  .js .work > li.is-in .card-idea { opacity: 1; transform: none; }
+}
