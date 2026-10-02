@@ -5,284 +5,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
   <title>Palvelut ja hinnat | Studio Utu</title>
-  <meta name="description" content="Studio Utun palvelut ja hinnat: konsultaatio 290&nbsp;€, huonesuunnitelma alk. 950&nbsp;€, kokonaissuunnittelu kiinteällä hinnalla. Hinnat sisältävät arvonlisäveron.">
-  <meta name="theme-color" content="#183a2e">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23183a2e'/%3E%3Cpath d='M6 0h10v32H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z' fill='%232f6150'/%3E%3Cpath d='M16 3v26' stroke='%23efd0c4' stroke-width='2.2'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='%23efd0c4'/%3E%3C/svg%3E">
+  <meta name="description" content="Konsultaatio 290 €, huonesuunnitelma alkaen 950 € ja kokonaissuunnittelu 4 900–8 500 €. Näin suunnittelu etenee Studio Utussa.">
+  <meta name="theme-color" content="#f3f0ea">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3f0ea'/%3E%3Cpath d='M10 8.5v9.5a6 6 0 0 0 12 0V8.5' fill='none' stroke='%231f1d1a' stroke-width='2.2'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.UTU_OK)document.documentElement.classList.remove('js')},3000);</script>
-  <link rel="preload" as="font" type="font/woff2" href="../fonts/young-serif-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../fonts/instrument-sans-latin.woff2" crossorigin>
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
 
-  <header class="site-header" data-header>
-    <div class="site-header__inner">
-      <a class="brand" href="../index.html" aria-label="Studio Utu, etusivu"><img class="brand__mark" src="../img/utu-wordmark.svg" width="787" height="176" alt=""></a>
-      <nav class="nav" aria-label="Päävalikko">
-        <ul class="nav__list">
+  <header class="hdr">
+    <a class="hdr__brand" href="../index.html"><img src="../img/utu-wordmark.svg" width="4254" height="746" alt="Studio Utu, etusivu"></a>
+    <nav class="hdr__nav" id="valikko" aria-label="Päävalikko">
+      <ul>
           <li><a href="../kohteet/index.html">Kohteet</a></li>
-          <li><a href="../palvelut/index.html" aria-current="page">Palvelut ja hinnat</a></li>
-          <li><a href="../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
+          <li><a href="../palvelut/index.html" aria-current="page">Palvelut</a></li>
+          <li><a href="../studio/index.html">Studio</a></li>
+          <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
+      </ul>
+    </nav>
+    <button class="hdr__toggle" type="button" aria-expanded="false" aria-controls="valikko" data-menu-toggle><span data-menu-label>Valikko</span></button>
+  </header>
+
+  <main id="sisalto" tabindex="-1">
+
+    <section class="phead wrap">
+      <h1 class="phead__title reveal">Palvelut ja hinnat</h1>
+      <p class="phead__lead reveal">Konsultaatio on kertahinta, ja huonesuunnitelma lasketaan huoneittain. Kokonaissuunnittelun hinta sovitaan kiinteäksi ennen aloitusta. Hinnat sisältävät arvonlisäveron 25,5 %.</p>
+    </section>
+
+    <section class="wrap" aria-label="Palvelut">
+      <ul class="svcs">
+        <li class="svc reveal">
+          <h2 class="svc__name">Konsultaatio</h2>
+          <p class="svc__price">290 €<span>2 tuntia, matkat Turussa mukana</span></p>
+          <div class="svc__text"><p>Tulemme kotiisi tai liiketilaasi, käymme huoneet läpi ja kerromme, mikä kannattaa tehdä ensin. Muistiinpanot ja kuvat saat PDF:nä kahden arkipäivän kuluessa.</p><p class="muted">Kaarinaan, Raisioon ja Naantaliin matkat 30 €. Hinta vähennetään kokonaissuunnittelusta, jos tilaat sen 30 päivän kuluessa.</p></div>
+        </li>
+        <li class="svc reveal">
+          <h2 class="svc__name">Huonesuunnitelma</h2>
+          <p class="svc__price">alk. 950 €<span>yksi huone, olohuone tyypillisesti 1 200–1 600 €</span></p>
+          <div class="svc__text"><p>Pohjaratkaisu mittakaavassa 1:50, värit ja materiaalit oikeina näytepaloina, valaisimet ja ostoslista. Yksi tarkistuskierros.</p><p class="muted">Valmis noin kolmessa viikossa. Ei sisällä kalusteiden hankintaa eikä työmaakäyntejä.</p></div>
+        </li>
+        <li class="svc reveal">
+          <h2 class="svc__name">Kokonaissuunnittelu</h2>
+          <p class="svc__price">4 900–8 500 €<span>tyypillisesti 100–150 m², kiinteä hinta</span></p>
+          <div class="svc__text"><p>Koko asunnon tai huvilan suunnitelma remonttiin tai muuttoon: työpiirustukset, valaistus, kiintokalusteiden piirustukset puusepälle, ostoslista ja budjettiseuranta. Kolme työmaakäyntiä ja kolme tarkistuskierrosta.</p><p class="muted">Suunnittelu kestää 6–10 viikkoa. Yli 150 m²:n ja suojellut kohteet hinnoitellaan erikseen.</p></div>
+        </li>
+        <li class="svc reveal">
+          <h2 class="svc__name">Lisätyö</h2>
+          <p class="svc__price">95 €/h<span>puolen tunnin tarkkuudella</span></p>
+          <div class="svc__text"><p>Lisäkäynnit, ylimääräiset tarkistuskierrokset sekä kalusteiden tilaaminen ja toimitusten seuranta.</p><p class="muted">Arvioimme tunnit etukäteen ja aloitamme vasta, kun olet hyväksynyt arvion.</p></div>
+        </li>
+      </ul>
+    </section>
+
+    <figure class="room room--wide wrap solo reveal">
+      <div class="room__media"><picture><source type="image/webp" srcset="../img/port-arthur-verho-s.webp 900w, ../img/port-arthur-verho-l.webp 2000w" sizes="(max-width: 760px) 100vw, 84vw"><img src="../img/port-arthur-verho.jpg" width="2000" height="1333" alt="Vaalea pellavaverho laskeutuu tammilattialle valkoisen seinän vieressä." loading="lazy" decoding="async"></picture></div>
+      <figcaption class="room__cap"><span class="room__title">Pellavaverho, Koti Port Arthur</span><span class="room__proj">Valokuva: Katsia Jazwinska</span></figcaption>
+    </figure>
+
+    <section class="wrap steps" aria-labelledby="vaiheet-otsikko">
+      <div class="others__head">
+        <h2 class="label" id="vaiheet-otsikko">Näin kokonaissuunnittelu etenee</h2>
+        <p class="muted">Ensimmäisestä viestistä valmiiseen kotiin kuluu yleensä 3–6 kuukautta.</p>
+      </div>
+      <ol class="steps__list reveal">
+          <li><span class="steps__no">01</span><span class="steps__name">Yhteydenotto</span><span class="steps__text">Kerro osoite, huoneet, aikataulu ja budjetin suuruusluokka. Liitä pohjapiirros, jos sellainen on.</span><span class="steps__time">Vastaus 2 arkipäivässä</span></li>
+          <li><span class="steps__no">02</span><span class="steps__name">Konsultaatio ja mittaus</span><span class="steps__text">Katsomme huoneet ja mittaamme tilat. Sovimme, mitä jätetään ennalleen.</span><span class="steps__time">2 tuntia</span></li>
+          <li><span class="steps__no">03</span><span class="steps__name">Tarjous</span><span class="steps__text">Sisältö, aikataulu ja kiinteä hinta kirjallisena.</span><span class="steps__time">3 arkipäivää</span></li>
+          <li><span class="steps__no">04</span><span class="steps__name">Luonnos</span><span class="steps__text">Pohjaratkaisu, värit ja 6–10 näytepalaa kasvokkain. Näytteet jäävät sinulle.</span><span class="steps__time">3–4 viikkoa</span></li>
+          <li><span class="steps__no">05</span><span class="steps__name">Piirustukset</span><span class="steps__text">Työpiirustukset, valaistussuunnitelma ja ostoslista. Urakoitsija saa piirustukset tarjouspyyntöä varten.</span><span class="steps__time">2–4 viikkoa</span></li>
+          <li><span class="steps__no">06</span><span class="steps__name">Toteutus</span><span class="steps__text">Remontin tekee urakoitsija. Käymme työmaalla kolme kertaa.</span><span class="steps__time">1–4 kuukautta</span></li>
+          <li><span class="steps__no">07</span><span class="steps__name">Luovutus</span><span class="steps__text">Käymme valmiin tilan läpi listan kanssa ja korjaamme pienet puutteet.</span><span class="steps__time">1 päivä</span></li>
+      </ol>
+    </section>
+
+    <section class="wrap practical" aria-labelledby="kaytanto-otsikko">
+      <div class="others__head">
+        <h2 class="label" id="kaytanto-otsikko">Käytännön asiat</h2>
+      </div>
+      <dl class="facts facts--wide reveal">
+          <div><dt>Laskutus</dt><dd>Konsultaatio laskutetaan käynnin jälkeen. Huonesuunnitelmasta puolet laskutetaan tilattaessa ja puolet luovutettaessa. Kokonaissuunnittelu laskutetaan kolmessa erässä: 30 %, 40 % ja 30 %. Maksuaika on 14 päivää.</dd></div>
+          <div><dt>Kalusteet</dt><dd>Tilaat kalusteet itse tai pyydät meitä tilaamaan ne lisätyönä. Emme ota provisioita myyjiltä.</dd></div>
+          <div><dt>Rakennustyöt</dt><dd>Emme tee rakennustöitä emmekä toimi vastaavana työnjohtajana.</dd></div>
+          <div><dt>Liiketilat</dt><dd>Kahvilat ja putiikit hinnoitellaan tilan koon mukaan. Lähetä pohjapiirros, niin vastaamme tarjouksella kolmen arkipäivän kuluessa.</dd></div>
+          <div><dt>Peruutus</dt><dd>Konsultaation voi perua maksutta 48 tuntia ennen käyntiä. Myöhemmin perutusta käynnistä laskutamme 60 €.</dd></div>
+      </dl>
+      <p class="practical__cta reveal"><a class="ulink" href="../yhteystiedot/index.html#lomake">Varaa konsultaatio</a></p>
+    </section>
+
+  </main>
+
+  <footer class="ftr">
+    <div class="wrap">
+      <p class="ftr__mark" aria-hidden="true"><img src="../img/utu-wordmark.svg" width="4254" height="746" alt=""></p>
+      <div class="ftr__cols">
+        <div>
+          <p>Studio Utu Oy<br>Utukatu 5<br>20100 Turku</p>
+          <p class="muted">Käynnit sopimuksen mukaan</p>
+        </div>
+        <div>
+          <p><a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a><br>048 562 1925</p>
+          <p class="muted">Vastaamme kahden arkipäivän kuluessa</p>
+        </div>
+        <ul class="ftr__nav">
+          <li><a href="../kohteet/index.html">Kohteet</a></li>
+          <li><a href="../palvelut/index.html">Palvelut</a></li>
           <li><a href="../studio/index.html">Studio</a></li>
           <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
         </ul>
-      </nav>
-      <a class="btn btn--small header-cta" href="../yhteystiedot/index.html#lomake">Varaa konsultaatio</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobiilivalikko" data-menu-toggle>
-        <span data-menu-label>Valikko</span>
-      </button>
-    </div>
-  </header>
-
-  <div class="mobile-menu" id="mobiilivalikko" data-menu>
-    <nav aria-label="Mobiilivalikko">
-      <ul class="mobile-menu__list">
-        <li><a href="../kohteet/index.html">Kohteet</a></li>
-        <li><a href="../palvelut/index.html" aria-current="page">Palvelut ja hinnat</a></li>
-        <li><a href="../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
-        <li><a href="../studio/index.html">Studio</a></li>
-        <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
-      </ul>
-    </nav>
-    <div class="mobile-menu__foot">
-      <p>Studio Utu Oy, Utukatu 5, 20100 Turku</p>
-      <p>studio@studio-utu.example</p>
-      <p>048 562 1925</p>
-      <p style="margin-top: 16px"><a class="btn btn--small" href="../yhteystiedot/index.html#lomake">Varaa konsultaatio</a></p>
-    </div>
-  </div>
-
-  <main id="sisalto" tabindex="-1">
-    <nav class="wrap" aria-label="Murupolku"><ol class="crumbs"><li><a href="../index.html">Etusivu</a></li><li aria-current="page">Palvelut ja hinnat</li></ol></nav>
-    <section class="page-head wrap" aria-labelledby="otsikko">
-      <div class="grid page-head__grid">
-        <div class="page-head__title">
-          <p class="label reveal">Hinnat sisältävät arvonlisäveron 25,5 %</p>
-          <h1 class="h-display reveal" id="otsikko">Palvelut ja hinnat</h1>
-        </div>
-        <p class="page-head__lead lead reveal" style="--d: 120ms">Konsultaatio on kertahinta ja huonesuunnitelma lasketaan huoneittain. Kokonaissuunnittelun hinta sovitaan kiinteäksi ennen aloitusta.</p>
-      </div>
-    </section>
-
-    <figure class="wrap band reveal" style="--d: 100ms">
-      <div class="media band__media"><img src="../img/koti-port-arthur-lukunurkka.jpg" width="1500" height="1000" alt="Valkoinen rottinkituoli, puinen jakkara ja valurautapatteri ikkunan vieressä vaalealla seinällä." decoding="async"></div>
-      <figcaption class="figcap">Valokuva: Breather.</figcaption>
-    </figure>
-
-    <section class="wrap" aria-label="Palvelut" style="padding-bottom: var(--section)">
-      <article class="service-block reveal">
-        <div class="service-block__head">
-          <p class="label">Palvelu 1</p>
-          <h2 class="h-section">Konsultaatio</h2>
-          <p class="service-block__price"><strong>290 €</strong><span>2 tuntia, matkat Turussa mukana</span></p>
-        </div>
-        <div class="service-block__body">
-          <p class="lead">Tulemme kotiisi tai liiketilaasi, käymme huoneet läpi ja kerromme, mikä kannattaa tehdä ensin. Konsultaatio sopii, kun et vielä tiedä, tarvitsetko suunnitelmaa, tai kun yksi huone ei toimi.</p>
-          <div>
-            <h3 class="label sub-label">Sisältää</h3>
-            <ul class="incl">
-              <li>Käynti paikan päällä Turun alueella, 2 tuntia</li>
-              <li>Huoneiden mittaus laserilla tarvittaessa</li>
-              <li>Kirjalliset muistiinpanot ja kuvat PDF:nä kahden arkipäivän kuluessa</li>
-              <li>Lista asioista, jotka kannattaa tehdä ensin</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="label sub-label">Ei sisällä</h3>
-            <ul class="incl incl--no">
-              <li>Piirustuksia tai ostoslistaa</li>
-              <li>Matkoja Turun ulkopuolelle: Kaarinaan, Raisioon ja Naantaliin 30 €, muualle sovitaan erikseen</li>
-            </ul>
-          </div>
-          <p class="muted">Konsultaation hinta vähennetään kokonaissuunnittelusta, jos tilaat sen 30 päivän kuluessa.</p>
-        </div>
-      </article>
-      <article class="service-block reveal">
-        <div class="service-block__head">
-          <p class="label">Palvelu 2</p>
-          <h2 class="h-section">Huonesuunnitelma</h2>
-          <p class="service-block__price"><strong>alk. 950 €</strong><span>yksi huone, tyypillinen olohuone 1 200–1 600 €</span></p>
-        </div>
-        <div class="service-block__body">
-          <p class="lead">Suunnitelma yhdelle huoneelle: olohuoneelle, makuuhuoneelle tai työhuoneelle. Huonesuunnitelma sopii, kun muu koti on kunnossa ja vain yksi huone pitää suunnitella uudelleen.</p>
-          <div>
-            <h3 class="label sub-label">Sisältää</h3>
-            <ul class="incl">
-              <li>Käynti ja mittaus</li>
-              <li>Pohjaratkaisu ja huonekalujen sijoittelu mittakaavassa 1:50</li>
-              <li>Väri- ja materiaaliehdotus oikeina näytepaloina</li>
-              <li>Valaisinsuunnitelma ja ostoslista linkkeineen</li>
-              <li>Yksi tarkistuskierros</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="label sub-label">Ei sisällä</h3>
-            <ul class="incl incl--no">
-              <li>Kalusteiden hankintaa</li>
-              <li>Rakennustöiden valvontaa</li>
-            </ul>
-          </div>
-          <p class="muted">Suunnitelma on valmis noin kolmessa viikossa tilauksesta.</p>
-        </div>
-      </article>
-      <article class="service-block reveal">
-        <div class="service-block__head">
-          <p class="label">Palvelu 3</p>
-          <h2 class="h-section">Kokonaissuunnittelu</h2>
-          <p class="service-block__price"><strong>4 900–8 500 €</strong><span>tyypillinen hinta 100–150 m² asunnolle, sovitaan kiinteäksi</span></p>
-        </div>
-        <div class="service-block__body">
-          <p class="lead">Koko asunnon tai huvilan suunnitelma remonttiin tai muuttoon. Hinta sovitaan kirjallisesti ennen aloitusta, eikä se muutu, jos suunnitelma pysyy sovitussa laajuudessa.</p>
-          <div>
-            <h3 class="label sub-label">Sisältää</h3>
-            <ul class="incl">
-              <li>Pohjaratkaisu ja seinien tai ovien muutokset työpiirroksina</li>
-              <li>Väri- ja materiaalisuunnitelma, näytepalat jokaisesta pinnasta</li>
-              <li>Valaistussuunnitelma</li>
-              <li>Kiintokalusteiden piirustukset puusepälle</li>
-              <li>Ostoslista ja budjettiseuranta</li>
-              <li>Kolme työmaakäyntiä ja kolme tarkistuskierrosta</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="label sub-label">Ei sisällä</h3>
-            <ul class="incl incl--no">
-              <li>Rakennustöitä tai työnjohtoa</li>
-              <li>Kalusteiden tilaamista</li>
-            </ul>
-          </div>
-          <p class="muted">Suunnittelu kestää 6–10 viikkoa. Yli 150 m²:n tai suojellun kohteen hinta tarjotaan erikseen.</p>
-        </div>
-      </article>
-      <article class="service-block reveal">
-        <div class="service-block__head">
-          <p class="label">Palvelu 4</p>
-          <h2 class="h-section">Lisätyö</h2>
-          <p class="service-block__price"><strong>95 €/h</strong><span>laskutetaan puolen tunnin tarkkuudella</span></p>
-        </div>
-        <div class="service-block__body">
-          <p class="lead">Lisätyö on kaikki, mitä valittuun palveluun ei kuulu: ylimääräiset käynnit ja tarkistuskierrokset, kalusteiden tilaaminen ja toimitusten seuranta.</p>
-          <div>
-            <h3 class="label sub-label">Sisältää</h3>
-            <ul class="incl">
-              <li>Lisäkäynnit ja työmaakäynnit</li>
-              <li>Ylimääräiset tarkistuskierrokset</li>
-              <li>Kalusteiden tilaaminen ja toimitusten seuranta</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="label sub-label">Ei sisällä</h3>
-            <ul class="incl incl--no">
-              <li>Mitään, mitä et ole etukäteen hyväksynyt</li>
-            </ul>
-          </div>
-          <p class="muted">Arvioimme tunnit ennen aloitusta ja aloitamme vasta, kun olet hyväksynyt arvion.</p>
-        </div>
-      </article>
-    </section>
-
-    <section class="section section--panel" aria-labelledby="vertailu-title">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-head__title">
-            <h2 class="h-section reveal" id="vertailu-title">Mitä kukin palvelu sisältää</h2>
-          </div>
-        </div>
-        <div class="compare-wrap reveal" tabindex="0" role="region" aria-label="Palveluiden vertailutaulukko">
-          <table class="compare">
-            <thead><tr><th scope="col"><span class="sr-only">Sisältö</span></th><th scope="col">Konsultaatio</th><th scope="col">Huonesuunnitelma</th><th scope="col">Kokonaissuunnittelu</th></tr></thead>
-            <tbody>
-          <tr><th scope="row">Käynti paikan päällä</th><td class="yes">2 h</td><td class="yes">1 käynti</td><td class="yes">1 käynti</td></tr>
-          <tr><th scope="row">Mittaus</th><td>Tarvittaessa</td><td class="yes">Kyllä</td><td class="yes">Kyllä</td></tr>
-          <tr><th scope="row">Pohjaratkaisu</th><td>Ei</td><td class="yes">Yksi huone</td><td class="yes">Koko asunto</td></tr>
-          <tr><th scope="row">Väri- ja materiaaliehdotus</th><td>Suulliset ehdotukset</td><td class="yes">Näytepalat</td><td class="yes">Näytepalat</td></tr>
-          <tr><th scope="row">Valaistussuunnitelma</th><td>Ei</td><td class="yes">Kyllä</td><td class="yes">Kyllä</td></tr>
-          <tr><th scope="row">Kiintokalusteiden piirustukset</th><td>Ei</td><td>Ei</td><td class="yes">Kyllä</td></tr>
-          <tr><th scope="row">Ostoslista</th><td>Ei</td><td class="yes">Kyllä</td><td class="yes">Kyllä, budjettiseurannalla</td></tr>
-          <tr><th scope="row">Työmaakäynnit</th><td>Ei</td><td>Ei</td><td class="yes">3 käyntiä</td></tr>
-          <tr><th scope="row">Tarkistuskierrokset</th><td>Ei</td><td class="yes">1</td><td class="yes">3</td></tr>
-          <tr><th scope="row">Hinta</th><td class="yes">290 €</td><td class="yes">alk. 950 €</td><td class="yes">4 900–8 500 €</td></tr>
-            </tbody>
-          </table>
+        <div>
+          <p>Y-tunnus 3184525-0<br>Verkkolasku 003731845250</p>
+          <p><a href="../tietosuoja/index.html">Tietosuoja</a> · <a href="../CREDITS.md">Kuvat ja lähteet</a></p>
         </div>
       </div>
-    </section>
-
-    <section class="section" aria-labelledby="kaytanto-title">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-head__title">
-            <h2 class="h-section reveal" id="kaytanto-title">Käytännön asiat</h2>
-          </div>
-        </div>
-        <div class="faq reveal">
-        <details>
-          <summary>Laskutus</summary>
-          <div><p>Konsultaatio laskutetaan käynnin jälkeen. Huonesuunnitelmasta puolet laskutetaan tilattaessa ja puolet luovutettaessa.</p><p>Kokonaissuunnittelu laskutetaan kolmessa erässä: 30 % tilattaessa, 40 % luonnosvaiheessa ja 30 % luovutettaessa. Maksuaika on 14 päivää.</p></div>
-        </details>
-        <details>
-          <summary>Kalusteiden hankinta</summary>
-          <div><p>Teemme ostoslistan, ja tilaat kalusteet itse tai pyydät meitä tilaamaan ne lisätyönä hintaan 95 €/h. Emme ota provisioita myyjiltä, joten suosituksemme eivät riipu siitä, kuka meille maksaa.</p></div>
-        </details>
-        <details>
-          <summary>Rakennustyöt ja työnjohto</summary>
-          <div><p>Emme tee rakennustöitä emmekä toimi vastaavana työnjohtajana. Annamme urakoitsijalle piirustukset ja käymme työmaalla sovitut kolme kertaa.</p></div>
-        </details>
-        <details>
-          <summary>Liiketilat</summary>
-          <div><p>Pienet liiketilat, kuten kahvilat ja putiikit, hinnoitellaan tilan koon mukaan. Lähetä pohjapiirros, niin vastaamme tarjouksella kolmen arkipäivän kuluessa.</p></div>
-        </details>
-        <details>
-          <summary>Peruutus</summary>
-          <div><p>Konsultaation voi perua veloituksetta 48 tuntia ennen käyntiä. Myöhemmin perutusta käynnistä laskutamme 60 € varauskuluina.</p></div>
-        </details>
-        </div>
-        <div style="margin-top: 48px" class="reveal">
-          <a class="btn" href="../yhteystiedot/index.html#lomake">Varaa konsultaatio</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="grid site-footer__top">
-        <div class="site-footer__brand">
-          <a class="brand" href="../index.html" aria-label="Studio Utu, etusivu"><img class="brand__mark" src="../img/utu-wordmark.svg" width="787" height="176" alt=""></a>
-          <p>Kahden sisustusarkkitehdin toimisto Port Arthurissa. Suunnittelemme enimmäkseen koteja, ja ensimmäinen käynti alkaa aina ennen-kuvista.</p>
-        </div>
-        <div class="site-footer__col">
-          <h2>Toimisto</h2>
-          <span>Studio Utu Oy</span>
-          <span>Utukatu 5</span>
-          <span>20100 Turku</span>
-          <span>Käynnit sopimuksen mukaan</span>
-        </div>
-        <div class="site-footer__col">
-          <h2>Yhteys</h2>
-          <a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a>
-          <span>048 562 1925</span>
-          <span>Vastaamme 2 arkipäivässä</span>
-        </div>
-        <div class="site-footer__col">
-          <h2>Sivusto</h2>
-          <a href="../kohteet/index.html">Kohteet</a>
-          <a href="../palvelut/index.html">Palvelut ja hinnat</a>
-          <a href="../nain-tyo-etenee/index.html">Näin työ etenee</a>
-          <a href="../studio/index.html">Studio</a>
-          <a href="../yhteystiedot/index.html">Yhteystiedot</a>
-          <a href="../tietosuoja/index.html">Tietosuoja</a>
-        </div>
-      </div>
-      <div class="site-footer__legal">
-        <span>© 2026 Studio Utu Oy</span>
-        <span>Y-tunnus 3184525-0</span>
-        <span>Verkkolaskuosoite 003731845250</span>
-        <a href="../tietosuoja/index.html">Tietosuojaseloste</a>
-      </div>
-      <div class="site-footer__concept">
-        <p>Kuvitteellinen yritys. Sivusto on Ville Saarelan konseptityö. <a href="../CREDITS.md">Kuvien tekijät</a></p>
+      <div class="ftr__base">
+        <p>© 2026 Studio Utu Oy</p>
+        <p>Kuvitteellinen yritys. Sivusto on Ville Saarelan konseptityö.</p>
         <p class="concept-note">Konsepti · <a href="../../../index.html">Ville Saarela</a></p>
       </div>
     </div>

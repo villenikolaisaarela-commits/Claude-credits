@@ -5,188 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
   <title>Studio | Studio Utu</title>
-  <meta name="description" content="Studio Utu Oy on kahden sisustusarkkitehdin toimisto Turun Port Arthurissa. Perustettu 2019. Aino Kuusela, Tuomas Raunio ja Elina Salo.">
-  <meta name="theme-color" content="#183a2e">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23183a2e'/%3E%3Cpath d='M6 0h10v32H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z' fill='%232f6150'/%3E%3Cpath d='M16 3v26' stroke='%23efd0c4' stroke-width='2.2'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='%23efd0c4'/%3E%3C/svg%3E">
+  <meta name="description" content="Studio Utu Oy on Aino Kuuselan ja Tuomas Raunion vuonna 2019 perustama sisustusarkkitehtitoimisto Turun Port Arthurissa.">
+  <meta name="theme-color" content="#f3f0ea">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3f0ea'/%3E%3Cpath d='M10 8.5v9.5a6 6 0 0 0 12 0V8.5' fill='none' stroke='%231f1d1a' stroke-width='2.2'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.UTU_OK)document.documentElement.classList.remove('js')},3000);</script>
-  <link rel="preload" as="font" type="font/woff2" href="../fonts/young-serif-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../fonts/instrument-sans-latin.woff2" crossorigin>
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
 
-  <header class="site-header" data-header>
-    <div class="site-header__inner">
-      <a class="brand" href="../index.html" aria-label="Studio Utu, etusivu"><img class="brand__mark" src="../img/utu-wordmark.svg" width="787" height="176" alt=""></a>
-      <nav class="nav" aria-label="Päävalikko">
-        <ul class="nav__list">
+  <header class="hdr">
+    <a class="hdr__brand" href="../index.html"><img src="../img/utu-wordmark.svg" width="4254" height="746" alt="Studio Utu, etusivu"></a>
+    <nav class="hdr__nav" id="valikko" aria-label="Päävalikko">
+      <ul>
           <li><a href="../kohteet/index.html">Kohteet</a></li>
-          <li><a href="../palvelut/index.html">Palvelut ja hinnat</a></li>
-          <li><a href="../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
+          <li><a href="../palvelut/index.html">Palvelut</a></li>
           <li><a href="../studio/index.html" aria-current="page">Studio</a></li>
           <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
-        </ul>
-      </nav>
-      <a class="btn btn--small header-cta" href="../yhteystiedot/index.html#lomake">Varaa konsultaatio</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobiilivalikko" data-menu-toggle>
-        <span data-menu-label>Valikko</span>
-      </button>
-    </div>
-  </header>
-
-  <div class="mobile-menu" id="mobiilivalikko" data-menu>
-    <nav aria-label="Mobiilivalikko">
-      <ul class="mobile-menu__list">
-        <li><a href="../kohteet/index.html">Kohteet</a></li>
-        <li><a href="../palvelut/index.html">Palvelut ja hinnat</a></li>
-        <li><a href="../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
-        <li><a href="../studio/index.html" aria-current="page">Studio</a></li>
-        <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
       </ul>
     </nav>
-    <div class="mobile-menu__foot">
-      <p>Studio Utu Oy, Utukatu 5, 20100 Turku</p>
-      <p>studio@studio-utu.example</p>
-      <p>048 562 1925</p>
-      <p style="margin-top: 16px"><a class="btn btn--small" href="../yhteystiedot/index.html#lomake">Varaa konsultaatio</a></p>
-    </div>
-  </div>
+    <button class="hdr__toggle" type="button" aria-expanded="false" aria-controls="valikko" data-menu-toggle><span data-menu-label>Valikko</span></button>
+  </header>
 
   <main id="sisalto" tabindex="-1">
-    <nav class="wrap" aria-label="Murupolku"><ol class="crumbs"><li><a href="../index.html">Etusivu</a></li><li aria-current="page">Studio</li></ol></nav>
-    <section class="page-head wrap" aria-labelledby="otsikko">
-      <div class="grid page-head__grid">
-        <div class="page-head__title">
-          <p class="label reveal">Studio Utu Oy, perustettu 2019</p>
-          <h1 class="h-display reveal" id="otsikko">Kaksi sisustusarkkitehtia ja yksi hankinta-assistentti</h1>
-        </div>
-        <p class="page-head__lead lead reveal" style="--d: 120ms">Toimisto on Turun Port Arthurissa. Teemme noin 15 suunnitelmaa vuodessa, enimmäkseen koteihin.</p>
+
+    <section class="phead wrap">
+      <h1 class="phead__title reveal">Studio</h1>
+      <p class="phead__lead reveal">Studio Utu Oy on perustettu 2019. Meitä on kaksi sisustusarkkitehtia ja yksi hankinta-assistentti, ja teemme noin 15 suunnitelmaa vuodessa, enimmäkseen koteihin.</p>
+    </section>
+
+    <section class="story wrap">
+      <figure class="story__media reveal"><picture><source type="image/webp" srcset="../img/studio-naytteet-s.webp 900w, ../img/studio-naytteet-l.webp 1600w" sizes="(max-width: 760px) 100vw, 40vw"><img src="../img/studio-naytteet.jpg" width="1600" height="2000" alt="Kangasnäytteiden kirja auki pöydällä, vaaleita ja harmaansinisiä pellava- ja villakankaita." loading="lazy" decoding="async"></picture>
+        <figcaption class="muted">Näytekirja studion pöydällä. Valokuva: Yasamine June.</figcaption>
+      </figure>
+      <div class="story__text reveal">
+        <p>Aino Kuusela ja Tuomas Raunio tapasivat opiskeluaikana. Sen jälkeen Aino työskenteli Tampereella ja Tuomas Helsingissä, kunnes he palasivat Turkuun ja perustivat Studio Utun vuonna 2019.</p>
+        <p>Ensimmäinen toimisto oli entinen parturi Port Arthurissa. Ensimmäisen vuoden aikana ovelle tuli silloin tällöin ihmisiä kysymään leikkausaikaa. Ohjasimme heidät kulman kahvilaan, ja yksi heistä tilasi myöhemmin olohuoneensa suunnitelman.</p>
+        <p>Kumpikin vastaa omista kohteistaan ensimmäisestä käynnistä luovutukseen. Piirrämme huoneet mittakaavassa 1:50 ja kiintokalusteet mittakaavassa 1:10, jotta puuseppä voi tehdä ne suoraan piirustuksesta. Emme ota provisioita kalustemyyjiltä.</p>
       </div>
     </section>
 
-    <section class="wrap" aria-label="Tarina" style="padding-bottom: var(--section)">
-      <div class="split">
-        <figure class="split__media reveal">
-          <div class="media" style="aspect-ratio: 3 / 2"><img src="../img/studio-tyopoyta.jpg" width="1500" height="996" alt="Työpöytä ikkunan vieressä, jolla on kannettava tietokone, valkoinen työpöytälamppu ja pieni kasvi." loading="lazy" decoding="async"></div>
-          <figcaption class="figcap">Työpiste ikkunan vieressä. Valokuva: Tatiana Lapina.</figcaption>
-        </figure>
-        <div class="split__text prose">
-          <h2 class="h-section reveal">Tarina</h2>
-          <p class="reveal">Aino Kuusela ja Tuomas Raunio tapasivat opiskeluaikana ja työskentelivät sen jälkeen eri toimistoissa: Aino Tampereella ja Tuomas Helsingissä. Vuonna 2019 he palasivat Turkuun ja perustivat Studio Utun.</p>
-          <p class="reveal">Ensimmäinen toimisto oli entinen parturi Port Arthurissa. Ensimmäisen vuoden aikana ovelle tuli silloin tällöin asiakkaita, jotka halusivat leikkausajan. Heidät ohjattiin kulman kahvilaan. Yksi heistä tilasi myöhemmin olohuoneensa suunnitelman.</p>
-          <p class="reveal">Vuosina 2019–2026 olemme tehneet yli 90 suunnitelmaa. Suurin osa on koteja, ja loput pieniä liiketiloja ja kesähuviloita.</p>
-        </div>
+    <section class="wrap" aria-labelledby="ihmiset-otsikko">
+      <div class="others__head">
+        <h2 class="label" id="ihmiset-otsikko">Ihmiset</h2>
+        <p class="muted">Kirjoita suoraan sille, joka vastaa kohteestasi. Muut viestit menevät osoitteeseen studio@studio-utu.example.</p>
       </div>
-    </section>
-
-    <section class="section section--panel" aria-labelledby="ihmiset-title">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-head__title">
-            <h2 class="h-section reveal" id="ihmiset-title">Ihmiset</h2>
-          </div>
-          <div class="section-head__aside reveal">
-            <p>Kirjoita suoraan sille, joka vastaa kohteestasi. Muuten viesti menee studion yhteiseen osoitteeseen.</p>
-          </div>
-        </div>
-        <ul class="people">
+      <ul class="people">
         <li class="person reveal">
-          <span class="monogram" aria-hidden="true">AK</span>
-          <h3 class="h-sub">Aino Kuusela</h3>
-          <p class="person__role">Sisustusarkkitehti SIO, perustaja</p>
-          <p>Vastaa kodeista. Työskenteli ennen Utua tamperelaisessa toimistossa kuusi vuotta.</p>
+          <h3 class="person__name">Aino Kuusela</h3>
+          <p class="person__role muted">Sisustusarkkitehti SIO, perustaja</p>
+          <p>Vastaa kodeista. Työskenteli ennen Utua kuusi vuotta tamperelaisessa toimistossa.</p>
           <p><a href="mailto:aino@studio-utu.example">aino@studio-utu.example</a></p>
         </li>
         <li class="person reveal">
-          <span class="monogram" aria-hidden="true">TR</span>
-          <h3 class="h-sub">Tuomas Raunio</h3>
-          <p class="person__role">Sisustusarkkitehti SIO, perustaja</p>
+          <h3 class="person__name">Tuomas Raunio</h3>
+          <p class="person__role muted">Sisustusarkkitehti SIO, perustaja</p>
           <p>Vastaa kesähuviloista, liiketiloista ja kiintokalusteiden piirustuksista. Piirtää ensimmäisen luonnoksen aina käsin.</p>
           <p><a href="mailto:tuomas@studio-utu.example">tuomas@studio-utu.example</a></p>
         </li>
         <li class="person reveal">
-          <span class="monogram" aria-hidden="true">ES</span>
-          <h3 class="h-sub">Elina Salo</h3>
-          <p class="person__role">Hankinta-assistentti, osa-aikainen</p>
+          <h3 class="person__name">Elina Salo</h3>
+          <p class="person__role muted">Hankinta-assistentti, osa-aikainen</p>
           <p>Hoitaa tilaukset, toimitukset ja materiaalinäytteet kolmena päivänä viikossa. Aloitti elokuussa 2026.</p>
           <p><a href="mailto:elina@studio-utu.example">elina@studio-utu.example</a></p>
         </li>
+      </ul>
+    </section>
+
+    <section class="wrap office" aria-labelledby="toimisto-otsikko">
+      <figure class="office__media reveal"><picture><source type="image/webp" srcset="../img/port-arthur-kortteli-s.webp 900w, ../img/port-arthur-kortteli-l.webp 1100w" sizes="(max-width: 760px) 100vw, 50vw"><img src="../img/port-arthur-kortteli.jpg" width="1100" height="734" alt="Keltainen tiilinen kerrostalo ja syksyiset puut Turun Port Arthurissa." loading="lazy" decoding="async"></picture>
+        <figcaption class="muted">Port Arthur, Turku. Kuva on alueelta, ei toimiston osoitteesta. Valokuva: Kotivalo.</figcaption>
+      </figure>
+      <div class="office__text reveal">
+        <h2 class="label" id="toimisto-otsikko">Toimisto</h2>
+        <p>Studio Utu Oy, Utukatu 5, 20100 Turku. Toimistolla ei ole vastaanottoa, joten käynnit sovitaan etukäteen. Suurin osa tapaamisista on asiakkaan luona.</p>
+        <h2 class="label">Ajankohtaista</h2>
+        <ul class="news">
+          <li><time datetime="2026-10-01">1.10.2026</time><p>Otamme alkuvuodeksi 2027 vielä kaksi kokonaissuunnittelua. Kerro kohteesta lomakkeella.</p></li>
+          <li><time datetime="2026-08-01">1.8.2026</time><p>Elina Salo aloitti hankinta-assistenttina. Hän hoitaa tilaukset ja materiaalinäytteet.</p></li>
+          <li><time datetime="2025-03-18">18.3.2025</time><p>Koti Port Arthur valmistui. Suunnittelu kesti kymmenen viikkoa ja remontti kolme kuukautta.</p></li>
         </ul>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="tapa-title">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-head__title">
-            <h2 class="h-section reveal" id="tapa-title">Tapa tehdä työtä</h2>
-          </div>
-        </div>
-        <ul class="people people--2">
-          <li class="person reveal"><h3 class="h-sub">Omat kohteet alusta loppuun</h3><p class="muted">Aino tai Tuomas vastaa kohteesta ensimmäisestä käynnistä luovutukseen. Sama ihminen tapaa sinut kaikissa vaiheissa.</p></li>
-          <li class="person reveal"><h3 class="h-sub">Piirrämme mittakaavassa</h3><p class="muted">Huonesuunnitelmat piirretään mittakaavassa 1:50 ja kiintokalusteet mittakaavassa 1:10, jotta puuseppä voi tehdä ne suoraan piirustuksesta.</p></li>
-          <li class="person reveal"><h3 class="h-sub">Ei provisioita</h3><p class="muted">Emme ota provisioita kalustemyyjiltä. Suosituksemme perustuvat siihen, mikä sopii kotiisi ja budjettiisi.</p></li>
-          <li class="person reveal"><h3 class="h-sub">Noin 15 suunnitelmaa vuodessa</h3><p class="muted">Otamme vuodessa vain niin monta kohdetta, että ehdimme käydä jokaisella työmaalla.</p></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section section--panel" aria-label="Sijainti">
-      <div class="wrap">
-        <div class="split split--rev">
-          <figure class="split__media reveal">
-            <div class="media" style="aspect-ratio: 3 / 2"><img src="../img/port-arthur-katu.jpg" width="1100" height="734" alt="Keltainen tiilinen kerrostalo ja syysvärein lehdettömät puut Turussa." loading="lazy" decoding="async"></div>
-            <figcaption class="figcap">Port Arthur, Turku. Kuva on alueelta, ei toimiston osoitteesta. Valokuva: Kotivalo.</figcaption>
-          </figure>
-          <div class="split__text">
-            <h2 class="h-section reveal">Toimisto Port Arthurissa</h2>
-            <p class="reveal">Studio Utu Oy, Utukatu 5, 20100 Turku. Toimistolla ei ole vastaanottoa, joten käynnit sovitaan etukäteen. Suurin osa tapaamisista on asiakkaan luona.</p>
-            <a class="link-arrow reveal" href="../yhteystiedot/index.html">Yhteystiedot</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="ftr">
     <div class="wrap">
-      <div class="grid site-footer__top">
-        <div class="site-footer__brand">
-          <a class="brand" href="../index.html" aria-label="Studio Utu, etusivu"><img class="brand__mark" src="../img/utu-wordmark.svg" width="787" height="176" alt=""></a>
-          <p>Kahden sisustusarkkitehdin toimisto Port Arthurissa. Suunnittelemme enimmäkseen koteja, ja ensimmäinen käynti alkaa aina ennen-kuvista.</p>
+      <p class="ftr__mark" aria-hidden="true"><img src="../img/utu-wordmark.svg" width="4254" height="746" alt=""></p>
+      <div class="ftr__cols">
+        <div>
+          <p>Studio Utu Oy<br>Utukatu 5<br>20100 Turku</p>
+          <p class="muted">Käynnit sopimuksen mukaan</p>
         </div>
-        <div class="site-footer__col">
-          <h2>Toimisto</h2>
-          <span>Studio Utu Oy</span>
-          <span>Utukatu 5</span>
-          <span>20100 Turku</span>
-          <span>Käynnit sopimuksen mukaan</span>
+        <div>
+          <p><a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a><br>048 562 1925</p>
+          <p class="muted">Vastaamme kahden arkipäivän kuluessa</p>
         </div>
-        <div class="site-footer__col">
-          <h2>Yhteys</h2>
-          <a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a>
-          <span>048 562 1925</span>
-          <span>Vastaamme 2 arkipäivässä</span>
-        </div>
-        <div class="site-footer__col">
-          <h2>Sivusto</h2>
-          <a href="../kohteet/index.html">Kohteet</a>
-          <a href="../palvelut/index.html">Palvelut ja hinnat</a>
-          <a href="../nain-tyo-etenee/index.html">Näin työ etenee</a>
-          <a href="../studio/index.html">Studio</a>
-          <a href="../yhteystiedot/index.html">Yhteystiedot</a>
-          <a href="../tietosuoja/index.html">Tietosuoja</a>
+        <ul class="ftr__nav">
+          <li><a href="../kohteet/index.html">Kohteet</a></li>
+          <li><a href="../palvelut/index.html">Palvelut</a></li>
+          <li><a href="../studio/index.html">Studio</a></li>
+          <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
+        </ul>
+        <div>
+          <p>Y-tunnus 3184525-0<br>Verkkolasku 003731845250</p>
+          <p><a href="../tietosuoja/index.html">Tietosuoja</a> · <a href="../CREDITS.md">Kuvat ja lähteet</a></p>
         </div>
       </div>
-      <div class="site-footer__legal">
-        <span>© 2026 Studio Utu Oy</span>
-        <span>Y-tunnus 3184525-0</span>
-        <span>Verkkolaskuosoite 003731845250</span>
-        <a href="../tietosuoja/index.html">Tietosuojaseloste</a>
-      </div>
-      <div class="site-footer__concept">
-        <p>Kuvitteellinen yritys. Sivusto on Ville Saarelan konseptityö. <a href="../CREDITS.md">Kuvien tekijät</a></p>
+      <div class="ftr__base">
+        <p>© 2026 Studio Utu Oy</p>
+        <p>Kuvitteellinen yritys. Sivusto on Ville Saarelan konseptityö.</p>
         <p class="concept-note">Konsepti · <a href="../../../index.html">Ville Saarela</a></p>
       </div>
     </div>

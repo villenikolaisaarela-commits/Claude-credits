@@ -5,134 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
   <title>Tietosuoja | Studio Utu</title>
-  <meta name="description" content="Studio Utun tietosuojaseloste: sivusto ei käytä evästeitä eikä kävijäseurantaa. Näin käsittelemme sähköpostitse saamiamme tietoja.">
-  <meta name="theme-color" content="#183a2e">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23183a2e'/%3E%3Cpath d='M6 0h10v32H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z' fill='%232f6150'/%3E%3Cpath d='M16 3v26' stroke='%23efd0c4' stroke-width='2.2'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='%23efd0c4'/%3E%3C/svg%3E">
+  <meta name="description" content="Studio Utun tietosuojaseloste. Sivusto ei käytä evästeitä eikä kävijäseurantaa.">
+  <meta name="theme-color" content="#f3f0ea">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3f0ea'/%3E%3Cpath d='M10 8.5v9.5a6 6 0 0 0 12 0V8.5' fill='none' stroke='%231f1d1a' stroke-width='2.2'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.UTU_OK)document.documentElement.classList.remove('js')},3000);</script>
-  <link rel="preload" as="font" type="font/woff2" href="../fonts/young-serif-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../fonts/instrument-sans-latin.woff2" crossorigin>
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
 
-  <header class="site-header" data-header>
-    <div class="site-header__inner">
-      <a class="brand" href="../index.html" aria-label="Studio Utu, etusivu"><img class="brand__mark" src="../img/utu-wordmark.svg" width="787" height="176" alt=""></a>
-      <nav class="nav" aria-label="Päävalikko">
-        <ul class="nav__list">
+  <header class="hdr">
+    <a class="hdr__brand" href="../index.html"><img src="../img/utu-wordmark.svg" width="4254" height="746" alt="Studio Utu, etusivu"></a>
+    <nav class="hdr__nav" id="valikko" aria-label="Päävalikko">
+      <ul>
           <li><a href="../kohteet/index.html">Kohteet</a></li>
-          <li><a href="../palvelut/index.html">Palvelut ja hinnat</a></li>
-          <li><a href="../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
+          <li><a href="../palvelut/index.html">Palvelut</a></li>
+          <li><a href="../studio/index.html">Studio</a></li>
+          <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
+      </ul>
+    </nav>
+    <button class="hdr__toggle" type="button" aria-expanded="false" aria-controls="valikko" data-menu-toggle><span data-menu-label>Valikko</span></button>
+  </header>
+
+  <main id="sisalto" tabindex="-1">
+
+    <section class="phead wrap">
+      <h1 class="phead__title reveal">Tietosuoja</h1>
+      <p class="phead__lead reveal">Sivusto ei käytä evästeitä eikä kävijäseurantaa. Alla kerromme, miten käsittelemme sähköpostitse saamiamme tietoja.</p>
+    </section>
+    <section class="wrap practical">
+      <dl class="facts facts--wide reveal">
+          <div><dt>Rekisterinpitäjä</dt><dd>Studio Utu Oy, Utukatu 5, 20100 Turku. Y-tunnus 3184525-0. Tietosuoja-asioissa voit kirjoittaa osoitteeseen studio@studio-utu.example.</dd></div>
+          <div><dt>Evästeet ja analytiikka</dt><dd>Sivusto ei aseta evästeitä eikä käytä analytiikkaa, mainosseurantaa tai kolmansien osapuolten upotuksia. Kirjasimet ladataan studion omalta palvelimelta.</dd></div>
+          <div><dt>Yhteydenotot</dt><dd>Kun lähetät meille sähköpostia, käytämme nimeäsi, yhteystietojasi ja kohteen tietoja vain viestiisi vastaamiseen ja tarjouksen tekemiseen. Poistamme viestit kolmen vuoden kuluttua viimeisestä yhteydestä, jos tilausta ei synny. Sivun lomake ei lähetä tietoja minnekään, koska sivusto on konseptityö.</dd></div>
+          <div><dt>Asiakastiedot</dt><dd>Tilauksen jälkeen säilytämme laskutukseen tarvittavat tiedot kuusi vuotta, koska kirjanpitolaki vaatii sitä. Piirustuksia ja suunnitelmia säilytämme sähköisesti viisi vuotta luovutuksesta.</dd></div>
+          <div><dt>Oikeutesi</dt><dd>Voit pyytää nähtäväksesi, korjattavaksi tai poistettavaksi sinusta tallennetut tiedot. Voit myös tehdä valituksen tietosuojavaltuutetun toimistolle.</dd></div>
+          <div><dt>Konseptityö</dt><dd>Studio Utu Oy on kuvitteellinen yritys, ja tämä sivusto on Ville Saarelan konseptityö. Yritystiedot, henkilöt ja kohteet on keksitty, eikä sivustolla ole todellisia yhteystietoja.</dd></div>
+      </dl>
+      <p class="muted practical__cta">Päivitetty 1.10.2026.</p>
+    </section>
+
+  </main>
+
+  <footer class="ftr">
+    <div class="wrap">
+      <p class="ftr__mark" aria-hidden="true"><img src="../img/utu-wordmark.svg" width="4254" height="746" alt=""></p>
+      <div class="ftr__cols">
+        <div>
+          <p>Studio Utu Oy<br>Utukatu 5<br>20100 Turku</p>
+          <p class="muted">Käynnit sopimuksen mukaan</p>
+        </div>
+        <div>
+          <p><a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a><br>048 562 1925</p>
+          <p class="muted">Vastaamme kahden arkipäivän kuluessa</p>
+        </div>
+        <ul class="ftr__nav">
+          <li><a href="../kohteet/index.html">Kohteet</a></li>
+          <li><a href="../palvelut/index.html">Palvelut</a></li>
           <li><a href="../studio/index.html">Studio</a></li>
           <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
         </ul>
-      </nav>
-      <a class="btn btn--small header-cta" href="../yhteystiedot/index.html#lomake">Varaa konsultaatio</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobiilivalikko" data-menu-toggle>
-        <span data-menu-label>Valikko</span>
-      </button>
-    </div>
-  </header>
-
-  <div class="mobile-menu" id="mobiilivalikko" data-menu>
-    <nav aria-label="Mobiilivalikko">
-      <ul class="mobile-menu__list">
-        <li><a href="../kohteet/index.html">Kohteet</a></li>
-        <li><a href="../palvelut/index.html">Palvelut ja hinnat</a></li>
-        <li><a href="../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
-        <li><a href="../studio/index.html">Studio</a></li>
-        <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
-      </ul>
-    </nav>
-    <div class="mobile-menu__foot">
-      <p>Studio Utu Oy, Utukatu 5, 20100 Turku</p>
-      <p>studio@studio-utu.example</p>
-      <p>048 562 1925</p>
-      <p style="margin-top: 16px"><a class="btn btn--small" href="../yhteystiedot/index.html#lomake">Varaa konsultaatio</a></p>
-    </div>
-  </div>
-
-  <main id="sisalto" tabindex="-1">
-    <nav class="wrap" aria-label="Murupolku"><ol class="crumbs"><li><a href="../index.html">Etusivu</a></li><li aria-current="page">Tietosuoja</li></ol></nav>
-    <section class="page-head wrap" aria-labelledby="otsikko">
-      <div class="grid page-head__grid">
-        <div class="page-head__title">
-          <h1 class="h-display reveal" id="otsikko">Tietosuoja</h1>
-        </div>
-        <p class="page-head__lead lead reveal" style="--d: 120ms">Sivusto ei käytä evästeitä eikä kävijäseurantaa. Alla kerromme, miten käsittelemme sähköpostitse saamiamme tietoja.</p>
-      </div>
-    </section>
-    <div class="wrap">
-      <div class="prose-page prose">
-        <section>
-          <h2 class="h-sub">Rekisterinpitäjä</h2>
-          <p>Studio Utu Oy, Utukatu 5, 20100 Turku. Y-tunnus 3184525-0. Tietosuoja-asioissa voit kirjoittaa osoitteeseen studio@studio-utu.example.</p>
-        </section>
-        <section>
-          <h2 class="h-sub">Evästeet ja analytiikka</h2>
-          <p>Sivusto ei aseta evästeitä eikä käytä analytiikkaa, mainosseurantaa tai kolmansien osapuolten upotuksia. Kirjasimet ladataan studion omalta palvelimelta.</p>
-        </section>
-        <section>
-          <h2 class="h-sub">Yhteydenotot</h2>
-          <p>Kun lähetät meille sähköpostia, käytämme nimeäsi, yhteystietojasi ja kohteen tietoja vain viestiisi vastaamiseen ja tarjouksen tekemiseen. Poistamme viestit kolmen vuoden kuluttua viimeisestä yhteydestä, jos tilausta ei synny.</p>
-          <p>Sivun lomake ei lähetä tietoja minnekään, koska sivusto on konseptityö.</p>
-        </section>
-        <section>
-          <h2 class="h-sub">Asiakastiedot</h2>
-          <p>Tilauksen jälkeen säilytämme laskutukseen tarvittavat tiedot kuusi vuotta, koska kirjanpitolaki vaatii sitä. Piirustuksia ja suunnitelmia säilytämme sähköisesti viisi vuotta luovutuksesta.</p>
-        </section>
-        <section>
-          <h2 class="h-sub">Oikeutesi</h2>
-          <p>Voit pyytää nähtäväksesi, korjattavaksi tai poistettavaksi sinusta tallennetut tiedot. Voit myös tehdä valituksen tietosuojavaltuutetun toimistolle.</p>
-        </section>
-        <section>
-          <h2 class="h-sub">Konseptityö</h2>
-          <p>Studio Utu Oy on kuvitteellinen yritys, ja tämä sivusto on Ville Saarelan konseptityö. Yritystiedot, henkilöt ja kohteet on keksitty, eikä sivustolla ole todellisia yhteystietoja.</p>
-        </section>
-        <p class="muted" style="margin-top: 40px">Päivitetty 1.10.2026.</p>
-      </div>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="grid site-footer__top">
-        <div class="site-footer__brand">
-          <a class="brand" href="../index.html" aria-label="Studio Utu, etusivu"><img class="brand__mark" src="../img/utu-wordmark.svg" width="787" height="176" alt=""></a>
-          <p>Kahden sisustusarkkitehdin toimisto Port Arthurissa. Suunnittelemme enimmäkseen koteja, ja ensimmäinen käynti alkaa aina ennen-kuvista.</p>
-        </div>
-        <div class="site-footer__col">
-          <h2>Toimisto</h2>
-          <span>Studio Utu Oy</span>
-          <span>Utukatu 5</span>
-          <span>20100 Turku</span>
-          <span>Käynnit sopimuksen mukaan</span>
-        </div>
-        <div class="site-footer__col">
-          <h2>Yhteys</h2>
-          <a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a>
-          <span>048 562 1925</span>
-          <span>Vastaamme 2 arkipäivässä</span>
-        </div>
-        <div class="site-footer__col">
-          <h2>Sivusto</h2>
-          <a href="../kohteet/index.html">Kohteet</a>
-          <a href="../palvelut/index.html">Palvelut ja hinnat</a>
-          <a href="../nain-tyo-etenee/index.html">Näin työ etenee</a>
-          <a href="../studio/index.html">Studio</a>
-          <a href="../yhteystiedot/index.html">Yhteystiedot</a>
-          <a href="../tietosuoja/index.html">Tietosuoja</a>
+        <div>
+          <p>Y-tunnus 3184525-0<br>Verkkolasku 003731845250</p>
+          <p><a href="../tietosuoja/index.html">Tietosuoja</a> · <a href="../CREDITS.md">Kuvat ja lähteet</a></p>
         </div>
       </div>
-      <div class="site-footer__legal">
-        <span>© 2026 Studio Utu Oy</span>
-        <span>Y-tunnus 3184525-0</span>
-        <span>Verkkolaskuosoite 003731845250</span>
-        <a href="../tietosuoja/index.html">Tietosuojaseloste</a>
-      </div>
-      <div class="site-footer__concept">
-        <p>Kuvitteellinen yritys. Sivusto on Ville Saarelan konseptityö. <a href="../CREDITS.md">Kuvien tekijät</a></p>
+      <div class="ftr__base">
+        <p>© 2026 Studio Utu Oy</p>
+        <p>Kuvitteellinen yritys. Sivusto on Ville Saarelan konseptityö.</p>
         <p class="concept-note">Konsepti · <a href="../../../index.html">Ville Saarela</a></p>
       </div>
     </div>

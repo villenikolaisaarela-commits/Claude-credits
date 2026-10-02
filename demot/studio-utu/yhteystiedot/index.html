@@ -5,167 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
   <title>Yhteystiedot | Studio Utu</title>
-  <meta name="description" content="Ota yhteyttä Studio Utuun: Utukatu 5, 20100 Turku, studio@studio-utu.example. Vastaamme kahden arkipäivän kuluessa.">
-  <meta name="theme-color" content="#183a2e">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23183a2e'/%3E%3Cpath d='M6 0h10v32H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z' fill='%232f6150'/%3E%3Cpath d='M16 3v26' stroke='%23efd0c4' stroke-width='2.2'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='%23efd0c4'/%3E%3C/svg%3E">
+  <meta name="description" content="Studio Utu Oy, Utukatu 5, 20100 Turku. Sähköposti studio@studio-utu.example, puhelin 048 562 1925. Vastaamme kahden arkipäivän kuluessa.">
+  <meta name="theme-color" content="#f3f0ea">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3f0ea'/%3E%3Cpath d='M10 8.5v9.5a6 6 0 0 0 12 0V8.5' fill='none' stroke='%231f1d1a' stroke-width='2.2'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.UTU_OK)document.documentElement.classList.remove('js')},3000);</script>
-  <link rel="preload" as="font" type="font/woff2" href="../fonts/young-serif-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../fonts/instrument-sans-latin.woff2" crossorigin>
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
 
-  <header class="site-header" data-header>
-    <div class="site-header__inner">
-      <a class="brand" href="../index.html" aria-label="Studio Utu, etusivu"><img class="brand__mark" src="../img/utu-wordmark.svg" width="787" height="176" alt=""></a>
-      <nav class="nav" aria-label="Päävalikko">
-        <ul class="nav__list">
+  <header class="hdr">
+    <a class="hdr__brand" href="../index.html"><img src="../img/utu-wordmark.svg" width="4254" height="746" alt="Studio Utu, etusivu"></a>
+    <nav class="hdr__nav" id="valikko" aria-label="Päävalikko">
+      <ul>
           <li><a href="../kohteet/index.html">Kohteet</a></li>
-          <li><a href="../palvelut/index.html">Palvelut ja hinnat</a></li>
-          <li><a href="../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
+          <li><a href="../palvelut/index.html">Palvelut</a></li>
           <li><a href="../studio/index.html">Studio</a></li>
           <li><a href="../yhteystiedot/index.html" aria-current="page">Yhteystiedot</a></li>
-        </ul>
-      </nav>
-      <a class="btn btn--small header-cta" href="../yhteystiedot/index.html#lomake">Varaa konsultaatio</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobiilivalikko" data-menu-toggle>
-        <span data-menu-label>Valikko</span>
-      </button>
-    </div>
-  </header>
-
-  <div class="mobile-menu" id="mobiilivalikko" data-menu>
-    <nav aria-label="Mobiilivalikko">
-      <ul class="mobile-menu__list">
-        <li><a href="../kohteet/index.html">Kohteet</a></li>
-        <li><a href="../palvelut/index.html">Palvelut ja hinnat</a></li>
-        <li><a href="../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
-        <li><a href="../studio/index.html">Studio</a></li>
-        <li><a href="../yhteystiedot/index.html" aria-current="page">Yhteystiedot</a></li>
       </ul>
     </nav>
-    <div class="mobile-menu__foot">
-      <p>Studio Utu Oy, Utukatu 5, 20100 Turku</p>
-      <p>studio@studio-utu.example</p>
-      <p>048 562 1925</p>
-      <p style="margin-top: 16px"><a class="btn btn--small" href="../yhteystiedot/index.html#lomake">Varaa konsultaatio</a></p>
-    </div>
-  </div>
+    <button class="hdr__toggle" type="button" aria-expanded="false" aria-controls="valikko" data-menu-toggle><span data-menu-label>Valikko</span></button>
+  </header>
 
   <main id="sisalto" tabindex="-1">
-    <nav class="wrap" aria-label="Murupolku"><ol class="crumbs"><li><a href="../index.html">Etusivu</a></li><li aria-current="page">Yhteystiedot</li></ol></nav>
-    <section class="page-head wrap" aria-labelledby="otsikko">
-      <div class="grid page-head__grid">
-        <div class="page-head__title">
-          <p class="label reveal">Port Arthur, Turku</p>
-          <h1 class="h-display reveal" id="otsikko">Yhteystiedot</h1>
-        </div>
-        <p class="page-head__lead lead reveal" style="--d: 120ms">Kerro osoite, huoneet ja toivottu aikataulu. Jos sinulla on kuva huoneesta sellaisena kuin se nyt on, lähetä se sähköpostilla. Vastaamme kahden arkipäivän kuluessa.</p>
-      </div>
+
+    <section class="phead wrap">
+      <h1 class="phead__title reveal">Yhteystiedot</h1>
+      <p class="phead__lead reveal">Kerro osoite, huoneet ja toivottu aikataulu. Jos sinulla on kuva huoneesta sellaisena kuin se nyt on, lähetä se sähköpostilla. Vastaamme kahden arkipäivän kuluessa.</p>
     </section>
 
-    <div class="wrap">
-      <div class="grid contact-grid">
-        <div class="contact-info">
-          <dl class="contact-list reveal">
-            <div><dt>Toimisto</dt><dd>Studio Utu Oy<br>Utukatu 5<br>20100 Turku</dd></div>
-            <div><dt>Käynnit</dt><dd>Sovitusti. Toimistolla ei ole vastaanottoa.</dd></div>
-            <div><dt>Sähköposti</dt><dd><a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a></dd></div>
-            <div><dt>Puhelin</dt><dd>048 562 1925</dd></div>
-            <div><dt>Vastausaika</dt><dd>2 arkipäivää</dd></div>
-            <div><dt>Toimialue</dt><dd>Turku ja Varsinais-Suomi</dd></div>
-            <div><dt>Y-tunnus</dt><dd>3184525-0</dd></div>
-            <div><dt>Verkkolasku</dt><dd>003731845250</dd></div>
-          </dl>
-        </div>
+    <section class="contact wrap">
+      <dl class="facts contact__facts reveal">
+          <div><dt>Toimisto</dt><dd>Studio Utu Oy<br>Utukatu 5, 20100 Turku</dd></div>
+          <div><dt>Käynnit</dt><dd>Sovitusti. Toimistolla ei ole vastaanottoa.</dd></div>
+          <div><dt>Sähköposti</dt><dd><a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a></dd></div>
+          <div><dt>Puhelin</dt><dd>048 562 1925</dd></div>
+          <div><dt>Vastausaika</dt><dd>2 arkipäivää</dd></div>
+          <div><dt>Toimialue</dt><dd>Turku ja Varsinais-Suomi</dd></div>
+          <div><dt>Y-tunnus</dt><dd>3184525-0</dd></div>
+          <div><dt>Verkkolasku</dt><dd>003731845250</dd></div>
+      </dl>
 
-        <form class="form reveal" id="lomake" action="#lomake" method="post" novalidate data-form aria-describedby="lomake-huomio">
-          <div class="form__head">
-            <h2 class="h-sub">Kerro kohteesta</h2>
-            <span class="badge">Konsepti</span>
-          </div>
-          <div class="form__row">
-            <div class="field"><label for="f-nimi">Nimi</label><input id="f-nimi" name="nimi" type="text" autocomplete="name"></div>
-            <div class="field"><label for="f-posti">Sähköposti</label><input id="f-posti" name="posti" type="email" autocomplete="email"></div>
-          </div>
-          <div class="form__row">
-            <div class="field"><label for="f-puh">Puhelin (valinnainen)</label><input id="f-puh" name="puh" type="tel" autocomplete="tel"></div>
-            <div class="field"><label for="f-paikka">Kaupunki tai kunta</label><input id="f-paikka" name="paikka" type="text" autocomplete="address-level2"></div>
-          </div>
-          <fieldset class="field">
-            <legend>Kohde</legend>
-            <div class="choices">
-              <label class="choice"><input type="radio" name="kohde" value="koti" checked><span>Koti</span></label>
-              <label class="choice"><input type="radio" name="kohde" value="vapaa-aika"><span>Vapaa-ajan asunto</span></label>
-              <label class="choice"><input type="radio" name="kohde" value="liiketila"><span>Liiketila</span></label>
-            </div>
-          </fieldset>
-          <div class="form__row">
-            <div class="field"><label for="f-laajuus">Laajuus, m² (valinnainen)</label><input id="f-laajuus" name="laajuus" type="number" min="1" inputmode="numeric"></div>
-            <div class="field"><label for="f-palvelu">Palvelu</label>
-              <select id="f-palvelu" name="palvelu">
-                <option>En vielä tiedä</option>
-                <option>Konsultaatio, 290&nbsp;€</option>
-                <option>Huonesuunnitelma, alk. 950&nbsp;€</option>
-                <option>Kokonaissuunnittelu</option>
-              </select>
-            </div>
-          </div>
-          <div class="field"><label for="f-viesti">Viesti</label><textarea id="f-viesti" name="viesti" rows="4"></textarea></div>
-          <label class="check"><input type="checkbox" name="tietosuoja"><span>Olen lukenut <a href="../tietosuoja/index.html">tietosuojaselosteen</a>.</span></label>
-          <div class="form__foot">
-            <button class="btn" type="submit">Lähetä viesti</button>
-            <p class="form__note" id="lomake-huomio">Konseptisivu: lomake ei lähetä tietoja minnekään.</p>
-          </div>
-          <p class="form__status" role="status" data-form-status></p>
-        </form>
-        <figure class="contact-photo reveal">
-            <div class="media"><img src="../img/turku-katu.jpg" width="1100" height="734" alt="Turkulainen katu, jonka varrella on keltainen puutalo ja pysäköityjä autoja. Puissa ei ole lehtiä." loading="lazy" decoding="async"></div>
-            <figcaption class="figcap">Puistomäki, Turku. Kuva on Turusta, ei toimiston osoitteesta. Valokuva: Kotivalo.</figcaption>
-        </figure>
-      </div>
-    </div>
+      <form class="form reveal" id="lomake" data-form novalidate>
+        <h2 class="label">Kerro kohteesta</h2>
+        <div class="form__row">
+          <label for="f-nimi">Nimi</label>
+          <input id="f-nimi" name="nimi" type="text" autocomplete="name" required>
+        </div>
+        <div class="form__row">
+          <label for="f-email">Sähköposti</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="form__row">
+          <label for="f-puh">Puhelin <span class="muted">(valinnainen)</span></label>
+          <input id="f-puh" name="puhelin" type="tel" autocomplete="tel">
+        </div>
+        <div class="form__row">
+          <label for="f-paikka">Kaupunki tai kunta</label>
+          <input id="f-paikka" name="paikka" type="text">
+        </div>
+        <div class="form__row">
+          <label for="f-palvelu">Palvelu</label>
+          <select id="f-palvelu" name="palvelu">
+            <option>En vielä tiedä</option>
+            <option>Konsultaatio, 290 €</option>
+            <option>Huonesuunnitelma, alk. 950 €</option>
+            <option>Kokonaissuunnittelu</option>
+          </select>
+        </div>
+        <div class="form__row">
+          <label for="f-viesti">Viesti</label>
+          <textarea id="f-viesti" name="viesti" rows="5" placeholder="Esimerkiksi: kolmio Martissa, 72 m², remontti alkaa maaliskuussa."></textarea>
+        </div>
+        <div class="form__check">
+          <input id="f-tieto" name="tietosuoja" type="checkbox" required>
+          <label for="f-tieto">Olen lukenut <a href="../tietosuoja/index.html">tietosuojaselosteen</a>.</label>
+        </div>
+        <button class="btn" type="submit">Lähetä viesti</button>
+        <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+        <p class="muted form__note">Konseptisivu: lomake ei lähetä tietoja minnekään.</p>
+      </form>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
+  <footer class="ftr">
     <div class="wrap">
-      <div class="grid site-footer__top">
-        <div class="site-footer__brand">
-          <a class="brand" href="../index.html" aria-label="Studio Utu, etusivu"><img class="brand__mark" src="../img/utu-wordmark.svg" width="787" height="176" alt=""></a>
-          <p>Kahden sisustusarkkitehdin toimisto Port Arthurissa. Suunnittelemme enimmäkseen koteja, ja ensimmäinen käynti alkaa aina ennen-kuvista.</p>
+      <p class="ftr__mark" aria-hidden="true"><img src="../img/utu-wordmark.svg" width="4254" height="746" alt=""></p>
+      <div class="ftr__cols">
+        <div>
+          <p>Studio Utu Oy<br>Utukatu 5<br>20100 Turku</p>
+          <p class="muted">Käynnit sopimuksen mukaan</p>
         </div>
-        <div class="site-footer__col">
-          <h2>Toimisto</h2>
-          <span>Studio Utu Oy</span>
-          <span>Utukatu 5</span>
-          <span>20100 Turku</span>
-          <span>Käynnit sopimuksen mukaan</span>
+        <div>
+          <p><a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a><br>048 562 1925</p>
+          <p class="muted">Vastaamme kahden arkipäivän kuluessa</p>
         </div>
-        <div class="site-footer__col">
-          <h2>Yhteys</h2>
-          <a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a>
-          <span>048 562 1925</span>
-          <span>Vastaamme 2 arkipäivässä</span>
-        </div>
-        <div class="site-footer__col">
-          <h2>Sivusto</h2>
-          <a href="../kohteet/index.html">Kohteet</a>
-          <a href="../palvelut/index.html">Palvelut ja hinnat</a>
-          <a href="../nain-tyo-etenee/index.html">Näin työ etenee</a>
-          <a href="../studio/index.html">Studio</a>
-          <a href="../yhteystiedot/index.html">Yhteystiedot</a>
-          <a href="../tietosuoja/index.html">Tietosuoja</a>
+        <ul class="ftr__nav">
+          <li><a href="../kohteet/index.html">Kohteet</a></li>
+          <li><a href="../palvelut/index.html">Palvelut</a></li>
+          <li><a href="../studio/index.html">Studio</a></li>
+          <li><a href="../yhteystiedot/index.html">Yhteystiedot</a></li>
+        </ul>
+        <div>
+          <p>Y-tunnus 3184525-0<br>Verkkolasku 003731845250</p>
+          <p><a href="../tietosuoja/index.html">Tietosuoja</a> · <a href="../CREDITS.md">Kuvat ja lähteet</a></p>
         </div>
       </div>
-      <div class="site-footer__legal">
-        <span>© 2026 Studio Utu Oy</span>
-        <span>Y-tunnus 3184525-0</span>
-        <span>Verkkolaskuosoite 003731845250</span>
-        <a href="../tietosuoja/index.html">Tietosuojaseloste</a>
-      </div>
-      <div class="site-footer__concept">
-        <p>Kuvitteellinen yritys. Sivusto on Ville Saarelan konseptityö. <a href="../CREDITS.md">Kuvien tekijät</a></p>
+      <div class="ftr__base">
+        <p>© 2026 Studio Utu Oy</p>
+        <p>Kuvitteellinen yritys. Sivusto on Ville Saarelan konseptityö.</p>
         <p class="concept-note">Konsepti · <a href="../../../index.html">Ville Saarela</a></p>
       </div>
     </div>
