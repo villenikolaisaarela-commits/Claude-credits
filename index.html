@@ -24,8 +24,7 @@
   <meta name="twitter:image" content="https://www.villesaarela.com/assets/img/og.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/geist-300-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/vendor/lenis.css">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/etusivu.css">
   <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">
   {
@@ -86,290 +85,272 @@
   </script>
 </head>
 <body>
-  <a class="skip" href="#sisalto">Siirry sisältöön</a>
+<a class="skip" href="#sisalto">Siirry sisältöön</a>
 
-  <header class="site-header">
-    <a class="brand" href="./">Ville Saarela</a>
-    <nav class="nav" aria-label="Päävalikko">
-      <a href="#tyot">Työt</a>
-      <a href="#hinnat">Hinnat</a>
-      <a class="hide-sm" href="#info">Info</a>
-      <a href="#yhteys">Yhteys</a>
-    </nav>
-  </header>
+<header class="g top">
+  <a class="brand" href="./">Ville Saarela</a>
+  <span class="label status"><span class="dot" aria-hidden="true"></span>Otan vastaan uusia projekteja</span>
+  <nav aria-label="Päävalikko">
+    <a href="#tyot">Työt</a>
+    <a href="#hinnat">Hinnat</a>
+    <a class="hide-sm" href="#info">Info</a>
+    <a href="#yhteys">Yhteys</a>
+  </nav>
+</header>
 
-  <main id="sisalto">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <p class="label status">Otan vastaan uusia projekteja</p>
-      <h1 id="hero-title" class="display lines" aria-label="Työsi on hyvää. Sivujesi pitäisi näyttää se.">
-        <span class="line" aria-hidden="true"><span>Työsi on hyvää.</span></span>
-        <span class="line" aria-hidden="true"><span>Sivujesi pitäisi</span></span>
-        <span class="line" aria-hidden="true"><span>näyttää se.</span></span>
-      </h1>
-      <div class="hero-foot">
-        <div class="intro">
-          <p>Suunnittelen ja rakennan verkkosivuja suunnittelijoille ja tekijöille. Työsi pääosassa, ei mitään turhaa.</p>
-          <div class="hero-ctas"><a class="btn" href="#yhteys">Pyydä maksuton luonnos <span aria-hidden="true">→</span></a></div>
+<main id="sisalto">
+  <section class="g hero" aria-labelledby="hero-title" data-hero>
+    <h1 id="hero-title" aria-label="Työsi on hyvää. Sivujesi pitäisi näyttää se.">
+      <span class="ln" aria-hidden="true"><span>Työsi on hyvää.</span></span>
+      <span class="ln" aria-hidden="true"><span>Sivujesi pitäisi</span></span>
+      <span class="ln" aria-hidden="true"><span>näyttää se.</span></span>
+    </h1>
+    <div class="intro">
+      <p>Suunnittelen ja rakennan verkkosivuja suunnittelijoille ja tekijöille. Työsi pääosassa, ei mitään turhaa.</p>
+      <a class="btn" href="#yhteys">Pyydä maksuton luonnos <span aria-hidden="true">→</span></a>
+    </div>
+    <span class="label meta">Arkkitehdit · Sisustus · Puusepät · Koko Suomi</span>
+    <span class="label no">Työt 01–05 ↓</span>
+  </section>
+
+  <section id="tyot" aria-labelledby="tyot-title">
+    <div class="g sh">
+      <div class="rule"></div>
+      <h2 id="tyot-title">Valitut työt</h2>
+      <span class="label num">I</span>
+      <span class="label aside">05 työtä<span class="hint"> · Vie osoitin kuvan päälle</span></span>
+    </div>
+
+    <ul class="g wall">
+      <li class="w w1" data-r data-video="kuura-arkkitehdit">
+        <a href="projektit/kuura-arkkitehdit/" aria-label="Kuura Arkkitehdit">
+          <div class="m"><img src="assets/img/projektit/kuura-arkkitehdit/cover.webp" alt="Kuura Arkkitehtien verkkosivujen etusivu" width="1200" height="1500"></div>
+        </a>
+        <div class="cap">
+          <span class="label">01</span>
+          <h3>Kuura Arkkitehdit</h3>
+          <p class="muted">Arkkitehtitoimisto, Helsinki, 2026</p>
+          <p class="idea">Etusivu on numeroitu arkisto vuodesta 2014.</p>
+          <span class="label go">Katso projekti ↗</span>
         </div>
-        <div class="meta">
-          <span class="label">Arkkitehdit · Sisustus · Puusepät · Koko Suomi</span>
+      </li>
+      <li class="w w2" data-r data-video="lahde-arkkitehdit">
+        <a href="projektit/lahde-arkkitehdit/" aria-label="Lähde Arkkitehdit">
+          <div class="m"><img src="assets/img/projektit/lahde-arkkitehdit/cover.webp" alt="Lähde Arkkitehtien verkkosivujen etusivu" width="1200" height="1500"></div>
+        </a>
+        <div class="cap">
+          <span class="label">02</span>
+          <h3>Lähde Arkkitehdit</h3>
+          <p class="muted">Arkkitehtitoimisto, Tampere, 2026</p>
+          <p class="idea">Etusivu etenee kuin elokuva.</p>
+          <span class="label go">Katso projekti ↗</span>
         </div>
-      </div>
-    </section>
-
-    <section id="tyot" class="section wrap" aria-labelledby="tyot-title">
-      <div class="section-head">
-        <h2 id="tyot-title">Valitut työt</h2>
-        <span class="label">(05)</span>
-      </div>
-
-      <ul class="work">
-        <li data-reveal>
-          <a class="card" href="projektit/kuura-arkkitehdit/">
-            <div class="card-media">
-              <div class="card-inner" data-parallax><picture><source type="image/webp" srcset="assets/img/projektit/kuura-arkkitehdit/cover-600.webp 600w, assets/img/projektit/kuura-arkkitehdit/cover.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw"><img src="assets/img/projektit/kuura-arkkitehdit/cover.jpg" alt="Kuura Arkkitehtien verkkosivujen etusivu tietokoneella ja puhelimella" width="1200" height="1500"></picture></div>
-              <video class="card-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="assets/video/tyot/kuura-arkkitehdit.webm" type="video/webm"><source data-src="assets/video/tyot/kuura-arkkitehdit.mp4" type="video/mp4"></video>
-              <span class="card-view label">Katso projekti ↗</span>
-            </div>
-            <div class="card-cap">
-              <h3>Kuura Arkkitehdit</h3>
-              <span class="arrow" aria-hidden="true">↗</span>
-            </div>
-            <p class="card-idea">Etusivu on numeroitu arkisto vuodesta 2014.</p>
-            <div class="card-sub">
-              <span class="label">Arkkitehtitoimisto, Helsinki</span>
-              <span class="label">2026</span>
-            </div>
-          </a>
-        </li>
-        <li data-reveal>
-          <a class="card" href="projektit/lahde-arkkitehdit/">
-            <div class="card-media">
-              <div class="card-inner" data-parallax><picture><source type="image/webp" srcset="assets/img/projektit/lahde-arkkitehdit/cover-600.webp 600w, assets/img/projektit/lahde-arkkitehdit/cover.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw"><img src="assets/img/projektit/lahde-arkkitehdit/cover.jpg" alt="Lähde Arkkitehtien verkkosivujen etusivu tietokoneella ja puhelimella" width="1200" height="1500"></picture></div>
-              <video class="card-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="assets/video/tyot/lahde-arkkitehdit.webm" type="video/webm"><source data-src="assets/video/tyot/lahde-arkkitehdit.mp4" type="video/mp4"></video>
-              <span class="card-view label">Katso projekti ↗</span>
-            </div>
-            <div class="card-cap">
-              <h3>Lähde Arkkitehdit</h3>
-              <span class="arrow" aria-hidden="true">↗</span>
-            </div>
-            <p class="card-idea">Etusivu etenee kuin elokuva.</p>
-            <div class="card-sub">
-              <span class="label">Arkkitehtitoimisto, Tampere</span>
-              <span class="label">2026</span>
-            </div>
-          </a>
-        </li>
-        <li data-reveal>
-          <a class="card" href="projektit/pihka-keittiot/">
-            <div class="card-media">
-              <div class="card-inner" data-parallax><picture><source type="image/webp" srcset="assets/img/projektit/pihka-keittiot/cover-600.webp 600w, assets/img/projektit/pihka-keittiot/cover.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw"><img src="assets/img/projektit/pihka-keittiot/cover.jpg" alt="Pihka Keittiöiden verkkosivujen etusivu tietokoneella ja puhelimella" width="1200" height="1500" loading="lazy"></picture></div>
-              <video class="card-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="assets/video/tyot/pihka-keittiot.webm" type="video/webm"><source data-src="assets/video/tyot/pihka-keittiot.mp4" type="video/mp4"></video>
-              <span class="card-view label">Katso projekti ↗</span>
-            </div>
-            <div class="card-cap">
-              <h3>Pihka Keittiöt</h3>
-              <span class="arrow" aria-hidden="true">↗</span>
-            </div>
-            <p class="card-idea">Seinä on 14 mm vinossa. Kaapit eivät.</p>
-            <div class="card-sub">
-              <span class="label">Keittiöpuuseppä, Jyväskylä</span>
-              <span class="label">2026</span>
-            </div>
-          </a>
-        </li>
-        <li data-reveal>
-          <a class="card" href="projektit/studio-utu/">
-            <div class="card-media">
-              <div class="card-inner" data-parallax><picture><source type="image/webp" srcset="assets/img/projektit/studio-utu/cover-600.webp 600w, assets/img/projektit/studio-utu/cover.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw"><img src="assets/img/projektit/studio-utu/cover.jpg" alt="Studio Udun verkkosivujen etusivu tietokoneella ja puhelimella" width="1200" height="1500" loading="lazy"></picture></div>
-              <video class="card-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="assets/video/tyot/studio-utu.webm" type="video/webm"><source data-src="assets/video/tyot/studio-utu.mp4" type="video/mp4"></video>
-              <span class="card-view label">Katso projekti ↗</span>
-            </div>
-            <div class="card-cap">
-              <h3>Studio Utu</h3>
-              <span class="arrow" aria-hidden="true">↗</span>
-            </div>
-            <p class="card-idea">Jokainen huone ennen ja jälkeen.</p>
-            <div class="card-sub">
-              <span class="label">Sisustussuunnittelu, Turku</span>
-              <span class="label">2026</span>
-            </div>
-          </a>
-        </li>
-        <li data-reveal>
-          <a class="card" href="projektit/studio-hiilo/">
-            <div class="card-media">
-              <div class="card-inner" data-parallax><picture><source type="image/webp" srcset="assets/img/projektit/studio-hiilo/cover-600.webp 600w, assets/img/projektit/studio-hiilo/cover.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw"><img src="assets/img/projektit/studio-hiilo/cover.jpg" alt="Studio Hiilon verkkosivujen etusivu tietokoneella ja puhelimella" width="1200" height="1500" loading="lazy"></picture></div>
-              <video class="card-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="assets/video/tyot/studio-hiilo.webm" type="video/webm"><source data-src="assets/video/tyot/studio-hiilo.mp4" type="video/mp4"></video>
-              <span class="card-view label">Katso projekti ↗</span>
-            </div>
-            <div class="card-cap">
-              <h3>Studio Hiilo</h3>
-              <span class="arrow" aria-hidden="true">↗</span>
-            </div>
-            <p class="card-idea">Piirretty huone on valikko.</p>
-            <div class="card-sub">
-              <span class="label">Muotoilustudio, Lahti</span>
-              <span class="label">2026</span>
-            </div>
-          </a>
-        </li>
-      </ul>
-
-      <p class="note">Nämä ovat konseptitöitä kuvitteellisille yrityksille. Oikeat asiakastyöt lisätään tänne sitä mukaa, kun niitä valmistuu.</p>
-    </section>
-
-    <section id="hinnat" class="section wrap" aria-labelledby="hinnat-title">
-      <div class="section-head">
-        <h2 id="hinnat-title">Hinnat</h2>
-        <span class="label">Kiinteä hinta, ei piilokuluja</span>
-      </div>
-      <ul class="pricing">
-        <li class="plan" data-reveal>
-          <div class="plan-top">
-            <span class="label">01</span>
-            <h3>Perus</h3>
-            <p class="plan-for">Yksinyrittäjälle tai pienelle studiolle, joka tarvitsee selkeän näyteikkunan.</p>
-          </div>
-          <div class="plan-price">
-            <span class="label">&nbsp;</span>
-            <p class="price">1 490 €</p>
-            <span class="label">Ei arvonlisäveroa</span>
-          </div>
-          <ul class="plan-list">
-            <li>Etusivu, yritys ja yhteystiedot</li>
-            <li>Työt ja kohteet -sivu, enintään 6 kohdetta</li>
-            <li>Toimii puhelimella ja tietokoneella</li>
-            <li>Hakukoneoptimointi</li>
-            <li>Julkaisu omaan osoitteeseen</li>
-          </ul>
-          <a class="btn btn-ghost plan-btn" href="#yhteys">Pyydä maksuton luonnos <span aria-hidden="true">→</span></a>
-        </li>
-        <li class="plan is-featured" data-reveal>
-          <div class="plan-top">
-            <span class="label plan-tag">Suosituin</span>
-            <h3>Yritys</h3>
-            <p class="plan-for">Yritykselle, jonka töiden pitää myydä ja tuoda tarjouspyyntöjä.</p>
-          </div>
-          <div class="plan-price">
-            <span class="label">&nbsp;</span>
-            <p class="price">2 490 €</p>
-            <span class="label">Ei arvonlisäveroa</span>
-          </div>
-          <ul class="plan-list">
-            <li>Kaikki Perus-paketin sisältö</li>
-            <li>Projektihakemisto suodattimilla</li>
-            <li>Omat projektisivut enintään 12 kohteelle</li>
-            <li>Yhteydenottolomake</li>
-            <li>Kävijäseuranta</li>
-          </ul>
-          <a class="btn plan-btn" href="#yhteys">Pyydä maksuton luonnos <span aria-hidden="true">→</span></a>
-        </li>
-        <li class="plan" data-reveal>
-          <div class="plan-top">
-            <span class="label">03</span>
-            <h3>Räätälöity</h3>
-            <p class="plan-for">Laajemmalle toimistolle tai liikkeelle. Suunnitellaan yhdessä.</p>
-          </div>
-          <div class="plan-price">
-            <span class="label">Alkaen</span>
-            <p class="price">3 480 €</p>
-            <span class="label">Ei arvonlisäveroa</span>
-          </div>
-          <ul class="plan-list">
-            <li>Kaikki Yritys-paketin sisältö</li>
-            <li>Rajaton määrä kohteita</li>
-            <li>Suomi ja englanti</li>
-            <li>Uutiset ja rekrytointi</li>
-            <li>Oma suunnitteluvaihe ja ilme</li>
-          </ul>
-          <a class="btn btn-ghost plan-btn" href="#yhteys">Pyydä maksuton luonnos <span aria-hidden="true">→</span></a>
-        </li>
-      </ul>
-
-      <div class="care" data-reveal>
-        <div class="care-head">
-          <span class="label">Jokaiseen pakettiin</span>
-          <h3>Julkaisun jälkeen</h3>
+      </li>
+      <li class="w w3" data-r data-video="pihka-keittiot">
+        <a href="projektit/pihka-keittiot/" aria-label="Pihka Keittiöt">
+          <div class="m"><img src="assets/img/projektit/pihka-keittiot/cover.webp" alt="Pihka Keittiöiden verkkosivujen etusivu" width="1200" height="1500" loading="lazy"></div>
+        </a>
+        <div class="cap">
+          <span class="label">03</span>
+          <h3>Pihka Keittiöt</h3>
+          <p class="muted">Keittiöpuuseppä, Jyväskylä, 2026</p>
+          <p class="idea">Seinä on 14 mm vinossa. Kaapit eivät.</p>
+          <span class="label go">Katso projekti ↗</span>
         </div>
-        <p class="care-text">30 päivän tuki sisältyy jokaiseen pakettiin. Sen jälkeen teen muutokset tarvittaessa, 60 €/h tai sovitulla kiinteällä hinnalla. Ei kuukausimaksuja, ei sitoumuksia.</p>
-      </div>
-
-      <p class="note">Valmis 2–4 viikossa. Maksuton luonnos, ennen kuin sitoudut. Domain ja sivut jäävät sinulle.</p>
-    </section>
-
-    <section id="prosessi" class="section wrap" aria-labelledby="prosessi-title">
-      <div class="section-head">
-        <h2 id="prosessi-title">Prosessi</h2>
-        <span class="label">Näin projekti etenee</span>
-      </div>
-      <ol class="steps">
-        <li data-reveal>
-          <span class="label">01 · Päivä 1</span>
-          <h3>Tutustuminen</h3>
-          <p>Lyhyt puhelu: millaista työtä teet, kenelle ja mitä sivujen pitää saada aikaan.</p>
-        </li>
-        <li data-reveal>
-          <span class="label">02 · Viikko 1</span>
-          <h3>Maksuton luonnos</h3>
-          <p>Etusivun luonnos sinun töilläsi. Näet suunnan ennen kuin sitoudut mihinkään.</p>
-        </li>
-        <li data-reveal>
-          <span class="label">03 · Viikot 2–3</span>
-          <h3>Toteutus</h3>
-          <p>Projektisivut, kuvat, piirustukset ja tekstit. Testaan sivut eri laitteilla, ja voit kommentoida matkan varrella.</p>
-        </li>
-        <li data-reveal>
-          <span class="label">04 · Viikko 4</span>
-          <h3>Julkaisu</h3>
-          <p>Sivut omaan osoitteeseen, Google-perusasiat kuntoon ja lyhyt opastus. Sen jälkeen 30 päivän tuki.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="info" class="section wrap" aria-labelledby="info-title">
-      <div class="section-head">
-        <h2 id="info-title">Info</h2>
-        <span class="label">Kuka tekee</span>
-      </div>
-      <div class="about">
-        <figure class="about-photo" data-reveal>
-          <div class="about-frame">
-            <img src="assets/img/ville.jpg" alt="Ville Saarela" width="726" height="908" loading="lazy" data-parallax>
-          </div>
-          <figcaption>
-            <span class="label">Ville Saarela</span>
-            <span class="label">Suunnittelu &amp; toteutus</span>
-          </figcaption>
-        </figure>
-        <div class="about-text">
-          <p class="lead" data-reveal>Olen Ville Saarela. Teen verkkosivuja suunnittelijoille ja tekijöille, <span class="muted">joiden työ on hyvää, mutta joiden sivut eivät vielä kerro sitä.</span></p>
-          <div class="body" data-reveal>
-            <p>Hyvässä suunnittelussa ja käsityössä paras ratkaisu on usein se, joka ei huuda. Sama pätee verkkosivuihin: hillitty ilme, selkeä rakenne ja työt, jotka saavat tilaa. Tavoite on aina sama: sivut, jotka näyttävät hyvältä, latautuvat nopeasti ja saavat kävijän ottamaan yhteyttä.</p>
-            <p>Työskentelen itse, joten et ole tekemisissä myyjän tai projektipäällikön kanssa, vaan suoraan sen ihmisen, joka sivusi tekee.</p>
-          </div>
+      </li>
+      <li class="w w4" data-r data-video="studio-utu">
+        <a href="projektit/studio-utu/" aria-label="Studio Utu">
+          <div class="m"><img src="assets/img/projektit/studio-utu/cover.webp" alt="Studio Udun verkkosivujen etusivu" width="1200" height="1500" loading="lazy"></div>
+        </a>
+        <div class="cap">
+          <span class="label">04</span>
+          <h3>Studio Utu</h3>
+          <p class="muted">Sisustussuunnittelu, Turku, 2026</p>
+          <p class="idea">Jokainen huone ennen ja jälkeen.</p>
+          <span class="label go">Katso projekti ↗</span>
         </div>
+      </li>
+      <li class="w w5" data-r data-video="studio-hiilo">
+        <a href="projektit/studio-hiilo/" aria-label="Studio Hiilo">
+          <div class="m"><img src="assets/img/projektit/studio-hiilo/cover.webp" alt="Studio Hiilon verkkosivujen etusivu" width="1200" height="1500" loading="lazy"></div>
+        </a>
+        <div class="cap">
+          <span class="label">05</span>
+          <h3>Studio Hiilo</h3>
+          <p class="muted">Muotoilustudio, Lahti, 2026</p>
+          <p class="idea">Piirretty huone on valikko.</p>
+          <span class="label go">Katso projekti ↗</span>
+        </div>
+      </li>
+      <li class="note" data-r>
+        <span class="label">Konsepti</span>
+        Nämä ovat konseptitöitä kuvitteellisille yrityksille. Oikeat asiakastyöt lisätään tänne sitä mukaa, kun niitä valmistuu.
+      </li>
+    </ul>
+  </section>
+
+  <section id="hinnat" aria-labelledby="hinnat-title">
+    <div class="g sh">
+      <div class="rule"></div>
+      <h2 id="hinnat-title">Hinnat</h2>
+      <span class="label num">II</span>
+      <span class="label aside">Kiinteä hinta, ei piilokuluja</span>
+    </div>
+    <div class="g plans">
+      <div class="plan p1" data-r>
+        <div class="hd"><h3>Perus</h3><span class="label">01</span></div>
+        <p class="mid price">1 490 €</p>
+        <span class="label vat">Ei arvonlisäveroa</span>
+        <p class="for">Yksinyrittäjälle tai pienelle studiolle, joka tarvitsee selkeän näyteikkunan.</p>
+        <ul>
+          <li>Etusivu, yritys ja yhteystiedot</li>
+          <li>Työt ja kohteet -sivu, enintään 6 kohdetta</li>
+          <li>Toimii puhelimella ja tietokoneella</li>
+          <li>Hakukoneoptimointi</li>
+          <li>Julkaisu omaan osoitteeseen</li>
+        </ul>
+        <a class="act link" href="#yhteys">Pyydä maksuton luonnos →</a>
       </div>
-    </section>
-
-    <section id="yhteys" class="section wrap contact" aria-labelledby="yhteys-title">
-      <div class="section-head">
-        <h2 id="yhteys-title">Yhteys</h2>
-        <span class="label">Vastaan aina 24 tunnin sisällä</span>
+      <div class="plan p2" data-r>
+        <div class="hd"><h3>Yritys</h3><span class="label">02 · Suosituin</span></div>
+        <p class="mid price">2 490 €</p>
+        <span class="label vat">Ei arvonlisäveroa</span>
+        <p class="for">Yritykselle, jonka töiden pitää myydä ja tuoda tarjouspyyntöjä.</p>
+        <ul>
+          <li>Kaikki Perus-paketin sisältö</li>
+          <li>Projektihakemisto suodattimilla</li>
+          <li>Omat projektisivut enintään 12 kohteelle</li>
+          <li>Yhteydenottolomake</li>
+          <li>Kävijäseuranta</li>
+        </ul>
+        <a class="act btn" href="#yhteys">Pyydä maksuton luonnos <span aria-hidden="true">→</span></a>
       </div>
-      <p data-reveal>Kerro lyhyesti työstäsi ja siitä, mitä tarvitset. Vastaan aina 24 tunnin sisällä.</p>
-      <a class="mail" href="mailto:info@villesaarela.com?subject=Maksuton%20luonnos%20verkkosivuista">info@villesaarela.com</a>
-      <a class="mail phone" href="tel:+358451035362">045 103 5362</a>
-    </section>
-  </main>
+      <div class="plan p3" data-r>
+        <div class="hd"><h3>Räätälöity</h3><span class="label">03</span></div>
+        <p class="mid price"><span class="label muted" style="vertical-align:.5em;margin-right:8px">Alk.</span>3 480 €</p>
+        <span class="label vat">Ei arvonlisäveroa</span>
+        <p class="for">Laajemmalle toimistolle tai liikkeelle. Suunnitellaan yhdessä.</p>
+        <ul>
+          <li>Kaikki Yritys-paketin sisältö</li>
+          <li>Rajaton määrä kohteita</li>
+          <li>Suomi ja englanti</li>
+          <li>Uutiset ja rekrytointi</li>
+          <li>Oma suunnitteluvaihe ja ilme</li>
+        </ul>
+        <a class="act link" href="#yhteys">Pyydä maksuton luonnos →</a>
+      </div>
+      <div class="care" data-r>
+        <span class="label">Jokaiseen pakettiin</span>
+        <h3>Julkaisun jälkeen</h3>
+        <p>30 päivän tuki sisältyy jokaiseen pakettiin. Sen jälkeen teen muutokset tarvittaessa, 60 €/h tai sovitulla kiinteällä hinnalla. Ei kuukausimaksuja, ei sitoumuksia.</p>
+      </div>
+      <p class="fine" data-r>Valmis 2–4 viikossa. Maksuton luonnos, ennen kuin sitoudut. Domain ja sivut jäävät sinulle.</p>
+    </div>
+  </section>
 
-  <footer class="site-footer">
-    <span class="label">© <span data-year>2026</span> Ville Saarela</span>
-    <span class="label" data-clock>Suomi</span>
-    <a class="label top link-line" href="#">Ylös ↑</a>
-  </footer>
+  <section id="prosessi" aria-labelledby="prosessi-title">
+    <div class="g sh">
+      <div class="rule"></div>
+      <h2 id="prosessi-title">Prosessi</h2>
+      <span class="label num">III</span>
+      <span class="label aside">Näin projekti etenee</span>
+    </div>
+    <ol class="g steps">
+      <li class="s1" data-r><span class="label">01 · Päivä 1</span><h3>Tutustuminen</h3><p>Lyhyt puhelu: millaista työtä teet, kenelle ja mitä sivujen pitää saada aikaan.</p></li>
+      <li class="s2" data-r><span class="label">02 · Viikko 1</span><h3>Maksuton luonnos</h3><p>Etusivun luonnos sinun töilläsi. Näet suunnan ennen kuin sitoudut mihinkään.</p></li>
+      <li class="s3" data-r><span class="label">03 · Viikot 2–3</span><h3>Toteutus</h3><p>Projektisivut, kuvat, piirustukset ja tekstit. Testaan sivut eri laitteilla, ja voit kommentoida matkan varrella.</p></li>
+      <li class="s4" data-r><span class="label">04 · Viikko 4</span><h3>Julkaisu</h3><p>Sivut omaan osoitteeseen, Google-perusasiat kuntoon ja lyhyt opastus. Sen jälkeen 30 päivän tuki.</p></li>
+    </ol>
+  </section>
 
-  <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/site.js" defer></script>
+  <section id="info" aria-labelledby="info-title">
+    <div class="g sh">
+      <div class="rule"></div>
+      <h2 id="info-title">Info</h2>
+      <span class="label num">IV</span>
+      <span class="label aside">Kuka tekee</span>
+    </div>
+    <div class="g about">
+      <figure class="photo" data-r>
+        <div class="frame"><img src="assets/img/ville.jpg" alt="Ville Saarela" width="726" height="908" loading="lazy"></div>
+        <figcaption><span class="label">Ville Saarela</span><span class="muted">Suunnittelu &amp; toteutus</span></figcaption>
+      </figure>
+      <p class="mid lead" data-r>Olen Ville Saarela. Teen verkkosivuja suunnittelijoille ja tekijöille, <span class="muted">joiden työ on hyvää, mutta joiden sivut eivät vielä kerro sitä.</span></p>
+      <div class="body" data-r>
+        <p>Hyvässä suunnittelussa ja käsityössä paras ratkaisu on usein se, joka ei huuda. Sama pätee verkkosivuihin: hillitty ilme, selkeä rakenne ja työt, jotka saavat tilaa. Tavoite on aina sama: sivut, jotka näyttävät hyvältä, latautuvat nopeasti ja saavat kävijän ottamaan yhteyttä.</p>
+        <p>Työskentelen itse, joten et ole tekemisissä myyjän tai projektipäällikön kanssa, vaan suoraan sen ihmisen, joka sivusi tekee.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="yhteys" aria-labelledby="yhteys-title">
+    <div class="g sh">
+      <div class="rule"></div>
+      <h2 id="yhteys-title">Yhteys</h2>
+      <span class="label num">V</span>
+      <span class="label aside">Vastaan aina 24 tunnin sisällä</span>
+    </div>
+    <div class="g contact">
+      <p class="say" data-r>Kerro lyhyesti työstäsi ja siitä, mitä tarvitset. Vastaan aina 24 tunnin sisällä.</p>
+      <div class="addr" data-r>
+        <a class="big" href="mailto:info@villesaarela.com?subject=Maksuton%20luonnos%20verkkosivuista"><span>info@villesaarela.com</span></a>
+        <a class="big muted" href="tel:+358451035362"><span>045 103 5362</span></a>
+      </div>
+      <div class="cta" data-r><a class="btn" href="mailto:info@villesaarela.com?subject=Maksuton%20luonnos%20verkkosivuista">Pyydä maksuton luonnos <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="g colo">
+  <div class="rule"></div>
+  <div class="c1"><span class="label">Ville Saarela</span>Verkkosivut, jotka tekevät töitä.</div>
+  <div class="c2"><span class="label">Kolofoni</span>Kirjaintyypit Geist ja Geist Mono. Suunniteltu ja rakennettu käsin, ilman sivupohjaa.</div>
+  <div class="c3"><span class="label">Teokset</span>01–05 ovat konseptitöitä kuvitteellisille yrityksille.</div>
+  <div class="c4"><span class="label">Suomi</span><span data-clock>&nbsp;</span></div>
+  <div class="c5"><span class="label">© 2026</span><a href="#" class="link">Ylös ↑</a></div>
+</footer>
+
+<script>
+(() => {
+  const base = 'assets/video/tyot/';
+  // reveal on view
+  const els = document.querySelectorAll('[data-r],[data-hero]');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => io.observe(el));
+  } else els.forEach(el => el.classList.add('in'));
+  requestAnimationFrame(() => document.querySelector('[data-hero]').classList.add('in'));
+
+  // hover reveals the preview video (loaded on first hover)
+  const fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  document.querySelectorAll('.w[data-video]').forEach(w => {
+    let v;
+    const on = () => {
+      if (!v) {
+        v = document.createElement('video');
+        v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute('aria-hidden', 'true');
+        v.innerHTML = `<source src="${base}${w.dataset.video}.webm" type="video/webm"><source src="${base}${w.dataset.video}.mp4" type="video/mp4">`;
+        w.querySelector('.m').appendChild(v);
+      }
+      const p = v.play(); if (p) p.then(() => w.classList.add('play')).catch(() => {});
+    };
+    const off = () => { w.classList.remove('play'); if (v) setTimeout(() => { if (!w.classList.contains('play')) v.pause(); }, 900); };
+    if (fine) {
+      w.addEventListener('mouseenter', on); w.addEventListener('mouseleave', off);
+      const a = w.querySelector('a'); a.addEventListener('focus', on); a.addEventListener('blur', off);
+    } else if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion:reduce)').matches) {
+      // touch: the work plays quietly while it hangs in the middle of the screen
+      new IntersectionObserver(([e]) => e.isIntersecting ? on() : off(), { rootMargin: '-35% 0px -35% 0px' }).observe(w.querySelector('.m'));
+    }
+  });
+
+  // local time in the colophon
+  const c = document.querySelector('[data-clock]');
+  const tick = () => { c.textContent = new Intl.DateTimeFormat('fi-FI', { timeZone: 'Europe/Helsinki', hour: '2-digit', minute: '2-digit' }).format(new Date()) + ' Helsinki'; };
+  tick(); setInterval(tick, 30000);
+})();
+</script>
 </body>
 </html>
