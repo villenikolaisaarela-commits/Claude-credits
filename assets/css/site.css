@@ -720,16 +720,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* Hero v2: intro beside the headline so the first work shows above the fold */
 @media (min-width: 1024px) {
-  .hero {
+  #sisalto > .hero {
     min-height: 0;
     display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; align-items: end;
     padding-top: clamp(96px, 15svh, 160px); padding-bottom: 0;
   }
-  .hero .status { grid-column: 1 / -1; }
-  .hero h1 { grid-column: 1 / span 8; }
-  .hero-foot { grid-column: 9 / -1; display: flex; flex-direction: column-reverse; gap: 18px; margin: 0; padding: 0 0 0.6em; border-top: 0; }
-  .hero-foot .intro { font-size: clamp(17px, 1.3vw, 19px); }
-  .hero-foot .intro .hero-ctas { margin-top: 24px; }
+  #sisalto > .hero .status { grid-column: 1 / -1; }
+  #sisalto > .hero h1 { grid-column: 1 / span 8; }
+  #sisalto > .hero .hero-foot { grid-column: 9 / -1; display: flex; flex-direction: column-reverse; gap: 18px; margin: 0; padding: 0 0 0.6em; border-top: 0; }
+  #sisalto > .hero .hero-foot .intro { font-size: clamp(17px, 1.3vw, 19px); }
+  #sisalto > .hero .hero-foot .intro .hero-ctas { margin-top: 24px; }
   #tyot { padding-top: clamp(56px, 8svh, 96px); }
 }
 
@@ -762,6 +762,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .js .tiers .tier[data-reveal]:nth-child(3) { transition-delay: 0.16s; }
 }
 @media (max-width: 1023px) {
-  .hero { min-height: 0; padding-top: clamp(96px, 14svh, 140px); }
+  #sisalto > .hero { min-height: 0; padding-top: clamp(96px, 14svh, 140px); }
   #tyot { padding-top: clamp(48px, 7svh, 72px); }
 }
