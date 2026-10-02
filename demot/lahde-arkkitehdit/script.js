@@ -32,7 +32,7 @@
         (map.get(e.target) || []).forEach(function (el) { whenReady(el, function () { el.classList.add('is-in'); }); });
         io.unobserve(e.target);
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
+    }, { rootMargin: '0px 0px 15% 0px', threshold: 0 });
     items.forEach(function (el) {
       var t = el.classList.contains('frame') ? el.parentNode : el; // kehys tarkkaillaan figuren kautta
       if (!map.has(t)) { map.set(t, []); io.observe(t); }

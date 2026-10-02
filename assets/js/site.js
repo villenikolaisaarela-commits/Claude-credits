@@ -10,17 +10,40 @@
   }
   var items = document.querySelectorAll('[data-reveal]');
 
+  // Start an image reveal only when its images are loaded and decoded, so it never wipes over an empty frame.
+  var whenReady = function (el, cb) {
+    var imgs = [].slice.call(el.querySelectorAll('img'));
+    var done = false, go = function () { if (!done) { done = true; requestAnimationFrame(cb); } };
+    if (!imgs.length || !window.Promise) return go();
+    Promise.all(imgs.map(function (i) {
+      if (i.loading === 'lazy') i.loading = 'eager';
+      var loaded = (i.complete && i.naturalWidth) ? Promise.resolve() : new Promise(function (r) { i.addEventListener('load', r, { once: true }); i.addEventListener('error', r, { once: true }); });
+      return loaded.then(function () { return i.decode ? i.decode().catch(function () {}) : null; });
+    })).then(go);
+    setTimeout(go, 4000);
+  };
+  // Fetch images a screen and a half ahead of the scroll, so they are ready when their reveal starts.
+  if ('IntersectionObserver' in window) {
+    var pre = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.querySelectorAll('img[loading="lazy"]').forEach(function (i) { i.loading = 'eager'; }); pre.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px 150% 0px' });
+    items.forEach(function (el) { pre.observe(el); });
+  }
+
   if (reduce || !('IntersectionObserver' in window)) {
     items.forEach(function (el) { el.classList.add('is-in'); });
   } else {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-in');
-          io.unobserve(entry.target);
+          var t = entry.target;
+          io.unobserve(t);
+          whenReady(t, function () { t.classList.add('is-in'); });
         }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px 15% 0px', threshold: 0 });
     items.forEach(function (el) { io.observe(el); });
   }
 

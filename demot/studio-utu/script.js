@@ -28,7 +28,7 @@
       entries.forEach(function (e) {
         if (e.isIntersecting) { var t = e.target; io.unobserve(t); whenReady(t, function () { t.classList.add('is-in'); }); }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    }, { rootMargin: '0px 0px 15% 0px', threshold: 0 });
     items.forEach(function (el) { io.observe(el); });
   }
 

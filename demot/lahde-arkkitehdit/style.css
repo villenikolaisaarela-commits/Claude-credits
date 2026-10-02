@@ -403,11 +403,11 @@ main > .chapter:last-child, .case .chapter:last-of-type { padding-bottom: clamp(
   content: ""; position: absolute; inset: 0; z-index: 1;
   background: var(--bg);
   transform-origin: 50% 0;
-  transition: transform 1.6s var(--ease);
+  transition: transform 1s var(--ease);
   pointer-events: none;
 }
 .js [data-reveal].frame.is-in::after { transform: scaleY(0); }
-.js [data-reveal].frame img { scale: 1.07; transition: scale 2.2s var(--ease), transform 1.4s var(--ease); }
+.js [data-reveal].frame img { scale: 1.07; transition: scale 1.4s var(--ease), transform 1.4s var(--ease); }
 .js [data-reveal].frame.is-in img { scale: 1; }
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 1.2s var(--ease), transform 1.4s var(--ease); }
 .js .reveal.is-in { opacity: 1; transform: none; }

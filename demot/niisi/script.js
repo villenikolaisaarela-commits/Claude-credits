@@ -317,7 +317,7 @@
       entries.forEach(function (en) {
         if (en.isIntersecting) { var t = en.target; io.unobserve(t); whenReady(t, function () { t.classList.add('is-in'); }); }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
+    }, { rootMargin: '0px 0px 15% 0px', threshold: 0 });
     items.forEach(function (x) { io.observe(x); });
   }
 

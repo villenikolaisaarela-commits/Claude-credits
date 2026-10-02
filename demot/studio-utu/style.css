@@ -117,7 +117,7 @@ main:focus { outline: none; }
   clip-path: inset(100% 0 0 0);
   transform: scale(1.06);
   transform-origin: 50% 100%;
-  transition: clip-path 1.6s var(--ease), transform 2.2s var(--ease);
+  transition: clip-path 1s var(--ease), transform 1.4s var(--ease);
   transition-delay: calc(var(--d, 0ms) + 80ms);
 }
 .js .reveal.is-in .room__media img, .js .reveal.is-in.hero__img img, .js .reveal.is-in .area__media img,

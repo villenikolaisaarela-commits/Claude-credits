@@ -59,7 +59,7 @@
       entries.forEach(function (en) {
         if (en.isIntersecting) { var t = en.target; io.unobserve(t); whenReady(t, function () { t.classList.add('is-in'); }); }
       });
-    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px 15% 0px', threshold: 0 });
     els.forEach(function (el) { io.observe(el); });
   }
 
