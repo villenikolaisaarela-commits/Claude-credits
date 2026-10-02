@@ -148,6 +148,91 @@
     track.addEventListener('dragstart', function (e) { e.preventDefault(); });
   });
 
+
+  /* ------------------------------------------------------------------
+     Before / after comparison: pointer drag (mouse, pen, touch with
+     horizontal swipe), keyboard via the native range input
+     ------------------------------------------------------------------ */
+  $$('[data-ba]').forEach(function (ba) {
+    var stage = $('.ba__stage', ba);
+    var range = $('.ba__range', ba);
+    if (!stage || !range) return;
+    var pos = parseFloat(range.value) || 50;
+    function set(v) {
+      pos = Math.max(0, Math.min(100, v));
+      ba.style.setProperty('--pos', pos + '%');
+      range.value = String(Math.round(pos));
+      range.setAttribute('aria-valuetext', 'Ennen-kuvaa näkyy ' + Math.round(pos) + ' prosenttia');
+    }
+    function fromEvent(e) {
+      var r = stage.getBoundingClientRect();
+      return ((e.clientX - r.left) / r.width) * 100;
+    }
+    set(pos);
+    range.addEventListener('input', function () { stopIntro(); set(parseFloat(range.value)); });
+
+    var active = null, startX = 0, startY = 0, engaged = false;
+    stage.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      stopIntro();
+      active = e.pointerId; startX = e.clientX; startY = e.clientY;
+      engaged = e.pointerType !== 'touch';
+      if (engaged) {
+        e.preventDefault();
+        try { stage.setPointerCapture(e.pointerId); } catch (err) {}
+        ba.classList.add('is-dragging');
+        set(fromEvent(e));
+        range.focus({ preventScroll: true });
+      }
+    });
+    stage.addEventListener('pointermove', function (e) {
+      if (active !== e.pointerId) return;
+      if (!engaged) {
+        var dx = Math.abs(e.clientX - startX), dy = Math.abs(e.clientY - startY);
+        if (dx > 6 && dx > dy) {
+          engaged = true;
+          try { stage.setPointerCapture(e.pointerId); } catch (err) {}
+          ba.classList.add('is-dragging');
+        } else if (dy > 10) { active = null; return; }
+        else return;
+      }
+      set(fromEvent(e));
+    });
+    function end(e) {
+      if (active !== e.pointerId) return;
+      if (!engaged && e.type === 'pointerup' && e.pointerType === 'touch') set(fromEvent(e));
+      active = null; engaged = false;
+      ba.classList.remove('is-dragging');
+    }
+    stage.addEventListener('pointerup', end);
+    stage.addEventListener('pointercancel', end);
+    stage.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+    /* A slow one-time sweep when the comparison first comes into view */
+    var raf = null, introDone = false;
+    function stopIntro() { introDone = true; if (raf) cancelAnimationFrame(raf); raf = null; }
+    function intro() {
+      if (introDone || reduce) return;
+      introDone = true;
+      var from = 78, to = 50, t0 = null, dur = 1600;
+      set(from);
+      function ease(t) { return 1 - Math.pow(1 - t, 3); }
+      function step(ts) {
+        if (t0 === null) t0 = ts;
+        var t = Math.min(1, (ts - t0) / dur);
+        set(from + (to - from) * ease(t));
+        if (t < 1) raf = requestAnimationFrame(step); else raf = null;
+      }
+      raf = requestAnimationFrame(step);
+    }
+    if (!reduce && 'IntersectionObserver' in window && ba.hasAttribute('data-ba-intro')) {
+      var bio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { bio.disconnect(); setTimeout(intro, 350); } });
+      }, { threshold: 0.4 });
+      bio.observe(ba);
+    }
+  });
+
   /* ------------------------------------------------------------------
      Project filter
      ------------------------------------------------------------------ */

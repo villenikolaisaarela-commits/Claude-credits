@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
   <title>Koti Port Arthur | Kohteet | Studio Utu</title>
-  <meta name="description" content="Koti Port Arthur: 78 neliön kolmio 1930-luvun kerrostalossa Turussa. Kokonaissuunnittelu, valmistunut maaliskuussa 2025.">
-  <meta name="theme-color" content="#f9f3f0">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f9f3f0'/%3E%3Cpath d='M8.5 25V14.5a7.5 7.5 0 0 1 15 0V25' fill='none' stroke='%23633b2f' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='20' r='2.2' fill='%23b19e18'/%3E%3C/svg%3E">
+  <meta name="description" content="Koti Port Arthur ennen ja jälkeen: 78 neliön kolmio 1930-luvun kerrostalossa Turussa. Kokonaissuunnittelu, valmistunut maaliskuussa 2025.">
+  <meta name="theme-color" content="#183a2e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23183a2e'/%3E%3Cpath d='M6 0h10v32H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z' fill='%232f6150'/%3E%3Cpath d='M16 3v26' stroke='%23efd0c4' stroke-width='2.2'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='%23efd0c4'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.UTU_OK)document.documentElement.classList.remove('js')},3000);</script>
+  <link rel="preload" as="font" type="font/woff2" href="../../fonts/young-serif-latin.woff2" crossorigin>
   <link rel="stylesheet" href="../../style.css">
   <script src="../../script.js" defer></script>
 </head>
@@ -17,14 +18,11 @@
 
   <header class="site-header" data-header>
     <div class="site-header__inner">
-      <a class="brand" href="../../index.html" aria-label="Studio Utu, etusivu">
-        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 21V11a7 7 0 0 1 14 0v10" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="15.6" r="1.9" fill="#b19e18"/></svg>
-        <span class="brand__name">Studio <em>Utu</em></span>
-      </a>
+      <a class="brand" href="../../index.html" aria-label="Studio Utu, etusivu"><img class="brand__mark" src="../../img/utu-wordmark.svg" width="787" height="176" alt=""></a>
       <span class="brand__tag">Konsepti</span>
       <nav class="nav" aria-label="Päävalikko">
         <ul class="nav__list">
-          <li><a href="../../kohteet/index.html" aria-current="true">Kohteet</a></li>
+          <li><a href="../../kohteet/index.html" aria-current="page">Kohteet</a></li>
           <li><a href="../../palvelut/index.html">Palvelut ja hinnat</a></li>
           <li><a href="../../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
           <li><a href="../../studio/index.html">Studio</a></li>
@@ -41,7 +39,7 @@
   <div class="mobile-menu" id="mobiilivalikko" data-menu>
     <nav aria-label="Mobiilivalikko">
       <ul class="mobile-menu__list">
-        <li><a href="../../kohteet/index.html" aria-current="true">Kohteet</a></li>
+        <li><a href="../../kohteet/index.html" aria-current="page">Kohteet</a></li>
         <li><a href="../../palvelut/index.html">Palvelut ja hinnat</a></li>
         <li><a href="../../nain-tyo-etenee/index.html">Näin työ etenee</a></li>
         <li><a href="../../studio/index.html">Studio</a></li>
@@ -52,7 +50,7 @@
       <p>Studio Utu Oy, Utukatu 5, 20100 Turku</p>
       <p>studio@studio-utu.example</p>
       <p>048 562 1925</p>
-      <p><a class="btn btn--small" href="../../yhteystiedot/index.html#lomake" style="margin-top: 12px">Varaa konsultaatio</a></p>
+      <p style="margin-top: 16px"><a class="btn btn--small" href="../../yhteystiedot/index.html#lomake">Varaa konsultaatio</a></p>
     </div>
   </div>
 
@@ -61,15 +59,23 @@
     <section class="project-head wrap" aria-labelledby="otsikko">
       <div class="grid project-head__grid">
         <div class="project-head__title">
-          <p class="label reveal">Port Arthur, Turku</p>
+          <p class="label reveal">Port Arthur, Turku · 2025</p>
           <h1 class="h-display reveal" id="otsikko">Koti Port Arthur</h1>
         </div>
-        <p class="project-head__lead lead reveal" style="--d: 120ms">Kolmio 1930-luvun kerrostalossa. Ikkunat ja patterit jäivät paikoilleen, ja huonekalut sijoitettiin niiden mukaan.</p>
+        <p class="project-head__lead lead reveal" style="--d: 120ms">Kolmio 1930-luvun kerrostalossa. Ikkunat ja patterit jäivät paikoilleen, joten sijoitin huonekalut niiden mukaan.</p>
       </div>
-      <figure class="project-hero">
-        <div class="media reveal" data-reveal="img"><img src="../../img/koti-port-arthur-nurkka.jpg" width="1500" height="1000" alt="Valkoinen lukutuoli ja mustavalkoinen tyyny pienen mustan pöydän vieressä, taustalla ovi ja puulattia." decoding="async" fetchpriority="high"></div>
-        <figcaption class="figcap">Lukunurkka eteisen ja olohuoneen välissä.</figcaption>
-      </figure>
+      <div class="project-ba">
+        <figure class="ba reveal" data-ba data-ba-intro>
+  <div class="ba__stage">
+    <div class="ba__pane ba__pane--after"><img src="../../img/ba-olohuone-jalkeen.jpg" srcset="../../img/ba-olohuone-jalkeen-800.jpg 800w, ../../img/ba-olohuone-jalkeen.jpg 1600w" sizes="(max-width: 1400px) 100vw, 1300px" width="1600" height="1067" alt="Jälkeen: vaaleansininen sohva, jalkalamppu ja kehystetty valokuva valkoista seinää vasten. Lattiassa on parketti." fetchpriority="high" decoding="async"><span class="ba__tag" aria-hidden="true">Jälkeen</span></div>
+    <div class="ba__pane ba__pane--before"><img src="../../img/ba-olohuone-ennen.jpg" srcset="../../img/ba-olohuone-ennen-800.jpg 800w, ../../img/ba-olohuone-ennen.jpg 1600w" sizes="(max-width: 1400px) 100vw, 1300px" width="1600" height="1067" alt="Ennen: tyhjä huone, jossa on valkoiset pariovet, valkoiset seinät ja vaalea lautalattia." fetchpriority="high" decoding="async"><span class="ba__tag" aria-hidden="true">Ennen</span></div>
+    <span class="ba__line" aria-hidden="true"></span>
+    <input class="ba__range" type="range" min="0" max="100" step="1" value="50" aria-label="Ennen ja jälkeen: siirrä kuvien rajaa">
+    <span class="ba__knob" aria-hidden="true"><svg viewBox="0 0 26 14" aria-hidden="true" focusable="false"><path d="M8 1.5 2.5 7 8 12.5M18 1.5 23.5 7 18 12.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+  </div>
+  <figcaption class="ba__caption"><span><strong>Koti Port Arthur, olohuone.</strong> <span class="ba__hint">Vedä rajaa tai käytä nuolinäppäimiä.</span></span><span>Kuvapari on havainnollistus: ennen-kuva on vastaavasta tyhjästä huoneesta Oslosta, ei tästä asunnosta.</span></figcaption>
+</figure>
+      </div>
     </section>
 
     <section class="wrap" aria-label="Tiedot ja kuvaus">
@@ -77,91 +83,112 @@
         <aside class="factbox reveal" aria-labelledby="faktat">
           <h2 class="label" id="faktat">Tiedot</h2>
           <dl>
-          <div><dt>Sijainti</dt><dd>Port Arthur, Turku</dd></div>
-          <div><dt>Laajuus</dt><dd>78 m²</dd></div>
-          <div><dt>Valmistunut</dt><dd>Maaliskuu 2025</dd></div>
-          <div><dt>Työ</dt><dd>Kokonaissuunnittelu. Sisustusarkkitehti SIO Aino Kuusela</dd></div>
-          <div><dt>Valokuvat</dt><dd>Kari Shea, Breather</dd></div>
+            <div><dt>Sijainti</dt><dd>Port Arthur, Turku</dd></div>
+            <div><dt>Laajuus</dt><dd>78 m²</dd></div>
+            <div><dt>Valmistunut</dt><dd>Maaliskuu 2025</dd></div>
+            <div><dt>Työ</dt><dd>Kokonaissuunnittelu. Sisustusarkkitehti SIO Aino Kuusela</dd></div>
+            <div><dt>Valokuvat</dt><dd>Philipp Berndt, Naomi Hébert, Jarosław Ceborski, Kari Shea, Breather. Ennen-kuvat ovat vastaavista huoneista.</dd></div>
           </dl>
         </aside>
         <div class="project-text">
-        <section class="reveal">
-          <h2 class="h-sub">Lähtökohta</h2>
-          <p>Asunto on 78 neliön kolmio kolmannessa kerroksessa. Talo valmistui 1934, ja asukkaina on pariskunta ja kaksi lasta.</p>
-          <p>Ikkunat ovat talon alkuperäisiä, ja taloyhtiö uusii ne vasta 2028. Siksi ikkunoihin, valurautapattereihin ja ulkoseiniin ei saanut koskea. Samaan huoneeseen piti mahtua ruokapöytä, lasten leikkipaikka ja toisen vanhemman etätyöpiste.</p>
-        </section>
-        <section class="reveal">
-          <h2 class="h-sub">Ratkaisu</h2>
-          <p>Purimme keittiön ja olohuoneen välisen kevyen väliseinän, jolloin ikkunaseinä jäi yhden huoneen käyttöön. Ruokapöytä siirtyi ikkunan viereen, ja patterin edessä on vain matala penkki. Eteisen ja olohuoneen väliin jäi nurkka, johon mahtui lukutuoli ja pieni pöytä.</p>
-          <p>Parkettilattia hiottiin ja öljyttiin. Seinät maalattiin kalkkimaalilla, koska se päästää kosteuden läpi ja kestää vanhalla rappauksella paremmin kuin muovimaali. Verhot ommeltiin ohuesta pellavasta ikkunoiden leveyden mukaan.</p>
-          <p>Suunnittelu kesti kymmenen viikkoa ja remontti kolme kuukautta.</p>
-        </section>
+          <section class="reveal">
+            <h2 class="h-sub">Lähtökohta</h2>
+            <p>Asunto on 78 neliön kolmio kolmannessa kerroksessa. Talo valmistui 1934, ja asukkaina on pariskunta ja kaksi lasta. Ensimmäisellä käynnillä lapset näyttivät minulle, mihin kohtaan lattiaa junarata aina rakennetaan.</p>
+            <p>Ikkunat ovat talon alkuperäisiä, ja taloyhtiö uusii ne vasta 2028. Siksi ikkunoihin, valurautapattereihin ja ulkoseiniin ei saanut koskea. Samaan huoneeseen piti mahtua ruokapöytä, lasten leikkipaikka ja toisen vanhemman etätyöpiste.</p>
+          </section>
+          <section class="reveal">
+            <h2 class="h-sub">Ratkaisu</h2>
+            <p>Purimme keittiön ja olohuoneen välisen kevyen väliseinän, jolloin ikkunaseinä jäi yhden huoneen käyttöön. Ruokapöytä siirtyi ikkunan viereen, ja patterin edessä on vain matala penkki. Junaradalle jäi 2,4 metriä lattiaa sohvan ja penkin väliin.</p>
+            <p>Parkettilattia hiottiin ja öljyttiin. Seinät maalattiin kalkkimaalilla, koska se päästää kosteuden läpi ja kestää vanhalla rappauksella paremmin kuin muovimaali. Verhot ommeltiin ohuesta pellavasta ikkunoiden leveyden mukaan.</p>
+            <p>Suunnittelu kesti kymmenen viikkoa ja remontti kolme kuukautta.</p>
+          </section>
           <section class="reveal">
             <h2 class="h-sub">Pinnat</h2>
             <ul class="pinnat">
-            <li><i class="tx-kalkki"></i>Kalkkimaali, seinät</li>
-            <li><i class="tx-tammi"></i>Parketti, hiottu ja öljytty</li>
-            <li><i class="tx-pellava"></i>Pellava, verhot</li>
+              <li><i class="tx-kalkki"></i>Kalkkimaali, seinät</li>
+              <li><i class="tx-tammi"></i>Parketti, hiottu ja öljytty</li>
+              <li><i class="tx-pellava"></i>Pellava, verhot</li>
             </ul>
           </section>
         </div>
       </div>
     </section>
 
+    <section class="project-ba--band" aria-labelledby="ikkunaseina-title">
+      <div class="wrap">
+        <div class="grid project-ba__grid">
+          <div class="project-ba__text">
+            <p class="label reveal">Ennen ja jälkeen</p>
+            <h2 class="h-section reveal" id="ikkunaseina-title">Ikkunaseinä</h2>
+            <p class="reveal">Remontin aikana huoneessa oli betonilattia, tikkaat ja kaksi patteria, joita ei saanut siirtää. Valmiissa huoneessa pattereiden eteen ei tullut mitään korkeaa, ja matala taso kulkee ikkunaseinän vierestä koko huoneen pituudelta.</p>
+          </div>
+          <div class="project-ba__fig">
+            <figure class="ba reveal" data-ba>
+  <div class="ba__stage">
+    <div class="ba__pane ba__pane--after"><img src="../../img/ba-ikkunaseina-jalkeen.jpg" srcset="../../img/ba-ikkunaseina-jalkeen-800.jpg 800w, ../../img/ba-ikkunaseina-jalkeen.jpg 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1067" alt="Jälkeen: valoisa olohuone, jossa on kalanruotoparketti, sininen sohva, matala valkoinen taso ja ikkunan alla patteri." loading="lazy" decoding="async"><span class="ba__tag" aria-hidden="true">Jälkeen</span></div>
+    <div class="ba__pane ba__pane--before"><img src="../../img/ba-ikkunaseina-ennen.jpg" srcset="../../img/ba-ikkunaseina-ennen-800.jpg 800w, ../../img/ba-ikkunaseina-ennen.jpg 1600w" sizes="(max-width: 960px) 100vw, 60vw" width="1600" height="1067" alt="Ennen: remontin alla oleva huone, jossa on harmaat seinät, patterit ikkunaseinällä, tikkaat ja maalitarvikkeita betonilattialla." loading="lazy" decoding="async"><span class="ba__tag" aria-hidden="true">Ennen</span></div>
+    <span class="ba__line" aria-hidden="true"></span>
+    <input class="ba__range" type="range" min="0" max="100" step="1" value="50" aria-label="Ennen ja jälkeen: siirrä kuvien rajaa">
+    <span class="ba__knob" aria-hidden="true"><svg viewBox="0 0 26 14" aria-hidden="true" focusable="false"><path d="M8 1.5 2.5 7 8 12.5M18 1.5 23.5 7 18 12.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+  </div>
+  <figcaption class="ba__caption"><span><strong>Koti Port Arthur, ikkunaseinä.</strong> <span class="ba__hint">Vedä rajaa tai käytä nuolinäppäimiä.</span></span><span>Ennen-kuva on vastaavasta huoneesta remontin aikana, ei tästä asunnosta.</span></figcaption>
+</figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="wrap" aria-label="Kuvat">
-      <div class="gallery">
-        <figure class="fig fig--a reveal" style="--d: 0ms">
+      <div class="gallery" style="padding-top: 0">
+        <figure class="fig fig--a reveal">
           <div class="media"><img src="../../img/koti-port-arthur-ikkunaseina.jpg" width="960" height="641" alt="Nahkainen perhostuoli ja pellavaverhot suurten ikkunoiden edessä. Ikkunoiden alla on valurautapatteri." loading="lazy" decoding="async"></div>
-          <figcaption class="figcap">Olohuoneen ikkunaseinä. Ikkunat ja patterit ovat talon alkuperäisiä.</figcaption>
+          <figcaption class="figcap">Makuuhuoneen ikkunaseinä. Ikkunat ja patterit ovat talon alkuperäisiä.</figcaption>
         </figure>
         <figure class="fig fig--b reveal" style="--d: 100ms">
           <div class="media"><img src="../../img/koti-port-arthur-olohuone.jpg" width="1290" height="1500" alt="Nojatuoli, lehtikuvioinen tyyny ja ohut verho aamuvalossa." loading="lazy" decoding="async"></div>
           <figcaption class="figcap">Nojatuoli ikkunan vieressä. Verhot ovat ohutta pellavaa.</figcaption>
         </figure>
-        <figure class="fig fig--c reveal" style="--d: 0ms">
+        <figure class="fig fig--c reveal">
           <div class="media"><img src="../../img/koti-port-arthur-eteinen.jpg" width="960" height="640" alt="Eteinen, jossa on hiottu parkettilattia, kirjahylly ja avoin ovi toiseen huoneeseen." loading="lazy" decoding="async"></div>
           <figcaption class="figcap">Eteinen. Parkettilattia hiottiin ja öljyttiin.</figcaption>
         </figure>
         <figure class="fig fig--d reveal" style="--d: 100ms">
-          <div class="media"><img src="../../img/koti-port-arthur-lukunurkka.jpg" width="1500" height="1000" alt="Valkoinen rottinkituoli, puinen jakkara ja valurautapatteri ikkunan vieressä vaalealla seinällä." loading="lazy" decoding="async"></div>
-          <figcaption class="figcap">Toinen nurkka, jossa patteri jäi paikalleen.</figcaption>
+          <div class="media"><img src="../../img/koti-port-arthur-nurkka.jpg" width="1500" height="1000" alt="Valkoinen lukutuoli ja mustavalkoinen tyyny pienen mustan pöydän vieressä, taustalla ovi ja puulattia." loading="lazy" decoding="async"></div>
+          <figcaption class="figcap">Lukunurkka eteisen ja olohuoneen välissä.</figcaption>
         </figure>
       </div>
     </section>
 
     <div class="wrap">
       <nav class="project-nav" aria-label="Muut kohteet">
-        <a href="../../kohteet/index.html"><span class="label">← Kohteet</span><span class="h-sub">Kaikki kohteet</span></a>
-        <a href="../../kohteet/huvila-ruissalo/index.html"><span class="label">Seuraava kohde →</span><span class="h-sub">Huvila Ruissalo</span></a>
+        <a href="../../kohteet/index.html"><span class="label">Kohteet</span><span class="h-sub">Kaikki kohteet</span></a>
+        <a href="../../kohteet/huvila-ruissalo/index.html"><span class="label">Seuraava kohde</span><span class="h-sub">Huvila Ruissalo</span></a>
       </nav>
     </div>
 
-    <section class="section--dark cta" aria-labelledby="cta-title">
+    <section class="cta" aria-labelledby="cta-title">
       <div class="wrap">
-        <div class="cta__card" data-theme="dark">
-          <div class="grid cta__grid">
-            <div class="cta__title">
-              <p class="label reveal" style="margin-bottom: 14px">Oma kohde</p>
-              <h2 class="h-display reveal" id="cta-title">Kerro kohteestasi.</h2>
-            </div>
-            <div class="cta__side reveal">
-              <p>Lähetä osoite, huoneet ja toivottu aikataulu, niin ehdotamme käyntiaikaa kahden arkipäivän kuluessa.</p>
-              <a class="btn btn--light" href="../../yhteystiedot/index.html#lomake">Ota yhteyttä</a>
-            </div>
+        <div class="grid cta__grid">
+          <div class="cta__title">
+            <p class="label reveal">Oma kohde</p>
+            <h2 class="h-display reveal" id="cta-title">Kerro, mitä kodissasi ei saa muuttaa.</h2>
+          </div>
+          <div class="cta__side reveal">
+            <p>Lähetä osoite, huoneet ja toivottu aikataulu. Ehdotamme käyntiaikaa kahden arkipäivän kuluessa.</p>
+            <a class="btn" href="../../yhteystiedot/index.html#lomake">Ota yhteyttä</a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
+
   <footer class="site-footer">
     <div class="wrap">
       <div class="grid site-footer__top">
         <div class="site-footer__brand">
-          <a class="brand" href="../../index.html" aria-label="Studio Utu, etusivu">
-            <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 21V11a7 7 0 0 1 14 0v10" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="15.6" r="1.9" fill="#b19e18"/></svg>
-            <span class="brand__name">Studio <em>Utu</em></span>
-          </a>
-          <p>Sisustussuunnittelua Turussa. Koteja, kesähuviloita ja pieniä liiketiloja.</p>
+          <a class="brand" href="../../index.html" aria-label="Studio Utu, etusivu"><img class="brand__mark" src="../../img/utu-wordmark.svg" width="787" height="176" alt=""></a>
+          <p>Kahden sisustusarkkitehdin toimisto Port Arthurissa. Suunnittelemme enimmäkseen koteja, ja ensimmäinen käynti alkaa aina ennen-kuvista.</p>
         </div>
         <div class="site-footer__col">
           <h2>Toimisto</h2>
@@ -173,7 +200,7 @@
         <div class="site-footer__col">
           <h2>Yhteys</h2>
           <a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a>
-          <span>048 562 1925</span>
+          <span>048 562 1925</span>
           <span>Vastaamme 2 arkipäivässä</span>
         </div>
         <div class="site-footer__col">

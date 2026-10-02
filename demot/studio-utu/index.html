@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
-  <title>Studio Utu | Sisustussuunnittelua Turussa</title>
-  <meta name="description" content="Kahden sisustusarkkitehdin toimisto Turun Port Arthurissa. Suunnittelemme koteja, kesähuviloita ja pieniä liiketiloja. Konsultaatio 290&nbsp;€.">
-  <meta name="theme-color" content="#f9f3f0">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f9f3f0'/%3E%3Cpath d='M8.5 25V14.5a7.5 7.5 0 0 1 15 0V25' fill='none' stroke='%23633b2f' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='20' r='2.2' fill='%23b19e18'/%3E%3C/svg%3E">
+  <title>Studio Utu | Sisustusarkkitehdit, Port Arthur, Turku</title>
+  <meta name="description" content="Kahden sisustusarkkitehdin toimisto Turun Port Arthurissa. Katso huoneet ennen ja jälkeen. Konsultaatio 290&nbsp;€, vastaamme kahden arkipäivän kuluessa.">
+  <meta name="theme-color" content="#183a2e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23183a2e'/%3E%3Cpath d='M6 0h10v32H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z' fill='%232f6150'/%3E%3Cpath d='M16 3v26' stroke='%23efd0c4' stroke-width='2.2'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='%23efd0c4'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.UTU_OK)document.documentElement.classList.remove('js')},3000);</script>
-  <link rel="preload" as="image" href="img/huvila-ruissalo-nojatuoli.jpg" fetchpriority="high">
+  <link rel="preload" as="font" type="font/woff2" href="fonts/young-serif-latin.woff2" crossorigin>
+  <link rel="preload" as="image" href="img/ba-olohuone-jalkeen.jpg" imagesrcset="img/ba-olohuone-jalkeen-800.jpg 800w, img/ba-olohuone-jalkeen.jpg 1600w" imagesizes="(max-width: 1100px) 100vw, 64vw" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -18,10 +19,7 @@
 
   <header class="site-header" data-header>
     <div class="site-header__inner">
-      <a class="brand" href="index.html" aria-label="Studio Utu, etusivu" aria-current="page">
-        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 21V11a7 7 0 0 1 14 0v10" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="15.6" r="1.9" fill="#b19e18"/></svg>
-        <span class="brand__name">Studio <em>Utu</em></span>
-      </a>
+      <a class="brand" href="index.html" aria-label="Studio Utu, etusivu" aria-current="page"><img class="brand__mark" src="img/utu-wordmark.svg" width="787" height="176" alt=""></a>
       <span class="brand__tag">Konsepti</span>
       <nav class="nav" aria-label="Päävalikko">
         <ul class="nav__list">
@@ -53,163 +51,127 @@
       <p>Studio Utu Oy, Utukatu 5, 20100 Turku</p>
       <p>studio@studio-utu.example</p>
       <p>048 562 1925</p>
-      <p><a class="btn btn--small" href="yhteystiedot/index.html#lomake" style="margin-top: 12px">Varaa konsultaatio</a></p>
+      <p style="margin-top: 16px"><a class="btn btn--small" href="yhteystiedot/index.html#lomake">Varaa konsultaatio</a></p>
     </div>
   </div>
 
   <main id="sisalto" tabindex="-1">
-
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="grid hero__grid">
-        <div class="hero__text">
-          <p class="label hero__eyebrow reveal">Port Arthur, Turku</p>
-          <h1 class="hero__title reveal" id="hero-title" style="--d: 80ms">
-            <span class="h-display">Sisustussuunnittelua Turussa.</span>
-            <span class="h-display"><em>Koteja, kesähuviloita ja pieniä liiketiloja.</em></span>
-          </h1>
-          <p class="lead hero__lead reveal" style="--d: 200ms">Olemme kahden sisustusarkkitehdin toimisto Port Arthurissa. Teemme noin 15 suunnitelmaa vuodessa, useimmiten remontin tai muuton yhteydessä.</p>
-          <div class="hero__actions reveal" style="--d: 300ms">
-            <a class="btn" href="yhteystiedot/index.html#lomake">Varaa konsultaatio</a>
-            <a class="link-arrow" href="kohteet/index.html">Katso kohteet</a>
-          </div>
-          <p class="hero__note reveal" style="--d: 360ms">Konsultaatio kestää 2 tuntia ja maksaa 290 €. Matkat Turussa kuuluvat hintaan.</p>
-        </div>
-        <figure class="hero__visual">
-          <div class="media hero__arch reveal" data-reveal="img">
-            <img src="img/huvila-ruissalo-nojatuoli.jpg" width="733" height="1100" alt="Vanha verhoiltu nojatuoli, pieni pyöreä sivupöytä ja röyhelövarjostimellinen lamppu tummapaneelisen seinän vieressä." decoding="async" fetchpriority="high">
-          </div>
-          <figcaption class="hero__caption reveal" style="--d: 500ms">
-            <strong>Huvila Ruissalo</strong>
-            <span>Alakerran nurkka. Ruissalo, Turku</span>
-          </figcaption>
-        </figure>
-      </div>
-
-      <ul class="facts-strip reveal">
-        <li><strong>2019</strong><span>Studio perustettiin Port Arthurissa.</span></li>
-        <li><strong>15</strong><span>suunnitelmaa vuodessa, enimmäkseen kodeille.</span></li>
-        <li><strong>290 €</strong><span>Konsultaatio, 2 tuntia ja matkat Turussa mukana.</span></li>
-        <li><strong>2 pv</strong><span>Vastaamme kahden arkipäivän kuluessa.</span></li>
-      </ul>
-    </section>
-
-    <section class="section section--tight" id="kohteet" aria-labelledby="kohteet-title" data-rail>
+    <section class="hero" aria-labelledby="hero-title">
       <div class="wrap">
-        <div class="section-head">
-          <div class="section-head__title">
-            <p class="label reveal">Kohteet</p>
-            <h2 class="h-section reveal" id="kohteet-title">Viimeisimpiä töitä</h2>
+        <div class="grid hero__top">
+          <h1 class="hero__title reveal" id="hero-title">Olohuone on tyhjä, ja sohva pitäisi jo tilata.</h1>
+          <p class="hero__meta reveal" style="--d: 120ms"><strong>Studio Utu</strong>Kaksi sisustusarkkitehtia SIO, Port Arthur, Turku</p>
+        </div>
+        <div class="grid hero__body">
+          <div class="hero__ba">
+            <figure class="ba" data-ba data-ba-intro>
+  <div class="ba__stage">
+    <div class="ba__pane ba__pane--after"><img src="img/ba-olohuone-jalkeen.jpg" srcset="img/ba-olohuone-jalkeen-800.jpg 800w, img/ba-olohuone-jalkeen.jpg 1600w" sizes="(max-width: 1100px) 100vw, 64vw" width="1600" height="1067" alt="Jälkeen: vaaleansininen sohva, jalkalamppu ja kehystetty valokuva valkoista seinää vasten. Lattiassa on parketti." fetchpriority="high" decoding="async"><span class="ba__tag" aria-hidden="true">Jälkeen</span></div>
+    <div class="ba__pane ba__pane--before"><img src="img/ba-olohuone-ennen.jpg" srcset="img/ba-olohuone-ennen-800.jpg 800w, img/ba-olohuone-ennen.jpg 1600w" sizes="(max-width: 1100px) 100vw, 64vw" width="1600" height="1067" alt="Ennen: tyhjä huone, jossa on valkoiset pariovet, valkoiset seinät ja vaalea lautalattia." fetchpriority="high" decoding="async"><span class="ba__tag" aria-hidden="true">Ennen</span></div>
+    <span class="ba__line" aria-hidden="true"></span>
+    <input class="ba__range" type="range" min="0" max="100" step="1" value="50" aria-label="Ennen ja jälkeen: siirrä kuvien rajaa">
+    <span class="ba__knob" aria-hidden="true"><svg viewBox="0 0 26 14" aria-hidden="true" focusable="false"><path d="M8 1.5 2.5 7 8 12.5M18 1.5 23.5 7 18 12.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+  </div>
+  <figcaption class="ba__caption"><span><strong>Koti Port Arthur, olohuone.</strong> <span class="ba__hint">Vedä rajaa tai käytä nuolinäppäimiä.</span></span><span>Kuvapari on havainnollistus: ennen-kuva on vastaavasta tyhjästä huoneesta Oslosta, ei tästä asunnosta.</span></figcaption>
+</figure>
           </div>
-          <div class="section-head__aside reveal">
-            <div class="rail__controls" data-rail-controls>
-              <button class="rail__btn" type="button" aria-label="Edellinen kohde" data-rail-prev><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2m5-5L2 8l5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
-              <button class="rail__btn" type="button" aria-label="Seuraava kohde" data-rail-next><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="letter reveal" style="--d: 200ms">
+            <p class="letter__hello">Hei,</p>
+            <p>useimmat asiakkaamme ottavat yhteyttä juuri tässä vaiheessa. Avaimet on saatu tai remontti alkaa kuukauden päästä, ja huonekaluliike kysyy jo toimitusosoitetta.</p>
+            <p>Tulen paikalle, mittaan huoneen ja kysyn, missä istut iltaisin ja mihin lapset jättävät reppunsa. Kahden tunnin konsultaatio maksaa 290 €, ja kirjoitan muistiinpanot kahden arkipäivän kuluessa.</p>
+            <div class="letter__sign">
+              <span class="letter__name">Aino Kuusela</span>
+              <span class="letter__role">Sisustusarkkitehti SIO, Studio Utu</span>
+            </div>
+            <div class="letter__actions">
+              <a class="btn" href="yhteystiedot/index.html#lomake">Varaa konsultaatio</a>
+              <a class="link-arrow" href="kohteet/index.html">Katso kohteet</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="rail">
-        <ul class="rail__track" data-rail-track>
-          <li class="rail__item">
-            <a href="kohteet/koti-port-arthur/index.html">
-              <div class="media rail__media"><img src="img/koti-port-arthur-olohuone-640.jpg" width="550" height="640" alt="Nojatuoli, lehtikuvioinen tyyny ja ohut verho aamuvalossa." loading="lazy" decoding="async"></div>
-              <div class="rail__body">
-                <span class="rail__name">Koti Port Arthur</span>
-                <span class="rail__meta">Kerrostalokoti, 78 m². Port Arthur, Turku, 2025</span>
-              </div>
-            </a>
-          </li>
-          <li class="rail__item">
-            <a href="kohteet/huvila-ruissalo/index.html">
-              <div class="media rail__media"><img src="img/huvila-ruissalo-ikkuna.jpg" width="960" height="640" alt="Pellavaverhot ikkunan molemmin puolin ja pieni kasvi ikkunalaudalla." loading="lazy" decoding="async"></div>
-              <div class="rail__body">
-                <span class="rail__name">Huvila Ruissalo</span>
-                <span class="rail__meta">Kesähuvila, 140 m². Ruissalo, Turku, 2024</span>
-              </div>
-            </a>
-          </li>
-          <li class="rail__item">
-            <a href="kohteet/index.html#kahvila-aura">
-              <div class="media rail__media"><img src="img/kahvila-aura-640.jpg" width="512" height="640" alt="Kahvilan ikkunapöytä ja baarijakkarat säleverhojen takana." loading="lazy" decoding="async"></div>
-              <div class="rail__body">
-                <span class="rail__name">Kahvila Kaarna</span>
-                <span class="rail__meta">Kahvila, 48 paikkaa. Turku, 2025</span>
-              </div>
-            </a>
-          </li>
-          <li class="rail__item">
-            <a href="kohteet/index.html#mokki-nauvo">
-              <div class="media rail__media"><img src="img/mokki-nauvo.jpg" width="509" height="636" alt="Pieni mäntypaneloitu makuuhuone, jossa on vuode ja valkoinen kattolamppu." loading="lazy" decoding="async"></div>
-              <div class="rail__body">
-                <span class="rail__name">Mökki Nauvo</span>
-                <span class="rail__meta">Saaristomökki, 46 m². Nauvo, 2024</span>
-              </div>
-            </a>
-          </li>
-          <li class="rail__item">
-            <a href="kohteet/index.html#koti-martti">
-              <div class="media rail__media"><img src="img/koti-martti-640.jpg" width="640" height="427" alt="Vanha puupöytä katettuna keittolautasille ja leivälle, taustalla verho." loading="lazy" decoding="async"></div>
-              <div class="rail__body">
-                <span class="rail__name">Koti Martti</span>
-                <span class="rail__meta">Puutalon alakerta, 112 m². Martti, Turku, 2023</span>
-              </div>
-            </a>
-          </li>
-          <li class="rail__item">
-            <a href="kohteet/index.html#puoti-vahatori">
-              <div class="media rail__media"><img src="img/puoti-vahatori-640.jpg" width="640" height="480" alt="Vaaterekki, jossa on maanvärisiä vaatteita lämpimässä valossa." loading="lazy" decoding="async"></div>
-              <div class="rail__body">
-                <span class="rail__name">Puoti Liina</span>
-                <span class="rail__meta">Vaateliike, 38 m². Turku, 2023</span>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="wrap" style="margin-top: 36px">
-        <a class="link-arrow reveal" href="kohteet/index.html">Kaikki kohteet ja muut työt</a>
-      </div>
     </section>
 
-    <section class="bleed" aria-label="Huvila Ruissalo">
-      <a class="bleed__link" href="kohteet/huvila-ruissalo/index.html">
-        <div class="media bleed__media reveal" data-reveal="img"><img src="img/huvila-ruissalo-lattia.jpg" width="1600" height="1067" alt="Raskas pellavaverho ja ikkunasta tuleva ilta-aurinko, joka piirtää valojuovia puulattialle." loading="lazy" decoding="async"></div>
-        <div class="wrap bleed__cap">
-          <p><span class="label">Ruissalo, Turku</span><strong>Huvila Ruissalo, kesäkuu 2024</strong></p>
-          <span class="link-arrow">Katso kohde</span>
+    <section class="section" id="kohteet" aria-labelledby="kohteet-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head__title">
+            <p class="label reveal">Kohteet</p>
+            <h2 class="h-section reveal" id="kohteet-title">Kaksi kotia ennen ja jälkeen</h2>
+          </div>
+          <div class="section-head__aside reveal">
+            <p>Kuvaan jokaisen huoneen ensimmäisellä käynnillä. Ne kuvat ovat yleensä arkisia: muuttolaatikoita, irrotettuja listoja ja maalipurkkeja.</p>
+          </div>
         </div>
-      </a>
+        <div class="diptychs">
+          <article class="diptych reveal">
+            <a href="kohteet/koti-port-arthur/index.html">
+              <div class="diptych__pair">
+                <figure><div class="media"><img src="img/ba-ikkunaseina-ennen-800.jpg" width="800" height="533" alt="Ennen: remontin alla oleva huone, jossa on harmaat seinät, patterit ikkunaseinällä ja tikkaat." loading="lazy" decoding="async"></div><span class="ba__tag">Ennen</span></figure>
+                <figure><div class="media"><img src="img/ba-ikkunaseina-jalkeen-800.jpg" width="800" height="533" alt="Jälkeen: valoisa olohuone, jossa on kalanruotoparketti, sininen sohva ja matala valkoinen taso." loading="lazy" decoding="async"></div><span class="ba__tag">Jälkeen</span></figure>
+              </div>
+              <div class="diptych__text">
+                <p class="label">Port Arthur, Turku · 2025</p>
+                <h3 class="h-section">Koti Port Arthur</h3>
+                <p class="diptych__meta">Kolmio 1934 valmistuneessa kerrostalossa, 78 m². Ikkunoihin ja pattereihin ei saanut koskea, joten kalusteet sijoitettiin niiden mukaan.</p>
+                <span class="link-arrow">Katso kohde</span>
+              </div>
+            </a>
+          </article>
+          <article class="diptych reveal">
+            <a href="kohteet/huvila-ruissalo/index.html">
+              <div class="diptych__pair">
+                <figure><div class="media"><img src="img/ba-ruokailu-ennen-800.jpg" width="800" height="533" alt="Ennen: kulunut lautalattia, vanha puupöytä ja sininen toimistotuoli." loading="lazy" decoding="async"></div><span class="ba__tag">Ennen</span></figure>
+                <figure><div class="media"><img src="img/ba-ruokailu-jalkeen-800.jpg" width="800" height="533" alt="Jälkeen: katettu ruokapöytä ikkunan vieressä, valkoiset verhot ja kattokruunu." loading="lazy" decoding="async"></div><span class="ba__tag">Jälkeen</span></figure>
+              </div>
+              <div class="diptych__text">
+                <p class="label">Ruissalo, Turku · 2024</p>
+                <h3 class="h-section">Huvila Ruissalo</h3>
+                <p class="diptych__meta">Kesähuvila 1910-luvulta, 140 m². Yksi väliseinä poistettiin, ja ruokapöytä siirtyi ikkunan eteen puutarhaan päin.</p>
+                <span class="link-arrow">Katso kohde</span>
+              </div>
+            </a>
+          </article>
+        </div>
+        <ul class="minis">
+          <li class="reveal"><a href="kohteet/index.html#kahvila-aura"><div class="media"><img src="img/kahvila-aura-640.jpg" width="512" height="640" alt="Kahvilan ikkunapöytä ja baarijakkarat säleverhojen takana." loading="lazy" decoding="async"></div><span class="minis__name">Kahvila Kaarna</span><span class="minis__meta">48 paikkaa, Turku, 2025</span></a></li>
+          <li class="reveal" style="--d: 80ms"><a href="kohteet/index.html#mokki-nauvo"><div class="media"><img src="img/mokki-nauvo.jpg" width="509" height="636" alt="Pieni mäntypaneloitu makuuhuone, jossa on vuode ja valkoinen kattolamppu." loading="lazy" decoding="async"></div><span class="minis__name">Mökki Nauvo</span><span class="minis__meta">46 m², Nauvo, 2024</span></a></li>
+          <li class="reveal" style="--d: 160ms"><a href="kohteet/index.html#koti-martti"><div class="media"><img src="img/koti-martti-640.jpg" width="640" height="427" alt="Vanha puupöytä katettuna keittolautasille ja leivälle, taustalla verho." loading="lazy" decoding="async"></div><span class="minis__name">Koti Martti</span><span class="minis__meta">Puutalon alakerta, 112 m², 2023</span></a></li>
+          <li class="reveal" style="--d: 240ms"><a href="kohteet/index.html#puoti-vahatori"><div class="media"><img src="img/puoti-vahatori-640.jpg" width="640" height="480" alt="Vaaterekki, jossa on maanvärisiä vaatteita lämpimässä valossa." loading="lazy" decoding="async"></div><span class="minis__name">Puoti Liina</span><span class="minis__meta">Vaateliike, 38 m², 2023</span></a></li>
+        </ul>
+        <p style="margin-top: 36px" class="reveal"><a class="link-arrow" href="kohteet/index.html">Kaikki kohteet ja muut työt</a></p>
+      </div>
     </section>
 
-    <section class="section section--panel" id="hinnat" aria-labelledby="hinnat-title">
+    <section class="section section--plaster" id="hinnat" aria-labelledby="hinnat-title">
       <div class="wrap">
         <div class="section-head">
           <div class="section-head__title">
             <p class="label reveal">Palvelut ja hinnat</p>
             <h2 class="h-section reveal" id="hinnat-title">Mitä suunnittelu maksaa</h2>
           </div>
-          <div class="section-head__aside reveal">
-            <p>Hinnat sisältävät arvonlisäveron 25,5 %. Kokonaissuunnittelun hinta sovitaan kiinteäksi ennen töiden alkua.</p>
+          <div class="section-head__aside reveal" style="color: #4a332c">
+            <p>Hinnat sisältävät arvonlisäveron 25,5 %. Kokonaissuunnittelun hinta sovitaan kiinteäksi ennen töiden alkua.</p>
           </div>
         </div>
         <ul class="price-rows">
           <li class="price-row reveal">
             <h3 class="h-sub price-row__title">Konsultaatio</h3>
             <p class="price-row__text">Kaksi tuntia kotonasi tai tilassasi. Saat kirjalliset muistiinpanot kahden arkipäivän kuluessa.</p>
-            <p class="price-row__price"><strong>290 €</strong><span>2 h, matkat Turussa mukana</span></p>
+            <p class="price-row__price"><strong>290 €</strong><span>2 h, matkat Turussa mukana</span></p>
           </li>
           <li class="price-row reveal">
             <h3 class="h-sub price-row__title">Huonesuunnitelma</h3>
             <p class="price-row__text">Yhden huoneen pohjaratkaisu, värit, materiaalit, valaisimet ja ostoslista. Valmis noin kolmessa viikossa.</p>
-            <p class="price-row__price"><strong>alk. 950 €</strong><span>yksi huone</span></p>
+            <p class="price-row__price"><strong>alk. 950 €</strong><span>yksi huone</span></p>
           </li>
           <li class="price-row reveal">
             <h3 class="h-sub price-row__title">Kokonaissuunnittelu</h3>
             <p class="price-row__text">Koko asunnon tai huvilan suunnitelma remonttiin tai muuttoon. Hinta sovitaan kiinteäksi ennen aloitusta.</p>
-            <p class="price-row__price"><strong>4 900–8 500 €</strong><span>tyypillisesti 100–150 m²</span></p>
+            <p class="price-row__price"><strong>4 900–8 500 €</strong><span>tyypillisesti 100–150 m²</span></p>
           </li>
         </ul>
-        <p class="fineprint reveal">Lisätyö laskutetaan 95 €/h. Lisää sisällöstä ja rajauksista on palvelusivulla.</p>
+        <p class="fineprint reveal" style="color: #4a332c">Lisätyö laskutetaan 95 €/h. Sisällöt ja rajaukset ovat palvelusivulla.</p>
         <p style="margin-top: 28px" class="reveal"><a class="link-arrow" href="palvelut/index.html">Palvelut ja hinnat</a></p>
       </div>
     </section>
@@ -222,34 +184,34 @@
             <h2 class="h-section reveal" id="materiaalit-title">Valitse pinnat ja katso paletti</h2>
           </div>
           <div class="section-head__aside reveal">
-            <p>Jokaiseen suunnitelmaan kuuluu materiaalitaulu oikeista näytepaloista. Tässä voit valita kuudesta pinnasta 2–4 ja katsoa, miltä ne näyttävät yhdessä.</p>
+            <p>Jokaiseen suunnitelmaan kuuluu materiaalitaulu oikeista näytepaloista. Valitse tästä kuudesta pinnasta 2–4 ja katso, miltä ne näyttävät yhdessä.</p>
           </div>
         </div>
         <div class="board" data-board>
           <div class="board__swatches reveal">
             <button class="swatch sw-pellava" type="button" aria-pressed="false" data-swatch="Pellava" data-color="#d8cebd">
               <span><span class="swatch__name">Pellava</span><span class="swatch__note">Verhot ja tyynynpäälliset. Pestävä.</span></span>
-              <span class="swatch__foot"><span>Tekstiili</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.3" fill="none"/></svg></span></span>
+              <span class="swatch__foot"><span>Tekstiili</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span></span>
             </button>
             <button class="swatch sw-kalkki" type="button" aria-pressed="false" data-swatch="Kalkkimaali" data-color="#e7dfd2">
               <span><span class="swatch__name">Kalkkimaali</span><span class="swatch__note">Seinät. Paikka korjataan maalaamalla uudelleen.</span></span>
-              <span class="swatch__foot"><span>Seinä</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.3" fill="none"/></svg></span></span>
+              <span class="swatch__foot"><span>Seinä</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span></span>
             </button>
             <button class="swatch sw-savi" type="button" aria-pressed="false" data-swatch="Savirappaus" data-color="#b59c80">
               <span><span class="swatch__name">Savirappaus</span><span class="swatch__note">Seinät. Korjaus onnistuu kostuttamalla pinta.</span></span>
-              <span class="swatch__foot"><span>Seinä</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.3" fill="none"/></svg></span></span>
+              <span class="swatch__foot"><span>Seinä</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span></span>
             </button>
             <button class="swatch sw-travertiini" type="button" aria-pressed="false" data-swatch="Travertiini" data-color="#d5c3a2">
               <span><span class="swatch__name">Travertiini</span><span class="swatch__note">Ikkunalaudat ja tasot. Sitruuna ja viini jättävät jäljen.</span></span>
-              <span class="swatch__foot"><span>Kivi</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.3" fill="none"/></svg></span></span>
+              <span class="swatch__foot"><span>Kivi</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span></span>
             </button>
             <button class="swatch sw-tammi" type="button" aria-pressed="false" data-swatch="Tammi" data-color="#a8835c">
               <span><span class="swatch__name">Tammi, öljytty</span><span class="swatch__note">Lattiat ja kiintokalusteet. Pinnan voi hioa uudelleen.</span></span>
-              <span class="swatch__foot"><span>Puu</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.3" fill="none"/></svg></span></span>
+              <span class="swatch__foot"><span>Puu</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span></span>
             </button>
             <button class="swatch sw-terrakotta" type="button" aria-pressed="false" data-swatch="Terrakotta" data-color="#8f4f33">
               <span><span class="swatch__name">Terrakotta</span><span class="swatch__note">Lattialaatat eteiseen ja keittiöön.</span></span>
-              <span class="swatch__foot"><span>Lattia</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.3" fill="none"/></svg></span></span>
+              <span class="swatch__foot"><span>Lattia</span><span class="swatch__add" aria-hidden="true"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span></span>
             </button>
           </div>
           <div class="palette reveal" style="--d: 120ms">
@@ -258,13 +220,13 @@
             <div class="palette__chips" aria-live="polite" data-palette>
               <p class="palette__empty"><span class="palette__slots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Paletti on vielä tyhjä.</p>
             </div>
-            <p class="fineprint" style="margin-top: 0">Konsultaatioon otamme näytepalat mukaan.</p>
+            <p class="fineprint">Tuon näytepalat mukanani konsultaatioon.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--panel" id="studio" aria-labelledby="studio-title">
+    <section class="section section--dark" id="studio" aria-labelledby="studio-title">
       <div class="wrap">
         <div class="split">
           <figure class="split__media reveal">
@@ -273,8 +235,9 @@
           </figure>
           <div class="split__text">
             <p class="label reveal">Studio</p>
-            <h2 class="h-section reveal" id="studio-title">Kaksi sisustusarkkitehtia Port Arthurissa</h2>
-            <p class="reveal">Aino Kuusela ja Tuomas Raunio perustivat Studio Utun vuonna 2019. Molemmat ovat sisustusarkkitehteja SIO, ja kumpikin vastaa omista kohteistaan alusta loppuun. Ensimmäisen vuoden toimisto oli entinen parturi, ja ovelle tuli silloin tällöin ihmisiä pyytämään leikkausaikaa.</p>
+            <h2 class="h-section reveal" id="studio-title" style="color: var(--plaster)">Toimistomme oli ennen parturi</h2>
+            <p class="reveal">Perustimme Studio Utun Tuomas Raunion kanssa vuonna 2019. Ensimmäisen vuoden ovelle tuli silloin tällöin ihmisiä kysymään leikkausaikaa. Ohjasimme heidät kulman kahvilaan, ja yksi heistä tilasi myöhemmin olohuoneensa suunnitelman.</p>
+            <p class="reveal">Olemme molemmat sisustusarkkitehteja SIO. Kumpikin vastaa omista kohteistaan ensimmäisestä käynnistä luovutukseen.</p>
             <a class="link-arrow reveal" href="studio/index.html">Tutustu studioon</a>
           </div>
         </div>
@@ -295,12 +258,12 @@
             <h3 class="h-sub">Kaksi kokonaissuunnittelua alkuvuodelle</h3>
             <p>Otamme alkuvuodeksi 2027 vielä kaksi kokonaissuunnittelua. Kerro kohteesta lomakkeella.</p>
           </li>
-          <li class="reveal">
+          <li class="reveal" style="--d: 80ms">
             <time datetime="2026-08-01">1.8.2026</time>
             <h3 class="h-sub">Elina Salo aloitti hankinta-assistenttina</h3>
             <p>Elina hoitaa tilaukset, toimitukset ja materiaalinäytteet kolmena päivänä viikossa.</p>
           </li>
-          <li class="reveal">
+          <li class="reveal" style="--d: 160ms">
             <time datetime="2025-03-18">18.3.2025</time>
             <h3 class="h-sub">Koti Port Arthur valmistui</h3>
             <p>78 neliön kolmio valmistui maaliskuussa. <a href="kohteet/koti-port-arthur/index.html">Lue kohteesta</a>.</p>
@@ -309,32 +272,29 @@
       </div>
     </section>
 
-    <section class="section--dark cta" aria-labelledby="cta-title">
+    <section class="cta" aria-labelledby="cta-title">
       <div class="wrap">
-        <div class="cta__card" data-theme="dark">
-          <div class="grid cta__grid">
-            <div class="cta__title">
-              <p class="label reveal" style="margin-bottom: 14px">Konsultaatio</p>
-              <h2 class="h-display reveal" id="cta-title">Aloita konsultaatiosta.</h2>
-            </div>
-            <div class="cta__side reveal">
-              <p>Käymme huoneet läpi kaksi tuntia ja kirjoitamme muistiinpanot kahden arkipäivän kuluessa. Hinta on 290 €, ja matkat Turussa kuuluvat siihen.</p>
-              <a class="btn btn--light" href="yhteystiedot/index.html#lomake">Varaa konsultaatio</a>
-            </div>
+        <div class="grid cta__grid">
+          <div class="cta__title">
+            <p class="label reveal">Konsultaatio</p>
+            <h2 class="h-display reveal" id="cta-title">Lähetä kuva huoneesta sellaisena kuin se nyt on.</h2>
+          </div>
+          <div class="cta__side reveal">
+            <p>Liitä viestiin pohjapiirros, jos sellainen on. Vastaamme kahden arkipäivän kuluessa ja ehdotamme käyntiaikaa. Konsultaatio maksaa 290 €, ja matkat Turussa kuuluvat hintaan.</p>
+            <a class="btn" href="yhteystiedot/index.html#lomake">Varaa konsultaatio</a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
+
   <footer class="site-footer">
     <div class="wrap">
       <div class="grid site-footer__top">
         <div class="site-footer__brand">
-          <a class="brand" href="index.html" aria-label="Studio Utu, etusivu">
-            <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 21V11a7 7 0 0 1 14 0v10" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="15.6" r="1.9" fill="#b19e18"/></svg>
-            <span class="brand__name">Studio <em>Utu</em></span>
-          </a>
-          <p>Sisustussuunnittelua Turussa. Koteja, kesähuviloita ja pieniä liiketiloja.</p>
+          <a class="brand" href="index.html" aria-label="Studio Utu, etusivu"><img class="brand__mark" src="img/utu-wordmark.svg" width="787" height="176" alt=""></a>
+          <p>Kahden sisustusarkkitehdin toimisto Port Arthurissa. Suunnittelemme enimmäkseen koteja, ja ensimmäinen käynti alkaa aina ennen-kuvista.</p>
         </div>
         <div class="site-footer__col">
           <h2>Toimisto</h2>
@@ -346,7 +306,7 @@
         <div class="site-footer__col">
           <h2>Yhteys</h2>
           <a href="mailto:studio@studio-utu.example">studio@studio-utu.example</a>
-          <span>048 562 1925</span>
+          <span>048 562 1925</span>
           <span>Vastaamme 2 arkipäivässä</span>
         </div>
         <div class="site-footer__col">
