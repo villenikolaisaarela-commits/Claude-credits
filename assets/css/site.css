@@ -937,6 +937,5 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .split .gains > li { grid-template-columns: 40px 1fr; }
 }
 
-.proj-note { margin-top: 20px; }
 .split h2.label { font-weight: inherit; }
 @media (max-width: 560px) { .site-footer > :first-child { grid-column: 1 / -1; } }
