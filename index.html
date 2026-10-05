@@ -26,7 +26,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/geist-300-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/vendor/lenis.css">
-  <link rel="stylesheet" href="assets/css/site.css?v=20261005c">
+  <link rel="stylesheet" href="assets/css/site.css?v=20261005d">
   <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">
   {
@@ -92,6 +92,7 @@
 
   <header class="site-header">
     <a class="brand" href="./"><img src="assets/img/ville-saarela.svg" alt="Ville Saarela" width="126" height="18"></a>
+    <p class="hdr-meta" aria-hidden="true"><span>Versio 3.0 (10.2026)</span><span data-clock>Helsinki</span></p>
     <nav class="nav" aria-label="Päävalikko">
       <a href="#tyot">Työt</a>
       <a href="#hinnat">Hinnat</a>
@@ -260,25 +261,26 @@
         <h2 id="prosessi-title">Prosessi</h2>
         <span class="label">Näin projekti etenee</span>
       </div>
-      <ol class="steps">
-        <li data-reveal>
-          <span class="label">01 · Päivä 1</span>
-          <h3>Tutustuminen</h3>
+      <div class="step head" aria-hidden="true"><span class="step-name">Vaihe</span><span class="step-time">Aika</span><span>Mitä tapahtuu</span></div>
+      <ol class="steps steps--rows">
+        <li class="step" data-reveal>
+          <span class="step-name">01 Tutustuminen</span>
+          <span class="step-time">Päivä 1</span>
           <p>Lyhyt keskustelu: millaista työtä teet, kenelle ja mitä sivujen pitää saada aikaan.</p>
         </li>
-        <li data-reveal>
-          <span class="label">02 · Viikko 1</span>
-          <h3>Maksuton luonnos</h3>
+        <li class="step" data-reveal>
+          <span class="step-name">02 Maksuton luonnos</span>
+          <span class="step-time">Viikko 1</span>
           <p>Etusivun luonnos sinun töilläsi. Näet suunnan ennen kuin sitoudut mihinkään.</p>
         </li>
-        <li data-reveal>
-          <span class="label">03 · Viikot 2–3</span>
-          <h3>Toteutus</h3>
+        <li class="step" data-reveal>
+          <span class="step-name">03 Toteutus</span>
+          <span class="step-time">Viikot 2–3</span>
           <p>Projektisivut, kuvat, piirustukset ja tekstit. Testaan sivut eri laitteilla, ja voit kommentoida matkan varrella.</p>
         </li>
-        <li data-reveal>
-          <span class="label">04 · Viikko 4</span>
-          <h3>Julkaisu</h3>
+        <li class="step" data-reveal>
+          <span class="step-name">04 Julkaisu</span>
+          <span class="step-time">Viikko 4</span>
           <p>Sivut omaan osoitteeseen, Google-perusasiat kuntoon ja lyhyt opastus. Sen jälkeen 30 päivän tuki.</p>
         </li>
       </ol>
@@ -322,11 +324,11 @@
 
   <footer class="site-footer">
     <span class="label">© <span data-year>2026</span> Ville Saarela</span>
-    <span class="label" data-clock>Suomi</span>
+    <span class="label">Versio 3.0 (10.2026)</span>
     <a class="label top link-line" href="#">Ylös ↑</a>
   </footer>
 
   <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/site.js?v=20261005c" defer></script>
+  <script src="assets/js/site.js?v=20261005d" defer></script>
 </body>
 </html>

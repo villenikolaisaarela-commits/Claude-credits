@@ -874,3 +874,31 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .proj-city { grid-area: city; font-size: 14px; color: var(--muted); }
   .proj-year { grid-area: year; font-size: 14px; color: var(--muted); }
 }
+
+/* Header details (from the index-first preview): version and Helsinki time */
+.hdr-meta { display: none; }
+@media (min-width: 1024px) {
+  .site-header { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; align-items: center; }
+  .site-header .brand { grid-column: 1 / span 3; }
+  .hdr-meta { display: flex; grid-column: 5 / span 4; gap: 0 clamp(24px, 3vw, 56px); color: var(--muted); font-size: 15px; letter-spacing: -0.01em; white-space: nowrap; }
+  .site-header .nav { grid-column: 9 / -1; justify-self: end; }
+}
+
+/* Process as compact rows: step, time, what happens */
+.steps.steps--rows { display: block; }
+.step { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; align-items: baseline;
+  font-size: clamp(17px, 1.35vw, 21px); font-weight: 500; line-height: 1.25; letter-spacing: -0.02em; }
+.steps--rows .step { border: 0; padding: 0 0 0.9em; }
+.step.head { margin: clamp(8px, 1vw, 16px) 0 clamp(18px, 2vw, 28px); }
+.step .step-name { grid-column: 1 / span 4; }
+.step .step-time { grid-column: 5 / span 2; color: var(--muted); }
+.step > p, .step.head > span:last-child { grid-column: 7 / -1; max-width: 48ch; }
+.steps--rows .step > p { color: var(--fg); font-size: inherit; }
+.step.head .step-time { color: var(--fg); }
+@media (max-width: 760px) {
+  .step { grid-template-columns: minmax(0, 1fr) auto; row-gap: 0.2em; font-size: 17px; }
+  .step.head { display: none; }
+  .step .step-name { grid-column: 1; }
+  .step .step-time { grid-column: 2; }
+  .step > p { grid-column: 1 / -1; color: var(--muted) !important; font-size: 15px !important; }
+}

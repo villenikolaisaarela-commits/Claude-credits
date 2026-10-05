@@ -84,10 +84,10 @@
   else window.addEventListener('load', markLoaded);
   setTimeout(markLoaded, 1500);
 
-  var clock = document.querySelector('[data-clock]');
-  if (clock) {
+  var clocks = document.querySelectorAll('[data-clock]');
+  if (clocks.length) {
     var fmt = new Intl.DateTimeFormat('fi-FI', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Helsinki' });
-    var tick = function () { clock.textContent = 'Suomi ' + fmt.format(new Date()); };
+    var tick = function () { var v = fmt.format(new Date()) + ' Helsinki'; clocks.forEach(function (c) { c.textContent = v; }); };
     tick();
     setInterval(tick, 30000);
   }
