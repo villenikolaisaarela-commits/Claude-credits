@@ -919,8 +919,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .case-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px 48px; }
 .case-head .cta { margin-bottom: 0.6em; flex: none; }
 .shot-top { margin-top: clamp(24px, 3.5vw, 48px); padding: clamp(12px, 4vw, 64px); }
-.case-facts { margin-top: clamp(28px, 4vw, 56px); grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.case-facts > div:last-of-type dd { color: var(--muted); }
+.case-facts { margin-top: clamp(28px, 4vw, 56px); grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
 .split .gains { display: grid; gap: 0; }
 .split .gains > li { display: grid; grid-template-columns: 56px 1fr; gap: 6px 16px; padding: 22px 0; border-top: 1px solid var(--line); }
