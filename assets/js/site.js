@@ -118,3 +118,53 @@
     });
   }
 })();
+
+// Project index: on desktop the project image follows the cursor over the list.
+(function () {
+  var list = document.querySelector('.projects');
+  var box = document.querySelector('.proj-preview');
+  if (!list || !box || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var imgs = {}, cur = null, built = false;
+  var mx = 0, my = 0, x = 0, y = 0, running = false, shown = false;
+  var build = function () {
+    if (built) return; built = true;
+    list.querySelectorAll('.proj').forEach(function (a) {
+      var src = a.getAttribute('data-preview');
+      if (!src || imgs[src]) return;
+      var im = new Image(); im.src = src; im.alt = ''; im.decoding = 'async';
+      box.appendChild(im); imgs[src] = im;
+    });
+  };
+  var target = function () {
+    var w = box.offsetWidth, h = box.offsetHeight, gap = 28;
+    var tx = mx + gap, ty = my - h / 2;
+    if (tx + w > window.innerWidth - 16) tx = mx - w - gap;
+    ty = Math.max(16, Math.min(ty, window.innerHeight - h - 16));
+    return [tx, ty];
+  };
+  var tick = function () {
+    var t = target();
+    x += (t[0] - x) * (reduce ? 1 : 0.16); y += (t[1] - y) * (reduce ? 1 : 0.16);
+    box.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0)';
+    if (shown || Math.abs(t[0] - x) > 0.5 || Math.abs(t[1] - y) > 0.5) requestAnimationFrame(tick); else running = false;
+  };
+  var run = function () { if (!running) { running = true; requestAnimationFrame(tick); } };
+  list.addEventListener('pointerenter', build);
+  list.addEventListener('pointermove', function (e) {
+    mx = e.clientX; my = e.clientY;
+    if (!shown) { var t = target(); x = t[0]; y = t[1]; }
+    run();
+  });
+  list.querySelectorAll('.proj').forEach(function (a) {
+    a.addEventListener('pointerenter', function () {
+      build();
+      var im = imgs[a.getAttribute('data-preview')];
+      if (cur && cur !== im) cur.classList.remove('is-cur');
+      if (im) { im.classList.add('is-cur'); cur = im; }
+      shown = true; box.classList.add('is-on'); run();
+    });
+  });
+  list.addEventListener('pointerleave', function () { shown = false; box.classList.remove('is-on'); });
+  window.addEventListener('scroll', function () { if (shown && !list.matches(':hover')) { shown = false; box.classList.remove('is-on'); } }, { passive: true });
+})();
