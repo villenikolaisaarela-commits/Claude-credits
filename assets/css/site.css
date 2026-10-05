@@ -906,3 +906,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* Calmer hero: no pulsing dot */
 .status::before { display: none; }
 .status { gap: 0; }
+
+/* Case pages: what a similar site costs, on its own row under the facts */
+.facts .price-fact { grid-column: 1 / -1; padding-top: 18px; border-top: 1px solid var(--line); }
+.facts .price-fact dd { font-size: clamp(17px, 1.35vw, 21px); font-weight: 500; letter-spacing: -0.02em; }
