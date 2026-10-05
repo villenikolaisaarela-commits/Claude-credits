@@ -902,3 +902,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .step .step-time { grid-column: 2; }
   .step > p { grid-column: 1 / -1; color: var(--muted) !important; font-size: 15px !important; }
 }
+
+/* Calmer hero: no pulsing dot */
+.status::before { display: none; }
+.status { gap: 0; }
