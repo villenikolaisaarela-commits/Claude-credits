@@ -1,0 +1,639 @@
+/* Keljon Puusepät Oy · style.css · Archivo (OFL), ei kirjastoja */
+
+@font-face {
+  font-family: "Archivo";
+  src: url("fonts/archivo-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --koivu: #f4f1ea;
+  --vaneri: #e8e1d5;
+  --tammi: #2a211a;
+  --savu: #4b3d31;
+  --harmaa: #6b6155;
+  --puru: #c8b79e;
+  --viiva: #d8cfc1;
+  --on-dark: #efe9df;
+  --on-dark-2: #b9ac98;
+  --m: clamp(16px, 2.6vw, 40px);
+  --g: clamp(14px, 1.6vw, 24px);
+  --sec: clamp(88px, 13vh, 168px);
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --f: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --hd: 76px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 24px; }
+body {
+  margin: 0;
+  background: var(--koivu);
+  color: var(--tammi);
+  font-family: var(--f);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  font-stretch: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+picture { display: contents; }
+a { color: inherit; text-decoration: none; }
+p { margin: 0 0 1em; }
+h1, h2, h3, h4 { margin: 0; font-weight: 500; }
+ul, ol, dl, dd, figure { margin: 0; padding: 0; }
+li { list-style: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+table { border-collapse: collapse; width: 100%; }
+::selection { background: var(--tammi); color: var(--koivu); }
+:focus-visible { outline: 2px solid var(--tammi); outline-offset: 3px; }
+.site-footer :focus-visible { outline-color: var(--on-dark); }
+
+.skip {
+  position: absolute; left: 12px; top: -80px; z-index: 100;
+  background: var(--tammi); color: var(--koivu); padding: 12px 16px; font-size: 14px;
+}
+.skip:focus { top: 12px; }
+.vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.wrap { padding-left: var(--m); padding-right: var(--m); }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); }
+.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* nimikilpi: levennetty Archivo, isot kirjaimet */
+.np {
+  font-stretch: 125%;
+  font-weight: 560;
+  font-size: 11.5px;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.muted { color: var(--harmaa); }
+.small { font-size: 14px; line-height: 1.55; }
+
+/* linkit */
+.u {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat;
+  padding-bottom: 2px;
+  transition: background-size 0.7s var(--ease);
+}
+.u:hover { background-size: 0 1px; background-position: 100% 100%; }
+.go {
+  display: inline-flex; align-items: center; gap: 0.6em;
+  font-size: 15px; line-height: 1.3;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat;
+  padding-bottom: 3px;
+  transition: background-size 0.7s var(--ease);
+}
+.go::after {
+  content: ""; width: 14px; height: 9px; flex: none;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath d='M0 4h12.2M8.8.6l3.6 3.9-3.6 3.9' fill='none' stroke='%23000' stroke-width='1.3'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath d='M0 4h12.2M8.8.6l3.6 3.9-3.6 3.9' fill='none' stroke='%23000' stroke-width='1.3'/%3E%3C/svg%3E") center / contain no-repeat;
+  transition: transform 0.6s var(--ease);
+}
+.go:hover { background-size: 0 1px; background-position: 100% 100%; }
+.go:hover::after { transform: translateX(4px); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6em;
+  min-height: 48px; padding: 0 22px;
+  border: 1px solid var(--tammi); background: var(--tammi); color: var(--koivu);
+  font-size: 15px; line-height: 1; cursor: pointer;
+  transition: background-color 0.5s var(--ease), color 0.5s var(--ease), border-color 0.5s var(--ease);
+}
+.btn:hover { background: var(--savu); border-color: var(--savu); }
+.btn-line { background: transparent; color: var(--tammi); }
+.btn-line:hover { background: var(--tammi); color: var(--koivu); }
+
+/* ---------- header ---------- */
+.site-header {
+  position: relative; z-index: 40;
+  display: flex; align-items: center; gap: clamp(16px, 2vw, 32px);
+  height: var(--hd);
+  font-size: 14.5px;
+}
+.brand { display: inline-flex; align-items: center; line-height: 0; margin-right: auto; }
+.brand svg { height: 14px; width: auto; fill: currentColor; }
+.site-nav ul { display: flex; gap: clamp(14px, 1.7vw, 28px); }
+.site-nav a { position: relative; padding: 6px 0; white-space: nowrap; }
+.site-nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 1px; height: 1px; background: currentColor;
+  transform: scaleX(0); transform-origin: right; transition: transform 0.6s var(--ease);
+}
+.site-nav a:hover::after, .site-nav a[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
+.hd-cta { min-height: 38px; padding: 0 16px; font-size: 14px; }
+.menu-btn {
+  display: none; background: none; border: 0; padding: 10px 0; margin: -10px 0; cursor: pointer;
+  font-size: 15px;
+}
+.nav-meta { display: none; }
+
+@media (max-width: 1100px) {
+  :root { --hd: 64px; }
+  .menu-btn { display: block; position: relative; z-index: 3; }
+  .hd-cta { display: none; }
+  .brand { position: relative; z-index: 3; }
+  .brand svg { height: 12.5px; }
+  .site-nav {
+    position: fixed; inset: 0; z-index: 2;
+    background: var(--koivu);
+    padding: calc(var(--hd) + 28px) var(--m) 32px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    overflow-y: auto;
+    visibility: hidden; opacity: 0;
+    transition: opacity 0.5s var(--ease), visibility 0s linear 0.5s;
+  }
+  .site-nav.is-open { visibility: visible; opacity: 1; transition: opacity 0.5s var(--ease); }
+  .site-nav ul { flex-direction: column; gap: 0; border-top: 1px solid var(--viiva); }
+  .site-nav li { border-bottom: 1px solid var(--viiva); }
+  .site-nav a { display: block; padding: 14px 0; font-size: 24px; line-height: 1.2; letter-spacing: -0.01em; }
+  .site-nav a::after { display: none; }
+  .site-nav a[aria-current="page"] { color: var(--harmaa); }
+  .site-nav .nav-meta { display: block; margin: 36px 0 0; font-size: 14.5px; color: var(--harmaa); }
+  .site-nav .nav-meta .btn { margin-top: 20px; width: 100%; color: var(--koivu); }
+  body.menu-open { overflow: hidden; }
+}
+
+/* ---------- liike ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1.1s var(--ease), transform 1.3s var(--ease); }
+.js .reveal.is-in { opacity: 1; transform: none; }
+.js .reveal.d1 { transition-delay: 0.08s; }
+.js .reveal.d2 { transition-delay: 0.16s; }
+.js .reveal.d3 { transition-delay: 0.24s; }
+
+.ph { position: relative; overflow: hidden; background: var(--vaneri); }
+.ph img { width: 100%; height: 100%; object-fit: cover; }
+.js .ph[data-reveal] img { clip-path: inset(100% 0 0 0); transform: scale(1.06); transition: clip-path 1.1s var(--ease), transform 1.5s var(--ease); }
+.js .ph[data-reveal].is-in img { clip-path: inset(0 0 0 0); transform: scale(1); }
+.r32 { aspect-ratio: 3 / 2; }
+.r45 { aspect-ratio: 4 / 5; }
+.r169 { aspect-ratio: 16 / 9; }
+.r21 { aspect-ratio: 2 / 1; }
+a.hov .ph img { transition: transform 1.4s var(--ease), clip-path 1.1s var(--ease); }
+a.hov:hover .ph img, .js a.hov:hover .ph[data-reveal].is-in img { transform: scale(1.03); }
+
+/* ---------- K-rivi (projektin kuvateksti) ---------- */
+.kline {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; column-gap: 16px;
+  margin-top: 12px; font-size: 14px; line-height: 1.4;
+}
+.kline .no { font-stretch: 125%; font-weight: 560; font-size: 12px; letter-spacing: 0.06em; }
+.kline .pl { color: var(--harmaa); transition: color 0.5s var(--ease); }
+.kline .pl .yr { margin-left: 0.2em; }
+.kline .pr { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.kline .spec { grid-column: 2 / -1; color: var(--harmaa); font-size: 13.5px; margin-top: 2px; }
+a:hover .kline .pl { color: var(--tammi); }
+
+/* ---------- osion otsikko ---------- */
+.sec { padding-top: var(--sec); }
+.sec-head {
+  display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); align-items: baseline;
+  padding-top: 14px; border-top: 1px solid var(--viiva);
+  margin-bottom: clamp(32px, 5vh, 56px);
+  font-size: 14px;
+}
+.sec-head .np { grid-column: 1 / span 3; }
+.sec-head .mid { grid-column: 4 / span 6; color: var(--harmaa); }
+.sec-head .end { grid-column: 10 / span 3; justify-self: end; }
+
+/* ---------- etusivu: avaus ---------- */
+.home-hero { padding-top: clamp(28px, 6vh, 64px); }
+.hh-text { align-items: end; margin-bottom: clamp(28px, 5vh, 52px); }
+.hh-text h1 {
+  grid-column: 1 / span 8;
+  font-size: clamp(28px, 3.15vw, 47px); line-height: 1.08; letter-spacing: -0.022em; font-weight: 500;
+  max-width: 19.5em;
+}
+.hh-side { grid-column: 9 / span 4; font-size: 15px; color: var(--harmaa); padding-bottom: 4px; }
+.hh-side p { margin-bottom: 14px; max-width: 30em; }
+.hh-side .go { color: var(--tammi); }
+.hh-media { position: relative; }
+.hh-media .ph { aspect-ratio: 16 / 9; max-height: calc(100svh - var(--hd) - 40px); width: 100%; }
+.hh-media .kline { margin-top: 14px; }
+.js .hh-media .ph img { clip-path: inset(100% 0 0 0); transform: scale(1.06); transition: clip-path 1.2s var(--ease), transform 1.6s var(--ease); }
+.js .home-hero.is-in .hh-media .ph img { clip-path: inset(0 0 0 0); transform: scale(1); }
+.js .hh-text > * { opacity: 0; transform: translateY(18px); transition: opacity 1.1s var(--ease), transform 1.3s var(--ease); }
+.js .hh-text .hh-side { transition-delay: 0.12s; }
+.js .home-hero.is-in .hh-text > * { opacity: 1; transform: none; }
+.js .hh-media .kline { opacity: 0; transition: opacity 1.2s var(--ease) 0.7s; }
+.js .home-hero.is-in .hh-media .kline { opacity: 1; }
+
+/* ---------- etusivu: keittiöt ---------- */
+.cat { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); row-gap: clamp(56px, 11vh, 128px); }
+.cat > a { display: block; }
+.c1 { grid-column: 1 / span 7; }
+.c2 { grid-column: 9 / span 4; align-self: end; }
+.c3 { grid-column: 2 / span 4; }
+.c4 { grid-column: 7 / span 6; align-self: center; }
+.c5 { grid-column: 1 / span 6; }
+.c6 { grid-column: 8 / span 4; margin-top: clamp(40px, 12vh, 140px); }
+
+/* ---------- etusivu: kaapit ---------- */
+.store { align-items: start; }
+.store .st-t { grid-column: 1 / span 4; position: sticky; top: 32px; }
+.store .st-t h2 { font-size: clamp(22px, 2vw, 30px); line-height: 1.18; letter-spacing: -0.015em; margin: 14px 0 18px; max-width: 15em; }
+.store .st-t p { color: var(--harmaa); max-width: 28em; }
+.store .st-t .go { color: var(--tammi); }
+.store .a { grid-column: 6 / span 3; margin-top: clamp(80px, 16vh, 180px); }
+.store .b { grid-column: 9 / span 4; }
+
+/* ---------- leveä kuvanauha ---------- */
+.band { position: relative; overflow: hidden; background: var(--vaneri); aspect-ratio: 21 / 9; max-height: 86vh; }
+.band img { width: 100%; height: 118%; object-fit: cover; will-change: transform; }
+
+.shop { padding-top: clamp(40px, 7vh, 80px); }
+.shop .lab { grid-column: 1 / span 3; }
+.shop .txt { grid-column: 4 / span 6; }
+.shop .txt h2 { font-size: clamp(24px, 2.3vw, 34px); line-height: 1.15; letter-spacing: -0.018em; margin-bottom: 22px; }
+.shop .txt p { max-width: 36em; }
+.shop .side { grid-column: 10 / span 3; font-size: 14px; color: var(--harmaa); align-self: end; }
+
+/* ---------- viikkorivi ---------- */
+.weeks { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: var(--g); counter-reset: w; }
+.weeks li { border-top: 1px solid var(--tammi); padding-top: 14px; }
+.weeks .w { display: block; margin-bottom: 26px; }
+.weeks h3 { font-size: 18px; line-height: 1.25; margin-bottom: 8px; letter-spacing: -0.01em; }
+.weeks p { font-size: 14.5px; color: var(--harmaa); margin: 0; max-width: 22em; }
+
+/* ---------- uutiset ---------- */
+.news { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); }
+.news li { grid-column: span 6; display: grid; grid-template-columns: 7.2em 1fr; column-gap: var(--g); padding: 18px 0 22px; border-top: 1px solid var(--viiva); }
+.news time { color: var(--harmaa); font-size: 14px; font-variant-numeric: tabular-nums; padding-top: 2px; }
+.news h3 { font-size: 18px; line-height: 1.3; margin-bottom: 8px; letter-spacing: -0.01em; }
+.news p { margin: 0; font-size: 15px; color: var(--harmaa); max-width: 34em; }
+.news.full li { grid-column: 1 / -1; grid-template-columns: repeat(12, minmax(0, 1fr)); padding: 26px 0 34px; }
+.news.full time { grid-column: 1 / span 3; }
+.news.full .b { grid-column: 4 / span 7; }
+.news.full p { font-size: 16px; color: var(--tammi); max-width: 38em; }
+.news.full p + p { margin-top: 0.8em; }
+
+/* ---------- yhteydenotto ---------- */
+.cta { padding-top: var(--sec); padding-bottom: var(--sec); }
+.cta-in { border-top: 1px solid var(--tammi); padding-top: clamp(28px, 5vh, 48px); }
+.cta h2 { grid-column: 1 / span 7; font-size: clamp(26px, 2.8vw, 42px); line-height: 1.1; letter-spacing: -0.02em; max-width: 17em; }
+.cta .side { grid-column: 9 / span 4; font-size: 15px; }
+.cta .side p { color: var(--harmaa); }
+.cta .side .lines { color: var(--tammi); }
+.cta .btn { margin-top: 8px; }
+
+/* ---------- alasivun otsikko ---------- */
+.page-head { padding-top: clamp(40px, 9vh, 104px); padding-bottom: clamp(40px, 7vh, 80px); }
+.page-head .crumb { grid-column: 1 / -1; font-size: 14px; color: var(--harmaa); margin-bottom: 20px; }
+.page-head .crumb a:hover { color: var(--tammi); }
+.page-head h1 { grid-column: 1 / span 6; font-size: clamp(40px, 4.6vw, 68px); line-height: 1; letter-spacing: -0.03em; }
+.page-head h1.np-title { font-stretch: 125%; font-weight: 600; letter-spacing: 0.01em; font-size: clamp(36px, 4.2vw, 62px); }
+.page-head .lead { grid-column: 7 / span 6; align-self: end; }
+.page-head .lead p { font-size: clamp(18px, 1.45vw, 21px); line-height: 1.45; max-width: 30em; }
+.page-head .lead .small { font-size: 14px; color: var(--harmaa); margin-top: 8px; }
+.page-head .sub { grid-column: 7 / span 6; align-self: end; font-size: clamp(18px, 1.45vw, 21px); line-height: 1.4; margin: 0; }
+.status { grid-column: 1 / -1; margin-top: clamp(28px, 5vh, 52px); padding-top: 12px; border-top: 1px solid var(--viiva); font-size: 14px; color: var(--harmaa); display: flex; gap: 14px; flex-wrap: wrap; align-items: baseline; }
+.status .np { color: var(--tammi); }
+
+/* ---------- keittiöluettelo ---------- */
+.klist { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); row-gap: clamp(48px, 8vh, 96px); }
+.klist .yr-head { grid-column: 1 / -1; }
+.klist .k { grid-column: span 4; }
+.klist .k.w2 { grid-column: span 8; }
+.klist .k .ph { aspect-ratio: 4 / 5; }
+.klist .k.w2 .ph { aspect-ratio: 16 / 10; }
+.klist .k > a, .klist .k > .kw { display: block; }
+.klist .k .more { margin-top: 8px; font-size: 14px; }
+
+/* arkisto */
+.archive { margin-top: clamp(16px, 3vh, 24px); }
+.t-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.t { font-size: 14.5px; min-width: 640px; }
+.t th { text-align: left; font-weight: 400; color: var(--harmaa); padding: 0 16px 10px 0; border-bottom: 1px solid var(--tammi); }
+.t th.np { font-size: 11px; }
+.t td { padding: 11px 16px 11px 0; border-bottom: 1px solid var(--viiva); vertical-align: top; }
+.t td:first-child { font-stretch: 125%; font-weight: 560; font-size: 12px; letter-spacing: 0.05em; white-space: nowrap; padding-top: 13px; }
+.t .r { text-align: right; padding-right: 0; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.t .note { color: var(--harmaa); }
+.t tfoot td { border-bottom: 0; padding-top: 14px; font-weight: 500; }
+.t tfoot td:first-child { font-stretch: 100%; font-size: 14.5px; letter-spacing: 0; font-weight: 500; }
+
+/* ---------- projektisivu ---------- */
+.case-hero .ph { aspect-ratio: 16 / 9; }
+.case-body { padding-top: clamp(40px, 7vh, 80px); }
+.facts-col { grid-column: 1 / span 4; }
+.facts { font-size: 14.5px; }
+.facts > div { display: grid; grid-template-columns: 8.4em 1fr; column-gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--viiva); }
+.facts > div:first-child { border-top: 1px solid var(--tammi); }
+.facts dt { color: var(--harmaa); }
+.facts dd { font-variant-numeric: tabular-nums; }
+.case-text { grid-column: 6 / span 6; }
+.case-text p { font-size: clamp(17px, 1.3vw, 19px); line-height: 1.55; max-width: 34em; }
+.case-imgs { padding-top: clamp(56px, 10vh, 120px); row-gap: clamp(48px, 8vh, 96px); align-items: end; }
+.case-imgs figure.w1 { grid-column: 1 / -1; }
+.case-imgs figure.w2 { grid-column: 1 / span 5; }
+.case-imgs figure.w3 { grid-column: 7 / span 6; }
+.case-imgs figure.w4 { grid-column: 3 / span 8; }
+.fig-cap { margin-top: 12px; font-size: 14px; color: var(--harmaa); max-width: 34em; }
+.pager { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--g); margin-top: clamp(72px, 12vh, 140px); border-top: 1px solid var(--tammi); }
+.pager a { padding-top: 16px; display: block; }
+.pager .r { text-align: right; }
+.pager .big { display: block; margin-top: 8px; font-size: clamp(20px, 2vw, 28px); letter-spacing: -0.015em; line-height: 1.15; }
+.pager a:hover .big { color: var(--savu); }
+
+/* ---------- tietosivut ---------- */
+.block { padding-top: var(--sec); }
+.block .side-l { grid-column: 1 / span 3; }
+.block .side-l .np { position: sticky; top: 28px; }
+.block .main { grid-column: 4 / span 8; }
+.block .main.wide { grid-column: 4 / span 9; }
+.body-l p { font-size: clamp(17px, 1.3vw, 19px); line-height: 1.55; max-width: 36em; }
+.lst > li { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--g); padding: 13px 0; border-bottom: 1px solid var(--viiva); font-size: 15px; }
+.lst > li:first-child { border-top: 1px solid var(--tammi); }
+.lst > li > span:last-child { color: var(--harmaa); }
+.lst.prices > li > span:last-child { color: var(--tammi); text-align: right; font-variant-numeric: tabular-nums; }
+.two-lists { column-gap: var(--g); }
+.two-lists > div { grid-column: span 6; }
+.two-lists .np { margin-bottom: 12px; display: block; }
+
+/* hintalaskuri */
+.calc { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); column-gap: var(--g); }
+.calc fieldset { border: 0; margin: 0; padding: 0; grid-column: 1 / span 4; }
+.calc legend { padding: 0; margin-bottom: 14px; }
+.lens { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.chip { position: relative; display: block; cursor: pointer; }
+.chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.chip span { display: flex; align-items: center; justify-content: center; min-height: 48px; border: 1px solid var(--viiva); font-size: 15px; transition: background-color 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease); }
+.chip:hover span { border-color: var(--tammi); }
+.chip input:checked + span { background: var(--tammi); color: var(--koivu); border-color: var(--tammi); }
+.chip input:focus-visible + span { outline: 2px solid var(--tammi); outline-offset: 3px; }
+.chk { display: flex; gap: 12px; align-items: center; margin-top: 18px; cursor: pointer; font-size: 15px; }
+.chk input { width: 20px; height: 20px; accent-color: var(--tammi); margin: 0; }
+.calc-out { grid-column: 5 / span 4; border-top: 1px solid var(--tammi); padding-top: 14px; }
+.calc-out .price { font-size: clamp(34px, 3.4vw, 50px); line-height: 1.05; letter-spacing: -0.025em; margin: 10px 0 22px; font-variant-numeric: tabular-nums; }
+.calc-out .price small { font-size: 0.5em; margin-left: 0.2em; letter-spacing: 0; }
+.calc-note { font-size: 13.5px; color: var(--harmaa); margin-top: 16px; }
+
+/* ovimallit */
+.doors { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--g); row-gap: 48px; }
+.doors h3 { font-size: 19px; letter-spacing: -0.01em; margin: 16px 0 6px; }
+.doors .pr { display: block; font-size: 14px; color: var(--tammi); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--viiva); }
+.doors p { font-size: 14.5px; color: var(--harmaa); margin: 0; }
+.swatches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--g); }
+.swatches li { font-size: 13.5px; }
+.swatches .sw { display: block; aspect-ratio: 3 / 2; margin-bottom: 10px; border: 1px solid rgba(42, 33, 26, 0.12); }
+.swatches .c { color: var(--harmaa); display: block; font-variant-numeric: tabular-nums; }
+
+/* ihmiset */
+.people > li { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); padding: 16px 0 18px; border-bottom: 1px solid var(--viiva); font-size: 15px; }
+.people > li:first-child { border-top: 1px solid var(--tammi); }
+.people .nm { grid-column: 1 / span 3; font-weight: 500; }
+.people .ti { grid-column: 4 / span 3; color: var(--harmaa); }
+.people .ro { grid-column: 7 / span 3; }
+.people .co { grid-column: 10 / span 3; text-align: right; font-variant-numeric: tabular-nums; }
+
+.photo-row { row-gap: clamp(40px, 7vh, 80px); align-items: end; }
+.photo-row .a { grid-column: 1 / span 4; }
+.photo-row .b { grid-column: 6 / span 7; }
+.photo-row .c { grid-column: 2 / span 6; }
+.photo-row .d { grid-column: 9 / span 3; }
+
+.job { background: var(--vaneri); padding: clamp(24px, 4vw, 48px); }
+.job h3 { font-size: clamp(22px, 2vw, 28px); letter-spacing: -0.015em; line-height: 1.15; margin: 10px 0 16px; }
+.job p { max-width: 38em; }
+
+/* yhteystiedot */
+.contact-cols { row-gap: 40px; }
+.contact-cols > div { grid-column: span 3; font-size: 15px; }
+.contact-cols .np { display: block; margin-bottom: 12px; padding-top: 12px; border-top: 1px solid var(--tammi); }
+
+/* lomake */
+.qform { grid-column: 1 / span 7; }
+.qform fieldset { border: 0; padding: 0; margin: 0 0 clamp(36px, 6vh, 56px); }
+.qform legend { padding: 0; margin-bottom: 18px; width: 100%; border-top: 1px solid var(--tammi); padding-top: 12px; }
+.f { margin-bottom: 22px; }
+.f > label, .f > .lb { display: block; font-size: 15px; margin-bottom: 8px; }
+.hint { display: block; color: var(--harmaa); font-size: 13.5px; margin-top: 2px; }
+.f input[type="text"], .f input[type="email"], .f input[type="tel"], .f select, .f textarea {
+  width: 100%; min-height: 48px; padding: 11px 13px; border: 1px solid var(--viiva); background: #fbf9f5; border-radius: 0;
+  font-size: 16px; transition: border-color 0.4s var(--ease);
+}
+.f textarea { min-height: 140px; resize: vertical; }
+.f input:hover, .f select:hover, .f textarea:hover { border-color: var(--puru); }
+.f input:focus, .f select:focus, .f textarea:focus { border-color: var(--tammi); outline: 2px solid var(--tammi); outline-offset: 1px; }
+.f input[type="file"] { font-size: 14px; max-width: 100%; }
+.f [aria-invalid="true"] { border-color: #8a2f1d; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.opts .chip span { min-height: 44px; padding: 0 16px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--g); }
+.form-status { margin-top: 16px; font-size: 15px; min-height: 1.6em; }
+.form-status:not(:empty) { padding: 14px 16px; background: var(--vaneri); border-left: 2px solid var(--tammi); }
+.qside { grid-column: 9 / span 4; }
+.qside .facts { margin-bottom: 28px; }
+
+/* proosa */
+.prose h2 { font-size: 20px; letter-spacing: -0.01em; margin: 2.2em 0 0.6em; }
+.prose h2:first-child { margin-top: 0; }
+.prose ul { margin: 0 0 1em; }
+.prose ul li { position: relative; padding-left: 1.1em; margin-bottom: 0.4em; }
+.prose ul li::before { content: ""; position: absolute; left: 0; top: 0.78em; width: 0.5em; height: 1px; background: currentColor; }
+.prose p, .prose li { max-width: 40em; }
+
+.care h3 { font-size: 18px; margin: 0 0 6px; letter-spacing: -0.01em; }
+.care ol { counter-reset: s; }
+.care ol li { counter-increment: s; position: relative; padding-left: 2em; margin-bottom: 0.5em; max-width: 38em; }
+.care ol li::before { content: counter(s); position: absolute; left: 0; top: 0; font-stretch: 125%; font-weight: 560; font-size: 12px; padding-top: 0.3em; }
+
+/* 404 */
+.nf { min-height: 56vh; }
+
+/* ---------- alatunniste ---------- */
+.site-footer { background: var(--tammi); color: var(--on-dark); margin-top: 0; padding-top: clamp(56px, 9vh, 104px); padding-bottom: 28px; font-size: 14.5px; }
+.site-footer a:hover { color: #fff; }
+.f-top { row-gap: 36px; }
+.f-mark { grid-column: 1 / span 2; }
+.f-mark svg { width: clamp(120px, 11vw, 160px); height: auto; fill: var(--on-dark); }
+.f-col { grid-column: span 2; }
+.f-col.w { grid-column: span 3; }
+.f-col .np { display: block; color: var(--on-dark-2); margin-bottom: 12px; }
+.f-col p { margin: 0 0 0.6em; }
+.f-col ul li { margin-bottom: 0.3em; }
+.f-base { margin-top: clamp(48px, 8vh, 88px); padding-top: 16px; border-top: 1px solid rgba(239, 233, 223, 0.18); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); row-gap: 10px; font-size: 13px; color: var(--on-dark-2); }
+.f-base p { margin: 0; }
+.f-base .credits { grid-column: 1 / span 7; }
+.f-base .legal { grid-column: 8 / span 5; text-align: right; }
+.f-base .studio { grid-column: 1 / -1; margin-top: 10px; }
+.f-base a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.f-base a:hover { color: var(--on-dark); }
+
+/* ---------- puhelin ja tabletti ---------- */
+@media (max-width: 1100px) {
+  .hh-text h1 { grid-column: 1 / span 12; max-width: 22em; }
+  .hh-side { grid-column: 1 / span 8; margin-top: 18px; }
+  .page-head h1 { grid-column: 1 / span 12; margin-bottom: 20px; }
+  .page-head .lead, .page-head .sub { grid-column: 1 / span 9; }
+  .people .nm { grid-column: 1 / span 4; }
+  .people .ti { grid-column: 5 / span 4; }
+  .people .ro { grid-column: 1 / span 8; margin-top: 4px; color: var(--harmaa); }
+  .people .co { grid-column: 9 / span 4; grid-row: 1 / span 2; }
+  .f-col, .f-col.w { grid-column: span 4; }
+  .f-mark { grid-column: 1 / -1; }
+}
+
+@media (max-width: 760px) {
+  body { font-size: 15.5px; }
+  .sec-head { grid-template-columns: 1fr auto; row-gap: 6px; }
+  .sec-head .np { grid-column: 1; }
+  .sec-head .end { grid-column: 2; grid-row: 1; }
+  .sec-head .mid { grid-column: 1 / -1; }
+  .hh-text h1 { font-size: 27px; line-height: 1.12; }
+  .hh-side { grid-column: 1 / -1; font-size: 14.5px; margin-top: 14px; }
+  .hh-media .ph { aspect-ratio: 4 / 5; max-height: none; }
+  .kline { column-gap: 12px; font-size: 13.5px; }
+  .cat { row-gap: 44px; }
+  .c1, .c2, .c3, .c4, .c5, .c6 { grid-column: 1 / -1; margin-top: 0; align-self: auto; }
+  .c2, .c6 { grid-column: 3 / -1; }
+  .c3 { grid-column: 1 / span 10; }
+  .store .st-t { grid-column: 1 / -1; position: static; margin-bottom: 32px; }
+  .store .a { grid-column: 1 / span 6; margin-top: 64px; }
+  .store .b { grid-column: 7 / -1; }
+  .band { aspect-ratio: 4 / 3; }
+  .shop .lab, .shop .txt, .shop .side { grid-column: 1 / -1; }
+  .shop .lab { margin-bottom: 14px; }
+  .shop .side { margin-top: 8px; }
+  .weeks { grid-template-columns: 1fr; row-gap: 0; }
+  .weeks li { display: grid; grid-template-columns: 7.5em 1fr; column-gap: 14px; padding: 14px 0 18px; border-top-color: var(--viiva); }
+  .weeks li:first-child { border-top-color: var(--tammi); }
+  .weeks .w { margin: 3px 0 0; grid-row: span 2; }
+  .news li { grid-column: 1 / -1; grid-template-columns: 1fr; }
+  .news time { margin-bottom: 6px; }
+  .news.full li { grid-template-columns: 1fr; }
+  .news.full time, .news.full .b { grid-column: 1 / -1; }
+  .cta h2, .cta .side { grid-column: 1 / -1; }
+  .cta .side { margin-top: 24px; }
+  .page-head .lead, .page-head .sub { grid-column: 1 / -1; }
+  .klist .k, .klist .k.w2 { grid-column: 1 / -1; }
+  .klist .k.w2 .ph { aspect-ratio: 3 / 2; }
+  .facts-col, .case-text { grid-column: 1 / -1; }
+  .case-text { margin-top: 36px; }
+  .case-hero .ph { aspect-ratio: 4 / 3; }
+  .case-imgs figure.w2, .case-imgs figure.w3, .case-imgs figure.w4 { grid-column: 1 / -1; }
+  .case-imgs figure.w2 { grid-column: 1 / span 10; }
+  .block .side-l, .block .main, .block .main.wide { grid-column: 1 / -1; }
+  .block .side-l { margin-bottom: 18px; }
+  .block .side-l .np { position: static; }
+  .lst > li { grid-template-columns: 1fr; row-gap: 2px; }
+  .lst.prices > li { grid-template-columns: 1fr auto; }
+  .two-lists > div { grid-column: 1 / -1; }
+  .two-lists > div + div { margin-top: 40px; }
+  .calc fieldset, .calc-out { grid-column: 1 / -1; }
+  .calc-out { margin-top: 32px; }
+  .doors { grid-template-columns: 1fr 1fr; row-gap: 36px; }
+  .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .people > li { row-gap: 2px; }
+  .people .nm, .people .ti, .people .ro, .people .co { grid-column: 1 / -1; grid-row: auto; text-align: left; }
+  .photo-row .a, .photo-row .b, .photo-row .c, .photo-row .d { grid-column: 1 / -1; }
+  .photo-row .a { grid-column: 1 / span 9; }
+  .photo-row .d { grid-column: 4 / -1; }
+  .contact-cols > div { grid-column: 1 / -1; }
+  .qform, .qside { grid-column: 1 / -1; }
+  .qside { margin-top: 48px; }
+  .two { grid-template-columns: 1fr; }
+  .f-col, .f-col.w { grid-column: span 6; }
+  .f-base .credits, .f-base .legal { grid-column: 1 / -1; text-align: left; }
+  .pager .big { font-size: 19px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .js .reveal, .js .hh-text > *, .js .hh-media .kline { opacity: 1; transform: none; }
+  .js .ph[data-reveal] img, .js .hh-media .ph img { clip-path: none; transform: none; }
+  .band img { height: 100%; }
+}
+
+/* ---------- lisäosat ---------- */
+.klist .note-cell { grid-column: span 4; align-self: end; margin: 0; padding-top: 12px; border-top: 1px solid var(--viiva); font-size: 14.5px; color: var(--harmaa); max-width: 26em; }
+.klist .note-cell a { color: var(--tammi); }
+
+.steps > li { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); padding: 22px 0 30px; border-top: 1px solid var(--viiva); }
+.steps > li:first-child { border-top-color: var(--tammi); }
+.steps .n { grid-column: 1 / span 1; font-stretch: 125%; font-weight: 560; font-size: 12px; letter-spacing: 0.06em; padding-top: 7px; }
+.steps .h { grid-column: 2 / span 4; }
+.steps .h h3 { font-size: clamp(20px, 1.7vw, 25px); letter-spacing: -0.015em; line-height: 1.2; }
+.steps .when { display: block; color: var(--harmaa); font-size: 14px; margin-top: 6px; }
+.steps .d { grid-column: 7 / span 6; }
+.steps .d p { max-width: 34em; }
+.steps .d p:last-child { margin-bottom: 0; }
+
+.price-tbl { grid-column: 1 / span 8; }
+.tbl-note { grid-column: 10 / span 3; align-self: end; margin: 0; }
+.after-lst { margin-top: 22px; }
+.spec-t { min-width: 0; }
+.spec-t td:first-child { font-stretch: 100%; font-weight: 400; font-size: 14.5px; letter-spacing: 0; padding-top: 11px; white-space: normal; }
+.spec-after { margin-top: 16px; max-width: 40em; }
+.form-legal { max-width: 36em; }
+.m0 { margin: 0; }
+.nh { font-size: clamp(20px, 1.6vw, 24px); line-height: 1.25; letter-spacing: -0.012em; margin-bottom: 12px; }
+.block-inner { grid-column: 4 / span 7; padding-top: 8px; }
+
+.mat-intro { align-items: start; row-gap: 32px; }
+.mat-intro .mi-img { grid-column: 1 / span 6; }
+.mat-intro .mi-txt { grid-column: 8 / span 5; }
+.mat-intro .mi-txt .np { margin-bottom: 18px; padding-top: 12px; border-top: 1px solid var(--tammi); }
+.mat-intro .lst { margin-top: 24px; }
+.doors .ph { aspect-ratio: 4 / 5; }
+.mat-imgs { padding-top: clamp(56px, 9vh, 104px); row-gap: 40px; align-items: end; }
+.mat-imgs .ma { grid-column: 4 / span 4; }
+.mat-imgs .mb { grid-column: 9 / span 3; }
+.jobs-img { padding-top: clamp(48px, 8vh, 96px); }
+.jobs-img .pj { grid-column: 4 / span 4; }
+.lst.jobs > li > span:last-child { text-align: right; }
+.msg { max-width: none; }
+.qform.msg { grid-column: 4 / span 6; }
+
+@media (max-width: 760px) {
+  .klist .note-cell { grid-column: 1 / -1; }
+  .steps > li { row-gap: 10px; padding: 18px 0 24px; }
+  .steps .n { grid-column: 1 / span 2; padding-top: 6px; }
+  .steps .h { grid-column: 3 / -1; }
+  .steps .d { grid-column: 3 / -1; }
+  .price-tbl, .tbl-note { grid-column: 1 / -1; }
+  .tbl-note { margin-top: 16px; }
+  .block-inner { grid-column: 1 / -1; }
+  .mat-intro .mi-img, .mat-intro .mi-txt { grid-column: 1 / -1; }
+  .mat-imgs .ma { grid-column: 1 / span 9; }
+  .mat-imgs .mb { grid-column: 4 / -1; }
+  .jobs-img .pj { grid-column: 1 / span 9; }
+  .lst.jobs > li > span:last-child { text-align: left; }
+  .qform.msg { grid-column: 1 / -1; }
+}
+
+/* pystykuvallinen projektisivu */
+.case-tall .grid { align-items: start; }
+.case-tall .ct-img { grid-column: 1 / span 6; }
+.case-tall .ct-side { grid-column: 8 / span 5; position: sticky; top: 28px; }
+.case-tall .case-text { margin-bottom: 36px; }
+.case-tall .facts-col { grid-column: auto; }
+@media (max-width: 760px) {
+  .case-tall .ct-img, .case-tall .ct-side { grid-column: 1 / -1; position: static; }
+  .case-tall .ct-side { margin-top: 32px; }
+}
+.klist .k.p { grid-column: span 4; }
+.klist .k.w6 { grid-column: span 6; }
+.klist .k.w6 .ph { aspect-ratio: 3 / 2; }
+@media (max-width: 760px) { .klist .k.w6, .klist .k.p { grid-column: 1 / -1; } }
+.t.fit { min-width: 0; }
+.t.fit td:first-child { font-stretch: 100%; font-weight: 400; font-size: 14.5px; letter-spacing: 0; padding-top: 11px; }
+.kline .no { white-space: nowrap; }
+.care.block { padding-top: clamp(44px, 7vh, 80px); }
+.care.block:first-of-type { padding-top: 0; }
+.klist .k > a.more { display: inline-block; margin-top: 10px; }
+.f > label.chk { display: flex; gap: 12px; align-items: center; margin: 0; }
+.t.fit th { white-space: normal; vertical-align: bottom; }
+.t.fit th.r, .t.fit td.r { width: 34%; padding-left: 12px; }
+@media (max-width: 760px) { .t.fit th { font-size: 13px; } .t.fit td { font-size: 14px; } }
+.case-imgs figure.w6 { grid-column: 7 / span 4; }
+@media (max-width: 760px) { .case-imgs figure.w6 { grid-column: 3 / -1; } }
