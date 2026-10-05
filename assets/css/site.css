@@ -517,7 +517,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .site-footer {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
   justify-content: space-between;
   gap: 12px 24px;
   padding: 20px var(--gutter) 28px;
@@ -936,3 +936,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .split .gains > li { grid-template-columns: 40px 1fr; }
 }
+
+.proj-note { margin-top: 20px; }
+.split h2.label { font-weight: inherit; }
+@media (max-width: 560px) { .site-footer > :first-child { grid-column: 1 / -1; } }
