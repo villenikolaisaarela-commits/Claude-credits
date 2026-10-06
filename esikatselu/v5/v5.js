@@ -1,44 +1,29 @@
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const root = document.body.dataset.root || '../../';
+  const webm = document.createElement('video').canPlayType('video/webm; codecs="vp9"') !== '';
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 
-  // Smooth scroll + anchors
+  // Smooth scroll + in-page anchors
   let lenis = null;
   if (!reduce && window.Lenis) {
     lenis = new window.Lenis({ lerp: 0.09, wheelMultiplier: 0.95 });
     const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
     requestAnimationFrame(raf);
   }
-  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
-    const id = a.getAttribute('href'); const el = id === '#top' ? document.body : document.querySelector(id);
-    if (!el) return; e.preventDefault();
-    if (lenis) lenis.scrollTo(id === '#top' ? 0 : el, { offset: -52, duration: 1.4 }); else el.scrollIntoView();
-    menu.hidden = true; btn.setAttribute('aria-expanded', 'false');
-  }));
-
-  // Menu
   const btn = document.querySelector('.menu-btn');
   const menu = document.getElementById('mmenu');
   btn.addEventListener('click', () => { menu.hidden = !menu.hidden; btn.setAttribute('aria-expanded', String(!menu.hidden)); });
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const el = document.querySelector(a.getAttribute('href'));
+    if (!el) return; e.preventDefault();
+    if (lenis) lenis.scrollTo(el, { offset: -52, duration: 1.4 }); else el.scrollIntoView();
+    menu.hidden = true; btn.setAttribute('aria-expanded', 'false');
+  }));
 
-  // Hero: cycle the project videos, show which project is on screen
-  const v = document.querySelector('.hero-media video');
-  const slugs = JSON.parse(v.dataset.vids);
-  const names = [...document.querySelectorAll('.wk-t')].map(n => n.textContent);
-  const nowName = document.querySelector('.hn-name');
-  const webm = v.canPlayType('video/webm; codecs="vp9"') !== '';
-  let i = 0;
-  const load = () => {
-    v.src = `../../assets/video/tyot/${slugs[i]}.${webm ? 'webm' : 'mp4'}`;
-    nowName.textContent = names[i];
-    v.play().catch(() => {});
-  };
-  v.addEventListener('playing', () => v.classList.add('is-on'));
-  v.addEventListener('ended', () => { v.classList.remove('is-on'); i = (i + 1) % slugs.length; setTimeout(load, 350); });
-  if (!reduce) load(); else v.remove();
-  const ready = () => document.body.classList.add('is-loaded');
-  requestAnimationFrame(() => setTimeout(ready, 120));
+  requestAnimationFrame(() => setTimeout(() => document.body.classList.add('is-loaded'), 80));
 
   // Reveals
   const io = new IntersectionObserver(es => es.forEach(e => {
@@ -46,24 +31,38 @@
   }), { rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('[data-rv]').forEach(el => io.observe(el));
 
+  // Work grid: play the site video on hover
+  if (fine && !reduce) {
+    document.querySelectorAll('.wcard a[data-video]').forEach(a => {
+      let v = null;
+      a.addEventListener('mouseenter', () => {
+        if (!v) {
+          v = document.createElement('video');
+          Object.assign(v, { muted: true, playsInline: true, loop: true, preload: 'auto' });
+          v.src = `${root}assets/video/tyot/${a.dataset.video}.${webm ? 'webm' : 'mp4'}`;
+          v.addEventListener('playing', () => v.classList.add('is-on'));
+          a.querySelector('.wcard-img').appendChild(v);
+        }
+        v.currentTime = 0; v.play().catch(() => {});
+      });
+      a.addEventListener('mouseleave', () => { if (v) { v.pause(); v.classList.remove('is-on'); } });
+    });
+  }
+
   // Scroll-linked: header colour, giant words drift, photo grows
   const hdr = document.getElementById('hdr');
-  const work = document.querySelector('.work');
-  const ftr = document.querySelector('.ftr');
+  const reds = [...document.querySelectorAll('[data-red]')];
   const drifts = [...document.querySelectorAll('[data-drift]')];
-  const grow = document.querySelector('[data-grow]');
+  const grow = document.querySelector('.name [data-grow]');
   let ticking = false;
   const onScroll = () => {
     ticking = false;
-    const y = scrollY;
-    const overRed = [work, ftr].some(s => { const r = s.getBoundingClientRect(); return r.top <= 26 && r.bottom >= 26; });
-    hdr.classList.toggle('is-red', overRed);
-    hdr.classList.toggle('is-solid', !overRed && y > innerHeight - 60);
+    hdr.classList.toggle('is-red', reds.some(s => { const r = s.getBoundingClientRect(); return r.top <= 26 && r.bottom >= 26; }));
     if (reduce) return;
     drifts.forEach(el => {
       const r = el.parentElement.getBoundingClientRect();
-      const p = (innerHeight - r.top) / (innerHeight + r.height);
-      el.style.setProperty('--dx', `${(clamp(p, 0, 1) * parseFloat(el.dataset.drift) * el.offsetWidth).toFixed(1)}px`);
+      const p = clamp((innerHeight - r.top) / (innerHeight + r.height), 0, 1);
+      el.style.setProperty('--dx', `${(p * parseFloat(el.dataset.drift) * el.offsetWidth).toFixed(1)}px`);
     });
     if (grow) {
       const r = grow.getBoundingClientRect();
