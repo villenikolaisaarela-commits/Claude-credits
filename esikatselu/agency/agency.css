@@ -109,7 +109,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .fan-ring { transform-origin: 0 var(--R); }
 .fan-item {
   position: absolute; left: calc(var(--w) / -2); top: 0; width: var(--w);
-  transform-origin: 50% var(--R); transform: rotate(calc((var(--i) - 2.5) * 11deg));
+  transform-origin: 50% var(--R); transform: rotate(calc((var(--i) - 3) * 11deg));
 }
 .fan-card {
   display: block; background: var(--dark); border-radius: 14px; padding: 6px; color: #fff;
@@ -242,7 +242,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 @media (max-width: 860px) {
   .nav-actions .pill-ghost { display: none; }
   .fan { --R: 640px; --w: 44vw; height: 92vw; }
-  .fan-item { transform: rotate(calc((var(--i) - 2.5) * 16deg)); }
+  .fan-item { transform: rotate(calc((var(--i) - 3) * 16deg)); }
   .fan-cap { font-size: 11px; }
   .fan-cap .tag { display: none; }
   .hand-fan { left: auto; right: 6px; top: -34px; }
@@ -269,5 +269,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .js .reveal, .js .fan-item { opacity: 1; transform: none; }
-  .js .fan-item { transform: rotate(calc((var(--i) - 2.5) * 11deg)); }
+  .js .fan-item { transform: rotate(calc((var(--i) - 3) * 11deg)); }
 }
+.fan-item:hover, .fan-item:focus-within { z-index: 4; }
