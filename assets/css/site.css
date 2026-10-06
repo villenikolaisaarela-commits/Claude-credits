@@ -938,4 +938,4 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .split h2.label { font-weight: inherit; }
-@media (max-width: 560px) { .site-footer > :first-child { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .site-footer > :first-child { grid-column: 1 / -1; } .site-footer .top { grid-column: 2; } }
