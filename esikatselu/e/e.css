@@ -270,3 +270,10 @@ textarea.inp { min-height: 104px; resize: vertical; }
 
 .faq.card { padding: 30px 32px 18px; }
 .faq.card li:last-child { border-bottom: 0; }
+
+/* Story fits short screens too: size from the viewport height, text above, photos below */
+.line { top: 33%; font-size: clamp(34px, min(6.4vw, 8.6vh), 100px); }
+.stack { top: calc(71% + var(--sy, 0) * 1px); }
+.pol { --pw: clamp(110px, 21vh, 210px); --ph: calc(var(--pw) * 1.2); }
+@media (max-width: 640px) { .line { top: 34%; font-size: clamp(30px, min(9.6vw, 6.4vh), 52px); } .pol { --pw: clamp(96px, 17vh, 150px); } }
+@media (max-height: 560px) { .line small { margin-top: 12px; } .hint { bottom: 70px; } }
