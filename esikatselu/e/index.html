@@ -10,7 +10,7 @@
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="../../assets/fonts/open-runde-bold-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/vendor/lenis.css">
-  <link rel="stylesheet" href="e.css?v=1">
+  <link rel="stylesheet" href="e.css?v=2">
 </head>
 <body>
   <a class="skip" href="#sisalto">Siirry sisältöön</a>
@@ -23,11 +23,11 @@
       <p class="line" data-a="0.43" data-b="0.68" data-u="1">Siksi teen verkkosivuja, jotka tekevät <span class="u">töitä.<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" vector-effect="non-scaling-stroke" d="M2 6 C 20 2, 38 9, 56 5 S 86 3, 98 6"/></svg></span></p>
       <p class="line" data-a="0.68" data-b="0.95">Katsotaan, mitä voin tehdä sinulle.<small>Rullaa alas tai <a class="link" href="#sisalto">siirry suoraan →</a></small></p>
       <div class="stack" aria-hidden="true">
-        <figure class="pol" style="--fx:-500;--fy:60;--r0:-8deg;--fr:-6deg"><img src="../a/img/lindqvist-ekroos-final-900.webp" alt="" decoding="async"><span>Lindqvist Ekroos</span></figure>
-        <figure class="pol" style="--fx:500;--fy:60;--r0:7deg;--fr:6deg"><img src="../a/img/haljala-final-900.webp" alt="" decoding="async"><span>Haljala</span></figure>
-        <figure class="pol" style="--fx:-250;--fy:14;--r0:-3deg;--fr:-4deg"><img src="../b2/img/kaulus-mob.webp" alt="" decoding="async"><span>Kaulus</span></figure>
-        <figure class="pol" style="--fx:250;--fy:14;--r0:5deg;--fr:3deg"><img src="../a/img/buffbird-final-900.webp" alt="" decoding="async"><span>BuffBird</span></figure>
-        <figure class="pol" style="--fx:0;--fy:-6;--r0:-2deg;--fr:2deg"><img src="../../assets/img/ville.jpg" alt="" decoding="async"><span>Ville, Helsinki</span></figure>
+        <figure class="pol" style="--fx:-500;--fy:60;--r0:-8deg;--fr:-6deg"><img src="../../demot/lindqvist-ekroos/img/sammalkallio-julkisivu-hero-800.webp" alt="" decoding="async" style="object-position:center"><span>Lindqvist Ekroos</span></figure>
+        <figure class="pol" style="--fx:500;--fy:60;--r0:7deg;--fr:6deg"><img src="../../demot/haljala/img/kallio-huvila-800.webp" alt="" decoding="async" style="object-position:center"><span>Haljala</span></figure>
+        <figure class="pol" style="--fx:-250;--fy:14;--r0:-3deg;--fr:-4deg"><img src="../../demot/kaulus/img/harakka-1-600.webp" alt="" decoding="async" style="object-position:center"><span>Kaulus</span></figure>
+        <figure class="pol" style="--fx:250;--fy:14;--r0:5deg;--fr:3deg"><img src="../a/img/buffbird-final-900.webp" alt="" decoding="async" style="object-position:8% 50%"><span>BuffBird</span></figure>
+        <figure class="pol" style="--fx:0;--fy:-6;--r0:-2deg;--fr:2deg"><img src="../../assets/img/ville.jpg" alt="" decoding="async" style="object-position:center 30%"><span>Ville, Helsinki</span></figure>
       </div>
       <p class="hint" aria-hidden="true">Rullaa<i></i></p>
     </div>
@@ -86,8 +86,8 @@
         </a>
         <a class="card wk reveal" href="#aloita" style="--d:.1s;justify-content:space-between;padding:22px;background:var(--acc-btn);color:#fff">
           <span class="label" style="color:rgba(255,255,255,.75)">Seuraava työ</span>
-          <span style="font-size:26px;font-weight:700;letter-spacing:-.03em;line-height:1.1">Sinun sivusi?</span>
-          <span style="font-size:14px;color:rgba(255,255,255,.85)">Teen etusivustasi maksuttoman luonnoksen. Vasta sen jälkeen päätät.</span>
+          <span class="cta-t">Sinun<br>sivusi?</span>
+          <span class="cta-b"><span>Teen etusivustasi maksuttoman luonnoksen. Vasta sen jälkeen päätät.</span><i aria-hidden="true">→</i></span>
         </a>
       </div>
     </section>
@@ -114,10 +114,11 @@
             <li><div><b>30 päivän tuki</b> <span>julkaisun jälkeen</span></div></li>
             <li><div><b>Vastaus 24 tunnissa</b> <span>aina</span></div></li>
           </ul>
+          <a class="mini" href="#aloita"><span><b>Aloita maksuttomalla luonnoksella</b><small>Ei sitoumusta ennen kuin näet suunnan.</small></span><i aria-hidden="true">→</i></a>
         </article>
         <article class="card note reveal" style="--d:.16s" id="ville">
           <span class="label">Viesti Villeltä</span>
-          <p>Minua on aina kiehtonut kaksi asiaa: hienot asiat ja se, miten ne toimivat. Verkkosivuissa ne kohtaavat.</p>
+          <p class="quote">”Minua on aina kiehtonut kaksi asiaa: hienot asiat ja se, miten ne toimivat. Verkkosivuissa ne kohtaavat.”</p>
           <p>Moni yritys tekee hienoa työtä ja näyttää verkossa keskeneräiseltä. Sen haluan korjata. Työskentelet suoraan minun kanssani, alusta loppuun.</p>
           <div class="sig"><img src="../../assets/img/ville.jpg" width="726" height="908" alt="" loading="lazy" decoding="async"><div><b>Ville Saarela</b><span>Perustaja · designia vuodesta 2022</span></div></div>
         </article>
@@ -153,7 +154,7 @@
     </section>
 
     <section class="sec wrap" aria-labelledby="faq-h">
-      <div class="faq reveal">
+      <div class="faq card reveal">
         <h2 class="h2" id="faq-h">Kysymyksiä</h2>
         <ul>
           <li><button type="button" aria-expanded="false" aria-controls="faq0">Mitä luonnos maksaa?<i aria-hidden="true"></i></button><div class="ans" id="faq0"><div><p>Ei mitään. Teen etusivusta luonnoksen sinun töilläsi, ja vasta sen jälkeen päätät, jatketaanko.</p></div></div></li>
@@ -171,6 +172,11 @@
           <span class="label" style="color:rgba(255,255,255,.55)">Aloita projekti</span>
           <h2 class="h2" id="start-h">Kerro projektista<span class="o">.</span></h2>
           <p>Muutama tieto riittää. Vastaus tulee 24 tunnin sisällä, ja ensimmäinen luonnos on maksuton.</p>
+          <ol class="next">
+            <li><span>1</span><div><b>Vastaan 24 tunnin sisällä</b><small>ja kysyn tarvittaessa tarkentavat kysymykset.</small></div></li>
+            <li><span>2</span><div><b>Lyhyt puhelu</b><small>15 minuuttia: mitä teet ja mitä sivujen pitää tehdä.</small></div></li>
+            <li><span>3</span><div><b>Maksuton luonnos viikossa</b><small>Vasta sen jälkeen päätät, jatketaanko.</small></div></li>
+          </ol>
           <div class="direct"><a href="mailto:info@villesaarela.com">info@villesaarela.com</a><a href="tel:+358451035362">045 103 5362</a></div>
         </div>
         <form class="card form reveal" id="form" style="--d:.08s" novalidate>
@@ -195,6 +201,6 @@
   </footer>
 
   <script src="../../assets/vendor/lenis.min.js"></script>
-  <script src="e.js?v=1"></script>
+  <script src="e.js?v=2"></script>
 </body>
 </html>

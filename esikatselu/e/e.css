@@ -240,3 +240,33 @@ textarea.inp { min-height: 104px; resize: vertical; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---- Polish round ---- */
+.pol img { filter: saturate(0.95) contrast(1.02); }
+.pill { transition: transform 0.35s var(--spring); }
+.pill:hover { transform: translateY(-3px) rotate(-1deg); }
+
+.mini { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding: 14px 14px 14px 16px; border-radius: 16px; background: var(--bg); transition: background-color 0.3s, transform 0.35s var(--spring); }
+.mini:hover { background: #efefef; transform: translateY(-2px); }
+.mini b { display: block; font-size: 14.5px; font-weight: 700; }
+.mini small { display: block; font-size: 12.5px; color: var(--muted); }
+.mini i { display: grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--acc-btn); color: #fff; font-style: normal; transition: transform 0.35s var(--spring); }
+.mini:hover i { transform: translateX(3px); }
+
+.note .quote { color: #fff !important; font-size: clamp(19px, 1.6vw, 23px) !important; line-height: 1.3; letter-spacing: -0.02em; font-weight: 600; }
+.note .sig img { width: 52px; height: 52px; }
+
+.next { display: grid; gap: 12px; margin: 10px 0 24px; }
+.next li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start; }
+.next li > span { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); font-size: 13px; font-weight: 700; }
+.next li:first-child > span { background: var(--acc-btn); }
+.next b { display: block; font-size: 15.5px; }
+.next small { display: block; font-size: 13.5px; color: rgba(255, 255, 255, 0.6); }
+
+.wk .cta-t { font-size: clamp(30px, 2.8vw, 42px); font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+.wk .cta-b { display: flex; align-items: end; justify-content: space-between; gap: 12px; font-size: 14px; color: rgba(255, 255, 255, 0.88); }
+.wk .cta-b i { display: grid; place-items: center; flex: none; width: 40px; height: 40px; border-radius: 50%; background: #fff; color: var(--acc-btn); font-style: normal; font-weight: 700; transition: transform 0.4s var(--spring); }
+.wk:hover .cta-b i { transform: rotate(-45deg); }
+
+.faq.card { padding: 30px 32px 18px; }
+.faq.card li:last-child { border-bottom: 0; }
