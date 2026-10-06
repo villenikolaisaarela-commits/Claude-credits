@@ -126,6 +126,21 @@
   if (!list || !box || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var imgs = {}, cur = null, built = false;
+  // The site itself plays inside the preview, so the project opens under the cursor.
+  var webm = document.createElement('video').canPlayType('video/webm; codecs="vp9"') !== '';
+  var vid = document.createElement('video');
+  vid.muted = true; vid.playsInline = true; vid.loop = true; vid.preload = 'none';
+  vid.setAttribute('aria-hidden', 'true');
+  vid.addEventListener('playing', function () { vid.classList.add('is-cur'); });
+  var playFor = function (a) {
+    var slug = a.getAttribute('data-video');
+    vid.classList.remove('is-cur');
+    if (!slug || reduce) { vid.removeAttribute('src'); return; }
+    var src = 'assets/video/tyot/' + slug + (webm ? '.webm' : '.mp4');
+    if (vid.getAttribute('src') !== src) vid.src = src;
+    vid.currentTime = 0;
+    var pr = vid.play(); if (pr && pr.catch) pr.catch(function () {});
+  };
   var mx = 0, my = 0, x = 0, y = 0, running = false, shown = false;
   var build = function () {
     if (built) return; built = true;
@@ -135,6 +150,7 @@
       var im = new Image(); im.src = src; im.alt = ''; im.decoding = 'async';
       box.appendChild(im); imgs[src] = im;
     });
+    box.appendChild(vid);
   };
   var target = function () {
     var w = box.offsetWidth, h = box.offsetHeight, gap = 28;
@@ -162,9 +178,10 @@
       var im = imgs[a.getAttribute('data-preview')];
       if (cur && cur !== im) cur.classList.remove('is-cur');
       if (im) { im.classList.add('is-cur'); cur = im; }
+      playFor(a);
       shown = true; box.classList.add('is-on'); run();
     });
   });
-  list.addEventListener('pointerleave', function () { shown = false; box.classList.remove('is-on'); });
+  list.addEventListener('pointerleave', function () { shown = false; box.classList.remove('is-on'); vid.pause(); });
   window.addEventListener('scroll', function () { if (shown && !list.matches(':hover')) { shown = false; box.classList.remove('is-on'); } }, { passive: true });
 })();
