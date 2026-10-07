@@ -105,6 +105,16 @@
     wv.observe(aito);
   }
 
+  // Work rows: open one to see the work
+  document.querySelectorAll('.acc-b').forEach(b => {
+    const item = b.closest('.acc-i');
+    const panel = document.getElementById(b.getAttribute('aria-controls'));
+    const set = open => { item.classList.toggle('is-open', open); b.setAttribute('aria-expanded', open); panel.inert = !open; };
+    set(item.classList.contains('is-open'));
+    b.addEventListener('click', () => set(!item.classList.contains('is-open')));
+    if (location.hash === '#' + item.id) set(true);
+  });
+
   // Sample site: the form does not send anything yet, and says so
   const form = document.getElementById('form');
   const note = document.getElementById('form-note');
