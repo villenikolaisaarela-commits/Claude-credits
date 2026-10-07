@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#FFFFFF">
   <link rel="icon" href="../mark.svg" type="image/svg+xml">
   <link rel="preload" href="../../../assets/fonts/geist-300-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../quieto.css?v=3">
+  <link rel="stylesheet" href="../quieto.css?v=4">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -17,7 +17,7 @@
   <p class="sample mono">Sample site for Studio Quieto · not live yet</p>
   <header class="hdr" id="hdr">
     <div class="wrap hdr-in">
-      <a class="brand" href="../" aria-label="Studio Quieto, home"><svg class="mark" width="14" height="14" viewBox="0 0 2 2" aria-hidden="true" shape-rendering="crispEdges"><rect width="1" height="1" fill="#2238C9"/><rect x="1" width="1" height="1" fill="#D7381E"/><rect y="1" width="1" height="1" fill="#0E7350"/><rect x="1" y="1" width="1" height="1" fill="#9C2A72"/></svg><span class="wm">QUIETO</span></a>
+      <a class="brand" href="../" aria-label="Studio Quieto, home"><span class="mark" style="--s:14px" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i><i class="m4"></i></span><span class="wm">QUIETO</span></a>
       <nav class="nav mono" aria-label="Main">
         <a class="ln" href="../work/"><span class="nn">01</span>Work</a><a class="ln" href="../process/" aria-current="page"><span class="nn">02</span>Process</a><a class="ln" href="../studio/"><span class="nn">03</span>Studio</a><a class="pill" href="#draft">Request a draft</a>
       </nav>
@@ -41,11 +41,18 @@
         <li class="step rv"><span class="step-n c4">04</span><h2 class="h3">Launch</h2><p class="mono mut">Week 4</p><p>Your address, Google set up, and 30 days of support. The site is yours.</p></li>
       </ol>
       </div>
+      <figure class="wall wrap rv">
+        <div class="wall-in wall-2">
+          <div><p class="mono mut">Draft</p><picture><source type="image/avif" srcset="../../studio/img/buffbird-luonnos-1440.avif 1440w, ../../studio/img/buffbird-luonnos-960.avif 960w" sizes="(min-width: 900px) 40vw, 100vw"><source type="image/webp" srcset="../../studio/img/buffbird-luonnos-1440.webp 1440w, ../../studio/img/buffbird-luonnos-960.webp 960w" sizes="(min-width: 900px) 40vw, 100vw"><img src="../../studio/img/buffbird-luonnos-1440.webp" width="1440" height="900" alt="BuffBird: the first homepage draft" loading="lazy" decoding="async"></picture></div>
+          <div><p class="mono"><span class="c2">Finished</span></p><picture><source type="image/avif" srcset="../../studio/img/buffbird-valmis-1440.avif 1440w, ../../studio/img/buffbird-valmis-960.avif 960w" sizes="(min-width: 900px) 40vw, 100vw"><source type="image/webp" srcset="../../studio/img/buffbird-valmis-1440.webp 1440w, ../../studio/img/buffbird-valmis-960.webp 960w" sizes="(min-width: 900px) 40vw, 100vw"><img src="../../studio/img/buffbird-valmis-1440.webp" width="1440" height="900" alt="BuffBird: the finished homepage" loading="lazy" decoding="async"></picture></div>
+        </div>
+        <figcaption class="mono row"><span><span class="c1">00</span> BuffBird · Draft and finished homepage</span><span>Client work · Helsinki · 2026</span></figcaption>
+      </figure>
     </section>
     <section class="sec manifesto" aria-label="The draft">
       <div class="wrap">
         <p class="mono row rv"><span>The draft</span><span>Read slowly</span></p>
-        <p class="mf rd"><span class="">A first draft</span> <span class="c1">in 48 hours.</span> <span class="">Your own work,</span> <span class="c3">your own words,</span> <span class="c2">shown properly.</span> <span class="">Then</span> <span class="c4">you decide.</span></p>
+        <p class="mf"><span class="">A first draft</span> <span class="c1">in 48 hours.</span> <span class="">Your own work,</span> <span class="c3">your own words,</span> <span class="c2">shown properly.</span> <span class="">Then</span> <span class="c4">you decide.</span></p>
       </div>
     </section>
 
@@ -83,11 +90,11 @@
         <div><p class="mut">Studio</p><p>Studio Quieto<br>Ville Saarela<br>Helsinki</p></div>
         <div><p class="mut">Pages</p><p><a class="ln" href="../work/">Work</a><br><a class="ln" href="../process/">Process</a><br><a class="ln" href="../studio/">Studio</a></p></div>
         <div><p class="mut">Colours</p><p><span class="c1">Authenticity</span><br><span class="c2">Aesthetics</span><br><span class="c3">Freedom</span><br><span class="c4">Pride</span></p></div>
-        <div><p class="mut">Note</p><p>Sample site,<br>October 2026.<br>Not live yet.</p></div>
+        <div><p class="mut">Now</p><p>Helsinki <time class="clock" data-clock>--:--</time><br>Sample site, not live<br><a class="ln" href="#main">Back to top ↑</a></p></div>
       </div>
       <a class="giant" href="../" aria-label="Studio Quieto, home"><span aria-hidden="true"><span class="c1">Q</span><span class="c2">U</span><span class="c3">I</span><span class="c4">E</span><span class="c1">T</span><span class="c2">O</span></span></a>
     </div>
   </footer>
-  <script src="../quieto.js?v=3"></script>
+  <script src="../quieto.js?v=4"></script>
 </body>
 </html>

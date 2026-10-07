@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#FFFFFF">
   <link rel="icon" href="mark.svg" type="image/svg+xml">
   <link rel="preload" href="../../assets/fonts/geist-300-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="quieto.css?v=3">
+  <link rel="stylesheet" href="quieto.css?v=4">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -17,7 +17,7 @@
   <p class="sample mono">Sample site for Studio Quieto · not live yet</p>
   <header class="hdr" id="hdr">
     <div class="wrap hdr-in">
-      <a class="brand" href="" aria-label="Studio Quieto, home"><svg class="mark" width="14" height="14" viewBox="0 0 2 2" aria-hidden="true" shape-rendering="crispEdges"><rect width="1" height="1" fill="#2238C9"/><rect x="1" width="1" height="1" fill="#D7381E"/><rect y="1" width="1" height="1" fill="#0E7350"/><rect x="1" y="1" width="1" height="1" fill="#9C2A72"/></svg><span class="wm">QUIETO</span></a>
+      <a class="brand" href="" aria-label="Studio Quieto, home"><span class="mark" style="--s:14px" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i><i class="m4"></i></span><span class="wm">QUIETO</span></a>
       <nav class="nav mono" aria-label="Main">
         <a class="ln" href="work/"><span class="nn">01</span>Work</a><a class="ln" href="process/"><span class="nn">02</span>Process</a><a class="ln" href="studio/"><span class="nn">03</span>Studio</a><a class="pill" href="#draft">Request a draft</a>
       </nav>
@@ -27,69 +27,68 @@
 
     <section class="hero" aria-labelledby="h1">
       <div class="wrap">
-        <p class="mono row rv"><span>Studio Quieto · Websites</span><span>Helsinki · 2026</span></p>
+        <p class="mono row rv"><span>Studio Quieto · Websites</span><span>Helsinki <time class="clock" data-clock>--:--</time></span></p>
         <h1 class="h1" id="h1"><span class="sr">Your work, finally shown properly.</span><span aria-hidden="true"><span class="ln1 rv">Your work,</span> <span class="ln1 rv">finally <span class="swap"><span class="sw c1 is-on">seen.</span><span class="sw c2">understood.</span><span class="sw c3">taken seriously.</span><span class="sw c4">shown properly.</span></span></span></span></h1>
+        <p class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></p>
         <div class="hero-row">
           <p class="lead rv">Websites for businesses that are better than they look. See a first draft of your new homepage within 48 hours, before you pay anything.</p>
           <p class="rv"><a class="pill pill-big" href="#draft">Request a draft <span class="ar" aria-hidden="true">→</span></a></p>
         </div>
       </div>
       <figure class="wall wrap rv">
-        <div class="wall-in wall-2">
-          <div><p class="mono mut">Draft</p><picture><source type="image/avif" srcset="../studio/img/buffbird-luonnos-1440.avif 1440w, ../studio/img/buffbird-luonnos-960.avif 960w" sizes="(min-width: 900px) 40vw, 100vw"><source type="image/webp" srcset="../studio/img/buffbird-luonnos-1440.webp 1440w, ../studio/img/buffbird-luonnos-960.webp 960w" sizes="(min-width: 900px) 40vw, 100vw"><img src="../studio/img/buffbird-luonnos-1440.webp" width="1440" height="900" alt="BuffBird: the first homepage draft" fetchpriority="high" decoding="async"></picture></div>
-          <div><p class="mono"><span class="c2">Finished</span></p><picture><source type="image/avif" srcset="../studio/img/buffbird-valmis-1440.avif 1440w, ../studio/img/buffbird-valmis-960.avif 960w" sizes="(min-width: 900px) 40vw, 100vw"><source type="image/webp" srcset="../studio/img/buffbird-valmis-1440.webp 1440w, ../studio/img/buffbird-valmis-960.webp 960w" sizes="(min-width: 900px) 40vw, 100vw"><img src="../studio/img/buffbird-valmis-1440.webp" width="1440" height="900" alt="BuffBird: the finished homepage" fetchpriority="high" decoding="async"></picture></div>
-        </div>
-        <figcaption class="mono row"><span><span class="c1">00</span> BuffBird · Draft and finished homepage</span><span>Client work · Helsinki · 2026</span></figcaption>
+        <div class="wall-in"><picture><source type="image/avif" srcset="../studio/img/haljala-1600.avif 1600w, ../studio/img/haljala-960.avif 960w" sizes="(min-width: 900px) 80vw, 100vw"><source type="image/webp" srcset="../studio/img/haljala-1600.webp 1600w, ../studio/img/haljala-960.webp 960w" sizes="(min-width: 900px) 80vw, 100vw"><img src="../studio/img/haljala-1600.webp" width="1600" height="1000" alt="Haljala: homepage" fetchpriority="high" decoding="async"></picture></div>
+        <figcaption class="mono row"><span><span class="c1">00</span> Haljala · Architecture office, Tampere</span><span>Concept* · Homepage · 1600 × 1000 px</span></figcaption>
       </figure>
     </section>
     <section class="sec manifesto" aria-label="Statement">
       <div class="wrap">
         <p class="mono row rv"><span>Statement</span><span>Read slowly</span></p>
-        <p class="mf rd"><span class="">Many good businesses</span> <span class="">look unfinished online.</span> <span class="c1">I make them look</span> <span class="c1">the way their work deserves:</span> <span class="c2">considered,</span> <span class="c3">clear,</span> <span class="c4">and worth the call.</span></p>
+        <p class="mf"><span class="">Many good businesses</span> <span class="">look unfinished online.</span> <span class="c1">I make them look</span> <span class="c1">the way their work deserves:</span> <span class="c2">considered,</span> <span class="c3">clear,</span> <span class="c4">and worth the call.</span></p>
       </div>
     </section>
 
     <section class="sec" aria-labelledby="work-h">
       <div class="wrap">
         <div class="sec-hd">
-          <p class="mono row rv"><span>Selected work (03)</span><a class="ln" href="work/">All work (07) <span class="ar" aria-hidden="true">→</span></a></p>
+          <p class="mono row"><span>Selected work (03)</span><a class="ln" href="work/">All work (07) <span class="ar" aria-hidden="true">→</span></a></p>
           <h2 class="h2 rv" id="work-h">Ordinary businesses, <span class="c2">unforgettable</span> websites.</h2>
         </div>
         <div class="works">
-        <article class="w w-full rv" id="w-buffbird">
-          <a class="w-img" href="../../projektit/buffbird/" aria-label="BuffBird: full case"><picture><source type="image/avif" srcset="../studio/img/buffbird-1600.avif 1600w, ../studio/img/buffbird-960.avif 960w" sizes="(min-width: 900px) 90vw, 100vw"><source type="image/webp" srcset="../studio/img/buffbird-1600.webp 1600w, ../studio/img/buffbird-960.webp 960w" sizes="(min-width: 900px) 90vw, 100vw"><img src="../studio/img/buffbird-1600.webp" width="1600" height="1000" alt="BuffBird: homepage" loading="lazy" decoding="async"></picture></a>
+        <article class="w w-full rv" id="w-lindqvist-ekroos">
+          <a class="w-img" href="../../projektit/lindqvist-ekroos/" aria-label="Lindqvist Ekroos: full case"><picture><source type="image/avif" srcset="../studio/img/lindqvist-ekroos-1600.avif 1600w, ../studio/img/lindqvist-ekroos-960.avif 960w" sizes="(min-width: 900px) 90vw, 100vw"><source type="image/webp" srcset="../studio/img/lindqvist-ekroos-1600.webp 1600w, ../studio/img/lindqvist-ekroos-960.webp 960w" sizes="(min-width: 900px) 90vw, 100vw"><img src="../studio/img/lindqvist-ekroos-1600.webp" width="1600" height="1000" alt="Lindqvist Ekroos: homepage" loading="lazy" decoding="async"></picture></a>
           <div class="w-cap">
             <p class="mono w-n c1">01</p>
-            <h3 class="w-t">BuffBird</h3>
-            <p class="mono mut">Training app · Helsinki</p>
-            <p class="mono mut">Client work, 2026</p>
-          </div>
-          <p class="w-d">A waitlist site for an app that was not out yet: one headline, one form, and the app shown screen by screen.</p>
-          <p class="w-l mono"><a class="ln" href="../../projektit/buffbird/">Full case <span class="ar" aria-hidden="true">→</span></a><a class="ln" href="https://buffbird.eu/" target="_blank" rel="noopener">Visit site <span class="ar" aria-hidden="true">↗</span></a></p>
-        </article>
-        <article class="w  rv" id="w-lindqvist-ekroos">
-          <a class="w-img" href="../../projektit/lindqvist-ekroos/" aria-label="Lindqvist Ekroos: full case"><picture><source type="image/avif" srcset="../studio/img/lindqvist-ekroos-1600.avif 1600w, ../studio/img/lindqvist-ekroos-960.avif 960w" sizes="(min-width: 900px) 45vw, 100vw"><source type="image/webp" srcset="../studio/img/lindqvist-ekroos-1600.webp 1600w, ../studio/img/lindqvist-ekroos-960.webp 960w" sizes="(min-width: 900px) 45vw, 100vw"><img src="../studio/img/lindqvist-ekroos-1600.webp" width="1600" height="1000" alt="Lindqvist Ekroos: homepage" loading="lazy" decoding="async"></picture></a>
-          <div class="w-cap">
-            <p class="mono w-n c2">02</p>
             <h3 class="w-t">Lindqvist Ekroos</h3>
             <p class="mono mut">Architecture office · Helsinki</p>
-            <p class="mono mut">Concept, 2026</p>
+            <p class="mono mut">Concept*, 2026</p>
           </div>
           <p class="w-d">One sentence about the office, the latest finished daycare, and an archive of 25 projects with numbers, places and floor areas.</p>
           <p class="w-l mono"><a class="ln" href="../../projektit/lindqvist-ekroos/">Full case <span class="ar" aria-hidden="true">→</span></a><a class="ln" href="../../demot/lindqvist-ekroos/" target="_blank" rel="noopener">Visit site <span class="ar" aria-hidden="true">↗</span></a></p>
         </article>
-        <article class="w w-low rv" id="w-haljala">
-          <a class="w-img" href="../../projektit/haljala/" aria-label="Haljala: full case"><picture><source type="image/avif" srcset="../studio/img/haljala-1600.avif 1600w, ../studio/img/haljala-960.avif 960w" sizes="(min-width: 900px) 45vw, 100vw"><source type="image/webp" srcset="../studio/img/haljala-1600.webp 1600w, ../studio/img/haljala-960.webp 960w" sizes="(min-width: 900px) 45vw, 100vw"><img src="../studio/img/haljala-1600.webp" width="1600" height="1000" alt="Haljala: homepage" loading="lazy" decoding="async"></picture></a>
+        <article class="w  rv" id="w-keljon-puusepat">
+          <a class="w-img" href="../../projektit/keljon-puusepat/" aria-label="Keljon Puusepät: full case"><picture><source type="image/avif" srcset="../studio/img/keljon-puusepat-1600.avif 1600w, ../studio/img/keljon-puusepat-960.avif 960w" sizes="(min-width: 900px) 45vw, 100vw"><source type="image/webp" srcset="../studio/img/keljon-puusepat-1600.webp 1600w, ../studio/img/keljon-puusepat-960.webp 960w" sizes="(min-width: 900px) 45vw, 100vw"><img src="../studio/img/keljon-puusepat-1600.webp" width="1600" height="1000" alt="Keljon Puusepät: homepage" loading="lazy" decoding="async"></picture></a>
+          <div class="w-cap">
+            <p class="mono w-n c2">02</p>
+            <h3 class="w-t">Keljon Puusepät</h3>
+            <p class="mono mut">Kitchen joinery · Jyväskylä</p>
+            <p class="mono mut">Concept*, 2026</p>
+          </div>
+          <p class="w-d">A numbered catalogue of kitchens, each with place, year and the price it actually came to.</p>
+          <p class="w-l mono"><a class="ln" href="../../projektit/keljon-puusepat/">Full case <span class="ar" aria-hidden="true">→</span></a><a class="ln" href="../../demot/keljon-puusepat/" target="_blank" rel="noopener">Visit site <span class="ar" aria-hidden="true">↗</span></a></p>
+        </article>
+        <article class="w w-low rv" id="w-studio-kuusela">
+          <a class="w-img" href="../../projektit/studio-kuusela/" aria-label="Studio Kuusela: full case"><picture><source type="image/avif" srcset="../studio/img/studio-kuusela-1600.avif 1600w, ../studio/img/studio-kuusela-960.avif 960w" sizes="(min-width: 900px) 45vw, 100vw"><source type="image/webp" srcset="../studio/img/studio-kuusela-1600.webp 1600w, ../studio/img/studio-kuusela-960.webp 960w" sizes="(min-width: 900px) 45vw, 100vw"><img src="../studio/img/studio-kuusela-1600.webp" width="1600" height="1000" alt="Studio Kuusela: homepage" loading="lazy" decoding="async"></picture></a>
           <div class="w-cap">
             <p class="mono w-n c3">03</p>
-            <h3 class="w-t">Haljala</h3>
-            <p class="mono mut">Architecture office · Tampere</p>
-            <p class="mono mut">Concept, 2026</p>
+            <h3 class="w-t">Studio Kuusela</h3>
+            <p class="mono mut">Interior architects · Turku</p>
+            <p class="mono mut">Concept*, 2026</p>
           </div>
-          <p class="w-d">Prices and free start dates in plain sight, so the people who call already know the project fits.</p>
-          <p class="w-l mono"><a class="ln" href="../../projektit/haljala/">Full case <span class="ar" aria-hidden="true">→</span></a><a class="ln" href="../../demot/haljala/" target="_blank" rel="noopener">Visit site <span class="ar" aria-hidden="true">↗</span></a></p>
+          <p class="w-d">One large image of a sauna by the sea, then straight to who the studio is and where to find them.</p>
+          <p class="w-l mono"><a class="ln" href="../../projektit/studio-kuusela/">Full case <span class="ar" aria-hidden="true">→</span></a><a class="ln" href="../../demot/studio-kuusela/" target="_blank" rel="noopener">Visit site <span class="ar" aria-hidden="true">↗</span></a></p>
         </article>
         </div>
+        <p class="mono mut foot-n">* Concept: a made-up business, built to show what its website could be. Real client work is marked as client work.</p>
       </div>
     </section>
 
@@ -157,11 +156,11 @@
         <div><p class="mut">Studio</p><p>Studio Quieto<br>Ville Saarela<br>Helsinki</p></div>
         <div><p class="mut">Pages</p><p><a class="ln" href="work/">Work</a><br><a class="ln" href="process/">Process</a><br><a class="ln" href="studio/">Studio</a></p></div>
         <div><p class="mut">Colours</p><p><span class="c1">Authenticity</span><br><span class="c2">Aesthetics</span><br><span class="c3">Freedom</span><br><span class="c4">Pride</span></p></div>
-        <div><p class="mut">Note</p><p>Sample site,<br>October 2026.<br>Not live yet.</p></div>
+        <div><p class="mut">Now</p><p>Helsinki <time class="clock" data-clock>--:--</time><br>Sample site, not live<br><a class="ln" href="#main">Back to top ↑</a></p></div>
       </div>
       <a class="giant" href="" aria-label="Studio Quieto, home"><span aria-hidden="true"><span class="c1">Q</span><span class="c2">U</span><span class="c3">I</span><span class="c4">E</span><span class="c1">T</span><span class="c2">O</span></span></a>
     </div>
   </footer>
-  <script src="quieto.js?v=3"></script>
+  <script src="quieto.js?v=4"></script>
 </body>
 </html>

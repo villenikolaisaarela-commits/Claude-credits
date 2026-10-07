@@ -25,6 +25,7 @@
 
   // Hero: the last word changes, each in its own colour
   const sws = [...document.querySelectorAll('.sw')];
+  const dots = [...document.querySelectorAll('.dots i')];
   if (sws.length && !reduce) {
     let i = 0;
     setInterval(() => {
@@ -37,24 +38,8 @@
       next.style.transition = ''; next.style.transform = '';
       next.classList.add('is-on');
       i = (i + 1) % sws.length;
+      dots.forEach((d, k) => d.classList.toggle('on', k === i));
     }, 2600);
-  }
-
-  // Statement: words fill with their colour as you read down the page
-  const rds = [...document.querySelectorAll('.rd')];
-  rds.forEach(p => p.querySelectorAll(':scope > span').forEach(s => {
-    s.innerHTML = s.textContent.split(' ').map(w => `<span class="wd">${w}</span>`).join(' ');
-  }));
-  const readAll = () => rds.forEach(p => {
-    const words = p.querySelectorAll('.wd');
-    const r = p.getBoundingClientRect();
-    const t = Math.min(1, Math.max(0, (innerHeight * 0.85 - r.top) / (r.height + innerHeight * 0.35)));
-    const n = Math.round(t * words.length);
-    words.forEach((w, k) => w.classList.toggle('on', k < n));
-  });
-  if (rds.length) {
-    if (reduce) rds.forEach(p => p.querySelectorAll('.wd').forEach(w => w.classList.add('on')));
-    else { addEventListener('scroll', readAll, { passive: true }); addEventListener('resize', readAll); readAll(); }
   }
 
   // Work index: a small preview follows the cursor
@@ -76,6 +61,36 @@
     ix.forEach(a => {
       a.addEventListener('pointerenter', e => { if (!peek.classList.contains('is-on')) { px = x = e.clientX; py = y = e.clientY; } img.src = a.dataset.img; peek.classList.add('is-on'); });
       a.addEventListener('pointerleave', () => peek.classList.remove('is-on'));
+    });
+  }
+
+  // Helsinki time, in the hero and the footer
+  const clocks = document.querySelectorAll('[data-clock]');
+  if (clocks.length) {
+    const fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Helsinki', hour: '2-digit', minute: '2-digit' });
+    const tick = () => { const t = fmt.format(new Date()); clocks.forEach(c => { c.textContent = t; }); };
+    tick(); setInterval(tick, 15000);
+  }
+
+  // Work images: a small "View case" tag follows the cursor
+  const imgs = [...document.querySelectorAll('.w-img')];
+  if (imgs.length && fine && !reduce) {
+    document.documentElement.classList.add('has-tag');
+    const tag = document.createElement('div');
+    tag.className = 'tag mono';
+    tag.setAttribute('aria-hidden', 'true');
+    tag.textContent = 'View case →';
+    document.body.append(tag);
+    let x = 0, y = 0, px = 0, py = 0, raf = 0;
+    const loop = () => {
+      px += (x - px) * 0.2; py += (y - py) * 0.2;
+      tag.style.transform = `translate3d(${px + 14}px, ${py + 14}px, 0)`;
+      raf = Math.abs(x - px) + Math.abs(y - py) > 0.5 ? requestAnimationFrame(loop) : 0;
+    };
+    addEventListener('pointermove', e => { x = e.clientX; y = e.clientY; if (!raf) raf = requestAnimationFrame(loop); }, { passive: true });
+    imgs.forEach(a => {
+      a.addEventListener('pointerenter', e => { if (!tag.classList.contains('is-on')) { px = x = e.clientX; py = y = e.clientY; } tag.classList.add('is-on'); });
+      a.addEventListener('pointerleave', () => tag.classList.remove('is-on'));
     });
   }
 
