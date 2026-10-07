@@ -561,3 +561,15 @@ html.dr-open, html.dr-open body { overflow: hidden; }
   .pr-get .hws { grid-template-columns: 1fr; }
   .mon .stage .chrome { font-size: 8px; }
 }
+
+/* Brand section on case pages */
+.brand-sec { padding: clamp(70px, 12vh, 130px) var(--m) 0; }
+.brand-hd { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 24px; align-items: end; }
+.brand-hd .kick { margin: 0 0 0.6em; }
+.brand-h { font-size: clamp(40px, 6vw, 100px); line-height: 0.92; letter-spacing: -0.058em; }
+.brand-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(10px, 1.4vw, 20px); margin-top: clamp(30px, 5vh, 50px); }
+.bf { margin: 0; }
+.bf.wide { grid-column: 1 / -1; }
+.bf img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+.bf figcaption { margin-top: 10px; color: var(--grey); }
+@media (max-width: 760px) { .brand-hd, .brand-grid { grid-template-columns: 1fr; } }
