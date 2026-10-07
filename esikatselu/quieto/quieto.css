@@ -425,3 +425,4 @@ html.lenis, html.lenis body { height: auto; }
 @media (prefers-reduced-motion: reduce) { .js .hero figure.rv .wall-in img, .js .hero figure.rv.in .wall-in img { transform: none; } }
 .giant { padding-block: 10px; }
 .giant { font-size: clamp(36px, 11.8vw, 206px); letter-spacing: 0; }
+.hero-text { padding-bottom: clamp(64px, 8vw, 128px); }

@@ -88,7 +88,7 @@
   // Helsinki time, in the hero and the footer
   const clocks = document.querySelectorAll('[data-clock]');
   if (clocks.length) {
-    const fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Helsinki', hour: '2-digit', minute: '2-digit' });
+    const fmt = new Intl.DateTimeFormat('fi-FI', { timeZone: 'Europe/Helsinki', hour: '2-digit', minute: '2-digit' });
     const tick = () => { const t = fmt.format(new Date()); clocks.forEach(c => { c.textContent = t; }); };
     tick(); setInterval(tick, 15000);
   }
@@ -100,7 +100,7 @@
     const tag = document.createElement('div');
     tag.className = 'tag mono';
     tag.setAttribute('aria-hidden', 'true');
-    tag.textContent = 'View case →';
+    tag.textContent = 'Katso työ →';
     document.body.append(tag);
     let x = 0, y = 0, px = 0, py = 0, raf = 0;
     const loop = () => {
@@ -142,7 +142,7 @@
   if (form) form.addEventListener('submit', e => {
     e.preventDefault();
     const name = form.querySelector('[name="name"]');
-    if (!name.value.trim()) { name.focus(); note.textContent = 'Add your name first.'; return; }
-    note.textContent = 'Sample site: this form does not send anything yet.';
+    if (!name.value.trim()) { name.focus(); note.textContent = 'Kirjoita ensin nimesi.'; return; }
+    note.textContent = 'Esikatselu: lomake ei vielä lähetä mitään.';
   });
 })();
