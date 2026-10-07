@@ -136,6 +136,28 @@
     if (location.hash === '#' + item.id) set(true);
   });
 
+  // The one work: draft first, then the finished site scrolls by itself
+  const win = document.querySelector('.win');
+  if (win) {
+    const vid = win.querySelector('video');
+    const tgs = [...document.querySelectorAll('.tg')];
+    let user = false, auto = 0, seen = false;
+    const show = v => {
+      win.dataset.show = v;
+      tgs.forEach(t => t.setAttribute('aria-pressed', String(t.dataset.v === v)));
+      if (v === 'final' && !reduce) { vid.preload = 'auto'; vid.currentTime = 0; vid.play().catch(() => {}); }
+      else vid.pause();
+    };
+    show('draft');
+    tgs.forEach(t => t.addEventListener('click', () => { user = true; clearTimeout(auto); show(t.dataset.v); }));
+    new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) {
+        if (!seen) { seen = true; auto = setTimeout(() => { if (!user) show('final'); }, 2200); }
+        else if (win.dataset.show === 'final' && !reduce) vid.play().catch(() => {});
+      } else vid.pause();
+    }), { threshold: 0.5 }).observe(win);
+  }
+
   // Sample site: the form does not send anything yet, and says so
   const form = document.getElementById('form');
   const note = document.getElementById('form-note');
@@ -143,6 +165,8 @@
     e.preventDefault();
     const name = form.querySelector('[name="name"]');
     if (!name.value.trim()) { name.focus(); note.textContent = 'Kirjoita ensin nimesi.'; return; }
+    const mail = form.querySelector('[name="email"]');
+    if (mail && !mail.checkValidity()) { mail.focus(); note.textContent = 'Tarkista sähköpostiosoite.'; return; }
     note.textContent = 'Esikatselu: lomake ei vielä lähetä mitään.';
   });
 })();
