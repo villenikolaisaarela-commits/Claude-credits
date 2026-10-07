@@ -1,113 +1,183 @@
 <!doctype html>
-<html lang="fi">
+<html lang="fi" class="is-intro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ville Saarela · Suunnittelija ja tekijä Helsingistä</title>
   <meta name="description" content="Verkkosivut, jotka tekevät töitä. Suunnittelu, toteutus ja julkaisu yrityksille, joiden työ ansaitsee tulla nähdyksi.">
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f8f4ec">
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="../../assets/fonts/geist-300-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/vendor/lenis.css">
-  <link rel="stylesheet" href="bodak.css?v=2">
+  <link rel="stylesheet" href="bodak.css?v=3">
+  <script>if (matchMedia('(prefers-reduced-motion: reduce)').matches || location.hash) document.documentElement.classList.remove('is-intro'); else if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
 </head>
 <body>
   <a class="skip" href="#tyot">Siirry töihin</a>
-  <nav class="nav" id="nav" aria-label="Valikko"><a href="#palvelut" data-for="palvelut">Palvelut</a><a href="#tyot" data-for="tyot" class="is-on">Työt</a><a href="#yhteys" data-for="yhteys">Yhteys</a></nav>
-  <div class="nav-r" id="navr"><a href="mailto:info@villesaarela.com?subject=Verkkosivuprojekti">Aloita projekti</a></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="loader mono" aria-hidden="true"><span class="ld-n">000</span><span class="ld-px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
 
+  <nav class="nav" id="nav" aria-label="Valikko"><a href="#tyot" data-for="tyot" class="is-on">Työt</a><a href="#prosessi" data-for="prosessi">Prosessi</a><a href="#yhteys" data-for="yhteys">Yhteys</a></nav>
+  <div class="nav-r" id="navr"><button type="button" class="chip" data-open-prices aria-controls="hinnat">Hinnat</button><a class="chip chip-a" href="mailto:info@villesaarela.com?subject=Verkkosivuprojekti">Aloita projekti</a></div>
+
+  <div class="page" id="page">
   <main>
     <header class="hero">
-      <h1 class="h1">Verkkosivut, jotka<br>tekevät töitä</h1>
-      <svg class="px mark" data-px="hero" aria-hidden="true"></svg>
-      <p class="by">Ville Saarela · Suunnittelija ja tekijä</p>
-      <p class="note">Yrityksille, joiden työ ansaitsee tulla nähdyksi.</p>
-      <p class="where">Helsinki <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="7" fill="none" stroke="currentColor" stroke-width="1.4"/><ellipse cx="12" cy="12" rx="4.5" ry="7" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M2 12h20M4 8.5h16M4 15.5h16" stroke="currentColor" stroke-width="1.4"/></svg> Koko Suomi</p>
+      <h1 class="h1" aria-label="Verkkosivut, jotka tekevät töitä">
+        <span class="ln"><span>Verkkosivut, jotka</span></span>
+        <span class="ln"><span class="cyc" aria-hidden="true">tekevät töitä</span></span>
+      </h1>
+      <canvas class="vs" aria-hidden="true"></canvas>
+      <p class="by fade">Ville Saarela · Suunnittelija ja tekijä</p>
+      <p class="note fade">Yrityksille, joiden työ ansaitsee tulla nähdyksi.</p>
+      <p class="where fade mono"><span>Helsinki</span><span class="clk" data-clock>--.--</span><span>Koko Suomi</span></p>
     </header>
 
     <section class="work" id="tyot" data-nav="tyot" aria-label="Työt">
-      <a class="row" href="https://buffbird.eu/" target="_blank" rel="noopener" data-video="buffbird" aria-label="BuffBird, Treenisovellus. Avaa sivusto">
-        <span class="name">BuffBird<small>Treenisovellus · 2026</small></span>
-        <span class="media"><img src="../../assets/img/projektit/buffbird/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></span>
+      <a class="row" href="https://buffbird.eu/" target="_blank" rel="noopener" data-video="buffbird" data-cur="Avaa sivusto" aria-label="BuffBird, Treenisovellus. Avaa sivusto">
+        <span class="name"><i class="no mono">01</i><span class="nm">BuffBird</span><small>Treenisovellus</small></span>
+        <span class="media"><span class="scr"><img class="wire" src="img/buffbird-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><img class="fin" src="img/buffbird-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span>
         <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
       </a>
-      <a class="row" href="../../demot/lindqvist-ekroos/" target="_blank" rel="noopener" data-video="lindqvist-ekroos" aria-label="Lindqvist Ekroos, Arkkitehtitoimisto. Avaa sivusto">
-        <span class="name">Lindqvist Ekroos<small>Arkkitehtitoimisto · 2026</small></span>
-        <span class="media"><img src="../../assets/img/projektit/lindqvist-ekroos/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></span>
+      <a class="row" href="../../demot/lindqvist-ekroos/" target="_blank" rel="noopener" data-video="lindqvist-ekroos" data-cur="Avaa sivusto" aria-label="Lindqvist Ekroos, Arkkitehtitoimisto. Avaa sivusto">
+        <span class="name"><i class="no mono">02</i><span class="nm">Lindqvist Ekroos</span><small>Arkkitehtitoimisto</small></span>
+        <span class="media"><span class="scr"><img class="wire" src="img/lindqvist-ekroos-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><img class="fin" src="img/lindqvist-ekroos-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span>
         <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
       </a>
-      <a class="row" href="../../demot/haljala/" target="_blank" rel="noopener" data-video="haljala" aria-label="Haljala, Arkkitehtitoimisto. Avaa sivusto">
-        <span class="name">Haljala<small>Arkkitehtitoimisto · 2026</small></span>
-        <span class="media"><img src="../../assets/img/projektit/haljala/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></span>
+      <a class="row" href="../../demot/haljala/" target="_blank" rel="noopener" data-video="haljala" data-cur="Avaa sivusto" aria-label="Haljala, Arkkitehtitoimisto. Avaa sivusto">
+        <span class="name"><i class="no mono">03</i><span class="nm">Haljala</span><small>Arkkitehtitoimisto</small></span>
+        <span class="media"><span class="scr"><img class="wire" src="img/haljala-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><img class="fin" src="img/haljala-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span>
         <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
       </a>
-      <a class="row" href="../../demot/keljon-puusepat/" target="_blank" rel="noopener" data-video="keljon-puusepat" aria-label="Keljon Puusepät, Puusepänliike. Avaa sivusto">
-        <span class="name">Keljon Puusepät<small>Puusepänliike · 2026</small></span>
-        <span class="media"><img src="../../assets/img/projektit/keljon-puusepat/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></span>
+      <a class="row" href="../../demot/keljon-puusepat/" target="_blank" rel="noopener" data-video="keljon-puusepat" data-cur="Avaa sivusto" aria-label="Keljon Puusepät, Puusepänliike. Avaa sivusto">
+        <span class="name"><i class="no mono">04</i><span class="nm">Keljon Puusepät</span><small>Puusepänliike</small></span>
+        <span class="media"><span class="scr"><img class="wire" src="img/keljon-puusepat-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><img class="fin" src="img/keljon-puusepat-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span>
         <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
       </a>
-      <a class="row" href="../../demot/studio-kuusela/" target="_blank" rel="noopener" data-video="studio-kuusela" aria-label="Studio Kuusela, Sisustusarkkitehdit. Avaa sivusto">
-        <span class="name">Studio Kuusela<small>Sisustusarkkitehdit · 2026</small></span>
-        <span class="media"><img src="../../assets/img/projektit/studio-kuusela/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></span>
+      <a class="row" href="../../demot/studio-kuusela/" target="_blank" rel="noopener" data-video="studio-kuusela" data-cur="Avaa sivusto" aria-label="Studio Kuusela, Sisustusarkkitehdit. Avaa sivusto">
+        <span class="name"><i class="no mono">05</i><span class="nm">Studio Kuusela</span><small>Sisustusarkkitehdit</small></span>
+        <span class="media"><span class="scr"><img class="wire" src="img/studio-kuusela-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><img class="fin" src="img/studio-kuusela-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span>
         <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
       </a>
-      <a class="row" href="../../demot/kivela-rinne/" target="_blank" rel="noopener" data-video="kivela-rinne" aria-label="Kivelä Rinne, Muotoilustudio. Avaa sivusto">
-        <span class="name">Kivelä Rinne<small>Muotoilustudio · 2026</small></span>
-        <span class="media"><img src="../../assets/img/projektit/kivela-rinne/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></span>
+      <a class="row" href="../../demot/kivela-rinne/" target="_blank" rel="noopener" data-video="kivela-rinne" data-cur="Avaa sivusto" aria-label="Kivelä Rinne, Muotoilustudio. Avaa sivusto">
+        <span class="name"><i class="no mono">06</i><span class="nm">Kivelä Rinne</span><small>Muotoilustudio</small></span>
+        <span class="media"><span class="scr"><img class="wire" src="img/kivela-rinne-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><img class="fin" src="img/kivela-rinne-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span>
         <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
       </a>
-      <a class="row" href="../../demot/kaulus/" target="_blank" rel="noopener" data-video="kaulus" aria-label="Kaulus, Verkkokauppa. Avaa sivusto">
-        <span class="name">Kaulus<small>Verkkokauppa · 2026</small></span>
-        <span class="media"><img src="../../assets/img/projektit/kaulus/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></span>
+      <a class="row" href="../../demot/kaulus/" target="_blank" rel="noopener" data-video="kaulus" data-cur="Avaa sivusto" aria-label="Kaulus, Verkkokauppa. Avaa sivusto">
+        <span class="name"><i class="no mono">07</i><span class="nm">Kaulus</span><small>Verkkokauppa</small></span>
+        <span class="media"><span class="scr"><img class="wire" src="img/kaulus-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><img class="fin" src="img/kaulus-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span>
         <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
       </a>
     </section>
 
-    <section class="dark cards-sec" id="palvelut" data-nav="palvelut" data-dark aria-labelledby="palvelut-h">
-      <div class="cards-in">
-        <div class="dots" aria-hidden="true"><span class="is-on"><svg class="px" data-px="dot" data-seed="3"></svg></span><span><svg class="px" data-px="dot" data-seed="10"></svg></span><span><svg class="px" data-px="dot" data-seed="17"></svg></span></div>
-        <h2 class="lead" id="palvelut-h">Jokainen projekti sisältää suunnittelun, toteutuksen ja julkaisun.</h2>
-        <div class="stage">
-          <article class="pcard" data-i="0">
-            <div class="face"><div class="top"><h3>Suunnittelu</h3><svg class="px" data-px="icon" data-seed="3" aria-hidden="true"></svg></div><p>Selkeät sivut, joita on ilo käyttää. Laatu ensin.</p><div class="bot" aria-hidden="true"><span>Suunnittelu</span><svg class="px" data-px="icon" data-seed="3"></svg></div></div>
-            <div class="back" aria-hidden="true"><svg class="px" data-px="back" data-seed="5"></svg></div>
+    <section class="dark proc" id="prosessi" data-nav="prosessi" data-dark aria-labelledby="proc-h">
+      <div class="proc-l">
+        <p class="kick mono">Prosessi</p>
+        <h2 class="lead" id="proc-h">Neljä vaihetta. Näet suunnan ennen kuin sitoudut.</h2>
+        <ol class="steps">
+          <li><button type="button" data-go="0"><i class="mono">01</i><b>Tutustuminen</b><span class="mono">Päivä 1</span></button></li>
+          <li><button type="button" data-go="1"><i class="mono">02</i><b>Maksuton luonnos</b><span class="mono">Viikko 1</span></button></li>
+          <li><button type="button" data-go="2"><i class="mono">03</i><b>Toteutus</b><span class="mono">Viikot 2–3</span></button></li>
+          <li><button type="button" data-go="3"><i class="mono">04</i><b>Julkaisu</b><span class="mono">Viikko 4</span></button></li>
+        </ol>
+        <p class="hint mono">Vedä korttia tai valitse vaihe</p>
+      </div>
+      <div class="deck" data-cur="Vedä">
+          <article class="pc" data-i="0" aria-roledescription="kortti" aria-label="1 / 4: Tutustuminen">
+            <div class="face">
+              <div class="pc-top mono"><span>01 / 04</span><span>Päivä 1</span></div>
+              <h3>Tutustuminen</h3>
+              <div class="stage" data-phase="0" aria-hidden="true"></div>
+              <p>Mitä teet, kenelle ja mitä sivujen pitää saada aikaan.</p>
+            </div>
+            <div class="back" aria-hidden="true"><canvas class="back-px"></canvas><span class="mono">Ville Saarela</span></div>
           </article>
-          <article class="pcard" data-i="1">
-            <div class="face"><div class="top"><h3>Toteutus</h3><svg class="px" data-px="icon" data-seed="10" aria-hidden="true"></svg></div><p>Luonnoksesta valmiiksi sivuiksi ilman, että yksityiskohdat katoavat matkalla.</p><div class="bot" aria-hidden="true"><span>Toteutus</span><svg class="px" data-px="icon" data-seed="10"></svg></div></div>
-            <div class="back" aria-hidden="true"><svg class="px" data-px="back" data-seed="16"></svg></div>
+          <article class="pc" data-i="1" aria-roledescription="kortti" aria-label="2 / 4: Maksuton luonnos">
+            <div class="face">
+              <div class="pc-top mono"><span>02 / 04</span><span>Viikko 1</span></div>
+              <h3>Maksuton luonnos</h3>
+              <div class="stage" data-phase="1" aria-hidden="true"></div>
+              <p>Etusivu sinun töilläsi, ennen kuin sitoudut mihinkään.</p>
+            </div>
+            <div class="back" aria-hidden="true"><canvas class="back-px"></canvas><span class="mono">Ville Saarela</span></div>
           </article>
-          <article class="pcard" data-i="2">
-            <div class="face"><div class="top"><h3>Julkaisu ja tuki</h3><svg class="px" data-px="icon" data-seed="17" aria-hidden="true"></svg></div><p>Oma osoite, Google kuntoon ja 30 päivän tuki julkaisun jälkeen.</p><div class="bot" aria-hidden="true"><span>Julkaisu ja tuki</span><svg class="px" data-px="icon" data-seed="17"></svg></div></div>
-            <div class="back" aria-hidden="true"><svg class="px" data-px="back" data-seed="27"></svg></div>
+          <article class="pc" data-i="2" aria-roledescription="kortti" aria-label="3 / 4: Toteutus">
+            <div class="face">
+              <div class="pc-top mono"><span>03 / 04</span><span>Viikot 2–3</span></div>
+              <h3>Toteutus</h3>
+              <div class="stage" data-phase="2" aria-hidden="true"></div>
+              <p>Sivut, kuvat ja tekstit. Kommentoit matkan varrella.</p>
+            </div>
+            <div class="back" aria-hidden="true"><canvas class="back-px"></canvas><span class="mono">Ville Saarela</span></div>
           </article>
-        </div>
-        <div class="after mono"><div class="ico" aria-hidden="true"><span></span><span></span><span></span><span></span></div>Kun kaikki näyttää samalta, yksityiskohdat ratkaisevat. Aina.</div>
+          <article class="pc" data-i="3" aria-roledescription="kortti" aria-label="4 / 4: Julkaisu">
+            <div class="face">
+              <div class="pc-top mono"><span>04 / 04</span><span>Viikko 4</span></div>
+              <h3>Julkaisu</h3>
+              <div class="stage" data-phase="3" aria-hidden="true"></div>
+              <p>Oma osoite, Google kuntoon ja 30 päivän tuki.</p>
+            </div>
+            <div class="back" aria-hidden="true"><canvas class="back-px"></canvas><span class="mono">Ville Saarela</span></div>
+          </article>
       </div>
     </section>
 
-    <section class="dark next" id="yhteys" data-nav="yhteys" data-dark aria-label="Aloita projekti">
-      <p class="kick">Seuraava <svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true"><path d="M2 2l9 9h9M11 11H4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg> luku</p>
-      <h2 class="big">
-        <span class="l l1"><span class="w">Aloitetaan</span></span>
-        <span class="l l2"><span class="w">sinun</span><span class="sp">Maksuton luonnos</span><span class="w">uudet</span></span>
-        <span class="l l3"><span class="w">sivusi</span><span class="sp fixed">Vastaus 24 h</span></span>
-        <span class="l l4"><a href="mailto:info@villesaarela.com?subject=Verkkosivuprojekti"><span class="w">yhdessä</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h18M12 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg></a></span>
-      </h2>
+    <section class="dark cta" id="yhteys" data-nav="yhteys" data-dark aria-labelledby="cta-h">
+      <h2 class="sr" id="cta-h">Aloitetaan.</h2>
+      <canvas class="pxtext" aria-hidden="true"></canvas>
+      <div class="cta-b">
+        <p>Kerro lyhyesti, mitä teet. Vastaan 24 tunnin sisällä ja teen etusivusta maksuttoman luonnoksen. Vasta sen jälkeen päätät.</p>
+        <div class="btns">
+          <button type="button" class="pill pill-a" data-open-prices aria-controls="hinnat">Katso hinnat</button>
+          <a class="pill" href="mailto:info@villesaarela.com?subject=Verkkosivuprojekti">info@villesaarela.com</a>
+          <a class="pill" href="tel:+358451035362">045 103 5362</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="dark ftr" data-dark>
-    <div><h3>Sivut</h3><ul><li><a href="#palvelut">Palvelut</a></li><li><a href="#tyot">Työt</a></li><li><a href="#yhteys">Yhteys</a></li><li><a href="../../tietosuoja/">Tietosuoja</a></li></ul></div>
-    <a class="stack" href="mailto:info@villesaarela.com" aria-label="Lähetä sähköpostia">
-      <span class="ph"><img src="../../assets/img/projektit/haljala/cover-600.webp" alt=""></span>
-      <span class="ph"><img src="../../assets/img/projektit/kaulus/cover-600.webp" alt=""></span>
-      <span class="ph"><img src="../../assets/img/ville.jpg" alt="" style="filter:grayscale(1)"></span>
-    </a>
-    <div class="right"><h3>Yhteys</h3><ul><li><a href="mailto:info@villesaarela.com">info@villesaarela.com</a></li><li><a href="tel:+358451035362">045 103 5362</a></li><li>Isosaarentie 10, Helsinki</li><li>Y-tunnus 3660060-6</li></ul></div>
-    <div class="base"><span>©<span data-year>2026</span></span><a href="../../tietosuoja/">Tietosuoja</a><span class="made"><svg class="px" data-px="dot" data-seed="23" aria-hidden="true"></svg>Tehnyt Ville</span></div>
+    <div class="col"><h3>Sivukartta</h3><ul><li><a href="#tyot">Työt</a></li><li><a href="#prosessi">Prosessi</a></li><li><button type="button" data-open-prices aria-controls="hinnat">Hinnat</button></li><li><a href="#yhteys">Yhteys</a></li></ul></div>
+    <div class="clock-box" aria-label="Kello Helsingissä"><canvas class="pxclock" aria-hidden="true"></canvas><span class="mono">Helsinki, nyt</span></div>
+    <div class="col right"><h3>Yhteys</h3><ul><li><a href="mailto:info@villesaarela.com">info@villesaarela.com</a></li><li><a href="tel:+358451035362">045 103 5362</a></li><li>Isosaarentie 10, Helsinki</li><li>Y-tunnus 3660060-6</li></ul></div>
+    <div class="base"><span>© <span data-year>2026</span> Ville Saarela</span><a href="../../tietosuoja/">Tietosuoja</a><a href="#top" data-top>Ylös ↑</a></div>
   </footer>
+  </div>
+
+  <div class="drawer" id="hinnat" role="dialog" aria-modal="true" aria-labelledby="hinnat-h" aria-hidden="true">
+    <div class="dr-bg" data-close></div>
+    <div class="dr-panel" tabindex="-1">
+      <div class="dr-head"><span class="chip">Hinnat</span><button type="button" class="dr-x" data-close>Sulje</button></div>
+      <h2 class="dr-lead" id="hinnat-h">Jokainen projekti sisältää suunnittelun, toteutuksen ja julkaisun. Kiinteä hinta, ei kuukausimaksuja.</h2>
+      <div class="plans">
+        <article class="plan">
+          <h3>Perus</h3>
+          <div class="plan-b"><p class="who">Yksinyrittäjälle tai pienelle studiolle, joka tarvitsee selkeän näyteikkunan.</p><p class="inc">Etusivu, työt ja yhteystiedot. Toimii puhelimella ja löytyy Googlesta.</p><p class="price">1 490 €</p></div>
+          <div class="plan-s"><span class="mono">Esimerkki</span><div><a href="../../demot/studio-kuusela/" target="_blank" rel="noopener" aria-label="Esimerkki: Studio Kuusela"><img src="../../assets/img/projektit/studio-kuusela/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></a><a href="../../demot/kivela-rinne/" target="_blank" rel="noopener" aria-label="Esimerkki: Kivelä Rinne"><img src="../../assets/img/projektit/kivela-rinne/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></a></div></div>
+        </article>
+        <article class="plan">
+          <h3>Yritys</h3>
+          <div class="plan-b"><p class="who">Yritykselle, jonka töiden pitää myydä ja tuoda tarjouspyyntöjä.</p><p class="inc">Projektisivut 12 kohteelle, suodattimet, yhteydenottolomake ja kävijäseuranta.</p><p class="price">2 490 €</p></div>
+          <div class="plan-s"><span class="mono">Esimerkki</span><div><a href="../../demot/lindqvist-ekroos/" target="_blank" rel="noopener" aria-label="Esimerkki: Lindqvist Ekroos"><img src="../../assets/img/projektit/lindqvist-ekroos/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></a><a href="../../demot/haljala/" target="_blank" rel="noopener" aria-label="Esimerkki: Haljala"><img src="../../assets/img/projektit/haljala/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></a></div></div>
+        </article>
+        <article class="plan">
+          <h3>Räätälöity</h3>
+          <div class="plan-b"><p class="who">Laajemmalle toimistolle, liikkeelle tai verkkokaupalle.</p><p class="inc">Oma suunnitteluvaihe ja ilme, rajaton määrä kohteita, suomi ja englanti.</p><p class="price"><small>alkaen </small>3 480 €</p></div>
+          <div class="plan-s"><span class="mono">Esimerkki</span><div><a href="../../demot/keljon-puusepat/" target="_blank" rel="noopener" aria-label="Esimerkki: Keljon Puusepät"><img src="../../assets/img/projektit/keljon-puusepat/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></a><a href="../../demot/kaulus/" target="_blank" rel="noopener" aria-label="Esimerkki: Kaulus"><img src="../../assets/img/projektit/kaulus/cover-600.webp" width="600" height="375" alt="" loading="lazy" decoding="async"></a></div></div>
+        </article>
+      </div>
+      <div class="dr-foot">
+        <p>Ensin maksuton luonnos. Hintoihin ei lisätä arvonlisäveroa.</p>
+        <div class="btns"><a class="pill pill-a" href="mailto:info@villesaarela.com?subject=Verkkosivuprojekti">Aloita projekti</a><a class="pill" href="tel:+358451035362">045 103 5362</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cur" aria-hidden="true"><span></span></div>
 
   <script src="../../assets/vendor/lenis.min.js"></script>
-  <script src="bodak.js?v=2"></script>
+  <script src="bodak.js?v=3"></script>
 </body>
 </html>
