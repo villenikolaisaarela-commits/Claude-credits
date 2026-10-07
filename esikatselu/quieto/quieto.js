@@ -2,6 +2,27 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
 
+  // Smooth scroll, and anchor links that land below the header
+  let lenis = null;
+  if (window.Lenis && !reduce) {
+    lenis = new Lenis({ lerp: 0.09, smoothWheel: true, anchors: { offset: -84 } });
+    const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+    requestAnimationFrame(raf);
+  }
+
+  // Hero image drifts a little slower than the page
+  const drift = document.querySelector('.hero .wall-in picture');
+  if (drift && !reduce) {
+    const wall = drift.parentElement;
+    const onDrift = () => {
+      const r = wall.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      const t = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+      drift.style.setProperty('--py', `${(t * 36).toFixed(1)}px`);
+    };
+    addEventListener('scroll', onDrift, { passive: true }); onDrift();
+  }
+
   // Reveal on scroll, staggered at most 80 ms within a group
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
