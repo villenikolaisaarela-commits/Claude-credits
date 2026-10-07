@@ -48,62 +48,85 @@
     h1.style.setProperty('--iy', `${(innerHeight / 2 - cy).toFixed(1)}px`);
   };
   const start = () => { if (!reduce) cycle(); };
+  const land = () => {
+    h1.classList.add('land');
+    root.classList.remove('is-intro');
+    hero.gather(1.2);
+    if (lenis) lenis.start();
+    setTimeout(() => { h1.classList.remove('land'); }, 1500);
+    start();
+  };
   if (root.classList.contains('is-intro')) {
+    // The loader follows what has really loaded and opens the page as soon as it is ready
     scrollTo(0, 0);
     if (lenis) lenis.stop();
     placeIntro();
-    if (document.fonts) document.fonts.ready.then(() => { if (root.classList.contains('is-intro')) placeIntro(); });
+    const prog = { t: 0.12, d: 0 };
+    const bump = v => { prog.t = Math.max(prog.t, v); };
+    if (document.fonts) document.fonts.ready.then(() => { bump(0.55); if (root.classList.contains('is-intro')) placeIntro(); });
+    const ph = document.querySelector('.me-ph img');
+    if (!ph || ph.complete) bump(0.75); else { ph.addEventListener('load', () => bump(0.75), { once: true }); ph.addEventListener('error', () => bump(0.75), { once: true }); }
+    if (document.readyState === 'complete') bump(1); else addEventListener('load', () => bump(1), { once: true });
+    setTimeout(() => bump(1), 2400);
     const n = loader.querySelector('.ld-n'), px = [...loader.querySelectorAll('.ld-px i')];
-    const t0 = performance.now(), D = 1700;
+    const t0 = performance.now();
+    let done = false;
     const count = t => {
-      const p = clamp((t - t0) / D, 0, 1), e = 1 - Math.pow(1 - p, 3);
-      n.textContent = String(Math.round(e * 100)).padStart(3, '0');
-      px.forEach((el, i) => el.classList.toggle('on', i < Math.round(e * px.length)));
-      if (p < 1) requestAnimationFrame(count);
+      prog.d += (prog.t - prog.d) * 0.16;
+      if (prog.t >= 1 && prog.d > 0.985) prog.d = 1;
+      n.textContent = String(Math.round(prog.d * 100)).padStart(3, '0');
+      px.forEach((el, i) => el.classList.toggle('on', i < Math.round(prog.d * px.length)));
+      if (prog.d >= 1 && t - t0 > 700) { if (!done) { done = true; setTimeout(land, 120); } return; }
+      requestAnimationFrame(count);
     };
     requestAnimationFrame(count);
-    setTimeout(() => h1.classList.add('go'), 150);
-    setTimeout(() => {
-      h1.classList.add('land');
-      root.classList.remove('is-intro');
-      hero.gather(1.2);
-      if (lenis) lenis.start();
-      setTimeout(() => { h1.classList.remove('land'); }, 1500);
-      start();
-    }, 2100);
+    setTimeout(() => h1.classList.add('go'), 60);
   } else {
     h1.classList.add('go');
     if (!reduce) hero.gather(1.2);
     start();
   }
 
-  // Work rows: wireframe → final with a scanline, then the live site plays
+  // Work rows: the finished site slides down over the wireframe, then the live site plays.
+  // Only transforms and opacity animate, and only rows well in view play video.
+  const rows = [...document.querySelectorAll('.row')];
   const vio = new IntersectionObserver(es => es.forEach(e => {
-    const a = e.target;
-    a.vis = e.isIntersecting;
-    if (a.vis && !a.classList.contains('is-built')) {
-      const scr = a.querySelector('.scr');
-      a.style.setProperty('--sh', `${scr.offsetHeight + 2}px`);
+    const a = e.target, r = e.intersectionRatio;
+    a.vis = r >= 0.55;
+    if (r >= 0.3 && !a.classList.contains('is-built')) {
       a.classList.add('is-built');
-      setTimeout(() => { a.classList.add('is-done'); play(a); }, reduce ? 0 : 1700);
+      setTimeout(() => { a.classList.add('is-done'); play(a); }, reduce ? 0 : 1800);
     } else play(a);
-  }), { threshold: 0.35 });
+  }), { threshold: [0, 0.3, 0.55, 0.8] });
   const play = a => {
     if (reduce || !a.classList.contains('is-done')) return;
     let v = a.querySelector('video');
     if (a.vis) {
       if (!v) {
         v = document.createElement('video');
-        Object.assign(v, { muted: true, playsInline: true, loop: true, preload: 'auto' });
+        Object.assign(v, { muted: true, playsInline: true, loop: true, preload: 'none' });
         v.setAttribute('aria-hidden', 'true');
         v.src = `${R}assets/video/tyot/${a.dataset.video}.${webm ? 'webm' : 'mp4'}`;
-        v.addEventListener('playing', () => v.classList.add('is-on'));
+        v.addEventListener('playing', () => requestAnimationFrame(() => v.classList.add('is-on')));
         a.querySelector('.scr').appendChild(v);
       }
       v.play().catch(() => {});
-    } else if (v) v.pause();
+    } else if (v && !v.paused) v.pause();
   };
-  document.querySelectorAll('.row').forEach(r => vio.observe(r));
+  rows.forEach(r => vio.observe(r));
+
+  // A little depth: the screen drifts inside its frame while you scroll
+  const scrs = rows.map(r => r.querySelector('.scr'));
+  const drift = () => {
+    const h = innerHeight;
+    rows.forEach((r, i) => {
+      const b = r.getBoundingClientRect();
+      if (b.bottom < 0 || b.top > h) return;
+      const t = (b.top + b.height / 2 - h / 2) / h;
+      scrs[i].style.transform = `translate3d(0, ${(t * -16).toFixed(2)}px, 0)`;
+    });
+  };
+  if (!reduce) { if (lenis) lenis.on('scroll', drift); else addEventListener('scroll', drift, { passive: true }); drift(); }
 
   // Mini site in each card: 15 blocks, four phases
   const B = [

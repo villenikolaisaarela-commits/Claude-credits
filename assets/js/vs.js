@@ -95,14 +95,32 @@
   const reveal = els => els.forEach(el => { if (reduce) el.classList.add('in'); else rio.observe(el); });
   reveal([...document.querySelectorAll('.rv, .fd')]);
 
-  // "Aloitetaan." in pixels
+  // Text that lights up word by word as you read it
+  const words = [];
+  document.querySelectorAll('.rd').forEach(p => {
+    p.innerHTML = p.textContent.split(' ').map(w => `<span class="wd">${w}</span>`).join(' ');
+    words.push(...p.querySelectorAll('.wd'));
+  });
+  if (words.length) {
+    const read = () => {
+      const line = innerHeight * (reduce ? 1 : 0.7);
+      for (const w of words) w.classList.toggle('on', w.getBoundingClientRect().top < line);
+    };
+    if (lenis) lenis.on('scroll', read);
+    addEventListener('scroll', read, { passive: true });
+    addEventListener('resize', read);
+    read();
+  }
+
+  // Pixel words ("Aloitetaan.", 404)
   const pxt = document.querySelector('.pxtext');
   if (pxt) {
     const cta = new Field(pxt, (w, h) => {
       const step = Math.max(4, Math.round(w / 190));
       const oc = document.createElement('canvas'); oc.width = Math.ceil(w); oc.height = Math.ceil(h);
       const x = oc.getContext('2d', { willReadFrequently: true });
-      const word = 'Aloitetaan', dot = '.';
+      const txt = pxt.dataset.text || 'Aloitetaan.', main = pxt.dataset.ink ? INK : CREAM;
+      const dot = txt.endsWith('.') ? '.' : '', word = dot ? txt.slice(0, -1) : txt;
       let fs = 100; x.font = `600 ${fs}px Geist, system-ui, sans-serif`;
       if ('letterSpacing' in x) x.letterSpacing = '-5px';
       const tw = x.measureText(word + dot).width;
@@ -112,11 +130,11 @@
       const ww = x.measureText(word).width, total = x.measureText(word + dot).width;
       const x0 = (w - total) / 2, base = h * 0.78;
       x.fillStyle = '#fff'; x.fillText(word, x0, base);
-      x.fillStyle = '#f00'; x.fillText(dot, x0 + ww, base);
+      if (dot) { x.fillStyle = '#f00'; x.fillText(dot, x0 + ww, base); }
       const data = x.getImageData(0, 0, oc.width, oc.height).data, out = [];
       for (let yy = step / 2; yy < h; yy += step) for (let xx = step / 2; xx < w; xx += step) {
         const o = ((yy | 0) * oc.width + (xx | 0)) * 4;
-        if (data[o + 3] > 130) out.push({ hx: xx, hy: yy, s: step - 1, c: data[o + 1] < 120 ? ORANGE : CREAM });
+        if (data[o + 3] > 130) out.push({ hx: xx, hy: yy, s: step - 1, c: data[o + 1] < 120 ? ORANGE : main });
       }
       return out;
     }, { R: 140, push: 46, ease: 0.07 });
@@ -221,7 +239,7 @@
 
   // Page wipe between pages: squares close in, the next page opens the same way
   const wipe = document.querySelector('.wipe');
-  const PAGES = ['/', '/tyot/', '/minusta/'];
+  const internal = path => path.endsWith('/') && !/^\/(demot|esikatselu)\//.test(path);
   const buildWipe = () => {
     const size = innerWidth < 760 ? 64 : 96;
     const cols = Math.ceil(innerWidth / size), rows = Math.ceil(innerHeight / size), r = rng(11);
@@ -247,7 +265,7 @@
     if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
     if (a.target === '_blank' || a.hasAttribute('download')) return;
     const u = new URL(a.href, location.href);
-    if (u.origin !== location.origin || !PAGES.includes(u.pathname)) return;
+    if (u.origin !== location.origin || !internal(u.pathname)) return;
     if (u.pathname === location.pathname) return;
     e.preventDefault();
     try { sessionStorage.setItem('vs-wipe', '1'); } catch (err) { location.href = u.href; return; }
