@@ -288,3 +288,27 @@ button { font: inherit; }
 .sec:nth-of-type(4n + 2) ::selection { background: var(--c2); color: #fff; }
 .sec:nth-of-type(4n + 3) ::selection { background: var(--c3); color: #fff; }
 .sec:nth-of-type(4n + 4) ::selection { background: var(--c4); color: #fff; }
+
+/* The four characters */
+.ch { display: block; width: 100%; height: auto; overflow: visible; }
+.ch g { transform-box: fill-box; transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.1, 1); }
+.ch-wave { transform-origin: 0% 100%; }
+.ch-tilt { transform-origin: 0% 100%; }
+.ch-jump { transform-origin: 50% 100%; }
+.ch-lift { transform-origin: 50% 100%; }
+.four-c:hover .ch-wave, .four-c.is-wave .ch-wave { animation: ch-wave 1.2s cubic-bezier(0.2, 0.7, 0.1, 1); }
+.four-c:hover .ch-tilt { transform: rotate(-10deg); }
+.four-c:hover .ch-jump { transform: translateY(-8px); }
+.four-c:hover .ch-lift { transform: translateY(-6px); }
+@keyframes ch-wave { 0%, 100% { transform: none; } 25% { transform: rotate(-14deg); } 50% { transform: rotate(8deg); } 75% { transform: rotate(-8deg); } }
+@media (prefers-reduced-motion: reduce) { .ch g { transition: none; animation: none !important; transform: none !important; } }
+
+.four { display: grid; gap: 40px clamp(20px, 3vw, 40px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.four-c { display: grid; gap: 12px; align-content: start; }
+.four-w { background: var(--white); padding: clamp(20px, 3vw, 40px) clamp(28px, 4vw, 56px) clamp(12px, 2vw, 24px); margin-bottom: 8px; }
+.sec-paper .four-w { background: var(--white); }
+.four-w .ch { max-width: 200px; margin-inline: auto; }
+.four-n { font: 500 clamp(36px, 3.6vw, 56px)/0.95 var(--sans); letter-spacing: -0.05em; }
+.four-c > p:last-child { color: #3C3C38; max-width: 36ch; }
+.four-c .mono i { font-style: normal; color: var(--ink); }
+.more-l { margin-top: clamp(40px, 5vw, 64px); }

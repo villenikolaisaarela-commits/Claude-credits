@@ -94,6 +94,17 @@
     });
   }
 
+  // The four: Aito waves once when the characters come into view
+  const aito = document.querySelector('.four-c');
+  if (aito && !reduce) {
+    const wv = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      aito.classList.add('is-wave'); wv.disconnect();
+      setTimeout(() => aito.classList.remove('is-wave'), 1400);
+    }), { threshold: 0.6 });
+    wv.observe(aito);
+  }
+
   // Sample site: the form does not send anything yet, and says so
   const form = document.getElementById('form');
   const note = document.getElementById('form-note');
