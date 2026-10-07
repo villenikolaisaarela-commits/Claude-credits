@@ -88,16 +88,16 @@
   }
 
   // Work rows: the finished site slides down over the wireframe, then the live site plays.
-  // Only transforms and opacity animate, and only rows well in view play video.
+  // The screen never moves inside its frame; only the reveal and opacity animate.
   const rows = [...document.querySelectorAll('.row')];
   const vio = new IntersectionObserver(es => es.forEach(e => {
-    const a = e.target, r = e.intersectionRatio;
-    a.vis = r >= 0.55;
-    if (r >= 0.3 && !a.classList.contains('is-built')) {
+    const m = e.target, a = m.closest('.row'), r = e.intersectionRatio;
+    a.vis = r >= 0.6;
+    if (r >= 0.35 && !a.classList.contains('is-built')) {
       a.classList.add('is-built');
       setTimeout(() => { a.classList.add('is-done'); play(a); }, reduce ? 0 : 1800);
     } else play(a);
-  }), { threshold: [0, 0.3, 0.55, 0.8] });
+  }), { threshold: [0, 0.35, 0.6, 0.9] });
   const play = a => {
     if (reduce || !a.classList.contains('is-done')) return;
     let v = a.querySelector('video');
@@ -113,20 +113,7 @@
       v.play().catch(() => {});
     } else if (v && !v.paused) v.pause();
   };
-  rows.forEach(r => vio.observe(r));
-
-  // A little depth: the screen drifts inside its frame while you scroll
-  const scrs = rows.map(r => r.querySelector('.scr'));
-  const drift = () => {
-    const h = innerHeight;
-    rows.forEach((r, i) => {
-      const b = r.getBoundingClientRect();
-      if (b.bottom < 0 || b.top > h) return;
-      const t = (b.top + b.height / 2 - h / 2) / h;
-      scrs[i].style.transform = `translate3d(0, ${(t * -16).toFixed(2)}px, 0)`;
-    });
-  };
-  if (!reduce) { if (lenis) lenis.on('scroll', drift); else addEventListener('scroll', drift, { passive: true }); drift(); }
+  rows.forEach(r => vio.observe(r.querySelector('.media')));
 
   // Mini site in each card: 15 blocks, four phases
   const B = [

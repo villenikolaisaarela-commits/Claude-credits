@@ -60,8 +60,6 @@
       img.style.transform = `translate3d(0, ${(-travel * p).toFixed(1)}px, 0)`;
       pct.textContent = `${String(Math.round(p * 100)).padStart(3, '0')} %`;
     }
-    const fb = fig.getBoundingClientRect();
-    if (fb.bottom > 0 && fb.top < h) scr.style.transform = `translate3d(0, ${(((fb.top + fb.height / 2 - h / 2) / h) * -18).toFixed(2)}px, 0)`;
     phones.forEach((ph, k) => {
       const b = ph.getBoundingClientRect();
       if (b.bottom < 0 || b.top > h) return;
