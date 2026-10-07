@@ -25,7 +25,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/geist-300-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/vendor/lenis.css">
-  <link rel="stylesheet" href="assets/css/vs.css?v=8">
+  <link rel="stylesheet" href="assets/css/vs.css?v=9">
   <script>(function(){var h=document.documentElement,s=null;try{s=sessionStorage.getItem('vs-wipe');}catch(e){}if(s)h.classList.add('wipe-in');if(s||matchMedia('(prefers-reduced-motion: reduce)').matches||location.hash)h.classList.remove('is-intro');else if(h.classList.contains('is-intro')&&'scrollRestoration' in history)history.scrollRestoration='manual';})();</script>
 <script type="application/ld+json">
   {
@@ -93,7 +93,7 @@
   <div class="wipe" aria-hidden="true"></div>
   <div class="bar" aria-hidden="true"><i></i></div>
   <div class="loader mono" aria-hidden="true"><span class="ld-n">000</span><span class="ld-px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
-  <nav class="nav" id="nav" aria-label="Valikko"><a class="home-chip" href="./" aria-label="Ville Saarela, etusivu"><svg class="vsm" viewBox="0 0 11 7" aria-hidden="true"><path d="M0 0h1v4H0zM4 0h1v4H4zM1 4h1v2H1zM3 4h1v2H3zM2 6h1v1H2zM7 0h4v1H7zM6 1h1v2H6zM7 3h3v1H7zM10 4h1v2h-1zM6 6h4v1H6z"/></svg><span>Ville Saarela</span></a><a class="" href="#tyot" data-for="tyot">Työt</a><a href="#prosessi" data-for="prosessi">Prosessi</a><a class="" href="minusta/" data-for="minusta">Minusta</a></nav>
+  <nav class="nav" id="nav" aria-label="Valikko"><a class="home-chip" href="./" aria-label="Ville Saarela, etusivu"><svg class="vsm" viewBox="0 0 11 7" aria-hidden="true"><path d="M0 0h1v4H0zM4 0h1v4H4zM1 4h1v2H1zM3 4h1v2H3zM2 6h1v1H2zM7 0h4v1H7zM6 1h1v2H6zM7 3h3v1H7zM10 4h1v2h-1zM6 6h4v1H6z"/></svg><span>Ville Saarela</span></a><a class="" href="#tyot" data-for="tyot">Työt</a><a class="" href="prosessi/" data-for="prosessi">Prosessi</a><a class="" href="minusta/" data-for="minusta">Minusta</a></nav>
   <div class="nav-r" id="navr"><button type="button" class="chip chip-p" data-open="hinnat" aria-controls="hinnat">Hinnat</button><a class="chip chip-a" href="mailto:info@villesaarela.com?subject=Verkkosivuprojekti">Aloita projekti</a></div>
 
   <div class="page" id="page">
@@ -116,34 +116,17 @@
     <section class="work" id="tyot" data-nav="tyot" aria-label="Työt">
       <a class="row roll-h" href="https://buffbird.eu/" target="_blank" rel="noopener" data-video="buffbird" data-cur="Avaa sivusto" aria-label="BuffBird, Treenisovellus. Avaa sivusto">
         <span class="name"><i class="no mono">01</i><span class="nm roll"><span class="pw"><span class="l" style="--i:0"><span>B</span></span><span class="l" style="--i:1"><span>u</span></span><span class="l" style="--i:2"><span>f</span></span><span class="l" style="--i:3"><span>f</span></span><span class="l" style="--i:4"><span>B</span></span><span class="l" style="--i:5"><span>i</span></span><span class="l" style="--i:6"><span>r</span></span><span class="l" style="--i:7"><span>d</span></span></span></span><small>Treenisovellus</small></span>
-        <span class="frames">
-          <span class="media"><span class="scr"><img class="wire" src="assets/img/tyot/buffbird-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><span class="fin-w"><img class="fin" src="assets/img/tyot/buffbird-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span></span>
-          <span class="media m2"><img src="assets/img/tyot/kuvat/buffbird-2.webp" width="300" height="630" alt="" loading="lazy" decoding="async"></span>
-        </span>
+        <span class="media"><span class="scr"><img class="wire" src="assets/img/tyot/buffbird-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><span class="fin-w"><img class="fin" src="assets/img/tyot/buffbird-final.webp?v=2" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span></span>
         <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
       </a>
       <a class="row roll-h" href="demot/lindqvist-ekroos/" target="_blank" rel="noopener" data-video="lindqvist-ekroos" data-cur="Avaa sivusto" aria-label="Lindqvist Ekroos, Arkkitehtitoimisto. Avaa sivusto">
         <span class="name"><i class="no mono">02</i><span class="nm roll"><span class="pw"><span class="l" style="--i:0"><span>L</span></span><span class="l" style="--i:1"><span>i</span></span><span class="l" style="--i:2"><span>n</span></span><span class="l" style="--i:3"><span>d</span></span><span class="l" style="--i:4"><span>q</span></span><span class="l" style="--i:5"><span>v</span></span><span class="l" style="--i:6"><span>i</span></span><span class="l" style="--i:7"><span>s</span></span><span class="l" style="--i:8"><span>t</span></span></span> <span class="pw"><span class="l" style="--i:10"><span>E</span></span><span class="l" style="--i:11"><span>k</span></span><span class="l" style="--i:12"><span>r</span></span><span class="l" style="--i:13"><span>o</span></span><span class="l" style="--i:14"><span>o</span></span><span class="l" style="--i:15"><span>s</span></span></span></span><small>Arkkitehtitoimisto</small></span>
-        <span class="frames">
-          <span class="media"><span class="scr"><img class="wire" src="assets/img/tyot/lindqvist-ekroos-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><span class="fin-w"><img class="fin" src="assets/img/tyot/lindqvist-ekroos-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span></span>
-          <span class="media m2"><img src="assets/img/tyot/kuvat/lindqvist-ekroos-2.webp" width="300" height="630" alt="" loading="lazy" decoding="async"></span>
-        </span>
+        <span class="media"><span class="scr"><img class="wire" src="assets/img/tyot/lindqvist-ekroos-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><span class="fin-w"><img class="fin" src="assets/img/tyot/lindqvist-ekroos-final.webp?v=2" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span></span>
         <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
       </a>
       <a class="row roll-h" href="demot/haljala/" target="_blank" rel="noopener" data-video="haljala" data-cur="Avaa sivusto" aria-label="Haljala, Arkkitehtitoimisto. Avaa sivusto">
         <span class="name"><i class="no mono">03</i><span class="nm roll"><span class="pw"><span class="l" style="--i:0"><span>H</span></span><span class="l" style="--i:1"><span>a</span></span><span class="l" style="--i:2"><span>l</span></span><span class="l" style="--i:3"><span>j</span></span><span class="l" style="--i:4"><span>a</span></span><span class="l" style="--i:5"><span>l</span></span><span class="l" style="--i:6"><span>a</span></span></span></span><small>Arkkitehtitoimisto</small></span>
-        <span class="frames">
-          <span class="media"><span class="scr"><img class="wire" src="assets/img/tyot/haljala-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><span class="fin-w"><img class="fin" src="assets/img/tyot/haljala-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span></span>
-          <span class="media m2"><img src="assets/img/tyot/kuvat/haljala-2.webp" width="300" height="630" alt="" loading="lazy" decoding="async"></span>
-        </span>
-        <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
-      </a>
-      <a class="row roll-h" href="demot/kaulus/" target="_blank" rel="noopener" data-video="kaulus" data-cur="Avaa sivusto" aria-label="Kaulus, Verkkokauppa. Avaa sivusto">
-        <span class="name"><i class="no mono">04</i><span class="nm roll"><span class="pw"><span class="l" style="--i:0"><span>K</span></span><span class="l" style="--i:1"><span>a</span></span><span class="l" style="--i:2"><span>u</span></span><span class="l" style="--i:3"><span>l</span></span><span class="l" style="--i:4"><span>u</span></span><span class="l" style="--i:5"><span>s</span></span></span></span><small>Verkkokauppa</small></span>
-        <span class="frames">
-          <span class="media"><span class="scr"><img class="wire" src="assets/img/tyot/kaulus-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><span class="fin-w"><img class="fin" src="assets/img/tyot/kaulus-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span></span>
-          <span class="media m2"><img src="assets/img/tyot/kuvat/kaulus-2.webp" width="300" height="630" alt="" loading="lazy" decoding="async"></span>
-        </span>
+        <span class="media"><span class="scr"><img class="wire" src="assets/img/tyot/haljala-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><span class="fin-w"><img class="fin" src="assets/img/tyot/haljala-final.webp?v=2" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span></span>
         <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
       </a>
       <a class="all fd" href="tyot/"><span>Kaikki työt (07)</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></a>
@@ -173,6 +156,7 @@
           <li><button type="button" data-go="3"><i class="mono">04</i><b>Julkaisu</b><span class="mono">Viikko 4</span></button></li>
         </ol>
         <p class="hint mono">Vedä korttia tai valitse vaihe</p>
+        <a class="all fd" href="prosessi/"><span>Katso koko prosessi</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></a>
       </div>
       <div class="deck">
           <article class="pc" data-i="0" aria-roledescription="kortti" aria-label="1 / 4: Tutustuminen">
@@ -229,7 +213,7 @@
   </main>
 
   <footer class="dark ftr" data-dark>
-    <div class="col"><h3>Sivukartta</h3><ul><li><a href="./">Etusivu</a></li><li><a href="#tyot">Työt</a></li><li><a href="#prosessi">Prosessi</a></li><li><a href="minusta/">Minusta</a></li><li><button type="button" data-open="hinnat" aria-controls="hinnat">Hinnat</button></li></ul></div>
+    <div class="col"><h3>Sivukartta</h3><ul><li><a href="./">Etusivu</a></li><li><a href="#tyot">Valitut työt</a></li><li><a href="tyot/">Kaikki työt</a></li><li><a href="prosessi/">Prosessi</a></li><li><a href="minusta/">Minusta</a></li><li><button type="button" data-open="hinnat" aria-controls="hinnat">Hinnat</button></li></ul></div>
     <div class="clock-box" aria-label="Kello Helsingissä"><canvas class="pxclock" aria-hidden="true"></canvas><span class="mono">Helsinki, nyt</span></div>
     <div class="col right"><h3>Yhteys</h3><ul><li><a href="mailto:info@villesaarela.com">info@villesaarela.com</a></li><li><a href="tel:+358451035362">045 103 5362</a></li><li>Isosaarentie 10, Helsinki</li><li>Y-tunnus 3660060-6</li></ul></div>
     <div class="base"><span>© <span data-year>2026</span> Ville Saarela</span><a href="tietosuoja/">Tietosuoja</a><a href="#top" data-top>Ylös ↑</a></div>
@@ -284,7 +268,7 @@
   <div class="cur" aria-hidden="true"><span></span></div>
 
   <script src="assets/vendor/lenis.min.js"></script>
-  <script src="assets/js/vs.js?v=8"></script>
-  <script src="assets/js/etusivu.js?v=8"></script>
+  <script src="assets/js/vs.js?v=9"></script>
+  <script src="assets/js/etusivu.js?v=9"></script>
 </body>
 </html>

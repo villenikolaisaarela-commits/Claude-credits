@@ -11,7 +11,7 @@
         v = document.createElement('video');
         Object.assign(v, { muted: true, playsInline: true, loop: true, preload: 'auto' });
         v.setAttribute('aria-hidden', 'true');
-        v.src = `${R}assets/video/tyot/${pr.dataset.video}.${webm ? 'webm' : 'mp4'}`;
+        v.src = `${R}assets/video/tyot/${pr.dataset.video}.${webm ? 'webm' : 'mp4'}?v=2`;
         v.addEventListener('playing', () => v.classList.add('is-on'));
         pr.querySelector('.fr .fb').appendChild(v);
       }

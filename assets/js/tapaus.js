@@ -14,7 +14,7 @@
       v = document.createElement('video');
       Object.assign(v, { muted: true, playsInline: true, loop: true, preload: 'none' });
       v.setAttribute('aria-hidden', 'true');
-      v.src = `${R}assets/video/tyot/${fig.dataset.video}.${webm ? 'webm' : 'mp4'}`;
+      v.src = `${R}assets/video/tyot/${fig.dataset.video}.${webm ? 'webm' : 'mp4'}?v=2`;
       v.addEventListener('playing', () => requestAnimationFrame(() => v.classList.add('is-on')));
       scr.appendChild(v);
     }

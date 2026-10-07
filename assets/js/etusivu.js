@@ -106,7 +106,7 @@
         v = document.createElement('video');
         Object.assign(v, { muted: true, playsInline: true, loop: true, preload: 'none' });
         v.setAttribute('aria-hidden', 'true');
-        v.src = `${R}assets/video/tyot/${a.dataset.video}.${webm ? 'webm' : 'mp4'}`;
+        v.src = `${R}assets/video/tyot/${a.dataset.video}.${webm ? 'webm' : 'mp4'}?v=2`;
         v.addEventListener('playing', () => requestAnimationFrame(() => v.classList.add('is-on')));
         a.querySelector('.scr').appendChild(v);
       }
@@ -115,43 +115,9 @@
   };
   rows.forEach(r => vio.observe(r.querySelector('.media')));
 
-  // Mini site in each card: 15 blocks, four phases
-  const B = [
-    ['logo', 20, 16, 60, 14], ['nav', 370, 18, 40, 10], ['nav', 420, 18, 40, 10], ['cta', 470, 16, 70, 14],
-    ['t', 20, 56, 290, 26], ['t', 20, 88, 210, 26],
-    ['x', 20, 128, 260, 7], ['x', 20, 142, 240, 7], ['x', 20, 156, 170, 7],
-    ['btn', 20, 178, 96, 22], ['img', 340, 56, 200, 144],
-    ['card', 20, 222, 160, 108], ['card', 200, 222, 160, 108], ['card', 380, 222, 160, 108],
-    ['f', 20, 346, 520, 14],
-  ];
-  const PH = [R + 'demot/haljala/img/ahti-maisema-640.webp', R + 'demot/haljala/img/harju-sauna-640.webp', R + 'demot/keljon-puusepat/img/hylly-syrja-600.webp', R + 'demot/kaulus/img/harakka-1-600.webp'];
-  const FILL = { logo: INK, nav: '#8f8a82', cta: ORANGE, t: INK, x: '#a9a397', btn: ORANGE, f: '#d9d2c6' };
-  const phaseStyle = (b, i, ph) => {
-    const [kind, x, y, w, h] = b;
-    if (ph <= 0) {
-      const r = rng(i * 7 + 3 + (ph < 0 ? 99 : 0)), sz = 16 + r() * 18, wide = ph < 0 ? 1.6 : 1;
-      const cx = 280 + (r() - 0.5) * 380 * wide, cy = 190 + (r() - 0.5) * 240 * wide;
-      return { l: cx - sz / 2, t: cy - sz / 2, w: sz, h: sz, bg: i % 5 === 3 ? ORANGE : i % 3 ? INK : '#8f8a82', bd: 'transparent', rad: '2px', op: ph < 0 ? 0 : 1, img: '' };
-    }
-    let X = x, Y = y, W = w, H = h;
-    if (ph === 3) { X = 28 + x * 0.9; Y = 56 + y * 0.84; W = w * 0.9; H = h * 0.84; }
-    if (ph === 1) return { l: X, t: Y, w: W, h: H, bg: 'transparent', bd: kind === 'img' || kind === 'card' ? '#8f8a82' : INK, rad: kind === 'btn' ? '12px' : '1px', op: 1, img: '' };
-    const photo = kind === 'img' ? PH[0] : kind === 'card' ? PH[1 + (i - 11)] : '';
-    return { l: X, t: Y, w: W, h: H, bg: photo ? '#cfc7ba' : FILL[kind], bd: 'transparent', rad: kind === 'btn' ? '12px' : '1px', op: 1, img: photo };
-  };
-  const stages = [...document.querySelectorAll('.stage')].map(st => {
-    st.innerHTML = '<div class="chrome"><i></i><i></i><i></i><span>sinunyritys.fi</span></div>' + B.map(() => '<i class="bk"></i>').join('') + '<span class="stamp">Julkaistu ✓</span>';
-    return st;
-  });
-  const setPhase = (st, ph, instant) => {
-    st.classList.toggle('no-t', !!instant);
-    st.classList.toggle('p3', ph === 3);
-    st.querySelectorAll('.bk').forEach((el, i) => {
-      const s = phaseStyle(B[i], i, ph);
-      Object.assign(el.style, { left: `${s.l / 5.6}%`, top: `${s.t / 3.8}%`, width: `${s.w / 5.6}%`, height: `${s.h / 3.8}%`, backgroundColor: s.bg, borderColor: s.bd, borderRadius: s.rad, opacity: s.op, backgroundImage: s.img ? `url("${s.img}")` : 'none' });
-    });
-    if (instant) { void st.offsetWidth; st.classList.remove('no-t'); }
-  };
+  // Mini site in each card (shared with the process page, see vs.js)
+  const { make: makeStage, set: setPhase } = window.VS.stage;
+  const stages = [...document.querySelectorAll('.stage')].map(st => makeStage(st));
   stages.forEach((st, i) => setPhase(st, i, true));
 
   // Card backs: orange with the VS monogram and a pixel frame
