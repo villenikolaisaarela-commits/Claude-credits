@@ -1,6 +1,6 @@
 /* Ville Saarela – testi: kerma, musta, oranssi ja pikselit */
-@font-face { font-family: "Geist"; font-weight: 300 700; font-display: swap; src: url("../../assets/fonts/geist-300-700-latin.woff2") format("woff2"); }
-@font-face { font-family: "Geist Mono"; font-weight: 400; font-display: swap; src: url("../../assets/fonts/geist-mono-400-latin.woff2") format("woff2"); }
+@font-face { font-family: "Geist"; font-weight: 300 700; font-display: swap; src: url("../fonts/geist-300-700-latin.woff2") format("woff2"); }
+@font-face { font-family: "Geist Mono"; font-weight: 400; font-display: swap; src: url("../fonts/geist-mono-400-latin.woff2") format("woff2"); }
 
 :root {
   --cream: #f8f4ec;

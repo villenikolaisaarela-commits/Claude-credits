@@ -1,6 +1,6 @@
 // Work page: frames open in sequence, the first frame plays the site, gentle parallax
 (() => {
-  const { reduce, lenis } = window.VS;
+  const { reduce, lenis, R } = window.VS;
   const webm = document.createElement('video').canPlayType('video/webm; codecs="vp9"') !== '';
   const projs = [...document.querySelectorAll('.proj')];
   const play = pr => {
@@ -11,7 +11,7 @@
         v = document.createElement('video');
         Object.assign(v, { muted: true, playsInline: true, loop: true, preload: 'auto' });
         v.setAttribute('aria-hidden', 'true');
-        v.src = `../../../assets/video/tyot/${pr.dataset.video}.${webm ? 'webm' : 'mp4'}`;
+        v.src = `${R}assets/video/tyot/${pr.dataset.video}.${webm ? 'webm' : 'mp4'}`;
         v.addEventListener('playing', () => v.classList.add('is-on'));
         pr.querySelector('.fr .fb').appendChild(v);
       }

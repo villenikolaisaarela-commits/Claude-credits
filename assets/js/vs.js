@@ -221,6 +221,7 @@
 
   // Page wipe between pages: squares close in, the next page opens the same way
   const wipe = document.querySelector('.wipe');
+  const PAGES = ['/', '/tyot/', '/minusta/'];
   const buildWipe = () => {
     const size = innerWidth < 760 ? 64 : 96;
     const cols = Math.ceil(innerWidth / size), rows = Math.ceil(innerHeight / size), r = rng(11);
@@ -246,7 +247,7 @@
     if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
     if (a.target === '_blank' || a.hasAttribute('download')) return;
     const u = new URL(a.href, location.href);
-    if (u.origin !== location.origin || !u.pathname.startsWith('/esikatselu/bodak/')) return;
+    if (u.origin !== location.origin || !PAGES.includes(u.pathname)) return;
     if (u.pathname === location.pathname) return;
     e.preventDefault();
     try { sessionStorage.setItem('vs-wipe', '1'); } catch (err) { location.href = u.href; return; }
@@ -256,5 +257,5 @@
   });
   addEventListener('pageshow', e => { if (e.persisted) { root.classList.remove('wipe-go', 'wipe-in'); wipe.innerHTML = ''; } });
 
-  window.VS = { root, reduce, fine, clamp, rng, lenis, Field, hel, reveal, ORANGE, CREAM, INK };
+  window.VS = { R: document.body.dataset.r || '', root, reduce, fine, clamp, rng, lenis, Field, hel, reveal, ORANGE, CREAM, INK };
 })();

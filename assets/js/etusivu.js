@@ -1,6 +1,6 @@
 // Home page: intro, VS monogram, headline, work rows and the process deck
 (() => {
-  const { root, reduce, clamp, rng, lenis, Field, ORANGE, INK } = window.VS;
+  const { root, reduce, clamp, rng, lenis, Field, ORANGE, INK, R } = window.VS;
   const webm = document.createElement('video').canPlayType('video/webm; codecs="vp9"') !== '';
   const wait = ms => new Promise(r => setTimeout(r, ms));
 
@@ -96,7 +96,7 @@
         v = document.createElement('video');
         Object.assign(v, { muted: true, playsInline: true, loop: true, preload: 'auto' });
         v.setAttribute('aria-hidden', 'true');
-        v.src = `../../assets/video/tyot/${a.dataset.video}.${webm ? 'webm' : 'mp4'}`;
+        v.src = `${R}assets/video/tyot/${a.dataset.video}.${webm ? 'webm' : 'mp4'}`;
         v.addEventListener('playing', () => v.classList.add('is-on'));
         a.querySelector('.scr').appendChild(v);
       }
@@ -114,7 +114,7 @@
     ['card', 20, 222, 160, 108], ['card', 200, 222, 160, 108], ['card', 380, 222, 160, 108],
     ['f', 20, 346, 520, 14],
   ];
-  const PH = ['../../demot/haljala/img/ahti-maisema-640.webp', '../../demot/haljala/img/harju-sauna-640.webp', '../../demot/keljon-puusepat/img/hylly-syrja-600.webp', '../../demot/kaulus/img/harakka-1-600.webp'];
+  const PH = [R + 'demot/haljala/img/ahti-maisema-640.webp', R + 'demot/haljala/img/harju-sauna-640.webp', R + 'demot/keljon-puusepat/img/hylly-syrja-600.webp', R + 'demot/kaulus/img/harakka-1-600.webp'];
   const FILL = { logo: INK, nav: '#8f8a82', cta: ORANGE, t: INK, x: '#a9a397', btn: ORANGE, f: '#d9d2c6' };
   const phaseStyle = (b, i, ph) => {
     const [kind, x, y, w, h] = b;
