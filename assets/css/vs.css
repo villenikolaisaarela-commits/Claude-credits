@@ -397,7 +397,7 @@ html.dr-open, html.dr-open body { overflow: hidden; }
 .q-big { font-size: clamp(30px, 4.2vw, 68px); line-height: 1; letter-spacing: -0.052em; }
 .q-rest { max-width: 30em; margin-top: clamp(24px, 4vh, 40px); font-size: clamp(17px, 1.4vw, 21px); line-height: 1.3; letter-spacing: -0.02em; font-weight: 500; color: var(--dgrey); }
 .q-by { display: flex; align-items: center; gap: 14px; margin-top: clamp(28px, 5vh, 48px); }
-.q-by img { width: 56px; height: 56px; object-fit: cover; object-position: left top; background: var(--ink); }
+.q-by img { width: 64px; height: 64px; object-fit: cover; background: var(--chip); }
 .q-by b { display: block; font-size: 17px; letter-spacing: -0.03em; }
 .q-by span { color: var(--grey); }
 .q-by a { margin-left: auto; }
