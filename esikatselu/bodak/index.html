@@ -4,33 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ville Saarela · Suunnittelija ja tekijä Helsingistä</title>
-  <meta name="description" content="Verkkosivut, jotka tekevät töitä. Suunnittelu, toteutus ja julkaisu yrityksille, joiden työ ansaitsee tulla nähdyksi.">
+  <meta name="description" content="Hienot sivut, jotka myös toimivat. Suunnittelu, toteutus ja julkaisu yrityksille, joiden työ ansaitsee tulla nähdyksi.">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#f8f4ec">
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="../../assets/fonts/geist-300-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/vendor/lenis.css">
-  <link rel="stylesheet" href="bodak.css?v=3">
-  <script>if (matchMedia('(prefers-reduced-motion: reduce)').matches || location.hash) document.documentElement.classList.remove('is-intro'); else if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
+  <link rel="stylesheet" href="bodak.css?v=4">
+  <script>(function(){var h=document.documentElement,s=null;try{s=sessionStorage.getItem('vs-wipe');}catch(e){}if(s)h.classList.add('wipe-in');if(s||matchMedia('(prefers-reduced-motion: reduce)').matches||location.hash)h.classList.remove('is-intro');else if(h.classList.contains('is-intro')&&'scrollRestoration' in history)history.scrollRestoration='manual';})();</script>
 </head>
 <body>
-  <a class="skip" href="#tyot">Siirry töihin</a>
+  <a class="skip" href="#sisalto">Siirry sisältöön</a>
+  <div class="wipe" aria-hidden="true"></div>
   <div class="bar" aria-hidden="true"><i></i></div>
   <div class="loader mono" aria-hidden="true"><span class="ld-n">000</span><span class="ld-px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
-
-  <nav class="nav" id="nav" aria-label="Valikko"><a href="#tyot" data-for="tyot" class="is-on">Työt</a><a href="#prosessi" data-for="prosessi">Prosessi</a><a href="#yhteys" data-for="yhteys">Yhteys</a></nav>
-  <div class="nav-r" id="navr"><button type="button" class="chip" data-open-prices aria-controls="hinnat">Hinnat</button><a class="chip chip-a" href="mailto:info@villesaarela.com?subject=Verkkosivuprojekti">Aloita projekti</a></div>
+  <nav class="nav" id="nav" aria-label="Valikko"><a class="home-chip" href="./" aria-label="Ville Saarela, etusivu"><svg class="vsm" viewBox="0 0 11 7" aria-hidden="true"><path d="M0 0h1v4H0zM4 0h1v4H4zM1 4h1v2H1zM3 4h1v2H3zM2 6h1v1H2zM7 0h4v1H7zM6 1h1v2H6zM7 3h3v1H7zM10 4h1v2h-1zM6 6h4v1H6z"/></svg><span>Ville Saarela</span></a><a class="" href="#tyot" data-for="tyot">Työt</a><a href="#prosessi" data-for="prosessi">Prosessi</a><a class="" href="minusta/" data-for="minusta">Minusta</a></nav>
+  <div class="nav-r" id="navr"><button type="button" class="chip chip-p" data-open="hinnat" aria-controls="hinnat">Hinnat</button><a class="chip chip-a" href="mailto:info@villesaarela.com?subject=Verkkosivuprojekti">Aloita projekti</a></div>
 
   <div class="page" id="page">
-  <main>
+  <main id="sisalto">
     <header class="hero">
-      <h1 class="h1" aria-label="Verkkosivut, jotka tekevät töitä">
-        <span class="ln"><span>Verkkosivut, jotka</span></span>
-        <span class="ln"><span class="cyc" aria-hidden="true">tekevät töitä</span></span>
+      <h1 class="h1" aria-label="Hienot sivut, jotka myös toimivat">
+        <span class="ln"><span>Hienot sivut, jotka</span></span>
+        <span class="ln"><span class="cyc" aria-hidden="true">myös toimivat</span></span>
       </h1>
       <canvas class="vs" aria-hidden="true"></canvas>
-      <p class="by fade">Ville Saarela · Suunnittelija ja tekijä</p>
-      <p class="note fade">Yrityksille, joiden työ ansaitsee tulla nähdyksi.</p>
+      <button type="button" class="me fade" data-open="minusta-dr" aria-controls="minusta-dr">
+        <span class="me-ph"><img src="../../assets/img/ville.jpg" width="726" height="908" alt="" decoding="async"></span>
+        <span class="me-t"><b>Moi, olen Ville.</b> Minua kiehtoo, miten hienot asiat toimivat. Siksi teen verkkosivuja.</span>
+        <span class="me-go mono">Minusta +</span>
+      </button>
+      <p class="note fade">Ensivaikutelma syntyy verkossa, ennen kuin kukaan soittaa sinulle.</p>
       <p class="where fade mono"><span>Helsinki</span><span class="clk" data-clock>--.--</span><span>Koko Suomi</span></p>
     </header>
 
@@ -70,6 +74,7 @@
         <span class="media"><span class="scr"><img class="wire" src="img/kaulus-wire.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><img class="fin" src="img/kaulus-final.webp" width="1000" height="625" alt="" loading="lazy" decoding="async"><i class="scan" aria-hidden="true"></i></span></span>
         <span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Avaa</span></span>
       </a>
+      <a class="all fd" href="tyot/"><span>Kaikki työt läheltä</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></a>
     </section>
 
     <section class="dark proc" id="prosessi" data-nav="prosessi" data-dark aria-labelledby="proc-h">
@@ -84,7 +89,7 @@
         </ol>
         <p class="hint mono">Vedä korttia tai valitse vaihe</p>
       </div>
-      <div class="deck" data-cur="Vedä">
+      <div class="deck">
           <article class="pc" data-i="0" aria-roledescription="kortti" aria-label="1 / 4: Tutustuminen">
             <div class="face">
               <div class="pc-top mono"><span>01 / 04</span><span>Päivä 1</span></div>
@@ -130,7 +135,7 @@
       <div class="cta-b">
         <p>Kerro lyhyesti, mitä teet. Vastaan 24 tunnin sisällä ja teen etusivusta maksuttoman luonnoksen. Vasta sen jälkeen päätät.</p>
         <div class="btns">
-          <button type="button" class="pill pill-a" data-open-prices aria-controls="hinnat">Katso hinnat</button>
+          <button type="button" class="pill pill-a" data-open="hinnat" aria-controls="hinnat">Katso hinnat</button>
           <a class="pill" href="mailto:info@villesaarela.com?subject=Verkkosivuprojekti">info@villesaarela.com</a>
           <a class="pill" href="tel:+358451035362">045 103 5362</a>
         </div>
@@ -139,7 +144,7 @@
   </main>
 
   <footer class="dark ftr" data-dark>
-    <div class="col"><h3>Sivukartta</h3><ul><li><a href="#tyot">Työt</a></li><li><a href="#prosessi">Prosessi</a></li><li><button type="button" data-open-prices aria-controls="hinnat">Hinnat</button></li><li><a href="#yhteys">Yhteys</a></li></ul></div>
+    <div class="col"><h3>Sivukartta</h3><ul><li><a href="./">Etusivu</a></li><li><a href="#tyot">Työt</a></li><li><a href="#prosessi">Prosessi</a></li><li><a href="minusta/">Minusta</a></li><li><button type="button" data-open="hinnat" aria-controls="hinnat">Hinnat</button></li></ul></div>
     <div class="clock-box" aria-label="Kello Helsingissä"><canvas class="pxclock" aria-hidden="true"></canvas><span class="mono">Helsinki, nyt</span></div>
     <div class="col right"><h3>Yhteys</h3><ul><li><a href="mailto:info@villesaarela.com">info@villesaarela.com</a></li><li><a href="tel:+358451035362">045 103 5362</a></li><li>Isosaarentie 10, Helsinki</li><li>Y-tunnus 3660060-6</li></ul></div>
     <div class="base"><span>© <span data-year>2026</span> Ville Saarela</span><a href="../../tietosuoja/">Tietosuoja</a><a href="#top" data-top>Ylös ↑</a></div>
@@ -148,7 +153,7 @@
 
   <div class="drawer" id="hinnat" role="dialog" aria-modal="true" aria-labelledby="hinnat-h" aria-hidden="true">
     <div class="dr-bg" data-close></div>
-    <div class="dr-panel" tabindex="-1">
+    <div class="dr-panel" tabindex="-1" data-lenis-prevent>
       <div class="dr-head"><span class="chip">Hinnat</span><button type="button" class="dr-x" data-close>Sulje</button></div>
       <h2 class="dr-lead" id="hinnat-h">Jokainen projekti sisältää suunnittelun, toteutuksen ja julkaisun. Kiinteä hinta, ei kuukausimaksuja.</h2>
       <div class="plans">
@@ -175,9 +180,26 @@
     </div>
   </div>
 
+  <div class="drawer left" id="minusta-dr" role="dialog" aria-modal="true" aria-labelledby="minusta-h" aria-hidden="true">
+    <div class="dr-bg" data-close></div>
+    <div class="dr-panel" tabindex="-1" data-lenis-prevent>
+      <div class="dr-head"><span class="chip">Minusta</span><button type="button" class="dr-x" data-close>Sulje</button></div>
+      <div class="ab-dr">
+        <figure class="ab-ph"><img src="../../assets/img/ville.jpg" width="726" height="908" alt="Ville Saarela" loading="lazy" decoding="async"><figcaption class="mono">Ville Saarela · Helsinki</figcaption></figure>
+        <div class="ab-tx">
+          <h2 id="minusta-h">Moi, olen Ville.</h2>
+          <p>Minua on aina kiehtonut kaksi asiaa: hienot asiat ja se, miten ne toimivat.</p>
+          <p>Verkkosivuissa nämä kaksi kohtaavat. Hyvä sivu on kaunis, mutta sen pitää myös toimia: kertoa nopeasti, mitä teet, ja saada oikea ihminen ottamaan yhteyttä.</p>
+          <p>Silti moni yritys tekee hienoa työtä ja näyttää verkossa keskeneräiseltä. Se harmittaa minua, koska juuri sivuillasi asiakas päättää, luottaako hän sinuun. Siksi teen tätä.</p>
+          <a class="pill pill-d" href="minusta/">Lue koko tarina</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="cur" aria-hidden="true"><span></span></div>
 
   <script src="../../assets/vendor/lenis.min.js"></script>
-  <script src="bodak.js?v=3"></script>
+  <script src="vs.js?v=4"></script>
+  <script src="bodak.js?v=4"></script>
 </body>
 </html>
