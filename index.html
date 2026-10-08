@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/v4.css?v=4">
+  <link rel="stylesheet" href="/assets/css/v4.css?v=5">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://www.villesaarela.com/#palvelu", "name": "Ville Saarela", "url": "https://www.villesaarela.com/", "description": "Verkkosivut suunnittelijoille, arkkitehdeille sekä remontti-, LVI- ja sähköyrityksille. Sivut, jotka näyttävät työsi ja tuovat tarjouspyyntöjä.", "image": "https://www.villesaarela.com/assets/img/og-v4.jpg", "email": "info@villesaarela.com", "telephone": "+358451035362", "taxID": "3660060-6", "priceRange": "1500–3900 €", "address": {"@type": "PostalAddress", "streetAddress": "Isosaarentie 10", "postalCode": "00840", "addressLocality": "Helsinki", "addressCountry": "FI"}, "areaServed": {"@type": "Country", "name": "Suomi"}, "makesOffer": [{"@type": "Offer", "name": "Perus", "price": "1500", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Referenssisivusto", "price": "2500", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Kokonaisuus", "price": "3900", "priceCurrency": "EUR"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Meillä on jo sivut.", "acceptedAnswer": {"@type": "Answer", "text": "Hyvä. Kysymys on, tuovatko ne yhteydenottoja. Ilmainen luonnos näyttää eron."}}, {"@type": "Question", "name": "Onko tämä kallista?", "acceptedAnswer": {"@type": "Answer", "text": "Yksi uusi asiakas maksaa yleensä koko sivuston."}}, {"@type": "Question", "name": "Voinko päivittää sivuja itse?", "acceptedAnswer": {"@type": "Answer", "text": "Pienet muutokset teen nopeasti. Jos haluat päivittää itse, se onnistuu Kokonaisuus-paketissa."}}, {"@type": "Question", "name": "Kauanko tämä vie minulta aikaa?", "acceptedAnswer": {"@type": "Answer", "text": "Noin tunnin haastattelu ja kommentit luonnokseen. Hoidan loput."}}]}]}</script>
 </head>
 <body>
@@ -37,14 +37,19 @@
 
   <main id="main">
     <section class="in hero" aria-labelledby="h1">
-      <p class="hello"><img src="/assets/img/ville-96.webp" width="96" height="96" alt="">Moi, mä oon Ville.</p>
-      <h1 class="h1" id="h1">Työsi on parempaa kuin sivusi.</h1>
-      <p class="sub">Teen sivut, jotka näyttävät työsi ja tuovat tarjouspyyntöjä, eivät vain näytä hyvältä.</p>
-      <div class="ctas"><a class="btn" href="#yhteys">Pyydä ilmainen luonnos</a><a class="link" href="#tyot">Katso työt</a></div>
-      <nav class="paths" aria-label="Valitse alasi">
-        <a class="path" href="#tyot"><strong>Suunnittelijoille ja arkkitehdeille</strong><span>Työt isoina ja tarina jokaisesta kohteesta.</span></a>
-        <a class="path" href="/tekijat/"><strong>Remontti-, LVI- ja sähköyrityksille</strong><span>Ennen–jälkeen-kuvat ja tarjouspyyntö yhdellä napautuksella.</span></a>
-      </nav>
+      <div class="hero-grid">
+        <div>
+          <p class="hello"><img src="/assets/img/ville-96.webp" width="96" height="96" alt="">Moi, mä oon Ville.</p>
+          <h1 class="h1" id="h1">Työsi on parempaa kuin sivusi.</h1>
+          <p class="sub">Teen sivut, jotka näyttävät työsi ja tuovat tarjouspyyntöjä, eivät vain näytä hyvältä.</p>
+          <div class="ctas"><a class="btn" href="#yhteys">Pyydä ilmainen luonnos</a><a class="link" href="#tyot">Katso työt</a></div>
+          <nav class="paths" aria-label="Valitse alasi">
+            <a class="path" href="#tyot"><strong>Suunnittelijoille ja arkkitehdeille</strong><span>Työt isoina ja tarina jokaisesta kohteesta.</span></a>
+            <a class="path" href="/tekijat/"><strong>Remontti-, LVI- ja sähköyrityksille</strong><span>Ennen–jälkeen-kuvat ja tarjouspyyntö yhdellä napautuksella.</span></a>
+          </nav>
+        </div>
+        <figure class="hero-fig"><img src="/assets/img/projektit/buffbird/mobile-1.webp" width="600" height="1298" alt="BuffBird puhelimella: otsikko ja odotuslistan lomake ensimmäisessä näkymässä" loading="lazy" decoding="async"><figcaption>BuffBird, asiakastyö: lomake on heti ensimmäisessä näkymässä.</figcaption></figure>
+      </div>
     </section>
 
     <section class="trust" aria-label="Lyhyesti">
@@ -152,7 +157,6 @@
         <div>
           <h2 class="h2" id="tulokset-h">Jokainen sivu rakennetaan tuomaan yhteydenottoja.</h2>
           <p class="lede">Kaunis sivu on keino. Tavoite on, että oikea asiakas ottaa yhteyttä.</p>
-          <figure class="res-fig"><img src="/assets/img/projektit/buffbird/mobile-1.jpg" width="600" height="1298" alt="BuffBird puhelimella: otsikko ja odotuslistan lomake ensimmäisessä näkymässä" loading="lazy" decoding="async"><figcaption>BuffBird puhelimella: lomake on heti ensimmäisessä näkymässä.</figcaption></figure>
         </div>
         <ul class="res-list">
           <li><strong>Yhteydenotto näkyy heti ensimmäisessä näkymässä</strong><span>Kävijän ei tarvitse etsiä, miten sinuun saa yhteyden.</span></li>
@@ -259,6 +263,6 @@
     <address>Ville Saarela, Isosaarentie 10, 00840 Helsinki<br>Y-tunnus 3660060-6<br><a href="mailto:info@villesaarela.com">info@villesaarela.com</a>, <a href="tel:+358451035362">045 103 5362</a></address>
     <nav aria-label="Alatunniste"><a href="/#tyot">Työt</a><a href="/tekijat/">Tekijöille</a><a href="/#hinnat">Hinnat</a><a href="/tietosuoja/">Tietosuoja</a></nav>
   </footer>
-  <script src="/assets/js/v4.js?v=4" defer></script>
+  <script src="/assets/js/v4.js?v=5" defer></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
     if (!name) { form.elements.name.focus(); note.textContent = 'Kirjoita ensin nimesi.'; return; }
     if (!reach) { form.elements.reach.focus(); note.textContent = 'Kirjoita sähköposti tai puhelinnumero, niin tiedän, mihin vastaan.'; return; }
     const body = `Hei Ville,\n\nhaluaisin ilmaisen luonnoksen uudesta etusivusta.\n\nNimi: ${name}\nYhteystieto: ${reach}\nNykyiset sivut: ${site || '-'}\n`;
-    note.textContent = 'Sähköpostiohjelmasi avautuu valmiilla viestillä. Jos se ei avaudu, soita 045 103 5362 tai kirjoita osoitteeseen info@villesaarela.com.';
+    note.innerHTML = 'Sähköpostiohjelmasi avautuu valmiilla viestillä. Jos se ei avaudu, soita <a href="tel:+358451035362">045 103 5362</a> tai kirjoita osoitteeseen <a href="mailto:info@villesaarela.com">info@villesaarela.com</a>.';
     location.href = `mailto:info@villesaarela.com?subject=${encodeURIComponent('Ilmainen luonnos')}&body=${encodeURIComponent(body)}`;
   });
 })();
