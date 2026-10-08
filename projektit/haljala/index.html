@@ -19,29 +19,32 @@
   <meta name="twitter:image" content="https://www.villesaarela.com/assets/img/projektit/haljala/hero.jpg">
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
-  <link rel="preload" href="/assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/v4.css?v=5">
+  <link rel="stylesheet" href="../../assets/vendor/lenis.css">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=20261008">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <a class="skip" href="#main">Siirry sisältöön</a>
-  <header class="hdr">
-    <div class="hdr-in">
-      <a class="logo" href="/">Ville Saarela</a>
-      <nav class="nav" aria-label="Päävalikko"><a href="/#tyot">Työt</a><a href="/tekijat/">Tekijöille</a><a href="/#hinnat">Hinnat</a><a href="/#minusta">Minusta</a></nav>
-      <a class="hdr-tel" href="tel:+358451035362">045 103 5362</a>
-      <a class="btn btn-sm" href="/#yhteys"><span>Pyydä <span class="xs-hide">ilmainen </span>luonnos</span></a>
-    </div>
+  <a class="skip" href="#sisalto">Siirry sisältöön</a>
+
+  <header class="site-header">
+    <a class="brand" href="../../"><img src="../../assets/img/ville-saarela.svg" alt="Ville Saarela" width="126" height="18"></a>
+    <p class="hdr-meta" aria-hidden="true"><span>Versio 3.1 (10.2026)</span><span data-clock>Helsinki</span></p>
+    <nav class="nav" aria-label="Päävalikko">
+      <a href="../../#tyot" aria-current="page">Työt</a>
+      <a href="../../#prosessi">Prosessi</a>
+      <a class="hide-sm" href="../../#info">Info</a>
+      <a href="../../#yhteys">Yhteys</a>
+    </nav>
   </header>
 
-  <main id="main" class="wrap">
+  <main id="sisalto" class="wrap">
     <section class="case-hero case-top" aria-labelledby="case-title">
       <div class="case-head">
         <div>
-          <p class="kicker">Konsepti</p>
+          <p class="label kicker">03 / 07</p>
           <h1 id="case-title" class="display">Arkkitehtitoimisto Haljala</h1>
         </div>
-        <a class="btn cta" href="../../demot/haljala/">Avaa sivusto</a>
+        <a class="btn cta" href="../../demot/haljala/">Avaa sivusto <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
@@ -58,7 +61,7 @@
 
     <section class="split gains-sec" aria-labelledby="gains-h">
       <h2 id="gains-h" class="label">Mitä sivusto tekee yritykselle</h2>
-      <ol class="gains text" data-reveal><li><h3>Soittaja tietää jo hinnan</h3><p>Hinnat ja vuoden 2027 vapaat aloitukset näkyvät, joten yhteydenotot tulevat ihmisiltä, joille aikataulu ja budjetti sopivat.</p></li><li><h3>Kohteet vastaavat perheen kysymyksiin</h3><p>Tontti, ratkaisu, pinta-ala ja piirustukset kertovat, millaisia taloja toimisto piirtää.</p></li><li><h3>Pieni toimisto näyttää toimivalta</h3><p>Työn alla -lista päivämäärineen kertoo, että toimistossa tehdään töitä juuri nyt.</p></li></ol>
+      <ol class="gains text" data-reveal><li><span class="label">01</span><h3>Soittaja tietää jo hinnan</h3><p>Hinnat ja vuoden 2027 vapaat aloitukset näkyvät, joten yhteydenotot tulevat ihmisiltä, joille aikataulu ja budjetti sopivat.</p></li><li><span class="label">02</span><h3>Kohteet vastaavat perheen kysymyksiin</h3><p>Tontti, ratkaisu, pinta-ala ja piirustukset kertovat, millaisia taloja toimisto piirtää.</p></li><li><span class="label">03</span><h3>Pieni toimisto näyttää toimivalta</h3><p>Työn alla -lista päivämäärineen kertoo, että toimistossa tehdään töitä juuri nyt.</p></li></ol>
     </section>
 
     <section class="split" aria-label="Lähtökohta">
@@ -93,7 +96,7 @@
       <div class="pilot-body">
         <p class="pilot-title">Haluatko töillesi tällaiset sivut?</p>
         <p class="muted">Näet luonnoksen uudesta etusivustasi 48 tunnissa, ennen kuin sitoudut mihinkään. Vastaan vuorokauden sisällä.</p>
-        <div class="hero-ctas"><a class="btn" href="/#yhteys">Pyydä ilmainen luonnos</a><a class="big-tel" href="tel:+358451035362">045 103 5362</a></div>
+        <div class="hero-ctas"><a class="btn" href="../../#yhteys">Pyydä luonnos <span aria-hidden="true">→</span></a><a class="label link-line" href="tel:+358451035362" style="color: var(--fg)">045 103 5362</a></div>
       </div>
     </section>
 
@@ -102,13 +105,18 @@
         <span class="label">Seuraava projekti</span>
         <span class="title" style="display:block">Keljon Puusepät</span>
       </span>
+      <span class="arrow" aria-hidden="true">→</span>
     </a>
-    <div class="case-end"></div>
   </main>
 
-  <footer class="in ftr">
-    <address>Ville Saarela, Isosaarentie 10, 00840 Helsinki<br>Y-tunnus 3660060-6<br><a href="mailto:info@villesaarela.com">info@villesaarela.com</a>, <a href="tel:+358451035362">045 103 5362</a></address>
-    <nav aria-label="Alatunniste"><a href="/#tyot">Työt</a><a href="/tekijat/">Tekijöille</a><a href="/#hinnat">Hinnat</a><a href="/tietosuoja/">Tietosuoja</a></nav>
+  <footer class="site-footer">
+    <span class="label">© <span data-year>2026</span> Ville Saarela · Isosaarentie 10, 00840 Helsinki · Y-tunnus 3660060-6</span>
+    <a class="label link-line" href="../../tietosuoja/">Tietosuoja</a>
+    <span class="label">Versio 3.1 (10.2026)</span>
+    <a class="label top link-line" href="#">Ylös ↑</a>
   </footer>
+
+  <script src="../../assets/vendor/lenis.min.js" defer></script>
+  <script src="../../assets/js/site.js?v=20261008" defer></script>
 </body>
 </html>
