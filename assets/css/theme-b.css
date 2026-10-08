@@ -1,0 +1,6 @@
+/* Ilme B, sininen: white page, the brand blue for actions, Hanken Grotesk throughout. */
+@font-face { font-family: 'Hanken Grotesk'; font-weight: 100 900; font-display: swap; src: url('../fonts/hanken-grotesk.woff2') format('woff2'); }
+:root { --bg: #FFFFFF; --panel: #F2F3F7; --ink: #121318; --muted: #575A66; --line: #E0E2EA; --field: #868A99; --accent: #2238C9; --accent-dark: #19299A; --head: 'Hanken Grotesk', system-ui, sans-serif; --body: 'Hanken Grotesk', system-ui, sans-serif; --r: 6px; }
+body { font-size: 18px; }
+.h1 { font-weight: 700; letter-spacing: -0.04em; }
+.h2 { font-weight: 700; letter-spacing: -0.035em; }

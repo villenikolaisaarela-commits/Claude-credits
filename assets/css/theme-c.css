@@ -1,0 +1,11 @@
+/* Ilme C, lehti: serif headlines like a magazine, calm grotesk for text, black for actions. */
+@font-face { font-family: 'Newsreader'; font-weight: 400 600; font-display: swap; src: url('../fonts/newsreader-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Hanken Grotesk'; font-weight: 100 900; font-display: swap; src: url('../fonts/hanken-grotesk.woff2') format('woff2'); }
+:root { --bg: #FFFFFF; --panel: #F2F2F0; --ink: #141414; --muted: #5E5E5B; --line: #E2E2DE; --field: #8A8A85; --accent: #141414; --accent-dark: #444444; --head: 'Newsreader', Georgia, serif; --body: 'Hanken Grotesk', system-ui, sans-serif; --r: 2px; }
+body { font-size: 18px; }
+.h1 { font-weight: 500; letter-spacing: -0.025em; line-height: 1; }
+.h2 { font-weight: 500; letter-spacing: -0.02em; }
+.h3, .w-name, .path strong, .fact strong, .tq p, .cta-row p, .faq summary, .points strong, .res-list strong { font-weight: 500; letter-spacing: -0.01em; }
+.btn, .logo, .step-n, .pkg-tag, .price, .big-tel, .reach a { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
+.btn { font-weight: 600; }
+.path strong, .link { color: var(--ink); }
