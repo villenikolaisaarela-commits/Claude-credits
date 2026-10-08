@@ -342,3 +342,39 @@ section + section { margin-top: clamp(28px, 4vw, 48px); }
 }
 .pan > img { bottom: auto; right: 0; height: auto; object-fit: fill; }
 @media (min-width: 900px) { .svc-wide { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: stretch; } .svc-wide .svc-vis { height: auto; min-height: 240px; margin: 12px; } .svc-wide .svc-tx { align-content: center; } }
+
+/* ===== Round 2: details and phones ===== */
+:root { --mute: #6B6B6B; }
+.c2 { color: #C2311A; }
+.mini .sq { width: 14px; height: 14px; border-radius: 4px; }
+.price-card { display: grid; gap: 24px; padding: clamp(26px, 4vw, 56px); align-items: center; }
+.pc-l { display: grid; gap: 14px; }
+.pc-r { display: grid; gap: 18px; }
+@media (min-width: 900px) { .price-card { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); } }
+.form input { font-size: 16px; }
+.ftr-cols a, .direct a { overflow-wrap: anywhere; }
+@media (max-width: 699px) {
+  .hero { padding-block: 64px 56px; gap: 18px; }
+  .phero { padding-block: 56px 40px; }
+  .intro { padding-block: 64px 24px; }
+  section + section { margin-top: 20px; }
+  .scard { position: relative; top: auto; }
+  .card { border-radius: 18px; }
+  .case-tx, .prose, .price-card, .rows, .faq, .legal { padding-inline: 20px; }
+  .end { padding: 40px 20px; }
+  .h1 { letter-spacing: -0.04em; }
+  .phones { gap: 8px; padding: 16px 12px; }
+  .phones figure { border-radius: 16px; padding: 5px; }
+  .phones img { border-radius: 12px; }
+  .facts div { padding: 14px 6px; }
+  .links { gap: 6px 18px; }
+  .ftr2 { gap: 24px; }
+}
+.nav .btn-n { display: none; }
+@media (min-width: 900px) { .nav .btn-n { display: inline-flex; } }
+@media (max-width: 699px) {
+  .sc-vis { min-height: 96px; }
+  .sc-vis span { font-size: 44px; }
+  .scard { gap: 18px; padding: 24px 20px; }
+  .me-ph img { aspect-ratio: 1 / 1; object-position: 50% 20%; }
+}

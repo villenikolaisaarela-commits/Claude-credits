@@ -25,6 +25,7 @@
     cards.forEach((c, k) => {
       const next = cards[k + 1];
       if (!next) return;
+      if (getComputedStyle(c).position !== 'sticky') { c.style.transform = ''; c.style.opacity = ''; return; }
       const a = c.getBoundingClientRect(), b = next.getBoundingClientRect();
       const p = Math.min(1, Math.max(0, 1 - (b.top - a.top) / a.height));
       c.style.transform = `scale(${(1 - p * 0.05).toFixed(4)})`;
