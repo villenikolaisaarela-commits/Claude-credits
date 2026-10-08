@@ -6,43 +6,48 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.villesaarela.com/projektit/buffbird/</loc>
+    <loc>https://www.villesaarela.com/tekijat/</loc>
     <lastmod>2026-10-08</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.villesaarela.com/projektit/lindqvist-ekroos/</loc>
+    <loc>https://www.villesaarela.com/projektit/buffbird/</loc>
     <lastmod>2026-10-08</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.villesaarela.com/projektit/haljala/</loc>
     <lastmod>2026-10-08</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.villesaarela.com/projektit/keljon-puusepat/</loc>
+    <loc>https://www.villesaarela.com/projektit/lindqvist-ekroos/</loc>
     <lastmod>2026-10-08</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.villesaarela.com/projektit/studio-kuusela/</loc>
     <lastmod>2026-10-08</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.villesaarela.com/projektit/keljon-puusepat/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.villesaarela.com/projektit/kivela-rinne/</loc>
     <lastmod>2026-10-08</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.villesaarela.com/projektit/kaulus/</loc>
     <lastmod>2026-10-08</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.villesaarela.com/tietosuoja/</loc>
     <lastmod>2026-10-08</lastmod>
-    <priority>0.2</priority>
+    <priority>0.3</priority>
   </url>
 </urlset>
