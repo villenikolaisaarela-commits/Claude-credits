@@ -110,7 +110,7 @@ a:hover .ar { transform: translate(2px, -2px); }
 .sec-hd .small { padding-top: 6px; }
 
 /* Work: one row per project, a hairline between them */
-.works { --pin: 52px; --bar: 44px; display: flex; flex-direction: column; padding-inline: var(--pad); }
+.works { --pin: 52px; --bar: 44px; --rest: 40px; display: flex; flex-direction: column; padding-inline: var(--pad); }
 .work { display: grid; gap: var(--gap); padding-block: 12px; border-top: 1px solid var(--line); background: var(--bg); }
 .work:last-child { border-bottom: 1px solid var(--line); }
 .w-img { position: relative; display: block; overflow: hidden; background: #111; aspect-ratio: 16 / 10; }
@@ -130,10 +130,14 @@ a:hover .ar { transform: translate(2px, -2px); }
 .work:hover .w-y { color: var(--hi); }
 .w-t { margin-top: 18px; font-size: var(--big); line-height: 1.16; letter-spacing: -0.02em; color: var(--fg); }
 .w-d { margin-top: 14px; max-width: 46ch; font-size: 15px; line-height: 1.45; color: var(--mute); }
+/* On a phone the name line sits above the picture, so a stacked row still shows whose work it is */
 @media (max-width: 799px) {
-  .w-tx { padding-top: 4px; }
-  .w-bar { min-height: 44px; }
-  .w-t { margin-top: 2px; }
+  .works { --pin: 56px; --rest: 112px; }
+  .work { gap: 0; padding-top: 0; }
+  .w-tx { display: contents; }
+  .w-bar { order: -1; min-height: 44px; }
+  .w-t { min-height: 2.32em; margin-top: 10px; font-size: 21px; }
+  .w-d { display: none; }
 }
 @media (min-width: 800px) {
   .work { grid-template-columns: 1fr 1fr; }
@@ -143,13 +147,13 @@ a:hover .ar { transform: translate(2px, -2px); }
   .work { grid-template-columns: 2fr 1fr; }
   .w-img { aspect-ratio: 16 / 9; }
 }
-/* On a big screen each project pins a bar's height below the last, so the earlier ones stay visible as a stack.
-   The bottom margins line up every row's release point, so the stack leaves together. */
-@media (hover: hover) and (min-width: 1200px) and (min-height: 640px) and (prefers-reduced-motion: no-preference) {
+/* Each project pins a bar's height below the last, so the earlier ones stay visible as a pile, on every screen.
+   The bottom margins line up every row's release point, so the pile leaves together. */
+@media (min-height: 560px) and (prefers-reduced-motion: no-preference) {
   .work { position: sticky; top: calc(var(--pin) + var(--i) * var(--bar)); margin-bottom: calc((var(--last) - var(--i)) * var(--bar)); }
   .work + .work { margin-top: calc(-1 * (var(--last) - var(--i) + 1) * var(--bar)); }
   .works::after { content: ''; display: block; flex: none; height: 48px; }
-  .w-img { max-height: calc(100svh - var(--pin) - var(--last) * var(--bar) - 40px); }
+  .w-img { max-height: calc(100svh - var(--pin) - var(--last) * var(--bar) - var(--rest)); }
 }
 
 /* Tools: grey logos drifting past the other way */
