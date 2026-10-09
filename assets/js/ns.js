@@ -46,17 +46,63 @@
     update();
   }
 
-  // The work: rows stack under the section heading; the heading's height sets where they pin
-  const works = document.querySelector('.works');
-  const head = document.querySelector('#tyot .sec-hd');
-  if (works && head) {
-    const pin = () => {
-      const top = parseFloat(getComputedStyle(head).top) || 0;
-      works.style.setProperty('--pin', `${Math.round(top + head.offsetHeight)}px`);
+  // Case study: pictures sharpen as they arrive; the chapter beside them follows the reader down the pictures
+  document.querySelectorAll('.cs-frame img').forEach(img => {
+    const done = () => img.classList.add('is-loaded');
+    if (img.complete && img.naturalWidth) done();
+    else { img.addEventListener('load', done, { once: true }); img.addEventListener('error', done, { once: true }); }
+  });
+  const acc = document.querySelector('[data-cs-acc]');
+  const gal = document.querySelector('[data-cs-gallery]');
+  if (acc && gal) {
+    const items = [...acc.querySelectorAll('[data-ch]')];
+    const starts = [...gal.querySelectorAll('[data-ch-start]')];
+    const wide = matchMedia('(min-width: 1200px)');
+    let hold = false;
+    const open = n => items.forEach(it => {
+      const on = +it.dataset.ch === n;
+      it.classList.toggle('is-open', on);
+      it.querySelector('.cs-q').setAttribute('aria-expanded', on ? 'true' : 'false');
+    });
+    // The chapter whose first picture has passed the upper part of the window
+    const current = () => {
+      let n = 0;
+      const line = innerHeight * 0.4;
+      starts.forEach(s => { if (s.getBoundingClientRect().top <= line) n = +s.dataset.chStart; });
+      return n;
     };
-    pin();
-    addEventListener('resize', pin, { passive: true });
-    if (document.fonts) document.fonts.ready.then(pin);
+    let last = -1, tick = 0;
+    const spy = () => {
+      tick = 0;
+      if (!wide.matches || hold) return;
+      const n = current();
+      if (n !== last) { last = n; open(n); }
+    };
+    addEventListener('scroll', () => { if (!tick) tick = requestAnimationFrame(spy); }, { passive: true });
+    wide.addEventListener('change', () => { last = -1; if (wide.matches) spy(); else open(0); });
+    items.forEach(it => it.querySelector('.cs-q').addEventListener('click', () => {
+      const n = +it.dataset.ch;
+      if (!wide.matches) { open(it.classList.contains('is-open') ? -1 : n); return; }
+      // On a big screen a chapter heading takes you to its pictures
+      open(n); last = n;
+      const s = starts.find(x => +x.dataset.chStart === n);
+      if (!s) return;
+      const y = n === 0 ? 0 : Math.max(0, s.getBoundingClientRect().top + scrollY - 56);
+      hold = true;
+      const done = () => { hold = false; };
+      if (lenis) lenis.scrollTo(y, { duration: 0.9, onComplete: done });
+      else { scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' }); setTimeout(done, 900); }
+    }));
+    if (wide.matches) {
+      last = current(); open(last);
+      // The pictures drop into place on arrival, the way the reference does it
+      if (!reduce && gal.animate && scrollY < 10) {
+        const d = Math.min(1400, Math.max(800, Math.round(innerHeight * 1.15)));
+        hold = true;
+        gal.animate([{ transform: `translateY(-${d}px)` }, { transform: 'translateY(0)' }], { duration: 1200, delay: 50, easing: 'cubic-bezier(0.16, 1, 0.2, 1)', fill: 'backwards' })
+          .finished.then(() => { hold = false; spy(); }, () => { hold = false; });
+      }
+    }
   }
 
   if (!desk.matches || reduce) return;
@@ -65,7 +111,7 @@
   const tag = document.createElement('span');
   tag.className = 'pcur';
   tag.setAttribute('aria-hidden', 'true');
-  tag.textContent = 'Avaa sivusto ↗';
+  tag.textContent = 'Katso projekti';
   document.body.append(tag);
   let tx = 0, ty = 0, cx = 0, cy = 0, on = false, traf = 0;
   const follow = () => {
