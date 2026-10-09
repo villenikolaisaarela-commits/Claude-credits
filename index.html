@@ -22,25 +22,29 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/geist-300-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/ns.css?v=8">
+  <link rel="preload" href="/assets/fonts/geist-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/ns.css?v=9">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Ville Saarela", "url": "https://www.villesaarela.com/", "image": "https://www.villesaarela.com/assets/img/og-ns.jpg", "description": "Verkkosivut arkkitehdeille, suunnittelijoille ja tekijöille Helsingistä. Luonnos etusivusta 48 tunnissa.", "email": "info@villesaarela.com", "telephone": "+358451035362", "taxID": "3660060-6", "address": {"@type": "PostalAddress", "streetAddress": "Isosaarentie 10", "postalCode": "00840", "addressLocality": "Helsinki", "addressCountry": "FI"}}</script>
 </head>
 <body>
   <a class="skip" href="#main">Siirry sisältöön</a>
   <header class="hdr">
-    <a class="logo" href="/" aria-label="Ville Saarela, etusivu"><img src="/assets/img/ville-saarela-valkoinen.svg" width="521" height="74" alt="Ville Saarela"></a>
+    <div class="pill hdr-l">
+      <a class="logo" href="/" aria-label="Ville Saarela, etusivu"><img src="/assets/img/ville-saarela-valkoinen.svg" width="521" height="74" alt="Ville Saarela"></a>
+      <span class="hdr-sec mono" aria-hidden="true"><span data-sec>Etusivu</span></span>
+    </div>
     <div class="hdr-in">
-      <nav class="nav" aria-label="Päävalikko"><a href="#tyot">Työt</a><a href="#kysymykset">Kysymykset</a><a href="#yhteys">Yhteys</a></nav>
-      <a class="hdr-r" href="mailto:info@villesaarela.com">info@villesaarela.com</a>
+      <nav class="pill nav" aria-label="Päävalikko"><a href="#tyot">Työt</a><a href="#kysymykset">Kysymykset</a><a href="#yhteys">Yhteys</a></nav>
+      <p class="hdr-clock mono"><span>Helsinki</span> <time data-clock></time></p>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="h1">
+    <section class="hero" aria-labelledby="h1" data-sec-name="Etusivu">
       <div class="split hero-tx">
         <div aria-hidden="true"></div>
         <div>
-          <h1 class="big" id="h1">Ville Saarela suunnittelee ja rakentaa verkkosivuja Helsingissä. Teen sivut arkkitehdeille, suunnittelijoille ja tekijöille, joiden työ on parempaa kuin heidän nykyiset sivunsa.</h1>
+          <h1 class="big two" id="h1">Ville Saarela suunnittelee ja rakentaa verkkosivuja Helsingissä. <span>Teen sivut arkkitehdeille, suunnittelijoille ja tekijöille, joiden työ on parempaa kuin heidän nykyiset sivunsa.</span></h1>
           <p class="small">Luonnos uudesta etusivusta 48 tunnissa. Maksuton, eikä sido mihinkään.</p>
           <a class="cta" href="#yhteys"><span>Pyydä luonnos</span><span class="cta-ar" aria-hidden="true">↗</span></a>
         </div>
@@ -56,7 +60,7 @@
     </section>
 
     <section class="fields" aria-labelledby="alat-h">
-      <h2 class="small" id="alat-h">Teen sivuja esimerkiksi näille aloille:</h2>
+      <h2 class="lab" id="alat-h">Alat <span>Teen sivuja esimerkiksi näille</span></h2>
       <div class="marq">
         <div class="marq-track">
           <ul><li>Arkkitehtitoimistot</li><li>Sisustusarkkitehdit</li><li>Puusepät</li><li>Valaisinsuunnittelu</li><li>Huonekalumuotoilu</li><li>Vaatemerkit</li><li>Maisema-arkkitehdit</li><li>Graafinen suunnittelu</li><li>Valokuvaajat</li><li>Keramiikka</li></ul>
@@ -65,67 +69,73 @@
       </div>
     </section>
 
-    <section class="sec" id="tyot" aria-labelledby="tyot-h">
+    <section class="sec" id="tyot" aria-labelledby="tyot-h" data-sec-name="Työt">
       <div class="split sec-hd">
-        <h2 class="small" id="tyot-h">Valitut työt:</h2>
-        <p class="big">Teen sivut, joilla työ näkyy ja oikea asiakas ottaa yhteyttä.</p>
+        <h2 class="lab" id="tyot-h">Työt <span>Valitut, 2026</span></h2>
+        <p class="big two">Teen sivut, joilla työ näkyy <span>ja oikea asiakas ottaa yhteyttä.</span></p>
       </div>
       <div class="works" style="--last:5">
       <article class="work" style="--i:0">
         <a class="w-img" href="/projektit/haljala/" tabindex="-1" aria-hidden="true"><img src="/assets/img/projektit/haljala/cover-960.webp" srcset="/assets/img/projektit/haljala/cover-960.webp 960w, /assets/img/projektit/haljala/cover.webp 1600w" sizes="(min-width: 1200px) 66vw, (min-width: 800px) 50vw, 100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async"><span class="peek"><img data-src="/assets/img/projektit/haljala/full-960.webp" width="960" height="2400" alt="" decoding="async"></span></a>
         <div class="w-tx">
-          <a class="w-bar" href="/projektit/haljala/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/haljala/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Arkkitehtitoimisto Haljala</h3></span><span class="w-y">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
+          <a class="w-bar" href="/projektit/haljala/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/haljala/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Arkkitehtitoimisto Haljala</h3></span><span class="w-y mono">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
           <p class="w-t">Soittaja tietää jo hinnan</p>
+          <p class="w-meta mono">Arkkitehtitoimisto, Tampere</p>
           <p class="w-d">Pieni toimisto piirtää taloja, huviloita ja saunoja Pirkanmaalle. Hinnat ja vuoden 2027 vapaat aloitukset näkyvät sivulla, joten yhteydenotot tulevat ihmisiltä, joille aikataulu ja budjetti sopivat.</p>
         </div>
       </article>
       <article class="work" style="--i:1">
         <a class="w-img" href="/projektit/lindqvist-ekroos/" tabindex="-1" aria-hidden="true"><img src="/assets/img/projektit/lindqvist-ekroos/cover-960.webp" srcset="/assets/img/projektit/lindqvist-ekroos/cover-960.webp 960w, /assets/img/projektit/lindqvist-ekroos/cover.webp 1600w" sizes="(min-width: 1200px) 66vw, (min-width: 800px) 50vw, 100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async"><span class="peek"><img data-src="/assets/img/projektit/lindqvist-ekroos/full-960.webp" width="960" height="2400" alt="" decoding="async"></span></a>
         <div class="w-tx">
-          <a class="w-bar" href="/projektit/lindqvist-ekroos/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/lindqvist-ekroos/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Lindqvist Ekroos Arkkitehdit</h3></span><span class="w-y">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
+          <a class="w-bar" href="/projektit/lindqvist-ekroos/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/lindqvist-ekroos/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Lindqvist Ekroos Arkkitehdit</h3></span><span class="w-y mono">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
           <p class="w-t">Valmiina, kun kunta pyytää tarjousta</p>
+          <p class="w-meta mono">Arkkitehtitoimisto, Helsinki</p>
           <p class="w-d">Toimisto suunnittelee kouluja ja päiväkoteja. Referenssit hankintatapoineen, työryhmä ja sopimusehdot löytyvät sivulta, ja 25 työn arkisto näyttää lautakunnalle, mitä on rakennettu.</p>
         </div>
       </article>
       <article class="work" style="--i:2">
         <a class="w-img" href="/projektit/studio-kuusela/" tabindex="-1" aria-hidden="true"><img src="/assets/img/projektit/studio-kuusela/cover-960.webp" srcset="/assets/img/projektit/studio-kuusela/cover-960.webp 960w, /assets/img/projektit/studio-kuusela/cover.webp 1600w" sizes="(min-width: 1200px) 66vw, (min-width: 800px) 50vw, 100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async"><span class="peek"><img data-src="/assets/img/projektit/studio-kuusela/full-960.webp" width="960" height="2400" alt="" decoding="async"></span></a>
         <div class="w-tx">
-          <a class="w-bar" href="/projektit/studio-kuusela/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/studio-kuusela/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Studio Kuusela</h3></span><span class="w-y">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
+          <a class="w-bar" href="/projektit/studio-kuusela/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/studio-kuusela/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Studio Kuusela</h3></span><span class="w-y mono">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
           <p class="w-t">Näkyy, mitä suunnittelu muuttaa</p>
+          <p class="w-meta mono">Sisustusarkkitehtitoimisto, Turku</p>
           <p class="w-d">Kohdesivuilla on pohjapiirros puretuin ja uusin seinin sekä materiaaliluettelo, ja suunnittelun hinta näkyy jokaisen kohteen tiedoissa. Konsultaatioon tullaan hinta tiedossa.</p>
         </div>
       </article>
       <article class="work" style="--i:3">
         <a class="w-img" href="/projektit/keljon-puusepat/" tabindex="-1" aria-hidden="true"><img src="/assets/img/projektit/keljon-puusepat/cover-960.webp" srcset="/assets/img/projektit/keljon-puusepat/cover-960.webp 960w, /assets/img/projektit/keljon-puusepat/cover.webp 1600w" sizes="(min-width: 1200px) 66vw, (min-width: 800px) 50vw, 100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async"><span class="peek"><img data-src="/assets/img/projektit/keljon-puusepat/full-960.webp" width="960" height="2400" alt="" decoding="async"></span></a>
         <div class="w-tx">
-          <a class="w-bar" href="/projektit/keljon-puusepat/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/keljon-puusepat/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Keljon Puusepät</h3></span><span class="w-y">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
+          <a class="w-bar" href="/projektit/keljon-puusepat/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/keljon-puusepat/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Keljon Puusepät</h3></span><span class="w-y mono">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
           <p class="w-t">Hinnan suunta ennen puhelua</p>
+          <p class="w-meta mono">Keittiöpuusepänliike, Jyväskylä</p>
           <p class="w-d">Hintataulukko keittiön pituuden mukaan ja laskuri vastaavat yleisimpään kysymykseen. Toimitusaika ja seuraava vapaa verstasaika näkyvät, joten asiakas osaa varata ajoissa.</p>
         </div>
       </article>
       <article class="work" style="--i:4">
         <a class="w-img" href="/projektit/kivela-rinne/" tabindex="-1" aria-hidden="true"><img src="/assets/img/projektit/kivela-rinne/cover-960.webp" srcset="/assets/img/projektit/kivela-rinne/cover-960.webp 960w, /assets/img/projektit/kivela-rinne/cover.webp 1600w" sizes="(min-width: 1200px) 66vw, (min-width: 800px) 50vw, 100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async"><span class="peek"><img data-src="/assets/img/projektit/kivela-rinne/full-960.webp" width="960" height="2400" alt="" decoding="async"></span></a>
         <div class="w-tx">
-          <a class="w-bar" href="/projektit/kivela-rinne/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/kivela-rinne/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Kivelä Rinne</h3></span><span class="w-y">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
+          <a class="w-bar" href="/projektit/kivela-rinne/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/kivela-rinne/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Kivelä Rinne</h3></span><span class="w-y mono">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
           <p class="w-t">Tuotevastaava löytää kaiken</p>
+          <p class="w-meta mono">Valaisin- ja huonekalumuotoilu, Lahti</p>
           <p class="w-d">Jokaisella tuotteella on oma sivu, jossa ovat mitat, materiaalit, valmistaja ja prototyyppien määrä. Etusivu painaa 0,2 Mt, joten se aukeaa messuillakin.</p>
         </div>
       </article>
       <article class="work" style="--i:5">
         <a class="w-img" href="/projektit/kaulus/" tabindex="-1" aria-hidden="true"><img src="/assets/img/projektit/kaulus/cover-960.webp" srcset="/assets/img/projektit/kaulus/cover-960.webp 960w, /assets/img/projektit/kaulus/cover.webp 1600w" sizes="(min-width: 1200px) 66vw, (min-width: 800px) 50vw, 100vw" width="1600" height="1000" alt="" loading="lazy" decoding="async"><span class="peek"><img data-src="/assets/img/projektit/kaulus/full-960.webp" width="960" height="2400" alt="" decoding="async"></span></a>
         <div class="w-tx">
-          <a class="w-bar" href="/projektit/kaulus/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/kaulus/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Kaulus</h3></span><span class="w-y">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
+          <a class="w-bar" href="/projektit/kaulus/"><span class="w-lead"><img class="ico" src="/assets/img/projektit/kaulus/icon.svg" width="20" height="20" alt=""><h3 class="w-name">Kaulus</h3></span><span class="w-y mono">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
           <p class="w-t">Kysymykset vähenevät ennen ostoa</p>
+          <p class="w-meta mono">Vaatemerkki ja verkkokauppa, Helsinki</p>
           <p class="w-d">Neljä pellavapaitaa, mitat mallin mukaan ja varastotilanne koon mukaan. Kun koko loppuu, sivu kertoo, minä viikkona seuraava erä valmistuu.</p>
         </div>
       </article>
       </div>
     </section>
 
-    <section class="sec" id="tyokalut" aria-labelledby="tyokalut-h">
+    <section class="sec" id="tyokalut" aria-labelledby="tyokalut-h" data-sec-name="Työkalut">
       <div class="split sec-hd">
-        <h2 class="small" id="tyokalut-h">Työkalut:</h2>
-        <p class="big">Suunnittelen Figmassa ja koodaan sivut itse, ilman valmispohjia. Ennen julkaisua mittaan nopeuden ja saavutettavuuden.</p>
+        <h2 class="lab" id="tyokalut-h">Työkalut <span>Suunnittelu, koodi ja mittaus</span></h2>
+        <p class="big two">Suunnittelen Figmassa ja koodaan sivut itse, ilman valmispohjia. <span>Ennen julkaisua mittaan nopeuden ja saavutettavuuden.</span></p>
       </div>
       <div class="marq marq-tools">
         <div class="marq-track">
@@ -135,9 +145,9 @@
       </div>
     </section>
 
-    <section class="sec quote" aria-labelledby="asiakas-h">
+    <section class="sec quote" aria-labelledby="asiakas-h" data-sec-name="Asiakas">
       <div class="split">
-        <h2 class="small" id="asiakas-h">Asiakas:</h2>
+        <h2 class="lab" id="asiakas-h">Asiakas <span>BuffBird Oy</span></h2>
         <figure>
           <blockquote><p class="big">”Ville teki sivut, jotka saavat ihmiset innostumaan BuffBirdista jo ennen julkaisua.”</p></blockquote>
           <figcaption class="by"><img src="/assets/img/valtteri-96.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><span><b>Valtteri Viitala</b><span class="small">Toimitusjohtaja, BuffBird Oy</span></span></figcaption>
@@ -145,9 +155,9 @@
       </div>
     </section>
 
-    <section class="sec" id="kysymykset" aria-labelledby="kysymykset-h">
+    <section class="sec" id="kysymykset" aria-labelledby="kysymykset-h" data-sec-name="Kysymykset">
       <div class="split">
-        <h2 class="small" id="kysymykset-h">Kysymykset:</h2>
+        <h2 class="lab" id="kysymykset-h">Kysymykset <span>Hinta, aikataulu ja ylläpito</span></h2>
         <div class="faq">
         <details><summary>Kauanko projekti kestää?</summary><p>Yleensä kahdesta neljään viikkoa. Luonnos etusivusta on valmis 48 tunnissa, ja aikataulu sovitaan ennen aloitusta.</p></details>
         <details><summary>Mitä se maksaa?</summary><p>Kiinteä hinta, jonka kerron luonnoksen jälkeen, kun tiedän, mitä tarvitset. Se ei muutu matkalla, eikä kuukausimaksuja ole.</p></details>
@@ -161,16 +171,15 @@
       </div>
     </section>
 
-    <section class="sec" id="yhteys" aria-labelledby="yhteys-h">
+    <section class="sec" id="yhteys" aria-labelledby="yhteys-h" data-sec-name="Yhteys">
       <div class="split">
-        <h2 class="small" id="yhteys-h">Yhteys:</h2>
+        <h2 class="lab" id="yhteys-h">Yhteys <span>Vastaan vuorokauden sisällä</span></h2>
         <div>
-          <p class="big">Kerro, mitä teet, ja lähetä linkki nykyisiin sivuihisi. Saat luonnoksen uudesta etusivusta 48 tunnissa.</p>
+          <p class="big two">Kerro, mitä teet, ja lähetä linkki nykyisiin sivuihisi. <span>Saat luonnoksen uudesta etusivusta 48 tunnissa.</span></p>
           <div class="reach big">
             <a class="u" href="mailto:info@villesaarela.com?subject=Luonnospyynt%C3%B6">info@villesaarela.com</a>
             <a class="u" href="tel:+358451035362">045 103 5362</a>
           </div>
-          <p class="small" style="margin-top:14px">Vastaan vuorokauden sisällä.</p>
         </div>
       </div>
     </section>
@@ -189,13 +198,13 @@
       <div class="ftr-bot">
         <div>
           <div class="ftr-links"><a href="mailto:info@villesaarela.com">info@villesaarela.com</a><a href="tel:+358451035362">045 103 5362</a><a href="/tietosuoja/">Tietosuoja</a></div>
-          <p class="small">© 2026 Ville Saarela, Isosaarentie 10, 00840 Helsinki. Y-tunnus 3660060-6.</p>
+          <p class="small">© 2026 Ville Saarela, Isosaarentie 10, 00840 Helsinki. Y-tunnus 3660060-6. <a class="mono up" href="#main">[ Ylös ]</a></p>
         </div>
         <a class="cta" href="#yhteys"><span>Ota yhteyttä</span><span class="cta-ar" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </footer>
   <script src="/assets/vendor/lenis.min.js" defer></script>
-  <script src="/assets/js/ns.js?v=8" defer></script>
+  <script src="/assets/js/ns.js?v=9" defer></script>
 </body>
 </html>

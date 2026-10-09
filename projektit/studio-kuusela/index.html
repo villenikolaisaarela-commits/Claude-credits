@@ -22,15 +22,19 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/geist-300-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/ns.css?v=8">
+  <link rel="preload" href="/assets/fonts/geist-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/ns.css?v=9">
 </head>
 <body>
   <a class="skip" href="#main">Siirry sisältöön</a>
   <header class="hdr">
-    <a class="logo" href="/" aria-label="Ville Saarela, etusivu"><img src="/assets/img/ville-saarela-valkoinen.svg" width="521" height="74" alt="Ville Saarela"></a>
+    <div class="pill hdr-l">
+      <a class="logo" href="/" aria-label="Ville Saarela, etusivu"><img src="/assets/img/ville-saarela-valkoinen.svg" width="521" height="74" alt="Ville Saarela"></a>
+      <span class="hdr-sec mono" aria-hidden="true"><span data-sec>Työt</span></span>
+    </div>
     <div class="hdr-in">
-      <nav class="nav" aria-label="Päävalikko"><a href="/#tyot">Työt</a><a href="/#kysymykset">Kysymykset</a><a href="/#yhteys">Yhteys</a></nav>
-      <a class="hdr-r" href="mailto:info@villesaarela.com">info@villesaarela.com</a>
+      <nav class="pill nav" aria-label="Päävalikko"><a href="/#tyot">Työt</a><a href="/#kysymykset">Kysymykset</a><a href="/#yhteys">Yhteys</a></nav>
+      <p class="hdr-clock mono"><span>Helsinki</span> <time data-clock></time></p>
     </div>
   </header>
 
@@ -48,9 +52,9 @@
       </div>
       <aside class="cs-aside" aria-label="Projektin tiedot">
         <div class="cs-acc-wrap"><div class="cs-acc" data-cs-acc data-lenis-prevent>
-          <div class="cs-head"><span class="cs-lead"><img class="ico" src="/assets/img/projektit/studio-kuusela/icon.svg" width="20" height="20" alt=""><h1 class="cs-name">Studio Kuusela</h1></span><span class="cs-year">2026</span></div>
+          <div class="cs-head"><span class="cs-lead"><img class="ico" src="/assets/img/projektit/studio-kuusela/icon.svg" width="20" height="20" alt=""><h1 class="cs-name">Studio Kuusela</h1></span><span class="cs-year mono">2026</span></div>
           <p class="cs-big">Näkyy, mitä suunnittelu muuttaa</p>
-          <p class="cs-concept"><span class="tag">Konsepti</span> Studio Kuusela on kuvitteellinen yritys. Tein sivuston näyttääkseni, mitä sisustusarkkitehdin sivut voivat tehdä.</p>
+          <p class="cs-concept"><span class="tag mono">Konsepti</span> Studio Kuusela on kuvitteellinen yritys. Tein sivuston näyttääkseni, mitä sisustusarkkitehdin sivut voivat tehdä.</p>
           <div class="cs-item is-open" data-ch="0">
             <h2 class="cs-h"><button class="cs-q" type="button" aria-expanded="true" aria-controls="ch-0">Lähtökohta<span class="cs-pm" aria-hidden="true"></span></button></h2>
             <div class="cs-panel" id="ch-0"><div class="cs-in"><p>Studio Kuusela on kahden sisustusarkkitehdin toimisto Turun Port Arthurissa. Se suunnittelee koteja ja kesähuviloita Varsinais-Suomessa sekä pari kahvilaa tai liikettä vuodessa.</p><p>Alan parhaat sivut näyttävät hienoilta, mutta niistä ei selviä, mitä suunnittelu maksaa. Kotimaisilla kuluttajasivuilla hinnat näkyvät, mutta ulkoasu muistuttaa usein valmispohjaa. Asiakas haluaa tietää molemmat ennen kuin varaa konsultaation.</p></div></div>
@@ -71,7 +75,7 @@
         </div></div>
         <nav class="cs-next" aria-label="Seuraava projekti">
           <p class="cs-next-l">Seuraava projekti:</p>
-          <a class="cs-next-row" href="/projektit/keljon-puusepat/"><span class="cs-lead"><img class="ico" src="/assets/img/projektit/keljon-puusepat/icon.svg" width="20" height="20" alt=""><span class="cs-name">Keljon Puusepät</span></span><span class="cs-title">Hinnan suunta ennen puhelua</span><span class="cs-year">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
+          <a class="cs-next-row" href="/projektit/keljon-puusepat/"><span class="cs-lead"><img class="ico" src="/assets/img/projektit/keljon-puusepat/icon.svg" width="20" height="20" alt=""><span class="cs-name">Keljon Puusepät</span></span><span class="cs-title">Hinnan suunta ennen puhelua</span><span class="cs-year mono">2026 <span class="ar" aria-hidden="true">↗</span></span></a>
         </nav>
       </aside>
     </div>
@@ -90,13 +94,13 @@
       <div class="ftr-bot">
         <div>
           <div class="ftr-links"><a href="mailto:info@villesaarela.com">info@villesaarela.com</a><a href="tel:+358451035362">045 103 5362</a><a href="/tietosuoja/">Tietosuoja</a></div>
-          <p class="small">© 2026 Ville Saarela, Isosaarentie 10, 00840 Helsinki. Y-tunnus 3660060-6.</p>
+          <p class="small">© 2026 Ville Saarela, Isosaarentie 10, 00840 Helsinki. Y-tunnus 3660060-6. <a class="mono up" href="#main">[ Ylös ]</a></p>
         </div>
         <a class="cta" href="/#yhteys"><span>Ota yhteyttä</span><span class="cta-ar" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </footer>
   <script src="/assets/vendor/lenis.min.js" defer></script>
-  <script src="/assets/js/ns.js?v=8" defer></script>
+  <script src="/assets/js/ns.js?v=9" defer></script>
 </body>
 </html>

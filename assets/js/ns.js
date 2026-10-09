@@ -7,9 +7,38 @@
   // Smooth scroll, light enough that the wheel still feels direct
   let lenis = null;
   if (!reduce && window.Lenis) {
-    lenis = new window.Lenis({ lerp: 0.2, smoothWheel: true, syncTouch: false, anchors: { offset: -56 } });
+    lenis = new window.Lenis({ lerp: 0.2, smoothWheel: true, syncTouch: false, anchors: { offset: -64 } });
     const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
     requestAnimationFrame(raf);
+  }
+
+  // The time in Helsinki, in the header
+  const clock = document.querySelector('[data-clock]');
+  if (clock) {
+    const fmt = new Intl.DateTimeFormat('fi-FI', { timeZone: 'Europe/Helsinki', hour: '2-digit', minute: '2-digit' });
+    const tick = () => { const t = fmt.format(new Date()); if (clock.textContent !== t) clock.textContent = t; };
+    tick();
+    clock.parentElement.classList.add('is-on');
+    setInterval(tick, 10000);
+  }
+
+  // The header panel names the part of the page in view
+  const secLabel = document.querySelector('[data-sec]');
+  const secs = [...document.querySelectorAll('[data-sec-name]')];
+  if (secLabel && secs.length) {
+    let cur = secLabel.textContent, stick = 0;
+    const name = () => {
+      stick = 0;
+      let n = secs[0].dataset.secName;
+      const line = innerHeight * 0.35;
+      secs.forEach(x => { if (x.getBoundingClientRect().top <= line) n = x.dataset.secName; });
+      if (n === cur) return;
+      cur = n;
+      secLabel.textContent = n;
+      if (!reduce) { secLabel.classList.remove('is-new'); void secLabel.offsetWidth; secLabel.classList.add('is-new'); }
+    };
+    addEventListener('scroll', () => { if (!stick) stick = requestAnimationFrame(name); }, { passive: true });
+    name();
   }
 
   // Scroll-linked moves: the opening mark drifts down slower than the page, the footer mark rises as the page lifts off it
@@ -87,7 +116,7 @@
       open(n); last = n;
       const s = starts.find(x => +x.dataset.chStart === n);
       if (!s) return;
-      const y = n === 0 ? 0 : Math.max(0, s.getBoundingClientRect().top + scrollY - 56);
+      const y = n === 0 ? 0 : Math.max(0, s.getBoundingClientRect().top + scrollY - 64);
       hold = true;
       const done = () => { hold = false; };
       if (lenis) lenis.scrollTo(y, { duration: 0.9, onComplete: done });

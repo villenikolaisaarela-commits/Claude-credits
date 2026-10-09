@@ -22,22 +22,26 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/geist-300-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/ns.css?v=8">
+  <link rel="preload" href="/assets/fonts/geist-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/ns.css?v=9">
 </head>
 <body>
   <a class="skip" href="#main">Siirry sisältöön</a>
   <header class="hdr">
-    <a class="logo" href="/" aria-label="Ville Saarela, etusivu"><img src="/assets/img/ville-saarela-valkoinen.svg" width="521" height="74" alt="Ville Saarela"></a>
+    <div class="pill hdr-l">
+      <a class="logo" href="/" aria-label="Ville Saarela, etusivu"><img src="/assets/img/ville-saarela-valkoinen.svg" width="521" height="74" alt="Ville Saarela"></a>
+      <span class="hdr-sec mono" aria-hidden="true"><span data-sec>Tietosuoja</span></span>
+    </div>
     <div class="hdr-in">
-      <nav class="nav" aria-label="Päävalikko"><a href="/#tyot">Työt</a><a href="/#kysymykset">Kysymykset</a><a href="/#yhteys">Yhteys</a></nav>
-      <a class="hdr-r" href="mailto:info@villesaarela.com">info@villesaarela.com</a>
+      <nav class="pill nav" aria-label="Päävalikko"><a href="/#tyot">Työt</a><a href="/#kysymykset">Kysymykset</a><a href="/#yhteys">Yhteys</a></nav>
+      <p class="hdr-clock mono"><span>Helsinki</span> <time data-clock></time></p>
     </div>
   </header>
 
   <main id="main">
     <section class="doc">
       <div class="split">
-        <p class="small">Päivitetty 9.10.2026</p>
+        <p class="lab">Tietosuoja <span>Päivitetty 9.10.2026</span></p>
         <div class="doc-in">
           <h1 class="big">Tietosuoja</h1>
           <h2>Rekisterinpitäjä</h2><p>Ville Saarela, Isosaarentie 10, 00840 Helsinki. Y-tunnus 3660060-6.</p><p>Tietosuoja-asioissa voit ottaa yhteyttä sähköpostilla <a class="u" href="mailto:info@villesaarela.com">info@villesaarela.com</a> tai puhelimella <a class="u" href="tel:+358451035362">045 103 5362</a>.</p>
@@ -65,13 +69,13 @@
       <div class="ftr-bot">
         <div>
           <div class="ftr-links"><a href="mailto:info@villesaarela.com">info@villesaarela.com</a><a href="tel:+358451035362">045 103 5362</a><a href="/tietosuoja/">Tietosuoja</a></div>
-          <p class="small">© 2026 Ville Saarela, Isosaarentie 10, 00840 Helsinki. Y-tunnus 3660060-6.</p>
+          <p class="small">© 2026 Ville Saarela, Isosaarentie 10, 00840 Helsinki. Y-tunnus 3660060-6. <a class="mono up" href="#main">[ Ylös ]</a></p>
         </div>
         <a class="cta" href="/#yhteys"><span>Ota yhteyttä</span><span class="cta-ar" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </footer>
   <script src="/assets/vendor/lenis.min.js" defer></script>
-  <script src="/assets/js/ns.js?v=8" defer></script>
+  <script src="/assets/js/ns.js?v=9" defer></script>
 </body>
 </html>
