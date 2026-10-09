@@ -134,6 +134,23 @@
     }
   }
 
+  // Work page: on a big screen the opening line stays put while the first project rises to meet it, then fades
+  const opener = document.querySelector('[data-opener]');
+  const firstRow = document.querySelector('.wk .work');
+  if (opener && firstRow && !reduce && matchMedia('(min-width: 1200px)').matches) {
+    const line = opener.querySelector('.big');
+    const r = line.getBoundingClientRect();
+    line.style.top = `${Math.round(r.top + scrollY)}px`;
+    line.style.left = `${Math.round(r.left)}px`;
+    line.style.width = `${Math.round(r.width)}px`;
+    opener.style.minHeight = `${opener.offsetHeight}px`;
+    opener.classList.add('is-fixed');
+    let t = 0;
+    const away = () => { t = 0; opener.classList.toggle('is-away', firstRow.getBoundingClientRect().top <= line.getBoundingClientRect().bottom + 24 || scrollY > opener.offsetHeight * 1.5); };
+    addEventListener('scroll', () => { if (!t) t = requestAnimationFrame(away); }, { passive: true });
+    away();
+  }
+
   if (!desk.matches || reduce) return;
 
   // A label follows the pointer over the pictures, a step behind it

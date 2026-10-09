@@ -66,6 +66,8 @@ html.lenis, html.lenis body { height: auto; }
 .hdr-clock { display: none; align-items: center; gap: 8px; height: 44px; color: var(--mute); }
 .hdr-clock time { color: var(--hi); }
 @media (max-width: 420px) { .pill.nav { gap: 12px; padding: 0 10px; } .pill.hdr-l { padding: 0 10px; } }
+/* On a phone the page fades out behind the panels, so text does not show between them */
+@media (max-width: 799px) { .hdr::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 64px; z-index: -1; background: linear-gradient(var(--bg) 55%, rgba(7, 7, 7, 0)); pointer-events: none; } }
 @media (min-width: 800px) {
   .hdr { grid-template-columns: 1fr 1fr; }
   .hdr-sec { display: inline-block; }
@@ -181,6 +183,33 @@ a:hover .ar { transform: translate(2px, -2px); }
   .works::after { content: ''; display: block; flex: none; height: 48px; }
   .w-img { max-height: calc(100svh - var(--pin) - var(--last) * var(--bar) - var(--rest)); }
 }
+
+/* A way on to all the work, under the pile */
+.more { display: flex; justify-content: flex-end; padding: 18px var(--pad) 0; }
+.more a { display: inline-flex; align-items: center; min-height: 44px; color: var(--mute); transition: color var(--hover); }
+.more a:hover { color: var(--hi); }
+
+/* Work page: the opening line holds its place until the first project reaches it, then fades */
+.wk-open { align-content: end; min-height: 62vh; padding-top: 96px; padding-bottom: 36px; }
+.wk-open .lab { padding-top: 8px; }
+.wk-open .big { max-width: 30ch; transition: opacity 0.3s ease-out; }
+.wk-open.is-fixed .big { position: fixed; z-index: 0; pointer-events: none; }
+.wk-open.is-away .big { opacity: 0; }
+.wk .works { position: relative; z-index: 1; }
+@media (max-width: 799px) { .wk .works { --rest: 182px; } }
+
+/* Index: every project on one line */
+.ix { margin-inline: var(--pad); border-top: 1px solid var(--line); }
+.ix a { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 56px; padding-block: 12px; border-bottom: 1px solid var(--line); font-size: 16px; color: var(--fg); transition: color var(--hover), background-color var(--hover); }
+.ix a:hover { color: var(--hi); background: #0E0E0E; }
+.ix-no, .ix-y { color: var(--mute); }
+.ix-name { display: flex; align-items: center; min-width: 0; }
+.ix-t, .ix-ala { display: none; color: var(--mute); }
+@media (min-width: 800px) {
+  .ix a { grid-template-columns: 48px minmax(0, 1.3fr) minmax(0, 1.4fr) minmax(0, 1.2fr) auto; }
+  .ix-t, .ix-ala { display: block; }
+}
+.wk-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 28px; }
 
 /* Tools: grey logos drifting past the other way */
 .marq-tools .marq-track { animation-direction: reverse; animation-duration: 60s; }
