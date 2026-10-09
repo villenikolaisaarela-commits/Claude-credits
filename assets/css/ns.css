@@ -152,11 +152,20 @@ a:hover .ar { transform: translate(2px, -2px); }
   .w-img { max-height: calc(100svh - var(--pin) - var(--last) * var(--bar) - 40px); }
 }
 
-/* Tools: a grid of names with what each is for, hairlines between */
-.tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-inline: var(--pad); background: var(--line); border-block: 1px solid var(--line); }
-.tools li { display: grid; align-content: space-between; gap: 22px; min-height: 128px; padding: 16px 14px 18px; background: var(--bg); }
-.tool-n { font-size: clamp(19px, 1.7vw, 25px); line-height: 1.12; letter-spacing: -0.02em; color: var(--fg); }
-@media (min-width: 800px) { .tools { grid-template-columns: repeat(4, minmax(0, 1fr)); } .tools li { min-height: 160px; } }
+/* Tools: grey logos drifting past the other way */
+.marq-tools .marq-track { animation-direction: reverse; animation-duration: 60s; }
+.marq-tools li { display: flex; align-items: center; gap: 12px; color: var(--mute); }
+.marq-tools img { width: auto; height: clamp(24px, 2.2vw, 32px); }
+
+/* Plain text pages: privacy, not found */
+.doc { padding-top: clamp(96px, 12vw, 160px); }
+.doc-in { max-width: 62ch; }
+.doc-in h1 { margin-bottom: 28px; }
+.doc-in h2 { margin: 30px 0 8px; font-size: 17px; font-weight: 400; color: var(--hi); }
+.doc-in p { color: var(--mute); }
+.doc-in p + p { margin-top: 10px; }
+.doc-in .u { color: var(--fg); }
+.doc-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 28px !important; }
 
 /* The label that follows the pointer over a picture */
 .pcur { position: fixed; top: 0; left: 0; z-index: 45; display: inline-flex; align-items: center; height: 32px; padding: 0 12px; background: var(--raise); border-radius: 2px; color: var(--hi); font-size: 14px; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity 0.25s ease; }
