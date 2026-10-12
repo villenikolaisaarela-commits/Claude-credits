@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>Yhteys – Kallistus</title>
+<meta name="description" content="Pyydä mittauskäynti tai soita. Toimisto ja varasto Roihupellossa, Helsingissä.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F2F2EF">
+<meta property="og:title" content="Yhteys – Kallistus">
+<meta property="og:description" content="Pyydä mittauskäynti tai soita. Toimisto ja varasto Roihupellossa, Helsingissä.">
+<meta property="og:image" content="https://www.villesaarela.com/demot/kallistus/og.jpg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="../fonts/host-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../style.css?v=3">
+</head>
+<body>
+<a class="skip" href="#main">Siirry sisältöön</a>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="../index.html"><img src="../img/kallistus.svg" width="380" height="114" alt="Kallistus, etusivu"></a>
+    <nav class="nav" aria-label="Päävalikko"><a href="../hinnat/">Hinnat</a><a href="../kohteet/">Kohteet</a><a href="../index.html#nain">Näin teemme</a><a href="../index.html#taloyhtio">Taloyhtiöille</a><a href="../yhteys/" aria-current="page">Yhteys</a></nav>
+    <div class="hdr-r">
+      <a class="hdr-tel" href="tel:0485620821">048 562 0821</a>
+      <a class="btn" href="../yhteys/">Pyydä mittauskäynti</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav"><span></span><b class="sr">Valikko</b></button>
+    </div>
+  </div>
+  <nav class="wrap mnav" id="mnav" aria-label="Valikko"><a href="../hinnat/">Hinnat</a><a href="../kohteet/">Kohteet</a><a href="../index.html#nain">Näin teemme</a><a href="../index.html#taloyhtio">Taloyhtiöille</a><a href="../yhteys/">Yhteys</a><a class="mnav-tel" href="tel:0485620821">Soita 048 562 0821</a></nav>
+</header>
+
+<main id="main">
+  <section class="ptop wrap">
+    <h1 class="h1" style="max-width:12ch">Soita tai kirjoita.</h1>
+    <p class="lead">Minna vastaa puhelimeen arkisin 7.30–16. Kirjeisiin ja lomakkeisiin vastaamme saman tai seuraavan arkipäivän aikana.</p>
+  </section>
+  <section class="wrap" style="padding-bottom:var(--s6)">
+    <div class="split">
+      <dl class="kv">
+        <div><dt>Puhelin</dt><dd><a href="tel:0485620821">048 562 0821</a></dd></div>
+        <div><dt>Sähköposti</dt><dd><a href="mailto:toimisto@kallistus.example">toimisto@kallistus.example</a></dd></div>
+        <div><dt>Toimisto ja varasto</dt><dd>Valimonrinne 7, 00880 Helsinki</dd></div>
+        <div><dt>Laattanäytteet</dt><dd>Ti ja to 15–18</dd></div>
+        <div><dt>Y-tunnus</dt><dd>3184517-6</dd></div>
+      </dl>
+      <div class="prose"><p>Toimimme Helsingissä, Espoossa, Kauniaisissa ja Vantaalla. Kauempana teemme kylpyhuoneita, jos samassa taloyhtiössä on useampi remontti.</p><p>Jos sinulla on taloyhtiön muutostyöohje tai pohjapiirros, ota se mukaan mittauskäynnille. Jos ei ole, hankimme ne.</p></div>
+    </div>
+  </section>
+  <section class="sec on-dark" id="pyynto" aria-labelledby="pyynto-h">
+    <div class="wrap req">
+      <div class="req-txt">
+        <h2 class="h2" id="pyynto-h">Pyydä mittauskäynti.</h2>
+        <p class="lead" style="margin-top:24px">Käynti kestää noin 45 minuuttia eikä maksa mitään. Kiinteän hinnan saat kolmen arkipäivän sisällä.</p>
+        <ol class="steps3">
+          <li><span class="mono">1</span><span>Minna soittaa samana tai seuraavana arkipäivänä.</span></li>
+          <li><span class="mono">2</span><span>Joonas mittaa kylpyhuoneen ja tuo laattanäytteet.</span></li>
+          <li><span class="mono">3</span><span>Saat tarjouksen, aikataulun ja muutostyöilmoituksen luonnoksen.</span></li>
+        </ol>
+        <p style="margin-top:32px">Tai soita: <a class="tlink" href="tel:0485620821" style="color:var(--on-dark)">048 562 0821</a></p>
+      </div>
+      <form data-demo novalidate>
+        <label class="f">Nimi<input type="text" name="nimi" autocomplete="name"></label>
+        <label class="f">Puhelin<input type="tel" name="puhelin" autocomplete="tel"></label>
+        <label class="f full">Osoite tai postinumero<input type="text" name="osoite" autocomplete="street-address"></label>
+        <label class="f">Talotyyppi<select name="talo"><option>Kerrostalo</option><option>Rivitalo</option><option>Omakotitalo</option></select></label>
+        <label class="f">Rakennusvuosi<input type="text" name="vuosi" inputmode="numeric" placeholder="esim. 1962"></label>
+        <label class="f full">Mitä haluaisit muuttaa?<textarea name="viesti"></textarea></label>
+        <label class="upload full"><input type="file" name="kuvat" accept="image/*" multiple><span aria-hidden="true">＋</span><span data-files>Lisää kuvia nykyisestä kylpyhuoneesta</span></label>
+        <div class="full" style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px"><button class="btn" type="submit">Lähetä pyyntö</button><span class="note">Tämä on konseptisivu: lomake ei lähetä eikä tallenna tietoja.</span></div>
+        <p class="ok" tabindex="-1">Kiitos. Oikealla sivustolla Minna soittaisi sinulle seuraavana arkipäivänä. Tämä lomake ei lähettänyt mitään.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+<footer class="ftr on-dark">
+  <div class="wrap grid">
+    <div class="ftr-logo"><img src="../img/kallistus-light.svg" width="380" height="114" alt="Kallistus"><p class="small" style="margin-top:16px;max-width:30ch">Kylpyhuone- ja saunaremontit Helsingissä, Espoossa, Kauniaisissa ja Vantaalla vuodesta 2011.</p></div>
+    <div class="ftr-col"><h2>Sivut</h2><ul><li><a href="../hinnat/">Hinnat</a></li><li><a href="../kohteet/">Kohteet</a></li><li><a href="../index.html#nain">Näin teemme</a></li><li><a href="../yhteys/">Yhteys</a></li></ul></div>
+    <div class="ftr-col"><h2>Yhteys</h2><ul><li><a href="tel:0485620821">048 562 0821</a></li><li><a href="mailto:toimisto@kallistus.example">toimisto@kallistus.example</a></li><li>Arkisin 7.30–16</li></ul></div>
+    <div class="ftr-col"><h2>Toimisto ja varasto</h2><ul><li>Valimonrinne 7, 00880 Helsinki</li><li>Y-tunnus 3184517-6</li></ul></div>
+    <div class="ftr-col"><h2>Todistukset</h2><ul><li>Märkätilojen vedeneristäjän sertifikaatti</li><li>Luotettava Kumppani</li><li>Vastuuvakuutus 2 milj. €</li></ul></div>
+    <div class="ftr-bot"><span>© 2026 Kallistus Oy</span><span class="concept">Konsepti: Kallistus on kuvitteellinen yritys, ja sivusto on Ville Saarelan portfoliotyö. Kuvat: Pexels, kuvaajat mainitaan <a href="../kuvat/" style="text-decoration:underline">kuvasivulla</a>.</span></div>
+  </div>
+</footer>
+<script src="../script.js?v=3" defer></script>
+</body>
+</html>

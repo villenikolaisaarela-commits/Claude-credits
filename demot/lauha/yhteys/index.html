@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>Yhteys – Lauha</title>
+<meta name="description" content="Pyydä maksuton arviokäynti tai soita. Lauha Talotekniikka, Tampere.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#15262C">
+<meta property="og:title" content="Yhteys – Lauha">
+<meta property="og:description" content="Pyydä maksuton arviokäynti tai soita. Lauha Talotekniikka, Tampere.">
+<meta property="og:image" content="https://www.villesaarela.com/demot/lauha/og.jpg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="../fonts/familjen-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../style.css?v=1">
+</head>
+<body class="page">
+<a class="skip" href="#main">Siirry sisältöön</a>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="../index.html"><img class="l-light" src="../img/lauha-light.svg" width="247" height="114" alt="Lauha, etusivu"><img class="l-dark" src="../img/lauha.svg" width="247" height="114" alt="Lauha, etusivu"></a>
+    <nav class="nav" aria-label="Päävalikko"><a href="../lampopumput/">Lämpöpumput</a><a href="../putkiremontit/">Putkiremontit</a><a href="../kohteet/">Kohteet</a><a href="../index.html#me">Meistä</a><a href="../yhteys/" aria-current="page">Yhteys</a></nav>
+    <div class="hdr-r">
+      <a class="hdr-tel" href="tel:0485712290">048 571 2290</a>
+      <a class="btn" href="../yhteys/">Pyydä arviokäynti</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav"><span></span><b class="sr">Valikko</b></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Valikko"><a href="../lampopumput/">Lämpöpumput</a><a href="../putkiremontit/">Putkiremontit</a><a href="../kohteet/">Kohteet</a><a href="../index.html#me">Meistä</a><a href="../yhteys/">Yhteys</a><a href="tel:0485712290">Soita 048 571 2290</a></nav>
+</header>
+
+<main id="main">
+  <section class="ptop wrap"><h1 class="h1" style="max-width:12ch">Soita, niin tullaan katsomaan.</h1><p class="lead">Arviokäynti on maksuton omakotitaloille ja taloyhtiöille. Vastaamme arkisin 7–16.</p></section>
+  <section class="wrap" style="padding-bottom:var(--s6)"><div class="two">
+    <dl class="kv"><div><dt>Puhelin</dt><dd><a href="tel:0485712290">048 571 2290</a></dd></div><div><dt>Sähköposti</dt><dd><a href="mailto:asiakaspalvelu@lauha.example">asiakaspalvelu@lauha.example</a></dd></div><div><dt>Toimisto ja varasto</dt><dd>Lämpöpolku 3, 33560 Tampere</dd></div><div><dt>Päivystys taloyhtiökohteissa</dt><dd>24 h työmaan aikana</dd></div><div><dt>Y-tunnus</dt><dd>3302958-4</dd></div></dl>
+    <div class="prose"><p>Jos olet asukas taloyhtiössä, jossa teemme putkiremonttia, rapun työnjohtajan numero on rappukortissa ja rapun ilmoitustaululla.</p></div>
+  </div></section>
+  <section class="sec contact" id="yhteys" aria-labelledby="yh-h">
+    <div class="wrap contact-in">
+      <div>
+        <h2 class="h2" id="yh-h">Arviokäynti on maksuton.</h2>
+        <p class="lead">Omakotitalossa katsomme lämmitysjärjestelmän, mittaamme ja laskemme pumpun koon. Taloyhtiössä aloitamme kuntotutkimuksesta ja hankesuunnittelusta.</p>
+        <div class="direct"><a href="tel:0485712290">048 571 2290</a><span>Arkisin 7–16, vastaa Jari tai Sanna</span></div>
+      </div>
+      <form data-demo novalidate>
+        <fieldset class="full who"><legend>Kenen puolesta kysyt?</legend>
+          <label><input type="radio" name="kuka" value="okt" checked><span>Omakotitalo</span></label>
+          <label><input type="radio" name="kuka" value="ty"><span>Taloyhtiö</span></label>
+          <label><input type="radio" name="kuka" value="as"><span>Asukas remonttikohteessa</span></label></fieldset>
+        <label class="f">Nimi<input type="text" name="nimi" autocomplete="name"></label>
+        <label class="f">Puhelin<input type="tel" name="puhelin" autocomplete="tel"></label>
+        <label class="f">Postinumero<input type="text" name="posti" inputmode="numeric" autocomplete="postal-code"></label>
+        <label class="f">Nykyinen lämmitys<select name="lammitys"><option>Öljy</option><option>Suora sähkö</option><option>Vesikiertoinen sähkö</option><option>Kaukolämpö</option><option>En tiedä</option></select></label>
+        <label class="f full">Mitä haluaisit tietää?<textarea name="viesti"></textarea></label>
+        <div class="full" style="display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center"><button class="btn" type="submit">Lähetä</button><span class="note">Konseptisivu: lomake ei lähetä eikä tallenna tietoja.</span></div>
+        <p class="ok full" tabindex="-1">Kiitos. Oikealla sivustolla soittaisimme seuraavana arkipäivänä. Tämä lomake ei lähettänyt mitään.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+<footer class="ftr">
+  <div class="wrap">
+    <a class="ftr-tel" href="tel:0485712290">048 571 2290</a>
+    <p class="ftr-sub">Arkisin 7–16. Taloyhtiökohteissa päivystys työmaan ajan.</p>
+    <div class="ftr-g">
+      <div><img src="../img/lauha.svg" width="247" height="114" alt="Lauha"></div>
+      <div><h2>Palvelut</h2><ul><li><a href="../lampopumput/">Lämpöpumput</a></li><li><a href="../putkiremontit/">Putkiremontit</a></li><li><a href="../kohteet/">Kohteet</a></li><li><a href="../yhteys/">Yhteys</a></li></ul></div>
+      <div><h2>Lauha Talotekniikka Oy</h2><ul><li>Lämpöpolku 3, 33560 Tampere</li><li>Y-tunnus 3302958-4</li><li><a href="mailto:asiakaspalvelu@lauha.example">asiakaspalvelu@lauha.example</a></li></ul></div>
+      <div><h2>Toimialue</h2><p>Tampere, Pirkkala, Nokia, Ylöjärvi, Kangasala ja Lempäälä. Taloyhtiöurakat koko Pirkanmaalla.</p></div>
+    </div>
+    <div class="ftr-bot"><span>© 2026 Lauha Talotekniikka Oy, perustettu 2008</span><span>Konsepti: Lauha on kuvitteellinen yritys, ja sivusto on Ville Saarelan portfoliotyö. <a href="../kuvat/">Kuvat ja lähteet</a></span></div>
+  </div>
+</footer>
+<script src="../script.js?v=1" defer></script>
+</body>
+</html>
