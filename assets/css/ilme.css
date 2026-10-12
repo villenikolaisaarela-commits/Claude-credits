@@ -123,6 +123,19 @@ button { font: inherit; color: inherit; }
 .svc .lab { color: var(--g1); padding-top: 4px; }
 .svc p { grid-column: 1 / -1; max-width: 38ch; color: var(--g1); }
 
+/* Their problems, each answered on the same row */
+.pains li { display: grid; gap: 10px 0; padding: 24px 0 32px; border-top: 1px solid var(--ln); }
+.pains li:last-child { border-bottom: 1px solid var(--ln); }
+.pains .lab { color: var(--g1); }
+.pains h3 { font-size: clamp(20px, 1.8vw, 26px); line-height: 1.25; font-weight: 500; letter-spacing: -0.015em; }
+.pains p { max-width: 44ch; color: var(--g1); }
+@media (min-width: 900px) {
+  .pains li { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0 var(--pad); align-items: start; }
+  .pains .lab { grid-column: 1 / span 1; padding-top: 6px; }
+  .pains h3 { grid-column: 2 / span 5; }
+  .pains p { grid-column: 8 / span 5; padding-top: 3px; }
+}
+
 /* How it works: three steps side by side, numbers on top */
 .steps { display: grid; gap: 0 var(--pad); }
 @media (min-width: 900px) { .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
