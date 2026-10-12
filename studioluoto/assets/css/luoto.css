@@ -75,6 +75,8 @@ button { font: inherit; color: inherit; }
 .nav a:hover { color: var(--lichen); }
 .nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
 .theme-light .nav a:hover { color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.menu-btn .ic-x, .menu-btn[aria-expanded="true"] .ic-menu { display: none; }
+.menu-btn[aria-expanded="true"] .ic-x { display: block; }
 .menu-btn { display: none; align-items: center; gap: 10px; min-height: 44px; padding: 0 4px; border: 0; background: none; font-size: 18px; font-weight: 700; cursor: pointer; }
 @media (max-width: 899px) {
   .js .menu-btn { display: inline-flex; }
@@ -233,7 +235,7 @@ button { font: inherit; color: inherit; }
 
 /* Project page */
 .proj-head { padding: clamp(48px, 7vw, 104px) var(--gutter) 0; }
-.crumb a { color: var(--ink); text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+.crumb a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
 .crumb a:hover { color: var(--lichen); }
 .proj-head .h1 { margin-top: var(--s2); max-width: 18ch; }
 .proj-head .lead { margin-top: var(--s2); }
@@ -281,6 +283,7 @@ button { font: inherit; color: inherit; }
 .doc p + p { margin-top: var(--s2); }
 .doc a { text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
 .hero-404 { min-height: 50vh; }
+.hero-404 .lead { margin-top: var(--s3); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
