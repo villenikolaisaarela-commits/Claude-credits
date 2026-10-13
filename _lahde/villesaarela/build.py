@@ -70,7 +70,7 @@ def header():
   <header class="hdr" id="top">
     <a class="brand" href="{P}/"><img src="{A}/img/logo/ville-saarela-paperi.svg" width="522" height="74" alt="Ville Saarela, etusivu"></a>
     <div class="hdr-r">
-      <a class="go" href="{P}/#yhteys"><span>Ota yhteyttä</span></a>
+      <a class="go" href="{P}/#yhteys"><span>Aloita projekti</span></a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="valikko"><span>Valikko</span><i aria-hidden="true"></i></button>
     </div>
   </header>
@@ -115,6 +115,16 @@ HOME_WORKS = ('haljala', 'kallistus', 'studio-kuusela', 'kaulus', 'kivela-rinne'
 ORDER = ('haljala', 'kallistus', 'studio-kuusela', 'kivela-rinne', 'lauha', 'keljon-puusepat', 'lindqvist-ekroos', 'kaulus')
 WORKS = sorted(WORKS, key=lambda w: ORDER.index(w['slug']))
 
+# How the work is done, said plainly. Short, declarative, in the first person.
+PRINCIPLES = [
+    ('Ajattelu ensin', 'Ennen ulkoasua selvitän, mitä sivujen pitää saada aikaan ja kenelle ne puhuvat.'),
+    ('Selkeys', 'Lyhyet lauseet, selkeä rakenne, ei mitään turhaa. Hyvä sivu ei pyydä lukijalta vaivaa.'),
+    ('Rehellisyys', 'Sanon suoraan, mikä toimii ja mikä ei. Konseptityöt merkitsen aina konsepteiksi.'),
+    ('Ajattomuus', 'Ilme ja sivut, jotka näyttävät hyviltä vielä vuosien päästä, eivät vain tänä syksynä.'),
+    ('Yksityiskohdat', 'Välistykset, kuvien rajaukset ja jokainen sana. Pienistä asioista syntyy kokonaisuus.'),
+    ('Ystävällisyys', 'Hyvä yhteistyö on yhtä tärkeää kuin hyvä lopputulos. Molemmista pidetään huolta.'),
+]
+
 STEPS = [
     ('Tutustuminen', 'Kerrot, mitä teet, kenelle ja missä. Käyn läpi nykyiset sivusi ja katson, mitä alasi parhaat tekevät.'),
     ('Ensimmäinen versio', 'Teen etusivusta toimivan version omaan linkkiinsä. Näet ratkaisun oikeana sivuna selaimessa ja puhelimella, et kuvana.'),
@@ -146,10 +156,10 @@ FAQ_DEMO = [
     ('Ovatko kaikki työt oikeita asiakkaita?', 'Eivät. Osa töistä on konsepteja: kuvitteellisia yrityksiä, joilla näytän, mitä eri alojen sivut voivat tehdä. Se kerrotaan jokaisen työn sivulla.'),
 ]
 
-ASK = 'mailto:' + MAIL + '?subject=' + quote('Yhteydenotto') + '&body=' + quote('Hei Ville,\n\n')
+ASK = 'mailto:' + MAIL + '?subject=' + quote('Uusi projekti') + '&body=' + quote('Hei Ville,\n\n')
 
 
-def cta(label='Lähetä viesti', cls=''):
+def cta(label='Aloita projekti', cls=''):
     return f'<a class="btn{cls}" href="{ASK}"><span>{label}</span></a>'
 
 
@@ -160,10 +170,10 @@ def faq():
 def contact(h='h2'):
     return f'''
     <section class="sec" id="yhteys" aria-labelledby="yhteys-h">
-      <div class="cols"><{h} class="h2 c-wide rv-w" id="yhteys-h">Kerro työstäsi. <span>Katsotaan yhdessä, millaiset sivut sille sopivat.</span></{h}></div>
+      <div class="cols"><{h} class="h2 c-wide rv-w" id="yhteys-h">Aloitetaan projekti. <span>Kerro, mitä teet, niin katsotaan yhdessä, millaiset sivut sille sopivat.</span></{h}></div>
       <div class="cols">
         <div class="c-l">
-          <p class="lead g rv" style="margin-top:28px">Kerro lyhyesti, mitä teet ja kenelle. Jos sinulla on jo sivut, liitä mukaan linkki.</p>
+          <p class="lead g rv" style="margin-top:28px">Muutama lause riittää: mitä teet, kenelle ja mitä toivot sivuilta. Jos sinulla on jo sivut, liitä mukaan linkki.</p>
           <p class="rv" style="margin-top:32px">{cta()}</p>
           <div class="reach rv"><a href="{ASK}">{MAIL}</a><a href="tel:{TEL}">{TEL_H}</a></div>
         </div>
@@ -173,6 +183,7 @@ def contact(h='h2'):
 
 def home():
     tiles = '\n'.join(tile(w, i) for i, w in enumerate(next(w for w in WORKS if w['slug'] == h) for h in HOME_WORKS))
+    princ = '\n'.join(f'        <li class="rv"><h3>{t}</h3><span class="lab">{i + 1:02d}</span><p>{d}</p></li>' for i, (t, d) in enumerate(PRINCIPLES))
     steps = '\n'.join(f'        <li class="rv"><span class="lab">{i + 1:02d}</span><h3>{t}</h3><p>{d}</p></li>' for i, (t, d) in enumerate(STEPS))
     stack = '\n'.join(f'        <li class="rv"><h3>{t}</h3><span class="lab">{i + 1:02d}</span><p>{d}</p></li>' for i, (t, d) in enumerate(STACK))
     fields = ''.join(f'<li>{f}</li>' for f in FIELDS_HOME)
@@ -197,7 +208,7 @@ def home():
       <div class="cols">
         <h2 class="h2 c-l rv-w" id="intro-h">Suunnittelen ilmeitä ja verkkosivuja. <span>Yrityksille, joiden työ on parempaa kuin niiden sivut.</span></h2>
         <div class="c-r">
-          <p class="lead rv">Olen Ville Saarela, suunnittelija Helsingistä. Teen pienille yrityksille ja studioille ilmeen, sivut ja tekstit samalta pöydältä.</p>
+          <p class="lead rv">Olen Ville Saarela, suunnittelija Helsingistä. Teen yrityksille ja studioille ilmeen, sivut ja tekstit samalta pöydältä, alusta loppuun itse.</p>
           <p class="g rv">Työskentelen arkkitehtien, suunnittelijoiden, käsityöläisten, rakentajien ja verkkokauppojen kanssa. Lähtökohta on aina sama: sivujen pitää näyttää työn tasoiselta ja vastata siihen, mitä asiakas haluaa tietää.</p>
           <a class="go rv" href="#tyotapa"><span>Työtapa</span></a>
         </div>
@@ -211,8 +222,15 @@ def home():
       </ul>
     </section>
 
+    <section class="sec" id="periaatteet" aria-labelledby="periaatteet-h">
+      <div class="cols sec-top"><h2 class="h2 c-wide rv-w" id="periaatteet-h">Periaatteet. <span>Kuusi asiaa, joista pidän kiinni jokaisessa työssä.</span></h2></div>
+      <ul class="svc">
+{princ}
+      </ul>
+    </section>
+
     <section class="sec" id="tyotapa" aria-labelledby="tyotapa-h">
-      <div class="cols sec-top"><h2 class="h2 c-wide rv-w" id="tyotapa-h">Työtapa. <span>Yksi vaihe kerrallaan, ja näet ratkaisun ennen kuin sitoudut.</span></h2></div>
+      <div class="cols sec-top"><h2 class="h2 c-wide rv-w" id="tyotapa-h">Työtapa. <span>Yksi vaihe kerrallaan.</span></h2></div>
       <ol class="steps">
 {steps}
       </ol>
