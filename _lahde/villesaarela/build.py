@@ -17,7 +17,7 @@ WORKS, FAQ, FIELDS = g['WORKS'], g['FAQ'], g['FIELDS']
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'newworks.py')).read())
 WORKS = NEW_WORKS + WORKS
 ROOT = REPO + P
-V = '4'
+V = '5'
 SITE = 'https://www.villesaarela.com'
 MAIL = 'info@villesaarela.com'
 TEL, TEL_H = '+358451035362', '045 103 5362'
@@ -64,13 +64,13 @@ def header():
     return f'''<body>
   <a class="skip" href="#main">Siirry sisältöön</a>
   <div class="menu" id="valikko">
-    <nav aria-label="Päävalikko"><ul><li><a href="{P}/tyot/">Työt</a></li><li><a href="{P}/#nain">Demo</a></li><li><a href="{P}/#kysymykset">Kysymykset</a></li><li><a href="{P}/#yhteys">Yhteys</a></li></ul></nav>
+    <nav aria-label="Päävalikko"><ul><li><a href="{P}/tyot/">Työt</a></li><li><a href="{P}/#tyotapa">Työtapa</a></li><li><a href="{P}/#kysymykset">Kysymykset</a></li><li><a href="{P}/#yhteys">Yhteys</a></li></ul></nav>
     <div class="menu-foot"><a href="mailto:{MAIL}">{MAIL}</a><a href="tel:{TEL}">{TEL_H}</a><span class="lab lab-g" style="display:inline-flex;align-items:center;min-height:44px">Helsinki <time data-clock style="margin-left:8px"></time></span></div>
   </div>
   <header class="hdr" id="top">
     <a class="brand" href="{P}/"><img src="{A}/img/logo/ville-saarela-paperi.svg" width="522" height="74" alt="Ville Saarela, etusivu"></a>
     <div class="hdr-r">
-      <a class="go" href="{P}/#yhteys"><span>Pyydä demo</span></a>
+      <a class="go" href="{P}/#yhteys"><span>Ota yhteyttä</span></a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="valikko"><span>Valikko</span><i aria-hidden="true"></i></button>
     </div>
   </header>
@@ -84,7 +84,7 @@ def footer():
     <div class="ftr-grid">
       <div><p class="lab">Helsinki</p><p><time data-clock></time></p><p>Isosaarentie 10, 00840 Helsinki</p></div>
       <div><p class="lab">Yhteys</p><ul><li><a href="mailto:{MAIL}">{MAIL}</a></li><li><a href="tel:{TEL}">{TEL_H}</a></li></ul></div>
-      <div><p class="lab">Sivut</p><ul><li><a href="{P}/tyot/">Työt</a></li><li><a href="{P}/#nain">Demo</a></li><li><a href="{P}/#kysymykset">Kysymykset</a></li><li><a href="{P}/#yhteys">Yhteys</a></li></ul></div>
+      <div><p class="lab">Sivut</p><ul><li><a href="{P}/tyot/">Työt</a></li><li><a href="{P}/#tyotapa">Työtapa</a></li><li><a href="{P}/#kysymykset">Kysymykset</a></li><li><a href="{P}/#yhteys">Yhteys</a></li></ul></div>
       <div><p class="lab">Muut</p><ul><li><a href="{P}/tietosuoja/">Tietosuoja</a></li></ul></div>
     </div>
     <div class="ftr-bot"><p>© 2026 Ville Saarela · Y-tunnus 3660060-6</p><a href="#top">Ylös ↑</a></div>
@@ -109,57 +109,47 @@ def tile(w, i, scope=False, eager=False):
       </li>'''
 
 
-# The offer, told the way a buyer weighs it: what they get, how sure they can be, how soon, how little it asks of them.
-OFFER = 'Ilmainen demo 48 tunnissa'
-
-# One market: renovation and HVAC firms, where the warm leads came from. The demos closest to their work go on the front page.
-NICHE = ['Remonttiyritykset', 'LVI-yritykset', 'Kylpyhuoneremontit', 'Hirsitalojen korjaus', 'Metallityö', 'Puusepät']
-HOME_WORKS = ('kallistus', 'lauha', 'keljon-puusepat', 'haljala')
-
-# Their problems, each turned into what the site does about it
-PAINS = [
-    ('Tarjouspyyntöjä tulee ihmisiltä, joille hinta ei sovi.', 'Hinnan suunta ja kotitalousvähennys näkyvät sivuilla, joten tarjousta pyytävät ne, joille hinta sopii.'),
-    ('Asiakas valitsee sen, joka näyttää luotettavammalta.', 'Valmiit kohteet kuvineen, takuu ja vakuutukset näkyvät heti etusivulla.'),
-    ('Puhelin soi työmaalla, kun et ehdi vastata.', 'Sivuilta saa vastaukset, ja tarjouspyynnössä kysytään heti kaikki, mitä tarvitset hinnan laskemiseen.'),
-    ('Asiakas ei löydä sinua, kun hän hakee remonttia omalta paikkakunnaltaan.', 'Palvelut ja paikkakunnat ovat sivuilla niin, että Google ymmärtää, mitä teet ja missä.'),
-]
+# A studio, not a pitch: many kinds of clients, and the work shown in a mix of fields.
+FIELDS_HOME = ['Arkkitehtitoimistot', 'Sisustusarkkitehdit', 'Muotoilustudiot', 'Puusepät ja käsityöläiset', 'Remontti- ja LVI-yritykset', 'Vaatemerkit ja verkkokaupat', 'Asiantuntijayritykset', 'Uudet tuotteet ja palvelut']
+HOME_WORKS = ('haljala', 'kallistus', 'studio-kuusela', 'kaulus', 'kivela-rinne', 'lauha')
+ORDER = ('haljala', 'kallistus', 'studio-kuusela', 'kivela-rinne', 'lauha', 'keljon-puusepat', 'lindqvist-ekroos', 'kaulus')
+WORKS = sorted(WORKS, key=lambda w: ORDER.index(w['slug']))
 
 STEPS = [
-    ('Lähetä linkki', 'Lähetä linkki yrityksesi nykyisiin sivuihin tai kerro muutamalla lauseella, mitä teette ja missä. Siihen menee pari minuuttia.'),
-    ('Saat demon 48 tunnissa', 'Teen uudesta etusivustasi toimivan demon omaan linkkiinsä. Avaat sen puhelimella, selaat sitä ja näytät sen kollegoillesi.'),
-    ('Päätät vasta sitten', 'Jos pidät näkemästäsi, kerron kiinteän hinnan ja viimeistelen sivut. Jos et, et maksa mitään.'),
+    ('Tutustuminen', 'Kerrot, mitä teet, kenelle ja missä. Käyn läpi nykyiset sivusi ja katson, mitä alasi parhaat tekevät.'),
+    ('Ensimmäinen versio', 'Teen etusivusta toimivan version omaan linkkiinsä. Näet ratkaisun oikeana sivuna selaimessa ja puhelimella, et kuvana.'),
+    ('Viimeistely', 'Kun suunta on oikea, sovimme kiinteän hinnan ja aikataulun. Viimeistelen tekstit, kuvat ja loput sivut ja julkaisen ne omaan osoitteeseesi.'),
 ]
 
 STACK = [
-    ('Toimiva demo ennen päätöstä', 'Näet uuden etusivusi valmiina omassa linkissään. Et kuvaa etkä luonnosta, vaan sivun, jota voit selata.'),
-    ('Tekstit, jotka vastaavat asiakkaalle', 'Kirjoitan sivujen tekstit niin, että asiakas löytää vastaukset: mitä teet, missä, mitä se suunnilleen maksaa ja miten tarjous pyydetään.'),
-    ('Kuvat, joissa työ näyttää oikealta', 'Käsittelen kuvat niin, että työ näyttää sivuilla samalta kuin todellisuudessa.'),
-    ('Sivut, jotka aukeavat heti', 'Sivut ovat kevyet ja aukeavat nopeasti puhelimellakin. Jokainen sivu tehdään sinulle, ei valmispohjasta.'),
-    ('Sivut, jotka toimivat kaikille', 'Tarkistan nopeuden ja saavutettavuuden ennen julkaisua. Sivut toimivat kaikilla laitteilla.'),
-    ('Asiakas löytää sinut', 'Hakukoneiden perusasiat ja Google Search Console kuntoon, jotta oikea asiakas löytää sinut.'),
+    ('Nimi ja ilme', 'Nimi, sanamerkki, värit ja typografia. Tai olemassa olevan ilmeen huolellinen jatko.'),
+    ('Verkkosivut', 'Jokainen sivusto suunnitellaan yritykselle itselleen, ei valmispohjasta. Kevyet sivut, jotka aukeavat nopeasti puhelimellakin.'),
+    ('Tekstit', 'Kirjoitan sivujen tekstit lyhyesti ja selkeästi: mitä teet, kenelle ja miten sinut tavoittaa.'),
+    ('Kuvat', 'Valitsen ja käsittelen kuvat niin, että työ näyttää sivuilla samalta kuin todellisuudessa.'),
+    ('Nopeus ja saavutettavuus', 'Tarkistan nopeuden ja saavutettavuuden ennen julkaisua. Sivut toimivat kaikilla laitteilla ja kaikille.'),
+    ('Löydettävyys', 'Hakukoneiden perusasiat ja Google Search Console kuntoon, jotta sivut löytyvät.'),
 ]
 
 # Tools a client recognises; the ones that only say "code" are left out
 TOOLS = [t for t in g['TOOLS'] if t[1] not in ('html5', 'css', 'javascript', 'github')]
 
 FAQ_DEMO = [
-    ('Ehdinkö tähän kesken työmaiden?', 'Ehdit. Sinulta tarvitaan linkki ja muutama lause. Demon teen minä, ja voit katsoa sen puhelimella illalla.'),
-    ('Meillä ei ole hyviä kuvia.', 'Puhelimella otetut kuvat kelpaavat alkuun. Käsittelen ne niin, että työ näyttää sivuilla samalta kuin todellisuudessa.'),
-    ('Onko demo vain kuva?', 'Ei. Demo on toimiva etusivu omassa linkissään. Voit avata sen puhelimella ja tietokoneella ja näyttää sen kollegoillesi.'),
-    ('Mitä demo maksaa?', 'Ei mitään. Demo on maksuton, eikä se sido mihinkään.'),
-    ('Mitä sivut maksavat?', 'Kiinteä hinta, jonka kerron demon jälkeen, kun tiedän, mitä tarvitset. Se ei muutu matkalla, eikä kuukausimaksuja ole.'),
-    ('Kauanko projekti kestää?', 'Yleensä kahdesta neljään viikkoa. Demo on valmis 48 tunnissa, ja aikataulu sovitaan ennen aloitusta.'),
+    ('Miten aloitetaan?', 'Lähetä viesti ja kerro lyhyesti, mitä teet. Jos sinulla on jo sivut, liitä mukaan linkki.'),
+    ('Mikä on ensimmäinen versio?', 'Toimiva etusivu omassa linkissään, yleensä parissa päivässä. Näet sen selaimessa ja puhelimella. Se on maksuton eikä sido mihinkään.'),
+    ('Mitä sivut maksavat?', 'Kiinteä hinta, jonka kerron, kun tiedän, mitä tarvitset. Se ei muutu matkalla, eikä kuukausimaksuja ole.'),
+    ('Kauanko projekti kestää?', 'Yleensä kahdesta neljään viikkoa. Jos teemme myös nimen tai ilmeen, varaa hieman enemmän aikaa. Aikataulu sovitaan ennen aloitusta.'),
     ('Mitä saan käteeni?', 'Valmiit sivut omassa osoitteessasi: suunnittelun, tekstit, kuvien käsittelyn, toimivuuden puhelimella ja Google-perusasiat. Sivut ja domain ovat sinun.'),
     ('Kenen kanssa teen töitä?', 'Minun. Suunnittelen, kirjoitan ja teen sivut itse, ilman välikäsiä.'),
-    ('Meillä on jo sivut.', 'Hyvä. Kysymys on, tuovatko ne yhteydenottoja. Ilmainen demo näyttää eron.'),
-    ('Voinko päivittää sivuja itse?', 'Pienet muutokset teen nopeasti. Jos haluat päivittää itse, kerro siitä alussa, niin teen sivut sen mukaan.'),
+    ('Meillä ei ole hyviä kuvia.', 'Puhelimella otetut kuvat riittävät alkuun. Käsittelen ne niin, että työ näyttää sivuilla samalta kuin todellisuudessa.'),
     ('Entä jos meillä on jo logo?', 'Silloin se pidetään. Sivut tehdään sen ympärille, eikä ilmettä tarvitse aloittaa alusta.'),
+    ('Voinko päivittää sivuja itse?', 'Pienet muutokset teen nopeasti. Jos haluat päivittää itse, kerro siitä alussa, niin teen sivut sen mukaan.'),
+    ('Ovatko kaikki työt oikeita asiakkaita?', 'Eivät. Osa töistä on konsepteja: kuvitteellisia yrityksiä, joilla näytän, mitä eri alojen sivut voivat tehdä. Se kerrotaan jokaisen työn sivulla.'),
 ]
 
-ASK = 'mailto:' + MAIL + '?subject=' + quote('Demopyyntö') + '&body=' + quote('Hei Ville,\n\nnykyiset sivumme: \nteemme: \nalueemme: \n\n')
+ASK = 'mailto:' + MAIL + '?subject=' + quote('Yhteydenotto') + '&body=' + quote('Hei Ville,\n\n')
 
 
-def cta(label='Pyydä ilmainen demo', cls=''):
+def cta(label='Lähetä viesti', cls=''):
     return f'<a class="btn{cls}" href="{ASK}"><span>{label}</span></a>'
 
 
@@ -170,11 +160,11 @@ def faq():
 def contact(h='h2'):
     return f'''
     <section class="sec" id="yhteys" aria-labelledby="yhteys-h">
-      <div class="cols"><{h} class="h2 c-wide rv-w" id="yhteys-h">Pyydä ilmainen demo. <span>Näet uuden etusivusi 48 tunnissa.</span></{h}></div>
+      <div class="cols"><{h} class="h2 c-wide rv-w" id="yhteys-h">Kerro työstäsi. <span>Katsotaan yhdessä, millaiset sivut sille sopivat.</span></{h}></div>
       <div class="cols">
         <div class="c-l">
-          <p class="lead g rv" style="margin-top:28px">Lähetä linkki yrityksesi nykyisiin sivuihin ja kerro, mitä teette ja missä. Saat toimivan demon uudesta etusivustasi 48 tunnissa. Se on maksuton, eikä sido mihinkään.</p>
-          <p class="rv" style="margin-top:32px">{cta('Lähetä demopyyntö')}</p>
+          <p class="lead g rv" style="margin-top:28px">Kerro lyhyesti, mitä teet ja kenelle. Jos sinulla on jo sivut, liitä mukaan linkki.</p>
+          <p class="rv" style="margin-top:32px">{cta()}</p>
           <div class="reach rv"><a href="{ASK}">{MAIL}</a><a href="tel:{TEL}">{TEL_H}</a></div>
         </div>
       </div>
@@ -183,43 +173,35 @@ def contact(h='h2'):
 
 def home():
     tiles = '\n'.join(tile(w, i) for i, w in enumerate(next(w for w in WORKS if w['slug'] == h) for h in HOME_WORKS))
-    pains = '\n'.join(f'        <li class="rv"><span class="lab">{i + 1:02d}</span><h3>{p}</h3><p>{f}</p></li>' for i, (p, f) in enumerate(PAINS))
     steps = '\n'.join(f'        <li class="rv"><span class="lab">{i + 1:02d}</span><h3>{t}</h3><p>{d}</p></li>' for i, (t, d) in enumerate(STEPS))
     stack = '\n'.join(f'        <li class="rv"><h3>{t}</h3><span class="lab">{i + 1:02d}</span><p>{d}</p></li>' for i, (t, d) in enumerate(STACK))
-    fields = ''.join(f'<li>{f}</li>' for f in NICHE)
+    fields = ''.join(f'<li>{f}</li>' for f in FIELDS_HOME)
     tools = ''.join('<li>' + (f'<img src="{A}/img/tyokalut/{i}.svg" width="24" height="24" alt="">' if i else '') + f'{n}</li>' for n, i in TOOLS)
     ld = {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Ville Saarela", "url": SITE + "/", "image": SITE + "/assets/img/og-ilme.jpg",
           "logo": SITE + "/assets/img/ville-saarela.svg", "slogan": "Verkkosivut, jotka tekevät töitä.",
-          "description": "Verkkosivut remontti- ja LVI-yrityksille. Ilmainen demo etusivusta 48 tunnissa.",
+          "description": "Ilmeet ja verkkosivut yrityksille ja studioille. Helsinki.",
           "email": MAIL, "telephone": TEL, "taxID": "3660060-6",
           "address": {"@type": "PostalAddress", "streetAddress": "Isosaarentie 10", "postalCode": "00840", "addressLocality": "Helsinki", "addressCountry": "FI"}}
-    return head('/', 'Ville Saarela · Verkkosivut remontti- ja LVI-yrityksille',
-                'Näe uudet sivusi ennen kuin maksat. Ville Saarela tekee verkkosivuja remontti- ja LVI-yrityksille. Ilmainen demo etusivusta 48 tunnissa.',
+    return head('/', 'Ville Saarela · Ilme ja verkkosivut',
+                'Ville Saarela suunnittelee ilmeitä ja verkkosivuja yrityksille ja studioille Helsingistä. Verkkosivut, jotka tekevät töitä.',
                 f'\n  <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>') + header() + f'''
   <main id="main">
     <section class="hero" aria-labelledby="h1">
       <p class="hero-meta lab lab-g">Helsinki <time data-clock></time></p>
-      <h1 class="xl rv-w" id="h1">Näe uudet sivusi ennen kuin maksat.</h1>
-      <div class="hero-sub rv"><span class="line"></span><p class="lab">Remontti- ja LVI-yrityksille. {OFFER}.</p><p>{cta()}</p></div>
+      <h1 class="xl rv-w" id="h1">Verkkosivut, jotka tekevät töitä.</h1>
+      <div class="hero-sub rv"><span class="line"></span><p class="lab">Ilme, verkkosivut ja tekstit</p><p><a class="go" href="#tyot"><span>Katso työt</span></a></p></div>
       <div class="hero-mark" aria-hidden="true"><img src="{A}/img/logo/aa-merkki-paperi.svg" width="1016" height="558" alt="" fetchpriority="high"></div>
     </section>
 
     <section class="sec" aria-labelledby="intro-h">
       <div class="cols">
-        <h2 class="h2 c-l rv-w" id="intro-h">Verkkosivut remontti- ja LVI-yrityksille. <span>Työ näkyy, ja oikea asiakas pyytää tarjouksen.</span></h2>
+        <h2 class="h2 c-l rv-w" id="intro-h">Suunnittelen ilmeitä ja verkkosivuja. <span>Yrityksille, joiden työ on parempaa kuin niiden sivut.</span></h2>
         <div class="c-r">
-          <p class="lead rv">Teen sivut yrityksille, joiden työ on parempaa kuin niiden nykyiset sivut.</p>
-          <p class="g rv">Et saa kuvaa etkä luonnosta, vaan toimivan demon uudesta etusivustasi. Avaat sen puhelimella ja näet, miltä sivusi oikeasti tuntuvat.</p>
-          <a class="go rv" href="#nain"><span>Näin se toimii</span></a>
+          <p class="lead rv">Olen Ville Saarela, suunnittelija Helsingistä. Teen pienille yrityksille ja studioille ilmeen, sivut ja tekstit samalta pöydältä.</p>
+          <p class="g rv">Työskentelen arkkitehtien, suunnittelijoiden, käsityöläisten, rakentajien ja verkkokauppojen kanssa. Lähtökohta on aina sama: sivujen pitää näyttää työn tasoiselta ja vastata siihen, mitä asiakas haluaa tietää.</p>
+          <a class="go rv" href="#tyotapa"><span>Työtapa</span></a>
         </div>
       </div>
-    </section>
-
-    <section class="sec" id="tutulta" aria-labelledby="tutulta-h">
-      <div class="cols sec-top"><h2 class="h2 c-wide rv-w" id="tutulta-h">Kuulostaako tutulta? <span>Näin sivut korjaavat sen.</span></h2></div>
-      <ul class="pains">
-{pains}
-      </ul>
     </section>
 
     <section class="sec" id="tyot" aria-labelledby="tyot-h">
@@ -229,20 +211,18 @@ def home():
       </ul>
     </section>
 
-    <section class="sec" id="nain" aria-labelledby="nain-h">
-      <div class="cols sec-top"><h2 class="h2 c-wide rv-w" id="nain-h">Näin se toimii. <span>Kolme vaihetta, ja ensimmäiseen menee pari minuuttia.</span></h2></div>
+    <section class="sec" id="tyotapa" aria-labelledby="tyotapa-h">
+      <div class="cols sec-top"><h2 class="h2 c-wide rv-w" id="tyotapa-h">Työtapa. <span>Yksi vaihe kerrallaan, ja näet ratkaisun ennen kuin sitoudut.</span></h2></div>
       <ol class="steps">
 {steps}
       </ol>
-      <div class="steps-cta rv">{cta()}<p class="g">Maksuton. Ei sido mihinkään.</p></div>
     </section>
 
     <section class="sec" id="palvelu" aria-labelledby="palvelu-h">
-      <div class="cols sec-top"><h2 class="h2 c-wide rv-w" id="palvelu-h">Mitä saat. <span>Kaikki, mitä tarvitset, jotta oikea asiakas löytää sinut ja ottaa yhteyttä.</span></h2></div>
+      <div class="cols sec-top"><h2 class="h2 c-wide rv-w" id="palvelu-h">Mitä teen. <span>Ilme, sivut ja tekstit samalta pöydältä.</span></h2></div>
       <ul class="svc">
 {stack}
       </ul>
-      <ul class="terms rv" aria-label="Ehdot"><li>Kiinteä hinta</li><li>Ei kuukausimaksuja</li><li>Sivut ja domain ovat sinun</li></ul>
       <div class="marq rv" role="group" aria-labelledby="tyokalut-h">
         <h3 class="lab lab-g" id="tyokalut-h">Työkalut</h3>
         <div class="marq-track">
@@ -261,8 +241,8 @@ def home():
     </section>
 
     <section class="sec" aria-labelledby="alat-h">
-      <div class="cols"><h2 class="h2 c-wide rv-w" id="alat-h">Kenelle. <span>Remontti- ja LVI-yrityksille, joiden työ on parempaa kuin niiden sivut.</span></h2></div>
-      <div class="cols"><p class="lead g c-l rv" style="margin-top:28px">Sivuilla on se, mitä asiakas haluaa tietää ennen tarjouspyyntöä: valmiit kohteet, hinnan suunta, kotitalousvähennys, takuu ja se, miten tarjous pyydetään.</p></div>
+      <div class="cols"><h2 class="h2 c-wide rv-w" id="alat-h">Kenelle. <span>Yrityksille ja studioille, joille laatu on tärkeää.</span></h2></div>
+      <div class="cols"><p class="lead g c-l rv" style="margin-top:28px">Alat vaihtelevat, mutta tehtävä on sama: sivujen pitää kertoa työstä yhtä hyvin kuin työ itse.</p></div>
       <ul class="fields rv" aria-label="Alat">{fields}</ul>
     </section>
 
@@ -281,12 +261,12 @@ def home():
 def works():
     tiles = '\n'.join(tile(w, i, scope=True, eager=i < 2) for i, w in enumerate(WORKS))
     ix = '\n'.join(f'        <li><a href="{P}/projektit/{w["slug"]}/"><span class="ix-n">{i + 1:02d}</span><span>{w["name"]}</span><span class="ix-t">{w["title"]}</span><span class="ix-a">{w["ala"]}, {w["city"]}</span></a></li>' for i, w in enumerate(WORKS))
-    return head('/tyot/', 'Työt · Ville Saarela', 'Kahdeksan sivustoa: kylpyhuoneremonttiyritys, LVI-yritys, kaksi arkkitehtitoimistoa, sisustusarkkitehti, puuseppä, muotoilustudio ja vaatemerkki. Ville Saarela, Helsinki.') + header() + f'''
+    return head('/tyot/', 'Työt · Ville Saarela', 'Kahdeksan sivustoa eri aloilta: kaksi arkkitehtitoimistoa, sisustusarkkitehti, muotoilustudio, puuseppä, vaatemerkki, kylpyhuoneremonttiyritys ja LVI-yritys. Ville Saarela, Helsinki.') + header() + f'''
   <main id="main">
     <section class="page-top" aria-labelledby="h1">
       <p class="lab lab-g rv">Työt</p>
       <h1 class="xl rv-w" id="h1" style="margin-top:20px">Valitut työt.</h1>
-      <p class="lead rv">Kahdeksan sivustoa: kylpyhuoneremonttiyritys, LVI-yritys, kaksi arkkitehtitoimistoa, sisustusarkkitehti, puuseppä, muotoilustudio ja vaatemerkki. Jokaisen sivulla kerron, mistä lähdettiin ja mitä sivusto tekee yritykselle.</p>
+      <p class="lead rv">Kahdeksan sivustoa eri aloilta: kaksi arkkitehtitoimistoa, sisustusarkkitehti, muotoilustudio, puuseppä, vaatemerkki, kylpyhuoneremonttiyritys ja LVI-yritys. Jokaisen sivulla kerron, mistä lähdettiin ja mitä sivusto tekee yritykselle.</p>
     </section>
     <section class="sec" aria-label="Työt" style="padding-top:clamp(64px, 8vw, 120px)">
       <ul class="tiles">
