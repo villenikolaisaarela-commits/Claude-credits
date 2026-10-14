@@ -1,0 +1,27 @@
+/* Sketch: the black stays for the opening, the contact and the footer; the pages in between turn to paper, and one orange marks every action. */
+.v-oranssi { --or: #FF5B1F; }
+.v-oranssi main { background: #FFFFFF; }
+.v-oranssi main > :not(.hero):not(#yhteys) { --wt: #0A0A0A; --bk: #FFFFFF; --g1: #666666; --ln: #E6E6E6; color: var(--wt); }
+.v-oranssi .hero, .v-oranssi #yhteys { background: #000000; color: var(--wt); }
+.v-oranssi .hero { padding-bottom: clamp(56px, 7vw, 104px); }
+.v-oranssi .terms-top { margin: 0; padding: 24px var(--pad) 0; border-top: 0; background: #F5F5F2; padding-bottom: 24px; }
+.v-oranssi .terms li::before { background: var(--or); }
+.v-oranssi #yhteys { margin-top: var(--sec); }
+
+/* Actions: orange with black type; under the pointer an outline */
+.v-oranssi .btn { border-color: var(--or); background: var(--or); color: #0A0A0A; }
+.v-oranssi .btn:hover { background: transparent; color: var(--wt); }
+.v-oranssi .hdr .go span, .v-oranssi .hero .go span { background-image: linear-gradient(var(--or), var(--or)); }
+.v-oranssi .line { background: var(--or); }
+
+/* What a buyer finds missing: orange stickers */
+.v-oranssi .stk li { background: var(--or); color: #0A0A0A; }
+/* Answers get an orange tick, the five things an orange rule */
+.v-oranssi .qa-a::before { border-color: var(--or); border-width: 0 0 2px 2px; }
+.v-oranssi .five li { border-top: 2px solid var(--or); }
+/* A panel behind the questions and answers, as on a site plan */
+.v-oranssi #vastaukset { margin-top: var(--sec); padding-bottom: var(--sec); background: #F5F5F2; }
+.v-oranssi #nain { padding-top: var(--sec); }
+.v-oranssi ::selection { background: var(--or); color: #0A0A0A; }
+/* On the paper pages the header keeps its black bar, so the white logo always shows */
+.v-oranssi .hdr { background: #000000; }

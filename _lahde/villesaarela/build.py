@@ -7,7 +7,8 @@ import os, json, html
 from urllib.parse import quote
 
 LIVE = os.environ.get('LIVE') == '1'
-P = '' if LIVE else '/esikatselu/uusi-ilme'
+VARIANT = os.environ.get('VARIANT', '')            # 'oranssi': light pages with one orange for actions, preview only
+P = '' if LIVE else ('/esikatselu/' + VARIANT if VARIANT else '/esikatselu/uusi-ilme')
 A = '/assets'                                 # shared with the live site
 REPO = '/home/user/Claude-credits'
 SRC = '/tmp/claude-0/-home-user-Claude-credits/48fe46c0-cdd2-5715-873f-2a0d22a820fb/scratchpad/ns/ns.py'
@@ -26,6 +27,9 @@ DEMO = 'https://www.villesaarela.com/demot/'
 
 def esc(s):
     return html.escape(s, quote=True)
+
+
+VCSS = f'\n  <link rel="stylesheet" href="{A}/css/ilme-{VARIANT}.css?v=1">' if VARIANT else ''
 
 
 def head(path, title, desc, extra=''):
@@ -55,13 +59,13 @@ def head(path, title, desc, extra=''):
   <link rel="icon" href="{A}/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{A}/apple-touch-icon.png">
   <link rel="preload" href="{A}/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="{A}/css/ilme.css?v={V}">{extra}
+  <link rel="stylesheet" href="{A}/css/ilme.css?v={V}">{VCSS}{extra}
 </head>
 '''
 
 
 def header():
-    return f'''<body>
+    return f'''<body{' class="v-' + VARIANT + '"' if VARIANT else ''}>
   <a class="skip" href="#main">Siirry sisältöön</a>
   <div class="menu" id="valikko">
     <nav aria-label="Päävalikko"><ul><li><a href="{P}/tyot/">Työt</a></li><li><a href="{P}/#nain">Näin se toimii</a></li><li><a href="{P}/#kysymykset">Kysymykset</a></li><li><a href="{P}/#yhteys">Yhteys</a></li></ul></nav>
@@ -427,6 +431,7 @@ start = src.index('\nPRIVACY = [')
 end = src.index('\ndef privacy(')
 exec(src[start:end], g)
 
+assert not (LIVE and VARIANT), 'variants are previews only'
 write('index.html', home())
 write('tyot/index.html', works())
 for i, w in enumerate(WORKS):
