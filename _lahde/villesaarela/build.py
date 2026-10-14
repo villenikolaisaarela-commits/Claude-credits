@@ -17,7 +17,7 @@ WORKS, FAQ, FIELDS = g['WORKS'], g['FAQ'], g['FIELDS']
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'newworks.py')).read())
 WORKS = NEW_WORKS + WORKS
 ROOT = REPO + P
-V = '6'
+V = '7'
 SITE = 'https://www.villesaarela.com'
 MAIL = 'info@villesaarela.com'
 TEL, TEL_H = '+358451035362', '045 103 5362'
@@ -132,7 +132,7 @@ PAINS = [
 
 # What I do, five parts, the way a buyer would name them
 DO = [
-    ('Verkkosivut', 'Teen sivut yrityksellesi alusta asti. Ei valmispohjaa, joka näyttää samalta kuin kilpailijalla.'),
+    ('Verkkosivut', 'Hienot sivut, jotka näyttävät yhtä laadukkailta kuin työsi. Tehty yrityksellesi alusta asti, ei valmispohjasta.'),
     ('Viesti', 'Kirjoitan tekstit niin, että asiakas ymmärtää nopeasti, mitä teet, missä ja mitä se suunnilleen maksaa.'),
     ('Löydettävyys', 'Palvelut ja paikkakunnat omille sivuilleen, jotta Google ja tekoälyhaut tietävät, mitä teet ja missä.'),
     ('Tarjouspyyntö', 'Lomake, joka kysyy heti oikeat asiat. Saat pyynnön, josta voit laskea hinnan ilman takaisinsoittoa.'),
@@ -160,7 +160,7 @@ STEPS = [
 TOOLS = [t for t in g['TOOLS'] if t[1] not in ('html5', 'css', 'javascript', 'github')]
 
 FAQ_DEMO = [
-    ('Miten tämä eroaa tavallisesta mainostoimistosta?', 'En myy kaunista julkaisua. Lähtökohta on se, mitä asiakkaasi kysyvät ennen tarjouspyyntöä, ja sivut tehdään vastaamaan niihin. Näet demon ennen kuin maksat mitään.'),
+    ('Miten tämä eroaa tavallisesta mainostoimistosta?', 'Sivut ovat hienot, mutta lähtökohta on se, mitä asiakkaasi kysyvät ennen tarjouspyyntöä. Sivut suunnitellaan vastaamaan niihin ja tuomaan yhteydenottoja. Ja näet demon ennen kuin maksat mitään.'),
     ('Ehdinkö tähän kesken työmaiden?', 'Ehdit. Sinulta tarvitaan linkki ja muutama lause. Demon teen minä, ja voit katsoa sen puhelimella illalla.'),
     ('Onko demo vain kuva?', 'Ei. Demo on toimiva etusivu omassa linkissään. Voit avata sen puhelimella ja tietokoneella ja näyttää sen kollegoillesi.'),
     ('Mitä demo maksaa?', 'Ei mitään. Demo on maksuton, eikä se sido mihinkään.'),
@@ -217,8 +217,8 @@ def home():
   <main id="main">
     <section class="hero" aria-labelledby="h1">
       <p class="hero-meta lab lab-g">Helsinki <time data-clock></time></p>
-      <h1 class="xl xl-long rv-w" id="h1">Verkkosivut, jotka tuovat remontti&shy;yrityksellesi lisää tarjous&shy;pyyntöjä.</h1>
-      <div class="hero-sub rv"><span class="line"></span><p class="hero-p">Teen remontti- ja LVI-yrityksille sivut, joista asiakas löytää vastaukset ja pyytää tarjouksen. Näet uuden etusivusi ennen kuin maksat.</p><p class="hero-do">{cta()}<a class="go" href="{P}/tyot/"><span>Viimeisimmät työt</span></a></p></div>
+      <h1 class="xl xl-long rv" id="h1">Verkkosivut, jotka tuovat remontti&shy;yrityksellesi lisää tarjous&shy;pyyntöjä.</h1>
+      <div class="hero-sub rv"><span class="line"></span><p class="hero-p">Teen remontti- ja LVI-yrityksille hienot sivut, jotka tuovat töitä. Asiakas löytää vastaukset ja pyytää tarjouksen. Näet uuden etusivusi ennen kuin maksat.</p><p class="hero-do">{cta()}<a class="go" href="{P}/tyot/"><span>Viimeisimmät työt</span></a></p></div>
       <div class="hero-mark" aria-hidden="true"><img src="{A}/img/logo/aa-merkki-paperi.svg" width="1016" height="558" alt="" fetchpriority="high"></div>
     </section>
     <ul class="terms terms-top rv" aria-label="Ehdot"><li>{OFFER}</li><li>Kiinteä hinta</li><li>Ei kuukausimaksuja</li><li>Sivut ja domain ovat sinun</li></ul>
@@ -243,8 +243,8 @@ def home():
     </section>
 
     <section class="sec" id="teen" aria-labelledby="teen-h">
-      <div class="cols sec-top"><h2 class="h2 h2-big c-wide rv-w" id="teen-h">En ole design studio. <span>Autan remonttiyrityksiä saamaan lisää töitä.</span></h2></div>
-      <div class="cols"><p class="lead g c-l rv" style="margin-bottom:clamp(40px, 5vw, 72px)">Kaunis ulkoasu on vain työkalu. Onnistumisen mittari on se, tuleeko sivujen kautta tarjouspyyntöjä oikeilta asiakkailta. Siksi teen kaiken, mitä siihen tarvitaan.</p></div>
+      <div class="cols sec-top"><h2 class="h2 h2-big c-wide rv-w" id="teen-h">Hienot sivut, jotka tuovat töitä. <span>Ulkoasu on tärkeä. Tärkeintä on, että puhelin soi.</span></h2></div>
+      <div class="cols"><p class="lead g c-l rv" style="margin-bottom:clamp(40px, 5vw, 72px)">Sivujen pitää näyttää yhtä laadukkailta kuin työsi. Mutta pelkkä hieno ulkoasu ei tuo tarjouspyyntöjä. Siksi jokainen sivu suunnitellaan niin, että asiakas löytää vastaukset ja ottaa yhteyttä.</p></div>
       <ol class="five">
 {do}
       </ol>

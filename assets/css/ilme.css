@@ -277,7 +277,7 @@ button { font: inherit; color: inherit; }
 }
 
 /* Front page for renovation firms: a longer claim, the problem, the questions a buyer asks */
-.hero .xl-long { max-width: 15ch; font-size: clamp(34px, 5.6vw, 96px); hyphens: manual; }
+.hero .xl-long { max-width: 20ch; font-size: clamp(34px, 5.6vw, 96px); hyphens: manual; }
 .hero-p { max-width: 44ch; color: var(--g1); font-size: clamp(16px, 1.2vw, 18px); }
 .hero-do { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
 .terms-top { margin: 0 var(--pad); }
@@ -318,4 +318,9 @@ button { font: inherit; color: inherit; }
 /* The long claim needs the whole column on tall screens: the mark moves above it instead of behind it */
 @media (max-width: 699px), (orientation: portrait) and (max-width: 1100px) {
   .hero:has(.xl-long) .hero-mark { position: relative; top: auto; right: auto; bottom: auto; order: -1; width: min(48vw, 380px); margin-bottom: clamp(32px, 6vw, 56px); }
+}
+/* Beside the long claim the mark stays small: a signature, not a second headline */
+.hero:has(.xl-long) .hero-mark { width: min(20vw, 300px); }
+@media (max-width: 699px), (orientation: portrait) and (max-width: 1100px) {
+  .hero:has(.xl-long) .hero-mark { width: min(26vw, 160px); margin-bottom: clamp(24px, 5vw, 40px); }
 }
