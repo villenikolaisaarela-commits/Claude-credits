@@ -1,5 +1,5 @@
 // Studio Luoto front page, built from Framer's own layers so every text can be edited on the canvas.
-// node build-home.mjs  (reads ../framer2/.key or FRAMER_API_KEY)
+// node build-home.mjs  (reads FRAMER_API_KEY)
 import { connect } from 'framer-api'
 import fs from 'fs'
 import * as K from './comps.mjs'
@@ -49,17 +49,17 @@ try {
     sans4: await f.getFont('Archivo', { weight: 400 }), sans5: await f.getFont('Archivo', { weight: 500 }),
     sans6: await f.getFont('Archivo', { weight: 600 }), sans7: await f.getFont('Archivo', { weight: 700 }),
   }
-  const existingStyles = new Map((await f.getTextStyles()).map(s => [s.path, s]))
+  // every build makes its own set of styles; the old sets are removed once the page no longer uses them
+  const STYLE_DIR = '/Luoto ' + Date.now().toString(36) + '/'
   const styleCache = new Map()
   async function st(name, o) {
     const key = JSON.stringify([name, o])
     if (styleCache.has(key)) return styleCache.get(key)
     const [d, t, p] = o.size
-    const ex = existingStyles.get('/Luoto/' + name)
-    const s = await (ex ? (a => ex.setAttributes(a)) : (a => f.createTextStyle({ path: '/Luoto/' + name, ...a })))({
+    const s = await (a => f.createTextStyle({ path: STYLE_DIR + name, ...a }))({
       tag: o.tag || 'p', font: font[o.font], fontSize: d + 'px', lineHeight: o.lh || '1.55em', letterSpacing: o.ls || '0em',
       color: o.color || C.ink, alignment: o.align || 'left', transform: o.upper ? 'uppercase' : 'none', decoration: o.under ? 'underline' : 'none', balance: !!o.balance,
-      minWidth: 1200, breakpoints: [{ minWidth: 810, fontSize: t + 'px' }, { minWidth: 0, fontSize: p + 'px' }],
+      minWidth: 1200, breakpoints: [{ minWidth: 1200, fontSize: t + 'px' }, { minWidth: 810, fontSize: p + 'px' }], // Framer: minWidth is the top of the range
     })
     styleCache.set(key, s); return s
   }
@@ -86,7 +86,7 @@ try {
     tick: await up('tick.svg', svg('tick.svg'), 'image/svg+xml'), cross: await up('cross.svg', svg('cross.svg'), 'image/svg+xml'),
     arrowP: await up('arrow-paper.svg', svg('arrow-paper.svg'), 'image/svg+xml'), arrowI: await up('arrow-ink.svg', svg('arrow-ink.svg'), 'image/svg+xml'),
     valtteri: await up('valtteri.webp', fs.readFileSync(HERE + 'img/valtteri-gray.webp'), 'image/webp'),
-    ville: await up('ville.webp', fs.readFileSync(HERE + '../../../assets/img/ville-480.webp'), 'image/webp'),
+    ville: await up('ville.webp', fs.readFileSync(HERE + 'img/ville-480.webp'), 'image/webp'),
   }
   for (const k of ['msg', 'clock', 'pins', 'key', 'tile', 'pipe', 'house']) IMG['ill-' + k] = await up(`ill-${k}.svg`, svg(`ill-${k}.svg`), 'image/svg+xml')
   log('assets ok')
@@ -667,6 +667,13 @@ try {
     }
   }
   log('overrides', OV.length, 'misses', miss, 'page', page.id, 'tablet', tab.id, 'phone', pho.id)
+  // remove only the styles no text uses any more
+  const used = new Set()
+  for (const t of await f.getNodesWithType('TextNode')) if (t.inlineTextStyle) used.add(t.inlineTextStyle.id)
+  const mine = new Set([...styleCache.values()].map(s => s.id))
+  let removed = 0
+  for (const s of await f.getTextStyles()) if (!used.has(s.id) && !mine.has(s.id)) { try { await s.remove(); removed++ } catch (e) {} }
+  log('unused styles removed', removed, 'in use', used.size)
 } catch (e) {
   console.log('ERR', e.message, (e.stack || '').split('\n').slice(0, 4).join(' | '))
 } finally { await f.disconnect() }
