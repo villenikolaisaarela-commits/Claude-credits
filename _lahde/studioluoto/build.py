@@ -15,7 +15,7 @@ LIVE = os.environ.get('LIVE') == '1'
 P = '' if LIVE else '/esikatselu/studioluoto'
 A = '/assets'
 L = '/assets/luoto'
-V = '1'
+V = '2'
 REPO = '/home/user/Claude-credits'
 ROOT = REPO + P
 SITE = 'https://www.studioluoto.com'
@@ -292,6 +292,14 @@ def home():
     <section class="wrap sec" id="prosessi" aria-labelledby="prosessi-h">
       <p class="lab rv">Näin se toimii</p>
       <h2 class="d2 rv" id="prosessi-h">Viestistä valmiisiin sivuihin. <em>Neljä vaihetta.</em></h2>
+      <figure class="film rv">
+        <video muted loop playsinline preload="none" poster="{L}/video/prosessi.jpg" width="1920" height="1080" aria-describedby="film-txt">
+          <source src="{L}/video/prosessi.webm" type="video/webm">
+          <source src="{L}/video/prosessi.mp4" type="video/mp4">
+        </video>
+        <button class="film-t" type="button" aria-pressed="true">Toista</button>
+        <figcaption class="sr" id="film-txt">Video, 40 sekuntia: Joka ilta joku etsii remonttia puhelimellaan. Jos sivusi eivät vakuuta, tarjouspyyntö menee kilpailijalle. Näin se toimii: 1. Lähetä viesti. 2. Saat luonnoksen 48 tunnissa. 3. Hyväksyt suunnan, ja muutamme kaiken, kunnes sivut ovat juuri oikein. 4. Sivut siirretään sinulle omaan osoitteeseesi. Pyydä ilmainen demo.</figcaption>
+      </figure>
       <ol class="steps">
 {steps}
       </ol>
