@@ -19,64 +19,69 @@
  "DO": [
   [
    "Verkkosivut",
-   "Rakennamme sivut, jotka näyttävät yhtä laadukkailta kuin työsi. Tehdään yrityksellesi alusta asti, ei valmispohjasta."
+   "Rakennamme. Ja pidämme kunnossa.",
+   "Sivut tehdään yrityksellesi alusta asti ja pysyvät ajan tasalla, kun työt muuttuvat."
   ],
   [
    "Viesti",
-   "Kirjoitamme tekstit niin, että asiakas ymmärtää heti, mitä teet, missä ja mitä se suunnilleen maksaa."
+   "Sanomme sen suoraan.",
+   "Asiakas näkee heti, mitä teet, missä ja mitä se suunnilleen maksaa."
   ],
   [
    "Löydettävyys",
-   "Palvelut ja paikkakunnat omille sivuilleen, jotta Google ja tekoälyhaut tietävät, mitä teet ja missä."
+   "Löydyt, kun sinua haetaan.",
+   "Jokaiselle palvelulle ja paikkakunnalle oma sivu Googlea ja tekoälyhakuja varten."
   ],
   [
    "Tarjouspyyntö",
-   "Lomake, joka kysyy heti oikeat asiat. Saat pyynnön, josta voit laskea hinnan ilman takaisinsoittoa."
+   "Pyyntö, josta voi laskea hinnan.",
+   "Lomake kysyy heti oikeat asiat, joten takaisinsoittoa ei tarvita."
   ],
   [
    "Luottamus",
-   "Kohteet, takuu, vakuutukset ja tekijät esille, jotta asiakas valitsee sinut eikä halvinta."
+   "Asiakas valitsee sinut. Ei halvinta.",
+   "Kohteet, takuu, vakuutukset ja tekijät näkyvät ennen ensimmäistä puhelua."
   ]
  ],
  "FOR": [
   [
    "Remonttiyritykset",
-   "Kohteet esille ja tarjouspyynnöt oikeilta asiakkailta.",
+   "Kohteet esille. Ja oikeat asiakkaat soittamaan.",
    "tile"
   ],
   [
    "LVI ja talotekniikka",
-   "Palvelut, alueet ja päivystys selkeästi esillä.",
+   "Palvelut ja alueet selviksi. Päivystys näkyviin.",
    "pipe"
   ],
   [
    "Rakentajat ja puusepät",
-   "Työ näyttää sivuilla yhtä hyvältä kuin paikan päällä.",
+   "Käsityön jälki näkyy. Myös sivuilla.",
    "house"
   ]
  ],
  "STEPS": [
   [
    "Lähetä viesti.",
-   "Linkki nykyisiin sivuihisi ja pari lausetta riittää. Siihen menee kaksi minuuttia.",
+   "Linkki nykyisiin sivuihisi ja pari lausetta. Siihen menee kaksi minuuttia.",
    "or",
    "msg"
   ],
   [
    "Saat luonnoksen 48 tunnissa.",
-   "Toimiva etusivu omassa linkissään. Avaat sen puhelimella ja näytät sen kollegoillesi. Maksuton, eikä sido mihinkään.",
+   "Toimiva etusivu omassa linkissään, ei kuva. Maksuton, eikä sido mihinkään.",
    "sea",
    "clock"
   ],
   [
-   "Käydään muutokset läpi.",
-   "Hyväksyt suunnan ja kerrot, mitä haluat muuttaa. Muutamme kaiken, kunnes sivut ovat juuri oikein.",
+   "Hiotaan yhdessä.",
+   "Kerro, mitä haluat muuttaa. Muutamme, kunnes sivut ovat juuri oikein.",
    "ink",
    "pins"
   ],
   [
-   "Sivut julki, ja pidämme niistä huolen.",
-   "Julkaisemme sivut omaan osoitteeseesi. Sen jälkeen ylläpidämme, päivitämme ja kehitämme niitä, ja kaikki sisältyy kuukausihintaan.",
+   "Sivut julki. Me pidämme huolen.",
+   "Julkaisemme sivut omaan osoitteeseesi ja kehitämme niitä kuukausihinnalla.",
    "sand",
    "key"
   ]
@@ -154,28 +159,28 @@
  ],
  "PERKS": [
   [
-   "Yksi ihminen, joka tuntee yrityksesi",
-   "Ville vastaa itse. Ei tikettijärjestelmää, ei välikäsiä, eikä sinun tarvitse selittää asioita joka kerta alusta."
+   "Yksi ihminen. Ei tikettejä.",
+   "Ville vastaa itse ja tuntee yrityksesi. Mitään ei tarvitse selittää alusta."
   ],
   [
-   "Ei kirjautumisia eikä opeteltavaa",
-   "Sinun ei tarvitse oppia julkaisujärjestelmää. Lähetät viestin tai kuvan puhelimella, ja muutos tehdään."
+   "Ei kirjautumisia.",
+   "Lähetät viestin tai kuvan puhelimella. Me teemme muutoksen."
   ],
   [
-   "Katsaus ja parannusehdotus",
-   "Joka kuukausi saat luvut ja yhden konkreettisen ehdotuksen siitä, mitä kannattaa tehdä seuraavaksi."
+   "Luvut ja seuraava askel.",
+   "Joka kuukausi katsaus ja yksi konkreettinen parannusehdotus."
   ],
   [
-   "Arvostelut kasvuun",
-   "Saat valmiin arvostelulinkin ja QR-kortin, jolla tyytyväinen asiakas jättää Google-arvostelun suoraan työmaalta."
+   "Arvosteluja suoraan työmaalta.",
+   "Valmis arvostelulinkki ja QR-kortti, jolla tyytyväinen asiakas jättää Google-arvostelun."
   ],
   [
-   "Sesonki mukaan",
-   "Ennen sesonkia nostamme esiin sen, mitä silloin myydään: lämpöpumput syksyllä, julkisivut ja terassit keväällä."
+   "Sesonki edellä.",
+   "Ennen sesonkia nostamme esiin sen, mitä silloin myydään: lämpöpumput syksyllä, julkisivut keväällä."
   ],
   [
-   "Ei piilokuluja",
-   "Kaikki hintaan sisältyvä on listattu. Jos jokin maksaa erikseen, kerromme sen ennen kuin teemme mitään."
+   "Ei piilokuluja.",
+   "Kaikki hintaan sisältyvä on listattu. Jos jokin maksaa erikseen, kuulet sen ennen kuin teemme mitään."
   ]
  ],
  "REQ": [
@@ -214,22 +219,22 @@
   [
    "Kuukausi 1",
    "Sivut julki.",
-   "Search Console, yhteydenottojen seuranta ja Google-yritysprofiili kuntoon heti alusta."
+   "Seuranta, Search Console ja Google-yritysprofiili kuntoon heti alusta."
   ],
   [
    "Kuukaudet 2–3",
    "Ensimmäiset luvut.",
-   "Katsomme, mistä yhteydenotot tulevat ja missä kävijät putoavat pois, ja korjaamme sen, mikä jarruttaa."
+   "Näemme, mistä yhteydenotot tulevat ja missä kävijät jäävät jumiin. Korjaamme sen."
   ],
   [
    "Kuukaudet 4–6",
    "Lisää näkyvyyttä.",
-   "Uusia kohteita sekä palvelu- ja paikkakuntasivuja sinne, mistä haluat lisää töitä."
+   "Uusia kohteita sekä palvelu- ja paikkakuntasivuja sinne, mistä haluat töitä."
   ],
   [
    "Kuukaudet 7–12",
    "Hiotaan sitä, mikä toimii.",
-   "Sesonkisivut, lisää arvosteluja ja lomake, joka kysyy juuri oikeat asiat."
+   "Sesonkisivut, lisää arvosteluja ja lomake, joka kysyy oikeat asiat."
   ]
  ],
  "INCLUDED": [
@@ -255,11 +260,11 @@
  "FAQ": [
   [
    "Miten tämä eroaa tavallisesta mainostoimistosta?",
-   "Tavallinen toimisto tekee sivut, laskuttaa ja siirtyy seuraavaan projektiin. Me jäämme: ylläpidämme sivuja, teemme muutokset ja kehitämme niitä joka kuukausi, jotta niiden kautta tulee töitä. Ja näet demon ennen kuin maksat mitään."
+   "Toimisto julkaisee sivut ja siirtyy seuraavaan projektiin. Me jäämme: ylläpidämme, muutamme ja kehitämme sivuja joka kuukausi, jotta niiden kautta tulee töitä."
   ],
   [
    "Pitääkö minun päivittää sivuja itse?",
-   "Ei. Kerrot vain, mitä haluat muuttaa: viestillä, kuvalla tai puhelulla. Sinun ei tarvitse kirjautua mihinkään eikä opetella julkaisujärjestelmää."
+   "Ei. Kerro viestillä, kuvalla tai puhelulla, mitä haluat muuttaa. Me teemme sen."
   ],
   [
    "Kuinka nopeasti vastaatte?",
@@ -267,11 +272,11 @@
   ],
   [
    "Ehdinkö tähän kesken työmaiden?",
-   "Ehdit. Meille riittää linkki ja muutama lause. Demon teemme me, ja voit katsoa sen puhelimella illalla."
+   "Ehdit. Linkki ja muutama lause riittävät. Demon katsot puhelimella vaikka illalla."
   ],
   [
    "Onko demo vain kuva?",
-   "Ei. Demo on toimiva etusivu omassa linkissään. Voit avata sen puhelimella ja tietokoneella ja näyttää sen kollegoillesi."
+   "Ei. Demo on toimiva etusivu omassa linkissään. Voit näyttää sen kollegoillesi."
   ],
   [
    "Mitä demo maksaa?",
@@ -283,7 +288,7 @@
   ],
   [
    "Miksi kuukausihinta eikä kertamaksu?",
-   "Sivut eivät ole valmiit julkaisupäivänä. Kuukausihinnalla ne pysyvät ajan tasalla ja paranevat: uudet kohteet, palvelut ja korjaukset tehdään ilman erillisiä tarjouksia, eikä sinun tarvitse maksaa tuhansia euroja kerralla."
+   "Sivut eivät ole valmiit julkaisupäivänä. Kuukausihinnalla ne paranevat koko ajan, eikä sinun tarvitse maksaa tuhansia euroja kerralla."
   ],
   [
    "Mitä jos haluan lopettaa?",
@@ -295,15 +300,15 @@
   ],
   [
    "Kauanko projekti kestää?",
-   "Yleensä kahdesta neljään viikkoa. Demo on valmis 48 tunnissa, ja aikataulu sovitaan ennen aloitusta."
+   "Yleensä kahdesta neljään viikkoa. Demo on valmis 48 tunnissa."
   ],
   [
    "Meillä ei ole hyviä kuvia.",
-   "Puhelimella otetut kuvat kelpaavat alkuun. Käsittelemme ne niin, että työ näyttää sivuilla samalta kuin todellisuudessa."
+   "Puhelimella otetut kuvat kelpaavat alkuun. Käsittelemme ne niin, että työ näyttää sivuilla samalta kuin paikan päällä."
   ],
   [
    "Mitä julkaisun jälkeen tapahtuu?",
-   "Pienet muutokset teemme kahdessa arkipäivässä, ja kerran kuussa teemme isomman päivityksen, kuten uuden kohteen tai palvelusivun. Saat joka kuukausi lyhyen katsauksen: montako yhteydenottoa tuli, mistä ja mitä seuraavaksi kannattaa tehdä."
+   "Työ jatkuu. Pienet muutokset tehdään kahdessa arkipäivässä, isompi päivitys kerran kuussa, ja saat katsauksen siitä, mistä yhteydenotot tulivat."
   ],
   [
    "Mitä saan käteeni?",
@@ -321,17 +326,17 @@
  "VS": [
   [
    "Iso lasku ennen kuin sivut ovat valmiit.",
-   "Julkaisun jälkeen hiljaista. Viesteihin vastataan, jos ehditään.",
-   "Jokainen muutos on uusi tarjous ja uusi lasku.",
-   "Sivut vanhenevat, koska kenelläkään ei ole aikaa päivittää niitä.",
-   "Kukaan ei kerro, tuleeko sivujen kautta töitä."
+   "Julkaisun jälkeen hiljaista.",
+   "Jokainen muutos on uusi tarjous.",
+   "Sivut vanhenevat heti julkaisupäivästä.",
+   "Kukaan ei seuraa, tuleeko töitä."
   ],
   [
-   "0 € aloitusmaksu. Näet demon ennen kuin päätät mitään.",
-   "Vastaamme aina yhden arkipäivän sisällä.",
-   "Muutokset kuuluvat hintaan. Pienet ovat sivuilla kahdessa arkipäivässä.",
-   "Sivut paranevat joka kuukausi: uudet kohteet, palvelut ja korjaukset.",
-   "Kuukausikatsaus kertoo, montako yhteydenottoa tuli ja mistä."
+   "0 € aloitusmaksu. Demo ennen päätöstä.",
+   "Vastaus yhden arkipäivän sisällä.",
+   "Muutokset kuuluvat hintaan.",
+   "Sivut paranevat joka kuukausi.",
+   "Kuukausikatsaus kertoo, mistä työt tulevat."
   ]
  ],
  "REQ_TAG": {

@@ -114,7 +114,10 @@ try {
   log('code ok')
 
   // ---------- layer helpers ----------
-  const F = (parent, a = {}) => f.createFrameNode({ position: 'relative', width: '100%', height: 'fit-content', layout: 'stack', stackDirection: 'vertical', stackAlignment: 'start', stackDistribution: 'start', gap: '0px', backgroundColor: null, ...a }, parent)
+  const GRIDS = new Set()
+  const CELL = { gridItemFillCellWidth: true, gridItemFillCellHeight: true, gridItemVerticalAlignment: 'start', gridItemHorizontalAlignment: 'start' }
+  // inside a grid every item fills its cell and starts at the top, so a row of cards is one height
+  const F = (parent, a = {}) => f.createFrameNode({ position: 'relative', width: '100%', height: 'fit-content', layout: 'stack', stackDirection: 'vertical', stackAlignment: 'start', stackDistribution: 'start', gap: '0px', backgroundColor: null, ...(GRIDS.has(parent) ? CELL : {}), ...a }, parent)
   const row = (parent, a = {}) => F(parent, { stackDirection: 'horizontal', stackAlignment: 'center', ...a })
   async function T(parent, text, style, a = {}) {
     const n = await f.createTextNode({ position: 'relative', width: '100%', height: 'fit-content', ...a }, parent)
@@ -138,8 +141,12 @@ try {
   }
   // a card with a hard offset shadow, the way the site draws it
   async function hard(parent, { dx = 0, dy = 6, color = C.ink, radius = 22, width = '100%', rotation = 0, name = 'Kortti' }, inner = {}) {
-    const w = await F(parent, { name: name + ' · varjolla', width, rotation, padding: pad4(0, Math.max(dx, 0), Math.max(dy, 0), 0) })
+    // in a grid the wrapper is itself a one-cell grid, so the card stretches to the row without losing its own height
+    const inGrid = GRIDS.has(parent)
+    const cell = inGrid ? { layout: 'grid', gridColumnCount: 1, gridRowCount: 1, gridColumnWidthType: 'minmax', gridColumnMinWidth: 1, gridRowHeightType: 'auto', gridAlignment: 'start', gap: '0px' } : {}
+    const w = await F(parent, { name: name + ' · varjolla', width, rotation, padding: pad4(0, Math.max(dx, 0), Math.max(dy, 0), 0), ...cell })
     await F(w.id, { name: 'Varjo', position: 'absolute', top: dy + 'px', left: dx + 'px', right: '0px', bottom: '0px', width: null, height: null, backgroundColor: color, borderRadius: radius + 'px', layout: null })
+    if (inGrid) GRIDS.add(w.id)
     const card = await F(w.id, { name, borderRadius: radius + 'px', ...inner })
     return card
   }
@@ -171,8 +178,9 @@ try {
   }
   async function grid(parent, cols, gaps, n, a = {}) {
     const rows = c => Math.ceil(n / c)
-    const g = await F(parent, { name: 'Ruudukko', layout: 'grid', gridColumnCount: cols[0], gridRowCount: rows(cols[0]), gridColumnWidthType: 'minmax', gridColumnMinWidth: 1, gridRowHeightType: 'auto', gridAlignment: 'start', gap: gaps, ...a })
+    const g = await F(parent, { name: 'Ruudukko', layout: 'grid', gridColumnCount: cols[0], gridRowCount: rows(cols[0]), gridColumnWidthType: 'minmax', gridColumnMinWidth: 1, gridRowHeightType: 'fit', gridAlignment: 'start', gap: gaps, ...a })
     ov(g.id, { gridColumnCount: cols[1], gridRowCount: rows(cols[1]) }, { gridColumnCount: cols[2], gridRowCount: rows(cols[2]) })
+    GRIDS.add(g.id)
     return g
   }
   // two or more columns side by side on desktop, stacked below
@@ -217,17 +225,16 @@ try {
   await gap(heroIn.id, 28)
   await head(heroIn.id, 'd1', 'Verkkosivut, jotka tuovat remontti\u00adyrityksellesi', 'lisää tarjous\u00adpyyntöjä.', C.paper, C.or, 'center')
   await gap(heroIn.id, 28)
-  await T(heroIn.id, 'Me rakennamme, ylläpidämme ja kehitämme sivujasi kuukausihinnalla. Sinä kerrot, mitä haluat, ja me hoidamme loput. Näet uuden etusivusi ennen kuin maksat mitään.', TS.body([21, 19, 18], C.gLt, 'center'), { maxWidth: '560px' })
+  await T(heroIn.id, 'Me vastaamme siitä, että sivusi tuovat töitä. Rakennamme, ylläpidämme ja kehitämme ne kuukausihinnalla, eikä sinun tarvitse lähteä työmaalta.', TS.body([21, 19, 18], C.gLt, 'center'), { maxWidth: '560px' })
   await gap(heroIn.id, 40)
   const heroDo = await row(heroIn.id, { name: 'Toiminnot', width: 'fit-content', gap: '16px 28px', stackWrapEnabled: true, stackDistribution: 'center' })
   await demo(heroDo.id, 'Pyydä ilmainen demo', 'oranssi')
   await T(heroDo.id, 'Katso työt', TS.link(C.paper), { width: 'fit-content', link: '/tyot' })
   await gap(heroIn.id, 64)
-  const proof = await row(heroIn.id, { name: 'Todisteet', width: '100%', gap: '20px', stackWrapEnabled: true, stackDistribution: 'center' })
-  const PROOF = [['48 h', 'Ilmainen demo 48 tunnissa', 'Toimiva etusivu, ei kuva. Ei sido mihinkään.', -1.4], ['€', '199 €/kk, kaikki hoidossa', 'Ei aloitusmaksua. Muutokset ja ylläpito mukana.', 1.2], [null, '”Sivut saavat ihmiset innostumaan jo ennen julkaisua.”', 'Valtteri Viitala, BuffBird Oy', 1.2]]
+  const proof = await grid(heroIn.id, [3, 1, 1], '20px', 3, { name: 'Todisteet', maxWidth: '1150px' })
+  const PROOF = [['48 h', 'Ilmainen demo 48 tunnissa', 'Toimiva etusivu, ei kuva. Ei sido mihinkään.', 0], ['€', '199 €/kk, kaikki hoidossa', 'Ei aloitusmaksua. Muutokset ja ylläpito mukana.', 0], [null, '”Sivut saavat ihmiset innostumaan jo ennen julkaisua.”', 'Valtteri Viitala, BuffBird Oy', 0]]
   for (const [ic, b, s, rot] of PROOF) {
-    const card = await hard(proof.id, { dy: 6, color: C.or, radius: 18, width: '370px', rotation: rot, name: 'Todiste' }, { stackDirection: 'horizontal', stackAlignment: 'center', gap: '14px', padding: pad4(14, 22, 14, 14), backgroundColor: C.white })
-    ov(await f.getParent(card.id).then(x => x.id), null, { width: '100%' })
+    const card = await hard(proof.id, { dy: 6, color: C.or, radius: 18, name: 'Todiste' }, { stackDirection: 'horizontal', stackAlignment: 'center', gap: '14px', padding: pad4(14, 22, 14, 14), backgroundColor: C.white })
     if (ic) { const box = await F(card.id, { name: 'Ikoni', width: '52px', height: '52px', borderRadius: '14px', backgroundColor: C.or, stackAlignment: 'center', stackDistribution: 'center' }); await T(box.id, ic, st('Proof icon', { font: 'sans7', size: [15, 15, 15], lh: '1em', align: 'center' }), { width: 'fit-content' }) }
     else await F(card.id, { name: 'Kuva', width: '52px', height: '52px', borderRadius: '50%', backgroundImage: IMG.valtteri, layout: null })
     const tx = await F(card.id, { name: 'Teksti', width: '1fr', gap: '2px' })
@@ -250,9 +257,9 @@ try {
     await gap(card.id, 18)
     await head(card.id, 'd2', 'Useimmat remonttisivut näyttävät siisteiltä.', 'Tarjous\u00adpyyntöjä ne eivät tuo.', C.paper, C.or, 'center', { maxWidth: '760px' })
     await gap(card.id, 28)
-    await T(card.id, 'Sivut tehtiin kerran, eikä kukaan ole sen jälkeen katsonut, tuleeko niiden kautta töitä. Asiakas vertaa illalla kolmea yritystä puhelimellaan ja pyytää tarjouksen siltä, jonka sivuilta löytyvät vastaukset.', TS.body([18, 18, 17], C.gLt, 'center'), { maxWidth: '600px' })
+    await T(card.id, 'Sivut tehtiin kerran, eikä kukaan ole katsonut niitä sen jälkeen. Asiakas vertaa illalla kolmea yritystä puhelimella ja soittaa sille, jonka sivuilta vastaukset löytyvät.', TS.body([18, 18, 17], C.gLt, 'center'), { maxWidth: '600px' })
     await gap(card.id, 18)
-    await T(card.id, 'Sivusi päättävät, soittaako asiakas sinulle vai kilpailijalle.', TS.body([18, 18, 17], C.paper, 'center', 6))
+    await T(card.id, 'Sivusi päättävät, soitetaanko sinulle vai kilpailijalle.', TS.body([18, 18, 17], C.paper, 'center', 6))
     await gap(card.id, 48)
     const stk = await row(card.id, { name: 'Tarrat', maxWidth: '900px', gap: '18px 14px', stackWrapEnabled: true, stackDistribution: 'center' })
     for (const [i, s] of D.STICKERS.entries()) {
@@ -271,18 +278,19 @@ try {
     const { outer, inner } = await band('Palvelu', { backgroundColor: C.ink, padding: pad4(110, 0, 150, 0) })
     ov(outer.id, { padding: pad4(90, 0, 110, 0) }, { padding: pad4(72, 0, 88, 0) })
     ANCHOR.palvelu = outer.id
-    await head(inner.id, 'd2', 'Emme tee pelkkiä verkkosivuja.', 'Autamme sinua saamaan lisää asiakkaita.', C.paper, C.or, 'left', { maxWidth: '900px' })
+    await head(inner.id, 'd2', 'Mitä teemme sivuillesi.', 'Joka kuukausi.', C.paper, C.or, 'left', { maxWidth: '900px' })
     await gap(inner.id, 24)
-    await T(inner.id, 'Optimoimme jokaisen sivun yhteen tehtävään: että oikea asiakas löytää sinut ja pyytää tarjouksen.', TS.body([20, 19, 18], C.gLt), { maxWidth: '600px' })
+    await T(inner.id, 'Jokaisella sivulla on yksi tehtävä: oikea asiakas löytää sinut ja pyytää tarjouksen.', TS.body([20, 19, 18], C.gLt), { maxWidth: '600px' })
     await gap(inner.id, 64)
     const g = await grid(inner.id, [5, 2, 1], '36px 28px', D.DO.length)
-    for (const [i, [h, d]] of D.DO.entries()) {
-      const c = await F(g.id, { name: h, padding: pad4(20, 0, 0, 0), gap: '14px', border: { width: '2px 0px 0px 0px', color: C.or, style: 'solid' } })
-      await T(c.id, `${String(i + 1).padStart(2, '0')} / ${h}`, TS.lab(C.paper))
+    for (const [i, [k, h, d]] of D.DO.entries()) {
+      const c = await F(g.id, { name: k, padding: pad4(20, 0, 0, 0), gap: '12px', border: { width: '2px 0px 0px 0px', color: C.or, style: 'solid' } })
+      await T(c.id, `${String(i + 1).padStart(2, '0')} / ${k}`, TS.lab(C.or))
+      await T(c.id, h, TS.h4(C.paper))
       await T(c.id, d, TS.body([16, 16, 16], C.gLt))
     }
     await gap(inner.id, 48)
-    ANCHOR.palveluLink = await T(inner.id, 'Katso, miten tämä toimisi sinun sivuillasi →', TS.link(C.paper), { width: 'fit-content' })
+    ANCHOR.palveluLink = await T(inner.id, 'Pyydä demo, niin näet sen omilla sivuillasi →', TS.link(C.paper), { width: 'fit-content' })
   }
   log('service')
 
@@ -292,8 +300,8 @@ try {
     const [l, r] = await split(inner.id, ['1.1fr', '0.9fr'])
     await T(l.id, 'Verkkosivut palveluna', TS.lab(C.ink))
     await gap(l.id, 14)
-    await head(l.id, 'd2', 'Tavallinen toimisto tekee sivut ja katoaa.', 'Me jäämme.', C.ink, C.sea)
-    await T(r.id, 'Emme ole projektitoimisto, vaan kasvukumppani. Sivut eivät ole valmiit julkaisupäivänä, joten emme mekään lähde mihinkään.', TS.body([20, 19, 18], C.g))
+    await head(l.id, 'd2', 'Toimisto julkaisee sivut ja siirtyy seuraavaan.', 'Me jäämme.', C.ink, C.sea)
+    await T(r.id, 'Sivut eivät ole valmiit julkaisupäivänä. Siksi emme laskuta projektia, vaan pidämme sivut kunnossa ja kehitämme niitä kuukausihinnalla.', TS.body([20, 19, 18], C.g))
     await gap(inner.id, 48)
     const g = await grid(inner.id, [2, 1, 1], '28px', 2)
     const [old, nu] = D.VS
@@ -345,7 +353,7 @@ try {
       await gap(c.id, 22)
       await T(c.id, h, TS.lab(C.g, 'center'))
       await gap(c.id, 8)
-      await T(c.id, d, TS.serif([25, 23, 22], C.ink, 'center', '1.18em'), { maxWidth: '420px' })
+      await T(c.id, d, TS.serif([26, 24, 22], C.ink, 'center', '1.15em'), { maxWidth: '420px' })
     }
   }
   log('for')
@@ -396,7 +404,7 @@ try {
     ov(card.id, { padding: pad4(48, 40) }, { padding: pad4(28, 20) })
     const [l, r] = await split(card.id, ['1.1fr', '0.9fr'])
     await head(l.id, 'd2', 'Sinä sanot, mitä haluat.', 'Me hoidamme loput.', C.ink, C.sea)
-    await T(r.id, 'Lähetä viesti, kuva tai soita. Ei kirjautumisia, ei julkaisujärjestelmää, ei opeteltavaa. Muutos on sivuilla, ja kuittaamme, kun se on tehty.', TS.body([20, 19, 18], C.g))
+    await T(r.id, 'Viesti, kuva tai puhelu riittää. Ei kirjautumisia eikä opeteltavaa. Kuittaamme, kun muutos on sivuilla.', TS.body([20, 19, 18], C.g))
     await gap(card.id, 44)
     for (const [q, a, k] of D.REQ) {
       const rw = await row(card.id, { name: 'Pyyntö', gap: '20px', padding: pad4(20, 0), border: { width: '1px 0px 0px 0px', color: C.line, style: 'solid' } })
@@ -425,7 +433,7 @@ try {
     const { inner } = await section('Vuosi')
     await T(inner.id, 'Julkaisun jälkeen', TS.lab(C.ink))
     await gap(inner.id, 14)
-    await head(inner.id, 'd2', 'Julkaisu on vasta alku.', 'Näin ensimmäinen vuosi etenee.', C.ink, C.sea, 'left', { maxWidth: '880px' })
+    await head(inner.id, 'd2', 'Julkaisupäivänä työ vasta alkaa.', 'Näin ensimmäinen vuosi etenee.', C.ink, C.sea, 'left', { maxWidth: '880px' })
     await gap(inner.id, 56)
     const g = await grid(inner.id, [4, 2, 1], '36px 28px', D.YEAR1.length)
     for (const [i, [m, h, d]] of D.YEAR1.entries()) {
@@ -455,8 +463,8 @@ try {
     await gap(inner.id, 14)
     await head(inner.id, 'd2', 'Yksi hinta.', 'Kaikki hoidossa.', C.ink, C.sea, 'center', { maxWidth: '720px' })
     await gap(inner.id, 64)
-    const [l, r] = await split(inner.id, ['1fr', '1.1fr'], { stackAlignment: 'start', gap: '24px', vgap: '24px' })
-    const pm = await hard(l.id, { dx: 10, dy: 10, color: C.or, radius: 28, name: 'Hinta' }, { padding: pad4(52, 52), backgroundColor: C.ink })
+    const pg = await grid(inner.id, [2, 1, 1], '24px', 2, { name: 'Hinta ja sisältö' })
+    const pm = await hard(pg.id, { dx: 10, dy: 10, color: C.or, radius: 28, name: 'Hinta' }, { padding: pad4(52, 52), backgroundColor: C.ink })
     ov(pm.id, { padding: pad4(36, 36) }, { padding: pad4(28, 24) })
     await T(pm.id, 'Verkkosivut palveluna', TS.lab(C.gLt))
     await gap(pm.id, 18)
@@ -483,7 +491,7 @@ try {
     await T(sm.id, 'Palvelu on tarkoitettu yrityksille.', TS.body([14, 14, 14], C.gLt), { width: 'fit-content' })
     await T(sm.id, 'Sopimusehdot', TS.link(C.paper, 14), { width: 'fit-content', link: '/ehdot' })
 
-    const pi = await F(r.id, { name: 'Sisältyy', padding: pad4(52, 52), borderRadius: '28px', backgroundColor: C.white, border: { width: '2px', color: C.ink, style: 'solid' } })
+    const pi = await F(pg.id, { name: 'Sisältyy', padding: pad4(52, 52), borderRadius: '28px', backgroundColor: C.white, border: { width: '2px', color: C.ink, style: 'solid' } })
     ov(pi.id, { padding: pad4(36, 36) }, { padding: pad4(28, 24) })
     await T(pi.id, 'Hintaan sisältyy', TS.lab(C.g))
     await gap(pi.id, 14)
@@ -593,7 +601,7 @@ try {
     const tx = await F(card.id, { name: 'Teksti', width: '1fr' }); ov(tx.id, null, { width: '100%' })
     await head(tx.id, 'd2', 'Vielä kysyttävää?', 'Kysy suoraan Villeltä.', C.ink, C.sea)
     await gap(tx.id, 16)
-    await T(tx.id, 'Ville Saarela, Studio Luoton perustaja. Vastaa itse jokaiseen viestiin ja puheluun, myös julkaisun jälkeen.', TS.body([18, 18, 17], C.g), { maxWidth: '520px' })
+    await T(tx.id, 'Saat vastauksen suoraan Villeltä, Studio Luoton perustajalta, joka perehtyy yritykseesi. Myös julkaisun jälkeen.', TS.body([18, 18, 17], C.g), { maxWidth: '520px' })
     await gap(tx.id, 28)
     const d = await row(tx.id, { name: 'Toiminnot', width: 'fit-content', gap: '16px 28px', stackWrapEnabled: true })
     await button(d.id, 'Soita ' + TEL_H, 'tel:' + TEL, 'or')
@@ -609,7 +617,7 @@ try {
     ov(card.id, { padding: pad4(72, 40) }, { padding: pad4(48, 22) })
     await T(card.id, 'Pyydä ilmainen demo.', TS.d1(C.ink, 'center'))
     await gap(card.id, 24)
-    await T(card.id, 'Lähetä linkki nykyisiin sivuihisi ja kerro, mitä teette ja missä. Näet uuden etusivusi 48 tunnissa. Maksuton, eikä sido mihinkään. Jos jatketaan, hoidamme kaiken sen jälkeen.', TS.body([21, 19, 18], C.ink, 'center'), { maxWidth: '560px' })
+    await T(card.id, 'Lähetä linkki nykyisiin sivuihisi ja kerro, mitä teette ja missä. Näet uuden etusivusi 48 tunnissa. Maksuton, eikä sido mihinkään.', TS.body([21, 19, 18], C.ink, 'center'), { maxWidth: '560px' })
     await gap(card.id, 36)
     const d = await row(card.id, { name: 'Toiminnot', width: 'fit-content', gap: '16px 28px', stackWrapEnabled: true, stackDistribution: 'center' })
     await demo(d.id, 'Lähetä demopyyntö', 'musta', { tummaVarjo: true })
