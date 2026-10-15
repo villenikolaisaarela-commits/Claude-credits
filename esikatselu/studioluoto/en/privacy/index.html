@@ -26,7 +26,7 @@
   <link rel="icon" href="/assets/luoto/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/luoto/luoto.css?v=5">
+  <link rel="stylesheet" href="/assets/luoto/luoto.css?v=6">
 </head>
 <body class="on-light">
   <a class="skip" href="#main">Skip to content</a>
@@ -46,7 +46,7 @@
       <p class="lab">Updated 15 October 2026</p>
       <h1 class="d1">Privacy</h1>
       <h2>Controller</h2><p>Ville Saarela, Isosaarentie 10, 00840 Helsinki, Finland. Business ID 3660060-6.</p><p>For privacy matters, contact us by email at <a class="u" href="mailto:ville@studioluoto.com">ville@studioluoto.com</a> or by phone at <a class="u" href="tel:+358451035362">045 103 5362</a>.</p>
-      <h2>What data we process</h2><p>When you email or call, we receive your name, contact details, your company’s name and what you tell us about your project. From clients we also need billing details.</p><p>The site has no forms, cookies or visitor tracking. Fonts, images and scripts load from this site, not from other companies’ servers.</p>
+      <h2>What data we process</h2><p>When you email or call, we receive your name, contact details, your company’s name and what you tell us about your project. From clients we also need billing details.</p><p>Details sent with the demo request form are forwarded to our email through the FormSubmit service (formsubmit.co), which describes its processing in its own privacy statement. The site has no cookies or visitor tracking. Fonts, images and scripts load from this site, not from other companies’ servers.</p>
       <h2>Why and on what basis</h2><p>We use the data to reply to enquiries, prepare offers and carry out the agreed work. The basis is the preparation and performance of a contract (GDPR Article 6(1)(b)).</p><p>We keep billing details because the Finnish Accounting Act requires it (Article 6(1)(c)).</p>
       <h2>How long we keep data</h2><p>We delete enquiries that do not lead to a project within two years. Messages from client projects are kept for the duration of the project and two years after.</p><p>Accounting records are kept as the Accounting Act requires: vouchers for six years and financial statements for ten years from the end of the financial year.</p>
       <h2>Who receives the data</h2><p>We do not sell data or hand it over for marketing. Data passes only through the email and accounting services we use in our work.</p><p>The site is hosted on GitHub Pages. GitHub may process visitors’ IP addresses for the security of the service. GitHub is a US company and describes its processing in its own privacy statement.</p>
@@ -76,16 +76,24 @@
     <div class="ask-in">
       <button class="ask-x" type="button" data-close aria-label="Close"></button>
       <h2 class="d3" id="ask-h">Request a free demo</h2>
-      <p>Tell us your current site, what you do and where. We reply within one working day, and the demo is ready in 48 hours.</p>
-      <ul class="ask-o">
-        <li><a class="ask-b ask-b-or" href="mailto:ville@studioluoto.com?subject=Demo%20request&body=Hi%2C%0A%0Aour%20current%20site%3A%20%0Awhat%20we%20do%3A%20%0Aour%20area%3A%20%0A%0A"><span>Open email</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
-        <li><a class="ask-b" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ville%40studioluoto.com&amp;su=Demo%20request&amp;body=Hi%2C%0A%0Aour%20current%20site%3A%20%0Awhat%20we%20do%3A%20%0Aour%20area%3A%20%0A%0A" target="_blank" rel="noopener"><span>Write in Gmail</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
-        <li><a class="ask-b" href="https://outlook.office.com/mail/deeplink/compose?to=ville%40studioluoto.com&amp;subject=Demo%20request&amp;body=Hi%2C%0A%0Aour%20current%20site%3A%20%0Awhat%20we%20do%3A%20%0Aour%20area%3A%20%0A%0A" target="_blank" rel="noopener"><span>Write in Outlook</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
-        <li><button class="ask-b" type="button" data-copy="ville@studioluoto.com" data-done="Address copied"><span>Copy address · ville@studioluoto.com</span></button></li>
-      </ul>
-      <p class="ask-tel">Or call <a href="tel:+358451035362">045 103 5362</a></p>
+      <p>You will see your new front page in 48 hours. Free, with no commitment. We reply within one working day.</p>
+      <form class="ask-f" action="https://formsubmit.co/ville@studioluoto.com" method="POST" data-ok="Thank you! Your demo request has been sent. We will reply within one working day." data-err="Sending failed. Please email ville@studioluoto.com or call 045 103 5362." data-busy="Sending…">
+        <div class="fld-2"><label class="fld"><span>Name *</span><input type="text" name="Nimi" required autocomplete="name"></label><label class="fld"><span>Company</span><input type="text" name="Yritys" autocomplete="organization"></label></div>
+        <div class="fld-2"><label class="fld"><span>Email *</span><input type="email" name="email" required autocomplete="email"></label><label class="fld"><span>Phone</span><input type="tel" name="Puhelin" autocomplete="tel"></label></div>
+        <label class="fld"><span>Current website</span><input type="text" name="Nykyiset sivut" autocomplete="url" placeholder="www.yourcompany.fi"></label>
+        <label class="fld"><span>What do you do, and where?</span><textarea name="Viesti" rows="3"></textarea></label>
+        <input type="hidden" name="_subject" value="Demo request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="Kieli" value="en">
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-or" type="submit"><span>Send demo request</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="ask-st" role="status" aria-live="polite"></p>
+        <p class="small">We only use your details to reply to you. <a href="/esikatselu/studioluoto/en/privacy/">Privacy</a></p>
+      </form>
+      <p class="ask-tel">Or call <a href="tel:+358451035362">045 103 5362</a> · <a href="mailto:ville@studioluoto.com">ville@studioluoto.com</a></p>
     </div>
   </dialog>
-  <script src="/assets/luoto/luoto.js?v=5" defer></script>
+  <script src="/assets/luoto/luoto.js?v=6" defer></script>
 </body>
 </html>

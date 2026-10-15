@@ -412,11 +412,21 @@ em { font-style: normal; color: var(--sea); }
 .ask-x::after { transform: rotate(-45deg); }
 .ask-x:hover { background: var(--or); }
 .ask-d .d3 { padding-right: 52px; }
-.ask-o { display: grid; gap: 10px; margin-top: 24px; }
-.ask-b { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 54px; padding: 0 22px; border: 2px solid var(--ink); border-radius: 999px; background: var(--white); color: var(--ink); font: 600 16px/1.2 var(--sans); text-align: left; text-decoration: none; cursor: pointer; }
-.ask-b span { overflow-wrap: anywhere; }
-.ask-b:hover { background: var(--sand); }
-.ask-b-or { background: var(--or); }
-.ask-b-or:hover { background: #FF7A45; }
+.ask-d { max-height: calc(100dvh - 24px); overflow-y: auto; }
+.ask-f { display: grid; gap: 14px; margin-top: 22px; }
+.fld-2 { display: grid; gap: 14px; }
+@media (min-width: 520px) { .fld-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.fld { display: grid; gap: 6px; font-size: 14px; font-weight: 600; }
+.fld input, .fld textarea { width: 100%; min-height: 48px; padding: 10px 14px; border: 2px solid var(--ink); border-radius: 14px; background: var(--white); color: var(--ink); font: 400 16px/1.4 var(--sans); }
+.fld textarea { resize: vertical; }
+.fld input:focus-visible, .fld textarea:focus-visible { outline: 3px solid var(--or); outline-offset: 1px; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.ask-f .btn { justify-self: start; margin-top: 4px; }
+.ask-f .btn[disabled] { opacity: 0.6; cursor: progress; }
+.ask-st { font-size: 16px; font-weight: 600; }
+.ask-st:empty { display: none; }
+.ask-f .small { color: var(--g); }
+.ask-f .small a { text-decoration: underline; }
+.ask-in > .ask-ok, .ask-ok { margin-top: 22px; padding: 20px 22px; border-radius: 18px; background: var(--sea); color: var(--paper); font-size: 17px; font-weight: 500; }
 .ask-tel { margin-top: 18px; font-size: 16px; color: var(--g); }
 .ask-tel a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); font-weight: 600; }

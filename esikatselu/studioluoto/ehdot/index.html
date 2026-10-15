@@ -26,7 +26,7 @@
   <link rel="icon" href="/assets/luoto/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/luoto/luoto.css?v=5">
+  <link rel="stylesheet" href="/assets/luoto/luoto.css?v=6">
 </head>
 <body class="on-light">
   <a class="skip" href="#main">Siirry sisältöön</a>
@@ -82,16 +82,24 @@
     <div class="ask-in">
       <button class="ask-x" type="button" data-close aria-label="Sulje"></button>
       <h2 class="d3" id="ask-h">Pyydä ilmainen demo</h2>
-      <p>Kerro viestissä nykyisten sivujesi osoite, mitä teette ja millä alueella. Vastaamme yhden arkipäivän sisällä, ja demo on valmis 48 tunnissa.</p>
-      <ul class="ask-o">
-        <li><a class="ask-b ask-b-or" href="mailto:ville@studioluoto.com?subject=Demopyynt%C3%B6&body=Hei%2C%0A%0Anykyiset%20sivumme%3A%20%0Ateemme%3A%20%0Aalueemme%3A%20%0A%0A"><span>Avaa sähköposti</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
-        <li><a class="ask-b" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ville%40studioluoto.com&amp;su=Demopyynt%C3%B6&amp;body=Hei%2C%0A%0Anykyiset%20sivumme%3A%20%0Ateemme%3A%20%0Aalueemme%3A%20%0A%0A" target="_blank" rel="noopener"><span>Kirjoita Gmailissa</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
-        <li><a class="ask-b" href="https://outlook.office.com/mail/deeplink/compose?to=ville%40studioluoto.com&amp;subject=Demopyynt%C3%B6&amp;body=Hei%2C%0A%0Anykyiset%20sivumme%3A%20%0Ateemme%3A%20%0Aalueemme%3A%20%0A%0A" target="_blank" rel="noopener"><span>Kirjoita Outlookissa</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
-        <li><button class="ask-b" type="button" data-copy="ville@studioluoto.com" data-done="Osoite kopioitu"><span>Kopioi osoite · ville@studioluoto.com</span></button></li>
-      </ul>
-      <p class="ask-tel">Tai soita <a href="tel:+358451035362">045 103 5362</a></p>
+      <p>Näet uuden etusivusi 48 tunnissa. Maksuton, eikä sido mihinkään. Vastaamme yhden arkipäivän sisällä.</p>
+      <form class="ask-f" action="https://formsubmit.co/ville@studioluoto.com" method="POST" data-ok="Kiitos! Demopyyntö on lähetetty. Vastaamme yhden arkipäivän sisällä." data-err="Lähetys ei onnistunut. Lähetä viesti osoitteeseen ville@studioluoto.com tai soita 045 103 5362." data-busy="Lähetetään…">
+        <div class="fld-2"><label class="fld"><span>Nimi *</span><input type="text" name="Nimi" required autocomplete="name"></label><label class="fld"><span>Yritys</span><input type="text" name="Yritys" autocomplete="organization"></label></div>
+        <div class="fld-2"><label class="fld"><span>Sähköposti *</span><input type="email" name="email" required autocomplete="email"></label><label class="fld"><span>Puhelin</span><input type="tel" name="Puhelin" autocomplete="tel"></label></div>
+        <label class="fld"><span>Nykyiset sivut</span><input type="text" name="Nykyiset sivut" autocomplete="url" placeholder="www.yrityksesi.fi"></label>
+        <label class="fld"><span>Mitä teette ja millä alueella?</span><textarea name="Viesti" rows="3"></textarea></label>
+        <input type="hidden" name="_subject" value="Demopyyntö">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="Kieli" value="fi">
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-or" type="submit"><span>Lähetä demopyyntö</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="ask-st" role="status" aria-live="polite"></p>
+        <p class="small">Käytämme tietoja vain vastataksemme sinulle. <a href="/esikatselu/studioluoto/tietosuoja/">Tietosuoja</a></p>
+      </form>
+      <p class="ask-tel">Tai soita <a href="tel:+358451035362">045 103 5362</a> · <a href="mailto:ville@studioluoto.com">ville@studioluoto.com</a></p>
     </div>
   </dialog>
-  <script src="/assets/luoto/luoto.js?v=5" defer></script>
+  <script src="/assets/luoto/luoto.js?v=6" defer></script>
 </body>
 </html>

@@ -16,7 +16,7 @@ LIVE = os.environ.get('LIVE') == '1'
 P = '' if LIVE else '/esikatselu/studioluoto'
 A = '/assets'
 L = '/assets/luoto'
-V = '5'
+V = '6'
 REPO = '/home/user/Claude-credits'
 ROOT = REPO + P
 SITE = 'https://www.studioluoto.com'
@@ -155,23 +155,34 @@ def header(key, slug=None, dark=True):
 '''
 
 
+FORM = 'https://formsubmit.co/' + MAIL
+
+
 def ask_dialog():
-    subj, body = t('Demopyyntö', 'Demo request'), t('Hei,\n\nnykyiset sivumme: \nteemme: \nalueemme: \n\n', 'Hi,\n\nour current site: \nwhat we do: \nour area: \n\n')
-    gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + quote(MAIL) + '&su=' + quote(subj) + '&body=' + quote(body)
-    outlook = 'https://outlook.office.com/mail/deeplink/compose?to=' + quote(MAIL) + '&subject=' + quote(subj) + '&body=' + quote(body)
+    f = lambda name, label, typ='text', req=False, ac='', ph='': (
+        f'<label class="fld"><span>{label}{" *" if req else ""}</span><input type="{typ}" name="{name}"{" required" if req else ""}'
+        + (f' autocomplete="{ac}"' if ac else '') + (f' placeholder="{ph}"' if ph else '') + '></label>')
     return f'''
   <dialog class="ask-d" id="ask" aria-labelledby="ask-h">
     <div class="ask-in">
       <button class="ask-x" type="button" data-close aria-label="{t('Sulje', 'Close')}"></button>
       <h2 class="d3" id="ask-h">{t('Pyydä ilmainen demo', 'Request a free demo')}</h2>
-      <p>{t('Kerro viestissä nykyisten sivujesi osoite, mitä teette ja millä alueella. Vastaamme yhden arkipäivän sisällä, ja demo on valmis 48 tunnissa.', 'Tell us your current site, what you do and where. We reply within one working day, and the demo is ready in 48 hours.')}</p>
-      <ul class="ask-o">
-        <li><a class="ask-b ask-b-or" href="{ask()}"><span>{t('Avaa sähköposti', 'Open email')}</span>{ARROW}</a></li>
-        <li><a class="ask-b" href="{esc(gmail)}" target="_blank" rel="noopener"><span>{t('Kirjoita Gmailissa', 'Write in Gmail')}</span>{ARROW}</a></li>
-        <li><a class="ask-b" href="{esc(outlook)}" target="_blank" rel="noopener"><span>{t('Kirjoita Outlookissa', 'Write in Outlook')}</span>{ARROW}</a></li>
-        <li><button class="ask-b" type="button" data-copy="{MAIL}" data-done="{t('Osoite kopioitu', 'Address copied')}"><span>{t('Kopioi osoite', 'Copy address')} · {MAIL}</span></button></li>
-      </ul>
-      <p class="ask-tel">{t('Tai soita', 'Or call')} <a href="tel:{TEL}">{TEL_H}</a></p>
+      <p>{t('Näet uuden etusivusi 48 tunnissa. Maksuton, eikä sido mihinkään. Vastaamme yhden arkipäivän sisällä.', 'You will see your new front page in 48 hours. Free, with no commitment. We reply within one working day.')}</p>
+      <form class="ask-f" action="{FORM}" method="POST" data-ok="{t('Kiitos! Demopyyntö on lähetetty. Vastaamme yhden arkipäivän sisällä.', 'Thank you! Your demo request has been sent. We will reply within one working day.')}" data-err="{t('Lähetys ei onnistunut. Lähetä viesti osoitteeseen ' + MAIL + ' tai soita ' + TEL_H + '.', 'Sending failed. Please email ' + MAIL + ' or call ' + TEL_H + '.')}" data-busy="{t('Lähetetään…', 'Sending…')}">
+        <div class="fld-2">{f('Nimi', t('Nimi', 'Name'), req=True, ac='name')}{f('Yritys', t('Yritys', 'Company'), ac='organization')}</div>
+        <div class="fld-2">{f('email', t('Sähköposti', 'Email'), 'email', True, 'email')}{f('Puhelin', t('Puhelin', 'Phone'), 'tel', ac='tel')}</div>
+        {f('Nykyiset sivut', t('Nykyiset sivut', 'Current website'), ac='url', ph=t('www.yrityksesi.fi', 'www.yourcompany.fi'))}
+        <label class="fld"><span>{t('Mitä teette ja millä alueella?', 'What do you do, and where?')}</span><textarea name="Viesti" rows="3"></textarea></label>
+        <input type="hidden" name="_subject" value="{t('Demopyyntö', 'Demo request')}">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="Kieli" value="{LANG}">
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-or" type="submit"><span>{t('Lähetä demopyyntö', 'Send demo request')}</span>{ARROW}</button>
+        <p class="ask-st" role="status" aria-live="polite"></p>
+        <p class="small">{t('Käytämme tietoja vain vastataksemme sinulle.', 'We only use your details to reply to you.')} <a href="{u('privacy')}">{t('Tietosuoja', 'Privacy')}</a></p>
+      </form>
+      <p class="ask-tel">{t('Tai soita', 'Or call')} <a href="tel:{TEL}">{TEL_H}</a> · <a href="mailto:{MAIL}">{MAIL}</a></p>
     </div>
   </dialog>'''
 
@@ -874,6 +885,8 @@ def privacy():
     else:
         sections = [(h, [p.replace('{MAIL}', MAIL).replace('{TEL_H}', TEL_H).replace('{TEL}', TEL) for p in ps]) for h, ps in PRIVACY_EN]
     body = '\n'.join(f'      <h2>{h}</h2>' + ''.join(f'<p>{p}</p>' for p in ps) for h, ps in sections).replace('info@villesaarela.com', MAIL)
+    body = body.replace('Sivustolla ei ole lomakkeita, evästeitä eikä kävijäseurantaa.', 'Demopyyntölomakkeen tiedot välitetään sähköpostiimme FormSubmit-palvelun (formsubmit.co) kautta, ja palvelu kertoo käsittelystä omassa tietosuojaselosteessaan. Sivustolla ei ole evästeitä eikä kävijäseurantaa.')
+    body = body.replace('The site has no forms, cookies or visitor tracking.', 'Details sent with the demo request form are forwarded to our email through the FormSubmit service (formsubmit.co), which describes its processing in its own privacy statement. The site has no cookies or visitor tracking.')
     return head('privacy', None, t('Tietosuoja · Studio Luoto', 'Privacy · Studio Luoto'), t('Miten Studio Luoto käsittelee henkilötietoja.', 'How Studio Luoto processes personal data.')) + header('privacy', dark=False) + f'''
   <main id="main">
     <article class="wrap doc">

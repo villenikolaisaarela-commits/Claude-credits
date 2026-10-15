@@ -32,10 +32,21 @@
       e.preventDefault(); d.showModal();
     });
     d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); });
-    const c = d.querySelector('[data-copy]');
-    if (c) c.addEventListener('click', () => {
-      const done = () => { c.querySelector('span').textContent = c.dataset.done; };
-      if (navigator.clipboard) navigator.clipboard.writeText(c.dataset.copy).then(done, () => {});
+    // The form posts through FormSubmit, so no mail app is needed
+    const f = d.querySelector('.ask-f');
+    if (f && window.fetch) f.addEventListener('submit', async e => {
+      e.preventDefault();
+      const st = f.querySelector('.ask-st'), b = f.querySelector('button[type=submit]');
+      const data = new FormData(f);
+      if (data.get('Yritys')) data.set('_subject', data.get('_subject') + ': ' + data.get('Yritys'));
+      b.disabled = true; st.textContent = f.dataset.busy;
+      try {
+        const r = await fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), { method: 'POST', headers: { Accept: 'application/json' }, body: data });
+        const j = await r.json();
+        if (!r.ok || String(j.success) !== 'true') throw new Error(j.message || r.status);
+        const ok = document.createElement('p'); ok.className = 'ask-ok'; ok.setAttribute('role', 'status'); ok.textContent = f.dataset.ok;
+        f.replaceWith(ok); ok.focus && ok.setAttribute('tabindex', '-1'); ok.focus();
+      } catch (err) { st.textContent = f.dataset.err; b.disabled = false; }
     });
   }
 
