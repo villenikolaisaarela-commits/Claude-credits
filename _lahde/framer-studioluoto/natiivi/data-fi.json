@@ -1,0 +1,365 @@
+{
+ "TRADES": [
+  "Kylpyhuoneremontit",
+  "Putki- ja linjasaneeraukset",
+  "LVI ja lämpöpumput",
+  "Sisäremontit",
+  "Julkisivut ja katot",
+  "Hirsitalojen korjaus",
+  "Keittiöt ja puusepät",
+  "Metallityö"
+ ],
+ "STICKERS": [
+  "Ei hintaa",
+  "Ei kuvia kohteista",
+  "Tarjouspyyntö piilossa",
+  "Hidas puhelimella",
+  "Ei näy Googlessa"
+ ],
+ "DO": [
+  [
+   "Verkkosivut",
+   "Rakennamme sivut, jotka näyttävät yhtä laadukkailta kuin työsi. Tehdään yrityksellesi alusta asti, ei valmispohjasta."
+  ],
+  [
+   "Viesti",
+   "Kirjoitamme tekstit niin, että asiakas ymmärtää heti, mitä teet, missä ja mitä se suunnilleen maksaa."
+  ],
+  [
+   "Löydettävyys",
+   "Palvelut ja paikkakunnat omille sivuilleen, jotta Google ja tekoälyhaut tietävät, mitä teet ja missä."
+  ],
+  [
+   "Tarjouspyyntö",
+   "Lomake, joka kysyy heti oikeat asiat. Saat pyynnön, josta voit laskea hinnan ilman takaisinsoittoa."
+  ],
+  [
+   "Luottamus",
+   "Kohteet, takuu, vakuutukset ja tekijät esille, jotta asiakas valitsee sinut eikä halvinta."
+  ]
+ ],
+ "FOR": [
+  [
+   "Remonttiyritykset",
+   "Kohteet esille ja tarjouspyynnöt oikeilta asiakkailta.",
+   "tile"
+  ],
+  [
+   "LVI ja talotekniikka",
+   "Palvelut, alueet ja päivystys selkeästi esillä.",
+   "pipe"
+  ],
+  [
+   "Rakentajat ja puusepät",
+   "Työ näyttää sivuilla yhtä hyvältä kuin paikan päällä.",
+   "house"
+  ]
+ ],
+ "STEPS": [
+  [
+   "Lähetä viesti.",
+   "Linkki nykyisiin sivuihisi ja pari lausetta riittää. Siihen menee kaksi minuuttia.",
+   "or",
+   "msg"
+  ],
+  [
+   "Saat luonnoksen 48 tunnissa.",
+   "Toimiva etusivu omassa linkissään. Avaat sen puhelimella ja näytät sen kollegoillesi. Maksuton, eikä sido mihinkään.",
+   "sea",
+   "clock"
+  ],
+  [
+   "Käydään muutokset läpi.",
+   "Hyväksyt suunnan ja kerrot, mitä haluat muuttaa. Muutamme kaiken, kunnes sivut ovat juuri oikein.",
+   "ink",
+   "pins"
+  ],
+  [
+   "Sivut julki, ja pidämme niistä huolen.",
+   "Julkaisemme sivut omaan osoitteeseesi. Sen jälkeen ylläpidämme, päivitämme ja kehitämme niitä, ja kaikki sisältyy kuukausihintaan.",
+   "sand",
+   "key"
+  ]
+ ],
+ "ASKS": [
+  [
+   "Hinta",
+   "Paljonko tämä suunnilleen maksaa?",
+   "Hinnan suunta ja kotitalousvähennys näkyvät."
+  ],
+  [
+   "Kohteet",
+   "Ovatko he tehneet tällaista ennen?",
+   "Valmiit kohteet kuvineen ja tietoineen."
+  ],
+  [
+   "Luottamus",
+   "Mitä jos jokin menee vikaan?",
+   "Takuu ja vakuutukset kerrotaan selvästi."
+  ],
+  [
+   "Alue",
+   "Tulevatko he tänne asti?",
+   "Palvelualue ja paikkakunnat omilla sivuillaan."
+  ],
+  [
+   "Aikataulu",
+   "Milloin he ehtisivät aloittaa?",
+   "Seuraava vapaa aloitus näkyy etusivulla."
+  ],
+  [
+   "Tekijät",
+   "Keitä meille tulee töihin?",
+   "Tekijät nimillä ja kasvoilla."
+  ],
+  [
+   "Tarjous",
+   "Miten tarjous pyydetään?",
+   "Lyhyt lomake jokaisella sivulla."
+  ]
+ ],
+ "PAINS": [
+  [
+   "Sivuilta ei selviä heti, mitä teet ja missä.",
+   "Ensimmäinen lause kertoo palvelut ja alueen. Asiakas tietää heti, onko hän oikeassa paikassa."
+  ],
+  [
+   "Valmiita kohteita ei näy.",
+   "Kohteet kuvineen ja tietoineen: mitä tehtiin, missä ja kauanko se kesti."
+  ],
+  [
+   "Hinnasta ei kerrota mitään.",
+   "Hinnan suunta ja kotitalousvähennys näkyvät, joten tarjousta pyytävät ne, joille hinta sopii."
+  ],
+  [
+   "Tarjouspyyntö on piilossa.",
+   "Tarjouspyyntö on yhden napautuksen päässä joka sivulta."
+  ],
+  [
+   "Sivut ovat hitaat puhelimella.",
+   "Sivut aukeavat nopeasti, ja kaikki toimii peukalolla."
+  ],
+  [
+   "Google ei ymmärrä, mitä teet.",
+   "Jokaisella palvelulla ja alueella on oma sivunsa, joten löydyt oikeista hauista."
+  ],
+  [
+   "Takuu ja tekijät eivät näy.",
+   "Takuu, vakuutukset ja tekijät esillä. Luottamus syntyy ennen ensimmäistä puhelua."
+  ],
+  [
+   "Kukaan ei seuraa tuloksia.",
+   "Search Console ja yhteydenottojen seuranta kuntoon. Näet, mistä tarjouspyynnöt tulevat."
+  ]
+ ],
+ "PERKS": [
+  [
+   "Yksi ihminen, joka tuntee yrityksesi",
+   "Ville vastaa itse. Ei tikettijärjestelmää, ei välikäsiä, eikä sinun tarvitse selittää asioita joka kerta alusta."
+  ],
+  [
+   "Ei kirjautumisia eikä opeteltavaa",
+   "Sinun ei tarvitse oppia julkaisujärjestelmää. Lähetät viestin tai kuvan puhelimella, ja muutos tehdään."
+  ],
+  [
+   "Katsaus ja parannusehdotus",
+   "Joka kuukausi saat luvut ja yhden konkreettisen ehdotuksen siitä, mitä kannattaa tehdä seuraavaksi."
+  ],
+  [
+   "Arvostelut kasvuun",
+   "Saat valmiin arvostelulinkin ja QR-kortin, jolla tyytyväinen asiakas jättää Google-arvostelun suoraan työmaalta."
+  ],
+  [
+   "Sesonki mukaan",
+   "Ennen sesonkia nostamme esiin sen, mitä silloin myydään: lämpöpumput syksyllä, julkisivut ja terassit keväällä."
+  ],
+  [
+   "Ei piilokuluja",
+   "Kaikki hintaan sisältyvä on listattu. Jos jokin maksaa erikseen, kerromme sen ennen kuin teemme mitään."
+  ]
+ ],
+ "REQ": [
+  [
+   "Valmistui uusi kohde, tässä kuvat.",
+   "Kohdesivu kuvineen ja tietoineen julki.",
+   "big"
+  ],
+  [
+   "Aloitamme myös saunaremontit.",
+   "Uusi palvelusivu, ja Google-yritysprofiili päivitetty.",
+   "big"
+  ],
+  [
+   "Puhelinnumero vaihtui.",
+   "Uusi numero kaikkialle, myös Googleen.",
+   "small"
+  ],
+  [
+   "Olemme kiinni heinäkuun.",
+   "Lomailmoitus sivuille ja poikkeusaukiolot profiiliin.",
+   "small"
+  ],
+  [
+   "Tarjouspyyntöjä tulee liian kaukaa.",
+   "Palvelualue ja paikkakuntasivut tarkennettu.",
+   "big"
+  ],
+  [
+   "Haluan, että lomakkeella voi lähettää kuvia.",
+   "Kuvien liittäminen lisätty tarjouspyyntöön.",
+   "small"
+  ]
+ ],
+ "YEAR1": [
+  [
+   "Kuukausi 1",
+   "Sivut julki.",
+   "Search Console, yhteydenottojen seuranta ja Google-yritysprofiili kuntoon heti alusta."
+  ],
+  [
+   "Kuukaudet 2–3",
+   "Ensimmäiset luvut.",
+   "Katsomme, mistä yhteydenotot tulevat ja missä kävijät putoavat pois, ja korjaamme sen, mikä jarruttaa."
+  ],
+  [
+   "Kuukaudet 4–6",
+   "Lisää näkyvyyttä.",
+   "Uusia kohteita sekä palvelu- ja paikkakuntasivuja sinne, mistä haluat lisää töitä."
+  ],
+  [
+   "Kuukaudet 7–12",
+   "Hiotaan sitä, mikä toimii.",
+   "Sesonkisivut, lisää arvosteluja ja lomake, joka kysyy juuri oikeat asiat."
+  ]
+ ],
+ "INCLUDED": [
+  "Suunnittelu ja toteutus, enintään 8 sivua",
+  "Tekstit ja kuvien käsittely",
+  "Ylläpito, hosting, SSL ja varmuuskopiot",
+  "Vastaus viesteihin yhden arkipäivän sisällä",
+  "Pienet muutokset kahdessa arkipäivässä",
+  "Yksi isompi päivitys kuussa, esimerkiksi uusi kohde tai palvelusivu",
+  "Löydettävyys: sitemap, Search Console sekä palvelu- ja paikkakuntasivut",
+  "Google-yritysprofiilin optimointi",
+  "Arvostelulinkki ja QR-kortti Google-arvostelujen keräämiseen",
+  "Tarjouspyyntölomake ja yhteydenottojen seuranta",
+  "Kuukausikatsaus: montako yhteydenottoa tuli, mistä ja mitä seuraavaksi kannattaa tehdä"
+ ],
+ "EXCLUDED": [
+  "Mainonta, kuten Google Ads ja Meta",
+  "Logo ja ilme",
+  "Valokuvaus paikan päällä",
+  "Verkkokauppa",
+  "Lisäsivut yli kahdeksan sivun"
+ ],
+ "FAQ": [
+  [
+   "Miten tämä eroaa tavallisesta mainostoimistosta?",
+   "Tavallinen toimisto tekee sivut, laskuttaa ja siirtyy seuraavaan projektiin. Me jäämme: ylläpidämme sivuja, teemme muutokset ja kehitämme niitä joka kuukausi, jotta niiden kautta tulee töitä. Ja näet demon ennen kuin maksat mitään."
+  ],
+  [
+   "Pitääkö minun päivittää sivuja itse?",
+   "Ei. Kerrot vain, mitä haluat muuttaa: viestillä, kuvalla tai puhelulla. Sinun ei tarvitse kirjautua mihinkään eikä opetella julkaisujärjestelmää."
+  ],
+  [
+   "Kuinka nopeasti vastaatte?",
+   "Yhden arkipäivän sisällä, aina. Pienet muutokset ovat sivuilla kahdessa arkipäivässä, ja isommat tehdään kuukauden päivityksessä."
+  ],
+  [
+   "Ehdinkö tähän kesken työmaiden?",
+   "Ehdit. Meille riittää linkki ja muutama lause. Demon teemme me, ja voit katsoa sen puhelimella illalla."
+  ],
+  [
+   "Onko demo vain kuva?",
+   "Ei. Demo on toimiva etusivu omassa linkissään. Voit avata sen puhelimella ja tietokoneella ja näyttää sen kollegoillesi."
+  ],
+  [
+   "Mitä demo maksaa?",
+   "Ei mitään. Demo on maksuton, eikä se sido mihinkään."
+  ],
+  [
+   "Mitä sivut maksavat?",
+   "199 € kuussa + alv, eikä aloitusmaksua ole. Voit myös maksaa vuoden kerralla, 1 990 € + alv, jolloin kaksi kuukautta on kaupan päälle. Hintaan sisältyy suunnittelu, toteutus, ylläpito, muutokset ja päivitykset."
+  ],
+  [
+   "Miksi kuukausihinta eikä kertamaksu?",
+   "Sivut eivät ole valmiit julkaisupäivänä. Kuukausihinnalla ne pysyvät ajan tasalla ja paranevat: uudet kohteet, palvelut ja korjaukset tehdään ilman erillisiä tarjouksia, eikä sinun tarvitse maksaa tuhansia euroja kerralla."
+  ],
+  [
+   "Mitä jos haluan lopettaa?",
+   "Vähimmäiskesto on 12 kuukautta, ja sen jälkeen voit irtisanoa sopimuksen kuukauden varoitusajalla. Domain on aina sinun. Sivut voit lunastaa omaksesi 990 eurolla, ja 24 kuukauden jälkeen ne siirtyvät sinulle maksutta."
+  ],
+  [
+   "Miten tarjouspyyntötakuu toimii?",
+   "Jos sivujen tarjouspyyntölomakkeen kautta ei tule yhtään tarjouspyyntöä kolmen ensimmäisen kuukauden aikana julkaisusta, seuraavat kolme kuukautta ovat ilmaisia. Seurannasta näet itse, mitä lomakkeen kautta tulee."
+  ],
+  [
+   "Kauanko projekti kestää?",
+   "Yleensä kahdesta neljään viikkoa. Demo on valmis 48 tunnissa, ja aikataulu sovitaan ennen aloitusta."
+  ],
+  [
+   "Meillä ei ole hyviä kuvia.",
+   "Puhelimella otetut kuvat kelpaavat alkuun. Käsittelemme ne niin, että työ näyttää sivuilla samalta kuin todellisuudessa."
+  ],
+  [
+   "Mitä julkaisun jälkeen tapahtuu?",
+   "Pienet muutokset teemme kahdessa arkipäivässä, ja kerran kuussa teemme isomman päivityksen, kuten uuden kohteen tai palvelusivun. Saat joka kuukausi lyhyen katsauksen: montako yhteydenottoa tuli, mistä ja mitä seuraavaksi kannattaa tehdä."
+  ],
+  [
+   "Mitä saan käteeni?",
+   "Valmiit sivut omassa osoitteessasi ja niiden jatkuvan ylläpidon ja kehityksen: suunnittelun, tekstit, kuvien käsittelyn, toimivuuden puhelimella, löydettävyyden ja Google-yritysprofiilin kunnostuksen. Domain on aina sinun."
+  ],
+  [
+   "Kenen kanssa teen töitä?",
+   "Ville Saarelan. Hän suunnittelee, kirjoittaa ja tekee sivut itse, ilman välikäsiä, ja vastaa itse jokaiseen viestiin."
+  ],
+  [
+   "Ovatko työt oikeita asiakkaita?",
+   "Osa töistä on konsepteja: kuvitteellisia yrityksiä, joilla näytämme, mitä alan sivut voivat tehdä. Se kerrotaan jokaisen työn sivulla."
+  ]
+ ],
+ "VS": [
+  [
+   "Iso lasku ennen kuin sivut ovat valmiit.",
+   "Julkaisun jälkeen hiljaista. Viesteihin vastataan, jos ehditään.",
+   "Jokainen muutos on uusi tarjous ja uusi lasku.",
+   "Sivut vanhenevat, koska kenelläkään ei ole aikaa päivittää niitä.",
+   "Kukaan ei kerro, tuleeko sivujen kautta töitä."
+  ],
+  [
+   "0 € aloitusmaksu. Näet demon ennen kuin päätät mitään.",
+   "Vastaamme aina yhden arkipäivän sisällä.",
+   "Muutokset kuuluvat hintaan. Pienet ovat sivuilla kahdessa arkipäivässä.",
+   "Sivut paranevat joka kuukausi: uudet kohteet, palvelut ja korjaukset.",
+   "Kuukausikatsaus kertoo, montako yhteydenottoa tuli ja mistä."
+  ]
+ ],
+ "REQ_TAG": {
+  "small": "2 arkipäivää",
+  "big": "Kuukauden päivitys"
+ },
+ "TERMS": [
+  [
+   "12 kk",
+   "vähimmäiskesto, sen jälkeen irtisanominen kuukauden varoitusajalla"
+  ],
+  [
+   "Domain",
+   "on aina sinun"
+  ],
+  [
+   "990 €",
+   "lunastat sivut omaksesi, kun 12 kuukautta on täynnä"
+  ],
+  [
+   "24 kk",
+   "jälkeen sivut siirtyvät sinulle maksutta"
+  ]
+ ],
+ "PR": {
+  "m": "199 €",
+  "y": "1 990 €",
+  "b": "990 €",
+  "mo": "199 €/kk"
+ }
+}
