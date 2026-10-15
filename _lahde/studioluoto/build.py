@@ -16,7 +16,7 @@ LIVE = os.environ.get('LIVE') == '1'
 P = '' if LIVE else '/esikatselu/studioluoto'
 A = '/assets'
 L = '/assets/luoto'
-V = '6'
+V = '7'
 REPO = '/home/user/Claude-credits'
 ROOT = REPO + P
 SITE = 'https://www.studioluoto.com'

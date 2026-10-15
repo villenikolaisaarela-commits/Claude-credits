@@ -41,7 +41,10 @@
       if (data.get('Yritys')) data.set('_subject', data.get('_subject') + ': ' + data.get('Yritys'));
       b.disabled = true; st.textContent = f.dataset.busy;
       try {
-        const r = await fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), { method: 'POST', headers: { Accept: 'application/json' }, body: data });
+        const ac = window.AbortController ? new AbortController() : null;
+        const timer = ac && setTimeout(() => ac.abort(), 20000);
+        const r = await fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), { method: 'POST', headers: { Accept: 'application/json' }, body: data, signal: ac && ac.signal });
+        clearTimeout(timer);
         const j = await r.json();
         if (!r.ok || String(j.success) !== 'true') throw new Error(j.message || r.status);
         const ok = document.createElement('p'); ok.className = 'ask-ok'; ok.setAttribute('role', 'status'); ok.textContent = f.dataset.ok;
