@@ -69,6 +69,10 @@ def head(path, title, desc, extra=''):
   <meta property="og:title" content="{esc(title)}">
   <meta property="og:description" content="{esc(desc)}">
   <meta property="og:url" content="{SITE}{path}">
+  <meta property="og:image" content="{SITE}{L}/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Studio Luoto. Verkkosivut, jotka tuovat lisää tarjouspyyntöjä.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="{L}/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="{A}/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -474,4 +478,12 @@ for i, w in enumerate(WORKS):
     write(f'projektit/{w["slug"]}/index.html', project(i, w))
 write('tietosuoja/index.html', privacy())
 write('404.html', notfound())
+if LIVE:
+    urls = ['/', '/tyot/'] + [f'/projektit/{w["slug"]}/' for w in WORKS] + ['/tietosuoja/']
+    write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(f'  <url><loc>{SITE}{u}</loc><lastmod>2026-10-15</lastmod></url>' for u in urls) + '\n</urlset>\n')
+    write('robots.txt', f'User-agent: *\nAllow: /\nDisallow: /esikatselu/\n\nSitemap: {SITE}/sitemap.xml\n')
+    write('CNAME', 'www.studioluoto.com\n')
+    # Pages from the old site send their visitors to the matching place here
+    for old, new in (('hinnat', '/#palvelu'), ('minusta', '/#kysymykset'), ('prosessi', '/#prosessi')):
+        write(f'{old}/index.html', f'<!doctype html><html lang="fi"><head><meta charset="utf-8"><title>Studio Luoto</title><meta name="robots" content="noindex"><link rel="canonical" href="{SITE}{new}"><meta http-equiv="refresh" content="0; url={new}"></head><body><a href="{new}">Studio Luoto</a></body></html>\n')
 print('ok', 'live' if LIVE else 'preview')

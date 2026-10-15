@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /esikatselu/
 
-Sitemap: https://www.villesaarela.com/sitemap.xml
+Sitemap: https://www.studioluoto.com/sitemap.xml
