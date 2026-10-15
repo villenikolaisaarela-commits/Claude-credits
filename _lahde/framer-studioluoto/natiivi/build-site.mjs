@@ -73,7 +73,14 @@ try {
   const upCache = new Map()
   const upUrl = async p => { if (!upCache.has(p)) upCache.set(p, await f.uploadImage({ image: AMAP[p] || (LIVE + p), name: p.split('/').slice(-3).join('-') })); return upCache.get(p) }
   // an image with its alt text in the page's language
-  async function pic(p, alt) { const a = await upUrl(p); try { return a.cloneWithAttributes({ altText: alt }) } catch (e) { return a } }
+  // a frame showing an image, with alt text in the page's language when Framer accepts it
+  async function picFrame(parent, p, alt, a) {
+    const asset = await upUrl(p)
+    let withAlt = null
+    try { withAlt = asset.cloneWithAttributes({ altText: alt }) } catch (e) {}
+    if (withAlt) { try { return await F(parent, { ...a, backgroundImage: withAlt }) } catch (e) {} }
+    return F(parent, { ...a, backgroundImage: asset })
+  }
   const IMG = {
     kartta: await upUrl('/assets/luoto/kartta.svg'),
     logo: await upUrl('/assets/luoto/luoto-vaaka-musta.svg'), logoW: await upUrl('/assets/luoto/luoto-vaaka-valkoinen.svg'),
@@ -117,7 +124,9 @@ try {
   // ---------- layer helpers (links are set after the layer exists: Framer drops a link given at creation) ----------
   async function F(parent, a = {}) {
     const { link, ...rest } = a
-    const n = await f.createFrameNode({ position: 'relative', width: '100%', height: 'fit-content', layout: 'stack', stackDirection: 'vertical', stackAlignment: 'start', stackDistribution: 'start', gap: '0px', backgroundColor: null, ...(GRIDS.has(parent) ? CELL : {}), ...rest }, parent)
+    let n
+    try { n = await f.createFrameNode({ position: 'relative', width: '100%', height: 'fit-content', layout: 'stack', stackDirection: 'vertical', stackAlignment: 'start', stackDistribution: 'start', gap: '0px', backgroundColor: null, ...(GRIDS.has(parent) ? CELL : {}), ...rest }, parent) }
+    catch (e) { throw new Error(`frame "${rest.name}" (${Object.keys(rest).join(',')}): ${e.message}`) }
     if (link) await f.setAttributes(n.id, { link, linkOpenInNewTab: link.startsWith('http') })
     return n
   }
@@ -269,7 +278,9 @@ try {
     await f.setAttributes(hdr.id, { position: 'fixed', top: '14px', left: '0px', right: '0px', width: null })
     const pillNav = await row(hdr.id, { name: 'Valikko', maxWidth: '1180px', height: '64px', gap: '20px', padding: pad4(0, 10, 0, 24), borderRadius: '999px', backgroundColor: 'rgba(244, 241, 234, 0.94)', border: { width: '1px', color: C.line, style: 'solid' } })
     const logoBox = await row(pillNav.id, { name: 'Logo', width: '1fr', link: route('home', L) })
-    await F(logoBox.id, { name: 'Studio Luoto', width: '140px', height: '21px', backgroundImage: IMG.logo, layout: null })
+    const logo = await F(logoBox.id, { name: 'Studio Luoto', width: '140px', height: '21px', backgroundImage: IMG.logo, layout: null })
+    ov(logo.id, null, { width: '108px', height: '16px' })
+    ov(pillNav.id, null, { gap: '10px', padding: '0px 8px 0px 16px' })
     const navLinks = await row(pillNav.id, { name: 'Linkit', width: 'fit-content', gap: '30px' })
     ov(navLinks.id, { visible: false }, { visible: false })
     for (const [label, k] of NAV()) {
@@ -349,7 +360,7 @@ try {
     ov(g.id, { gap: '40px 24px' }, { gap: '40px' })
     for (const w of ws) {
       const tile = await F(g.id, { name: w.name, gap: '18px', link: route('project', L, w.slug) })
-      await F(tile.id, { name: 'Kansikuva', backgroundImage: await pic(`/assets/img/projektit/${w.slug}/cover.webp`, `${w.name}: ${t('sivuston etusivu', 'the site’s front page')}`), aspectRatio: 1.6, height: null, layout: null, borderRadius: '20px', border: { width: '2px', color: C.ink, style: 'solid' }, overflow: 'hidden' })
+      await picFrame(tile.id, `/assets/img/projektit/${w.slug}/cover.webp`, `${w.name}: ${t('sivuston etusivu', 'the site’s front page')}`, { name: 'Kansikuva', aspectRatio: 1.6, height: null, layout: null, borderRadius: '20px', border: { width: '2px', color: C.ink, style: 'solid' }, overflow: 'hidden' })
       const r = await row(tile.id, { name: 'Tiedot', stackAlignment: 'start', stackDistribution: 'space-between', gap: '16px' })
       const tx = await F(r.id, { name: 'Nimi', width: '1fr', gap: '4px' })
       await T(tx.id, w.name, TS.h4(C.ink))
@@ -392,8 +403,8 @@ try {
     await pill(cn.id, t('Konsepti', 'Concept'), C.or, C.ink)
     const ct = await T(cn.id, w.concept, TS.body([16, 16, 15], C.g), { width: '1fr', maxWidth: '760px' }); ov(ct.id, null, { width: '100%' })
     // pictures and text
-    const fig = async (parent, p, alt, ratio = 1.6, name = 'Kuva') => F(parent, { name, backgroundImage: await pic(p, alt), aspectRatio: ratio, height: null, layout: null, borderRadius: '20px', border: { width: '2px', color: C.ink, style: 'solid' }, overflow: 'hidden' })
-    const picBand = async (name, gapTop = 56) => { const x = await section(name, {}, [gapTop, gapTop, 40]); return x.inner }
+    const fig = async (parent, p, alt, ratio = 1.6, name = 'Kuva') => picFrame(parent, p, alt, { name, aspectRatio: ratio, height: null, layout: null, borderRadius: '20px', border: { width: '2px', color: C.ink, style: 'solid' }, overflow: 'hidden' })
+    const picBand = async (name, gapTop = 56) => { const x = await section(name, {}, [gapTop, gapTop, 40]); return x.inner.id }
     await fig(await picBand(t('Etusivu', 'Front page')), `${b}/cs/koti.webp`, `${sh}: ${t('etusivu', 'front page')}`)
     const sec = async (title, fill) => {
       const { inner: si } = await section(title, {}, [104, 80, 64])
@@ -828,11 +839,11 @@ try {
       await gap(q.id, 22)
       await T(q.id, '“Ville made a site that gets people excited about BuffBird even before launch.”', st('Quote', { tag: 'p', font: 'serif', size: [56, 44, 30], lh: '1.1em', ls: '-0.02em' }), { maxWidth: '900px' })
       await gap(q.id, 32)
-      const fc = await row(q.id, { name: 'Lähde', gap: '14px', width: 'fit-content' })
+      const fc = await row(q.id, { name: 'Lähde', gap: '14px' })
       await F(fc.id, { name: 'Kuva', width: '52px', height: '52px', borderRadius: '50%', backgroundImage: IMG.valtteri, layout: null })
-      const ft = await F(fc.id, { name: 'Nimi', width: 'fit-content' })
-      await T(ft.id, 'Valtteri Viitala', TS.body([15, 15, 15], C.ink, 'left', 6), { width: 'fit-content' })
-      await T(ft.id, 'CEO, BuffBird Oy. Translated from Finnish.', TS.body([15, 15, 15], C.g), { width: 'fit-content' })
+      const ft = await F(fc.id, { name: 'Nimi', width: '1fr' })
+      await T(ft.id, 'Valtteri Viitala', TS.body([15, 15, 15], C.ink, 'left', 6))
+      await T(ft.id, 'CEO, BuffBird Oy. Translated from Finnish.', TS.body([15, 15, 15], C.g))
       await gap(inner.id, 64)
       const b = await row(inner.id, { name: 'Työt-kaista', stackDistribution: 'space-between', gap: '20px 32px', stackWrapEnabled: true, padding: pad4(30, 0), border: { width: '1px 0px 1px 0px', color: C.line, style: 'solid' } })
       ov(b.id, null, { stackDirection: 'vertical', stackAlignment: 'start' })

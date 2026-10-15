@@ -30,7 +30,7 @@ export default function Liukurivi(props) {
     )
     return (
         <div style={{ width: "100%", display: "flex", overflow: "hidden", WebkitMaskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)", maskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)" }}>
-            <style>{FONTS + "@keyframes luoto-marq{to{transform:translateX(-100%)}}@media (prefers-reduced-motion: reduce){ul{animation:none!important}}"}</style>
+            <style dangerouslySetInnerHTML={{ __html: FONTS + "@keyframes luoto-marq{to{transform:translateX(-100%)}}@media (prefers-reduced-motion: reduce){ul{animation:none!important}}" }} />
             {row(false)}
             {row(true)}
         </div>
@@ -127,7 +127,7 @@ const CSS = FONTS + \`
 export default function Kysymykset(props) {
     return (
         <div className="ukk" style={{ width: "100%" }}>
-            <style>{CSS}</style>
+            <style dangerouslySetInnerHTML={{ __html: CSS }} />
             {props.kysymykset.map((k, i) => (
                 <details key={i}>
                     <summary><span>{k.kysymys}</span><i aria-hidden="true" /></summary>
@@ -221,7 +221,7 @@ export default function DemoNappi(p) {
     const cls = "dn-b " + (p.tyyli === "oranssi" ? "dn-or" : "dn-ink" + (p.tummaVarjo ? " dn-dk" : ""))
     return (
         <>
-            <style>{CSS}</style>
+            <style dangerouslySetInnerHTML={{ __html: CSS }} />
             <button type="button" className={cls} onClick={open}><span>{p.teksti}</span>{ARROW}</button>
             <dialog ref={d} className="dn-d" aria-label={p.otsikko} onClick={(e) => { if (e.target === d.current) d.current.close() }}>
                 <div className="dn-in">
