@@ -15,7 +15,7 @@ LIVE = os.environ.get('LIVE') == '1'
 P = '' if LIVE else '/esikatselu/studioluoto'
 A = '/assets'
 L = '/assets/luoto'
-V = '2'
+V = '3'
 REPO = '/home/user/Claude-credits'
 ROOT = REPO + P
 SITE = 'https://www.studioluoto.com'
@@ -82,7 +82,7 @@ def head(path, title, desc, extra=''):
 '''
 
 
-NAV = [('Palvelu', '/#palvelu'), ('Näin se toimii', '/#prosessi'), ('Työt', '/tyot/'), ('Kysymykset', '/#kysymykset')]
+NAV = [('Palvelu', '/#palvelu'), ('Näin se toimii', '/#prosessi'), ('Hinnat', '/#hinnat'), ('Työt', '/tyot/'), ('Kysymykset', '/#kysymykset')]
 
 
 def header(dark=True):
@@ -113,7 +113,7 @@ def footer():
       <div class="ftr-grid">
         <div><p class="lab">Yhteys</p><ul><li><a href="mailto:{MAIL}">{MAIL}</a></li><li><a href="tel:{TEL}">{TEL_H}</a></li></ul></div>
         <div><p class="lab">Sivut</p><ul>{''.join(f'<li><a href="{P}{h}">{t}</a></li>' for t, h in NAV)}</ul></div>
-        <div><p class="lab">Studio</p><ul><li>Isosaarentie 10, 00840 Helsinki</li><li><a href="{P}/tietosuoja/">Tietosuoja</a></li></ul></div>
+        <div><p class="lab">Studio</p><ul><li>Isosaarentie 10, 00840 Helsinki</li><li><a href="{P}/tietosuoja/">Tietosuoja</a></li><li><a href="{P}/ehdot/">Sopimusehdot</a></li></ul></div>
       </div>
       <img class="ftr-word" src="{L}/luoto-vaaka-valkoinen.svg" width="968" height="145" alt="" loading="lazy" decoding="async">
       <div class="ftr-bot"><p>© 2026 Studio Luoto · Ville Saarela, Y-tunnus {YT}</p><a href="#top">Ylös ↑</a></div>
@@ -148,7 +148,7 @@ STEPS = [
     ('Lähetä viesti.', 'Linkki nykyisiin sivuihisi ja pari lausetta riittää. Siihen menee kaksi minuuttia.', 'or', 'msg'),
     ('Saat luonnoksen 48 tunnissa.', 'Toimiva etusivu omassa linkissään. Avaat sen puhelimella ja näytät sen kollegoillesi. Maksuton, eikä sido mihinkään.', 'sea', 'clock'),
     ('Käydään muutokset läpi.', 'Hyväksyt suunnan ja kerrot, mitä haluat muuttaa. Muutamme kaiken, kunnes sivut ovat juuri oikein.', 'ink', 'pins'),
-    ('Sivut siirretään sinulle.', 'Julkaisemme sivut omaan osoitteeseesi. Sivut ja domain ovat sinun, eikä kuukausimaksuja ole.', 'sand', 'key'),
+    ('Sivut julki, ja pidämme niistä huolen.', 'Julkaisemme sivut omaan osoitteeseesi. Sen jälkeen ylläpidämme ja päivitämme niitä, ja kaikki sisältyy kuukausihintaan.', 'sand', 'key'),
 ]
 
 ASKS = [
@@ -172,16 +172,39 @@ PAINS = [
     ('Kukaan ei seuraa tuloksia.', 'Search Console ja yhteydenottojen seuranta kuntoon. Näet, mistä tarjouspyynnöt tulevat.'),
 ]
 
+PRICE, YEAR, BUYOUT = '199', '1\u00a0990', '990'
+INCLUDED = [
+    'Suunnittelu ja toteutus, enintään 8 sivua',
+    'Tekstit ja kuvien käsittely',
+    'Ylläpito, hosting, SSL ja varmuuskopiot',
+    'Pienet muutokset kahdessa arkipäivässä',
+    'Yksi isompi päivitys kuussa, esimerkiksi uusi kohde tai palvelusivu',
+    'Löydettävyys: sitemap, Search Console sekä palvelu- ja paikkakuntasivut',
+    'Google-yritysprofiilin optimointi',
+    'Tarjouspyyntölomake ja yhteydenottojen seuranta',
+    'Kuukausikatsaus: montako yhteydenottoa tuli ja mistä',
+]
+EXCLUDED = ['Mainonta, kuten Google Ads ja Meta', 'Logo ja ilme', 'Valokuvaus paikan päällä', 'Verkkokauppa', 'Lisäsivut yli kahdeksan sivun']
+TERMS = [
+    ('12 kk', 'vähimmäiskesto, sen jälkeen irtisanominen kuukauden varoitusajalla'),
+    ('Domain', 'on aina sinun'),
+    (f'{BUYOUT} €', 'lunastat sivut omaksesi, kun 12 kuukautta on täynnä'),
+    ('24 kk', 'jälkeen sivut siirtyvät sinulle maksutta'),
+]
+
 FAQ = [
     ('Miten tämä eroaa tavallisesta mainostoimistosta?', 'Sivut ovat hienot, mutta lähtökohta on se, mitä asiakkaasi kysyvät ennen tarjouspyyntöä. Teemme sivut vastaamaan niihin ja tuomaan yhteydenottoja. Ja näet demon ennen kuin maksat mitään.'),
     ('Ehdinkö tähän kesken työmaiden?', 'Ehdit. Meille riittää linkki ja muutama lause. Demon teemme me, ja voit katsoa sen puhelimella illalla.'),
     ('Onko demo vain kuva?', 'Ei. Demo on toimiva etusivu omassa linkissään. Voit avata sen puhelimella ja tietokoneella ja näyttää sen kollegoillesi.'),
     ('Mitä demo maksaa?', 'Ei mitään. Demo on maksuton, eikä se sido mihinkään.'),
-    ('Mitä sivut maksavat?', 'Kiinteä hinta, jonka kerromme demon jälkeen, kun tiedämme, mitä tarvitset. Se ei muutu matkalla, eikä kuukausimaksuja ole.'),
+    ('Mitä sivut maksavat?', '199 € kuussa + alv, eikä aloitusmaksua ole. Voit myös maksaa vuoden kerralla, 1 990 € + alv, jolloin kaksi kuukautta on kaupan päälle. Hintaan sisältyy suunnittelu, toteutus, ylläpito ja päivitykset.'),
+    ('Miksi kuukausihinta eikä kertamaksu?', 'Sivut eivät ole valmiit julkaisupäivänä. Kuukausihinnalla ne pysyvät ajan tasalla: uudet kohteet, palvelut ja korjaukset tehdään ilman erillisiä tarjouksia, eikä sinun tarvitse maksaa tuhansia euroja kerralla.'),
+    ('Mitä jos haluan lopettaa?', 'Vähimmäiskesto on 12 kuukautta, ja sen jälkeen voit irtisanoa sopimuksen kuukauden varoitusajalla. Domain on aina sinun. Sivut voit lunastaa omaksesi 990 eurolla, ja 24 kuukauden jälkeen ne siirtyvät sinulle maksutta.'),
+    ('Miten tarjouspyyntötakuu toimii?', 'Jos sivujen tarjouspyyntölomakkeen kautta ei tule yhtään tarjouspyyntöä kolmen ensimmäisen kuukauden aikana julkaisusta, seuraavat kolme kuukautta ovat ilmaisia. Seurannasta näet itse, mitä lomakkeen kautta tulee.'),
     ('Kauanko projekti kestää?', 'Yleensä kahdesta neljään viikkoa. Demo on valmis 48 tunnissa, ja aikataulu sovitaan ennen aloitusta.'),
     ('Meillä ei ole hyviä kuvia.', 'Puhelimella otetut kuvat kelpaavat alkuun. Käsittelemme ne niin, että työ näyttää sivuilla samalta kuin todellisuudessa.'),
-    ('Mitä julkaisun jälkeen tapahtuu?', 'Pienet muutokset teemme nopeasti. Uudet kohteet ja palvelut lisätään, kun niitä tulee, ja näet Search Consolesta, miten sivut löytyvät.'),
-    ('Mitä saan käteeni?', 'Valmiit sivut omassa osoitteessasi: suunnittelun, tekstit, kuvien käsittelyn, toimivuuden puhelimella ja Google-perusasiat. Sivut ja domain ovat sinun.'),
+    ('Mitä julkaisun jälkeen tapahtuu?', 'Pienet muutokset teemme kahdessa arkipäivässä, ja kerran kuussa teemme isomman päivityksen, kuten uuden kohteen tai palvelusivun. Saat joka kuukausi lyhyen katsauksen: montako yhteydenottoa tuli ja mistä.'),
+    ('Mitä saan käteeni?', 'Valmiit sivut omassa osoitteessasi ja niiden jatkuvan ylläpidon: suunnittelun, tekstit, kuvien käsittelyn, toimivuuden puhelimella, löydettävyyden ja Google-yritysprofiilin kunnostuksen. Domain on aina sinun.'),
     ('Kenen kanssa teen töitä?', 'Ville Saarelan. Hän suunnittelee, kirjoittaa ja tekee sivut itse, ilman välikäsiä.'),
     ('Ovatko työt oikeita asiakkaita?', 'Osa töistä on konsepteja: kuvitteellisia yrityksiä, joilla näytämme, mitä alan sivut voivat tehdä. Se kerrotaan jokaisen työn sivulla.'),
 ]
@@ -234,7 +257,7 @@ def home():
     faq = '\n'.join(f'          <details><summary><span>{esc(q)}</span><i aria-hidden="true"></i></summary><p>{esc(a)}</p></details>' for q, a in FAQ)
     ld = {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Studio Luoto", "url": SITE + "/",
           "description": "Verkkosivut, jotka tuovat remontti- ja LVI-yrityksille lisää asiakkaita ja tarjouspyyntöjä.",
-          "email": MAIL, "telephone": TEL, "founder": {"@type": "Person", "name": "Ville Saarela"},
+          "email": MAIL, "telephone": TEL, "makesOffer": {"@type": "Offer", "name": "Verkkosivut kuukausihinnalla", "price": PRICE, "priceCurrency": "EUR", "description": "Suunnittelu, toteutus, ylläpito ja päivitykset. 12 kuukauden vähimmäiskesto. Hinta + alv."}, "founder": {"@type": "Person", "name": "Ville Saarela"},
           "address": {"@type": "PostalAddress", "streetAddress": "Isosaarentie 10", "postalCode": "00840", "addressLocality": "Helsinki", "addressCountry": "FI"}}
     return head('/', 'Studio Luoto · Verkkosivut, jotka tuovat lisää tarjouspyyntöjä',
                 'Studio Luoto tekee remontti- ja LVI-yrityksille verkkosivut, jotka tuovat lisää asiakkaita ja tarjouspyyntöjä. Ilmainen demo etusivusta 48 tunnissa.',
@@ -248,6 +271,7 @@ def home():
         <div class="hero-do rv">{btn(cls=' btn-or')}<a class="link-lt" href="{P}/tyot/">Katso työt</a></div>
         <ul class="proof rv">
           <li><span class="proof-ic">48 h</span><span><b>Ilmainen demo 48 tunnissa</b><span>Toimiva etusivu, ei kuva. Ei sido mihinkään.</span></span></li>
+          <li><span class="proof-ic">€</span><span><b>{PRICE} €/kk, kaikki sisältyy</b><span>Ei aloitusmaksua. Ylläpito ja päivitykset mukana.</span></span></li>
           <li><img src="{A}/img/valtteri-96.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><span><b>”Sivut saavat ihmiset innostumaan jo ennen julkaisua.”</b><span>Valtteri Viitala, BuffBird Oy</span></span></li>
         </ul>
       </div>
@@ -298,13 +322,15 @@ def home():
           <source src="{L}/video/prosessi.mp4" type="video/mp4">
         </video>
         <button class="film-t" type="button" aria-pressed="true">Toista</button>
-        <figcaption class="sr" id="film-txt">Video, 40 sekuntia: Joka ilta joku etsii remonttia puhelimellaan. Jos sivusi eivät vakuuta, tarjouspyyntö menee kilpailijalle. Näin se toimii: 1. Lähetä viesti. 2. Saat luonnoksen 48 tunnissa. 3. Hyväksyt suunnan, ja muutamme kaiken, kunnes sivut ovat juuri oikein. 4. Sivut siirretään sinulle omaan osoitteeseesi. Pyydä ilmainen demo.</figcaption>
+        <figcaption class="sr" id="film-txt">Video, 40 sekuntia: Joka ilta joku etsii remonttia puhelimellaan. Jos sivusi eivät vakuuta, tarjouspyyntö menee kilpailijalle. Näin se toimii: 1. Lähetä viesti. 2. Saat luonnoksen 48 tunnissa. 3. Hyväksyt suunnan, ja muutamme kaiken, kunnes sivut ovat juuri oikein. 4. Sivut julkaistaan omaan osoitteeseesi, ja pidämme niistä huolen kuukausihinnalla. Pyydä ilmainen demo.</figcaption>
       </figure>
       <ol class="steps">
 {steps}
       </ol>
       <div class="center rv">{btn()}<p class="small">Maksuton. Ei sido mihinkään.</p></div>
     </section>
+
+{pricing()}
 
     <section class="wrap sec" id="vastaukset" aria-labelledby="vastaukset-h">
       <div class="split">
@@ -354,6 +380,38 @@ def home():
 {contact()}
   </main>
 ''' + footer()
+
+
+def pricing():
+    inc = ''.join(f'<li><i>{TICK}</i>{x}</li>' for x in INCLUDED)
+    exc = ''.join(f'<li>{x}</li>' for x in EXCLUDED)
+    terms = ''.join(f'<li><b>{a}</b><span>{b}</span></li>' for a, b in TERMS)
+    return f'''
+    <section class="wrap sec" id="hinnat" aria-labelledby="hinnat-h">
+      <p class="lab rv" style="text-align:center">Hinnat</p>
+      <h2 class="d2 rv" id="hinnat-h" style="text-align:center;max-width:18ch;margin:14px auto 0">Yksi hinta. <em>Kaikki sisältyy.</em></h2>
+      <div class="price">
+        <div class="price-main rv">
+          <p class="lab">Studio Luoto -verkkosivut</p>
+          <p class="price-n"><b>{PRICE} €</b><span>/kk + alv</span></p>
+          <p class="price-sub">0 € aloitusmaksu. Ilmainen demo ensin.</p>
+          <p class="price-year"><b>tai {YEAR} € + alv vuodelta</b> · kaksi kuukautta kaupan päälle</p>
+          <div class="hero-do" style="justify-content:flex-start">{btn(cls=' btn-or')}</div>
+          <ul class="terms-l">{terms}</ul>
+          <p class="small">Palvelu on tarkoitettu yrityksille. <a href="{P}/ehdot/">Sopimusehdot</a></p>
+        </div>
+        <div class="price-inc rv">
+          <h3 class="lab">Hintaan sisältyy</h3>
+          <ul class="inc">{inc}</ul>
+          <h3 class="lab" style="margin-top:28px">Ei sisälly</h3>
+          <ul class="exc">{exc}</ul>
+        </div>
+      </div>
+      <div class="price-x">
+        <div class="guar rv"><span class="pill pill-or">Takuu</span><h3 class="d3">Tarjouspyyntötakuu</h3><p>Jos sivujen kautta ei tule yhtään tarjouspyyntöä kolmen ensimmäisen kuukauden aikana, seuraavat kolme kuukautta ovat ilmaisia.</p></div>
+        <div class="first rv"><span class="pill">Kolme ensimmäistä</span><h3 class="d3">Ensimmäinen kuukausi ilmaiseksi</h3><p>Kolmelle ensimmäiselle asiakkaalle ensimmäinen kuukausi on ilmainen, kun annat suosittelun ja luvan kertoa projektista sivuillamme.</p></div>
+      </div>
+    </section>'''
 
 
 def contact():
@@ -447,6 +505,38 @@ def project(i, w):
 ''' + footer()
 
 
+lc = lambda x: x if x.startswith('Google') else x[0].lower() + x[1:]
+
+TERMS_DOC = [
+    ('Osapuolet', ['Palveluntarjoaja on Studio Luoto, Ville Saarela (Y-tunnus 3660060-6), Isosaarentie 10, 00840 Helsinki. Asiakas on yritys tai yhteisö, joka tilaa palvelun. Palvelu on tarkoitettu vain yrityksille, joten kuluttajansuojalaki ei sovellu.']),
+    ('Palvelu', [f'Studio Luoto suunnittelee, toteuttaa, julkaisee ja ylläpitää asiakkaan verkkosivut. Hintaan sisältyy: {"; ".join(lc(x) for x in INCLUDED)}.', f'Hintaan ei sisälly: {"; ".join(lc(x) for x in EXCLUDED)}. Niistä sovitaan erikseen.']),
+    ('Demo', ['Ilmainen demo on maksuton luonnos asiakkaan etusivusta. Se ei velvoita asiakasta mihinkään. Sopimus syntyy vasta, kun asiakas hyväksyy tarjouksen kirjallisesti, esimerkiksi sähköpostilla.']),
+    ('Hinta ja laskutus', [f'Kuukausihinta on {PRICE} € + alv. Aloitusmaksua ei ole. Laskutus tehdään kuukausittain etukäteen, maksuaika 14 päivää. Vaihtoehtoisesti asiakas voi maksaa 12 kuukautta kerralla {YEAR} € + alv.', 'Kuukausilaskutus alkaa, kun sivut julkaistaan. Ensimmäisen kuukauden ilmaisuus kolmelle ensimmäiselle asiakkaalle edellyttää, että asiakas antaa suosittelun ja luvan kertoa projektista Studio Luoton sivuilla.']),
+    ('Sopimuskausi ja irtisanominen', ['Sopimuksen vähimmäiskesto on 12 kuukautta julkaisusta. Sen jälkeen sopimus on voimassa toistaiseksi, ja kumpikin osapuoli voi irtisanoa sen kuukauden irtisanomisajalla. Irtisanominen tehdään kirjallisesti.']),
+    ('Muutokset ja päivitykset', ['Pienet muutokset, kuten tekstin, kuvan tai yhteystiedon vaihto, tehdään kahden arkipäivän kuluessa pyynnöstä. Lisäksi kuukaudessa tehdään yksi isompi päivitys, esimerkiksi uusi kohde- tai palvelusivu. Käyttämättömät päivitykset eivät siirry seuraavalle kuukaudelle.']),
+    ('Tarjouspyyntötakuu', ['Jos sivujen tarjouspyyntölomakkeen kautta ei tule yhtään tarjouspyyntöä kolmen ensimmäisen kuukauden aikana julkaisusta, seuraavat kolme kuukautta ovat asiakkaalle maksuttomia. Takuu edellyttää, että lomake on ollut käytössä koko ajan ja asiakas on toimittanut sivuja varten sovitut tiedot. Takuu hyvitetään laskutuksessa, ei rahana.']),
+    ('Omistus ja oikeudet', [f'Verkkotunnus (domain) on aina asiakkaan. Asiakkaan toimittamat tekstit, kuvat ja logot ovat asiakkaan. Studio Luoton tekemän suunnittelun ja toteutuksen oikeudet ovat Studio Luotolla sopimuksen ajan. Kun 12 kuukautta on täynnä, asiakas voi lunastaa sivut omakseen {BUYOUT} € + alv kertamaksulla. Kun sopimus on jatkunut 24 kuukautta, sivut siirtyvät asiakkaalle maksutta.', 'Studio Luoto saa mainita asiakkaan ja näyttää sivut referenssinä, ellei toisin sovita.']),
+    ('Asiakkaan vastuut', ['Asiakas vastaa toimittamiensa sisältöjen oikeellisuudesta ja siitä, että sillä on oikeus käyttää toimittamiaan kuvia ja tekstejä. Asiakas vastaa myös verkkotunnuksensa uusimisesta, ellei toisin sovita.']),
+    ('Maksuviivästys', ['Jos lasku on ollut maksamatta yli 30 päivää eräpäivästä, Studio Luoto voi keskeyttää palvelun ja sivujen ylläpidon, kunnes avoimet laskut on maksettu. Viivästyneelle maksulle peritään korkolain mukainen viivästyskorko.']),
+    ('Vastuunrajoitus', ['Studio Luoto vastaa palvelun huolellisesta toteutuksesta. Studio Luoto ei vastaa välillisistä vahingoista, kuten saamatta jääneestä myynnistä. Studio Luoton vastuu rajoittuu enintään kolmen kuukauden palvelumaksujen määrään.']),
+    ('Henkilötiedot', ['Henkilötietoja käsitellään tietosuojaselosteen mukaisesti. Tarjouspyyntölomakkeen kautta tulevat tiedot ohjataan asiakkaalle, ja asiakas on niiden rekisterinpitäjä.']),
+    ('Ehtojen muutokset ja riidat', ['Studio Luoto voi muuttaa ehtoja ilmoittamalla siitä asiakkaalle vähintään 30 päivää etukäteen. Sopimukseen sovelletaan Suomen lakia. Riidat pyritään ratkaisemaan neuvottelemalla ja muuten Helsingin käräjäoikeudessa.']),
+]
+
+
+def terms_page():
+    body = '\n'.join(f'      <h2>{h}</h2>' + ''.join(f'<p>{x}</p>' for x in ps) for h, ps in TERMS_DOC).replace(' €', '\u00a0€')
+    return head('/ehdot/', 'Sopimusehdot · Studio Luoto', 'Studio Luoto -verkkosivupalvelun sopimusehdot: hinta, sopimuskausi, muutokset, takuu ja omistus.') + header(False) + f'''
+  <main id="main">
+    <article class="wrap doc">
+      <p class="lab">Voimassa 15.10.2026 alkaen</p>
+      <h1 class="d1">Sopimusehdot</h1>
+{body}
+    </article>
+  </main>
+''' + footer()
+
+
 def privacy():
     body = '\n'.join(f'      <h2>{h}</h2>' + ''.join(f'<p>{p}</p>' for p in ps) for h, ps in g['PRIVACY']).replace('info@villesaarela.com', MAIL)
     return head('/tietosuoja/', 'Tietosuoja · Studio Luoto', 'Miten Studio Luoto käsittelee henkilötietoja.') + header(False) + f'''
@@ -485,9 +575,10 @@ write('tyot/index.html', works())
 for i, w in enumerate(WORKS):
     write(f'projektit/{w["slug"]}/index.html', project(i, w))
 write('tietosuoja/index.html', privacy())
+write('ehdot/index.html', terms_page())
 write('404.html', notfound())
 if LIVE:
-    urls = ['/', '/tyot/'] + [f'/projektit/{w["slug"]}/' for w in WORKS] + ['/tietosuoja/']
+    urls = ['/', '/tyot/'] + [f'/projektit/{w["slug"]}/' for w in WORKS] + ['/tietosuoja/', '/ehdot/']
     write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(f'  <url><loc>{SITE}{u}</loc><lastmod>2026-10-15</lastmod></url>' for u in urls) + '\n</urlset>\n')
     write('robots.txt', f'User-agent: *\nAllow: /\nDisallow: /esikatselu/\n\nSitemap: {SITE}/sitemap.xml\n')
     write('CNAME', 'www.studioluoto.com')

@@ -308,3 +308,39 @@ em { font-style: normal; color: var(--sea); }
 .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
 .film-t { position: absolute; right: clamp(10px, 1.6vw, 22px); bottom: clamp(10px, 1.6vw, 22px); min-height: 44px; padding: 0 18px; border: 0; border-radius: 999px; background: rgba(15, 15, 14, 0.7); color: var(--paper); cursor: pointer; font-size: 14px; font-weight: 600; }
 .film-t:hover { background: var(--or); color: var(--ink); }
+
+/* Pricing: one price on ink, what it holds on paper, the guarantee and the founding offer below */
+.price { display: grid; gap: 24px; margin-top: clamp(40px, 5vw, 64px); }
+@media (min-width: 960px) { .price { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); } }
+.price-main { padding: clamp(28px, 4vw, 52px); border-radius: 28px; background: var(--ink); color: var(--paper); box-shadow: 10px 10px 0 var(--or); }
+.price-main .lab { color: var(--g-lt); }
+.price-n { display: flex; align-items: baseline; gap: 10px; margin-top: 18px; }
+.price-n b { font: 500 clamp(64px, 8vw, 112px)/0.95 var(--serif); letter-spacing: -0.03em; }
+.price-n span { font-size: 20px; color: var(--g-lt); }
+.price-sub { margin-top: 14px; font-size: 19px; }
+.price-year { margin-top: 8px; font-size: 16px; color: var(--g-lt); }
+.price-year b { color: var(--paper); font-weight: 600; }
+.price-main .hero-do { margin-top: 28px; }
+.terms-l { display: grid; gap: 0; margin-top: 32px; border-top: 1px solid var(--line-lt); }
+.terms-l li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line-lt); font-size: 16px; }
+.terms-l b { font-weight: 700; color: var(--or); }
+.terms-l span { color: var(--g-lt); }
+.price-main .small { color: var(--g-lt); }
+.price-main .small a { color: var(--paper); text-underline-offset: 4px; }
+.price-inc { padding: clamp(28px, 4vw, 52px); border: 2px solid var(--ink); border-radius: 28px; background: var(--white); }
+.price-inc .lab { color: var(--g); }
+.inc { margin-top: 14px; }
+.inc li { display: flex; gap: 14px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
+.inc li i { display: grid; flex: none; place-items: center; width: 26px; height: 26px; margin-top: 1px; border-radius: 50%; background: var(--or); }
+.exc { margin-top: 12px; }
+.exc li { position: relative; padding: 6px 0 6px 26px; font-size: 16px; color: var(--g); }
+.exc li::before { content: ''; position: absolute; left: 4px; top: 50%; width: 12px; height: 2px; background: var(--g); }
+.price-x { display: grid; gap: 24px; margin-top: 24px; }
+@media (min-width: 860px) { .price-x { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.guar, .first { padding: clamp(24px, 3.4vw, 40px); border-radius: 24px; }
+.guar { background: var(--or); color: var(--ink); }
+.guar .pill-or { background: var(--ink); color: var(--paper); }
+.first { background: var(--sea); color: var(--paper); }
+.first .pill { background: var(--paper); color: var(--ink); }
+.guar .d3, .first .d3 { margin-top: 16px; }
+.guar p, .first p { max-width: 46ch; margin-top: 12px; font-size: 17px; }
