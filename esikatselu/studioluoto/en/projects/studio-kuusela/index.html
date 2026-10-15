@@ -26,7 +26,7 @@
   <link rel="icon" href="/assets/luoto/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/luoto/luoto.css?v=4">
+  <link rel="stylesheet" href="/assets/luoto/luoto.css?v=5">
 </head>
 <body class="on-light">
   <a class="skip" href="#main">Skip to content</a>
@@ -97,6 +97,21 @@
       <div class="ftr-bot"><p>© 2026 Studio Luoto · Ville Saarela, Business ID 3660060-6</p><a href="#top">Back to top ↑</a></div>
     </div>
   </footer>
-  <script src="/assets/luoto/luoto.js?v=4" defer></script>
+
+  <dialog class="ask-d" id="ask" aria-labelledby="ask-h">
+    <div class="ask-in">
+      <button class="ask-x" type="button" data-close aria-label="Close"></button>
+      <h2 class="d3" id="ask-h">Request a free demo</h2>
+      <p>Tell us your current site, what you do and where. We reply within one working day, and the demo is ready in 48 hours.</p>
+      <ul class="ask-o">
+        <li><a class="ask-b ask-b-or" href="mailto:ville@studioluoto.com?subject=Demo%20request&body=Hi%2C%0A%0Aour%20current%20site%3A%20%0Awhat%20we%20do%3A%20%0Aour%20area%3A%20%0A%0A"><span>Open email</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        <li><a class="ask-b" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ville%40studioluoto.com&amp;su=Demo%20request&amp;body=Hi%2C%0A%0Aour%20current%20site%3A%20%0Awhat%20we%20do%3A%20%0Aour%20area%3A%20%0A%0A" target="_blank" rel="noopener"><span>Write in Gmail</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        <li><a class="ask-b" href="https://outlook.office.com/mail/deeplink/compose?to=ville%40studioluoto.com&amp;subject=Demo%20request&amp;body=Hi%2C%0A%0Aour%20current%20site%3A%20%0Awhat%20we%20do%3A%20%0Aour%20area%3A%20%0A%0A" target="_blank" rel="noopener"><span>Write in Outlook</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        <li><button class="ask-b" type="button" data-copy="ville@studioluoto.com" data-done="Address copied"><span>Copy address · ville@studioluoto.com</span></button></li>
+      </ul>
+      <p class="ask-tel">Or call <a href="tel:+358451035362">045 103 5362</a></p>
+    </div>
+  </dialog>
+  <script src="/assets/luoto/luoto.js?v=5" defer></script>
 </body>
 </html>

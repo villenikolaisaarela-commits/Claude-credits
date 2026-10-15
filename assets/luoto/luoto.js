@@ -23,6 +23,22 @@
     }), { threshold: 0.35 }).observe(f);
   });
 
+  // Demo requests open a choice of ways to write, because a bare mailto does nothing without a mail app
+  const d = document.getElementById('ask');
+  if (d && d.showModal) {
+    document.addEventListener('click', e => {
+      const a = e.target.closest('a[href^="mailto:"][href*="subject="]');
+      if (!a || d.contains(a)) return;
+      e.preventDefault(); d.showModal();
+    });
+    d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); });
+    const c = d.querySelector('[data-copy]');
+    if (c) c.addEventListener('click', () => {
+      const done = () => { c.querySelector('span').textContent = c.dataset.done; };
+      if (navigator.clipboard) navigator.clipboard.writeText(c.dataset.copy).then(done, () => {});
+    });
+  }
+
   const els = [...document.querySelectorAll('.rv')];
   if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });

@@ -16,7 +16,7 @@ LIVE = os.environ.get('LIVE') == '1'
 P = '' if LIVE else '/esikatselu/studioluoto'
 A = '/assets'
 L = '/assets/luoto'
-V = '4'
+V = '5'
 REPO = '/home/user/Claude-credits'
 ROOT = REPO + P
 SITE = 'https://www.studioluoto.com'
@@ -155,6 +155,27 @@ def header(key, slug=None, dark=True):
 '''
 
 
+def ask_dialog():
+    subj, body = t('Demopyyntö', 'Demo request'), t('Hei,\n\nnykyiset sivumme: \nteemme: \nalueemme: \n\n', 'Hi,\n\nour current site: \nwhat we do: \nour area: \n\n')
+    gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + quote(MAIL) + '&su=' + quote(subj) + '&body=' + quote(body)
+    outlook = 'https://outlook.office.com/mail/deeplink/compose?to=' + quote(MAIL) + '&subject=' + quote(subj) + '&body=' + quote(body)
+    return f'''
+  <dialog class="ask-d" id="ask" aria-labelledby="ask-h">
+    <div class="ask-in">
+      <button class="ask-x" type="button" data-close aria-label="{t('Sulje', 'Close')}"></button>
+      <h2 class="d3" id="ask-h">{t('Pyydä ilmainen demo', 'Request a free demo')}</h2>
+      <p>{t('Kerro viestissä nykyisten sivujesi osoite, mitä teette ja millä alueella. Vastaamme yhden arkipäivän sisällä, ja demo on valmis 48 tunnissa.', 'Tell us your current site, what you do and where. We reply within one working day, and the demo is ready in 48 hours.')}</p>
+      <ul class="ask-o">
+        <li><a class="ask-b ask-b-or" href="{ask()}"><span>{t('Avaa sähköposti', 'Open email')}</span>{ARROW}</a></li>
+        <li><a class="ask-b" href="{esc(gmail)}" target="_blank" rel="noopener"><span>{t('Kirjoita Gmailissa', 'Write in Gmail')}</span>{ARROW}</a></li>
+        <li><a class="ask-b" href="{esc(outlook)}" target="_blank" rel="noopener"><span>{t('Kirjoita Outlookissa', 'Write in Outlook')}</span>{ARROW}</a></li>
+        <li><button class="ask-b" type="button" data-copy="{MAIL}" data-done="{t('Osoite kopioitu', 'Address copied')}"><span>{t('Kopioi osoite', 'Copy address')} · {MAIL}</span></button></li>
+      </ul>
+      <p class="ask-tel">{t('Tai soita', 'Or call')} <a href="tel:{TEL}">{TEL_H}</a></p>
+    </div>
+  </dialog>'''
+
+
 def footer():
     return f'''
   <footer class="ftr">
@@ -173,6 +194,7 @@ def footer():
       <div class="ftr-bot"><p>© 2026 Studio Luoto · Ville Saarela, {t('Y-tunnus', 'Business ID')} {YT}</p><a href="#top">{t('Ylös', 'Back to top')} ↑</a></div>
     </div>
   </footer>
+{ask_dialog()}
   <script src="{L}/luoto.js?v={V}" defer></script>
 </body>
 </html>
