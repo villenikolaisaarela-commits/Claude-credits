@@ -19,7 +19,7 @@ V = '1'
 REPO = '/home/user/Claude-credits'
 ROOT = REPO + P
 SITE = 'https://www.studioluoto.com'
-MAIL = 'info@villesaarela.com'          # until ville@studioluoto.com is set up in Google Workspace
+MAIL = 'ville@studioluoto.com'
 TEL, TEL_H = '+358451035362', '045 103 5362'
 YT = '3660060-6'
 DEMO = '/demot/'
@@ -440,7 +440,7 @@ def project(i, w):
 
 
 def privacy():
-    body = '\n'.join(f'      <h2>{h}</h2>' + ''.join(f'<p>{p}</p>' for p in ps) for h, ps in g['PRIVACY'])
+    body = '\n'.join(f'      <h2>{h}</h2>' + ''.join(f'<p>{p}</p>' for p in ps) for h, ps in g['PRIVACY']).replace('info@villesaarela.com', MAIL)
     return head('/tietosuoja/', 'Tietosuoja · Studio Luoto', 'Miten Studio Luoto käsittelee henkilötietoja.') + header(False) + f'''
   <main id="main">
     <article class="wrap doc">
@@ -484,6 +484,7 @@ if LIVE:
     write('robots.txt', f'User-agent: *\nAllow: /\nDisallow: /esikatselu/\n\nSitemap: {SITE}/sitemap.xml\n')
     write('CNAME', 'www.studioluoto.com\n')
     # Pages from the old site send their visitors to the matching place here
-    for old, new in (('hinnat', '/#palvelu'), ('minusta', '/#kysymykset'), ('prosessi', '/#prosessi')):
+    stale = [(f'projektit/{d}', '/tyot/') for d in sorted(os.listdir(REPO + '/projektit')) if d not in ORDER]
+    for old, new in [('hinnat', '/#palvelu'), ('minusta', '/#kysymykset'), ('prosessi', '/#prosessi')] + stale:
         write(f'{old}/index.html', f'<!doctype html><html lang="fi"><head><meta charset="utf-8"><title>Studio Luoto</title><meta name="robots" content="noindex"><link rel="canonical" href="{SITE}{new}"><meta http-equiv="refresh" content="0; url={new}"></head><body><a href="{new}">Studio Luoto</a></body></html>\n')
 print('ok', 'live' if LIVE else 'preview')
