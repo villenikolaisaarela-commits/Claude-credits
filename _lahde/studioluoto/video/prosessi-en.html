@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prosessi</title>
+<style>
+@font-face { font-family: 'Archivo'; font-weight: 300 700; src: url('a/archivo-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+2000-206F, U+20AC, U+2192, U+2713; }
+@font-face { font-family: 'Newsreader'; font-weight: 200 800; src: url('a/newsreader-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Archivo'; font-weight: 300 700; src: url('a/archivo-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA; }
+:root { --bk: #0F0F0E; --wt: #F4F1EA; --g1: #B5B0A6; --g2: #6F6B63; --ln: #2A2925; --ac: #FF5B1F; --ac-ink: #0F0F0E; --or-dk: #B83A0C; --sea: #0E3B3A; --serif: 'Newsreader', Georgia, serif; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--bk); }
+body { font: 400 24px/1.4 'Archivo', sans-serif; color: var(--wt); -webkit-font-smoothing: antialiased; }
+#stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #0F0F0E url('a/kartta.svg') center / cover no-repeat; }
+.abs { position: absolute; }
+.scene { position: absolute; inset: 0; opacity: 0; }
+.lab { font-size: 18px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+.g { color: var(--g1); }
+.ac { color: var(--ac); }
+/* word masks */
+.m { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+.m > i { display: inline-block; font-style: normal; will-change: transform; }
+.big { font-family: var(--serif); font-size: 136px; line-height: 0.98; font-weight: 500; letter-spacing: -0.03em; }
+.h { font-family: var(--serif); font-size: 84px; line-height: 1.02; font-weight: 500; letter-spacing: -0.025em; }
+.sub { font-size: 30px; line-height: 1.4; color: var(--g1); max-width: 30ch; }
+/* chrome */
+#logo { left: 72px; top: 62px; width: 200px; }
+#count { right: 72px; top: 64px; }
+#rail { left: 72px; right: 72px; bottom: 56px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; opacity: 0; }
+#rail .st { position: relative; padding-top: 22px; }
+#rail .st .bar { position: absolute; left: 0; top: 0; height: 3px; width: 100%; background: var(--ln); overflow: hidden; }
+#rail .st .bar b { position: absolute; inset: 0; background: var(--ac); transform-origin: 0 50%; transform: scaleX(0); }
+#rail .st span { font-size: 17px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--g2); }
+#rail .st.on span { color: var(--wt); }
+/* phone */
+.phone { width: 400px; height: 820px; border-radius: 58px; background: #111; border: 2px solid #2a2a2a; padding: 16px; box-shadow: 0 40px 120px rgba(0,0,0,.6); }
+.phone .scr { position: relative; width: 100%; height: 100%; border-radius: 44px; overflow: hidden; background: #F2F2F0; color: #0A0A0A; }
+.phone .notch { position: absolute; left: 50%; top: 14px; width: 120px; height: 34px; margin-left: -60px; border-radius: 20px; background: #000; z-index: 3; }
+.srch { position: absolute; left: 22px; right: 22px; top: 92px; height: 60px; border-radius: 30px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.08); display: flex; align-items: center; gap: 12px; padding: 0 22px; font-size: 18px; white-space: nowrap; }
+.srch svg { flex: none; }
+.res { position: absolute; left: 22px; right: 22px; height: 150px; border-radius: 18px; background: #fff; padding: 20px 22px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+.res b { display: block; font-size: 15px; font-weight: 500; color: #5f6368; letter-spacing: 0; }
+.res em { display: block; font-style: normal; margin-top: 6px; font-size: 22px; font-weight: 500; color: #1a0dab; line-height: 1.2; }
+.res p { margin-top: 8px; height: 10px; border-radius: 5px; background: #e5e5e3; }
+.res p + p { width: 70%; }
+.lead { width: 380px; height: 96px; border-radius: 22px; background: var(--wt); color: var(--ac-ink); display: flex; align-items: center; gap: 16px; padding: 0 22px; box-shadow: 0 6px 0 var(--ac); }
+.lead .ic { flex: none; width: 50px; height: 50px; border-radius: 14px; background: var(--ac); display: grid; place-items: center; }
+.lead div b { display: block; font-size: 20px; font-weight: 600; }
+.lead div span { display: block; font-size: 16px; color: #555; }
+.counter { font-family: var(--serif); font-size: 180px; line-height: 1; font-weight: 500; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; color: var(--ac); }
+/* highlight */
+.hl { position: relative; display: inline-block; isolation: isolate; }
+.hl .sw { position: absolute; left: -10px; right: -10px; top: 8%; bottom: 2%; background: var(--ac); transform-origin: 0 50%; transform: scaleX(0); z-index: -1; }
+/* step layout */
+.num { font-family: var(--serif); font-size: 270px; line-height: 0.8; font-weight: 400; letter-spacing: -0.04em; color: transparent; -webkit-text-stroke: 2px var(--wt); }
+.win { width: 1020px; height: 690px; border-radius: 22px; background: #1A1A18; border: 2px solid #F4F1EA; overflow: hidden; box-shadow: 14px 14px 0 #FF5B1F; }
+.win .bar { height: 54px; display: flex; align-items: center; gap: 10px; padding: 0 20px; background: #161616; border-bottom: 1px solid #2b2b2b; }
+.win .bar i { width: 13px; height: 13px; border-radius: 50%; background: #3a3a3a; }
+.win .url { margin-left: 18px; flex: 1; height: 32px; border-radius: 16px; background: #0d0d0d; display: flex; align-items: center; gap: 10px; padding: 0 16px; font-size: 17px; color: var(--g1); }
+.win .url .lock { width: 12px; height: 14px; }
+.win .vp { position: relative; height: 636px; overflow: hidden; background: #F2F2F0; }
+.win .vp img { position: absolute; left: 0; top: 0; width: 1020px; }
+.skel { position: absolute; background: #e2e2df; border-radius: 6px; }
+.msg { width: 900px; border-radius: 26px; background: var(--wt); color: #0F0F0E; padding: 34px 40px 30px; box-shadow: 14px 14px 0 #FF5B1F; }
+.msg .to { display: flex; justify-content: space-between; font-size: 19px; color: #666; padding-bottom: 18px; border-bottom: 1px solid #e3e3e0; }
+.msg .body { min-height: 190px; padding-top: 22px; font-size: 32px; line-height: 1.4; letter-spacing: -0.01em; }
+.caret { display: inline-block; width: 3px; height: 1.05em; margin-left: 2px; vertical-align: -0.15em; background: #0A0A0A; }
+.msg .ft { display: flex; justify-content: flex-end; align-items: center; gap: 18px; margin-top: 10px; }
+.send { display: inline-flex; align-items: center; gap: 12px; height: 64px; padding: 0 30px; border-radius: 999px; background: var(--ac); color: var(--ac-ink); font-size: 20px; font-weight: 600; letter-spacing: 0.01em; ; box-shadow: 0 6px 0 var(--or-dk); }
+.chip { display: inline-flex; align-items: center; gap: 14px; height: 60px; padding: 0 26px; border-radius: 999px; border: 1.5px solid var(--wt); font-size: 20px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+.chip .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ac); }
+.clock { width: 260px; height: 260px; }
+.pin { position: absolute; display: flex; align-items: center; gap: 14px; }
+.pin .d { flex: none; width: 46px; height: 46px; border-radius: 50%; background: #0A0A0A; color: var(--wt); display: grid; place-items: center; font-size: 19px; font-weight: 600; box-shadow: 0 6px 20px rgba(0,0,0,.3); }
+.pin .n { position: relative; padding: 14px 20px; border-radius: 12px; background: #0A0A0A; color: var(--wt); font-size: 20px; white-space: nowrap; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+.pin .n s { text-decoration: none; position: relative; }
+.pin .n s::after { content: ''; position: absolute; left: 0; right: 0; top: 52%; height: 2px; background: var(--g1); transform-origin: 0 50%; transform: scaleX(var(--k, 0)); }
+.pin .n u { text-decoration: none; margin-left: 12px; color: var(--ac); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 16px; }
+.stamp { display: inline-flex; align-items: center; gap: 12px; height: 62px; padding: 0 28px; border-radius: 999px; background: var(--ac); color: var(--ac-ink); font-size: 21px; font-weight: 600; letter-spacing: 0.01em; ; box-shadow: 0 6px 0 var(--or-dk); }
+.ticks li { list-style: none; display: flex; align-items: center; gap: 18px; font-size: 30px; padding: 16px 0; border-top: 1px solid var(--ln); }
+.ticks li:last-child { border-bottom: 1px solid var(--ln); }
+.tk { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--ac); display: grid; place-items: center; }
+.lock-scr { position: absolute; inset: 0; background: linear-gradient(180deg, #1d1d1d, #0b0b0b); color: var(--wt); }
+.lock-scr .t { position: absolute; left: 0; right: 0; top: 90px; text-align: center; font-size: 96px; font-weight: 500; letter-spacing: -0.03em; }
+.lock-scr .d { position: absolute; left: 0; right: 0; top: 74px; text-align: center; font-size: 20px; color: #bbb; }
+.nt { position: absolute; left: 16px; right: 16px; height: 104px; border-radius: 22px; background: rgba(247,247,245,.94); color: #0A0A0A; padding: 16px 18px; display: grid; grid-template-columns: 44px 1fr; gap: 4px 14px; }
+.nt .ic { grid-row: 1 / span 2; width: 44px; height: 44px; border-radius: 12px; background: var(--ac); display: grid; place-items: center; }
+.nt b { font-size: 18px; font-weight: 600; display: flex; justify-content: space-between; }
+.nt b small { font-size: 15px; font-weight: 400; color: #666; }
+.nt span { font-size: 17px; color: #333; }
+.btn { display: inline-flex; align-items: center; gap: 16px; height: 96px; padding: 0 52px; border-radius: 999px; background: var(--ac); color: var(--ac-ink); font-size: 30px; font-weight: 600; letter-spacing: 0.01em; ; box-shadow: 0 6px 0 var(--or-dk); }
+.cur { width: 34px; height: 34px; }
+.wipe { position: absolute; top: 0; bottom: 0; width: 100%; background: var(--ac); }
+.grain { position: absolute; inset: -50%; opacity: .06; pointer-events: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- 1. Hook -->
+  <section class="scene" id="s1">
+    <h1 class="big abs w" id="s1a" style="left:72px; top:300px; width:1100px">Every evening someone looks for a renovation on their phone.</h1>
+    <h2 class="h abs w" id="s1b" style="left:72px; top:330px; width:1200px">If your site does not convince, the quote request goes to a <span class="ac">competitor.</span></h2>
+    <div class="abs" id="s1cnt" style="left:72px; top:640px">
+      <div class="lab g">Lost quote requests</div>
+      <div class="counter" id="cnt">0</div>
+    </div>
+    <div class="phone abs" id="ph1" style="left:1300px; top:150px">
+      <div class="scr">
+        <div class="notch"></div>
+        <div class="srch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5f6368" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5 5"/></svg><span id="q"></span><i class="caret" id="qc"></i></div>
+        <div class="res" id="r1" style="top:182px"><b>renovations-a.fi</b><em>Bathroom renovations Espoo</em><p></p><p></p></div>
+        <div class="res" id="r2" style="top:350px"><b>company-b.fi</b><em>Renovations and refurbishments</em><p></p><p></p></div>
+        <div class="res" id="r3" style="top:518px"><b>competitor.fi</b><em>New bathroom in 3 weeks</em><p></p><p></p></div>
+      </div>
+    </div>
+    <div id="leads"></div>
+  </section>
+
+  <!-- 2. Question -->
+  <section class="scene" id="s2">
+    <h2 class="big abs w" id="s2a" style="left:72px; top:330px; width:1700px">Want to stop <span class="hl"><span class="sw" id="sw"></span>losing leads?</span></h2>
+    <p class="h abs w g" id="s2b" style="left:72px; top:700px; font-size:56px">How it works. Four steps.</p>
+  </section>
+
+  <!-- 3. Step 01 -->
+  <section class="scene" id="s3">
+    <div class="num abs" id="n1" style="left:64px; top:190px">01</div>
+    <h2 class="h abs w" id="s3a" style="left:72px; top:440px; width:620px">Send a message.</h2>
+    <p class="sub abs" id="s3b" style="left:72px; top:560px">A link to your current site and a couple of sentences. It takes two minutes.</p>
+    <div class="msg abs" id="msg" style="left:860px; top:250px">
+      <div class="to"><span>New message</span><span>ville@studioluoto.com</span></div>
+      <div class="body"><span id="typ"></span><i class="caret" id="tc"></i></div>
+      <div class="ft"><span class="send" id="send">Send <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </div>
+    <div class="chip abs" id="sent" style="left:860px; top:700px"><span class="dot"></span>Sent · the 48 h clock is running</div>
+  </section>
+
+  <!-- 4..6. Steps 02–04 share the browser window -->
+  <section class="scene" id="s4">
+    <div class="num abs" id="n2" style="left:64px; top:190px">02</div>
+    <h2 class="h abs w" id="s4a" style="left:72px; top:440px; width:640px">Get a draft in 48 hours.</h2>
+    <p class="sub abs" id="s4b" style="left:72px; top:650px">A working front page at its own link. Open it on your phone and look around.</p>
+    <svg class="clock abs" id="clk" style="left:440px; top:150px" viewBox="0 0 260 260">
+      <circle cx="130" cy="130" r="116" fill="none" stroke="#262626" stroke-width="8"/>
+      <circle id="clkarc" cx="130" cy="130" r="116" fill="none" stroke="#FF5B1F" stroke-width="8" stroke-linecap="round" stroke-dasharray="729" stroke-dashoffset="729" transform="rotate(-90 130 130)"/>
+      <text id="clkt" x="130" y="146" text-anchor="middle" fill="#F7F7F5" font-family="Archivo" font-weight="700" font-size="58" letter-spacing="-1">0 h</text>
+    </svg>
+  </section>
+  <section class="scene" id="s5">
+    <div class="num abs" id="n3" style="left:64px; top:190px">03</div>
+    <h2 class="h abs w" id="s5a" style="left:72px; top:440px; width:640px">We go through the changes.</h2>
+    <p class="sub abs" id="s5b" style="left:72px; top:650px">You approve the direction and tell us what to change. We change everything until it is just right.</p>
+  </section>
+  <section class="scene" id="s6">
+    <div class="num abs" id="n4" style="left:64px; top:190px">04</div>
+    <h2 class="h abs w" id="s6a" style="left:72px; top:440px; width:640px">Live, with <span class="ac">upkeep included.</span></h2>
+    <ul class="ticks abs" id="ticks" style="left:72px; top:660px; width:620px">
+      <li><span class="tk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="3.4"><path d="M4 12.5l5 5 11-11"/></svg></span>Published at your own address</li>
+      <li><span class="tk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="3.4"><path d="M4 12.5l5 5 11-11"/></svg></span>Maintenance and updates included</li>
+      <li><span class="tk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="3.4"><path d="M4 12.5l5 5 11-11"/></svg></span>€199/month, no setup fee</li>
+    </ul>
+  </section>
+
+  <div class="win abs" id="win" style="left:830px; top:170px; opacity:0">
+    <div class="bar"><i></i><i></i><i></i><div class="url"><svg class="lock" id="lock" viewBox="0 0 12 14" fill="none" stroke="#9C9C9A" stroke-width="1.6"><rect x="1" y="6" width="10" height="7" rx="1.5"/><path d="M3.5 6V4a2.5 2.5 0 015 0v2"/></svg><span id="url"></span></div></div>
+    <div class="vp" id="vp">
+      <div class="skel" id="k1" style="left:60px; top:40px; width:120px; height:22px"></div>
+      <div class="skel" id="k2" style="left:620px; top:40px; width:340px; height:22px"></div>
+      <div class="skel" id="k3" style="left:60px; top:200px; width:360px; height:56px"></div>
+      <div class="skel" id="k4" style="left:60px; top:272px; width:300px; height:56px"></div>
+      <div class="skel" id="k5" style="left:60px; top:360px; width:340px; height:16px"></div>
+      <div class="skel" id="k6" style="left:60px; top:388px; width:300px; height:16px"></div>
+      <div class="skel" id="k7" style="left:470px; top:100px; width:490px; height:520px"></div>
+      <div id="shotwrap" style="position:absolute; inset:0; clip-path: inset(100% 0 0 0)"><img id="shot" src="a/site.jpg" alt=""></div>
+      <div class="pin" id="p1" style="left:110px; top:120px"><span class="d">1</span><span class="n"><s>Bigger phone number</s><u></u></span></div>
+      <div class="pin" id="p2" style="left:500px; top:300px"><span class="d">2</span><span class="n"><s>Swap the main photo</s><u></u></span></div>
+      <div class="pin" id="p3" style="left:120px; top:470px"><span class="d">3</span><span class="n"><s>Add a price list</s><u></u></span></div>
+      <div class="stamp abs" id="ok" style="left:330px; top:260px">Approve direction <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="3"><path d="M4 12.5l5 5 11-11"/></svg></div>
+      <div class="stamp abs" id="live" style="left:390px; top:270px"><span style="width:12px;height:12px;border-radius:50%;background:#0A0A0A;display:inline-block"></span>Published</div>
+    </div>
+  </div>
+  <div class="lab g abs" id="ex" style="left:830px; top:878px; opacity:0">Example: Kallistus, concept work</div>
+
+  <!-- 7. Result -->
+  <section class="scene" id="s7">
+    <h2 class="h abs w" id="s7a" style="left:72px; top:300px; width:1000px">A site that collects quote requests even while you are <span class="ac">on site.</span></h2>
+    <p class="sub abs" id="s7b" style="left:72px; top:640px; max-width:36ch">Clients find the answers, see your work and ask for a quote. Evenings and weekends too.</p>
+    <div class="phone abs" id="ph2" style="left:1300px; top:130px">
+      <div class="scr">
+        <div class="notch"></div>
+        <div class="lock-scr">
+          <div class="d">Tuesday 14 October</div>
+          <div class="t">21:47</div>
+          <div id="nts"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CTA -->
+  <section class="scene" id="s8">
+    <h2 class="big abs w" id="s8a" style="left:72px; top:250px; width:1780px; font-size:124px">Request a free demo.</h2>
+    <p class="h abs w g" id="s8b" style="left:72px; top:420px; font-size:56px; width:1700px">See your new front page in 48 hours. Free. No commitment.</p>
+    <div class="abs" id="s8c" style="left:72px; top:620px"><span class="btn" id="cbtn">Request a free demo <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    <svg class="cur abs" id="cur" viewBox="0 0 24 24" style="left:900px; top:900px"><path d="M4 2l15 9-7 1.6L8.6 20z" fill="#F7F7F5" stroke="#000" stroke-width="1.2"/></svg>
+    <div class="abs lab" id="s8d" style="left:72px; bottom:64px; font-size:22px">studioluoto.com</div>
+    <img class="abs" id="aa" src="a/luoto-merkki-valkoinen.svg" style="right:72px; bottom:64px; width:280px; opacity:0" alt="">
+  </section>
+
+  <!-- persistent -->
+  <img class="abs" id="logo" src="a/luoto-vaaka-valkoinen.svg" alt="">
+  <div class="lab g abs" id="count"></div>
+  <div class="abs" id="rail">
+    <div class="st" id="t1"><div class="bar"><b></b></div><span>01 Message</span></div>
+    <div class="st" id="t2"><div class="bar"><b></b></div><span>02 Draft 48 h</span></div>
+    <div class="st" id="t3"><div class="bar"><b></b></div><span>03 Changes</span></div>
+    <div class="st" id="t4"><div class="bar"><b></b></div><span>04 Live</span></div>
+  </div>
+  <div class="wipe" id="wipe" style="transform: translateX(-101%)"></div>
+  <div class="grain"></div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const cl = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const seg = (t, a, b) => cl((t - a) / (b - a));
+const eo = x => 1 - Math.pow(1 - x, 5);                       // the site's soft arrival
+const eio = x => x < .5 ? 16 * x ** 5 : 1 - Math.pow(-2 * x + 2, 5) / 2;
+const ei = x => x * x * x;
+const lerp = (a, b, k) => a + (b - a) * k;
+
+// Split headings into masked words
+document.querySelectorAll('.w').forEach(el => {
+  const walk = n => {
+    [...n.childNodes].forEach(c => {
+      if (c.nodeType === 3) {
+        const f = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(p => {
+          if (!p) return;
+          if (/^\s+$/.test(p)) { f.appendChild(document.createTextNode(' ')); return; }
+          const m = document.createElement('span'); m.className = 'm';
+          const i = document.createElement('i'); i.textContent = p; m.appendChild(i); f.appendChild(m);
+        });
+        c.replaceWith(f);
+      } else if (c.nodeType === 1 && !c.classList.contains('sw')) walk(c);
+    });
+  };
+  walk(el);
+  el._w = [...el.querySelectorAll('.m > i')];
+});
+
+// words rise in from behind their mask, and leave upwards
+function words(el, tin, tout, step = 0.045, dur = 0.9) {
+  const n = el._w.length;
+  el._w.forEach((w, i) => {
+    const pin = eo(seg(T, tin + i * step, tin + i * step + dur));
+    const pout = tout == null ? 0 : eio(seg(T, tout + i * 0.018, tout + i * 0.018 + 0.5));
+    const y = (1 - pin) * 112 - pout * 112;
+    w.style.transform = `translateY(${y}%)`;
+  });
+  el.style.visibility = (T >= tin - 0.01 && (tout == null || T < tout + n * 0.018 + 0.55)) ? 'visible' : 'hidden';
+}
+// fade and rise
+function fade(el, tin, tout, dy = 30, dur = 0.8) {
+  const pin = eo(seg(T, tin, tin + dur));
+  const pout = tout == null ? 0 : eio(seg(T, tout, tout + 0.45));
+  el.style.opacity = pin * (1 - pout);
+  el.style.transform = `translateY(${(1 - pin) * dy - pout * dy}px)`;
+}
+function sceneOn(id, a, b) { $(id).style.opacity = (T >= a && T < b) ? 1 : 0; }
+
+const TYPE1 = 'bathroom renovation espoo';
+const TYPE2 = 'Hi! Here is a link to our site: yourcompany.fi. We do bathroom renovations in Espoo.';
+const LEADS = [
+  ['Quote request', 'Bathroom renovation, Espoo'], ['Quote request', 'Sauna renovation, Vantaa'], ['Quote request', 'Pipe renovation, Helsinki'],
+  ['Quote request', 'Kitchen renovation, Espoo'], ['Quote request', 'Bathroom, Kirkkonummi'], ['Quote request', 'Floor heating, Vantaa'],
+];
+const NOTES = [
+  ['New quote request', '3 h', 'Bathroom and sauna · Helsinki'], ['New quote request', '1 h', 'Sauna renovation · Kirkkonummi'],
+  ['New quote request', '12 min', 'Pipe renovation · Vantaa'], ['New quote request', 'now', 'Bathroom renovation · Espoo'],
+];
+const icon = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.2"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>';
+$('#leads').innerHTML = LEADS.map((l, i) => `<div class="lead abs" id="ld${i}" style="left:1310px; top:${300 + (i % 3) * 120}px; opacity:0"><span class="ic">${icon}</span><div><b>${l[0]}</b><span>${l[1]}</span></div></div>`).join('');
+$('#nts').innerHTML = NOTES.map((n, i) => `<div class="nt" id="nt${i}" style="top:260px; opacity:0"><span class="ic">${icon}</span><b>${n[0]}<small>${n[1]}</small></b><span>${n[2]}</span></div>`).join('');
+
+// Timeline, in seconds
+const S = { s1: [0, 6.4], s2: [6.4, 9.9], s3: [9.9, 15.2], s4: [15.2, 20.9], s5: [20.9, 26.4], s6: [26.4, 31.4], s7: [31.4, 36.2], s8: [36.2, 42] };
+const DUR = 42;
+let T = 0;
+
+window.render = function (t) {
+  T = t;
+  for (const k in S) sceneOn('#' + k, S[k][0] - 0.01, S[k][1] + 0.6);
+
+  // persistent logo
+  $('#logo').style.opacity = eo(seg(t, 0.1, 0.9));
+
+  // ---- 1. hook
+  words($('#s1a'), 0.25, 2.95);
+  fade($('#ph1'), 0.5, 5.9, 60, 1.1);
+  const qn = Math.floor(seg(t, 1.0, 2.2) * TYPE1.length);
+  $('#q').textContent = TYPE1.slice(0, qn);
+  $('#qc').style.opacity = (t < 2.4 && Math.floor(t * 2.2) % 2 === 0) ? 1 : 0;
+  ['#r1', '#r2', '#r3'].forEach((r, i) => fade($(r), 2.35 + i * 0.12, null, 24, 0.7));
+  words($('#s1b'), 3.15, 5.95);
+  fade($('#s1cnt'), 3.5, 5.95, 30);
+  // leads fly off to the right, one after another
+  let lost = 0;
+  LEADS.forEach((l, i) => {
+    const a = 3.7 + i * 0.36, el = $('#ld' + i);
+    const pin = eo(seg(t, a, a + 0.35)), pout = ei(seg(t, a + 0.5, a + 1.15));
+    el.style.opacity = pin * (1 - seg(t, a + 0.9, a + 1.15));
+    el.style.transform = `translateX(${pout * 700}px) scale(${lerp(0.9, 1, pin)}) rotate(${pout * (i % 2 ? 4 : -3)}deg)`;
+    if (t > a + 0.6) lost++;
+  });
+  $('#cnt').textContent = lost;
+
+  // ---- 2. question
+  words($('#s2a'), 6.55, 9.35, 0.06, 1);
+  const swk = eio(seg(t, 7.6, 8.25)), swo = eio(seg(t, 9.2, 9.5));
+  $('#sw').style.transform = `scaleX(${swk * (1 - swo)})`;
+  $('#sw').style.transformOrigin = swo > 0 ? '100% 50%' : '0 50%';
+  $('#s2a').querySelectorAll('.hl .m > i').forEach(w => w.style.color = swk > 0.5 ? '#0A0A0A' : '');
+  words($('#s2b'), 8.3, 9.35);
+  // orange wipe into the steps
+  const wi = eio(seg(t, 9.45, 9.95)), wo = eio(seg(t, 9.95, 10.45));
+  $('#wipe').style.transform = `translateX(${-101 + wi * 101 + wo * 101}%)`;
+
+  // ---- rail and counter
+  const railOn = eo(seg(t, 10.2, 10.9)) * (1 - eio(seg(t, 31.2, 31.7)));
+  $('#rail').style.opacity = railOn;
+  $('#rail').style.transform = `translateY(${(1 - railOn) * 20}px)`;
+  [['#t1', 's3'], ['#t2', 's4'], ['#t3', 's5'], ['#t4', 's6']].forEach(([id, s], i) => {
+    const [a, b] = S[s];
+    $(id + ' b').style.transform = `scaleX(${seg(t, a + 0.2, b)})`;
+    $(id).classList.toggle('on', t >= a);
+  });
+  const stepIx = t >= S.s6[0] ? 4 : t >= S.s5[0] ? 3 : t >= S.s4[0] ? 2 : t >= S.s3[0] ? 1 : 0;
+  $('#count').textContent = stepIx ? `Step 0${stepIx} / 04` : '';
+  $('#count').style.opacity = railOn;
+
+  // ---- 3. step 01: the message
+  fade($('#n1'), 10.2, 14.7, 40, 1);
+  words($('#s3a'), 10.4, 14.75);
+  fade($('#s3b'), 10.8, 14.75);
+  const mIn = eo(seg(t, 10.6, 11.5));
+  const mOut = eio(seg(t, 13.35, 14.0));
+  $('#msg').style.opacity = mIn * (1 - seg(t, 13.6, 14.0));
+  $('#msg').style.transform = `translate(${mOut * 260}px, ${(1 - mIn) * 60 - mOut * 320}px) scale(${1 - mOut * 0.35}) rotate(${mOut * -4}deg)`;
+  const tn = Math.floor(seg(t, 11.3, 12.9) * TYPE2.length);
+  $('#typ').textContent = TYPE2.slice(0, tn);
+  $('#tc').style.opacity = (t < 13.1 && Math.floor(t * 2.2) % 2 === 0) ? 1 : 0;
+  const press = seg(t, 13.0, 13.12) - seg(t, 13.12, 13.3);
+  $('#send').style.transform = `scale(${1 - press * 0.08})`;
+  fade($('#sent'), 13.75, 14.75, 24);
+
+  // ---- browser window across steps 02–04
+  const wIn = eo(seg(t, 15.4, 16.3)), wOut = eio(seg(t, 30.9, 31.5));
+  $('#win').style.opacity = wIn * (1 - wOut);
+  $('#win').style.transform = `translateY(${(1 - wIn) * 80 - wOut * 40}px) scale(${lerp(0.96, 1, wIn)})`;
+  // skeleton then the real page opening from the bottom up
+  ['#k1', '#k2', '#k3', '#k4', '#k5', '#k6', '#k7'].forEach((k, i) => {
+    const p = eo(seg(t, 15.9 + i * 0.1, 16.5 + i * 0.1));
+    $(k).style.opacity = p; $(k).style.transform = `translateY(${(1 - p) * 16}px)`;
+  });
+  const open = eio(seg(t, 17.0, 18.0));
+  $('#shotwrap').style.clipPath = `inset(${(1 - open) * 100}% 0 0 0)`;
+  // scroll through the draft, then back to the top for the review
+  const sc = eio(seg(t, 18.4, 20.3)) - eio(seg(t, 20.5, 21.4));
+  $('#shot').style.transform = `translateY(${-sc * 1500}px)`;
+  fade($('#ex'), 17.4, 20.6, 10);
+  // the url
+  let url = 'draft · yourcompany';
+  const un = Math.floor(seg(t, 27.0, 27.9) * 'www.yourcompany.fi'.length);
+  if (t >= 26.95) url = 'www.yourcompany.fi'.slice(0, un);
+  $('#url').textContent = url;
+  $('#lock').style.opacity = t >= 27.9 ? 1 : 0.35;
+  $('#lock').style.stroke = t >= 27.9 ? '#FF5B1F' : '#9C9C9A';
+
+  // ---- 4. step 02 copy and the 48 h clock
+  fade($('#n2'), 15.4, 20.5, 40, 1);
+  words($('#s4a'), 15.6, 20.55);
+  fade($('#s4b'), 16.1, 20.55);
+  const ck = eio(seg(t, 16.2, 18.2));
+  fade($('#clk'), 15.9, 20.4, 20);
+  $('#clkarc').style.strokeDashoffset = 729 * (1 - ck);
+  $('#clkt').textContent = Math.round(ck * 48) + ' h';
+
+  // ---- 5. step 03: approve, then the changes
+  fade($('#n3'), 21.1, 26.0, 40, 1);
+  words($('#s5a'), 21.3, 26.0);
+  fade($('#s5b'), 21.8, 26.0);
+  const okIn = eo(seg(t, 21.6, 22.2)), okPress = seg(t, 22.5, 22.6) - seg(t, 22.6, 22.8), okOut = eio(seg(t, 22.9, 23.3));
+  $('#ok').style.opacity = okIn * (1 - okOut);
+  $('#ok').style.transform = `scale(${lerp(0.8, 1, okIn) - okPress * 0.07 + okOut * 0.15})`;
+  ['#p1', '#p2', '#p3'].forEach((p, i) => {
+    const a = 23.3 + i * 0.35, done = 24.6 + i * 0.4;
+    const pin = eo(seg(t, a, a + 0.5)), pout = eio(seg(t, 25.9, 26.3));
+    const el = $(p);
+    el.style.opacity = pin * (1 - pout);
+    el.style.transform = `translateY(${(1 - pin) * 14}px) scale(${lerp(0.85, 1, pin)})`;
+    const k = eo(seg(t, done, done + 0.35));
+    el.querySelector('s').style.setProperty('--k', k);
+    el.querySelector('s').style.color = k > 0.5 ? '#9C9C9A' : '';
+    el.querySelector('u').textContent = t >= done + 0.15 ? 'Done' : '';
+    el.querySelector('.d').style.background = t >= done + 0.15 ? '#FF5B1F' : '#0A0A0A';
+    el.querySelector('.d').style.color = t >= done + 0.15 ? '#0A0A0A' : '#F7F7F5';
+    el.querySelector('.d').innerHTML = t >= done + 0.15 ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="3.2"><path d="M4 12.5l5 5 11-11"/></svg>' : String(i + 1);
+  });
+
+  // ---- 6. step 04: handover
+  fade($('#n4'), 26.6, 31.0, 40, 1);
+  words($('#s6a'), 26.8, 31.0);
+  $('#ticks').querySelectorAll('li').forEach((li, i) => fade(li, 28.2 + i * 0.3, 31.0, 20));
+  const lv = eo(seg(t, 28.0, 28.6));
+  $('#live').style.opacity = lv * (1 - eio(seg(t, 30.6, 31.0)));
+  $('#live').style.transform = `scale(${lerp(1.4, 1, lv)}) rotate(${lerp(-8, -3, lv)}deg)`;
+
+  // ---- 7. result: requests arrive in the evening
+  words($('#s7a'), 31.6, 35.7);
+  fade($('#s7b'), 32.4, 35.7);
+  fade($('#ph2'), 31.7, 35.8, 60, 1.1);
+  NOTES.forEach((n, i) => {
+    const a = 32.4 + i * 0.6, el = $('#nt' + i);
+    const p = eo(seg(t, a, a + 0.55));
+    // newest on top, older ones pushed down
+    let y = 260;
+    for (let j = i + 1; j < NOTES.length; j++) y += 116 * eo(seg(t, 32.4 + j * 0.6, 32.95 + j * 0.6));
+    el.style.opacity = p;
+    el.style.transform = `translateY(${y - 260 + (1 - p) * -30}px) scale(${lerp(0.92, 1, p)})`;
+  });
+
+  // ---- 8. CTA
+  words($('#s8a'), 36.4, null, 0.07, 1);
+  words($('#s8b'), 37.0, null, 0.03);
+  const bi = eo(seg(t, 37.6, 38.4));
+  $('#s8c').style.opacity = bi; $('#s8c').style.transform = `translateY(${(1 - bi) * 30}px)`;
+  const cm = eio(seg(t, 38.6, 39.6));
+  $('#cur').style.left = lerp(1100, 560, cm) + 'px'; $('#cur').style.top = lerp(940, 690, cm) + 'px';
+  $('#cur').style.opacity = eo(seg(t, 38.5, 38.8)) * (1 - seg(t, 41.2, 41.6));
+  const cp = seg(t, 39.75, 39.85) - seg(t, 39.85, 40.05);
+  $('#cbtn').style.transform = `translateY(${cp * 6}px)`;
+  $('#cbtn').style.boxShadow = `0 ${6 - cp * 6}px 0 #B83A0C, 0 0 0 ${seg(t, 39.8, 40.6) * 26}px rgba(255,91,31,${0.35 * (1 - seg(t, 39.8, 40.6))})`;
+  fade($('#s8d'), 38.2, null, 16);
+  const aa = eo(seg(t, 38.0, 39.2));
+  $('#aa').style.opacity = aa; $('#aa').style.transform = `translateY(${(1 - aa) * 40}px)`;
+  // fade to black at the very end so the loop restarts cleanly
+  $('#stage').style.opacity = 1 - seg(t, DUR - 0.5, DUR);
+};
+window.DUR = DUR;
+document.fonts.ready.then(() => { window.ready = true; render(0); });
+</script>
+</body>
+</html>

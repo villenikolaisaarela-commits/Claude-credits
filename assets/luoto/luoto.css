@@ -344,3 +344,60 @@ em { font-style: normal; color: var(--sea); }
 .first .pill { background: var(--paper); color: var(--ink); }
 .guar .d3, .first .d3 { margin-top: 16px; }
 .guar p, .first p { max-width: 46ch; margin-top: 12px; font-size: 17px; }
+
+/* Language switch */
+.nav-lang { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; font-weight: 600; letter-spacing: 0.04em; text-decoration: none; }
+.nav-lang:hover { border-color: var(--ink); }
+
+/* Website as a service: the agency that leaves, and us */
+.vs { display: grid; gap: 22px; margin-top: 48px; }
+@media (min-width: 860px) { .vs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; } }
+.vs-a, .vs-b { padding: clamp(24px, 3.4vw, 44px); border-radius: 28px; }
+.vs h3.lab { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.vs h3 img { width: auto; height: 16px; }
+.vs li { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; font-size: 17px; }
+.vs li i { display: grid; flex: none; place-items: center; width: 26px; height: 26px; margin-top: 1px; border-radius: 50%; }
+.vs-a { border: 2px solid var(--line); color: var(--g); }
+.vs-a li + li { border-top: 1px solid var(--line); }
+.vs-a li i { background: var(--sand); color: var(--g); }
+.vs-b { background: var(--ink); color: var(--paper); box-shadow: 10px 10px 0 var(--or); }
+.vs-b li + li { border-top: 1px solid var(--line-lt); }
+.vs-b li i { background: var(--or); color: var(--ink); }
+.perks-h { margin-top: clamp(64px, 7vw, 96px); max-width: 24ch; }
+.perks { display: grid; gap: 32px 40px; margin-top: 32px; }
+@media (min-width: 700px) { .perks { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .perks { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.perks li { padding-top: 20px; border-top: 2px solid var(--ink); }
+.perks .lab { color: var(--or-dk); }
+.perks h3 { margin-top: 12px; font: 600 20px/1.25 var(--sans); letter-spacing: -0.01em; }
+.perks p { margin-top: 10px; font-size: 16px; color: var(--g); }
+
+/* You say, we do: a request and what came of it */
+.req-w { padding: clamp(28px, 5vw, 80px); border-radius: 32px; background: var(--sand); }
+.req { margin-top: 44px; }
+.req li { display: grid; gap: 10px; padding: 18px 0; border-top: 1px solid var(--line); }
+@media (min-width: 900px) { .req li { grid-template-columns: minmax(0, 1fr) 44px minmax(0, 1fr) 176px; align-items: center; gap: 16px 20px; } }
+.req-q { justify-self: start; max-width: 30ch; padding: 14px 20px; border: 2px solid var(--ink); border-radius: 22px 22px 22px 6px; background: var(--white); box-shadow: 4px 4px 0 var(--ink); font: 500 clamp(19px, 1.6vw, 24px)/1.25 var(--serif); letter-spacing: -0.01em; }
+.req-ar { display: none; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: var(--paper); }
+@media (min-width: 900px) { .req-ar { display: grid; } }
+.req-a { display: flex; align-items: center; gap: 12px; font-size: 17px; font-weight: 500; }
+.req-a i { display: grid; flex: none; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--or); color: var(--ink); }
+.req .tag { justify-self: start; }
+@media (min-width: 900px) { .req .tag { justify-self: end; } }
+.tag-small { background: var(--white); }
+.tag-big { background: var(--ink); color: var(--paper); }
+.req-note { margin-top: 20px; color: var(--g); }
+
+/* The first year, after launch */
+#kumppani .split .d2 { margin-top: 14px; }
+#vuosi > .d2 { max-width: 22ch; margin-top: 14px; }
+.yr { display: grid; gap: 36px 28px; margin-top: 56px; }
+@media (min-width: 860px) { .yr { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.yr li { position: relative; padding-top: 30px; border-top: 2px solid var(--ink); }
+.yr li::before { content: ''; position: absolute; top: -9px; left: 0; width: 16px; height: 16px; border: 2px solid var(--ink); border-radius: 50%; background: var(--paper); }
+.yr li:first-child::before { background: var(--or); }
+.yr h3 { margin-top: 18px; font: 500 clamp(24px, 2vw, 30px)/1.15 var(--serif); letter-spacing: -0.015em; }
+.yr p { margin-top: 10px; font-size: 16px; color: var(--g); }
+.yr-all { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; margin-top: 48px; padding: 22px 28px; border-radius: 24px; background: var(--ink); color: var(--paper); }
+.yr-all b { font: 600 13px/1.4 var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--or); }
+.yr-all span { font-size: 17px; }

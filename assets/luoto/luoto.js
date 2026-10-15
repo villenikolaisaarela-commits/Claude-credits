@@ -15,7 +15,7 @@
     const v = f.querySelector('video'), b = f.querySelector('.film-t');
     const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
     let paused = calm;
-    const show = () => { const on = !v.paused; b.textContent = on ? 'Pysäytä' : 'Toista'; b.setAttribute('aria-pressed', String(!on)); };
+    const show = () => { const on = !v.paused; b.textContent = on ? (b.dataset.pause || 'Pysäytä') : (b.dataset.play || 'Toista'); b.setAttribute('aria-pressed', String(!on)); };
     v.addEventListener('play', show); v.addEventListener('pause', show);
     b.addEventListener('click', () => { if (v.paused) { paused = false; v.play().catch(() => {}); } else { paused = true; v.pause(); } });
     if ('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(e => {
