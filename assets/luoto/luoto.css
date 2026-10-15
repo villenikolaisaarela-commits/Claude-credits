@@ -301,3 +301,10 @@ em { font-style: normal; color: var(--sea); }
 .cta .btn:hover { box-shadow: 0 3px 0 var(--or-dk); }
 .cta .btn:active { box-shadow: 0 0 0 var(--or-dk); }
 .ps .split { align-items: start; }
+
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* The process film: framed like the cards, with its own play and pause */
+.film { position: relative; margin-top: clamp(40px, 5vw, 64px); overflow: hidden; border: 2px solid var(--ink); border-radius: 28px; background: var(--ink); box-shadow: 10px 10px 0 var(--or); }
+.film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+.film-t { position: absolute; right: clamp(10px, 1.6vw, 22px); bottom: clamp(10px, 1.6vw, 22px); min-height: 44px; padding: 0 18px; border: 0; border-radius: 999px; background: rgba(15, 15, 14, 0.7); color: var(--paper); cursor: pointer; font-size: 14px; font-weight: 600; }
+.film-t:hover { background: var(--or); color: var(--ink); }
