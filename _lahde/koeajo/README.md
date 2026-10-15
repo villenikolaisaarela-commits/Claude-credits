@@ -7,7 +7,7 @@ Tavoite: käydä koko asiakasprosessi läpi ennen ensimmäistä oikeaa asiakasta
 | Vaihe | Tila |
 |---|---|
 | 1. Yhteydenotto | Korjattu. Demonappi avaa lomakkeen, joka lähettää FormSubmitin kautta osoitteeseen ville@studioluoto.com. Aktivointisähköposti lähetetty; Ville klikkaa aktivointilinkin ja testaa puhelimella. |
-| 2. Demo 48 h | Brief valmis (doventus-BRIEF.md). Etusivu tehdään molemmille asiakkaille: taloyhtiöt (korjaushankkeet) ja yksityiset pientalorakentajat. Rakennetaan Frameriin. |
+| 2. Demo 48 h | Valmis Framerissa: https://concave-vacation-725649.framer.app (desktop, tablet, puhelin). Rakennettu Server API:lla, skriptit kansiossa framer/. Kohteet-CMS:ssä 4 referenssiä; Collection List lisätään sivulle Framerissa käsin (API ei tue). |
 | 3. Tarjous ja sopimus | Tarjouspohja ja tilausvahvistus puuttuvat. |
 | 4. Laskutus | Ville ei ole alv-rekisterissä. Suositus: vapaaehtoinen rekisteröinti ennen ensimmäistä laskua. Laskutustyökalu valitsematta. |
 | 5. Käyttöönotto | Tarkistuslista puuttuu (DNS, Google-yritysprofiili, Search Console, lomake, aineistot). |
@@ -23,7 +23,7 @@ Framerille ei ole Claude-liitintä. Käytetään Framerin Server API:a (open bet
 
 1. Ville luo API-avaimen: Framer-projekti, Site Settings, General, API key. Avain on sidottu tähän yhteen projektiin.
 2. Ville lisää avaimen ympäristön asetuksiin (istunnon otsikkorivin ympäristövalikko, Edit) muuttujaksi `FRAMER_API_KEY`. Avainta ei liitetä keskusteluun.
-3. Uusi istunto lukee avaimen. Yhteys:
+3. Uusi istunto lukee avaimen (skriptit: `framer/fx.mjs` lukee `FRAMER_API_KEY`). Yhteys:
 
 ```js
 import { connect } from 'framer-api'
