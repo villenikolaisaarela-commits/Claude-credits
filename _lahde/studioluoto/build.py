@@ -482,7 +482,7 @@ if LIVE:
     urls = ['/', '/tyot/'] + [f'/projektit/{w["slug"]}/' for w in WORKS] + ['/tietosuoja/']
     write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(f'  <url><loc>{SITE}{u}</loc><lastmod>2026-10-15</lastmod></url>' for u in urls) + '\n</urlset>\n')
     write('robots.txt', f'User-agent: *\nAllow: /\nDisallow: /esikatselu/\n\nSitemap: {SITE}/sitemap.xml\n')
-    write('CNAME', 'www.studioluoto.com\n')
+    write('CNAME', 'www.studioluoto.com')
     # Pages from the old site send their visitors to the matching place here
     stale = [(f'projektit/{d}', '/tyot/') for d in sorted(os.listdir(REPO + '/projektit')) if d not in ORDER]
     for old, new in [('hinnat', '/#palvelu'), ('minusta', '/#kysymykset'), ('prosessi', '/#prosessi')] + stale:
