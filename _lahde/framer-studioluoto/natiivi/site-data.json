@@ -1,0 +1,1730 @@
+{
+ "fi": {
+  "works": [
+   {
+    "slug": "kallistus",
+    "name": "Kallistus",
+    "title": "Vesi menee sinne, minne pitää",
+    "desc": "Hinnat ja laskuri ennen mittauskäyntiä, kolmen viikon työmaa päivä päivältä ja vedeneristys kuvattuna kuivakansioon.",
+    "ala": "Kylpyhuoneremontit",
+    "city": "Helsinki",
+    "work": "Nimi, tunnus, ilme ja sivusto",
+    "site": "7 sivua, hintalaskuri",
+    "concept": "Kallistus on kuvitteellinen yritys. Tein sivuston näyttääkseni, mitä kylpyhuoneremonttiyrityksen sivut voivat tehdä.",
+    "start": [
+     "Kallistus on kuvitteellinen kahdeksan hengen yritys, joka tekee vain kylpyhuoneita ja saunoja pääkaupunkiseudun kerros-, rivi- ja omakotitaloihin.",
+     "Kylpyhuoneremontti on useimmille vuosikymmenen kallein remontti, ja asiakas pelkää kahta asiaa: hinta karkaa ja vesi päätyy rakenteisiin. Alan sivuilla luvataan laatua, mutta harva näyttää, miten vedeneristys tehdään tai mitä remontti maksaa."
+    ],
+    "solution": "Sivuston ajatus on nimessä: kallistus on lattian kaato kohti kaivoa. Tunnus on sanamerkki, jonka alla viiva viettää kaivoon, ja sama viiva toistuu sivuston jakajina. Etusivulla ovat hinnat ja laskuri kotitalousvähennyksineen, viidentoista työpäivän aikajana ja kuivakansio: kuvat jokaisesta vedeneristyskerroksesta. Mitat on ladottu tasalevyisellä fontilla kuin työmaan merkinnät. Typografia on Host Grotesk ja IBM Plex Mono betonin ja laastin sävyillä.",
+    "does": [
+     [
+      "Hinta selviää ennen käyntiä",
+      "Hintahaarukat tilatyypeittäin ja laskuri, joka laskee kotitalousvähennyksen yhdelle tai kahdelle omistajalle."
+     ],
+     [
+      "Piilossa oleva työ näkyy",
+      "Kuivakansio näyttää vedeneristyksen kerros kerrokselta, ja siihen perustuu kymmenen vuoden takuu."
+     ],
+     [
+      "Taloyhtiö ei jarruta",
+      "Muutostyöilmoitus, asbestikartoitus ja valvojan tarkastus kerrotaan palveluna, ei asiakkaan ongelmana."
+     ]
+    ],
+    "made": [
+     "Nimi, kaivotunnus, värit ja typografia",
+     "Hintataulukko ja laskuri kotitalousvähennyksellä",
+     "Viidentoista työpäivän aikajana",
+     "Kohdesivu kuivakansioineen",
+     "Mittauskäyntilomake kuvien lisäyksellä"
+    ],
+    "mobile": "Puhelimella hinnat muuttuvat tilakohtaisiksi korteiksi, laskurin valinnat ovat sormen kokoisia ja aikajana taittuu viiden päivän riveiksi.",
+    "credits": "Kuvat ovat Pexels-lisenssin alaisia kuvia, ja kuvaajat mainitaan sivuston kuvasivulla. Henkilöt, kohteet ja hinnat on keksitty.",
+    "short": "Kallistus",
+    "alt": {
+     "lista": "Kohteet-sivu",
+     "kohde": "Kohdesivu, Kauniainen",
+     "hinnat": "Hinnat-sivu ja laskuri"
+    }
+   },
+   {
+    "slug": "lauha",
+    "name": "Lauha Talotekniikka",
+    "title": "Tasainen lämpö, siisti remontti",
+    "desc": "Kaksi ovea etusivulla: omakotitalo ja taloyhtiö. Säästölaskuri öljyn ja sähkön tilalle ja rappukortti, josta asukas näkee jokaisen vesikatkon.",
+    "ala": "Lämpöpumput ja putkiremontit",
+    "city": "Tampere",
+    "work": "Nimi, tunnus, ilme ja sivusto",
+    "site": "7 sivua, säästölaskuri",
+    "concept": "Lauha Talotekniikka on kuvitteellinen yritys. Tein sivuston näyttääkseni, mitä LVI-yrityksen sivut voivat tehdä.",
+    "start": [
+     "Lauha on kuvitteellinen 14 hengen LVI-yritys Tampereella. Se asentaa lämpöpumppuja öljy- ja sähkötaloihin ja tekee putkiremontteja taloyhtiöihin.",
+     "Yhdellä sivustolla on kaksi hyvin erilaista asiakasta. Omakotitalon omistaja haluaa tietää, paljonko säästää ja riittääkö pumppu pakkasella. Taloyhtiössä hallitus päättää, mutta asukkaat elävät remontin keskellä ja ovat sen kovimpia arvostelijoita."
+    ],
+    "solution": "Etusivu alkaa talvi-illan talosta ja kahdesta ovesta: omakotitaloon ja taloyhtiölle. Tunnuksen viiva aaltoilee kuin ulkolämpötila ja tasaantuu sisälämmöksi, ja sama ajatus on kaaviona: Tampereen vuoden lämpötilat ja kuparinen 21 asteen viiva. Omakotitalolle on kolme järjestelmää hintoineen ja säästölaskuri öljyn vaihdon 60 %:n kotitalousvähennyksellä. Taloyhtiölle on menetelmävertailu ja rappukortti, josta asukas näkee joka päivän. Typografia on Familjen Grotesk huurteen, graniitin ja talviyön sävyillä.",
+    "does": [
+     [
+      "Säästö omilla luvuilla",
+      "Laskuri ottaa nykyisen kulutuksen ja näyttää säästön, kotitalousvähennyksen ja takaisinmaksuajan."
+     ],
+     [
+      "Asukas tietää etukäteen",
+      "Rappukortissa näkyy jokainen vesikatko ja päivä ilman omaa kylpyhuonetta, ja työnjohtajalla on nimi ja numero."
+     ],
+     [
+      "Lupaus, jonka voi tarkistaa",
+      "Lämpötakuu 21 °C −26 asteen pakkasella ja pätevyydet selitettyinä, ei logoina."
+     ]
+    ],
+    "made": [
+     "Nimi, lämpöviivatunnus, värit ja typografia",
+     "Kaksi ovea: omakotitalo ja taloyhtiö",
+     "Säästölaskuri ja hinnat asennettuna",
+     "Rappukortti ja menetelmävertailu",
+     "Kohdesivu aikajanoineen"
+    ],
+    "mobile": "Puhelimella ovet ovat pääkuvan päällä allekkain, lämpötilakaavio vierii sivusuunnassa ja rappukortin viikot mahtuvat näytölle.",
+    "credits": "Kuvat ovat Pexels-lisenssin alaisia kuvia, ja kuvaajat mainitaan sivuston kuvasivulla. Lämpöpumppukuvat ovat valmistajan markkinointikuvia. Henkilöt, kohteet ja hinnat on keksitty.",
+    "short": "Lauha",
+    "alt": {
+     "lista": "Kohteet-sivu",
+     "kohde": "Kohdesivu, Kangasala",
+     "hinnat": "Lämpöpumput-sivu ja säästölaskuri"
+    }
+   },
+   {
+    "slug": "keljon-puusepat",
+    "name": "Keljon Puusepät",
+    "title": "Hinnan suunta ennen puhelua",
+    "desc": "Hintataulukko keittiön pituuden mukaan ja laskuri vastaavat yleisimpään kysymykseen. Toimitusaika ja seuraava vapaa verstasaika näkyvät, joten asiakas osaa varata ajoissa.",
+    "ala": "Keittiöpuusepänliike",
+    "city": "Jyväskylä",
+    "work": "Nimi, tunnus, ilme ja sivusto",
+    "site": "19 sivua, etusivu 0,6 Mt",
+    "concept": "Keljon Puusepät on kuvitteellinen yritys. Tein sivuston näyttääkseni, mitä puusepänliikkeen sivut voivat tehdä.",
+    "start": [
+     "Keljon Puusepät on viiden hengen puusepänliike Jyväskylän Keljossa. Se tekee mittatilauskeittiöitä ja vaatekaappeja koivuvanerista ja massiivipuusta ja asentaa ne itse, ja toimitusaika on 8–10 viikkoa.",
+     "Suomalaisten puusepänliikkeiden sivuilla on yleensä iskulause ja kuvakaruselli mutta ei yhtään hintaa. Keittiötä suunnitteleva haluaa kuitenkin ensin tietää, mitä keittiö maksaa ja milloin se ehtii valmistua."
+    ],
+    "solution": "Sivuston runko on numeroitu keittiöluettelo. Jokaisella työllä on numero, paikka, vuosi ja toteutunut hinta, ja sama numero poltetaan tiskialtaan kaappiin huoltoa varten. Hintasivulla on taulukko keittiön pituuden mukaan, laskuri ja yksi keittiö eriteltynä riveittäin. Ilmeessä on kaksi pääväriä, koivunvaalea ja tumma tammi, ja yksi kirjasinperhe kahdessa leveydessä.",
+    "does": [
+     [
+      "Hinnan suunta selviää ennen puhelua",
+      "Hintataulukko keittiön pituuden mukaan ja laskuri vastaavat yleisimpään kysymykseen."
+     ],
+     [
+      "Tarjouspyynnöt tulevat oikeaan aikaan",
+      "Toimitusaika ja seuraava vapaa verstasaika näkyvät, joten asiakas osaa varata ajoissa."
+     ],
+     [
+      "Työ palvelee asennuksen jälkeenkin",
+      "Numeroitu keittiöluettelo ja hoito-ohjeet auttavat asiakasta vielä vuosia myöhemmin."
+     ]
+    ],
+    "made": [
+     "Nimi, K-tunnus, värit ja typografia",
+     "Numeroitu keittiöluettelo ja arkisto vuodesta 2016",
+     "Hintataulukko, laskuri ja yksi keittiö eriteltynä",
+     "Hoito-ohjeet, takuu ja maksuerät"
+    ],
+    "mobile": "Puhelimella jo ensimmäinen näkymä kertoo toimitusajan ja hintahaarukan, ja valikon alareunassa ovat verstaan puhelinnumero ja tarjouspyyntö.",
+    "credits": "Kuvat ovat Unsplash-lisenssin alaisia kuvia, ja kuvaajat mainitaan sivustolla.",
+    "short": "Keljon Puusepät",
+    "alt": {
+     "lista": "Keittiöt-sivu",
+     "kohde": "Keittiösivu, K-201",
+     "hinnat": "Hinnat-sivu",
+     "toimisto": "Verstas-sivu",
+     "yhteys": "Tarjouspyyntö-sivu"
+    }
+   },
+   {
+    "slug": "haljala",
+    "name": "Arkkitehtitoimisto Haljala",
+    "title": "Soittaja tietää jo hinnan",
+    "desc": "Pieni toimisto piirtää taloja, huviloita ja saunoja Pirkanmaalle. Hinnat ja vuoden 2027 vapaat aloitukset näkyvät sivulla, joten yhteydenotot tulevat ihmisiltä, joille aikataulu ja budjetti sopivat.",
+    "ala": "Arkkitehtitoimisto",
+    "city": "Tampere",
+    "work": "Nimi, sanamerkki, ilme ja sivusto",
+    "site": "14 sivua, etusivu 1,0 Mt",
+    "concept": "Arkkitehtitoimisto Haljala on kuvitteellinen yritys. Tein sivuston näyttääkseni, mitä pienen arkkitehtitoimiston sivut voivat tehdä.",
+    "start": [
+     "Arkkitehtitoimisto Haljala on viiden hengen toimisto Tampereella. Se suunnittelee taloja, huviloita ja saunoja yksityisille ihmisille ja korjaa vanhoja hirsitaloja, useimmiten Pirkanmaalla. Uusia töitä se ottaa vuodessa 4–6.",
+     "Asiakas on perhe, joka rakentaa taloa tai pelastaa vanhaa. Hän haluaa tietää, mitä suunnittelu maksaa, milloin työ voi alkaa ja millaisia pohjia toimisto piirtää. Alan parhaat sivut näyttävät kauniita kuvia, mutta nämä kysymykset jäävät niissä usein auki."
+    ],
+    "solution": "Etusivu kertoo yhdellä virkkeellä, mitä toimisto tekee ja kenelle, ja näyttää heti valmiin huvilan maisemassaan. Kohdesivut etenevät tontin ehdoista ratkaisuun, tietoruutuun ja piirustuksiin. Hinnat arvonlisäveroineen, vuoden 2027 vapaat aloitukset, työn alla olevat kohteet ja jokaisen suora numero ovat näkyvillä. Typografia on Source Serif 4 ja Public Sans lämpimällä paperinvärillä, ja alatunniste on tervan värinen.",
+    "does": [
+     [
+      "Soittaja tietää jo hinnan",
+      "Hinnat ja vuoden 2027 vapaat aloitukset näkyvät, joten yhteydenotot tulevat ihmisiltä, joille aikataulu ja budjetti sopivat."
+     ],
+     [
+      "Kohteet vastaavat perheen kysymyksiin",
+      "Tontti, ratkaisu, pinta-ala ja piirustukset kertovat, millaisia taloja toimisto piirtää."
+     ],
+     [
+      "Pieni toimisto näyttää toimivalta",
+      "Työn alla -lista päivämäärineen kertoo, että toimistossa tehdään töitä juuri nyt."
+     ]
+    ],
+    "made": [
+     "Nimi, sanamerkki, värit ja typografia",
+     "Kohdesivuilla tietoruutu, kuvatekstit ja piirustukset",
+     "Palvelut ja hinnat -sivu arvonlisäveroineen",
+     "Työn alla -lista ja vapaat aloitukset etusivulla"
+    ],
+    "mobile": "Puhelimella etusivun huvila rajautuu pystykuvaksi, piirustukset pysyvät luettavina ja valikko avautuu koko näytön listaksi.",
+    "credits": "Kuvissa näkyvillä rakennuksilla ei ole yhteyttä yritykseen. Kuvat ovat Unsplash-lisenssin alaisia kuvia, ja kuvaajat mainitaan sivustolla. Piirustukset on tehty sivustoa varten.",
+    "short": "Haljala",
+    "alt": {
+     "lista": "Työt-sivu",
+     "kohde": "Kohdesivu, Huvila Kallio",
+     "hinnat": "Palvelut ja hinnat -sivu",
+     "toimisto": "Toimisto-sivu",
+     "yhteys": "Yhteystiedot"
+    }
+   },
+   {
+    "slug": "studio-kuusela",
+    "name": "Studio Kuusela",
+    "title": "Näkyy, mitä suunnittelu muuttaa",
+    "desc": "Kohdesivuilla on pohjapiirros puretuin ja uusin seinin sekä materiaaliluettelo, ja suunnittelun hinta näkyy jokaisen kohteen tiedoissa. Konsultaatioon tullaan hinta tiedossa.",
+    "ala": "Sisustusarkkitehtitoimisto",
+    "city": "Turku",
+    "work": "Nimi, liikemerkki, ilme ja sivusto",
+    "site": "16 sivua, etusivu 0,5 Mt",
+    "concept": "Studio Kuusela on kuvitteellinen yritys. Tein sivuston näyttääkseni, mitä sisustusarkkitehdin sivut voivat tehdä.",
+    "start": [
+     "Studio Kuusela on kahden sisustusarkkitehdin toimisto Turun Port Arthurissa. Se suunnittelee koteja ja kesähuviloita Varsinais-Suomessa sekä pari kahvilaa tai liikettä vuodessa.",
+     "Alan parhaat sivut näyttävät hienoilta, mutta niistä ei selviä, mitä suunnittelu maksaa. Kotimaisilla kuluttajasivuilla hinnat näkyvät, mutta ulkoasu muistuttaa usein valmispohjaa. Asiakas haluaa tietää molemmat ennen kuin varaa konsultaation."
+    ],
+    "solution": "Etusivu alkaa yhdellä isolla kuvalla Nauvon saunarakennuksesta, ja heti sen alla kerrotaan, keitä studiossa on ja missä se on. Kohdesivujen tietolaatikossa on myös suunnittelun hinta, ja jokaisella kohteella on materiaaliluettelo. Puolalanmäen asunnon kohdalla on pohjapiirros, josta näkee puretut ja uudet seinät. Palvelut ja hinnat -sivulla on koko hinnasto, työn vaiheet ja ehdot. Liikemerkki on piirretty EB Garamondin kirjainmuodoista, ja kaikki kuvat on käsitelty samalla lämpimällä säädöllä.",
+    "does": [
+     [
+      "Konsultaatioon tullaan hinta tiedossa",
+      "Suunnittelun hinta näkyy jokaisen kohteen tiedoissa ja hinnastossa."
+     ],
+     [
+      "Kohteet näyttävät, mitä suunnittelu muuttaa",
+      "Pohjapiirros puretuin ja uusin seinin ja materiaaliluettelot näyttävät työn, eivät vain lopputulosta."
+     ],
+     [
+      "Studion ihmiset näkyvät heti",
+      "Etusivulla kerrotaan heti, keitä studiossa on ja missä se on. Kotia suunnittelevalle se on tärkeää."
+     ]
+    ],
+    "made": [
+     "Nimi, liikemerkki, värit ja typografia",
+     "Suunnittelun hinta jokaisen kohteen tiedoissa",
+     "Pohjapiirros puretuin ja uusin seinin",
+     "Hinnasto, työn vaiheet ja ehdot"
+    ],
+    "mobile": "Puhelimella pääkuva rajautuu pystyyn kiukaan ja ikkunan ympärille, ja kohdesivuilla teksti tulee ennen tietolaatikkoa.",
+    "credits": "Kuvat ovat Unsplash-lisenssin alaisia kuvia, ja kuvaajat mainitaan sivustolla.",
+    "short": "Studio Kuusela",
+    "alt": {
+     "lista": "Kohteet-sivu",
+     "kohde": "Kohdesivu, Asunto Puolalanmäki",
+     "hinnat": "Palvelut ja hinnat -sivu",
+     "toimisto": "Studio-sivu",
+     "yhteys": "Yhteystiedot"
+    }
+   },
+   {
+    "slug": "lindqvist-ekroos",
+    "name": "Lindqvist Ekroos Arkkitehdit",
+    "title": "Valmiina, kun kunta pyytää tarjousta",
+    "desc": "Toimisto suunnittelee kouluja ja päiväkoteja. Referenssit hankintatapoineen, työryhmä ja sopimusehdot löytyvät sivulta, ja 25 työn arkisto näyttää lautakunnalle, mitä on rakennettu.",
+    "ala": "Arkkitehtitoimisto",
+    "city": "Helsinki",
+    "work": "Nimi, tunnus, ilme ja sivusto",
+    "site": "21 sivua, suomi ja englanti, etusivu 0,5 Mt",
+    "concept": "Lindqvist Ekroos Arkkitehdit on kuvitteellinen yritys. Tein sivuston näyttääkseni, mitä julkisia rakennuksia suunnittelevan toimiston sivut voivat tehdä.",
+    "start": [
+     "Lindqvist Ekroos Arkkitehdit on kahdentoista hengen toimisto Helsingissä. Se suunnittelee kouluja, päiväkoteja ja puukerrostaloja, ja suurin osa töistä tulee julkisista hankinnoista ja arkkitehtuurikilpailuista.",
+     "Sivuston lukija on yleensä kunnan hankeasiantuntija tai palkintolautakunnan jäsen. Hän haluaa nähdä nopeasti, mitä toimisto on rakentanut, kuka hanketta vetää ja millä ehdoilla toimisto työskentelee."
+    ],
+    "solution": "Etusivulla on yksi lause toimistosta, viimeksi valmistunut päiväkoti ja koko 25 työn arkisto työnumeroineen, paikkoineen ja tiloineen. Jokaisella projektisivulla on tietolaatikko hankintatavasta työryhmään, toimiston omat asemapiirrokset ja leikkaukset sekä kuvaajien nimet. Toimeksiannot-sivulla kerrotaan sopimusehdot, tuntihinnat ja hankkeen vaiheet kestoineen. Ilme on rauhallinen: yksi kirjaintyyppi, betoninharmaa ja puun lämpö kuvissa.",
+    "does": [
+     [
+      "Tarjouspyyntöön tarvittava on valmiina",
+      "Referenssit hankintatapoineen, työryhmä ja sopimusehdot löytyvät sivulta, kun kunta pyytää tarjousta."
+     ],
+     [
+      "Arkisto osoittaa kokemuksen",
+      "25 työtä numeroineen, tiloineen ja vuosineen näyttää lautakunnalle, mitä toimisto on rakentanut."
+     ],
+     [
+      "Vetäjä näkyy jokaisessa työssä",
+      "Projektisivulla on nimetty pääsuunnittelija, joten tilaaja tietää, kuka hanketta johtaisi."
+     ]
+    ],
+    "made": [
+     "Nimi, LE-tunnus, värit ja typografia",
+     "25 työn arkisto suodattimilla etusivulla",
+     "Projektisivuilla hankintatiedot ja piirustukset",
+     "Toimeksiannot-sivu sopimusehtoineen ja tuntihintoineen"
+    ],
+    "mobile": "Puhelimella arkisto tiivistyy kaksiriviseksi listaksi, jossa työnumero, nimi, vuosi ja tila näkyvät ilman vaakavieritystä.",
+    "credits": "Kuvissa näkyvillä rakennuksilla ei ole yhteyttä yritykseen. Kuvat ovat Unsplash-lisenssin alaisia kuvia, ja kuvaajat mainitaan sivustolla. Piirustukset on tehty sivustoa varten.",
+    "short": "Lindqvist Ekroos",
+    "alt": {
+     "lista": "Projektit-sivu",
+     "kohde": "Projektisivu, Honkaniityn koulu",
+     "hinnat": "Toimeksiannot-sivu",
+     "toimisto": "Toimisto-sivu",
+     "yhteys": "Yhteystiedot"
+    }
+   },
+   {
+    "slug": "kivela-rinne",
+    "name": "Kivelä Rinne",
+    "title": "Tuotevastaava löytää kaiken",
+    "desc": "Jokaisella tuotteella on oma sivu, jossa ovat mitat, materiaalit, valmistaja ja prototyyppien määrä. Etusivu painaa 0,2 Mt, joten se aukeaa messuillakin.",
+    "ala": "Valaisin- ja huonekalumuotoilu",
+    "city": "Lahti",
+    "work": "Nimi, leima, ilme ja sivusto",
+    "site": "14 sivua, etusivu 0,2 Mt",
+    "concept": "Kivelä Rinne on kuvitteellinen yritys, ja tuotteet ja valmistajat on keksitty sivustoa varten. Tein sivuston näyttääkseni, mitä muotoilustudion sivut voivat tehdä.",
+    "start": [
+     "Kivelä Rinne on kahden muotoilijan studio Lahdessa. Se suunnittelee valaisimia ja huonekaluja suomalaisille valmistajille ja tekee prototyypit omalla verstaallaan. Sivuston tärkein lukija on tehtaan tuotevastaava, joka päättää, kenelle antaa kahden vuoden tuotekehityksen.",
+     "Kävin läpi kaksitoista muotoilustudioiden ja valmistajien sivustoa. Parhaat näyttävät kauniin tuotekuvan ja valmistajan nimen, mutta mitat, aikataulu ja yhteistyön ehdot puuttuvat lähes kaikilta. Ne halusin tälle sivustolle."
+    ],
+    "solution": "Etusivulla studion koivuvanerinen valaisin roikkuu sivun yläreunasta. Tuotekuvien tausta on tasattu samaan harmaaseen kuin sivu, joten tuotteet näyttävät olevan samassa tilassa. Jokaisella tuotteella on oma sivu, jossa ovat mitat, materiaalit, valmistaja, hinta, prototyyppien määrä ja aineistoluettelo. Valmistajille-sivulla on yhteistyön vaiheet kestoineen, rojalti ja prototyyppien hinnat.",
+    "does": [
+     [
+      "Tuotevastaava löytää tarvitsemansa",
+      "Mitat, materiaalit, valmistaja ja prototyyppien määrä ovat jokaisella tuotesivulla."
+     ],
+     [
+      "Yhteistyön ehdot ovat valmiina",
+      "Vaiheet kestoineen, rojalti ja prototyyppien hinnat kertovat sopimuksen sisällön ennen ensimmäistä tapaamista."
+     ],
+     [
+      "Sivu aukeaa messuillakin",
+      "Etusivu painaa 0,2 Mt, joten se latautuu puhelimella heikossakin verkossa."
+     ]
+    ],
+    "made": [
+     "Nimi, KR-leima, värit ja typografia",
+     "Tuotesivut valmistajan tietokortteina",
+     "Valmistajille-sivu vaiheineen, rojalteineen ja hintoineen",
+     "Piirretty huone toisena reittinä tuotteisiin"
+    ],
+    "mobile": "Puhelimella valaisin roikkuu näytön yläreunasta otsikon yläpuolella, tuotteet ovat kahdessa sarakkeessa ja huonetta voi vierittää sivusuunnassa.",
+    "credits": "Tuotekuvat ovat 3D-mallinnuksia, ja muut kuvat ovat Unsplash-lisenssin alaisia kuvia, joiden kuvaajat mainitaan sivustolla.",
+    "short": "Kivelä Rinne",
+    "alt": {
+     "lista": "Tuotteet-sivu",
+     "kohde": "Tuotesivu, Orsi",
+     "hinnat": "Valmistajille-sivu",
+     "toimisto": "Studio-sivu",
+     "yhteys": "Yhteys-sivu"
+    }
+   },
+   {
+    "slug": "kaulus",
+    "name": "Kaulus",
+    "title": "Kysymykset vähenevät ennen ostoa",
+    "desc": "Neljä pellavapaitaa, mitat mallin mukaan ja varastotilanne koon mukaan. Kun koko loppuu, sivu kertoo, minä viikkona seuraava erä valmistuu.",
+    "ala": "Vaatemerkki ja verkkokauppa",
+    "city": "Helsinki",
+    "work": "Nimi, merkki, ilme ja verkkokauppa",
+    "site": "18 sivua, etusivu 0,9 Mt",
+    "concept": "Kaulus on kuvitteellinen yritys, eikä paitoja myydä. Tein verkkokaupan näyttääkseni, mitä pienen vaatemerkin sivut voivat tehdä.",
+    "start": [
+     "Kaulus on helsinkiläinen merkki, joka tekee vain lyhythihaisia pellavapaitoja. Neljä ihmistä leikkaa ja ompelee Vallilan ateljeessa neljää mallia noin 40 paidan erissä, ja hinnat ovat 119–135 euroa.",
+     "Pienen merkin verkkokauppa on usein joko valmiin pohjan näköinen tai kaunis mutta ohut: kuvat ovat hienoja, mutta mitat ja toimitusehdot puuttuvat. Halusin kaupan, joka kestää vertailun isojen pohjoismaisten merkkien sivuihin ja kertoo silti pienen ateljeen arjesta."
+    ],
+    "solution": "Etusivu alkaa kahdella paitakuvalla ja yhdellä lauseella siitä, mitä Vallilassa tehdään. Tuotesivulla on mitat mallin mukaan, kankaan paino ja alkuperä vaiheittain, varastotilanne koon mukaan ja viikko, jolloin seuraava erä valmistuu. Valmistussivulla Harakan 129 euron hinta on purettu osiin. Ostoskori ja suosikit toimivat selaimessa, ja kassalla kerrotaan rauhallisesti, ettei tilauksia oteta vastaan.",
+    "does": [
+     [
+      "Kysymykset vähenevät ennen ostoa",
+      "Mitat mallin mukaan, kankaan tiedot ja varastotilanne koon mukaan vastaavat siihen, mitä asiakas muuten kysyisi sähköpostilla."
+     ],
+     [
+      "Loppunut koko ei katkaise ostoa",
+      "Seuraavan erän viikko kertoo, milloin koko palaa myyntiin."
+     ],
+     [
+      "Hinta on perusteltu",
+      "Paidan hinta purettuna osiin kertoo, miksi Vallilassa ommeltu paita maksaa 129 euroa."
+     ]
+    ],
+    "made": [
+     "Nimi, niskanauhamerkki, värit ja typografia",
+     "Varastotilanne koon mukaan ja seuraavan erän viikko",
+     "Paidan hinta purettu osiin",
+     "Toimitusehdot, peruuttamislomake ja korjaushinnasto"
+    ],
+    "mobile": "Puhelimella paidat täyttävät ruudun yksi kerrallaan, tuotekuvia selataan pyyhkäisemällä ja ostoskori aukeaa sivun reunasta koko näytön levyisenä.",
+    "credits": "Kuvat ovat Unsplash-lisenssin alaisia kuvia, ja kuvaajat mainitaan sivustolla.",
+    "short": "Kaulus",
+    "alt": {
+     "lista": "Paidat-sivu",
+     "kohde": "Tuotesivu, Harakka",
+     "hinnat": "Valmistus-sivu",
+     "toimisto": "Ateljee-sivu",
+     "yhteys": "Kokoopas"
+    }
+   }
+  ],
+  "terms": [
+   [
+    "Osapuolet",
+    [
+     "Palveluntarjoaja on Studio Luoto, Ville Saarela (Y-tunnus 3660060-6), Isosaarentie 10, 00840 Helsinki. Asiakas on yritys tai yhteisö, joka tilaa palvelun. Palvelu on tarkoitettu vain yrityksille, joten kuluttajansuojalaki ei sovellu."
+    ]
+   ],
+   [
+    "Palvelu",
+    [
+     "Studio Luoto suunnittelee, toteuttaa, julkaisee, ylläpitää ja kehittää asiakkaan verkkosivut. Hintaan sisältyy: suunnittelu ja toteutus, enintään 8 sivua; tekstit ja kuvien käsittely; ylläpito, hosting, SSL ja varmuuskopiot; vastaus viesteihin yhden arkipäivän sisällä; pienet muutokset kahdessa arkipäivässä; yksi isompi päivitys kuussa, esimerkiksi uusi kohde tai palvelusivu; löydettävyys: sitemap, Search Console sekä palvelu- ja paikkakuntasivut; Google-yritysprofiilin optimointi; arvostelulinkki ja QR-kortti Google-arvostelujen keräämiseen; tarjouspyyntölomake ja yhteydenottojen seuranta; kuukausikatsaus: montako yhteydenottoa tuli, mistä ja mitä seuraavaksi kannattaa tehdä.",
+     "Hintaan ei sisälly: mainonta, kuten Google Ads ja Meta; logo ja ilme; valokuvaus paikan päällä; verkkokauppa; lisäsivut yli kahdeksan sivun. Niistä sovitaan erikseen."
+    ]
+   ],
+   [
+    "Demo",
+    [
+     "Ilmainen demo on maksuton luonnos asiakkaan etusivusta. Se ei velvoita asiakasta mihinkään. Sopimus syntyy vasta, kun asiakas hyväksyy tarjouksen kirjallisesti, esimerkiksi sähköpostilla."
+    ]
+   ],
+   [
+    "Hinta ja laskutus",
+    [
+     "Kuukausihinta on 199 € + alv. Aloitusmaksua ei ole. Laskutus tehdään kuukausittain etukäteen, maksuaika 14 päivää. Vaihtoehtoisesti asiakas voi maksaa 12 kuukautta kerralla 1 990 € + alv.",
+     "Kuukausilaskutus alkaa, kun sivut julkaistaan. Ensimmäisen kuukauden ilmaisuus kolmelle ensimmäiselle asiakkaalle edellyttää, että asiakas antaa suosittelun ja luvan kertoa projektista Studio Luoton sivuilla."
+    ]
+   ],
+   [
+    "Sopimuskausi ja irtisanominen",
+    [
+     "Sopimuksen vähimmäiskesto on 12 kuukautta julkaisusta. Sen jälkeen sopimus on voimassa toistaiseksi, ja kumpikin osapuoli voi irtisanoa sen kuukauden irtisanomisajalla. Irtisanominen tehdään kirjallisesti."
+    ]
+   ],
+   [
+    "Muutokset ja päivitykset",
+    [
+     "Asiakas pyytää muutoksia sähköpostilla, viestillä tai puhelimella. Studio Luoto vastaa viesteihin yhden arkipäivän kuluessa.",
+     "Pienet muutokset, kuten tekstin, kuvan tai yhteystiedon vaihto, tehdään kahden arkipäivän kuluessa pyynnöstä. Lisäksi kuukaudessa tehdään yksi isompi päivitys, esimerkiksi uusi kohde- tai palvelusivu. Käyttämättömät päivitykset eivät siirry seuraavalle kuukaudelle."
+    ]
+   ],
+   [
+    "Tarjouspyyntötakuu",
+    [
+     "Jos sivujen tarjouspyyntölomakkeen kautta ei tule yhtään tarjouspyyntöä kolmen ensimmäisen kuukauden aikana julkaisusta, seuraavat kolme kuukautta ovat asiakkaalle maksuttomia. Takuu edellyttää, että lomake on ollut käytössä koko ajan ja asiakas on toimittanut sivuja varten sovitut tiedot. Takuu hyvitetään laskutuksessa, ei rahana."
+    ]
+   ],
+   [
+    "Omistus ja oikeudet",
+    [
+     "Verkkotunnus (domain) on aina asiakkaan. Asiakkaan toimittamat tekstit, kuvat ja logot ovat asiakkaan. Studio Luoton tekemän suunnittelun ja toteutuksen oikeudet ovat Studio Luotolla sopimuksen ajan. Kun 12 kuukautta on täynnä, asiakas voi lunastaa sivut omakseen 990 € + alv kertamaksulla. Kun sopimus on jatkunut 24 kuukautta, sivut siirtyvät asiakkaalle maksutta.",
+     "Studio Luoto saa mainita asiakkaan ja näyttää sivut referenssinä, ellei toisin sovita."
+    ]
+   ],
+   [
+    "Asiakkaan vastuut",
+    [
+     "Asiakas vastaa toimittamiensa sisältöjen oikeellisuudesta ja siitä, että sillä on oikeus käyttää toimittamiaan kuvia ja tekstejä. Asiakas vastaa myös verkkotunnuksensa uusimisesta, ellei toisin sovita."
+    ]
+   ],
+   [
+    "Maksuviivästys",
+    [
+     "Jos lasku on ollut maksamatta yli 30 päivää eräpäivästä, Studio Luoto voi keskeyttää palvelun ja sivujen ylläpidon, kunnes avoimet laskut on maksettu. Viivästyneelle maksulle peritään korkolain mukainen viivästyskorko."
+    ]
+   ],
+   [
+    "Vastuunrajoitus",
+    [
+     "Studio Luoto vastaa palvelun huolellisesta toteutuksesta. Studio Luoto ei vastaa välillisistä vahingoista, kuten saamatta jääneestä myynnistä. Studio Luoton vastuu rajoittuu enintään kolmen kuukauden palvelumaksujen määrään."
+    ]
+   ],
+   [
+    "Henkilötiedot",
+    [
+     "Henkilötietoja käsitellään tietosuojaselosteen mukaisesti. Tarjouspyyntölomakkeen kautta tulevat tiedot ohjataan asiakkaalle, ja asiakas on niiden rekisterinpitäjä."
+    ]
+   ],
+   [
+    "Ehtojen muutokset ja riidat",
+    [
+     "Studio Luoto voi muuttaa ehtoja ilmoittamalla siitä asiakkaalle vähintään 30 päivää etukäteen. Sopimukseen sovelletaan Suomen lakia. Riidat pyritään ratkaisemaan neuvottelemalla ja muuten Helsingin käräjäoikeudessa."
+    ]
+   ]
+  ],
+  "privacy": [
+   [
+    "Rekisterinpitäjä",
+    [
+     "Ville Saarela, Isosaarentie 10, 00840 Helsinki. Y-tunnus 3660060-6.",
+     "Tietosuoja-asioissa voit ottaa yhteyttä sähköpostilla ville@studioluoto.com tai puhelimella 045 103 5362."
+    ]
+   ],
+   [
+    "Mitä tietoja käsittelen",
+    [
+     "Kun lähetät sähköpostia tai soitat, saan nimesi, yhteystietosi, yrityksesi nimen ja sen, mitä kerrot projektistasi. Asiakkailta tarvitsen lisäksi laskutustiedot.",
+     "Demopyyntölomakkeen tiedot välitetään sähköpostiini FormSubmit-palvelun (formsubmit.co) kautta, ja palvelu kertoo käsittelystä omassa tietosuojaselosteessaan. Sivustolla ei ole mainos- eikä seurantaevästeitä."
+    ]
+   ],
+   [
+    "Miksi ja millä perusteella",
+    [
+     "Käytän tietoja vastatakseni yhteydenottoihin, tehdäkseni tarjouksia ja hoitaakseni sovitun työn. Peruste on sopimuksen valmistelu ja täytäntöönpano (tietosuoja-asetuksen 6 artiklan 1 kohdan b alakohta).",
+     "Laskutustietoja säilytän, koska kirjanpitolaki vaatii sitä (6 artiklan 1 kohdan c alakohta)."
+    ]
+   ],
+   [
+    "Kuinka kauan säilytän tietoja",
+    [
+     "Poistan yhteydenotot, joista ei tule projektia, kahden vuoden kuluessa. Asiakasprojektin viestit säilytän projektin ajan ja kaksi vuotta sen jälkeen.",
+     "Kirjanpitoaineisto säilytetään kirjanpitolain mukaan: tositteet kuusi vuotta ja tilinpäätös kymmenen vuotta tilikauden päättymisestä."
+    ]
+   ],
+   [
+    "Kenelle tiedot menevät",
+    [
+     "En myy enkä luovuta tietoja markkinointiin. Tiedot kulkevat vain sähköposti- ja kirjanpitopalveluiden kautta, joita käytän työssäni.",
+     "Sivusto toimii Framer-palvelussa. Framer B.V. (Alankomaat) ylläpitää palvelimia, voi käsitellä kävijöiden IP-osoitteita palvelun toimittamiseksi ja turvallisuuden vuoksi ja kokoaa sivuston käytöstä nimettömiä kävijätilastoja. Fontit ladataan Googlen palvelimilta (Google Fonts). Framer ja Google kertovat käsittelystä omissa tietosuojaselosteissaan."
+    ]
+   ],
+   [
+    "Oikeutesi",
+    [
+     "Voit pyytää nähdä tietosi, korjata ne tai poistaa ne, jos laki ei vaadi niiden säilyttämistä. Voit myös vastustaa käsittelyä tai pyytää sen rajoittamista. Lähetä pyyntö sähköpostilla, niin vastaan kuukauden kuluessa.",
+     "Jos katsot, että käsittelen tietojasi väärin, voit tehdä valituksen tietosuojavaltuutetun toimistolle (tietosuoja.fi)."
+    ]
+   ],
+   [
+    "Konseptityöt",
+    [
+     "Projektisivujen yritykset ovat kuvitteellisia, ja niiden sivustot ovat konseptitöitä. Niiden lomakkeet eivät lähetä tietoja minnekään."
+    ]
+   ]
+  ],
+  "TRADES": [
+   "Kylpyhuoneremontit",
+   "Putki- ja linjasaneeraukset",
+   "LVI ja lämpöpumput",
+   "Sisäremontit",
+   "Julkisivut ja katot",
+   "Hirsitalojen korjaus",
+   "Keittiöt ja puusepät",
+   "Metallityö"
+  ],
+  "STICKERS": [
+   "Ei hintaa",
+   "Ei kuvia kohteista",
+   "Tarjouspyyntö piilossa",
+   "Hidas puhelimella",
+   "Ei näy Googlessa"
+  ],
+  "DO": [
+   [
+    "Verkkosivut",
+    "Rakennamme sivut, jotka näyttävät yhtä laadukkailta kuin työsi. Tehdään yrityksellesi alusta asti, ei valmispohjasta."
+   ],
+   [
+    "Viesti",
+    "Kirjoitamme tekstit niin, että asiakas ymmärtää heti, mitä teet, missä ja mitä se suunnilleen maksaa."
+   ],
+   [
+    "Löydettävyys",
+    "Palvelut ja paikkakunnat omille sivuilleen, jotta Google ja tekoälyhaut tietävät, mitä teet ja missä."
+   ],
+   [
+    "Tarjouspyyntö",
+    "Lomake, joka kysyy heti oikeat asiat. Saat pyynnön, josta voit laskea hinnan ilman takaisinsoittoa."
+   ],
+   [
+    "Luottamus",
+    "Kohteet, takuu, vakuutukset ja tekijät esille, jotta asiakas valitsee sinut eikä halvinta."
+   ]
+  ],
+  "FOR": [
+   [
+    "Remonttiyritykset",
+    "Kohteet esille ja tarjouspyynnöt oikeilta asiakkailta.",
+    "tile"
+   ],
+   [
+    "LVI ja talotekniikka",
+    "Palvelut, alueet ja päivystys selkeästi esillä.",
+    "pipe"
+   ],
+   [
+    "Rakentajat ja puusepät",
+    "Työ näyttää sivuilla yhtä hyvältä kuin paikan päällä.",
+    "house"
+   ]
+  ],
+  "STEPS": [
+   [
+    "Lähetä viesti.",
+    "Linkki nykyisiin sivuihisi ja pari lausetta riittää. Siihen menee kaksi minuuttia.",
+    "or",
+    "msg"
+   ],
+   [
+    "Saat luonnoksen 48 tunnissa.",
+    "Toimiva etusivu omassa linkissään. Avaat sen puhelimella ja näytät sen kollegoillesi. Maksuton, eikä sido mihinkään.",
+    "sea",
+    "clock"
+   ],
+   [
+    "Käydään muutokset läpi.",
+    "Hyväksyt suunnan ja kerrot, mitä haluat muuttaa. Muutamme kaiken, kunnes sivut ovat juuri oikein.",
+    "ink",
+    "pins"
+   ],
+   [
+    "Sivut julki, ja pidämme niistä huolen.",
+    "Julkaisemme sivut omaan osoitteeseesi. Sen jälkeen ylläpidämme, päivitämme ja kehitämme niitä, ja kaikki sisältyy kuukausihintaan.",
+    "sand",
+    "key"
+   ]
+  ],
+  "ASKS": [
+   [
+    "Hinta",
+    "Paljonko tämä suunnilleen maksaa?",
+    "Hinnan suunta ja kotitalousvähennys näkyvät."
+   ],
+   [
+    "Kohteet",
+    "Ovatko he tehneet tällaista ennen?",
+    "Valmiit kohteet kuvineen ja tietoineen."
+   ],
+   [
+    "Luottamus",
+    "Mitä jos jokin menee vikaan?",
+    "Takuu ja vakuutukset kerrotaan selvästi."
+   ],
+   [
+    "Alue",
+    "Tulevatko he tänne asti?",
+    "Palvelualue ja paikkakunnat omilla sivuillaan."
+   ],
+   [
+    "Aikataulu",
+    "Milloin he ehtisivät aloittaa?",
+    "Seuraava vapaa aloitus näkyy etusivulla."
+   ],
+   [
+    "Tekijät",
+    "Keitä meille tulee töihin?",
+    "Tekijät nimillä ja kasvoilla."
+   ],
+   [
+    "Tarjous",
+    "Miten tarjous pyydetään?",
+    "Lyhyt lomake jokaisella sivulla."
+   ]
+  ],
+  "PAINS": [
+   [
+    "Sivuilta ei selviä heti, mitä teet ja missä.",
+    "Ensimmäinen lause kertoo palvelut ja alueen. Asiakas tietää heti, onko hän oikeassa paikassa."
+   ],
+   [
+    "Valmiita kohteita ei näy.",
+    "Kohteet kuvineen ja tietoineen: mitä tehtiin, missä ja kauanko se kesti."
+   ],
+   [
+    "Hinnasta ei kerrota mitään.",
+    "Hinnan suunta ja kotitalousvähennys näkyvät, joten tarjousta pyytävät ne, joille hinta sopii."
+   ],
+   [
+    "Tarjouspyyntö on piilossa.",
+    "Tarjouspyyntö on yhden napautuksen päässä joka sivulta."
+   ],
+   [
+    "Sivut ovat hitaat puhelimella.",
+    "Sivut aukeavat nopeasti, ja kaikki toimii peukalolla."
+   ],
+   [
+    "Google ei ymmärrä, mitä teet.",
+    "Jokaisella palvelulla ja alueella on oma sivunsa, joten löydyt oikeista hauista."
+   ],
+   [
+    "Takuu ja tekijät eivät näy.",
+    "Takuu, vakuutukset ja tekijät esillä. Luottamus syntyy ennen ensimmäistä puhelua."
+   ],
+   [
+    "Kukaan ei seuraa tuloksia.",
+    "Search Console ja yhteydenottojen seuranta kuntoon. Näet, mistä tarjouspyynnöt tulevat."
+   ]
+  ],
+  "VS": [
+   [
+    "Iso lasku ennen kuin sivut ovat valmiit.",
+    "Julkaisun jälkeen hiljaista. Viesteihin vastataan, jos ehditään.",
+    "Jokainen muutos on uusi tarjous ja uusi lasku.",
+    "Sivut vanhenevat, koska kenelläkään ei ole aikaa päivittää niitä.",
+    "Kukaan ei kerro, tuleeko sivujen kautta töitä."
+   ],
+   [
+    "0 € aloitusmaksu. Näet demon ennen kuin päätät mitään.",
+    "Vastaamme aina yhden arkipäivän sisällä.",
+    "Muutokset kuuluvat hintaan. Pienet ovat sivuilla kahdessa arkipäivässä.",
+    "Sivut paranevat joka kuukausi: uudet kohteet, palvelut ja korjaukset.",
+    "Kuukausikatsaus kertoo, montako yhteydenottoa tuli ja mistä."
+   ]
+  ],
+  "PERKS": [
+   [
+    "Yksi ihminen, joka tuntee yrityksesi",
+    "Ville vastaa itse. Ei tikettijärjestelmää, ei välikäsiä, eikä sinun tarvitse selittää asioita joka kerta alusta."
+   ],
+   [
+    "Ei kirjautumisia eikä opeteltavaa",
+    "Sinun ei tarvitse oppia julkaisujärjestelmää. Lähetät viestin tai kuvan puhelimella, ja muutos tehdään."
+   ],
+   [
+    "Katsaus ja parannusehdotus",
+    "Joka kuukausi saat luvut ja yhden konkreettisen ehdotuksen siitä, mitä kannattaa tehdä seuraavaksi."
+   ],
+   [
+    "Arvostelut kasvuun",
+    "Saat valmiin arvostelulinkin ja QR-kortin, jolla tyytyväinen asiakas jättää Google-arvostelun suoraan työmaalta."
+   ],
+   [
+    "Sesonki mukaan",
+    "Ennen sesonkia nostamme esiin sen, mitä silloin myydään: lämpöpumput syksyllä, julkisivut ja terassit keväällä."
+   ],
+   [
+    "Ei piilokuluja",
+    "Kaikki hintaan sisältyvä on listattu. Jos jokin maksaa erikseen, kerromme sen ennen kuin teemme mitään."
+   ]
+  ],
+  "REQ": [
+   [
+    "Valmistui uusi kohde, tässä kuvat.",
+    "Kohdesivu kuvineen ja tietoineen julki.",
+    "big"
+   ],
+   [
+    "Aloitamme myös saunaremontit.",
+    "Uusi palvelusivu, ja Google-yritysprofiili päivitetty.",
+    "big"
+   ],
+   [
+    "Puhelinnumero vaihtui.",
+    "Uusi numero kaikkialle, myös Googleen.",
+    "small"
+   ],
+   [
+    "Olemme kiinni heinäkuun.",
+    "Lomailmoitus sivuille ja poikkeusaukiolot profiiliin.",
+    "small"
+   ],
+   [
+    "Tarjouspyyntöjä tulee liian kaukaa.",
+    "Palvelualue ja paikkakuntasivut tarkennettu.",
+    "big"
+   ],
+   [
+    "Haluan, että lomakkeella voi lähettää kuvia.",
+    "Kuvien liittäminen lisätty tarjouspyyntöön.",
+    "small"
+   ]
+  ],
+  "YEAR1": [
+   [
+    "Kuukausi 1",
+    "Sivut julki.",
+    "Search Console, yhteydenottojen seuranta ja Google-yritysprofiili kuntoon heti alusta."
+   ],
+   [
+    "Kuukaudet 2–3",
+    "Ensimmäiset luvut.",
+    "Katsomme, mistä yhteydenotot tulevat ja missä kävijät putoavat pois, ja korjaamme sen, mikä jarruttaa."
+   ],
+   [
+    "Kuukaudet 4–6",
+    "Lisää näkyvyyttä.",
+    "Uusia kohteita sekä palvelu- ja paikkakuntasivuja sinne, mistä haluat lisää töitä."
+   ],
+   [
+    "Kuukaudet 7–12",
+    "Hiotaan sitä, mikä toimii.",
+    "Sesonkisivut, lisää arvosteluja ja lomake, joka kysyy juuri oikeat asiat."
+   ]
+  ],
+  "INCLUDED": [
+   "Suunnittelu ja toteutus, enintään 8 sivua",
+   "Tekstit ja kuvien käsittely",
+   "Ylläpito, hosting, SSL ja varmuuskopiot",
+   "Vastaus viesteihin yhden arkipäivän sisällä",
+   "Pienet muutokset kahdessa arkipäivässä",
+   "Yksi isompi päivitys kuussa, esimerkiksi uusi kohde tai palvelusivu",
+   "Löydettävyys: sitemap, Search Console sekä palvelu- ja paikkakuntasivut",
+   "Google-yritysprofiilin optimointi",
+   "Arvostelulinkki ja QR-kortti Google-arvostelujen keräämiseen",
+   "Tarjouspyyntölomake ja yhteydenottojen seuranta",
+   "Kuukausikatsaus: montako yhteydenottoa tuli, mistä ja mitä seuraavaksi kannattaa tehdä"
+  ],
+  "EXCLUDED": [
+   "Mainonta, kuten Google Ads ja Meta",
+   "Logo ja ilme",
+   "Valokuvaus paikan päällä",
+   "Verkkokauppa",
+   "Lisäsivut yli kahdeksan sivun"
+  ],
+  "FAQ": [
+   [
+    "Miten tämä eroaa tavallisesta mainostoimistosta?",
+    "Tavallinen toimisto tekee sivut, laskuttaa ja siirtyy seuraavaan projektiin. Me jäämme: ylläpidämme sivuja, teemme muutokset ja kehitämme niitä joka kuukausi, jotta niiden kautta tulee töitä. Ja näet demon ennen kuin maksat mitään."
+   ],
+   [
+    "Pitääkö minun päivittää sivuja itse?",
+    "Ei. Kerrot vain, mitä haluat muuttaa: viestillä, kuvalla tai puhelulla. Sinun ei tarvitse kirjautua mihinkään eikä opetella julkaisujärjestelmää."
+   ],
+   [
+    "Kuinka nopeasti vastaatte?",
+    "Yhden arkipäivän sisällä, aina. Pienet muutokset ovat sivuilla kahdessa arkipäivässä, ja isommat tehdään kuukauden päivityksessä."
+   ],
+   [
+    "Ehdinkö tähän kesken työmaiden?",
+    "Ehdit. Meille riittää linkki ja muutama lause. Demon teemme me, ja voit katsoa sen puhelimella illalla."
+   ],
+   [
+    "Onko demo vain kuva?",
+    "Ei. Demo on toimiva etusivu omassa linkissään. Voit avata sen puhelimella ja tietokoneella ja näyttää sen kollegoillesi."
+   ],
+   [
+    "Mitä demo maksaa?",
+    "Ei mitään. Demo on maksuton, eikä se sido mihinkään."
+   ],
+   [
+    "Mitä sivut maksavat?",
+    "199 € kuussa + alv, eikä aloitusmaksua ole. Voit myös maksaa vuoden kerralla, 1 990 € + alv, jolloin kaksi kuukautta on kaupan päälle. Hintaan sisältyy suunnittelu, toteutus, ylläpito, muutokset ja päivitykset."
+   ],
+   [
+    "Miksi kuukausihinta eikä kertamaksu?",
+    "Sivut eivät ole valmiit julkaisupäivänä. Kuukausihinnalla ne pysyvät ajan tasalla ja paranevat: uudet kohteet, palvelut ja korjaukset tehdään ilman erillisiä tarjouksia, eikä sinun tarvitse maksaa tuhansia euroja kerralla."
+   ],
+   [
+    "Mitä jos haluan lopettaa?",
+    "Vähimmäiskesto on 12 kuukautta, ja sen jälkeen voit irtisanoa sopimuksen kuukauden varoitusajalla. Domain on aina sinun. Sivut voit lunastaa omaksesi 990 eurolla, ja 24 kuukauden jälkeen ne siirtyvät sinulle maksutta."
+   ],
+   [
+    "Miten tarjouspyyntötakuu toimii?",
+    "Jos sivujen tarjouspyyntölomakkeen kautta ei tule yhtään tarjouspyyntöä kolmen ensimmäisen kuukauden aikana julkaisusta, seuraavat kolme kuukautta ovat ilmaisia. Seurannasta näet itse, mitä lomakkeen kautta tulee."
+   ],
+   [
+    "Kauanko projekti kestää?",
+    "Yleensä kahdesta neljään viikkoa. Demo on valmis 48 tunnissa, ja aikataulu sovitaan ennen aloitusta."
+   ],
+   [
+    "Meillä ei ole hyviä kuvia.",
+    "Puhelimella otetut kuvat kelpaavat alkuun. Käsittelemme ne niin, että työ näyttää sivuilla samalta kuin todellisuudessa."
+   ],
+   [
+    "Mitä julkaisun jälkeen tapahtuu?",
+    "Pienet muutokset teemme kahdessa arkipäivässä, ja kerran kuussa teemme isomman päivityksen, kuten uuden kohteen tai palvelusivun. Saat joka kuukausi lyhyen katsauksen: montako yhteydenottoa tuli, mistä ja mitä seuraavaksi kannattaa tehdä."
+   ],
+   [
+    "Mitä saan käteeni?",
+    "Valmiit sivut omassa osoitteessasi ja niiden jatkuvan ylläpidon ja kehityksen: suunnittelun, tekstit, kuvien käsittelyn, toimivuuden puhelimella, löydettävyyden ja Google-yritysprofiilin kunnostuksen. Domain on aina sinun."
+   ],
+   [
+    "Kenen kanssa teen töitä?",
+    "Ville Saarelan. Hän suunnittelee, kirjoittaa ja tekee sivut itse, ilman välikäsiä, ja vastaa itse jokaiseen viestiin."
+   ],
+   [
+    "Ovatko työt oikeita asiakkaita?",
+    "Osa töistä on konsepteja: kuvitteellisia yrityksiä, joilla näytämme, mitä alan sivut voivat tehdä. Se kerrotaan jokaisen työn sivulla."
+   ]
+  ],
+  "REQ_TAG": {
+   "small": "2 arkipäivää",
+   "big": "Kuukauden päivitys"
+  },
+  "TERMS": [
+   [
+    "12 kk",
+    "vähimmäiskesto, sen jälkeen irtisanominen kuukauden varoitusajalla"
+   ],
+   [
+    "Domain",
+    "on aina sinun"
+   ],
+   [
+    "990 €",
+    "lunastat sivut omaksesi, kun 12 kuukautta on täynnä"
+   ],
+   [
+    "24 kk",
+    "jälkeen sivut siirtyvät sinulle maksutta"
+   ]
+  ]
+ },
+ "en": {
+  "works": [
+   {
+    "slug": "kallistus",
+    "name": "Kallistus",
+    "title": "Water goes where it should",
+    "desc": "Prices and a calculator before the site visit, a three-week job shown day by day, and waterproofing photographed into a dry file.",
+    "ala": "Bathroom renovation",
+    "city": "Helsinki",
+    "work": "Name, logo, identity and website",
+    "site": "7 pages, price calculator",
+    "concept": "Kallistus is a fictional company. I built the site to show what a bathroom renovation company’s website can do.",
+    "start": [
+     "Kallistus is a fictional eight-person company that only does bathrooms and saunas in apartments, terraced houses and detached houses around Helsinki.",
+     "For most people a bathroom renovation is the most expensive renovation of the decade, and they fear two things: the price runs away and water ends up in the structures. Sites in the trade promise quality, but few show how waterproofing is done or what the job costs."
+    ],
+    "solution": "The idea is in the name: kallistus is the fall of the floor towards the drain. The logo is a wordmark with a line sloping into a drain, and the same line returns as the site’s dividers. The front page has prices and a calculator with the household tax credit, a fifteen-day timeline and the dry file: photos of every waterproofing layer. Measurements are set in a monospaced font like site markings. Typography is Host Grotesk and IBM Plex Mono in concrete and mortar tones.",
+    "does": [
+     [
+      "The price is clear before the visit",
+      "Price ranges by room type and a calculator that works out the household tax credit for one or two owners."
+     ],
+     [
+      "Hidden work becomes visible",
+      "The dry file shows the waterproofing layer by layer, and the ten-year guarantee rests on it."
+     ],
+     [
+      "The housing company is no obstacle",
+      "Renovation notices, asbestos surveys and supervisor inspections are presented as a service, not as the client’s problem."
+     ]
+    ],
+    "made": [
+     "Name, drain logo, colours and typography",
+     "Price table and calculator with the household tax credit",
+     "Fifteen-day timeline",
+     "Project page with the dry file",
+     "Site visit form with photo upload"
+    ],
+    "mobile": "On a phone the prices become room cards, the calculator choices are finger-sized and the timeline folds into rows of five days.",
+    "credits": "Photos are under the Pexels licence, and the photographers are credited on the site’s image page. People, projects and prices are invented.",
+    "short": "Kallistus",
+    "alt": {
+     "lista": "Projects page",
+     "kohde": "Project page, Kauniainen",
+     "hinnat": "Prices page and calculator"
+    }
+   },
+   {
+    "slug": "lauha",
+    "name": "Lauha Talotekniikka",
+    "title": "Even warmth, a tidy renovation",
+    "desc": "Two doors on the front page: detached house and housing company. A savings calculator for replacing oil and electric heating, and a stairwell card that shows residents every water cut.",
+    "ala": "Heat pumps and pipe renovations",
+    "city": "Tampere",
+    "work": "Name, logo, identity and website",
+    "site": "7 pages, savings calculator",
+    "concept": "Lauha Talotekniikka is a fictional company. I built the site to show what an HVAC company’s website can do.",
+    "start": [
+     "Lauha is a fictional 14-person HVAC company in Tampere. It installs heat pumps in oil- and electric-heated houses and does pipe renovations for housing companies.",
+     "One site has two very different clients. A homeowner wants to know how much they will save and whether the pump copes with frost. In a housing company the board decides, but the residents live in the middle of the renovation and are its harshest critics."
+    ],
+    "solution": "The front page opens with a house on a winter evening and two doors: to the detached house and to the housing company. The logo’s line rises and falls like the outdoor temperature and levels out into indoor warmth, and the same idea appears as a chart: Tampere’s temperatures over the year and a copper line at 21 degrees. Homeowners get three systems with prices and a savings calculator with the 60% household tax credit for replacing oil. Housing companies get a method comparison and a stairwell card that shows residents every day. Typography is Familjen Grotesk in frost, granite and winter night tones.",
+    "does": [
+     [
+      "Savings in your own numbers",
+      "The calculator takes current consumption and shows the savings, the household tax credit and the payback time."
+     ],
+     [
+      "Residents know in advance",
+      "The stairwell card shows every water cut and every day without your own bathroom, and the site manager has a name and a number."
+     ],
+     [
+      "A promise you can check",
+      "A warmth guarantee of 21 °C at −26 degrees, and qualifications explained, not shown as logos."
+     ]
+    ],
+    "made": [
+     "Name, warmth-line logo, colours and typography",
+     "Two doors: detached house and housing company",
+     "Savings calculator and installed prices",
+     "Stairwell card and method comparison",
+     "Project page with a timeline"
+    ],
+    "mobile": "On a phone the doors sit on top of the main image one above the other, the temperature chart scrolls sideways and the weeks of the stairwell card fit the screen.",
+    "credits": "Photos are under the Pexels licence, and the photographers are credited on the site’s image page. Heat pump images are manufacturer marketing images. People, projects and prices are invented.",
+    "short": "Lauha",
+    "alt": {
+     "lista": "Projects page",
+     "kohde": "Project page, Kangasala",
+     "hinnat": "Heat pumps page and savings calculator"
+    }
+   },
+   {
+    "slug": "keljon-puusepat",
+    "name": "Keljon Puusepät",
+    "title": "A price range before the call",
+    "desc": "A price table by kitchen length and a calculator answer the most common question. Delivery time and the next free workshop slot are visible, so clients know to book in time.",
+    "ala": "Kitchen joinery",
+    "city": "Jyväskylä",
+    "work": "Name, logo, identity and website",
+    "site": "19 pages, front page 0.6 MB",
+    "concept": "Keljon Puusepät is a fictional company. I built the site to show what a joinery’s website can do.",
+    "start": [
+     "Keljon Puusepät is a five-person joinery in Keljo, Jyväskylä. It makes made-to-measure kitchens and wardrobes from birch plywood and solid wood and installs them itself, with a delivery time of 8–10 weeks.",
+     "Finnish joineries’ sites usually have a slogan and an image carousel but not a single price. Someone planning a kitchen wants to know first what it costs and when it can be ready."
+    ],
+    "solution": "The backbone of the site is a numbered kitchen register. Every job has a number, a place, a year and the actual price, and the same number is burned into the sink cabinet for servicing. The prices page has a table by kitchen length, a calculator and one kitchen itemised line by line. The identity has two main colours, light birch and dark oak, and one type family in two widths.",
+    "does": [
+     [
+      "A price range before the call",
+      "A price table by kitchen length and a calculator answer the most common question."
+     ],
+     [
+      "Enquiries arrive at the right time",
+      "Delivery time and the next free workshop slot are visible, so clients know to book in time."
+     ],
+     [
+      "The work serves after installation too",
+      "The numbered kitchen register and care instructions help the client years later."
+     ]
+    ],
+    "made": [
+     "Name, K logo, colours and typography",
+     "Numbered kitchen register and archive since 2016",
+     "Price table, calculator and one itemised kitchen",
+     "Care instructions, guarantee and payment instalments"
+    ],
+    "mobile": "On a phone the very first view shows the delivery time and the price range, and the bottom of the menu has the workshop’s phone number and the quote request.",
+    "credits": "Photos are under the Unsplash licence, and the photographers are credited on the site.",
+    "short": "Keljon Puusepät",
+    "alt": {
+     "lista": "Kitchens page",
+     "kohde": "Kitchen page, K-201",
+     "hinnat": "Prices page",
+     "toimisto": "Workshop page",
+     "yhteys": "Quote request page"
+    }
+   },
+   {
+    "slug": "haljala",
+    "name": "Arkkitehtitoimisto Haljala",
+    "title": "The caller already knows the price",
+    "desc": "A small firm designs houses, villas and saunas in Pirkanmaa. Prices and free start dates for 2027 are on the site, so enquiries come from people whose schedule and budget fit.",
+    "ala": "Architecture firm",
+    "city": "Tampere",
+    "work": "Name, wordmark, identity and website",
+    "site": "14 pages, front page 1.0 MB",
+    "concept": "Arkkitehtitoimisto Haljala is a fictional company. I built the site to show what a small architecture firm’s website can do.",
+    "start": [
+     "Arkkitehtitoimisto Haljala is a five-person firm in Tampere. It designs houses, villas and saunas for private clients and restores old log houses, mostly in Pirkanmaa. It takes on 4–6 new jobs a year.",
+     "The client is a family building a house or saving an old one. They want to know what design costs, when work can start and what kind of plans the firm draws. The best sites in the field show beautiful photos, but these questions often stay open."
+    ],
+    "solution": "The front page says in one sentence what the firm does and for whom, and shows a finished villa in its landscape straight away. Project pages move from the site’s conditions to the solution, a fact box and the drawings. Prices with VAT, free start dates for 2027, projects in progress and everyone’s direct number are visible. Typography is Source Serif 4 and Public Sans on a warm paper colour, and the footer is the colour of tar.",
+    "does": [
+     [
+      "The caller already knows the price",
+      "Prices and free start dates for 2027 are visible, so enquiries come from people whose schedule and budget fit."
+     ],
+     [
+      "Projects answer the family’s questions",
+      "Plot, solution, floor area and drawings show what kind of houses the firm designs."
+     ],
+     [
+      "A small firm looks busy",
+      "The in-progress list with dates shows that work is happening right now."
+     ]
+    ],
+    "made": [
+     "Name, wordmark, colours and typography",
+     "Fact box, captions and drawings on project pages",
+     "Services and prices page with VAT",
+     "In-progress list and free start dates on the front page"
+    ],
+    "mobile": "On a phone the villa on the front page is cropped to portrait, the drawings stay readable and the menu opens as a full-screen list.",
+    "credits": "The buildings in the photos have no connection to the company. Photos are under the Unsplash licence, and the photographers are credited on the site. The drawings were made for the site.",
+    "short": "Haljala",
+    "alt": {
+     "lista": "Work page",
+     "kohde": "Project page, Villa Kallio",
+     "hinnat": "Services and prices page",
+     "toimisto": "Office page",
+     "yhteys": "Contact details"
+    }
+   },
+   {
+    "slug": "studio-kuusela",
+    "name": "Studio Kuusela",
+    "title": "You can see what design changes",
+    "desc": "Project pages have a floor plan with removed and new walls and a materials list, and the design fee is shown in every project’s details. Clients come to the consultation knowing the price.",
+    "ala": "Interior architecture studio",
+    "city": "Turku",
+    "work": "Name, logo, identity and website",
+    "site": "16 pages, front page 0.5 MB",
+    "concept": "Studio Kuusela is a fictional company. I built the site to show what an interior architect’s website can do.",
+    "start": [
+     "Studio Kuusela is a studio of two interior architects in Port Arthur, Turku. It designs homes and summer villas in Southwest Finland and a couple of cafés or shops a year.",
+     "The best sites in the field look great but say nothing about what design costs. Finnish consumer sites show prices, but often look like a template. The client wants to know both before booking a consultation."
+    ],
+    "solution": "The front page opens with one large photo of a sauna building in Nauvo, and right below it says who works at the studio and where it is. The project fact box includes the design fee, and every project has a materials list. The Puolalanmäki apartment has a floor plan that shows removed and new walls. The services and prices page has the full price list, the work phases and the terms. The logo is drawn from EB Garamond letterforms, and every photo has the same warm grade.",
+    "does": [
+     [
+      "Clients arrive knowing the price",
+      "The design fee is shown in every project’s details and in the price list."
+     ],
+     [
+      "Projects show what design changes",
+      "A floor plan with removed and new walls and materials lists show the work, not just the result."
+     ],
+     [
+      "The studio’s people are visible at once",
+      "The front page says straight away who works at the studio and where it is. For someone designing a home, that matters."
+     ]
+    ],
+    "made": [
+     "Name, logo, colours and typography",
+     "Design fee in every project’s details",
+     "Floor plan with removed and new walls",
+     "Price list, work phases and terms"
+    ],
+    "mobile": "On a phone the main image is cropped to portrait around the stove and the window, and on project pages the text comes before the fact box.",
+    "credits": "Photos are under the Unsplash licence, and the photographers are credited on the site.",
+    "short": "Studio Kuusela",
+    "alt": {
+     "lista": "Projects page",
+     "kohde": "Project page, Puolalanmäki apartment",
+     "hinnat": "Services and prices page",
+     "toimisto": "Studio page",
+     "yhteys": "Contact details"
+    }
+   },
+   {
+    "slug": "lindqvist-ekroos",
+    "name": "Lindqvist Ekroos Arkkitehdit",
+    "title": "Ready when the municipality asks for a tender",
+    "desc": "The firm designs schools and day-care centres. References with procurement methods, the team and contract terms are on the site, and an archive of 25 projects shows the jury what has been built.",
+    "ala": "Architecture firm",
+    "city": "Helsinki",
+    "work": "Name, logo, identity and website",
+    "site": "21 pages, Finnish and English, front page 0.5 MB",
+    "concept": "Lindqvist Ekroos Arkkitehdit is a fictional company. I built the site to show what a website can do for a firm that designs public buildings.",
+    "start": [
+     "Lindqvist Ekroos Arkkitehdit is a twelve-person firm in Helsinki. It designs schools, day-care centres and wooden apartment buildings, and most of its work comes from public procurement and architecture competitions.",
+     "The reader is usually a municipal project specialist or a member of a competition jury. They want to see quickly what the firm has built, who leads the project and on what terms the firm works."
+    ],
+    "solution": "The front page has one sentence about the firm, the most recently completed day-care centre and the whole archive of 25 projects with numbers, places and status. Every project page has a fact box from procurement method to team, the firm’s own site plans and sections, and the photographers’ names. The commissions page sets out contract terms, hourly rates and the project phases with durations. The identity is calm: one typeface, concrete grey and the warmth of wood in the photos.",
+    "does": [
+     [
+      "What a tender needs is ready",
+      "References with procurement methods, the team and contract terms are on the site when the municipality asks for a tender."
+     ],
+     [
+      "The archive proves experience",
+      "25 projects with numbers, status and years show the jury what the firm has built."
+     ],
+     [
+      "The lead is visible on every project",
+      "Each project page names the principal designer, so the client knows who would lead the project."
+     ]
+    ],
+    "made": [
+     "Name, LE logo, colours and typography",
+     "Archive of 25 projects with filters on the front page",
+     "Procurement details and drawings on project pages",
+     "Commissions page with contract terms and hourly rates"
+    ],
+    "mobile": "On a phone the archive condenses into a two-line list where number, name, year and status show without horizontal scrolling.",
+    "credits": "The buildings in the photos have no connection to the company. Photos are under the Unsplash licence, and the photographers are credited on the site. The drawings were made for the site.",
+    "short": "Lindqvist Ekroos",
+    "alt": {
+     "lista": "Projects page",
+     "kohde": "Project page, Honkaniitty school",
+     "hinnat": "Commissions page",
+     "toimisto": "Office page",
+     "yhteys": "Contact details"
+    }
+   },
+   {
+    "slug": "kivela-rinne",
+    "name": "Kivelä Rinne",
+    "title": "The product manager finds everything",
+    "desc": "Every product has its own page with dimensions, materials, manufacturer and the number of prototypes. The front page weighs 0.2 MB, so it opens even at a trade fair.",
+    "ala": "Lighting and furniture design",
+    "city": "Lahti",
+    "work": "Name, stamp, identity and website",
+    "site": "14 pages, front page 0.2 MB",
+    "concept": "Kivelä Rinne is a fictional company, and the products and manufacturers were invented for the site. I built the site to show what a design studio’s website can do.",
+    "start": [
+     "Kivelä Rinne is a studio of two designers in Lahti. It designs lights and furniture for Finnish manufacturers and makes the prototypes in its own workshop. The site’s most important reader is a factory’s product manager, who decides whom to trust with two years of product development.",
+     "I went through twelve sites of design studios and manufacturers. The best show a beautiful product photo and the manufacturer’s name, but almost all lack dimensions, schedule and the terms of collaboration. I wanted those on this site."
+    ],
+    "solution": "On the front page the studio’s birch plywood pendant hangs from the top edge of the page. Product photo backgrounds are matched to the same grey as the page, so the products seem to be in the same room. Every product has its own page with dimensions, materials, manufacturer, price, the number of prototypes and a list of materials available. The page for manufacturers sets out the phases of collaboration with durations, the royalty and prototype prices.",
+    "does": [
+     [
+      "The product manager finds what they need",
+      "Dimensions, materials, manufacturer and the number of prototypes are on every product page."
+     ],
+     [
+      "The terms of collaboration are ready",
+      "Phases with durations, the royalty and prototype prices set out the contract before the first meeting."
+     ],
+     [
+      "The page opens even at a trade fair",
+      "The front page weighs 0.2 MB, so it loads on a phone even on a weak connection."
+     ]
+    ],
+    "made": [
+     "Name, KR stamp, colours and typography",
+     "Product pages as manufacturer data sheets",
+     "Page for manufacturers with phases, royalty and prices",
+     "A drawn room as a second route to the products"
+    ],
+    "mobile": "On a phone the light hangs from the top of the screen above the headline, products sit in two columns and the room scrolls sideways.",
+    "credits": "Product images are 3D renders, and the other photos are under the Unsplash licence, with the photographers credited on the site.",
+    "short": "Kivelä Rinne",
+    "alt": {
+     "lista": "Products page",
+     "kohde": "Product page, Orsi",
+     "hinnat": "Page for manufacturers",
+     "toimisto": "Studio page",
+     "yhteys": "Contact page"
+    }
+   },
+   {
+    "slug": "kaulus",
+    "name": "Kaulus",
+    "title": "Fewer questions before the purchase",
+    "desc": "Four linen shirts, measurements by model and stock by size. When a size runs out, the page says which week the next batch is ready.",
+    "ala": "Clothing brand and online shop",
+    "city": "Helsinki",
+    "work": "Name, label, identity and online shop",
+    "site": "18 pages, front page 0.9 MB",
+    "concept": "Kaulus is a fictional company, and the shirts are not for sale. I built the shop to show what a small clothing brand’s website can do.",
+    "start": [
+     "Kaulus is a Helsinki brand that only makes short-sleeved linen shirts. Four people cut and sew four models in batches of about 40 shirts in a studio in Vallila, with prices from 119 to 135 euros.",
+     "A small brand’s online shop often either looks like a template or is beautiful but thin: great photos, but no measurements or delivery terms. I wanted a shop that holds up against the big Nordic brands and still tells the everyday story of a small studio."
+    ],
+    "solution": "The front page opens with two shirt photos and one sentence about what is made in Vallila. The product page has measurements by model, the fabric’s weight and origin step by step, stock by size and the week the next batch is ready. On the making page, the 129-euro price of the Harakka shirt is broken down into parts. The cart and favourites work in the browser, and the checkout calmly explains that orders are not being taken.",
+    "does": [
+     [
+      "Fewer questions before the purchase",
+      "Measurements by model, fabric details and stock by size answer what the customer would otherwise ask by email."
+     ],
+     [
+      "A sold-out size does not end the sale",
+      "The week of the next batch tells when the size is back."
+     ],
+     [
+      "The price is justified",
+      "The shirt’s price broken down into parts explains why a shirt sewn in Vallila costs 129 euros."
+     ]
+    ],
+    "made": [
+     "Name, neck-tape label, colours and typography",
+     "Stock by size and the week of the next batch",
+     "The shirt’s price broken down",
+     "Delivery terms, cancellation form and repair price list"
+    ],
+    "mobile": "On a phone the shirts fill the screen one at a time, product photos are browsed by swiping and the cart opens from the edge of the page at full width.",
+    "credits": "Photos are under the Unsplash licence, and the photographers are credited on the site.",
+    "short": "Kaulus",
+    "alt": {
+     "lista": "Shirts page",
+     "kohde": "Product page, Harakka",
+     "hinnat": "Making page",
+     "toimisto": "Studio page",
+     "yhteys": "Size guide"
+    }
+   }
+  ],
+  "terms": [
+   [
+    "Parties",
+    [
+     "The service provider is Studio Luoto, Ville Saarela (Business ID 3660060-6), Isosaarentie 10, 00840 Helsinki, Finland. The client is the company or organisation that orders the service. The service is for businesses only, so consumer protection law does not apply."
+    ]
+   ],
+   [
+    "Service",
+    [
+     "Studio Luoto designs, builds, publishes, maintains and improves the client’s website. The price includes: design and build, up to 8 pages; copywriting and photo editing; maintenance, hosting, SSL and backups; replies to your messages within one working day; small changes within two working days; one bigger update a month, such as a new project or service page; findability: sitemap, Search Console, plus service and town pages; Google Business Profile optimisation; a review link and QR card for collecting Google reviews; quote request form and enquiry tracking; a monthly report: how many enquiries came in, from where, and what to do next.",
+     "The price does not include: advertising, such as Google Ads and Meta; logo and brand identity; on-site photography; online shop; pages beyond eight. These are agreed separately."
+    ]
+   ],
+   [
+    "Demo",
+    [
+     "The free demo is a draft of the client’s front page at no cost. It places no obligation on the client. A contract is formed only when the client accepts an offer in writing, for example by email."
+    ]
+   ],
+   [
+    "Price and billing",
+    [
+     "The monthly price is €199 + VAT. There is no setup fee. Billing is monthly in advance, with 14 days to pay. Alternatively the client can pay for 12 months at once, €1,990 + VAT.",
+     "Monthly billing starts when the site is published. The free first month for the first three clients requires that the client gives a testimonial and permission to tell the story of the project on Studio Luoto’s site."
+    ]
+   ],
+   [
+    "Term and termination",
+    [
+     "The minimum term is 12 months from publication. After that the contract continues until further notice, and either party can end it with one month’s notice. Notice is given in writing."
+    ]
+   ],
+   [
+    "Changes and updates",
+    [
+     "The client asks for changes by email, message or phone. Studio Luoto replies to messages within one working day.",
+     "Small changes, such as replacing a text, an image or contact details, are made within two working days of the request. In addition, one bigger update is made each month, for example a new project or service page. Unused updates do not carry over to the next month."
+    ]
+   ],
+   [
+    "Quote request guarantee",
+    [
+     "If the site’s quote request form brings in no quote requests in the first three months after publication, the next three months are free for the client. The guarantee requires that the form has been in use the whole time and that the client has supplied the information agreed for the site. The guarantee is credited on invoices, not paid out as money."
+    ]
+   ],
+   [
+    "Ownership and rights",
+    [
+     "The domain always belongs to the client. Texts, images and logos supplied by the client belong to the client. Rights to the design and build made by Studio Luoto remain with Studio Luoto for the term of the contract. Once 12 months are up, the client can buy the site outright for a one-off €990 + VAT. When the contract has run for 24 months, the site is transferred to the client free of charge.",
+     "Studio Luoto may name the client and show the site as a reference unless agreed otherwise."
+    ]
+   ],
+   [
+    "Client responsibilities",
+    [
+     "The client is responsible for the accuracy of the content it supplies and for having the right to use the images and texts it supplies. The client is also responsible for renewing its domain unless agreed otherwise."
+    ]
+   ],
+   [
+    "Late payment",
+    [
+     "If an invoice has been unpaid for more than 30 days after the due date, Studio Luoto may suspend the service and site maintenance until open invoices are paid. Late payment interest is charged in accordance with the Finnish Interest Act."
+    ]
+   ],
+   [
+    "Limitation of liability",
+    [
+     "Studio Luoto is responsible for carrying out the service with due care. Studio Luoto is not liable for indirect damage, such as lost sales. Studio Luoto’s liability is limited to at most three months of service fees."
+    ]
+   ],
+   [
+    "Personal data",
+    [
+     "Personal data is processed in accordance with the privacy notice. Data submitted through the quote request form is forwarded to the client, and the client is its controller."
+    ]
+   ],
+   [
+    "Changes to terms and disputes",
+    [
+     "Studio Luoto may change these terms by notifying the client at least 30 days in advance. The contract is governed by Finnish law. Disputes are settled by negotiation where possible, and otherwise in the Helsinki District Court."
+    ]
+   ],
+   [
+    "Language",
+    [
+     "These terms are a translation. If the Finnish and English versions differ, the Finnish version applies."
+    ]
+   ]
+  ],
+  "privacy": [
+   [
+    "Controller",
+    [
+     "Ville Saarela, Isosaarentie 10, 00840 Helsinki, Finland. Business ID 3660060-6.",
+     "For privacy matters, contact us by email at ville@studioluoto.com or by phone at 045 103 5362."
+    ]
+   ],
+   [
+    "What data we process",
+    [
+     "When you email or call, we receive your name, contact details, your company’s name and what you tell us about your project. From clients we also need billing details.",
+     "Details sent with the demo request form are forwarded to our email through the FormSubmit service (formsubmit.co), which describes its processing in its own privacy statement. The site has no advertising or tracking cookies."
+    ]
+   ],
+   [
+    "Why and on what basis",
+    [
+     "We use the data to reply to enquiries, prepare offers and carry out the agreed work. The basis is the preparation and performance of a contract (GDPR Article 6(1)(b)).",
+     "We keep billing details because the Finnish Accounting Act requires it (Article 6(1)(c))."
+    ]
+   ],
+   [
+    "How long we keep data",
+    [
+     "We delete enquiries that do not lead to a project within two years. Messages from client projects are kept for the duration of the project and two years after.",
+     "Accounting records are kept as the Accounting Act requires: vouchers for six years and financial statements for ten years from the end of the financial year."
+    ]
+   ],
+   [
+    "Who receives the data",
+    [
+     "We do not sell data or hand it over for marketing. Data passes only through the email and accounting services we use in our work.",
+     "The site runs on Framer. Framer B.V. (the Netherlands) operates the servers, may process visitors’ IP addresses to deliver and secure the service, and compiles anonymous visitor statistics. Fonts load from Google’s servers (Google Fonts). Framer and Google describe their processing in their own privacy statements."
+    ]
+   ],
+   [
+    "Your rights",
+    [
+     "You can ask to see your data, correct it or delete it, unless the law requires us to keep it. You can also object to processing or ask for it to be restricted. Send your request by email and we will reply within a month.",
+     "If you think we process your data incorrectly, you can complain to the Office of the Data Protection Ombudsman in Finland (tietosuoja.fi)."
+    ]
+   ],
+   [
+    "Concept work",
+    [
+     "The companies on the project pages are fictional, and their sites are concept work. Their forms do not send data anywhere."
+    ]
+   ]
+  ],
+  "TRADES": [
+   "Bathroom renovations",
+   "Pipe renovations",
+   "HVAC and heat pumps",
+   "Interior renovations",
+   "Facades and roofs",
+   "Log house restoration",
+   "Kitchens and joinery",
+   "Metalwork"
+  ],
+  "STICKERS": [
+   "No prices",
+   "No project photos",
+   "Quote form hidden",
+   "Slow on a phone",
+   "Not on Google"
+  ],
+  "DO": [
+   [
+    "Website",
+    "We build a site that looks as good as your work. Made for your company from scratch, not from a template."
+   ],
+   [
+    "Message",
+    "We write the copy so that a client understands at once what you do, where, and roughly what it costs."
+   ],
+   [
+    "Findability",
+    "Services and towns get their own pages, so Google and AI search know what you do and where."
+   ],
+   [
+    "Quote request",
+    "A form that asks the right things up front. You get a request you can price without calling back."
+   ],
+   [
+    "Trust",
+    "Projects, guarantee, insurance and your people on show, so the client picks you, not the cheapest."
+   ]
+  ],
+  "FOR": [
+   [
+    "Renovation companies",
+    "Your projects on show and quote requests from the right clients.",
+    "tile"
+   ],
+   [
+    "HVAC and building services",
+    "Services, areas and emergency call-outs clearly visible.",
+    "pipe"
+   ],
+   [
+    "Builders and joiners",
+    "Your work looks as good on the site as it does in person.",
+    "house"
+   ]
+  ],
+  "STEPS": [
+   [
+    "Send a message.",
+    "A link to your current site and a couple of sentences is enough. It takes two minutes.",
+    "or",
+    "msg"
+   ],
+   [
+    "Get a draft in 48 hours.",
+    "A working front page at its own link. Open it on your phone and show it to your colleagues. Free, with no commitment.",
+    "sea",
+    "clock"
+   ],
+   [
+    "We go through the changes.",
+    "You approve the direction and tell us what to change. We change everything until the site is just right.",
+    "ink",
+    "pins"
+   ],
+   [
+    "The site goes live, and we look after it.",
+    "We publish the site at your own address. After that we maintain, update and improve it, all included in the monthly price.",
+    "sand",
+    "key"
+   ]
+  ],
+  "ASKS": [
+   [
+    "Price",
+    "Roughly how much will this cost?",
+    "A price range and the household tax credit are shown."
+   ],
+   [
+    "Projects",
+    "Have they done this before?",
+    "Finished projects with photos and details."
+   ],
+   [
+    "Trust",
+    "What if something goes wrong?",
+    "Guarantee and insurance stated clearly."
+   ],
+   [
+    "Area",
+    "Do they come out this far?",
+    "Service area and towns on their own pages."
+   ],
+   [
+    "Schedule",
+    "When could they start?",
+    "The next free start date on the front page."
+   ],
+   [
+    "People",
+    "Who will be working in our home?",
+    "Your people with names and faces."
+   ],
+   [
+    "Quote",
+    "How do I ask for a quote?",
+    "A short form on every page."
+   ]
+  ],
+  "PAINS": [
+   [
+    "The site does not say at once what you do and where.",
+    "The first sentence names your services and area. The client knows straight away they are in the right place."
+   ],
+   [
+    "No finished projects are shown.",
+    "Projects with photos and details: what was done, where and how long it took."
+   ],
+   [
+    "Nothing is said about price.",
+    "A price range and the household tax credit are shown, so the people who ask for a quote are the ones the price suits."
+   ],
+   [
+    "The quote request is hidden.",
+    "The quote request is one tap away from every page."
+   ],
+   [
+    "The site is slow on a phone.",
+    "Pages open fast, and everything works with a thumb."
+   ],
+   [
+    "Google does not understand what you do.",
+    "Every service and area has its own page, so you show up in the right searches."
+   ],
+   [
+    "Guarantee and people are not visible.",
+    "Guarantee, insurance and your people on show. Trust is built before the first call."
+   ],
+   [
+    "Nobody tracks the results.",
+    "Search Console and enquiry tracking set up. You see where the quote requests come from."
+   ]
+  ],
+  "VS": [
+   [
+    "A big invoice before the site is even finished.",
+    "Silence after launch. Messages get answered if someone has time.",
+    "Every change is a new quote and a new invoice.",
+    "The site goes stale, because nobody has time to update it.",
+    "Nobody tells you whether the site brings in work."
+   ],
+   [
+    "€0 setup. You see the demo before you decide anything.",
+    "We always reply within one working day.",
+    "Changes are included. Small ones are live within two working days.",
+    "The site gets better every month: new projects, services and fixes.",
+    "A monthly report shows how many enquiries came in and from where."
+   ]
+  ],
+  "PERKS": [
+   [
+    "One person who knows your business",
+    "Ville replies himself. No ticket system, no middlemen, and no explaining everything from scratch each time."
+   ],
+   [
+    "No logins, nothing to learn",
+    "You never have to learn a content management system. Send a message or a photo from your phone, and the change gets made."
+   ],
+   [
+    "A report and a suggestion",
+    "Every month you get the numbers and one concrete suggestion for what to do next."
+   ],
+   [
+    "More reviews",
+    "You get a ready review link and a QR card, so a happy client can leave a Google review right there on site."
+   ],
+   [
+    "Ready for the season",
+    "Before each season we bring forward what sells then: heat pumps in autumn, facades and decks in spring."
+   ],
+   [
+    "No hidden costs",
+    "Everything included in the price is listed. If something costs extra, we tell you before we do anything."
+   ]
+  ],
+  "REQ": [
+   [
+    "We finished a new project, here are the photos.",
+    "Project page with photos and details live.",
+    "big"
+   ],
+   [
+    "We are starting sauna renovations too.",
+    "New service page, and the Google Business Profile updated.",
+    "big"
+   ],
+   [
+    "Our phone number changed.",
+    "New number everywhere, Google included.",
+    "small"
+   ],
+   [
+    "We are closed for July.",
+    "Holiday notice on the site and special hours on the profile.",
+    "small"
+   ],
+   [
+    "Quote requests come from too far away.",
+    "Service area and town pages narrowed down.",
+    "big"
+   ],
+   [
+    "I want clients to be able to send photos.",
+    "Photo upload added to the quote request.",
+    "small"
+   ]
+  ],
+  "YEAR1": [
+   [
+    "Month 1",
+    "The site goes live.",
+    "Search Console, enquiry tracking and the Google Business Profile set up from day one."
+   ],
+   [
+    "Months 2–3",
+    "The first numbers.",
+    "We look at where enquiries come from and where visitors drop off, and fix what holds them back."
+   ],
+   [
+    "Months 4–6",
+    "More visibility.",
+    "New projects plus service and town pages where you want more work."
+   ],
+   [
+    "Months 7–12",
+    "Sharpen what works.",
+    "Seasonal pages, more reviews and a form that asks exactly the right things."
+   ]
+  ],
+  "INCLUDED": [
+   "Design and build, up to 8 pages",
+   "Copywriting and photo editing",
+   "Maintenance, hosting, SSL and backups",
+   "Replies to your messages within one working day",
+   "Small changes within two working days",
+   "One bigger update a month, such as a new project or service page",
+   "Findability: sitemap, Search Console, plus service and town pages",
+   "Google Business Profile optimisation",
+   "A review link and QR card for collecting Google reviews",
+   "Quote request form and enquiry tracking",
+   "A monthly report: how many enquiries came in, from where, and what to do next"
+  ],
+  "EXCLUDED": [
+   "Advertising, such as Google Ads and Meta",
+   "Logo and brand identity",
+   "On-site photography",
+   "Online shop",
+   "Pages beyond eight"
+  ],
+  "FAQ": [
+   [
+    "How is this different from a normal agency?",
+    "A normal agency builds the site, sends the invoice and moves on to the next project. We stay: we maintain the site, make the changes and improve it every month so that it brings in work. And you see a demo before you pay anything."
+   ],
+   [
+    "Do I have to update the site myself?",
+    "No. Just tell us what you want changed: by message, photo or phone call. You never have to log in anywhere or learn a content management system."
+   ],
+   [
+    "How fast do you reply?",
+    "Within one working day, always. Small changes are live within two working days, and bigger ones go into the monthly update."
+   ],
+   [
+    "Do I have time for this between jobs?",
+    "Yes. A link and a few sentences are all we need. We make the demo, and you can look at it on your phone in the evening."
+   ],
+   [
+    "Is the demo just a picture?",
+    "No. The demo is a working front page at its own link. You can open it on your phone and computer and show it to your colleagues."
+   ],
+   [
+    "What does the demo cost?",
+    "Nothing. The demo is free and comes with no commitment."
+   ],
+   [
+    "What does the site cost?",
+    "€199 a month + VAT, with no setup fee. You can also pay for a year at once, €1,990 + VAT, which gives you two months free. The price covers design, build, maintenance, changes and updates."
+   ],
+   [
+    "Why a monthly price and not a one-off fee?",
+    "A site is not finished on launch day. With a monthly price it stays up to date and keeps improving: new projects, services and fixes are done without separate quotes, and you do not have to pay thousands of euros at once."
+   ],
+   [
+    "What if I want to stop?",
+    "The minimum term is 12 months, and after that you can end the contract with one month’s notice. The domain is always yours. You can buy the site outright for €990, and after 24 months it is transferred to you free."
+   ],
+   [
+    "How does the quote request guarantee work?",
+    "If the site’s quote request form brings in no quote requests in the first three months after launch, the next three months are free. The tracking lets you see for yourself what comes through the form."
+   ],
+   [
+    "How long does the project take?",
+    "Usually two to four weeks. The demo is ready in 48 hours, and the schedule is agreed before we start."
+   ],
+   [
+    "We do not have good photos.",
+    "Photos taken on a phone are fine to start with. We edit them so your work looks on the site the way it does in real life."
+   ],
+   [
+    "What happens after launch?",
+    "We make small changes within two working days, and once a month we do a bigger update, such as a new project or service page. Every month you get a short report: how many enquiries came in, from where, and what to do next."
+   ],
+   [
+    "What do I actually get?",
+    "A finished site at your own address with ongoing maintenance and improvement: design, copy, photo editing, a site that works on a phone, findability and a tuned-up Google Business Profile. The domain is always yours."
+   ],
+   [
+    "Who will I be working with?",
+    "Ville Saarela. He designs, writes and builds the sites himself, with no middlemen, and replies to every message himself."
+   ],
+   [
+    "Are the projects real clients?",
+    "Some of the work is concept work: fictional companies that show what a site in the trade can do. This is stated on every project page."
+   ]
+  ],
+  "REQ_TAG": {
+   "small": "2 working days",
+   "big": "Monthly update"
+  },
+  "TERMS": [
+   [
+    "12 months",
+    "minimum term, then one month’s notice"
+   ],
+   [
+    "Domain",
+    "always belongs to you"
+   ],
+   [
+    "€990",
+    "buys the site outright once 12 months are up"
+   ],
+   [
+    "24 months",
+    "and the site is transferred to you free"
+   ]
+  ]
+ }
+}

@@ -1,5 +1,7 @@
 // Studio Luoto front page, built from Framer's own layers so every text can be edited on the canvas.
 // node build-home.mjs  (reads FRAMER_API_KEY)
+// HUOM: älä aja tätä enää valmiiseen projektiin. Etusivua muokataan nyt käsin Framerissa, ja muutokset tehdään pieninä korjauksina (fix-*.mjs).
+// Muut sivut rakentaa build-site.mjs.
 import { connect } from 'framer-api'
 import fs from 'fs'
 import * as K from './comps.mjs'

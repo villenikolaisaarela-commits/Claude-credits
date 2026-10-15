@@ -185,6 +185,13 @@ const CSS = FONTS + \`
 .dn-s a{color:#0F0F0E}
 .dn-tel{margin:18px 0 0;font-size:16px;color:#5C5850}
 .dn-tel a{color:#0F0F0E;font-weight:600}
+/* Framer sets its own font on buttons and fields; these win over it */
+button.dn-b,button.dn-b span{font:600 16px/1 "Luoto Sans",Arial,sans-serif!important;letter-spacing:.01em!important}
+.dn-d{font:400 17px/1.55 "Luoto Sans",Arial,sans-serif!important}
+.dn-in h2{font:500 clamp(26px,2.6vw,40px)/1.1 "Luoto Serif",Georgia,serif!important;letter-spacing:-.02em!important}
+.dn-f label{font:600 14px/1.3 "Luoto Sans",Arial,sans-serif!important}
+.dn-f input,.dn-f textarea{font:400 16px/1.4 "Luoto Sans",Arial,sans-serif!important}
+.dn-in p,.dn-in a{font-family:"Luoto Sans",Arial,sans-serif!important}
 \`
 
 /**

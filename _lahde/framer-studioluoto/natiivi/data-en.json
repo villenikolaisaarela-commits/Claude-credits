@@ -1,0 +1,370 @@
+{
+ "TRADES": [
+  "Bathroom renovations",
+  "Pipe renovations",
+  "HVAC and heat pumps",
+  "Interior renovations",
+  "Facades and roofs",
+  "Log house restoration",
+  "Kitchens and joinery",
+  "Metalwork"
+ ],
+ "STICKERS": [
+  "No prices",
+  "No project photos",
+  "Quote form hidden",
+  "Slow on a phone",
+  "Not on Google"
+ ],
+ "ASKS": [
+  [
+   "Price",
+   "Roughly how much will this cost?",
+   "A price range and the household tax credit are shown."
+  ],
+  [
+   "Projects",
+   "Have they done this before?",
+   "Finished projects with photos and details."
+  ],
+  [
+   "Trust",
+   "What if something goes wrong?",
+   "Guarantee and insurance stated clearly."
+  ],
+  [
+   "Area",
+   "Do they come out this far?",
+   "Service area and towns on their own pages."
+  ],
+  [
+   "Schedule",
+   "When could they start?",
+   "The next free start date on the front page."
+  ],
+  [
+   "People",
+   "Who will be working in our home?",
+   "Your people with names and faces."
+  ],
+  [
+   "Quote",
+   "How do I ask for a quote?",
+   "A short form on every page."
+  ]
+ ],
+ "PAINS": [
+  [
+   "The site does not say at once what you do and where.",
+   "The first sentence names your services and area. The client knows straight away they are in the right place."
+  ],
+  [
+   "No finished projects are shown.",
+   "Projects with photos and details: what was done, where and how long it took."
+  ],
+  [
+   "Nothing is said about price.",
+   "A price range and the household tax credit are shown, so the people who ask for a quote are the ones the price suits."
+  ],
+  [
+   "The quote request is hidden.",
+   "The quote request is one tap away from every page."
+  ],
+  [
+   "The site is slow on a phone.",
+   "Pages open fast, and everything works with a thumb."
+  ],
+  [
+   "Google does not understand what you do.",
+   "Every service and area has its own page, so you show up in the right searches."
+  ],
+  [
+   "Guarantee and people are not visible.",
+   "Guarantee, insurance and your people on show. Trust is built before the first call."
+  ],
+  [
+   "Nobody tracks the results.",
+   "Search Console and enquiry tracking set up. You see where the quote requests come from."
+  ]
+ ],
+ "REQ": [
+  [
+   "We finished a new project, here are the photos.",
+   "Project page with photos and details live.",
+   "big"
+  ],
+  [
+   "We are starting sauna renovations too.",
+   "New service page, and the Google Business Profile updated.",
+   "big"
+  ],
+  [
+   "Our phone number changed.",
+   "New number everywhere, Google included.",
+   "small"
+  ],
+  [
+   "We are closed for July.",
+   "Holiday notice on the site and special hours on the profile.",
+   "small"
+  ],
+  [
+   "Quote requests come from too far away.",
+   "Service area and town pages narrowed down.",
+   "big"
+  ],
+  [
+   "I want clients to be able to send photos.",
+   "Photo upload added to the quote request.",
+   "small"
+  ]
+ ],
+ "INCLUDED": [
+  "Design and build, up to 8 pages",
+  "Copywriting and photo editing",
+  "Maintenance, hosting, SSL and backups",
+  "Replies to your messages within one working day",
+  "Small changes within two working days",
+  "One bigger update a month, such as a new project or service page",
+  "Findability: sitemap, Search Console, plus service and town pages",
+  "Google Business Profile optimisation",
+  "A review link and QR card for collecting Google reviews",
+  "Quote request form and enquiry tracking",
+  "A monthly report: how many enquiries came in, from where, and what to do next"
+ ],
+ "EXCLUDED": [
+  "Advertising, such as Google Ads and Meta",
+  "Logo and brand identity",
+  "On-site photography",
+  "Online shop",
+  "Pages beyond eight"
+ ],
+ "REQ_TAG": {
+  "small": "2 working days",
+  "big": "Monthly update"
+ },
+ "TERMS": [
+  [
+   "12 months",
+   "minimum term, then one month’s notice"
+  ],
+  [
+   "Domain",
+   "always belongs to you"
+  ],
+  [
+   "€990",
+   "buys the site outright once 12 months are up"
+  ],
+  [
+   "24 months",
+   "and the site is transferred to you free"
+  ]
+ ],
+ "PR": {
+  "m": "€199",
+  "y": "€1,990",
+  "b": "€990",
+  "mo": "€199/month"
+ },
+ "DO": [
+  [
+   "Website",
+   "We build. And we keep it sharp.",
+   "Made for your company from scratch, and kept up to date as your work changes."
+  ],
+  [
+   "Message",
+   "We say it straight.",
+   "A client sees at once what you do, where, and roughly what it costs."
+  ],
+  [
+   "Findability",
+   "Found when people search.",
+   "Every service and town gets its own page for Google and AI search."
+  ],
+  [
+   "Quote request",
+   "A request you can price.",
+   "The form asks the right things up front, so no call-back is needed."
+  ],
+  [
+   "Trust",
+   "They pick you. Not the cheapest.",
+   "Projects, guarantee, insurance and your people on show before the first call."
+  ]
+ ],
+ "FOR": [
+  [
+   "Renovation companies",
+   "Your projects on show. The right clients calling.",
+   "tile"
+  ],
+  [
+   "HVAC and building services",
+   "Services and areas made clear. Call-outs visible.",
+   "pipe"
+  ],
+  [
+   "Builders and joiners",
+   "Craft you can see. On the site too.",
+   "house"
+  ]
+ ],
+ "STEPS": [
+  [
+   "Send a message.",
+   "A link to your current site and a couple of sentences. It takes two minutes.",
+   "or",
+   "msg"
+  ],
+  [
+   "Get a draft in 48 hours.",
+   "A working front page at its own link, not a picture. Free, with no commitment.",
+   "sea",
+   "clock"
+  ],
+  [
+   "We refine it together.",
+   "Tell us what to change. We change it until the site is just right.",
+   "ink",
+   "pins"
+  ],
+  [
+   "The site goes live. We look after it.",
+   "We publish it at your own address and keep improving it for a monthly price.",
+   "sand",
+   "key"
+  ]
+ ],
+ "PERKS": [
+  [
+   "One person. No tickets.",
+   "Ville replies himself and knows your business. Nothing to explain from scratch."
+  ],
+  [
+   "No logins.",
+   "Send a message or a photo from your phone. We make the change."
+  ],
+  [
+   "Numbers and a next step.",
+   "A monthly report and one concrete suggestion for what to improve."
+  ],
+  [
+   "Reviews straight from the job.",
+   "A ready review link and QR card, so a happy client leaves a Google review."
+  ],
+  [
+   "Ahead of the season.",
+   "Before each season we bring forward what sells: heat pumps in autumn, facades in spring."
+  ],
+  [
+   "No hidden costs.",
+   "Everything included is listed. If something costs extra, you hear it before we do anything."
+  ]
+ ],
+ "VS": [
+  [
+   "A big invoice before the site is finished.",
+   "Silence after launch.",
+   "Every change is a new quote.",
+   "The site goes stale from launch day.",
+   "Nobody tracks whether it brings in work."
+  ],
+  [
+   "€0 setup. A demo before you decide.",
+   "A reply within one working day.",
+   "Changes are included.",
+   "The site gets better every month.",
+   "A monthly report shows where the work comes from."
+  ]
+ ],
+ "YEAR1": [
+  [
+   "Month 1",
+   "The site goes live.",
+   "Tracking, Search Console and the Google Business Profile set up from day one."
+  ],
+  [
+   "Months 2–3",
+   "The first numbers.",
+   "We see where enquiries come from and where visitors get stuck. Then we fix it."
+  ],
+  [
+   "Months 4–6",
+   "More visibility.",
+   "New projects plus service and town pages where you want more work."
+  ],
+  [
+   "Months 7–12",
+   "Sharpen what works.",
+   "Seasonal pages, more reviews and a form that asks the right things."
+  ]
+ ],
+ "FAQ": [
+  [
+   "How is this different from a normal agency?",
+   "An agency launches the site and moves on to the next project. We stay: we maintain, change and improve the site every month so that it brings in work."
+  ],
+  [
+   "Do I have to update the site myself?",
+   "No. Tell us by message, photo or phone call what you want changed. We do it."
+  ],
+  [
+   "How fast do you reply?",
+   "Within one working day, always. Small changes are live within two working days, and bigger ones go into the monthly update."
+  ],
+  [
+   "Do I have time for this between jobs?",
+   "Yes. A link and a few sentences are enough. Look at the demo on your phone in the evening."
+  ],
+  [
+   "Is the demo just a picture?",
+   "No. The demo is a working front page at its own link. You can show it to your colleagues."
+  ],
+  [
+   "What does the demo cost?",
+   "Nothing. The demo is free and comes with no commitment."
+  ],
+  [
+   "What does the site cost?",
+   "€199 a month + VAT, with no setup fee. You can also pay for a year at once, €1,990 + VAT, which gives you two months free. The price covers design, build, maintenance, changes and updates."
+  ],
+  [
+   "Why a monthly price and not a one-off fee?",
+   "A site is not finished on launch day. With a monthly price it keeps improving, and you do not pay thousands of euros at once."
+  ],
+  [
+   "What if I want to stop?",
+   "The minimum term is 12 months, and after that you can end the contract with one month’s notice. The domain is always yours. You can buy the site outright for €990, and after 24 months it is transferred to you free."
+  ],
+  [
+   "How does the quote request guarantee work?",
+   "If the site’s quote request form brings in no quote requests in the first three months after launch, the next three months are free. The tracking lets you see for yourself what comes through the form."
+  ],
+  [
+   "How long does the project take?",
+   "Usually two to four weeks. The demo is ready in 48 hours."
+  ],
+  [
+   "We do not have good photos.",
+   "Photos taken on a phone are fine to start with. We edit them so your work looks on the site the way it does on site."
+  ],
+  [
+   "What happens after launch?",
+   "The work goes on. Small changes within two working days, a bigger update once a month, and a report on where enquiries came from."
+  ],
+  [
+   "What do I actually get?",
+   "A finished site at your own address with ongoing maintenance and improvement: design, copy, photo editing, a site that works on a phone, findability and a tuned-up Google Business Profile. The domain is always yours."
+  ],
+  [
+   "Who will I be working with?",
+   "Ville Saarela. He designs, writes and builds the sites himself, with no middlemen, and replies to every message himself."
+  ],
+  [
+   "Are the projects real clients?",
+   "Some of the work is concept work: fictional companies that show what a site in the trade can do. This is stated on every project page."
+  ]
+ ]
+}
