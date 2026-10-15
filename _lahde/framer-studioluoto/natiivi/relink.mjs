@@ -2,7 +2,7 @@
 // so a link to a page that was removed and made again is left empty. Targets come from the layer name or the linked text.
 import { connect } from 'framer-api'
 import fs from 'fs'
-const f = await connect('https://framer.com/projects/Studio-Luoto-Website--ZrorPAr6gxMmYUmNsh8y-7dszj', process.env.FRAMER_API_KEY || fs.readFileSync(new URL('.', import.meta.url).pathname + '../framer2/.key', 'utf8').trim())
+const f = await connect('https://framer.com/projects/Studio-Luoto-Website--ZrorPAr6gxMmYUmNsh8y-7dszj', process.env.FRAMER_API_KEY)
 const SITE = JSON.parse(fs.readFileSync(new URL('site-data.json', import.meta.url), 'utf8'))
 const R = { home: { fi: '/', en: '/en' }, works: { fi: '/tyot', en: '/en/work' }, privacy: { fi: '/tietosuoja', en: '/en/privacy' }, terms: { fi: '/ehdot', en: '/en/terms' } }
 const proj = (l, s) => (l === 'fi' ? '/projektit/' : '/en/projects/') + s
